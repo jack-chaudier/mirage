@@ -56,8 +56,11 @@
 - `endogenous_context_theory/scripts/validate_ntsb_graphs.py`
 - `endogenous_context_theory/scripts/apply_ntsb_manifest.py`
 - `endogenous_context_theory/scripts/run_ntsb_mirage_benchmark.py`
+- `endogenous_context_theory/scripts/build_ntsb_paper_table.py`
 - `endogenous_context_theory/results/ntsb/README.md`
 - `endogenous_context_theory/results/ntsb/ntsb_validation_report.before.json`
 - `endogenous_context_theory/results/ntsb/ntsb_validation_report.after.json`
 - `endogenous_context_theory/results/ntsb/mirage_results_summary.csv`
 - `endogenous_context_theory/results/ntsb/xai_grok_4_1_fast_non_reasoning/mirage_results_summary.csv`
+- `endogenous_context_theory/results/ntsb/xai_grok_4_1_fast_non_reasoning/paper_figure_table_retention_matched.csv`
+- `endogenous_context_theory/results/ntsb/xai_grok_4_1_fast_non_reasoning/paper_figure_table_retention_matched.md`

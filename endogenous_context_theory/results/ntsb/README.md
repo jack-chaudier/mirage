@@ -53,11 +53,27 @@ Path:
 | contract | 0.5 | 0.0% | 100.0% | 100.0% | 0/8 (0.0%) |
 | contract | 0.3 | 0.0% | 100.0% | 100.0% | 0/10 (0.0%) |
 
+### Primary retention-matched comparison (exact)
+
+At budget `0.7`, both methods have identical mean achieved retention:
+- naive: `0.686859`
+- contract: `0.686859`
+
+Silent mirage on degraded rows:
+- naive: `12/51` (`23.53%`), Wilson 95% CI `[14.00%, 36.76%]`
+- contract: `0/4` (`0.00%`), Wilson 95% CI `[0.00%, 48.99%]`
+
+### Secondary retention-matched comparison (near match)
+
+Cross-budget comparison with close retention:
+- naive at budget `0.5`: retention `0.478276`, silent `11/56` (`19.64%`), Wilson `[11.34%, 31.84%]`
+- contract at budget `0.3`: retention `0.450570`, silent `0/10` (`0.00%`), Wilson `[0.00%, 27.75%]`
+
 ### Overall naive xAI behavior
 
 - `info_shift_rate`: `57.22%` (103/180)
 - degraded wrong-pivot cases: `36/164`
-- degraded silent mirages: `36/164` (`21.95%`)
+- degraded silent mirages: `36/164` (`21.95%`, Wilson 95% CI `[16.30%, 28.89%]`)
 - `flag_degraded_rate` on degraded rows: `0.0%`
 - `flag_given_wrong`: `0/36` (`0.0%`)
 
@@ -65,8 +81,16 @@ Interpretation:
 - The structural mirage appears on real NTSB causal chains under naive compression.
 - Contract enforcement removes attribution shift in this dataset.
 - The non-reasoning LLM exhibits the behavioral failure mode (silent mirage) on naive compressed contexts.
+- Contract success here does not depend on model honesty signaling (`flag_degraded_rate` is `0.0%` even when contract prevents mirage). The guarantee is structural: the contract prevents degraded attribution states from being presented to the model.
 
-## 4) Reproduction Commands
+## 4.1) Paper Figure Table Artifacts
+
+Generated directly from CSV outputs:
+- `xai_grok_4_1_fast_non_reasoning/paper_figure_table_retention_matched.csv`
+- `xai_grok_4_1_fast_non_reasoning/paper_figure_table_retention_matched.md`
+- `xai_grok_4_1_fast_non_reasoning/paper_figure_table_retention_matched.json`
+
+## 5) Reproduction Commands
 
 Validate + clean:
 
@@ -109,4 +133,6 @@ export OPENAI_BASE_URL="https://api.x.ai/v1"
   --max-tokens 512 \
   --temperature 0.0 \
   --timeout-s 120
+
+/Users/jackg/mirage/.venv/bin/python endogenous_context_theory/scripts/build_ntsb_paper_table.py
 ```

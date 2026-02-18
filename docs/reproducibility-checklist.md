@@ -110,11 +110,14 @@ export OPENAI_BASE_URL="https://api.x.ai/v1"
   --max-tokens 512 \
   --temperature 0.0 \
   --timeout-s 120
+
+/Users/jackg/mirage/.venv/bin/python endogenous_context_theory/scripts/build_ntsb_paper_table.py
 ```
 
 Check:
 - `endogenous_context_theory/results/ntsb/README.md`
 - `endogenous_context_theory/results/ntsb/xai_grok_4_1_fast_non_reasoning/mirage_results_summary.csv`
+- `endogenous_context_theory/results/ntsb/xai_grok_4_1_fast_non_reasoning/paper_figure_table_retention_matched.md`
 
 ## I. Legacy Command Compatibility
 These still work and delegate to `scripts/`:

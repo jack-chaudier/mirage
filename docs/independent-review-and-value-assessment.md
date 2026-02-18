@@ -80,13 +80,22 @@ Cleanup gate:
 - structural validation errors: `0 -> 0`
 
 xAI non-reasoning run (`grok-4-1-fast-non-reasoning`):
+- Primary retention-matched comparison (exact): budget `0.7` for both methods
+  - mean retention: `0.686859` vs `0.686859`
+  - naive silent mirage: `12/51` (`23.53%`, Wilson `[14.00%, 36.76%]`)
+  - contract silent mirage: `0/4` (`0.00%`, Wilson `[0.00%, 48.99%]`)
+- Secondary near-match comparison: naive `0.5` vs contract `0.3`
+  - retention: `0.478276` vs `0.450570`
 - Naive compression info-shift on real incidents:
   - 0.7 budget: `40.0%`
   - 0.5 budget: `55.0%`
   - 0.3 budget: `76.7%`
 - Contract compression info-shift: `0.0%` at all budgets
-- Naive degraded silent-mirage: `36/164` (`21.95%`)
+- Naive degraded silent-mirage: `36/164` (`21.95%`, Wilson `[16.30%, 28.89%]`)
 - Naive `flag_given_wrong`: `0/36`
+
+Important nuance:
+- Contract success in this run does not rely on model honesty signaling (`flag_degraded_rate = 0.0%` for contract rows). The prevention is structural: contract-constrained compression avoids creating attribution-shift states before model inference.
 
 This materially strengthens the claim that validity mirage is not only a
 synthetic artifact: the same failure mode appears on real causal chains, and

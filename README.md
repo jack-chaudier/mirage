@@ -47,16 +47,23 @@ xAI non-reasoning run:
 - results: `endogenous_context_theory/results/ntsb/xai_grok_4_1_fast_non_reasoning/`
 
 Key findings:
+- Primary comparison uses an exact retention match at budget `0.7`:
+  - mean retention (naive vs contract): `0.686859` vs `0.686859`
+  - naive silent mirage (degraded): `12/51` (`23.5%`, Wilson 95% CI `[14.0%, 36.8%]`)
+  - contract silent mirage (degraded): `0/4` (`0.0%`, Wilson 95% CI `[0.0%, 49.0%]`)
+- Secondary near-match (cross-budget): naive `0.5` vs contract `0.3`
+  - mean retention: `0.478276` vs `0.450570`
 - Naive compression causes large attribution shift on real incident graphs:
   - `info_shift_rate`: `40.0%` (`0.7` budget), `55.0%` (`0.5`), `76.7%` (`0.3`)
 - Contract compression removes attribution shift:
   - `info_shift_rate`: `0.0%` at all budgets
 - Silent mirage appears under naive LLM behavior:
   - degraded silent-mirage: `12/51` (`23.5%`) at `0.7`, `11/56` (`19.6%`) at `0.5`, `13/57` (`22.8%`) at `0.3`
-  - overall naive degraded silent-mirage: `36/164` (`21.95%`)
+  - overall naive degraded silent-mirage: `36/164` (`21.95%`, Wilson 95% CI `[16.3%, 28.9%]`)
 
 Detailed write-up:
 - `endogenous_context_theory/results/ntsb/README.md`
+- `endogenous_context_theory/results/ntsb/xai_grok_4_1_fast_non_reasoning/paper_figure_table_retention_matched.md`
 
 ## Reproducibility
 1. Start with `endogenous_context_theory/README.md`.
