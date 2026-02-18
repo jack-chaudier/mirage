@@ -119,28 +119,28 @@ Paper publishing workflow:
 
 ```bibtex
 @article{gaffney2026narrativefield,
-  title   = {NarrativeField: Continuous Control and Structural Regularization in Simulation-First Story Extraction},
+  title   = {Continuous Control and Structural Regularization in Multi-Agent Narrative Extraction},
   author  = {Jack Chaudier Gaffney},
   year    = {2026},
   journal = {arXiv preprint arXiv:XXXX.XXXXX}
 }
 
 @article{gaffney2026absorbing,
-  title   = {Absorbing States in Greedy Search Under Endogenous Phase Constraints},
+  title   = {Absorbing States in Greedy Search: When Endogenous Constraints Break Sequential Extraction},
   author  = {Jack Chaudier Gaffney},
   year    = {2026},
   journal = {arXiv preprint arXiv:XXXX.XXXXX}
 }
 
 @article{gaffney2026streaming,
-  title   = {Streaming Oscillation Traps in Sequential Extraction with Endogenous Pivots},
+  title   = {Streaming Oscillation Traps in Endogenous-Pivot Sequential Extraction},
   author  = {Jack Chaudier Gaffney},
   year    = {2026},
   journal = {arXiv preprint arXiv:XXXX.XXXXX}
 }
 
 @article{gaffney2026mirage,
-  title   = {The Validity Mirage: How Context Compression Preserves Fluency While Destroying Semantic Pivots},
+  title   = {The Validity Mirage: Context Algebra for Endogenous Semantics under Memory Compression},
   author  = {Jack Chaudier Gaffney},
   year    = {2026},
   journal = {arXiv preprint arXiv:XXXX.XXXXX}
