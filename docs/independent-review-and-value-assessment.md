@@ -70,6 +70,28 @@ Direct delta (imbalanced minus balanced):
 - FT degradation-flag coverage: +4.58 points
 - 19 per-example FT deltas, with 3 correctness improvements and no observed regressions
 
+## New Real-World NTSB Evidence (Non-Synthetic)
+
+A real-incident benchmark was added using 12 NTSB-style event graphs with fixed
+per-incident cleanup manifest and zero post-cleanup grammar violations.
+
+Cleanup gate:
+- `k_violations`: `6 -> 0`
+- structural validation errors: `0 -> 0`
+
+xAI non-reasoning run (`grok-4-1-fast-non-reasoning`):
+- Naive compression info-shift on real incidents:
+  - 0.7 budget: `40.0%`
+  - 0.5 budget: `55.0%`
+  - 0.3 budget: `76.7%`
+- Contract compression info-shift: `0.0%` at all budgets
+- Naive degraded silent-mirage: `36/164` (`21.95%`)
+- Naive `flag_given_wrong`: `0/36`
+
+This materially strengthens the claim that validity mirage is not only a
+synthetic artifact: the same failure mode appears on real causal chains, and
+the contract mechanism removes attribution shift in this dataset.
+
 ## Critical Caveats (Publication-Grade)
 
 1. Strong class is still sparse in this slice

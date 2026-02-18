@@ -49,3 +49,15 @@
 - `derived/qwen_imbalanced_summary_from_package_2026_02_17.json`
 - `derived/qwen_balanced_vs_imbalanced_comparison_2026_02_17.csv`
 - `derived/qwen_balanced_vs_imbalanced_example_deltas_2026_02_17.csv`
+
+## NTSB Real-World Benchmark
+- `endogenous_context_theory/data/ntsb/ntsb_k_phase_cleanup_manifest.csv`
+- `endogenous_context_theory/data/ntsb/ntsb_event_graphs.cleaned.json`
+- `endogenous_context_theory/scripts/validate_ntsb_graphs.py`
+- `endogenous_context_theory/scripts/apply_ntsb_manifest.py`
+- `endogenous_context_theory/scripts/run_ntsb_mirage_benchmark.py`
+- `endogenous_context_theory/results/ntsb/README.md`
+- `endogenous_context_theory/results/ntsb/ntsb_validation_report.before.json`
+- `endogenous_context_theory/results/ntsb/ntsb_validation_report.after.json`
+- `endogenous_context_theory/results/ntsb/mirage_results_summary.csv`
+- `endogenous_context_theory/results/ntsb/xai_grok_4_1_fast_non_reasoning/mirage_results_summary.csv`
