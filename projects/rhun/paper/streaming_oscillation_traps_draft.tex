@@ -84,6 +84,8 @@ At each step, assign labels immediately relative to current running-max pivot. I
 Buffer events until step $\lceil f \cdot n \rceil$. At that step, commit to current running-max pivot (if viable: at least $k$ predecessors) and label buffered events from scratch. This is a semi-online policy: it assumes stream length $n$ is known (or estimated) before commitment.
 \end{definition}
 
+In practice, stream lengths are often known or bounded (e.g., batch sizes, session limits, or context-window caps), which makes this semi-online assumption operationally reasonable in deployed systems.
+
 \begin{definition}[Streaming Absorbing Trap]
 A streaming run is trapped at step $t$ if, under irreversible commitment semantics, no continuation can produce a grammar-valid sequence. This is the streaming analog of a greatest-fixed-point absorbing set.
 \end{definition}
@@ -327,7 +329,7 @@ Streaming endogenous-pivot extraction exhibits a failure mode not captured by fi
 \section*{References}
 \small
 \begin{enumerate}[leftmargin=1.2em]
-  \item Anonymous. \emph{Absorbing States in Greedy Search: When Endogenous Constraints Break Sequential Extraction}. Companion finite paper, 2026.
+  \item Jack Chaudier Gaffney. \emph{Absorbing States in Greedy Search: When Endogenous Constraints Break Sequential Extraction}. Companion finite paper, 2026.
   \item B. Korte and L. Lov\'asz. Greedoids and linear objective functions. \emph{SIAM J. Algebraic and Discrete Methods}, 1981.
   \item G. Irnich and G. Desaulniers. Shortest path problems with resource constraints. In \emph{Column Generation}, 2005.
   \item W. M. P. van der Aalst. \emph{Process Mining: Data Science in Action}. Springer, 2016.

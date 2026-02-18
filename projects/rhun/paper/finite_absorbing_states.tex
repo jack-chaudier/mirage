@@ -120,6 +120,7 @@ Fix a turning point $\tau$ and a phase-classification policy (Definition~4). Eve
 This makes explicit that $j_{dev}$ depends on classifier policy: Definition~4 determines which pre-TP events remain available for DEVELOPMENT labeling.
 
 \begin{theorem}[Prefix-Constraint Impossibility]
+\label{thm:main}
 Let greedy force $e^*=\arg\max_{v:a(v)=a^*}w(v)$ as TURNING\_POINT. Let grammar require $k\ge 1$ DEVELOPMENT events before TURNING\_POINT. Let $j_{dev}$ be the number of development-eligible events (any actor) with timestamp strictly before $e^*$ in the candidate pool under the chosen phase-classification policy. If $j_{dev}<k$, greedy produces zero valid sequences.
 \end{theorem}
 

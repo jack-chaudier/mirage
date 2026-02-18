@@ -55,7 +55,7 @@ We consider extraction from temporally ordered event graphs with focal-actor tur
 \[
 \tau(S)=\arg\max_{v\in S,\,a(v)=a^*} w(v),
 \]
-with deterministic tie-breaking by $(w,-t,\mathrm{id})$.
+with deterministic tie-breaking by $(w,-t,\mathrm{event\_id})$.
 
 We evaluate three solver semantics:
 \begin{itemize}[leftmargin=1.3em]
@@ -135,7 +135,7 @@ C\otimes_{\mathrm{endo}}e=e\otimes_{\mathrm{endo}}C=C.
 Hence $(\mathcal{C},\otimes_{\mathrm{endo}},e)$ is a monoid.
 \end{proposition}
 \begin{proof}
-For $C=(w^\star,d_{\mathrm{total}},d_{\mathrm{pre}})$, composition with $e$ keeps pivot key $w^\star$, adds zero development mass, and leaves pre-pivot mass unchanged in both directions by the same case split as Definition 3.2.
+For $C=(w^\star,d_{\mathrm{total}},d_{\mathrm{pre}})$, composition with $e$ keeps pivot key $w^\star$, adds zero development mass, and leaves pre-pivot mass unchanged in both directions by the same case split as the endogenous composition rule above.
 \end{proof}
 
 \paragraph{Systems implication.}
@@ -319,7 +319,7 @@ Under committed semantics ($M=1$), Exp58 yields the witness triple: full feasibl
 
 \clearpage
 \section{Real-Incident External Validation}
-We evaluate the same mechanism on 12 real incident causal graphs derived from NTSB aviation accident reports and the Knight Capital 2012 trading failure. For each incident we run compression at budgets $\{0.7,0.5,0.3\}$ with five seeds (60 trials per budget), then query \texttt{grok-4-1-fast-non-reasoning} for pivot selection under the same protocol used in synthetic runs.
+We evaluate the same mechanism on 12 real incident causal graphs derived from NTSB aviation accident reports and the Knight Capital 2012 trading failure. For each incident we run compression at budgets $\{0.7,0.5,0.3\}$ with five seeds (60 trials per budget), then query \texttt{grok-4-1-fast-non-reasoning} for pivot selection under the same protocol used in synthetic runs (inference executed 2026-02-18 UTC).
 
 \paragraph{Metric focus.}
 We report pivot preservation, information shift, and silent mirage, where silent mirage means a degraded trial with a wrong pivot and no degraded-evidence flag.
