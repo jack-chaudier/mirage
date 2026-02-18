@@ -49,8 +49,8 @@ xAI non-reasoning run:
 Key findings:
 - Primary comparison uses an exact retention match at budget `0.7`:
   - mean retention (naive vs contract): `0.686859` vs `0.686859`
-  - naive silent mirage (degraded): `12/51` (`23.5%`, Wilson 95% CI `[14.0%, 36.8%]`)
-  - contract silent mirage (degraded): `0/4` (`0.0%`, Wilson 95% CI `[0.0%, 49.0%]`)
+  - naive silent mirage (degraded): `12/51` (`23.5%`)
+  - all-trial Wilson CI at matched retention: naive `12/60` `[11.83%, 31.78%]`, contract `0/60` `[0.00%, 6.02%]`
 - Secondary near-match (cross-budget): naive `0.5` vs contract `0.3`
   - mean retention: `0.478276` vs `0.450570`
 - Naive compression causes large attribution shift on real incident graphs:

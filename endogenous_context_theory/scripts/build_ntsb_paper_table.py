@@ -44,7 +44,9 @@ def wilson_interval(k: int, n: int, z: float = 1.96) -> Tuple[float, float]:
     denom = 1 + (z * z / n)
     center = (p + (z * z) / (2 * n)) / denom
     margin = (z * sqrt((p * (1 - p) + (z * z) / (4 * n)) / n)) / denom
-    return (center - margin, center + margin)
+    lo = center - margin
+    hi = center + margin
+    return (max(0.0, lo), min(1.0, hi))
 
 
 def fmt_pct(x: float) -> str:
@@ -87,10 +89,17 @@ def build_row(
     strong = g[g["oracle_degraded"] == False]  # noqa: E712
     wrong_deg = deg[deg["model_error"] == True]  # noqa: E712
 
-    silent_k = int(deg["silent_mirage"].sum())
-    silent_n = int(len(deg))
-    silent_rate = float(silent_k / silent_n) if silent_n else float("nan")
-    sil_lo, sil_hi = wilson_interval(silent_k, silent_n)
+    # Degraded-only view (semantic definition denominator).
+    silent_k_deg = int(deg["silent_mirage"].sum())
+    silent_n_deg = int(len(deg))
+    silent_rate_deg = float(silent_k_deg / silent_n_deg) if silent_n_deg else float("nan")
+    sil_deg_lo, sil_deg_hi = wilson_interval(silent_k_deg, silent_n_deg)
+
+    # All-trials view (stable denominator for retention-matched panels).
+    silent_k_all = int(g["silent_mirage"].sum())
+    silent_n_all = int(len(g))
+    silent_rate_all = float(silent_k_all / silent_n_all) if silent_n_all else float("nan")
+    sil_all_lo, sil_all_hi = wilson_interval(silent_k_all, silent_n_all)
 
     overall_wrong_k = int(wrong_deg["flagged_degraded"].sum())
     overall_wrong_n = int(len(wrong_deg))
@@ -108,17 +117,22 @@ def build_row(
         "method": method,
         "budget": float(budget),
         "n_total": int(len(g)),
-        "n_degraded": silent_n,
+        "n_degraded": silent_n_deg,
         "n_strong": int(len(strong)),
         "mean_achieved_retention": float(srow["mean_achieved_retention"]),
         "pivot_accuracy": float(srow["pivot_accuracy"]),
         "pivot_preservation": float(srow["pivot_preservation"]),
         "info_shift_rate": float(srow["info_shift_rate"]),
-        "silent_mirage_count": silent_k,
-        "silent_mirage_n": silent_n,
-        "silent_mirage_rate": silent_rate,
-        "silent_mirage_wilson_low": sil_lo,
-        "silent_mirage_wilson_high": sil_hi,
+        "silent_mirage_count_degraded": silent_k_deg,
+        "silent_mirage_n_degraded": silent_n_deg,
+        "silent_mirage_rate_degraded": silent_rate_deg,
+        "silent_mirage_wilson_low_degraded": sil_deg_lo,
+        "silent_mirage_wilson_high_degraded": sil_deg_hi,
+        "silent_mirage_count_all": silent_k_all,
+        "silent_mirage_n_all": silent_n_all,
+        "silent_mirage_rate_all": silent_rate_all,
+        "silent_mirage_wilson_low_all": sil_all_lo,
+        "silent_mirage_wilson_high_all": sil_all_hi,
         "flag_degraded_rate": float(srow["flag_degraded_rate"]),
         "flag_given_wrong": fgw,
         "flag_given_wrong_wilson_low": fgw_lo,
@@ -197,25 +211,39 @@ def main() -> None:
     md_lines.append("## Panel A (Primary): Exact Retention Match")
     md_lines.append("Retention is exactly matched between methods at budget 0.7.")
     md_lines.append("")
-    md_lines.append("| Method | Budget | Mean Retention | Info Shift | Pivot Preservation | Silent Mirage (degraded) |")
-    md_lines.append("|---|---:|---:|---:|---:|---:|")
+    md_lines.append("| Method | Budget | Mean Retention | Info Shift | Pivot Preservation | Silent Mirage (degraded) | Silent Mirage CI (all trials) |")
+    md_lines.append("|---|---:|---:|---:|---:|---:|---:|")
     a = table[table["pair_id"] == "A"]
     for _, r in a.iterrows():
-        sm = f"{int(r['silent_mirage_count'])}/{int(r['silent_mirage_n'])} ({fmt_pct(r['silent_mirage_rate'])})"
+        sm_deg = (
+            f"{int(r['silent_mirage_count_degraded'])}/{int(r['silent_mirage_n_degraded'])} "
+            f"({fmt_pct(r['silent_mirage_rate_degraded'])})"
+        )
+        sm_all_ci = (
+            f"{int(r['silent_mirage_count_all'])}/{int(r['silent_mirage_n_all'])}, "
+            f"[{fmt_pct2(r['silent_mirage_wilson_low_all'])}, {fmt_pct2(r['silent_mirage_wilson_high_all'])}]"
+        )
         md_lines.append(
-            f"| {r['method']} | {r['budget']:.1f} | {r['mean_achieved_retention']:.6f} | {fmt_pct(r['info_shift_rate'])} | {fmt_pct(r['pivot_preservation'])} | {sm} |"
+            f"| {r['method']} | {r['budget']:.1f} | {r['mean_achieved_retention']:.6f} | {fmt_pct(r['info_shift_rate'])} | {fmt_pct(r['pivot_preservation'])} | {sm_deg} | {sm_all_ci} |"
         )
     md_lines.append("")
     md_lines.append("## Panel B (Secondary): Cross-Budget Near Match")
     md_lines.append("Secondary comparison with close retention values (naive 0.5 vs contract 0.3).")
     md_lines.append("")
-    md_lines.append("| Method | Budget | Mean Retention | Info Shift | Pivot Preservation | Silent Mirage (degraded) |")
-    md_lines.append("|---|---:|---:|---:|---:|---:|")
+    md_lines.append("| Method | Budget | Mean Retention | Info Shift | Pivot Preservation | Silent Mirage (degraded) | Silent Mirage CI (all trials) |")
+    md_lines.append("|---|---:|---:|---:|---:|---:|---:|")
     b = table[table["pair_id"] == "B"]
     for _, r in b.iterrows():
-        sm = f"{int(r['silent_mirage_count'])}/{int(r['silent_mirage_n'])} ({fmt_pct(r['silent_mirage_rate'])})"
+        sm_deg = (
+            f"{int(r['silent_mirage_count_degraded'])}/{int(r['silent_mirage_n_degraded'])} "
+            f"({fmt_pct(r['silent_mirage_rate_degraded'])})"
+        )
+        sm_all_ci = (
+            f"{int(r['silent_mirage_count_all'])}/{int(r['silent_mirage_n_all'])}, "
+            f"[{fmt_pct2(r['silent_mirage_wilson_low_all'])}, {fmt_pct2(r['silent_mirage_wilson_high_all'])}]"
+        )
         md_lines.append(
-            f"| {r['method']} | {r['budget']:.1f} | {r['mean_achieved_retention']:.6f} | {fmt_pct(r['info_shift_rate'])} | {fmt_pct(r['pivot_preservation'])} | {sm} |"
+            f"| {r['method']} | {r['budget']:.1f} | {r['mean_achieved_retention']:.6f} | {fmt_pct(r['info_shift_rate'])} | {fmt_pct(r['pivot_preservation'])} | {sm_deg} | {sm_all_ci} |"
         )
 
     out_md.write_text("\n".join(md_lines) + "\n", encoding="utf-8")

@@ -60,14 +60,18 @@ At budget `0.7`, both methods have identical mean achieved retention:
 - contract: `0.686859`
 
 Silent mirage on degraded rows:
-- naive: `12/51` (`23.53%`), Wilson 95% CI `[14.00%, 36.76%]`
-- contract: `0/4` (`0.00%`), Wilson 95% CI `[0.00%, 48.99%]`
+- naive: `12/51` (`23.53%`)
+- contract: `0/4` (`0.00%`)
+
+Wilson 95% CI with all-trial denominator (retention-matched panel):
+- naive: `12/60` -> `[11.83%, 31.78%]`
+- contract: `0/60` -> `[0.00%, 6.02%]`
 
 ### Secondary retention-matched comparison (near match)
 
 Cross-budget comparison with close retention:
-- naive at budget `0.5`: retention `0.478276`, silent `11/56` (`19.64%`), Wilson `[11.34%, 31.84%]`
-- contract at budget `0.3`: retention `0.450570`, silent `0/10` (`0.00%`), Wilson `[0.00%, 27.75%]`
+- naive at budget `0.5`: retention `0.478276`, silent `11/56` (`19.64%`), all-trial Wilson `11/60 -> [10.56%, 29.92%]`
+- contract at budget `0.3`: retention `0.450570`, silent `0/10` (`0.00%`), all-trial Wilson `0/60 -> [0.00%, 6.02%]`
 
 ### Overall naive xAI behavior
 

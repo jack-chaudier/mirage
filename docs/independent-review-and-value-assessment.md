@@ -82,8 +82,8 @@ Cleanup gate:
 xAI non-reasoning run (`grok-4-1-fast-non-reasoning`):
 - Primary retention-matched comparison (exact): budget `0.7` for both methods
   - mean retention: `0.686859` vs `0.686859`
-  - naive silent mirage: `12/51` (`23.53%`, Wilson `[14.00%, 36.76%]`)
-  - contract silent mirage: `0/4` (`0.00%`, Wilson `[0.00%, 48.99%]`)
+  - naive silent mirage (degraded): `12/51` (`23.53%`)
+  - all-trial Wilson CI at matched retention: naive `12/60` `[11.83%, 31.78%]`, contract `0/60` `[0.00%, 6.02%]`
 - Secondary near-match comparison: naive `0.5` vs contract `0.3`
   - retention: `0.478276` vs `0.450570`
 - Naive compression info-shift on real incidents:
