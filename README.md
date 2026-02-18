@@ -1,13 +1,9 @@
 # The Validity Mirage
 
-This started as a narrative simulation engine.
-[NarrativeField](projects/lorien/) runs a deterministic multi-agent world — six
-characters with secrets and conflicting goals collide over a dinner party — then
-extracts story arcs from event traces using weighted signals and grammar-constrained
-search (3,250+ runs across 50 seeds, 98% extraction validity). The greedy extraction
-step kept failing in ways that looked random but weren't. Investigating why led to a
-formal theory of when and how sequential systems break under **endogenous constraints**
-— constraints whose structure depends on the solution itself — and the discovery that
+This started as a narrative simulation engine. The greedy extraction step kept
+failing in ways that looked random but weren't. Investigating why led to a formal
+theory of when and how sequential systems break under **endogenous constraints** —
+constraints whose structure depends on the solution itself — and the discovery that
 LLMs exhibit the same failure mode under context compression.
 
 We call this failure mode the **validity mirage**: the output scores high on fluency,
@@ -22,15 +18,15 @@ formal theory to empirical validation:
 
 | # | Paper | What it does |
 |---|-------|--------------|
-| 0 | [Continuous Control & Structural Regularization](papers/paper_00_continuous_control_structural_regularization.pdf) | Documents NarrativeField — the simulation engine, the extraction pipeline, and the quality-validity tradeoff that first revealed systematic extraction failures across 50 seeds. |
+| 0 | [NarrativeField: Continuous Control & Structural Regularization](papers/paper_00_continuous_control_structural_regularization.pdf) | Documents the simulation engine that started this work — a deterministic multi-agent world (six characters, secrets, conflicting goals) with grammar-constrained story extraction. Across 3,250+ runs and 50 seeds (98% extraction validity), a systematic quality-validity tradeoff revealed that extraction failures were structural, not random. |
 | 1 | [Absorbing States in Greedy Search](papers/paper_01_absorbing_states_in_greedy_search.pdf) | Formalizes the extraction failures. When a turning point is defined by the data itself (endogenous), greedy search can lock into absorbing states where no local improvement can reach a valid solution. Standard greedoid theory assumes exogenous constraints and misses this. |
 | 2 | [Streaming Oscillation Traps](papers/paper_02_streaming_oscillation_traps.pdf) | Extends the theory to streaming settings. Under incremental arrival, endogenous pivots create oscillation traps — the system cycles between candidate solutions without converging. |
 | 3 | [The Validity Mirage](papers/paper_03_validity_mirage_compression.pdf) | Connects the theory to LLMs. Context compression is a form of lossy sequential processing with endogenous structure: the model's attention pattern determines which tokens matter, but which tokens matter depends on what the model attends to. The mirage is the empirical consequence. |
 
-The key insight across all four: when the constraint that defines correctness is
-**endogenous** (determined by the solution, not given in advance), standard greedy and
-compression methods can fail silently — producing outputs that satisfy every surface
-check while missing the one fact that actually matters.
+The practical consequence: standard evaluation pipelines — fluency, coherence,
+format compliance — can certify outputs as correct when they aren't. The failure is
+invisible to every metric except one that checks whether the specific fact the answer
+hinges on actually survived.
 
 ## The core result
 
@@ -56,10 +52,12 @@ input text. This isolates the failure to internal attention, not input truncatio
 
 To test whether the mirage appears on real causal structures (not just synthetic
 benchmarks), we built a compression benchmark from NTSB aviation incident reports.
-Under naive compression, root-cause attribution shifts in 57% of cases and 22% of
-degraded outputs are silent mirages — the model confidently names the wrong cause.
+Across 180 naive-compression trials (12 incidents × 5 seeds × 3 budgets),
+root-cause attribution shifts in 57% of cases (103/180). Of the 164 trials where
+compression actually degraded the output, 22% are silent mirages (36/164) — the
+model confidently names the wrong cause with no indication of uncertainty.
 A contract-guarded compression method (which preserves the endogenous pivot
-structure) eliminates attribution shift entirely across all compression budgets.
+structure) eliminates attribution shift entirely across all budgets.
 
 ## What's in this repo
 
@@ -120,7 +118,28 @@ Paper publishing workflow:
 ## Citation
 
 ```bibtex
-@article{validity_mirage_2026,
+@article{gaffney2026narrativefield,
+  title   = {NarrativeField: Continuous Control and Structural Regularization in Simulation-First Story Extraction},
+  author  = {Jack Chaudier Gaffney},
+  year    = {2026},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX}
+}
+
+@article{gaffney2026absorbing,
+  title   = {Absorbing States in Greedy Search Under Endogenous Phase Constraints},
+  author  = {Jack Chaudier Gaffney},
+  year    = {2026},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX}
+}
+
+@article{gaffney2026streaming,
+  title   = {Streaming Oscillation Traps in Sequential Extraction with Endogenous Pivots},
+  author  = {Jack Chaudier Gaffney},
+  year    = {2026},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX}
+}
+
+@article{gaffney2026mirage,
   title   = {The Validity Mirage: How Context Compression Preserves Fluency While Destroying Semantic Pivots},
   author  = {Jack Chaudier Gaffney},
   year    = {2026},
