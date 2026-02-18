@@ -47,7 +47,9 @@ endogenous_context_theory/
 │   ├── test_16_organic_traps.py
 │   └── test_17_tropical_streaming.py
 ├── results/
+│   ├── current_status.md
 │   ├── summary_report.md
+│   ├── artifact_correction_report.md
 │   ├── figures/
 │   └── raw/
 ├── release/
@@ -77,6 +79,12 @@ For the clean paper-facing artifact package (tasks + notebooks + CSVs + adapters
 
 This release bundle is designed so external researchers can map artifacts directly to Paper 03 sections and reproduce headline tables quickly.
 
+## Result Status Files
+
+- `results/current_status.md` is the canonical post-correction status summary.
+- `results/artifact_correction_report.md` documents the focused rerun and corrected metrics for Tests 11/13/14/15.
+- `results/summary_report.md` is preserved as historical output from a pre-correction run.
+
 ## Setup
 
 ```bash
@@ -97,7 +105,7 @@ This will:
 2. Print a table and PASS/FAIL verdict for each test.
 3. Save raw CSV outputs under `results/raw/`.
 4. Save publication-style figures under `results/figures/`.
-5. Write `results/summary_report.md` with overall scientific assessment.
+5. Write `results/summary_report.md` with run summary (historical baseline if using the pre-correction path).
 
 ## Legacy Compatibility
 

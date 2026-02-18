@@ -1,4 +1,10 @@
-# Tropical Endogenous Context Semiring: Experimental Summary
+# Tropical Endogenous Context Semiring: Experimental Summary (Historical, Pre-Correction)
+
+> **Status note (February 2026):** This report was generated before the interleaved-focal artifact correction pass.
+> For the corrected status of Tests 11/13/14/15, use:
+> - `results/current_status.md`
+> - `results/artifact_correction_report.md`
+> - `results/raw/artifact_correction_summary.csv`
 
 ## 1. Validation Status
 - **Test 01: Tropical Exactness**: **PASS** (runtime=18.97s, key metric=violations=0; trials=8000)
