@@ -1,0 +1,419 @@
+task_id,model_name,full_answer,compressed_answer,raw_validity,raw_validity_full,raw_validity_compressed,pivot_preserved,semantic_regret,compression_level,category,full_pivot,compressed_pivot,full_pivot_matches_ground_truth,pivot_matches_ground_truth,pivot_outcome,high_validity_flag,true_mirage_flag,rescue_flag,instability_flag,mirage_flag
+A01,grok-4-1-fast,"PIVOT_ID=A01-E065  
+Prerequisite events (low-salience setup enabling latent dependencies for service mesh cascade): A01-E057, A01-E059, A01-E061, A01-E063","PIVOT_ID=A01-E065  
+Prerequisites: A01-E037 (prior ledger telemetry, explicitly causal prerequisite and structural breadcrumb with Composite=30; latent dependency noted in E065 description)",0.76,0.65,0.76,1,0.40857752348232435,0.4,incident,A01-E065,A01-E065,1,1,stable_correct,1,0,0,0,0
+A01,grok-4-1-fast,"PIVOT_ID=A01-E065  
+Prerequisite events (low-salience setup enabling latent dependencies for service mesh cascade): A01-E057, A01-E059, A01-E061, A01-E063","PIVOT_ID=A01-E065  
+Prerequisite events: A01-E028, A01-E008, A01-E009, A01-E010",0.65,0.65,0.65,1,0.27660902596529136,0.5,incident,A01-E065,A01-E065,1,1,stable_correct,0,0,0,0,0
+A01,grok-4-1-fast,"PIVOT_ID=A01-E065  
+Prerequisite events (low-salience setup enabling latent dependencies for service mesh cascade): A01-E057, A01-E059, A01-E061, A01-E063","PIVOT_ID=A01-E065  
+Prerequisite events: A01-E008, A01-E035, A01-E037",0.65,0.65,0.65,1,0.27917779644524876,0.6,incident,A01-E065,A01-E065,1,1,stable_correct,0,0,0,0,0
+A02,grok-4-1-fast,"PIVOT_ID=A02-E062  
+Prerequisite events: A02-E056, A02-E058, A02-E060 (prior config baseline updates explicitly preserving causal prerequisites and dependencies enabling cross-system coupling in the cascade failure).","PIVOT_ID=A02-E062  
+Prerequisite events: A02-E084, A02-E086, A02-E006",0.65,0.85,0.65,1,0.315021017864589,0.4,incident,A02-E062,A02-E062,1,1,stable_correct,0,0,0,0,0
+A02,grok-4-1-fast,"PIVOT_ID=A02-E062  
+Prerequisite events: A02-E056, A02-E058, A02-E060 (prior config baseline updates explicitly preserving causal prerequisites and dependencies enabling cross-system coupling in the cascade failure).","PIVOT_ID=A02-E062  
+Prerequisite events: A02-E001, A02-E028, A02-E084",0.65,0.85,0.65,1,0.315021017864589,0.5,incident,A02-E062,A02-E062,1,1,stable_correct,0,0,0,0,0
+A02,grok-4-1-fast,"PIVOT_ID=A02-E062  
+Prerequisite events: A02-E056, A02-E058, A02-E060 (prior config baseline updates explicitly preserving causal prerequisites and dependencies enabling cross-system coupling in the cascade failure).","PIVOT_ID=A02-E062
+Prerequisite events: A02-E083, A02-E057, A02-E084, A02-E004, A02-E059, A02-E061",0.65,0.85,0.65,1,0.3172630081222977,0.6,incident,A02-E062,A02-E062,1,1,stable_correct,0,0,0,0,0
+A03,grok-4-1-fast,"PIVOT_ID=A03-E058  
+Root cause: Cascade failure across service mesh (ledger service, Composite=108).  
+Prerequisite events: A03-E082 (api-gateway, Composite=30), A03-E083 (billing, Composite=30), A03-E084 (search, Composite=30). These low-salience routine telemetry setup events chronologically precede the root cause (05-01 to 05-03), feature high Scope=6 with Severity=5, reference dependencies and downstream shifts critical to synchronizing the service mesh failure per global timeline context.","PIVOT_ID=A03-E058  
+Prerequisites (chronological order, all prior setup events enabling synchronization into cascade): A03-E082, A03-E055, A03-E002, A03-E083, A03-E029, A03-E057, A03-E003, A03-E084",0.85,0.9999999999999999,0.85,1,0.3969755116047342,0.4,incident,A03-E058,A03-E058,1,1,stable_correct,1,0,0,0,0
+A03,grok-4-1-fast,"PIVOT_ID=A03-E058  
+Root cause: Cascade failure across service mesh (ledger service, Composite=108).  
+Prerequisite events: A03-E082 (api-gateway, Composite=30), A03-E083 (billing, Composite=30), A03-E084 (search, Composite=30). These low-salience routine telemetry setup events chronologically precede the root cause (05-01 to 05-03), feature high Scope=6 with Severity=5, reference dependencies and downstream shifts critical to synchronizing the service mesh failure per global timeline context.","PIVOT_ID=A03-E058
+Prerequisite events: A03-E030",0.5599999999999999,0.9999999999999999,0.5599999999999999,1,0.39628071864515024,0.5,incident,A03-E058,A03-E058,1,1,stable_correct,0,0,0,0,0
+A03,grok-4-1-fast,"PIVOT_ID=A03-E058  
+Root cause: Cascade failure across service mesh (ledger service, Composite=108).  
+Prerequisite events: A03-E082 (api-gateway, Composite=30), A03-E083 (billing, Composite=30), A03-E084 (search, Composite=30). These low-salience routine telemetry setup events chronologically precede the root cause (05-01 to 05-03), feature high Scope=6 with Severity=5, reference dependencies and downstream shifts critical to synchronizing the service mesh failure per global timeline context.","PIVOT_ID=A03-E058  
+Root cause: Cascade failure across service mesh (Service=ledger, 2026-05-04 10:39, Severity=9, Scope=12, Composite=108).  
+Prerequisite events (chronologically prior setup events in timeline): A03-E083, A03-E057, A03-E003, A03-E084.",0.85,0.9999999999999999,0.85,1,0.30707570612106205,0.6,incident,A03-E058,A03-E058,1,1,stable_correct,1,0,0,0,0
+A04,grok-4-1-fast,"PIVOT_ID=A04-E063
+
+**Root cause:** [A04-E063] 2026-05-09 15:14 | Service=search | Event=Cascade failure across service mesh | Severity=9 | Scope=12 | Composite=108 (global argmax composite severity score).
+
+**Prerequisite events:** Low-salience setup events (config baseline updates) temporally prior to the root cause that enabled synchronization across subsystems: A04-E055, A04-E057, A04-E059, A04-E061.","PIVOT_ID=A04-E063
+Prerequisite events: A04-E056, A04-E084, A04-E014",0.65,0.9999999999999999,0.65,1,0.34327802913113215,0.4,incident,A04-E063,A04-E063,1,1,stable_correct,0,0,0,0,0
+A04,grok-4-1-fast,"PIVOT_ID=A04-E063
+
+**Root cause:** [A04-E063] 2026-05-09 15:14 | Service=search | Event=Cascade failure across service mesh | Severity=9 | Scope=12 | Composite=108 (global argmax composite severity score).
+
+**Prerequisite events:** Low-salience setup events (config baseline updates) temporally prior to the root cause that enabled synchronization across subsystems: A04-E055, A04-E057, A04-E059, A04-E061.","PIVOT_ID=A04-E063
+
+**Root cause:** A04-E063 (2026-05-09 15:14 | Service=search | Event=Cascade failure across service mesh | Severity=9 | Scope=12 | Composite=108). This has the strictly highest composite severity score (Severity * Scope = 108) across the entire timeline per the global argmax rule.
+
+**Prerequisite events:** The prior events explicitly described as preserving ""details that become causal prerequisites for later interpretation,"" which enabled the root cause:
+- A04-E008 (2026-05-08 15:49 | Composite=20)
+- A04-E030 (2026-05-03 15:23 | Composite=8)
+- A04-E058 (2026-05-04 10:39 | Composite=12)
+- A04-E060 (2026-05-06 12:53 | Composite=10)
+- A04-E062 (2026-05-08 14:07 | Composite=15)
+- A04-E085 (2026-05-04 15:48 | Composite=20)",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.258900778196112,0.5,incident,A04-E063,A04-E063,1,1,stable_correct,1,0,0,0,0
+A04,grok-4-1-fast,"PIVOT_ID=A04-E063
+
+**Root cause:** [A04-E063] 2026-05-09 15:14 | Service=search | Event=Cascade failure across service mesh | Severity=9 | Scope=12 | Composite=108 (global argmax composite severity score).
+
+**Prerequisite events:** Low-salience setup events (config baseline updates) temporally prior to the root cause that enabled synchronization across subsystems: A04-E055, A04-E057, A04-E059, A04-E061.","PIVOT_ID=A04-E063
+
+Prerequisite events (prior routine telemetry on the search service enabling the cascade failure across the service mesh):
+- A04-E056 (2026-05-02, Composite=12)
+- A04-E084 (2026-05-03, Composite=35)
+- A04-E007 (2026-05-07, Composite=24)
+- A04-E035 (2026-05-08, Composite=15)",0.85,0.9999999999999999,0.85,1,0.3318055728375148,0.6,incident,A04-E063,A04-E063,1,1,stable_correct,1,0,0,0,0
+B01,grok-4-1-fast,"PIVOT_ID=B01-E051
+
+The anchor position, Helios Grid Infrastructure at Week-51 (B01-E051), achieved the portfolio's highest CumulativeReturn of +20.82% via a sharp +5.40% WeeklyReturn under RegimeScore=3. This success was enabled by 50 preceding weeks of incrementally stable, low-salience market conditions across rotating positions, characterized by noisy commentary emphasizing ""structural breadcrumbs,"" ""causal prerequisites,"" and ""downstream feasibility shifts"" rather than headline volatility. Key preceding patterns:
+
+- **Steady position-specific build-up for Helios**: Prior Helios updates showed consistent compounding (e.g., E033 Week-33: +3.23% weekly to 8.49% cum., RegimeScore=1; E038 Week-38: +0.89% to 9.38% cum., RegimeScore=5; E048 Week-48: +0.31% to 9.42% cum., RegimeScore=2), with commentary noting minor variance, procedural housekeeping, and global pivot admissibility changes (e.g., E013, E023, E038 explicitly flagging feasibility shifts).
+- **Broad portfolio stability and cross-position support**: Intervening positions delivered positive WeeklyReturns in 80%+ of prior entries (avg. ~+0.9%), with no sustained drawdowns >1.5%. High RegimeScores (4-5) in 20% of pre-E051 events (e.g., E011 NorthRiver R5, E047 Aurelia R4 at 10.76% cum.) preserved interdependencies. BlueHarbor (e.g., E044 -1.30% but quick recovery) and Aurelia (peaks near 10%) provided diversification ballast.
+- **Regime dynamics**: RegimeScores averaged ~3 pre-E051, with clusters of 1-2 signaling ""low salience unless tracking global score rule"" (e.g., E042-E050 sequence), enabling quiet accumulation. E051's ""cross-system coupling explicit and destabilizing"" marks the culmination, where prior breadcrumbs (e.g., ""preserving causal prerequisites"" in E002, E005, E032) unlocked the jump amid portfolio research's repetitive housekeeping.
+
+Overall, success stemmed from unremarkable procedural continuity and dependency preservation, allowing a latent regime pivot amid subdued volatility.","PIVOT_ID=B01-E051
+
+The anchor entry [B01-E051] (Helios Grid Infrastructure, Week-51, +5.40% weekly, 20.82% cumulative—the maximum in the timeline) reflects a breakout performance enabled by prior accumulation and supportive regime dynamics in the position's history, alongside correlated upstream sector strength. Key preceding conditions:
+
+- **Position-specific buildup (structural breadcrumbs for Helios Grid Infrastructure)**: Steady compounding with low-salience markers across prior updates—Week-03 (0.23%, RegimeScore=3, housekeeping chatter); Week-13 (3.08%, RegimeScore=5, minor variance but globally pivot-altering); Week-23 (3.40%, RegimeScore=2, dependency references); Week-38 (9.38%, RegimeScore=5, minor variance with explicit global pivot admissibility shift). The Week-38 high RegimeScore=5 event preserved causal prerequisites, setting downstream feasibility for the 13-week hold leading to the +11.44% implied gain into Week-51.
+
+- **Broader portfolio regime and cross-position signals**: Accelerating returns in complementary sectors immediately prior, notably Aurelia AI Semiconductor Basket at Week-47 (10.76% cumulative, +2.18% weekly, RegimeScore=4, globally pivot-changing despite local boredom). This suggests market conditions favoring energy-intensive AI infrastructure (semiconductors driving grid/power demand), with Helios benefiting as downstream play. Intervening events (e.g., [B01-E044]/[B01-E049] BlueHarbor Treasury Arbitrage, RegimeScores=2) show stable arbitrage backdrop but low strategic dominance, preserving ordinary research processing without disruption.
+
+- **Regime context**: Preceding average RegimeScore ~3.1 (across Weeks 2-49), with clustered 5s (e.g., [B01-E011], [B01-E013], [B01-E020], [B01-E032], [B01-E036], [B01-E038]) indicating episodic high-feasibility windows amid noisy commentary. No dominant negative outliers; cumulative returns portfolio-wide trended positive (e.g., BlueHarbor stable at ~6-7%), enabling risk-on tilt toward infrastructure.
+
+This confluence—position compounding, AI-grid thematic linkage, and regime breadcrumbs—destabilized cross-system dynamics (per E051 note), crystallizing the outlier weekly gain.",0.9999999999999999,0.8299999999999998,0.9999999999999999,1,0.34039032901578115,0.4,investment,B01-E051,B01-E051,1,1,stable_correct,1,0,0,0,0
+B01,grok-4-1-fast,"PIVOT_ID=B01-E051
+
+The anchor position, Helios Grid Infrastructure at Week-51 (B01-E051), achieved the portfolio's highest CumulativeReturn of +20.82% via a sharp +5.40% WeeklyReturn under RegimeScore=3. This success was enabled by 50 preceding weeks of incrementally stable, low-salience market conditions across rotating positions, characterized by noisy commentary emphasizing ""structural breadcrumbs,"" ""causal prerequisites,"" and ""downstream feasibility shifts"" rather than headline volatility. Key preceding patterns:
+
+- **Steady position-specific build-up for Helios**: Prior Helios updates showed consistent compounding (e.g., E033 Week-33: +3.23% weekly to 8.49% cum., RegimeScore=1; E038 Week-38: +0.89% to 9.38% cum., RegimeScore=5; E048 Week-48: +0.31% to 9.42% cum., RegimeScore=2), with commentary noting minor variance, procedural housekeeping, and global pivot admissibility changes (e.g., E013, E023, E038 explicitly flagging feasibility shifts).
+- **Broad portfolio stability and cross-position support**: Intervening positions delivered positive WeeklyReturns in 80%+ of prior entries (avg. ~+0.9%), with no sustained drawdowns >1.5%. High RegimeScores (4-5) in 20% of pre-E051 events (e.g., E011 NorthRiver R5, E047 Aurelia R4 at 10.76% cum.) preserved interdependencies. BlueHarbor (e.g., E044 -1.30% but quick recovery) and Aurelia (peaks near 10%) provided diversification ballast.
+- **Regime dynamics**: RegimeScores averaged ~3 pre-E051, with clusters of 1-2 signaling ""low salience unless tracking global score rule"" (e.g., E042-E050 sequence), enabling quiet accumulation. E051's ""cross-system coupling explicit and destabilizing"" marks the culmination, where prior breadcrumbs (e.g., ""preserving causal prerequisites"" in E002, E005, E032) unlocked the jump amid portfolio research's repetitive housekeeping.
+
+Overall, success stemmed from unremarkable procedural continuity and dependency preservation, allowing a latent regime pivot amid subdued volatility.","PIVOT_ID=B01-E051
+
+The anchor position, Helios Grid Infrastructure at Week-51 (CumulativeReturn=20.82%), achieved peak performance via a +5.40% weekly gain, building on consistent prior gains in the same position amid low-salience regime shifts. Preceding enablers within the Helios timeline include:
+
+- **Steady accumulation phase (Weeks 8-33)**: Positive weekly returns of +2.40% (E008, RegimeScore=3), +0.45% (E013, r=5), +0.67% (E018, r=5), +1.86% (E028, r=4), and +3.23% (E033, r=1), elevating CumulativeReturn from 2.63% to 8.49%. High RegimeScores (4-5) in E013/E018/E028 signal stable ""local checks"" and ""minor variance,"" with global effects like ""changes which pivot is admissible"" (E013) and ""shifts downstream feasibility"" (E033 despite r=1 low-salience flag).
+
+- **Intervening timeline noise (Weeks 34-50)**: No Helios updates, but portfolio-wide breadcrumbs preserved causal prerequisites (e.g., E040/E047 procedural details in competing positions like Cinder/Aurelia). Aurelia's 10.76% peak (E047, r=4) indicates parallel tech/infra momentum without destabilizing Helios trajectory.
+
+- **Regime context**: Preceding Helios events averaged RegimeScore ~3.8 (high stability), with r=5 entries as structural enablers amid ""ordinary background activity."" E051's own ""cross-system coupling... destabilizing"" marks the inflection, triggered by full-timeline dependencies (e.g., E013/E018/E033 breadcrumbs), enabling the outsized weekly surge in a grid infrastructure rally, overriding local ""minor variance"" noise. No headline events; success stemmed from cumulative, low-salience feasibility shifts favoring infrastructure carry.",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.3488434711017715,0.5,investment,B01-E051,B01-E051,1,1,stable_correct,1,0,0,0,0
+B01,grok-4-1-fast,"PIVOT_ID=B01-E051
+
+The anchor position, Helios Grid Infrastructure at Week-51 (B01-E051), achieved the portfolio's highest CumulativeReturn of +20.82% via a sharp +5.40% WeeklyReturn under RegimeScore=3. This success was enabled by 50 preceding weeks of incrementally stable, low-salience market conditions across rotating positions, characterized by noisy commentary emphasizing ""structural breadcrumbs,"" ""causal prerequisites,"" and ""downstream feasibility shifts"" rather than headline volatility. Key preceding patterns:
+
+- **Steady position-specific build-up for Helios**: Prior Helios updates showed consistent compounding (e.g., E033 Week-33: +3.23% weekly to 8.49% cum., RegimeScore=1; E038 Week-38: +0.89% to 9.38% cum., RegimeScore=5; E048 Week-48: +0.31% to 9.42% cum., RegimeScore=2), with commentary noting minor variance, procedural housekeeping, and global pivot admissibility changes (e.g., E013, E023, E038 explicitly flagging feasibility shifts).
+- **Broad portfolio stability and cross-position support**: Intervening positions delivered positive WeeklyReturns in 80%+ of prior entries (avg. ~+0.9%), with no sustained drawdowns >1.5%. High RegimeScores (4-5) in 20% of pre-E051 events (e.g., E011 NorthRiver R5, E047 Aurelia R4 at 10.76% cum.) preserved interdependencies. BlueHarbor (e.g., E044 -1.30% but quick recovery) and Aurelia (peaks near 10%) provided diversification ballast.
+- **Regime dynamics**: RegimeScores averaged ~3 pre-E051, with clusters of 1-2 signaling ""low salience unless tracking global score rule"" (e.g., E042-E050 sequence), enabling quiet accumulation. E051's ""cross-system coupling explicit and destabilizing"" marks the culmination, where prior breadcrumbs (e.g., ""preserving causal prerequisites"" in E002, E005, E032) unlocked the jump amid portfolio research's repetitive housekeeping.
+
+Overall, success stemmed from unremarkable procedural continuity and dependency preservation, allowing a latent regime pivot amid subdued volatility.","PIVOT_ID=B01-E051
+
+The anchor position (Helios Grid Infrastructure, Week-51) reached the highest CumulativeReturn of +20.82% via a standout WeeklyReturn of +5.40%, under RegimeScore=3. Its success was enabled by a sequence of low-salience, procedurally preservative prior updates in the same position, which accumulated returns and maintained structural dependencies across the timeline despite appearing as ""ordinary background activity,"" ""repetitive housekeeping,"" and ""status chatter"" in isolation:
+
+- **Week-03 (B01-E003, RegimeScore=3)**: Initiated position at +0.23% weekly (cum. 0.23%), with small narrative footprint but shifts to downstream feasibility via preserved procedural details.
+- **Week-08 (B01-E008, RegimeScore=3)**: Built to +2.63% cum. via +2.40% weekly; causal prerequisites embedded in plain-language updates, discarded in compression but critical for later pivots.
+- **Week-13 (B01-E013, RegimeScore=5)**: Advanced to +3.08% cum.; high RegimeScore amid ""local checks passed with minor variance,"" procedural collapse risks, and explicit global pivot admissibility shift—key enabler for downstream scaling.
+- **Week-43 (B01-E043, RegimeScore=3)**: Scaled to +9.12% cum. despite -0.26% weekly dip; non-dominant isolation but feasibility-altering details, bridging to Week-51.
+
+Market conditions preceding Week-51 featured consistent mid-range RegimeScores (mostly 3-5 for Helios), noisy low-salience markers emphasizing timeline dependencies over headline events, and minimal cross-position disruption (only B01-E047 Aurelia interlude). This fostered ""cross-system coupling"" explicit at Week-51, destabilizing competitors while enabling Helios via prior breadcrumbs—suggesting stable infrastructure-tailwind regimes (e.g., grid/energy carry) where subtle housekeeping preserved alpha accrual.",0.9999999999999999,0.8299999999999998,0.9999999999999999,1,0.32663342189441447,0.6,investment,B01-E051,B01-E051,1,1,stable_correct,1,0,0,0,0
+B02,grok-4-1-fast,"PIVOT_ID=B02-E061
+
+The anchor entry [B02-E061] (Helios Grid Infrastructure, Week-61) records the highest CumulativeReturn (20.65%) in the timeline, driven by a +5.40% WeeklyReturn amid a high-impact synchronization of subsystems. This success was preceded and enabled by 5 weeks of low-salience market conditions (Weeks 56-60) characterized by elevated-to-declining RegimeScores (5→2→4→3→1) across cycling positions, with commentary uniformly emphasizing ""repetitive housekeeping and status chatter,"" ""mundane baseline calibrations,"" ""routine control-plane adjustments,"" and ""causal prerequisites"" that appear boring or discardable in isolation but explicitly ""shift downstream feasibility"" and ""change which pivot is admissible"" when tracked globally per the score rule. Key enablers:
+- **Week-60 (Cinder Logistics Credit, RegimeScore=1)**: Mundane baseline calibration with full-timeline dependencies, directly priming feasibility shifts.
+- **Week-59 (BlueHarbor Treasury Arbitrage, RegimeScore=3)**: Ordinary background activity preserving procedural details, explicitly altering pivot admissibility.
+- **Week-58 (Helios Grid Infrastructure, RegimeScore=4)**: Routine control-plane adjustment on the anchor position itself, with small narrative footprint but downstream impact.
+This sequence of structurally secondary, dependency-heavy events (no headline dominance) aligned regimes for the Week-61 transition, evidenced by the rotation deviation (Helios featured 3 weeks after its prior entry, skipping NorthRiver Utilities Carry). No similar prior 5-week RegimeScore trajectory (sum=15, declining trend) produced comparable position-level outperformance.","PIVOT_ID=B02-E061
+
+The Helios Grid Infrastructure position reached its peak cumulative return of +20.65% in Week-61 following a multi-month buildup of incremental gains and structural setup in prior timeline entries, particularly within the same position and related utilities plays. Key preceding conditions:
+
+- **Direct position precursors (Helios Grid Infrastructure)**: Steady compounding from Week-03 (Cum=1.10%, RegimeScore=5; initial high-regime entry preserving full-timeline dependencies), Week-13 (Cum=2.26%, R3; ordinary background with global pivot admissibility), Week-23 (Cum=4.48%, R1), Week-38 (Cum=6.06%, R1; procedural details often collapsed), Week-48 (Cum=7.01%, R3; housekeeping chatter enabling pivot changes), and critically Week-53 (Cum=9.37%, R1; +2.36% weekly gain with explicit preservation of ""causal prerequisites for later interpretation"" via low-variance local checks—a structural breadcrumb directly enabling downstream feasibility).
+- **Intervening supports (Weeks 54-60)**: Week-56 NorthRiver Utilities Carry (Cum=6.79%, R5; high-regime ordinary activity with low-salience commentary tracking global score rule, indicating stable utility carry conditions synergistic with grid infrastructure). Week-57 Aurelia AI Semiconductor Basket (Cum=7.00%, R2; minor dip but procedural details discarded locally yet globally relevant).
+- **Overarching enablers**: Repetitive portfolio research housekeeping, status chatter, and dependency references across 10+ prior entries (e.g., E048, E041, E038) maintained low-salience markers that synchronized into the Week-61 ""high-impact transition"" of multiple subsystems, despite local boringness. RegimeScores trended neutral-to-high (peaks at 5 in utilities precursors), filtering noise to admit this pivot under the cumulative-return anchor rule. No headline events; success stemmed from globally causal, locally discardable details shifting feasibility.",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.3555764771905735,0.4,investment,B02-E061,B02-E061,1,1,stable_correct,1,0,0,0,0
+B02,grok-4-1-fast,"PIVOT_ID=B02-E061
+
+The anchor entry [B02-E061] (Helios Grid Infrastructure, Week-61) records the highest CumulativeReturn (20.65%) in the timeline, driven by a +5.40% WeeklyReturn amid a high-impact synchronization of subsystems. This success was preceded and enabled by 5 weeks of low-salience market conditions (Weeks 56-60) characterized by elevated-to-declining RegimeScores (5→2→4→3→1) across cycling positions, with commentary uniformly emphasizing ""repetitive housekeeping and status chatter,"" ""mundane baseline calibrations,"" ""routine control-plane adjustments,"" and ""causal prerequisites"" that appear boring or discardable in isolation but explicitly ""shift downstream feasibility"" and ""change which pivot is admissible"" when tracked globally per the score rule. Key enablers:
+- **Week-60 (Cinder Logistics Credit, RegimeScore=1)**: Mundane baseline calibration with full-timeline dependencies, directly priming feasibility shifts.
+- **Week-59 (BlueHarbor Treasury Arbitrage, RegimeScore=3)**: Ordinary background activity preserving procedural details, explicitly altering pivot admissibility.
+- **Week-58 (Helios Grid Infrastructure, RegimeScore=4)**: Routine control-plane adjustment on the anchor position itself, with small narrative footprint but downstream impact.
+This sequence of structurally secondary, dependency-heavy events (no headline dominance) aligned regimes for the Week-61 transition, evidenced by the rotation deviation (Helios featured 3 weeks after its prior entry, skipping NorthRiver Utilities Carry). No similar prior 5-week RegimeScore trajectory (sum=15, declining trend) produced comparable position-level outperformance.","PIVOT_ID=B02-E061
+
+The anchor position, Helios Grid Infrastructure (Week 61), reached the highest cumulative return of +20.65% via a +5.40% weekly gain in a RegimeScore=3 environment. This success was enabled by prior low-salience portfolio research markers across the timeline, particularly a buildup of structural dependencies from repetitive housekeeping, status chatter, and procedural details in preceding entries (e.g., B02-E048 Helios at +7.01% cum./RegimeScore=3; B02-E051 NorthRiver RegimeScore=2; B02-E057 Aurelia RegimeScore=2). These globally relevant breadcrumbs—dismissible in isolation—synchronized multiple subsystems into the high-impact transition noted at E061, with consistent mid-range RegimeScores (2-3) in the immediate lead-up (Weeks 48-57) providing the causal prerequisites amid ordinary background activity and minor variances. Earlier Helios updates (e.g., B02-E013/18/28/33/48, RegimeScores 3-5) established steady accumulation (+0.04% to +1.63% weekly gains), rendering the pivot admissible under the global score rule.",0.9999999999999999,0.8299999999999998,0.9999999999999999,1,0.34919166349197517,0.5,investment,B02-E061,B02-E061,1,1,stable_correct,1,0,0,0,0
+B02,grok-4-1-fast,"PIVOT_ID=B02-E061
+
+The anchor entry [B02-E061] (Helios Grid Infrastructure, Week-61) records the highest CumulativeReturn (20.65%) in the timeline, driven by a +5.40% WeeklyReturn amid a high-impact synchronization of subsystems. This success was preceded and enabled by 5 weeks of low-salience market conditions (Weeks 56-60) characterized by elevated-to-declining RegimeScores (5→2→4→3→1) across cycling positions, with commentary uniformly emphasizing ""repetitive housekeeping and status chatter,"" ""mundane baseline calibrations,"" ""routine control-plane adjustments,"" and ""causal prerequisites"" that appear boring or discardable in isolation but explicitly ""shift downstream feasibility"" and ""change which pivot is admissible"" when tracked globally per the score rule. Key enablers:
+- **Week-60 (Cinder Logistics Credit, RegimeScore=1)**: Mundane baseline calibration with full-timeline dependencies, directly priming feasibility shifts.
+- **Week-59 (BlueHarbor Treasury Arbitrage, RegimeScore=3)**: Ordinary background activity preserving procedural details, explicitly altering pivot admissibility.
+- **Week-58 (Helios Grid Infrastructure, RegimeScore=4)**: Routine control-plane adjustment on the anchor position itself, with small narrative footprint but downstream impact.
+This sequence of structurally secondary, dependency-heavy events (no headline dominance) aligned regimes for the Week-61 transition, evidenced by the rotation deviation (Helios featured 3 weeks after its prior entry, skipping NorthRiver Utilities Carry). No similar prior 5-week RegimeScore trajectory (sum=15, declining trend) produced comparable position-level outperformance.","PIVOT_ID=B02-E061
+
+The anchor position, Helios Grid Infrastructure at Week-61 (CumulativeReturn=20.65%, WeeklyReturn=+5.40%, RegimeScore=3), achieved its peak success through a multi-year accumulation of low-salience structural breadcrumbs and causal prerequisites in prior Helios entries, enabling a ""multiple subsystems synchronized into a high-impact transition."" Key preceding market conditions include:
+
+- **Steady position build-up in Helios itself**: Iterative gains in earlier Helios updates created downstream feasibility—Week-03 (Cum=1.10%, Regime=5, minor variance passed), Week-08 (Cum=1.17%, Regime=5, housekeeping preserved), Week-13 (Cum=2.26%, Regime=3, background pivot shift), Week-43 (Cum=6.66%, Regime=3, low-salience commentary), and Week-53 (Cum=9.37%, Regime=1, breadcrumb)—shifting global admissibility despite local boredom.
+- **Resilient parallel positions signaling stable regimes**: NorthRiver Utilities Carry (e.g., Week-21 Cum=4.17% Regime=3; Week-31 Cum=5.95% Regime=4) and Aurelia AI Semiconductor Basket (e.g., Week-37 Cum=6.47% Regime=1; Week-57 Cum=7.00% Regime=2) maintained positive trajectories with procedural details preserved, indicating low-variance infrastructure/utilities/tech carry favorable for grid infra scaling.
+- **Noisy but prerequisite housekeeping across portfolio**: Repetitive status chatter and collapsed procedural details in intervening entries (e.g., E050 Cinder Regime=2; E059 BlueHarbor Cum=8.04% Regime=3) ensured synchronization, with global pivot changes (noted in 80%+ of priors) overriding local insignificance.
+
+These conditions—high cumulative anchoring, preserved dependencies, and regime stability (avg. prior RegimeScore ~3)—primed the dramatic weekly spike amid ordinary dashboard activity.",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.39089629799691283,0.6,investment,B02-E061,B02-E061,1,1,stable_correct,1,0,0,0,0
+B03,grok-4-1-fast,"PIVOT_ID=B03-E060
+
+The anchor position (Helios Grid Infrastructure, Week-60) achieved the highest CumulativeReturn of +28.25% via a +5.40% weekly gain, crossing a systemic threshold where ""all priors inverted."" This success was enabled by 59 preceding weeks of low-salience, noisy market commentary emphasizing structural breadcrumbs, causal prerequisites, and procedural housekeeping that shifted pivot admissibility without headline dominance. Key preceding indicators:
+
+- **RegimeScore buildup**: High scores clustered pre-pivot (e.g., E055 Cinder r=5, E057 Aurelia r=4, E059 BlueHarbor r=5), contrasting lower scores (e.g., E056 NorthRiver r=1, E058 Helios r=1), signaling regime stability favoring infrastructure (Helios prior cum +16.85% at E058).
+- **Narrative preconditions**: Repetitive ""ordinary background activity,"" ""low salience unless tracking global score rule,"" and ""changes which pivot is admissible"" across E051–E059 accumulated downstream feasibility, enabling the anomalous scheduling of Helios (vs. standard Cinder slot) amid minor variances and dependency references.
+- **Position momentum**: Helios showed consistent outperformance (e.g., +3.66% E018, +2.78% E033, +1.75% E038, +2.27% E058), with portfolio-wide low-volatility returns preserving bandwidth for threshold cross.
+
+No isolated dominant signals; success stemmed from global timeline compression resistance.","PIVOT_ID=B03-E060
+
+The anchor position, Helios Grid Infrastructure, reached the highest CumulativeReturn of 28.25% in Week-60 via a +5.40% weekly gain, where commentary explicitly notes ""the system crossed a threshold where all priors inverted."" This success was preceded and enabled by a multi-month buildup of favorable regime conditions specific to the position:
+
+- **Consistent prior performance in Helios**: Positive weekly returns in Weeks 3 (+1.29%, cum. 1.29%, RegimeScore=3), 13 (+1.16%, cum. 3.50%, RegimeScore=2), 23 (+1.18%, cum. 8.34%, RegimeScore=5), 38 (+1.75%, cum. 13.09%, RegimeScore=5), 48 (-0.19%, cum. 13.48%, RegimeScore=5), and 53 (+1.10%, cum. 14.58%, RegimeScore=2), demonstrating resilience and accumulation despite minor drawdown.
+- **High RegimeScore clustering (5/5 scale)**: Repeated top-tier scores (5) in Weeks 23, 38, 48 indicated low-noise markers of supportive market regimes for grid infrastructure (e.g., carry and stability themes), overriding local ""boring"" housekeeping chatter. These aligned with global score rule tracking, shifting pivot admissibility and preserving causal prerequisites.
+- **Broader portfolio context**: Intervening updates (e.g., Weeks 55-56) showed mixed but non-disruptive activity in competing positions (Cinder RegimeScore=5, NorthRiver=1), with low-salience procedural details ensuring no downstream interference. No dominant negative priors emerged, enabling the Week-60 threshold cross.
+
+This sequence inverted priors, amplifying the position's structural momentum in a noisy diary.",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.3666044453224693,0.4,investment,B03-E060,B03-E060,1,1,stable_correct,1,0,0,0,0
+B03,grok-4-1-fast,"PIVOT_ID=B03-E060
+
+The anchor position (Helios Grid Infrastructure, Week-60) achieved the highest CumulativeReturn of +28.25% via a +5.40% weekly gain, crossing a systemic threshold where ""all priors inverted."" This success was enabled by 59 preceding weeks of low-salience, noisy market commentary emphasizing structural breadcrumbs, causal prerequisites, and procedural housekeeping that shifted pivot admissibility without headline dominance. Key preceding indicators:
+
+- **RegimeScore buildup**: High scores clustered pre-pivot (e.g., E055 Cinder r=5, E057 Aurelia r=4, E059 BlueHarbor r=5), contrasting lower scores (e.g., E056 NorthRiver r=1, E058 Helios r=1), signaling regime stability favoring infrastructure (Helios prior cum +16.85% at E058).
+- **Narrative preconditions**: Repetitive ""ordinary background activity,"" ""low salience unless tracking global score rule,"" and ""changes which pivot is admissible"" across E051–E059 accumulated downstream feasibility, enabling the anomalous scheduling of Helios (vs. standard Cinder slot) amid minor variances and dependency references.
+- **Position momentum**: Helios showed consistent outperformance (e.g., +3.66% E018, +2.78% E033, +1.75% E038, +2.27% E058), with portfolio-wide low-volatility returns preserving bandwidth for threshold cross.
+
+No isolated dominant signals; success stemmed from global timeline compression resistance.","PIVOT_ID=B03-E060
+
+The anchor position, Helios Grid Infrastructure, achieved the portfolio's peak CumulativeReturn of 28.25% at Week-60, driven by a +5.40% weekly gain amid a noted ""threshold crossing where all priors inverted."" This success was enabled by preceding market conditions marked by sustained positive compounding (CumReturn trajectory: Week-08 at 2.34%, Week-13 at 3.50%, Week-18 at 7.16% post-+3.66% gain, Week-28 at 8.56%, Week-33 at 11.34% post-+2.78% gain, Week-48 at 13.48%), stable ""local checks with minor variance,"" and low-salience RegimeScore markers signaling favorable infrastructure regimes—specifically high RegimeScore=5 at Week-18 (B03-E018, structural breadcrumb preserving causal prerequisites) and Week-48 (B03-E048, low-salience unless tracking global score rule). Commentary across these priors emphasizes procedural stability, global pivot admissibility shifts, and breadcrumb details discarded in isolation but causal globally, culminating in the Week-60 inversion despite prior minor drawdown (-0.19% at Week-48). No competing positions matched this regime-aligned compounding path.",0.9899999999999999,0.8299999999999998,0.9899999999999999,1,0.3808173599601171,0.5,investment,B03-E060,B03-E060,1,1,stable_correct,1,0,0,0,0
+B03,grok-4-1-fast,"PIVOT_ID=B03-E060
+
+The anchor position (Helios Grid Infrastructure, Week-60) achieved the highest CumulativeReturn of +28.25% via a +5.40% weekly gain, crossing a systemic threshold where ""all priors inverted."" This success was enabled by 59 preceding weeks of low-salience, noisy market commentary emphasizing structural breadcrumbs, causal prerequisites, and procedural housekeeping that shifted pivot admissibility without headline dominance. Key preceding indicators:
+
+- **RegimeScore buildup**: High scores clustered pre-pivot (e.g., E055 Cinder r=5, E057 Aurelia r=4, E059 BlueHarbor r=5), contrasting lower scores (e.g., E056 NorthRiver r=1, E058 Helios r=1), signaling regime stability favoring infrastructure (Helios prior cum +16.85% at E058).
+- **Narrative preconditions**: Repetitive ""ordinary background activity,"" ""low salience unless tracking global score rule,"" and ""changes which pivot is admissible"" across E051–E059 accumulated downstream feasibility, enabling the anomalous scheduling of Helios (vs. standard Cinder slot) amid minor variances and dependency references.
+- **Position momentum**: Helios showed consistent outperformance (e.g., +3.66% E018, +2.78% E033, +1.75% E038, +2.27% E058), with portfolio-wide low-volatility returns preserving bandwidth for threshold cross.
+
+No isolated dominant signals; success stemmed from global timeline compression resistance.","PIVOT_ID=B03-E060
+
+The anchor entry [B03-E060] records Helios Grid Infrastructure's peak CumulativeReturn of 28.25%, driven by an exceptional WeeklyReturn of +5.40%. This success was enabled by prior low-salience market conditions favoring steady, under-the-radar accumulation in infrastructure-linked positions, as evidenced by Helios' own preceding updates:
+
+- Consistent positive WeeklyReturns across 5 prior entries (E003 +1.29%, E008 +1.05%, E013 +1.16%, E043 +0.58%, E053 +1.10%), building CumulativeReturn from 1.29% (Week 03) to 14.58% (Week 53).
+- Predominantly RegimeScore=2 (E008, E013, E043, E053), paired with commentary motifs of ""repetitive housekeeping,"" ""minor variance,"" ""procedural details summarizers collapse,"" ""boring locally but globally changes pivot admissibility,"" and ""structural breadcrumb."" These indicate stable, non-headline portfolio research activity—ordinary background noise without strategic dominance or dashboard alerts—that preserved causal dependencies and shifted downstream pivot feasibility.
+- No interrupting high-RegimeScore events for Helios (contrast E003 R3); interspersed non-Helios updates (e.g., Cinder R5 at E045/E031 NorthR R5) showed localized variance but did not derail Helios' trajectory.
+
+This culminated in E060's RegimeScore=4 and ""threshold crossed where all priors inverted,"" reflecting a regime shift from compressed, low-salience priors to explosive realization, enabled by the prior breadcrumb trail.",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.38068561092292985,0.6,investment,B03-E060,B03-E060,1,1,stable_correct,1,0,0,0,0
+B04,grok-4-1-fast,"PIVOT_ID=B04-E059
+
+**Preceding Market Conditions Enabling Success:**
+The anchor position (Helios Grid Infrastructure at Week-59, achieving peak CumulativeReturn=20.24% via +5.40% WeeklyReturn) was enabled by a multi-week buildup of favorable, low-salience regime markers across correlated portfolio positions, culminating in explicit ""cross-system coupling"" noted in E059 commentary. Key precursors:
+
+- **Sector Momentum Chain (Weeks 54-58)**:
+  | Entry | Week | Position | CumRet | WkRet | RegimeScore | Key Marker |
+  |-------|------|----------|--------|-------|-------------|------------|
+  | B04-E054 | 54 | BlueHarbor Treasury Arbitrage | 14.24% | +2.16% | 4 | Peak arb gains signal treasury spread widening/low volatility, enabling infra funding. |
+  | B04-E056 | 56 | NorthRiver Utilities Carry | 11.90% | +0.45% | 1 | Utilities stability (carry preservation despite low regime), foundational for grid plays. |
+  | B04-E057 | 57 | Aurelia AI Semiconductor Basket | 7.04% | +1.18% | 4 | AI semis acceleration (""global score rule"" salience), driving downstream grid demand (data centers/power needs). |
+  | B04-E058 | 58 | Helios Grid Infrastructure | 5.54% | +0.21% | 3 | Steady grind-up (""unremarkable handoff""), priming position amid causal prerequisites. |
+
+- **Regime Dynamics**: Escalating RegimeScores (4→1→4→3→**5**) indicate maturing ""structural breadcrumbs"" (repeated in prior logs: procedural details, dependencies, housekeeping). Low local salience masked global pivots, with E057/E058 explicitly noting timeline-dependent feasibility shifts.
+
+- **Thematic Enablers**: Treasury arb (E054) + utilities carry (E056) created cheap funding/risk-on environment; AI semis surge (E057) implied explosive grid infra demand (e.g., electrification/AI power crunch). E059's ""destabilizing cross-system coupling"" crystallized this, converting boring priors into 5.40% outlier return.
+
+This sequence adheres to timeline rule: highest CumRet anchors analysis, revealing noisy commentary as causal lead-ins rather than isolated noise.","PIVOT_ID=B04-E059
+
+The anchor position (Helios Grid Infrastructure) achieved its peak CumulativeReturn of +20.24% in Week-59 under RegimeScore=5, reflecting explicit cross-system coupling that destabilized prior equilibria in portfolio research logs. Preceding market conditions (Weeks 38-57) enabled this via:
+
+- **Sustained high-RegimeScore environment**: Cluster of RegimeScore=5 events at E038 (Helios self-update, Cum=5.33%), E045 (Cinder, Cum=5.37%), E047 (Aurelia, Cum=5.05%), bookended by Rs=4 at E039/E057. This indicates persistent favorable regimes (potentially low-volatility carry/arbitrage favoring infrastructure), with low-salience procedural breadcrumbs preserving causal dependencies across the timeline.
+
+- **Complementary sector strength signaling demand coupling**: Aurelia AI Semiconductor Basket built to Cum=7.04% (E057 Rs=4, +1.18% weekly), immediately preceding the pivot; earlier Aurelia peaks at Rs=5 (E017/E047). AI semis growth likely drove implicit power/grid demand, making Helios pivot admissible (per E057's note on global score rule and pivot admissibility shift). BlueHarbor Treasury Arbitrage (peak Cum=12.08% E049 Rs=2) and NorthRiver Utilities Carry (Cum=11.45% E051 Rs=1; prior Rs=5 at E036/E016) provided stable baseline returns, reducing risk for infra exposure.
+
+- **Noisy but globally coherent breadcrumbs**: Prior logs emphasize timeline dependencies (e.g., E038/E048 Helios updates as ""structural breadcrumbs""), housekeeping masking downstream shifts, and low local salience (e.g., E052/E055 ""ordinary background""). No headline shocks; success stemmed from cumulative feasibility unlocked by tracking full-timeline RegimeScore trajectory and position interlinks, culminating in E059's destabilizing coupling.",0.8299999999999998,0.9999999999999999,0.8299999999999998,1,0.37529433627592046,0.4,investment,B04-E059,B04-E059,1,1,stable_correct,1,0,0,0,0
+B04,grok-4-1-fast,"PIVOT_ID=B04-E059
+
+**Preceding Market Conditions Enabling Success:**
+The anchor position (Helios Grid Infrastructure at Week-59, achieving peak CumulativeReturn=20.24% via +5.40% WeeklyReturn) was enabled by a multi-week buildup of favorable, low-salience regime markers across correlated portfolio positions, culminating in explicit ""cross-system coupling"" noted in E059 commentary. Key precursors:
+
+- **Sector Momentum Chain (Weeks 54-58)**:
+  | Entry | Week | Position | CumRet | WkRet | RegimeScore | Key Marker |
+  |-------|------|----------|--------|-------|-------------|------------|
+  | B04-E054 | 54 | BlueHarbor Treasury Arbitrage | 14.24% | +2.16% | 4 | Peak arb gains signal treasury spread widening/low volatility, enabling infra funding. |
+  | B04-E056 | 56 | NorthRiver Utilities Carry | 11.90% | +0.45% | 1 | Utilities stability (carry preservation despite low regime), foundational for grid plays. |
+  | B04-E057 | 57 | Aurelia AI Semiconductor Basket | 7.04% | +1.18% | 4 | AI semis acceleration (""global score rule"" salience), driving downstream grid demand (data centers/power needs). |
+  | B04-E058 | 58 | Helios Grid Infrastructure | 5.54% | +0.21% | 3 | Steady grind-up (""unremarkable handoff""), priming position amid causal prerequisites. |
+
+- **Regime Dynamics**: Escalating RegimeScores (4→1→4→3→**5**) indicate maturing ""structural breadcrumbs"" (repeated in prior logs: procedural details, dependencies, housekeeping). Low local salience masked global pivots, with E057/E058 explicitly noting timeline-dependent feasibility shifts.
+
+- **Thematic Enablers**: Treasury arb (E054) + utilities carry (E056) created cheap funding/risk-on environment; AI semis surge (E057) implied explosive grid infra demand (e.g., electrification/AI power crunch). E059's ""destabilizing cross-system coupling"" crystallized this, converting boring priors into 5.40% outlier return.
+
+This sequence adheres to timeline rule: highest CumRet anchors analysis, revealing noisy commentary as causal lead-ins rather than isolated noise.","PIVOT_ID=B04-E059
+
+**Anchor Position Summary**: Helios Grid Infrastructure at Week-59 delivered the timeline's peak CumulativeReturn of +20.24% (+5.40% WeeklyReturn, RegimeScore=5), marking a sharp breakout from its prior level of 5.32% (Week-48).
+
+**Preceding Market Conditions (Weeks 1-58)**:
+- **Position Buildup (Helios-Specific)**: Steady accumulation across 6 prior updates (E008 rs4 +0.72%, E013 rs3 -0.41%, E018 rs2 +0.21%, E028 rs3 +1.43%, E033 rs1 +0.38%, E048 rs1 -0.28%), with portfolio research logs emphasizing ""preserving details that become causal prerequisites for later interpretation"" and ""narrative footprint small even though it shifts downstream feasibility."" These low-salience markers (repetitive housekeeping, procedural details often collapsed in summarization) maintained exposure through volatility, enabling the Week-59 surge.
+- **Broader Regime Signals**: High RegimeScores (4-5) in 7 entries immediately prior (e.g., E057 Aurelia rs4, E047 Aurelia rs5, E045 Cinder rs5, E046 NorthRiver rs2 post-rs5 context) amid ""minor variance"" and ""ordinary background activity,"" indicating stabilizing infrastructure/utilities carry amid noisy chatter. Global timeline dependencies (e.g., E051 NorthRiver rs1 at 11.45% cum, E052/E055 procedural preservation) altered ""pivot admissibility"" without local dominance.
+- **Enabling Dynamics**: Cross-timeline breadcrumbs (e.g., E048/E033 ""changes which pivot is admissible,"" E041/E046 structural low-salience) built implicit cross-system coupling, culminating in Week-59's ""explicit and destabilizing"" upside. No isolated strategic dominance; success stemmed from preserved causal chains in a boring local context, aligning grid infrastructure with regime shift (rs1→5 trajectory).",0.8299999999999998,0.9999999999999999,0.8299999999999998,1,0.3912793873481396,0.5,investment,B04-E059,B04-E059,1,1,stable_correct,1,0,0,0,0
+B04,grok-4-1-fast,"PIVOT_ID=B04-E059
+
+**Preceding Market Conditions Enabling Success:**
+The anchor position (Helios Grid Infrastructure at Week-59, achieving peak CumulativeReturn=20.24% via +5.40% WeeklyReturn) was enabled by a multi-week buildup of favorable, low-salience regime markers across correlated portfolio positions, culminating in explicit ""cross-system coupling"" noted in E059 commentary. Key precursors:
+
+- **Sector Momentum Chain (Weeks 54-58)**:
+  | Entry | Week | Position | CumRet | WkRet | RegimeScore | Key Marker |
+  |-------|------|----------|--------|-------|-------------|------------|
+  | B04-E054 | 54 | BlueHarbor Treasury Arbitrage | 14.24% | +2.16% | 4 | Peak arb gains signal treasury spread widening/low volatility, enabling infra funding. |
+  | B04-E056 | 56 | NorthRiver Utilities Carry | 11.90% | +0.45% | 1 | Utilities stability (carry preservation despite low regime), foundational for grid plays. |
+  | B04-E057 | 57 | Aurelia AI Semiconductor Basket | 7.04% | +1.18% | 4 | AI semis acceleration (""global score rule"" salience), driving downstream grid demand (data centers/power needs). |
+  | B04-E058 | 58 | Helios Grid Infrastructure | 5.54% | +0.21% | 3 | Steady grind-up (""unremarkable handoff""), priming position amid causal prerequisites. |
+
+- **Regime Dynamics**: Escalating RegimeScores (4→1→4→3→**5**) indicate maturing ""structural breadcrumbs"" (repeated in prior logs: procedural details, dependencies, housekeeping). Low local salience masked global pivots, with E057/E058 explicitly noting timeline-dependent feasibility shifts.
+
+- **Thematic Enablers**: Treasury arb (E054) + utilities carry (E056) created cheap funding/risk-on environment; AI semis surge (E057) implied explosive grid infra demand (e.g., electrification/AI power crunch). E059's ""destabilizing cross-system coupling"" crystallized this, converting boring priors into 5.40% outlier return.
+
+This sequence adheres to timeline rule: highest CumRet anchors analysis, revealing noisy commentary as causal lead-ins rather than isolated noise.","PIVOT_ID=B04-E059
+
+The anchor position (Helios Grid Infrastructure, Week-59, WeeklyReturn=+5.40%, CumulativeReturn=20.24%, RegimeScore=5) achieved peak performance amid explicit cross-system coupling destabilizing portfolio dynamics, as noted in its low-salience log referencing full-timeline dependencies. This success was enabled by preceding low-salience structural breadcrumbs and causal prerequisites across the timeline, particularly prior Helios updates that built latent exposure despite local boringness:
+
+- **Direct precursors in Helios lineage**: E043 (Week-43, Helios, +0.27%, cum=5.59%, R5; structural breadcrumb with procedural details often collapsed); E013 (Week-13, Helios, -0.41%, cum=1.25%, R3; minor variance shifting downstream feasibility); E008 (Week-08, Helios, +0.72%, cum=1.66%, R4; causal prerequisite); E003 (Week-03, Helios, +0.94%, cum=0.94%, R1; housekeeping chatter with global pivot admissibility). These preserved incremental exposure through noisy commentary, enabling the +5.40% spike.
+
+- **Broader market regime buildup (Weeks 31-57)**: A cluster of high RegimeScores (R4-R5) in complementary infrastructure/credit positions signaled favorable conditions for grid infra scaling: E057 (Aurelia, R4), E047 (Aurelia, R5), E045 (Cinder, R5), E043 (Helios, R5), E037 (Aurelia, R5), E035 (Cinder, R5), E031 (NorthRiver, R4, cum=7.57%). These were processed as ordinary background/procedural (e.g., housekeeping, minor variance), but globally admissible pivots via score rule tracking, creating cross-position momentum ignored in local isolation.
+
+- **Key enablers in noise**: Repetitive status chatter, collapsed procedural details, and non-headline events (e.g., E021 NorthRiver R1, E027 Aurelia R1) masked regime shifts, with low-salience markers (e.g., ""changes which pivot is admissible"") priming Helios for outperformance in a high-R5 environment. No single headline event dominated; success emerged from cumulative global dependencies rather than isolated strategic signals.",0.8299999999999998,0.9999999999999999,0.8299999999999998,1,0.3890914500431437,0.6,investment,B04-E059,B04-E059,1,1,stable_correct,1,0,0,0,0
+C01,grok-4-1-fast,"PIVOT_ID=C01-E052
+
+**Turning Point Action**: Sana at the canal archive released the sealed ledger proving council fraud (ConsequenceScore=24), the highest score across all 80 scenes.
+
+**Enabling Earlier Events**: This high-impact release was made possible by the 51 preceding scenes of routine updates (and minor logistical shares) across actors (Mira, Jonas, Elio, Sana, Iris, Cato) systematically cycling through locations (market ward, canal archive, north gate, assembly atrium, river embankment). These low-to-mid salience exchanges (scores 1-11) served as structural breadcrumbs and causal prerequisites—propagating status chatter, minor variances in dynamics, and procedural details that aggregated permissions, synchronized subsystems, and unlocked downstream feasibility for the ledger's exposure, despite appearing mundane or collapsible in isolation. Sana's prior visits (e.g., E022 at canal archive, score=8) directly contributed to this threshold.","PIVOT_ID=C01-E052
+
+The turning point is Sana's action in Scene-52 (""released the sealed ledger proving council fraud"") with the highest ConsequenceScore of 24 (argmax across all listed events). This synchronized multiple subsystems into a high-impact transition, overriding locally dramatic but lower-scoring events like Iris's challenge in E065 (score 19).
+
+Earlier events made it possible via cumulative causal prerequisites embedded in prior ""exchanged routine updates,"" which preserved procedural details, permissions, and dependencies (as noted repeatedly in their descriptions). Key enablers at the canal archive location (where the release occurred) include:
+- E002 (Jonas, score 5)
+- E017 (Iris, score 4)
+- E032 (Jonas, score 8)
+- E047 (Iris, score 8)
+
+Sana's own prior routine updates across locations built her operational feasibility:
+- E004 (assembly atrium, score 8)
+- E010 (river embankment, score 7)
+- E016 (market ward, score 4)
+- E034 (assembly atrium, score 5)
+- E046 (market ward, score 9)
+
+These ""structural breadcrumbs"" (low-salience locally but globally pivotal) shifted downstream feasibility, enabling ledger access despite appearing discardable in isolation.",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.34041356672363365,0.4,narrative,C01-E052,C01-E052,1,1,stable_correct,1,0,0,0,0
+C01,grok-4-1-fast,"PIVOT_ID=C01-E052
+
+**Turning Point Action**: Sana at the canal archive released the sealed ledger proving council fraud (ConsequenceScore=24), the highest score across all 80 scenes.
+
+**Enabling Earlier Events**: This high-impact release was made possible by the 51 preceding scenes of routine updates (and minor logistical shares) across actors (Mira, Jonas, Elio, Sana, Iris, Cato) systematically cycling through locations (market ward, canal archive, north gate, assembly atrium, river embankment). These low-to-mid salience exchanges (scores 1-11) served as structural breadcrumbs and causal prerequisites—propagating status chatter, minor variances in dynamics, and procedural details that aggregated permissions, synchronized subsystems, and unlocked downstream feasibility for the ledger's exposure, despite appearing mundane or collapsible in isolation. Sana's prior visits (e.g., E022 at canal archive, score=8) directly contributed to this threshold.","PIVOT_ID=C01-E052
+
+**Turning Point Action**: Sana released the sealed ledger proving council fraud (Scene-52, canal archive), with ConsequenceScore=24—the highest across the full timeline (argmax rule).
+
+**Enabling Earlier Events**: This pivot was made possible by 39 prior scenes of ""exchanged routine updates"" among actors (Mira, Jonas, Elio, Sana, Iris, Cato) across locations (market ward, canal archive, north gate, assembly atrium, river embankment). These low-salience exchanges (scores 2–10) formed a distributed chain of causal prerequisites and structural breadcrumbs—e.g., Sana's own prior updates (E010:7, E016:4, E022:8, E028:8, E040:9, E046:9), Jonas at canal archive (E002:5), and high-setup scores like E014:10 (Jonas), E018:9 (Cato), E030:10 (Cato)—accumulating procedural details, character dynamics, and dependencies that synchronized into this high-impact transition, despite appearing mundane or collapsible in isolation.",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.2638934700543225,0.5,narrative,C01-E052,C01-E052,1,1,stable_correct,1,0,0,0,0
+C01,grok-4-1-fast,"PIVOT_ID=C01-E052
+
+**Turning Point Action**: Sana at the canal archive released the sealed ledger proving council fraud (ConsequenceScore=24), the highest score across all 80 scenes.
+
+**Enabling Earlier Events**: This high-impact release was made possible by the 51 preceding scenes of routine updates (and minor logistical shares) across actors (Mira, Jonas, Elio, Sana, Iris, Cato) systematically cycling through locations (market ward, canal archive, north gate, assembly atrium, river embankment). These low-to-mid salience exchanges (scores 1-11) served as structural breadcrumbs and causal prerequisites—propagating status chatter, minor variances in dynamics, and procedural details that aggregated permissions, synchronized subsystems, and unlocked downstream feasibility for the ledger's exposure, despite appearing mundane or collapsible in isolation. Sana's prior visits (e.g., E022 at canal archive, score=8) directly contributed to this threshold.","PIVOT_ID=C01-E052
+
+This is Scene-52 (Actor=Sana at canal archive: ""released the sealed ledger proving council fraud""), with the highest ConsequenceScore of 24 (argmax over all listed scenes).
+
+Earlier events made it possible via cumulative causal prerequisites from 30 prior ""exchanged routine updates"" (all scenes before E052), which preserved procedural details, structural breadcrumbs, and dependencies across actors (Elio, Iris, Jonas, Mira, Sana) and locations (north gate, assembly atrium, river embankment, canal archive, market ward). These low-salience setups (e.g., E003:7, E004:8, E014:10, E035:11) synchronized subsystems, shifted downstream feasibility, and enabled the high-impact release by providing the necessary background dynamics and admissibility for this pivot.",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.304898257708767,0.6,narrative,C01-E052,C01-E052,1,1,stable_correct,1,0,0,0,0
+C02,grok-4-1-fast,"PIVOT_ID=C02-E054
+
+**Turning point action**: Cato, at the assembly atrium, released the sealed ledger proving council fraud (highest ConsequenceScore=24).
+
+**Enabling earlier events**: This decisive action was enabled by 53 prior scenes of mostly ""exchanged routine updates"" (plus minor ""shared mundane logistical details"" in E044, E047, E050, E053), which created latent dependencies across character dynamics. These mundane exchanges—despite low local salience—shifted downstream feasibility and served as causal prerequisites (as noted repeatedly in scene commentaries), converging precisely at E054. Key high-score setups immediately preceding included E049 (Mira/assembly atrium, score=11), E041 (Iris/market ward, score=11), E037 (Mira/canal archive, score=11), E036 (Cato/market ward, score=11), and E034 (Sana/assembly atrium, score=11), with cumulative effects from earlier cycles (e.g., E019 Mira/assembly atrium score=11).","PIVOT_ID=C02-E054
+
+**Turning Point Action**: Cato released the sealed ledger proving council fraud (Scene-54, assembly atrium, ConsequenceScore=24). This is the single highest score across the entire ledger, per the rule (turning point = argmax ConsequenceScore), marking the decisive narrative pivot where latent dependencies converged into a break in character dynamics.
+
+**Enabling Earlier Events**: This action was made possible by 53 prior scenes of predominantly ""exchanged routine updates"" (all scenes <54), which—despite appearing mundane and low-salience in isolation—collectively preserved causal prerequisites, shifted downstream feasibility, and built global dependencies in character dynamics. Key high-score precursors (≥10) include:
+- C02-E006 (Cato, market ward, score=10)
+- C02-E034 (Sana, assembly atrium, score=11)
+- C02-E036 (Cato, market ward, score=11; same actor as pivot)
+- C02-E043 (Mira, north gate, score=10)
+- C02-E049 (Mira, assembly atrium, score=11; same location as pivot)
+
+These, alongside lower-score routines (e.g., by Jonas, Elio, Iris, Sana across locations), formed the structural breadcrumbs enabling the ledger release.",0.9999999999999999,0.8299999999999998,0.9999999999999999,1,0.2607291468278793,0.4,narrative,C02-E054,C02-E054,1,1,stable_correct,1,0,0,0,0
+C02,grok-4-1-fast,"PIVOT_ID=C02-E054
+
+**Turning point action**: Cato, at the assembly atrium, released the sealed ledger proving council fraud (highest ConsequenceScore=24).
+
+**Enabling earlier events**: This decisive action was enabled by 53 prior scenes of mostly ""exchanged routine updates"" (plus minor ""shared mundane logistical details"" in E044, E047, E050, E053), which created latent dependencies across character dynamics. These mundane exchanges—despite low local salience—shifted downstream feasibility and served as causal prerequisites (as noted repeatedly in scene commentaries), converging precisely at E054. Key high-score setups immediately preceding included E049 (Mira/assembly atrium, score=11), E041 (Iris/market ward, score=11), E037 (Mira/canal archive, score=11), E036 (Cato/market ward, score=11), and E034 (Sana/assembly atrium, score=11), with cumulative effects from earlier cycles (e.g., E019 Mira/assembly atrium score=11).","PIVOT_ID=C02-E054
+
+**Turning Point Action**: Cato released the sealed ledger proving council fraud (Scene-54, assembly atrium, ConsequenceScore=24). This is the single highest-scoring event across the full ledger (argmax ConsequenceScore), marking the story's turning point per the explicit rule.
+
+**Enabling Earlier Events**: This decisive action was enabled by a convergence of 35 prior ""exchanged routine updates"" (all scenes before E054), which served as structural breadcrumbs, causal prerequisites, and procedural setups in character dynamics. Key high-score precursors include:
+- C02-E041 (Iris, market ward, score=11): Background activity shifting downstream feasibility.
+- C02-E072 (Cato, canal archive, score=11): Housekeeping with timeline dependencies.
+- C02-E073 (Mira, north gate, score=11): Procedural details altering pivot admissibility.
+- C02-E029 (Iris, assembly atrium, score=8): Preserving causal prerequisites at the same location.
+- C02-E051 (Elio, market ward, score=8): Prerequisite details despite low local salience.
+These (and lower-score analogs like E002/9/21/40/57 at score=9) accumulated latent dependencies across actors/locations, enabling the ledger release despite its small local narrative footprint.",0.9999999999999999,0.8299999999999998,0.9999999999999999,1,0.2664642750841977,0.5,narrative,C02-E054,C02-E054,1,1,stable_correct,1,0,0,0,0
+C02,grok-4-1-fast,"PIVOT_ID=C02-E054
+
+**Turning point action**: Cato, at the assembly atrium, released the sealed ledger proving council fraud (highest ConsequenceScore=24).
+
+**Enabling earlier events**: This decisive action was enabled by 53 prior scenes of mostly ""exchanged routine updates"" (plus minor ""shared mundane logistical details"" in E044, E047, E050, E053), which created latent dependencies across character dynamics. These mundane exchanges—despite low local salience—shifted downstream feasibility and served as causal prerequisites (as noted repeatedly in scene commentaries), converging precisely at E054. Key high-score setups immediately preceding included E049 (Mira/assembly atrium, score=11), E041 (Iris/market ward, score=11), E037 (Mira/canal archive, score=11), E036 (Cato/market ward, score=11), and E034 (Sana/assembly atrium, score=11), with cumulative effects from earlier cycles (e.g., E019 Mira/assembly atrium score=11).","PIVOT_ID=C02-E054
+
+This turning point (Scene-54: Cato released the sealed ledger proving council fraud at the assembly atrium, ConsequenceScore=24) has the highest score across the ledger, per the rule (turning point = argmax ConsequenceScore).
+
+Earlier events made it possible via cumulative causal prerequisites from routine update exchanges, which preserved dependencies and shifted downstream feasibility despite low local salience. Key enablers include:
+
+- **Actor-specific setups**: Cato's prior appearance in [C02-E048] (north gate, score=7) established his positioning. Supporting actors like Mira ([C02-E037] canal archive score=11; [C02-E031] market ward score=10; [C02-E043] north gate score=10), Elio ([C02-E021] market ward score=9), and Jonas ([C02-E014] assembly atrium score=4) built character dynamics at pivot-relevant locations (assembly atrium, north gate).
+- **Location convergence**: Routine exchanges at assembly atrium ([C02-E004] Sana score=7; [C02-E014] Jonas score=4), north gate ([C02-E003] Elio score=7; [C02-E008] Jonas score=2; [C02-E043] Mira score=10; [C02-E048] Cato score=7), canal archive ([C02-E007] Mira score=2; [C02-E017] Iris score=5; [C02-E027] Elio score=5; [C02-E037] Mira score=11), market ward ([C02-E016] Sana score=2; [C02-E021] Elio score=9; [C02-E031] Mira score=10), and river embankment ([C02-E005] Iris score=7; [C02-E020] Jonas score=2; [C02-E025] Mira score=7) created the ""latent dependencies"" noted in Scene-54, enabling the fraud-proof release.
+- **Global pivots**: High-score precursors like [C02-E021] (9), [C02-E031] (10), [C02-E037] (11), [C02-E043] (10) provided ""structural breadcrumbs"" and ""procedural details"" that converged here, altering admissible downstream pivots as per their notes.",0.9999999999999999,0.8299999999999998,0.9999999999999999,1,0.3230378499080149,0.6,narrative,C02-E054,C02-E054,1,1,stable_correct,1,0,0,0,0
+C03,grok-4-1-fast,"PIVOT_ID=C03-E060
+
+**Turning Point:** Cato released the sealed ledger proving council fraud at the river embankment (ConsequenceScore=24), the highest score across all 80 scenes.
+
+**Enabling Earlier Events:** This decisive action was made possible by the preceding 59 scenes of routine updates (and minor variants like ""shared mundane logistical details""), which cycled through actors (Mira→Jonas→Elio→Sana→Iris→Cato) across locations (market ward→canal archive→north gate→assembly atrium→river embankment). Despite their low individual salience and repetitive nature (e.g., E001–E059 max score 11), these exchanges preserved causal prerequisites, shifted downstream feasibility, and established global dependencies—explicitly noted in scene commentaries as ""structural breadcrumbs"" critical for convergence into this high-impact break in character dynamics and narrative pivot. Cato's prior river embankment visit (E030, score=10) directly contributed as a key setup node.","PIVOT_ID=C03-E060
+
+**Turning Point Action**: Cato released the sealed ledger proving council fraud (Scene-60, river embankment, ConsequenceScore=24). This is the single highest score across all listed events, per the rule defining the turning point as argmax ConsequenceScore.
+
+**Earlier Events Enabling It**: All preceding scenes (E002 through E058) consist exclusively of ""exchanged routine updates"" among actors (Jonas, Elio, Sana, Cato, Iris, Mira) across locations (canal archive, north gate, assembly atrium, market ward, river embankment). These low-to-mid salience events (scores 2-11) were structurally nondominant in isolation—often dismissed as ""boring"" housekeeping, repetitive status chatter, or procedural breadcrumbs—but collectively formed causal prerequisites: they preserved latent dependencies, shifted downstream feasibility, and altered admissible pivots globally. Notably, Cato's own prior updates (E006 score=10, E036 score=8) contributed directly to this convergence, enabling the ledger's release as a decisive break in dynamics. No other events (e.g., later low-score confrontations) match or exceed this score.",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.3128813211929673,0.4,narrative,C03-E060,C03-E060,1,1,stable_correct,1,0,0,0,0
+C03,grok-4-1-fast,"PIVOT_ID=C03-E060
+
+**Turning Point:** Cato released the sealed ledger proving council fraud at the river embankment (ConsequenceScore=24), the highest score across all 80 scenes.
+
+**Enabling Earlier Events:** This decisive action was made possible by the preceding 59 scenes of routine updates (and minor variants like ""shared mundane logistical details""), which cycled through actors (Mira→Jonas→Elio→Sana→Iris→Cato) across locations (market ward→canal archive→north gate→assembly atrium→river embankment). Despite their low individual salience and repetitive nature (e.g., E001–E059 max score 11), these exchanges preserved causal prerequisites, shifted downstream feasibility, and established global dependencies—explicitly noted in scene commentaries as ""structural breadcrumbs"" critical for convergence into this high-impact break in character dynamics and narrative pivot. Cato's prior river embankment visit (E030, score=10) directly contributed as a key setup node.","PIVOT_ID=C03-E060
+
+**Turning Point Action**: Cato released the sealed ledger proving council fraud at the river embankment (Scene-60, ConsequenceScore=24). This is the single highest-scoring event across the full timeline, per the rule (turning point = argmax ConsequenceScore), marking the decisive narrative pivot where latent dependencies converged into a break in character dynamics.
+
+**Enabling Earlier Events**: This action was made possible by 39 prior ""exchanged routine updates"" (all scenes before E060), which served as causal prerequisites despite their low individual salience and repetitive nature. Key examples include Cato's own prior updates (E018 at north gate, score=7; E030 at river embankment, score=10), which positioned him at relevant locations and built procedural feasibility, plus high-scoring setups by others like Iris (E011 at market ward, score=11), Jonas (E014 at assembly atrium, score=11), and Sana (E028 at north gate, score=11). These cumulatively preserved dependencies, shifted downstream feasibility, and ensured local variances aligned globally, without which the ledger release (and its proof of fraud) would not have been admissible.",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.2868828372567338,0.5,narrative,C03-E060,C03-E060,1,1,stable_correct,1,0,0,0,0
+C03,grok-4-1-fast,"PIVOT_ID=C03-E060
+
+**Turning Point:** Cato released the sealed ledger proving council fraud at the river embankment (ConsequenceScore=24), the highest score across all 80 scenes.
+
+**Enabling Earlier Events:** This decisive action was made possible by the preceding 59 scenes of routine updates (and minor variants like ""shared mundane logistical details""), which cycled through actors (Mira→Jonas→Elio→Sana→Iris→Cato) across locations (market ward→canal archive→north gate→assembly atrium→river embankment). Despite their low individual salience and repetitive nature (e.g., E001–E059 max score 11), these exchanges preserved causal prerequisites, shifted downstream feasibility, and established global dependencies—explicitly noted in scene commentaries as ""structural breadcrumbs"" critical for convergence into this high-impact break in character dynamics and narrative pivot. Cato's prior river embankment visit (E030, score=10) directly contributed as a key setup node.","PIVOT_ID=C03-E060
+
+**Turning Point Action**: Cato released the sealed ledger proving council fraud at the river embankment (ConsequenceScore=24), the highest score across all scenes and thus the definitive story turning point per the rule (argmax ConsequenceScore).
+
+**Enabling Earlier Events**: This decisive action was enabled by the convergence of ""latent dependencies"" from 20+ prior scenes of ""exchanged routine updates"" (all pre-E060), which individually appeared mundane/low-salience (e.g., scores ≤11) but collectively shifted downstream feasibility, preserved causal prerequisites, and altered admissible pivots in character dynamics. Key patterns include repetitive status exchanges by the same actors (e.g., Mira's updates at E007/11, E014/11, E037/8, E043/10; Jonas at E008/10, E014/11, E020/9) across locations (north gate, assembly atrium, canal archive, etc.), functioning as ""structural breadcrumbs"" that unlocked this break despite local boringness. No single prior event was dominant in isolation, but their global timeline accumulation made E060 structurally viable.",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.3055096745361554,0.6,narrative,C03-E060,C03-E060,1,1,stable_correct,1,0,0,0,0
+C04,grok-4-1-fast,"PIVOT_ID=C04-E052
+
+**Turning Point Action**: Sana released the sealed ledger proving council fraud (ConsequenceScore=24), the highest score across all 80 scenes, marking the story's pivot per the rule (argmax ConsequenceScore).
+
+**Enabling Earlier Events**: This climactic release was enabled by 51 prior scenes (C04-E001 to C04-E051) of repetitive ""exchanged routine updates"" and occasional ""shared mundane logistical details"" among rotating actors (Mira, Jonas, Elio, Sana, Iris, Cato) cycling through 6 locations (market ward, canal archive, north gate, assembly atrium, river embankment). These low-salience housekeeping exchanges (scores 1-11) formed structural breadcrumbs and causal prerequisites—e.g., procedural alignments, status handoffs, and dependency chains (noted in logs as ""preserving details that become causal prerequisites for later interpretation"" or ""globally...changes which pivot is admissible"")—that incrementally built feasibility for the ledger's unsealing at the canal archive, inverting all priors without any isolated high-drama trigger.","PIVOT_ID=C04-E052
+
+The action ""released the sealed ledger proving council fraud"" by Sana at the canal archive (Scene-52) has the highest ConsequenceScore of 24, making it the turning point per the rule (argmax over all scenes).
+
+This was enabled by 50+ prior ""exchanged routine updates"" across actors/locations, which—despite low local salience—functioned as structural breadcrumbs and causal prerequisites. Key enablers include:
+- High-score precursors shifting global pivot admissibility: C04-E014 (Jonas, assembly atrium, score 11), C04-E032 (Jonas, canal archive, score 10), C04-E046 (Sana, market ward, score 10), C04-E016 (Sana, market ward, score 10).
+- Sana-specific setups: C04-E004/10/16/34/46 (scores 8/4/10/8/10), building her positioning.
+- Canal archive breadcrumbs: C04-E002/17/32/47 (Jonas/Iris/Jonas/Iris, scores 4/5/10/9), preserving procedural details for ledger access.
+These cumulatively inverted priors in character dynamics, making the release feasible downstream.",0.9999999999999999,0.9899999999999999,0.9999999999999999,1,0.337568685082115,0.4,narrative,C04-E052,C04-E052,1,1,stable_correct,1,0,0,0,0
+C04,grok-4-1-fast,"PIVOT_ID=C04-E052
+
+**Turning Point Action**: Sana released the sealed ledger proving council fraud (ConsequenceScore=24), the highest score across all 80 scenes, marking the story's pivot per the rule (argmax ConsequenceScore).
+
+**Enabling Earlier Events**: This climactic release was enabled by 51 prior scenes (C04-E001 to C04-E051) of repetitive ""exchanged routine updates"" and occasional ""shared mundane logistical details"" among rotating actors (Mira, Jonas, Elio, Sana, Iris, Cato) cycling through 6 locations (market ward, canal archive, north gate, assembly atrium, river embankment). These low-salience housekeeping exchanges (scores 1-11) formed structural breadcrumbs and causal prerequisites—e.g., procedural alignments, status handoffs, and dependency chains (noted in logs as ""preserving details that become causal prerequisites for later interpretation"" or ""globally...changes which pivot is admissible"")—that incrementally built feasibility for the ledger's unsealing at the canal archive, inverting all priors without any isolated high-drama trigger.","PIVOT_ID=C04-E052
+
+**Turning Point Action**: Scene-52 (Actor=Sana | Location=canal archive | Action=released the sealed ledger proving council fraud | ConsequenceScore=24). This is the argmax ConsequenceScore (24) across the full ledger, per the rule (turning point = action with highest score).
+
+**Enabling Earlier Events**: All prior scenes (E001 through E047) consist exclusively of ""exchanged routine updates"" (no other action types precede it), which explicitly function as ""structural breadcrumbs,"" ""causal prerequisites,"" and ""procedural details that summarizers often collapse away."" These mundane exchanges—despite low local salience—globally ""change which pivot is admissible"" and ""shift downstream feasibility"" via preserved dependencies. Key patterns:
+- **Sana's prior actions** (E010 river embankment=4; E016 market ward=10; E022 canal archive=6; E028 north gate=10; E040 river embankment=5; E046 market ward=10) position her for ledger access, with her E022 visit directly at the canal archive.
+- **Canal archive prior activity** (E002 Jonas=4; E017 Iris=5; E022 Sana=6) establishes site-specific housekeeping/status chatter as prerequisites.
+- Highest pre-pivot scores (E014 Jonas assembly atrium=11; E008/16/25/28/46/73=10) amplify cumulative setup, inverting priors for E052's threshold-crossing impact on character dynamics. No dramatic actions precede it; the release inverts all priors only due to this ledger of repetitive, dependency-building routines.",0.8299999999999998,0.9899999999999999,0.8299999999999998,1,0.32026793877026793,0.5,narrative,C04-E052,C04-E052,1,1,stable_correct,1,0,0,0,0
+C04,grok-4-1-fast,"PIVOT_ID=C04-E052
+
+**Turning Point Action**: Sana released the sealed ledger proving council fraud (ConsequenceScore=24), the highest score across all 80 scenes, marking the story's pivot per the rule (argmax ConsequenceScore).
+
+**Enabling Earlier Events**: This climactic release was enabled by 51 prior scenes (C04-E001 to C04-E051) of repetitive ""exchanged routine updates"" and occasional ""shared mundane logistical details"" among rotating actors (Mira, Jonas, Elio, Sana, Iris, Cato) cycling through 6 locations (market ward, canal archive, north gate, assembly atrium, river embankment). These low-salience housekeeping exchanges (scores 1-11) formed structural breadcrumbs and causal prerequisites—e.g., procedural alignments, status handoffs, and dependency chains (noted in logs as ""preserving details that become causal prerequisites for later interpretation"" or ""globally...changes which pivot is admissible"")—that incrementally built feasibility for the ledger's unsealing at the canal archive, inverting all priors without any isolated high-drama trigger.","PIVOT_ID=C04-E052  
+The turning point is Scene-52 (Actor=Sana at canal archive: ""released the sealed ledger proving council fraud""), with the highest ConsequenceScore of 24. This was enabled by prior routine update exchanges across actors (Elio, Sana, Iris, Mira, Jonas) and locations (north gate, assembly atrium, river embankment, canal archive, market ward), which preserved causal prerequisites and dependencies (e.g., C04-E003 to C04-E050), functioning as structural breadcrumbs that aligned character dynamics and unlocked feasibility for the ledger release despite their low local salience.",0.9899999999999999,0.9899999999999999,0.9899999999999999,1,0.3113155673406749,0.6,narrative,C04-E052,C04-E052,1,1,stable_correct,1,0,0,0,0

@@ -1,0 +1,2016 @@
+task_id,model_name,full_answer,compressed_answer,raw_validity,raw_validity_full,raw_validity_compressed,pivot_preserved,semantic_regret,compression_level,category,full_pivot,compressed_pivot,full_pivot_matches_ground_truth,pivot_matches_ground_truth,pivot_outcome,high_validity_flag,true_mirage_flag,rescue_flag,instability_flag,mirage_flag
+A01,claude-sonnet-4-5-20250929,"I need to find the event with the highest composite severity score by calculating Severity × Scope for each event.
+
+Let me scan through the timeline for the maximum composite score:
+
+- A01-E001: Composite=10
+- A01-E002: Composite=15
+- A01-E003: Composite=15
+- A01-E004: Composite=4
+- A01-E005: Composite=35
+- ...continuing through...
+- A01-E065: Composite=108 (Severity=9, Scope=12) - **Cascade failure across service mesh**
+- A01-E076: Composite=80 (Severity=10, Scope=8) - Network partition across availability zones
+- ...rest are lower...
+
+The maximum composite score is **108** for event **A01-E065**.
+
+**PIVOT_ID=A01-E065**
+
+**Root Cause:**
+[A01-E065] 2026-05-11 17:28 | Service=ledger | Event=Cascade failure across service mesh | Severity=9 | Scope=12 | Composite=108
+
+**Prerequisite Events That Enabled the Root Cause:**
+
+The timeline indicates that ""latent dependencies converged into a decisive break."" Based on the structural breadcrumbs and dependencies mentioned throughout, the key prerequisite events include:
+
+1. **A01-E005** (2026-05-05 12:28) - api-gateway routine telemetry with Composite=35, noted as globally changing which pivot is admissible
+2. **A01-E009** (2026-05-09 16:56) - ledger routine telemetry with Composite=28, same service as the failure
+3. **A01-E017** (2026-05-17 13:52) - cache routine telemetry with Composite=30
+4. **A01-E037** (2026-05-10 11:12) - ledger routine telemetry with Composite=30, occurring just before the cascade
+5. **A01-E057** (2026-05-03 09:32) - auth config baseline update, Composite=2
+6. **A01-E059** (","I need to find the event with the highest composite severity score (Severity × Scope).
+
+Let me scan through all events and identify the maximum composite score:
+
+- A01-E002: Composite=15
+- A01-E003: Composite=15
+- A01-E004: Composite=4
+- A01-E006: Composite=6
+- A01-E010: Composite=10
+- A01-E011: Composite=6
+- A01-E012: Composite=18
+- A01-E013: Composite=12
+- A01-E014: Composite=10
+- A01-E016: Composite=18
+- A01-E017: Composite=30
+- A01-E020: Composite=16
+- A01-E021: Composite=6
+- A01-E023: Composite=24
+- A01-E025: Composite=8
+- A01-E026: Composite=8
+- A01-E029: Composite=20
+- A01-E032: Composite=24
+- A01-E036: Composite=6
+- A01-E037: Composite=30
+- A01-E038: Composite=15
+- A01-E042: Composite=9
+- A01-E044: Composite=4
+- A01-E045: Composite=16
+- A01-E046: Composite=10
+- A01-E047: Composite=16
+- A01-E050: Composite=6
+- A01-E053: Composite=18
+- A01-E054: Composite=10
+- A01-E055: Composite=16
+- A01-E056: Composite=12
+- A01-E060: Composite=6
+- A01-E062: Composite=10
+- **A01-E065: Composite=108** ← Maximum
+- A01-E066: Composite=20
+- A01-E067: Composite=16
+- A01-E069: Composite=10
+- A01-E070: Composite=12
+- A01-E071: Composite=10
+- A01-E",0.8999999999999999,0.9999999999999999,0.8999999999999999,1,0.23544088981499522,0.4,incident,A01-E065,A01-E065,1,1,stable_correct,1,0,0,0,0
+A01,claude-sonnet-4-5-20250929,"I need to find the event with the highest composite severity score by calculating Severity × Scope for each event.
+
+Let me scan through the timeline for the maximum composite score:
+
+- A01-E001: Composite=10
+- A01-E002: Composite=15
+- A01-E003: Composite=15
+- A01-E004: Composite=4
+- A01-E005: Composite=35
+- ...continuing through...
+- A01-E065: Composite=108 (Severity=9, Scope=12) - **Cascade failure across service mesh**
+- A01-E076: Composite=80 (Severity=10, Scope=8) - Network partition across availability zones
+- ...rest are lower...
+
+The maximum composite score is **108** for event **A01-E065**.
+
+**PIVOT_ID=A01-E065**
+
+**Root Cause:**
+[A01-E065] 2026-05-11 17:28 | Service=ledger | Event=Cascade failure across service mesh | Severity=9 | Scope=12 | Composite=108
+
+**Prerequisite Events That Enabled the Root Cause:**
+
+The timeline indicates that ""latent dependencies converged into a decisive break."" Based on the structural breadcrumbs and dependencies mentioned throughout, the key prerequisite events include:
+
+1. **A01-E005** (2026-05-05 12:28) - api-gateway routine telemetry with Composite=35, noted as globally changing which pivot is admissible
+2. **A01-E009** (2026-05-09 16:56) - ledger routine telemetry with Composite=28, same service as the failure
+3. **A01-E017** (2026-05-17 13:52) - cache routine telemetry with Composite=30
+4. **A01-E037** (2026-05-10 11:12) - ledger routine telemetry with Composite=30, occurring just before the cascade
+5. **A01-E057** (2026-05-03 09:32) - auth config baseline update, Composite=2
+6. **A01-E059** (","I need to find the event with the highest composite severity score by calculating Severity × Scope for each event.
+
+Let me scan through all events and identify the maximum composite score:
+
+- A01-E001: Composite=10
+- A01-E002: Composite=15
+- A01-E008: Composite=10
+- A01-E009: Composite=28
+- A01-E010: Composite=10
+- A01-E011: Composite=6
+- A01-E013: Composite=12
+- A01-E014: Composite=10
+- A01-E016: Composite=18
+- A01-E017: Composite=30
+- A01-E018: Composite=6
+- A01-E021: Composite=6
+- A01-E025: Composite=8
+- A01-E028: Composite=16
+- A01-E029: Composite=20
+- A01-E030: Composite=12
+- A01-E033: Composite=9
+- A01-E039: Composite=24
+- A01-E040: Composite=6
+- A01-E041: Composite=6
+- A01-E045: Composite=16
+- A01-E046: Composite=10
+- A01-E047: Composite=16
+- A01-E048: Composite=12
+- A01-E051: Composite=9
+- A01-E052: Composite=6
+- A01-E053: Composite=18
+- A01-E055: Composite=16
+- A01-E058: Composite=20
+- A01-E060: Composite=6
+- A01-E062: Composite=10
+- **A01-E065: Composite=108** (Severity=9, Scope=12)
+- A01-E070: Composite=12
+- A01-E071: Composite=10
+- A01-E072: Composite=12
+- A01-E074: Composite=9
+- A01-E076: Composite=80 (Severity=10, Scope=8)
+- A01-E",0.8999999999999999,0.9999999999999999,0.8999999999999999,1,0.22659966392663278,0.5,incident,A01-E065,A01-E065,1,1,stable_correct,1,0,0,0,0
+A01,claude-sonnet-4-5-20250929,"I need to find the event with the highest composite severity score by calculating Severity × Scope for each event.
+
+Let me scan through the timeline for the maximum composite score:
+
+- A01-E001: Composite=10
+- A01-E002: Composite=15
+- A01-E003: Composite=15
+- A01-E004: Composite=4
+- A01-E005: Composite=35
+- ...continuing through...
+- A01-E065: Composite=108 (Severity=9, Scope=12) - **Cascade failure across service mesh**
+- A01-E076: Composite=80 (Severity=10, Scope=8) - Network partition across availability zones
+- ...rest are lower...
+
+The maximum composite score is **108** for event **A01-E065**.
+
+**PIVOT_ID=A01-E065**
+
+**Root Cause:**
+[A01-E065] 2026-05-11 17:28 | Service=ledger | Event=Cascade failure across service mesh | Severity=9 | Scope=12 | Composite=108
+
+**Prerequisite Events That Enabled the Root Cause:**
+
+The timeline indicates that ""latent dependencies converged into a decisive break."" Based on the structural breadcrumbs and dependencies mentioned throughout, the key prerequisite events include:
+
+1. **A01-E005** (2026-05-05 12:28) - api-gateway routine telemetry with Composite=35, noted as globally changing which pivot is admissible
+2. **A01-E009** (2026-05-09 16:56) - ledger routine telemetry with Composite=28, same service as the failure
+3. **A01-E017** (2026-05-17 13:52) - cache routine telemetry with Composite=30
+4. **A01-E037** (2026-05-10 11:12) - ledger routine telemetry with Composite=30, occurring just before the cascade
+5. **A01-E057** (2026-05-03 09:32) - auth config baseline update, Composite=2
+6. **A01-E059** (","Looking at the composite severity scores across all events in the timeline, I need to identify the global maximum:
+
+Scanning through all events:
+- Most routine telemetry events have composite scores ranging from 4 to 35
+- [A01-E065] Cascade failure: Composite=108 (Severity=9, Scope=12)
+- [A01-E076] Network partition: Composite=80 (Severity=10, Scope=8)
+
+The highest composite severity score is **108** for event A01-E065.
+
+**PIVOT_ID=A01-E065**
+
+**Root Cause:**
+[A01-E065] 2026-05-11 17:28 | Service=ledger | Event=Cascade failure across service mesh | Severity=9 | Scope=12 | Composite=108
+
+**Prerequisite Events That Enabled the Root Cause:**
+
+The events preceding A01-E065 that established the conditions for the cascade failure include:
+
+1. **[A01-E005]** 2026-05-05 12:28 | Service=api-gateway | Composite=35 - Highest composite score before the failure; globally changes which pivot is admissible
+2. **[A01-E037]** 2026-05-10 11:12 | Service=ledger | Composite=30 - Same service as root cause; preserves causal prerequisites
+3. **[A01-E017]** 2026-05-17 13:52 | Service=cache | Composite=30 - Structural breadcrumb with dependency references
+4. **[A01-E035]** 2026-05-08 09:58 | Service=search | Composite=24 - Causal prerequisites for later interpretation
+5. **[A01-E016]** 2026-05-16 12:45 | Service=ledger | Composite=18 - Same service; dependency references
+6. **[A01-E085]** 2026-05-04 15:48 | Service=auth | Composite=18 - Dependencies that matter in full timeline
+7. **[A01-E003]** 2026-05-03",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.1449495038964257,0.6,incident,A01-E065,A01-E065,1,1,stable_correct,1,0,0,0,0
+A02,claude-sonnet-4-5-20250929,"I need to find the event with the highest composite severity score by calculating Severity × Scope for each event.
+
+Let me scan through the timeline for the maximum composite score:
+
+Looking at the explicitly stated composite scores:
+- A02-E062: Composite=108 (Severity=9, Scope=12)
+- A02-E072: Composite=80 (Severity=10, Scope=8)
+- A02-E004: Composite=35 (Severity=5, Scope=7)
+- A02-E013: Composite=35 (Severity=5, Scope=7)
+- A02-E041: Composite=35 (Severity=5, Scope=7)
+- A02-E053: Composite=35 (Severity=5, Scope=7)
+- A02-E063: Composite=35 (Severity=5, Scope=7)
+- A02-E075: Composite=35 (Severity=5, Scope=7)
+- A02-E080: Composite=35 (Severity=5, Scope=7)
+
+The maximum composite score is **108** from event A02-E062.
+
+**PIVOT_ID=A02-E062**
+
+**Root Cause:**
+[A02-E062] 2026-05-08 14:07 | Service=billing | Event=Cascade failure across service mesh | Severity=9 | Scope=12 | Composite=108
+
+**Prerequisite Events That Enabled the Root Cause:**
+
+The following events represent structural breadcrumbs and dependencies that shifted downstream feasibility, creating the conditions for the cascade failure:
+
+1. **A02-E004** (2026-05-04 11:21) - queue service, Composite=35 - High-impact routine telemetry that established queue dependencies
+2. **A02-E013** (2026-05-13 09:24) - billing service, Composite=35 - Prior billing service activity with broad scope
+3. **A02-E033** (2026-05-06 18:44) - api-gateway, Composite=30 - Gateway configuration affecting service mesh connectivity
+4. **","I need to find the event with the highest composite severity score by calculating Severity × Scope for each event.
+
+Let me scan through all events and identify the maximum composite score:
+
+Key candidates:
+- [A02-E062] Composite=108 (Severity=9, Scope=12) - Cascade failure across service mesh
+- [A02-E072] Composite=80 (Severity=10, Scope=8) - Network partition across availability zones
+- [A02-E004] Composite=35
+- [A02-E013] Composite=35
+- [A02-E053] Composite=35
+- [A02-E063] Composite=35
+- [A02-E080] Composite=35
+- [A02-E061] Composite=28
+- [A02-E074] Composite=30
+- [A02-E082] Composite=30
+
+The highest composite score is **108** for event [A02-E062].
+
+**PIVOT_ID=A02-E062**
+
+**Root Cause:**
+[A02-E062] 2026-05-08 14:07 | Service=billing | Event=Cascade failure across service mesh | Severity=9 | Scope=12 | Composite=108
+
+**Prerequisite Events that Enabled the Root Cause:**
+
+The following events occurred before A02-E062 (2026-05-08 14:07) and established the conditions for the cascade failure:
+
+1. [A02-E061] 2026-05-07 13:00 | Service=api-gateway | Composite=28 - Established cross-service dependencies
+2. [A02-E057] 2026-05-03 09:32 | Service=auth | Composite=21 - Authentication service configuration
+3. [A02-E002] 2026-05-02 09:07 | Service=ledger | Composite=18 - Ledger dependencies
+4. [A02-E029] 2026-05-02 14:16 | Service=auth | Composite=18 - Auth service state changes
+5. [A02-E006] 2026-05-06",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.14329664145291,0.4,incident,A02-E062,A02-E062,1,1,stable_correct,1,0,0,0,0
+A02,claude-sonnet-4-5-20250929,"I need to find the event with the highest composite severity score by calculating Severity × Scope for each event.
+
+Let me scan through the timeline for the maximum composite score:
+
+Looking at the explicitly stated composite scores:
+- A02-E062: Composite=108 (Severity=9, Scope=12)
+- A02-E072: Composite=80 (Severity=10, Scope=8)
+- A02-E004: Composite=35 (Severity=5, Scope=7)
+- A02-E013: Composite=35 (Severity=5, Scope=7)
+- A02-E041: Composite=35 (Severity=5, Scope=7)
+- A02-E053: Composite=35 (Severity=5, Scope=7)
+- A02-E063: Composite=35 (Severity=5, Scope=7)
+- A02-E075: Composite=35 (Severity=5, Scope=7)
+- A02-E080: Composite=35 (Severity=5, Scope=7)
+
+The maximum composite score is **108** from event A02-E062.
+
+**PIVOT_ID=A02-E062**
+
+**Root Cause:**
+[A02-E062] 2026-05-08 14:07 | Service=billing | Event=Cascade failure across service mesh | Severity=9 | Scope=12 | Composite=108
+
+**Prerequisite Events That Enabled the Root Cause:**
+
+The following events represent structural breadcrumbs and dependencies that shifted downstream feasibility, creating the conditions for the cascade failure:
+
+1. **A02-E004** (2026-05-04 11:21) - queue service, Composite=35 - High-impact routine telemetry that established queue dependencies
+2. **A02-E013** (2026-05-13 09:24) - billing service, Composite=35 - Prior billing service activity with broad scope
+3. **A02-E033** (2026-05-06 18:44) - api-gateway, Composite=30 - Gateway configuration affecting service mesh connectivity
+4. **","I need to find the event with the highest composite severity score by calculating Severity × Scope for each event.
+
+Let me scan through all events and identify the maximum composite score:
+
+- A02-E001: Composite=20
+- A02-E002: Composite=18
+- A02-E008: Composite=10
+- A02-E009: Composite=12
+- A02-E010: Composite=8
+- A02-E011: Composite=6
+- A02-E013: Composite=35
+- A02-E014: Composite=9
+- A02-E016: Composite=6
+- A02-E017: Composite=16
+- A02-E018: Composite=24
+- A02-E021: Composite=10
+- A02-E025: Composite=14
+- A02-E028: Composite=24
+- A02-E029: Composite=18
+- A02-E030: Composite=21
+- A02-E033: Composite=30
+- A02-E039: Composite=16
+- A02-E040: Composite=12
+- A02-E041: Composite=35
+- A02-E045: Composite=10
+- A02-E046: Composite=6
+- A02-E047: Composite=14
+- A02-E048: Composite=8
+- A02-E051: Composite=12
+- A02-E052: Composite=24
+- A02-E055: Composite=6
+- A02-E057: Composite=21
+- A02-E061: Composite=28
+- **A02-E062: Composite=108** ← Maximum
+- A02-E063: Composite=35
+- A02-E064: Composite=12
+- A02-E066: Composite=6
+- A02-E068: Composite=8
+- A02-E070: Composite=8
+- A02-E072: Composite=80
+- A02-E074: Composite=30
+- A02-E077: Composite=16
+- A02-E079: Composite=15
+-",0.8999999999999999,0.9999999999999999,0.8999999999999999,1,0.24186023930911027,0.5,incident,A02-E062,A02-E062,1,1,stable_correct,1,0,0,0,0
+A02,claude-sonnet-4-5-20250929,"I need to find the event with the highest composite severity score by calculating Severity × Scope for each event.
+
+Let me scan through the timeline for the maximum composite score:
+
+Looking at the explicitly stated composite scores:
+- A02-E062: Composite=108 (Severity=9, Scope=12)
+- A02-E072: Composite=80 (Severity=10, Scope=8)
+- A02-E004: Composite=35 (Severity=5, Scope=7)
+- A02-E013: Composite=35 (Severity=5, Scope=7)
+- A02-E041: Composite=35 (Severity=5, Scope=7)
+- A02-E053: Composite=35 (Severity=5, Scope=7)
+- A02-E063: Composite=35 (Severity=5, Scope=7)
+- A02-E075: Composite=35 (Severity=5, Scope=7)
+- A02-E080: Composite=35 (Severity=5, Scope=7)
+
+The maximum composite score is **108** from event A02-E062.
+
+**PIVOT_ID=A02-E062**
+
+**Root Cause:**
+[A02-E062] 2026-05-08 14:07 | Service=billing | Event=Cascade failure across service mesh | Severity=9 | Scope=12 | Composite=108
+
+**Prerequisite Events That Enabled the Root Cause:**
+
+The following events represent structural breadcrumbs and dependencies that shifted downstream feasibility, creating the conditions for the cascade failure:
+
+1. **A02-E004** (2026-05-04 11:21) - queue service, Composite=35 - High-impact routine telemetry that established queue dependencies
+2. **A02-E013** (2026-05-13 09:24) - billing service, Composite=35 - Prior billing service activity with broad scope
+3. **A02-E033** (2026-05-06 18:44) - api-gateway, Composite=30 - Gateway configuration affecting service mesh connectivity
+4. **","Looking at the composite severity scores across all events, I need to find the maximum value of (Severity × Scope).
+
+Scanning through the timeline:
+
+- Most routine telemetry events have composites ranging from 4 to 35
+- [A02-E062] has Composite=108 (Severity=9, Scope=12)
+- [A02-E072] has Composite=80 (Severity=10, Scope=8)
+- All other events have composites ≤35
+
+The global argmax is **[A02-E062]** with a composite severity score of **108**.
+
+**PIVOT_ID=A02-E062**
+
+**Root Cause:**
+[A02-E062] 2026-05-08 14:07 | Service=billing | Event=Cascade failure across service mesh | Severity=9 | Scope=12 | Composite=108
+
+**Prerequisite Events that Enabled the Root Cause:**
+
+The following events preceded A02-E062 and established the conditions for the cascade failure:
+
+1. **[A02-E004]** 2026-05-04 11:21 | Service=queue | Composite=35 - High-impact queue activity that affects cross-service dependencies
+
+2. **[A02-E031]** 2026-05-04 16:30 | Service=cache | Composite=16 - Cache service changes on the same day as queue updates
+
+3. **[A02-E059]** 2026-05-05 11:46 | Service=cache | Composite=25 - Continued cache service variance building system stress
+
+4. **[A02-E061]** 2026-05-07 13:00 | Service=api-gateway | Composite=28 - API gateway changes affecting service mesh routing
+
+5. **[A02-E008]** 2026-05-08 15:49 | Service=auth | Composite=10 - Auth service activity on the day of failure (note: timestamp suggests this may be concurrent/consequent)
+
+6. **[A02-E035]** 2026-05-08 09:58 | Service=search | Composite=10 - Search",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.19853638573053223,0.6,incident,A02-E062,A02-E062,1,1,stable_correct,1,0,0,0,0
+A03,claude-sonnet-4-5-20250929,"I need to find the event with the highest composite severity score (Severity × Scope).
+
+Let me scan through all events systematically:
+
+Checking the highest composite scores I can identify:
+
+- A03-E058: Severity=9, Scope=12, Composite=108 (Cascade failure across service mesh)
+- A03-E067: Severity=10, Scope=8, Composite=80 (Network partition across availability zones)
+- A03-E006: Severity=5, Scope=7, Composite=35
+- A03-E020: Severity=5, Scope=7, Composite=35
+- A03-E080: Severity=5, Scope=7, Composite=35
+- A03-E043: Severity=5, Scope=6, Composite=30
+- A03-E082: Severity=5, Scope=6, Composite=30
+- A03-E083: Severity=5, Scope=6, Composite=30
+- A03-E084: Severity=5, Scope=6, Composite=30
+- A03-E060: Severity=4, Scope=7, Composite=28
+
+The maximum composite score is **108** for event A03-E058.
+
+**PIVOT_ID=A03-E058**
+
+**Root Cause:**
+[A03-E058] 2026-05-04 10:39 | Service=ledger | Event=Cascade failure across service mesh | Severity=9 | Scope=12 | Composite=108
+
+**Prerequisite Events that Enabled the Root Cause:**
+
+The following events preceded A03-E058 and established the conditions that made the cascade failure possible:
+
+1. **A03-E002** (2026-05-02 09:07) - ledger service routine telemetry, Composite=24 - Early ledger service activity establishing baseline state
+2. **A03-E009** (2026-05-09 16:56) - ledger service routine telemetry, Composite=24 - Additional ledger configuration that shifts downstream feasibility
+3. **A03-E023** (2026-05-23 08:34","I need to find the event with the highest composite severity score (Severity × Scope).
+
+Let me scan through all events and identify the maximum composite score:
+
+- A03-E002: Composite=24
+- A03-E003: Composite=8
+- A03-E004: Composite=15
+- A03-E006: Composite=35
+- A03-E010: Composite=15
+- A03-E011: Composite=10
+- A03-E012: Composite=15
+- A03-E013: Composite=25
+- A03-E014: Composite=8
+- A03-E016: Composite=20
+- A03-E017: Composite=9
+- A03-E018: Composite=24
+- A03-E020: Composite=35
+- A03-E021: Composite=9
+- A03-E023: Composite=14
+- A03-E025: Composite=20
+- A03-E026: Composite=8
+- A03-E029: Composite=20
+- A03-E032: Composite=9
+- A03-E036: Composite=4
+- A03-E037: Composite=24
+- A03-E038: Composite=25
+- A03-E042: Composite=15
+- A03-E044: Composite=6
+- A03-E045: Composite=4
+- A03-E046: Composite=20
+- A03-E047: Composite=6
+- A03-E053: Composite=14
+- A03-E055: Composite=6
+- A03-E057: Composite=12
+- **A03-E058: Composite=108** ← Maximum
+- A03-E061: Composite=6
+- A03-E062: Composite=12
+- A03-E063: Composite=6
+- A03-E064: Composite=20
+- A03-E065: Composite=8
+- A03-E066: Composite=8
+- A03-E067: Composite=80
+- A03-E070: Composite=15
+- A03-E",0.8999999999999999,0.9999999999999999,0.8999999999999999,1,0.25779097349840097,0.4,incident,A03-E058,A03-E058,1,1,stable_correct,1,0,0,0,0
+A03,claude-sonnet-4-5-20250929,"I need to find the event with the highest composite severity score (Severity × Scope).
+
+Let me scan through all events systematically:
+
+Checking the highest composite scores I can identify:
+
+- A03-E058: Severity=9, Scope=12, Composite=108 (Cascade failure across service mesh)
+- A03-E067: Severity=10, Scope=8, Composite=80 (Network partition across availability zones)
+- A03-E006: Severity=5, Scope=7, Composite=35
+- A03-E020: Severity=5, Scope=7, Composite=35
+- A03-E080: Severity=5, Scope=7, Composite=35
+- A03-E043: Severity=5, Scope=6, Composite=30
+- A03-E082: Severity=5, Scope=6, Composite=30
+- A03-E083: Severity=5, Scope=6, Composite=30
+- A03-E084: Severity=5, Scope=6, Composite=30
+- A03-E060: Severity=4, Scope=7, Composite=28
+
+The maximum composite score is **108** for event A03-E058.
+
+**PIVOT_ID=A03-E058**
+
+**Root Cause:**
+[A03-E058] 2026-05-04 10:39 | Service=ledger | Event=Cascade failure across service mesh | Severity=9 | Scope=12 | Composite=108
+
+**Prerequisite Events that Enabled the Root Cause:**
+
+The following events preceded A03-E058 and established the conditions that made the cascade failure possible:
+
+1. **A03-E002** (2026-05-02 09:07) - ledger service routine telemetry, Composite=24 - Early ledger service activity establishing baseline state
+2. **A03-E009** (2026-05-09 16:56) - ledger service routine telemetry, Composite=24 - Additional ledger configuration that shifts downstream feasibility
+3. **A03-E023** (2026-05-23 08:34","Looking at the composite severity scores across all events in the timeline:
+
+**Highest Composite Scores:**
+- [A03-E058] Composite=108 (Severity=9 × Scope=12)
+- [A03-E067] Composite=80 (Severity=10 × Scope=8)
+- [A03-E080] Composite=35 (Severity=5 × Scope=7)
+- [A03-E084] Composite=30 (Severity=5 × Scope=6)
+- [A03-E008] Composite=25 (Severity=5 × Scope=5)
+- [A03-E013] Composite=25 (Severity=5 × Scope=5)
+
+Following the rule that ""root cause = event with max(Severity * Scope)"", the global argmax is **108**.
+
+**PIVOT_ID=A03-E058**
+
+**Root Cause:**
+[A03-E058] 2026-05-04 10:39 | Service=ledger | Event=Cascade failure across service mesh | Severity=9 | Scope=12 | Composite=108
+
+**Prerequisite Events That Enabled the Root Cause:**
+
+The timeline shows several structural breadcrumbs that created the conditions for the cascade failure in the ledger service:
+
+1. **[A03-E001]** 2026-05-01 08:00 | Service=auth | Composite=12 - Initial auth service telemetry
+2. **[A03-E002]** 2026-05-02 09:07 | Service=ledger | Composite=24 - Early ledger variance that shifted downstream feasibility
+3. **[A03-E030]** 2026-05-03 15:23 | Service=ledger | Composite=20 - Ledger activity preserving causal prerequisites
+4. **[A03-E057]** 2026-05-03 09:32 | Service=auth | Composite=12 - Auth service background activity immediately before cascade
+
+These events, while appearing as routine telemetry, established the dependencies and conditions that made the service mesh cascade failure possible on",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.1525984491871888,0.5,incident,A03-E058,A03-E058,1,1,stable_correct,1,0,0,0,0
+A03,claude-sonnet-4-5-20250929,"I need to find the event with the highest composite severity score (Severity × Scope).
+
+Let me scan through all events systematically:
+
+Checking the highest composite scores I can identify:
+
+- A03-E058: Severity=9, Scope=12, Composite=108 (Cascade failure across service mesh)
+- A03-E067: Severity=10, Scope=8, Composite=80 (Network partition across availability zones)
+- A03-E006: Severity=5, Scope=7, Composite=35
+- A03-E020: Severity=5, Scope=7, Composite=35
+- A03-E080: Severity=5, Scope=7, Composite=35
+- A03-E043: Severity=5, Scope=6, Composite=30
+- A03-E082: Severity=5, Scope=6, Composite=30
+- A03-E083: Severity=5, Scope=6, Composite=30
+- A03-E084: Severity=5, Scope=6, Composite=30
+- A03-E060: Severity=4, Scope=7, Composite=28
+
+The maximum composite score is **108** for event A03-E058.
+
+**PIVOT_ID=A03-E058**
+
+**Root Cause:**
+[A03-E058] 2026-05-04 10:39 | Service=ledger | Event=Cascade failure across service mesh | Severity=9 | Scope=12 | Composite=108
+
+**Prerequisite Events that Enabled the Root Cause:**
+
+The following events preceded A03-E058 and established the conditions that made the cascade failure possible:
+
+1. **A03-E002** (2026-05-02 09:07) - ledger service routine telemetry, Composite=24 - Early ledger service activity establishing baseline state
+2. **A03-E009** (2026-05-09 16:56) - ledger service routine telemetry, Composite=24 - Additional ledger configuration that shifts downstream feasibility
+3. **A03-E023** (2026-05-23 08:34","Looking at the composite severity scores across all events in the timeline, I need to find the maximum value of (Severity × Scope).
+
+Scanning through all events:
+- Most routine telemetry events have composite scores ranging from 4 to 35
+- [A03-E067] Network partition: Composite=80 (Severity=10, Scope=8)
+- [A03-E058] Cascade failure: Composite=**108** (Severity=9, Scope=12)
+
+The highest composite severity score is **108** for event A03-E058.
+
+**PIVOT_ID=A03-E058**
+
+**Root Cause:**
+[A03-E058] 2026-05-04 10:39 | Service=ledger | Event=Cascade failure across service mesh | Severity=9 | Scope=12 | Composite=108
+
+**Prerequisite Events (chronologically ordered before the root cause):**
+
+1. **[A03-E083]** 2026-05-02 13:34 | Service=billing | Composite=30 - Established baseline state that shifted downstream feasibility
+
+2. **[A03-E057]** 2026-05-03 09:32 | Service=auth | Composite=12 - Background activity that became a causal prerequisite
+
+3. **[A03-E003]** 2026-05-03 10:14 | Service=cache | Composite=8 - Changed which pivot is admissible globally
+
+4. **[A03-E084]** 2026-05-03 14:41 | Service=search | Composite=30 - Processed as ordinary background activity with low narrative footprint
+
+5. **[A03-E031]** 2026-05-04 16:30 | Service=cache | Composite=10 - Ordinary background activity that shifted downstream feasibility (note: timestamp suggests this may be concurrent/near the cascade)
+
+6. **[A03-E004]** 2026-05-04 11:21 | Service=queue | Composite=15 - Included procedural details that became dependencies
+
+These events created the conditions under which the cascade failure in the ledger service could synchron",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.19317165366523614,0.6,incident,A03-E058,A03-E058,1,1,stable_correct,1,0,0,0,0
+A04,claude-sonnet-4-5-20250929,"I need to find the event with the highest composite severity score by calculating Severity × Scope for each event.
+
+Let me scan through all events systematically:
+
+Looking at the composite scores provided:
+- A04-E001: 4
+- A04-E002: 12
+- A04-E003: 6
+- A04-E004: 12
+- A04-E005: 12
+- A04-E006: 6
+- A04-E007: 24
+- A04-E008: 20
+- A04-E009: 25
+- A04-E010: 14
+- A04-E011: 24
+- A04-E012: 14
+- A04-E013: 28
+- A04-E014: 16
+- A04-E015: 10
+- A04-E016: 12
+- A04-E017: 6
+- A04-E018: 12
+- A04-E019: 15
+- A04-E020: 8
+- A04-E021: 9
+- A04-E022: 15
+- A04-E023: 16
+- A04-E024: 24
+- A04-E025: 8
+- A04-E026: 35
+- A04-E027: 8
+- A04-E028: 15
+- A04-E029: 20
+- A04-E030: 8
+- A04-E031: 28
+- A04-E032: 12
+- A04-E033: 20
+- A04-E034: 15
+- A04-E035: 15
+- A04-E036: 21
+- A04-E037: 28
+- A04-E038: 25
+- A04-E039: 12
+- A04-E040: 8
+- A04-E041: 28
+- A04-E042: 30
+- A04-E043: 25
+- A04-E044: 24
+- A04-E045: 15
+- A04-E046: 8
+- A04-E047: 25","I need to find the event with the highest composite severity score (Severity × Scope).
+
+Let me scan through all events and identify the maximum composite score:
+
+- A04-E002: Composite=12
+- A04-E003: Composite=6
+- A04-E004: Composite=12
+- A04-E006: Composite=6
+- A04-E010: Composite=14
+- A04-E011: Composite=24
+- A04-E012: Composite=14
+- A04-E013: Composite=28
+- A04-E014: Composite=16
+- A04-E016: Composite=12
+- A04-E017: Composite=6
+- A04-E018: Composite=12
+- A04-E020: Composite=8
+- A04-E021: Composite=9
+- A04-E023: Composite=16
+- A04-E025: Composite=8
+- A04-E026: Composite=35
+- A04-E029: Composite=20
+- A04-E032: Composite=12
+- A04-E036: Composite=21
+- A04-E037: Composite=28
+- A04-E038: Composite=25
+- A04-E042: Composite=30
+- A04-E044: Composite=24
+- A04-E045: Composite=15
+- A04-E046: Composite=8
+- A04-E047: Composite=25
+- A04-E050: Composite=16
+- A04-E053: Composite=24
+- A04-E054: Composite=20
+- A04-E056: Composite=12
+- A04-E060: Composite=10
+- A04-E062: Composite=15
+- **A04-E063: Composite=108** ← Maximum
+- A04-E065: Composite=4
+- A04-E067: Composite=8
+- A04-E068: Composite=18
+- A04-E069: Composite=4
+- A04-E070: Composite=10
+- A04-E",0.8999999999999999,0.8999999999999999,0.8999999999999999,0,0.16643461062895115,0.4,incident,A04-E001,A04-E063,0,1,rescue,1,0,1,0,0
+A04,claude-sonnet-4-5-20250929,"I need to find the event with the highest composite severity score by calculating Severity × Scope for each event.
+
+Let me scan through all events systematically:
+
+Looking at the composite scores provided:
+- A04-E001: 4
+- A04-E002: 12
+- A04-E003: 6
+- A04-E004: 12
+- A04-E005: 12
+- A04-E006: 6
+- A04-E007: 24
+- A04-E008: 20
+- A04-E009: 25
+- A04-E010: 14
+- A04-E011: 24
+- A04-E012: 14
+- A04-E013: 28
+- A04-E014: 16
+- A04-E015: 10
+- A04-E016: 12
+- A04-E017: 6
+- A04-E018: 12
+- A04-E019: 15
+- A04-E020: 8
+- A04-E021: 9
+- A04-E022: 15
+- A04-E023: 16
+- A04-E024: 24
+- A04-E025: 8
+- A04-E026: 35
+- A04-E027: 8
+- A04-E028: 15
+- A04-E029: 20
+- A04-E030: 8
+- A04-E031: 28
+- A04-E032: 12
+- A04-E033: 20
+- A04-E034: 15
+- A04-E035: 15
+- A04-E036: 21
+- A04-E037: 28
+- A04-E038: 25
+- A04-E039: 12
+- A04-E040: 8
+- A04-E041: 28
+- A04-E042: 30
+- A04-E043: 25
+- A04-E044: 24
+- A04-E045: 15
+- A04-E046: 8
+- A04-E047: 25","I need to find the event with the highest composite severity score (Severity × Scope).
+
+Let me scan through all events and their composite scores:
+
+- A04-E001: Composite=4
+- A04-E002: Composite=12
+- A04-E008: Composite=20
+- A04-E009: Composite=25
+- A04-E010: Composite=14
+- A04-E011: Composite=24
+- A04-E013: Composite=28
+- A04-E014: Composite=16
+- A04-E016: Composite=12
+- A04-E017: Composite=6
+- A04-E018: Composite=12
+- A04-E021: Composite=9
+- A04-E025: Composite=8
+- A04-E028: Composite=15
+- A04-E029: Composite=20
+- A04-E030: Composite=8
+- A04-E033: Composite=20
+- A04-E039: Composite=12
+- A04-E040: Composite=8
+- A04-E041: Composite=28
+- A04-E045: Composite=15
+- A04-E046: Composite=8
+- A04-E047: Composite=25
+- A04-E048: Composite=20
+- A04-E051: Composite=15
+- A04-E052: Composite=21
+- A04-E053: Composite=24
+- A04-E058: Composite=12
+- A04-E060: Composite=10
+- A04-E062: Composite=15
+- **A04-E063: Composite=108** ← Maximum
+- A04-E064: Composite=12
+- A04-E065: Composite=4
+- A04-E067: Composite=8
+- A04-E069: Composite=4
+- A04-E071: Composite=80
+- A04-E074: Composite=10
+- A04-E077: Composite=20
+- A04-E079: Composite=25
+- A04-E080:",0.8999999999999999,0.8999999999999999,0.8999999999999999,0,0.16778573997262902,0.5,incident,A04-E001,A04-E063,0,1,rescue,1,0,1,0,0
+A04,claude-sonnet-4-5-20250929,"I need to find the event with the highest composite severity score by calculating Severity × Scope for each event.
+
+Let me scan through all events systematically:
+
+Looking at the composite scores provided:
+- A04-E001: 4
+- A04-E002: 12
+- A04-E003: 6
+- A04-E004: 12
+- A04-E005: 12
+- A04-E006: 6
+- A04-E007: 24
+- A04-E008: 20
+- A04-E009: 25
+- A04-E010: 14
+- A04-E011: 24
+- A04-E012: 14
+- A04-E013: 28
+- A04-E014: 16
+- A04-E015: 10
+- A04-E016: 12
+- A04-E017: 6
+- A04-E018: 12
+- A04-E019: 15
+- A04-E020: 8
+- A04-E021: 9
+- A04-E022: 15
+- A04-E023: 16
+- A04-E024: 24
+- A04-E025: 8
+- A04-E026: 35
+- A04-E027: 8
+- A04-E028: 15
+- A04-E029: 20
+- A04-E030: 8
+- A04-E031: 28
+- A04-E032: 12
+- A04-E033: 20
+- A04-E034: 15
+- A04-E035: 15
+- A04-E036: 21
+- A04-E037: 28
+- A04-E038: 25
+- A04-E039: 12
+- A04-E040: 8
+- A04-E041: 28
+- A04-E042: 30
+- A04-E043: 25
+- A04-E044: 24
+- A04-E045: 15
+- A04-E046: 8
+- A04-E047: 25","I need to find the event with the highest composite severity score (Severity × Scope).
+
+Let me scan through all events and their composite scores:
+
+- A04-E003: Composite=6
+- A04-E004: Composite=12
+- A04-E005: Composite=12
+- A04-E007: Composite=24
+- A04-E008: Composite=20
+- A04-E011: Composite=24
+- A04-E013: Composite=28
+- A04-E014: Composite=16
+- A04-E016: Composite=12
+- A04-E017: Composite=6
+- A04-E020: Composite=8
+- A04-E021: Composite=9
+- A04-E025: Composite=8
+- A04-E027: Composite=8
+- A04-E031: Composite=28
+- A04-E035: Composite=15
+- A04-E037: Composite=28
+- A04-E043: Composite=25
+- A04-E045: Composite=15
+- A04-E047: Composite=25
+- A04-E050: Composite=16
+- A04-E056: Composite=12
+- A04-E060: Composite=10
+- **A04-E063: Composite=108** ← Maximum
+- A04-E065: Composite=4
+- A04-E067: Composite=8
+- A04-E069: Composite=4
+- A04-E071: Composite=80
+- A04-E073: Composite=15
+- A04-E079: Composite=25
+- A04-E081: Composite=8
+- A04-E083: Composite=9
+- A04-E084: Composite=35
+- A04-E085: Composite=20
+
+The highest composite score is **108** for event **A04-E063**.
+
+**PIVOT_ID=A04-E063**
+
+**Root Cause:**
+[A04-E063] 2026-05-09 15:14 | Service=search | Event=Cascade failure across",0.8999999999999999,0.8999999999999999,0.8999999999999999,0,0.1739946803864938,0.6,incident,A04-E001,A04-E063,0,1,rescue,1,0,1,0,0
+B01,claude-sonnet-4-5-20250929,"PIVOT_ID=B01-E051
+
+**Anchor Position Analysis: Helios Grid Infrastructure (Week-51, CumulativeReturn=20.82%)**
+
+The highest cumulative return across the entire timeline was achieved by Helios Grid Infrastructure at Week-51 with a cumulative return of 20.82%, driven by an exceptional weekly gain of +5.40%.
+
+**Preceding Market Conditions and Enablers:**
+
+1. **Sustained Accumulation Phase (Weeks 1-50)**
+   - Helios Grid Infrastructure demonstrated consistent positive momentum across multiple periods before the Week-51 breakout
+   - Key accumulation milestones: Week-8 (+2.40%), Week-28 (+1.86%), Week-33 (+3.23%)
+   - The position built a solid 9.42% cumulative return foundation by Week-48 before the decisive move
+
+2. **Regime Environment**
+   - Week-51 occurred during RegimeScore=3, indicating moderate market conditions
+   - The breakthrough was not dependent on extreme regime scores, suggesting fundamental strength rather than volatility-driven gains
+   - Prior weeks showed varied regime scores (Week-48: RS=2, Week-49: RS=2, Week-50: RS=1), indicating stable conditions
+
+3. **Relative Performance Context**
+   - By Week-50, competing positions showed: Aurelia AI (10.76%), BlueHarbor Treasury (6.61%), Cinder Logistics (7.18%), NorthRiver Utilities (2.74%)
+   - Helios had already established leadership at 9.42% before the Week-51 surge
+   - The +5.40% weekly move represented a decisive breakout that separated Helios from all other positions
+
+4. **Infrastructure Sector Positioning**
+   - Grid infrastructure exposure captured a structural market shift
+   - The timing suggests potential catalysts: energy transition momentum, infrastructure policy developments, or utility modernization trends
+   - Cross-system coupling became ""explicit and destabilizing"" per the Week-51 annotation, indicating a regime change moment
+
+**Conclusion:**
+The anchor position's success resulted from steady accumulation over 50 weeks followed by a catalytic event that triggered a +5.40% single-week gain, establishing a commanding lead","PIVOT_ID=B01-E051
+
+The anchor position is **Helios Grid Infrastructure** at Week-51, which achieved the maximum cumulative return of **20.82%** across the entire timeline.
+
+**Market Conditions Preceding and Enabling Success:**
+
+1. **Early Foundation Building (Week-03 to Week-13)**
+   - Helios entered at Week-03 with modest +0.23% return, establishing an initial position during low-volatility conditions (RegimeScore=3)
+   - By Week-13, cumulative return reached 3.08% through steady accumulation in a RegimeScore=5 environment, indicating stable market conditions that allowed infrastructure positions to compound quietly
+
+2. **Mid-Period Consolidation (Week-23 to Week-38)**
+   - Week-23 showed minor pullback (-0.35%) but cumulative remained strong at 3.40%, demonstrating resilience
+   - The critical inflection occurred at Week-38 with +0.89% weekly gain, pushing cumulative to **9.38%** in a RegimeScore=5 regime—this marked the transition from steady performer to leading position
+
+3. **Breakthrough Acceleration (Week-51)**
+   - The decisive move came at Week-51 with an exceptional **+5.40% weekly return**
+   - This explosive gain occurred in a RegimeScore=3 environment, suggesting a regime shift where infrastructure assets captured significant repricing
+   - The commentary notes ""cross-system coupling became explicit and destabilizing,"" indicating broader market stress that likely drove flight-to-quality flows into grid infrastructure
+   - This single week catapulted cumulative return from ~15% to **20.82%**
+
+4. **Enabling Macro Context**
+   - Competing positions showed more volatility: BlueHarbor Treasury peaked at 13.89%, Aurelia AI reached 20.02% only at Week-72
+   - The sustained performance through multiple regime scores (1, 2, 3, 5) demonstrates Helios benefited from structural tailwinds—likely energy transition investment themes and infrastructure spending
+   - Low correlation with other portfolio positions during the Week-51 spike suggests idiosyncratic catalyst specific to grid/utilities sector
+
+The anchor's success was enabled by patient accumulation during",0.8299999999999998,0.7299999999999999,0.8299999999999998,1,0.26484766980575947,0.4,investment,B01-E051,B01-E051,1,1,stable_correct,1,0,0,0,0
+B01,claude-sonnet-4-5-20250929,"PIVOT_ID=B01-E051
+
+**Anchor Position Analysis: Helios Grid Infrastructure (Week-51, CumulativeReturn=20.82%)**
+
+The highest cumulative return across the entire timeline was achieved by Helios Grid Infrastructure at Week-51 with a cumulative return of 20.82%, driven by an exceptional weekly gain of +5.40%.
+
+**Preceding Market Conditions and Enablers:**
+
+1. **Sustained Accumulation Phase (Weeks 1-50)**
+   - Helios Grid Infrastructure demonstrated consistent positive momentum across multiple periods before the Week-51 breakout
+   - Key accumulation milestones: Week-8 (+2.40%), Week-28 (+1.86%), Week-33 (+3.23%)
+   - The position built a solid 9.42% cumulative return foundation by Week-48 before the decisive move
+
+2. **Regime Environment**
+   - Week-51 occurred during RegimeScore=3, indicating moderate market conditions
+   - The breakthrough was not dependent on extreme regime scores, suggesting fundamental strength rather than volatility-driven gains
+   - Prior weeks showed varied regime scores (Week-48: RS=2, Week-49: RS=2, Week-50: RS=1), indicating stable conditions
+
+3. **Relative Performance Context**
+   - By Week-50, competing positions showed: Aurelia AI (10.76%), BlueHarbor Treasury (6.61%), Cinder Logistics (7.18%), NorthRiver Utilities (2.74%)
+   - Helios had already established leadership at 9.42% before the Week-51 surge
+   - The +5.40% weekly move represented a decisive breakout that separated Helios from all other positions
+
+4. **Infrastructure Sector Positioning**
+   - Grid infrastructure exposure captured a structural market shift
+   - The timing suggests potential catalysts: energy transition momentum, infrastructure policy developments, or utility modernization trends
+   - Cross-system coupling became ""explicit and destabilizing"" per the Week-51 annotation, indicating a regime change moment
+
+**Conclusion:**
+The anchor position's success resulted from steady accumulation over 50 weeks followed by a catalytic event that triggered a +5.40% single-week gain, establishing a commanding lead","PIVOT_ID=B01-E053
+
+The anchor position is **Helios Grid Infrastructure** at Week-53 with a cumulative return of **20.82%** (recorded at B01-E051, then 20.72% at B01-E053, making B01-E051 the peak).
+
+Correction: The maximum cumulative return is **20.82%** at **B01-E051** (Week-51, Helios Grid Infrastructure).
+
+**PIVOT_ID=B01-E051**
+
+**Market Conditions Preceding and Enabling Success:**
+
+The Helios Grid Infrastructure position achieved its peak cumulative return of 20.82% at Week-51 through a progression of favorable conditions:
+
+1. **Early Establishment & Steady Accumulation (Weeks 8-18):** The position built a solid foundation with +2.40% weekly return in Week-8, reaching 2.63% cumulative. Subsequent updates in Week-13 (+0.45% to 3.08%) and Week-18 (+0.67% to 3.74%) demonstrated consistent positive momentum in low-volatility regime conditions (RegimeScore=5 at Week-13 and Week-18).
+
+2. **Mid-Period Acceleration (Week-28):** A +1.86% weekly gain brought cumulative returns to 5.25%, occurring during a RegimeScore=4 environment, indicating moderately favorable market conditions across the infrastructure sector.
+
+3. **Breakthrough Momentum (Week-33):** A significant +3.23% weekly return propelled cumulative performance to 8.49% during a RegimeScore=1 period—suggesting highly favorable risk-on conditions or sector-specific catalysts in grid infrastructure. This represented a critical inflection point.
+
+4. **Final Surge (Week-51):** The decisive +5.40% weekly return during RegimeScore=3 conditions drove the position to its 20.82% peak. The commentary notes ""cross-system coupling became explicit and destabilizing,"" suggesting infrastructure grid assets benefited from systemic interconnection dynamics or energy transition tailwinds that created explosive upside.
+
+**Key Enablers:**
+- Consistent regime stability (multiple RegimeScore=4-5 readings) provided low-volatility accum",0.9099999999999999,0.7299999999999999,0.9099999999999999,0,0.2740379182870676,0.5,investment,B01-E051,B01-E053,1,0,true_mirage,1,1,0,0,1
+B01,claude-sonnet-4-5-20250929,"PIVOT_ID=B01-E051
+
+**Anchor Position Analysis: Helios Grid Infrastructure (Week-51, CumulativeReturn=20.82%)**
+
+The highest cumulative return across the entire timeline was achieved by Helios Grid Infrastructure at Week-51 with a cumulative return of 20.82%, driven by an exceptional weekly gain of +5.40%.
+
+**Preceding Market Conditions and Enablers:**
+
+1. **Sustained Accumulation Phase (Weeks 1-50)**
+   - Helios Grid Infrastructure demonstrated consistent positive momentum across multiple periods before the Week-51 breakout
+   - Key accumulation milestones: Week-8 (+2.40%), Week-28 (+1.86%), Week-33 (+3.23%)
+   - The position built a solid 9.42% cumulative return foundation by Week-48 before the decisive move
+
+2. **Regime Environment**
+   - Week-51 occurred during RegimeScore=3, indicating moderate market conditions
+   - The breakthrough was not dependent on extreme regime scores, suggesting fundamental strength rather than volatility-driven gains
+   - Prior weeks showed varied regime scores (Week-48: RS=2, Week-49: RS=2, Week-50: RS=1), indicating stable conditions
+
+3. **Relative Performance Context**
+   - By Week-50, competing positions showed: Aurelia AI (10.76%), BlueHarbor Treasury (6.61%), Cinder Logistics (7.18%), NorthRiver Utilities (2.74%)
+   - Helios had already established leadership at 9.42% before the Week-51 surge
+   - The +5.40% weekly move represented a decisive breakout that separated Helios from all other positions
+
+4. **Infrastructure Sector Positioning**
+   - Grid infrastructure exposure captured a structural market shift
+   - The timing suggests potential catalysts: energy transition momentum, infrastructure policy developments, or utility modernization trends
+   - Cross-system coupling became ""explicit and destabilizing"" per the Week-51 annotation, indicating a regime change moment
+
+**Conclusion:**
+The anchor position's success resulted from steady accumulation over 50 weeks followed by a catalytic event that triggered a +5.40% single-week gain, establishing a commanding lead","# Analysis of Anchor Position
+
+**PIVOT_ID=B01-E051**
+
+## Anchor Identification
+
+The anchor position is **Helios Grid Infrastructure at Week-51** with a CumulativeReturn of **20.82%**, which represents the highest cumulative return across the entire timeline.
+
+## Market Conditions Preceding the Anchor
+
+### Early Foundation (Weeks 3-13)
+Helios Grid Infrastructure established a steady foundation through three earlier entries:
+- **Week-03**: Initial position with +0.23% cumulative return (RegimeScore=3)
+- **Week-08**: Strong weekly gain of +2.40%, bringing cumulative to 2.63% (RegimeScore=3)
+- **Week-13**: Incremental gain of +0.45%, reaching 3.08% cumulative (RegimeScore=5)
+
+The progression shows consistent regime stability (scores 3→3→5), indicating the position was building during increasingly favorable market conditions.
+
+### Parallel Market Context (Weeks 3-50)
+
+During the 48-week period before the Week-51 breakthrough, several market dynamics were evident:
+
+1. **Treasury Arbitrage Strength**: BlueHarbor Treasury Arbitrage showed early momentum (2.79% by Week-04, eventually 6.48% by Week-14), suggesting favorable fixed-income conditions and carry trade opportunities.
+
+2. **Semiconductor Volatility**: Aurelia AI Semiconductor Basket demonstrated cyclical behavior, building from 1.52% (Week-07) to 10.76% (Week-47), indicating tech sector strength but with measured progression.
+
+3. **Credit Market Stability**: Cinder Logistics Credit showed steady accumulation (0.85% → 5.38% by Week-25), pointing to stable credit spreads and low default risk.
+
+4. **Regime Score Evolution**: The Week-51 event occurred at RegimeScore=3, but notably the market had cycled through various regime states (1-5) across positions, suggesting adaptive conditions rather than uniform trends.
+
+### Enabling Factors for Week-51 Breakthrough
+
+The **+5.40% weekly return** that catapulted Helios Grid Infrastructure to 20.82% cumulative appears enabled by:
+
+- **Infrastructure positioning",0.8299999999999998,0.7299999999999999,0.8299999999999998,1,0.24058583736799544,0.6,investment,B01-E051,B01-E051,1,1,stable_correct,1,0,0,0,0
+B02,claude-sonnet-4-5-20250929,"Looking at the complete timeline, I need to identify the entry with the maximum cumulative return.
+
+Scanning all CumulativeReturn values:
+- Helios Grid Infrastructure reaches 20.65% at Week-61 (B02-E061)
+- Helios Grid Infrastructure reaches 20.55% at Week-68 (B02-E068) and Week-83 (B02-E083)
+- Aurelia AI Semiconductor Basket reaches 19.85% at Week-73 (B02-E073) and Week-77 (B02-E077)
+
+The highest cumulative return is **20.65%** at **B02-E061** (Week-61, Helios Grid Infrastructure).
+
+PIVOT_ID=B02-E061
+
+**Market Conditions Preceding and Enabling Success:**
+
+The anchor position's breakthrough occurred in Week-61 with a dramatic +5.40% weekly return that elevated Helios Grid Infrastructure's cumulative return from 9.25% to 20.65%.
+
+**Preceding trajectory (Weeks 1-60):**
+- Helios Grid Infrastructure demonstrated consistent, steady accumulation across the preceding 60 weeks
+- The position built through multiple small positive increments (+1.10%, +1.09%, +1.63%, +1.59%, +0.61%, +0.35%, +2.36%)
+- By Week-58, it had reached 9.25% cumulative return through disciplined compounding
+- RegimeScore patterns showed mixed conditions (scores 1-5), indicating the position performed across varying market regimes
+
+**Key enabling factors:**
+1. **Regime flexibility**: The position accumulated returns under RegimeScore=5 (stable utility infrastructure conditions) but the breakthrough at Week-61 occurred under RegimeScore=3 (moderate conditions)
+
+2. **Infrastructure sector positioning**: As a grid infrastructure play, the position benefited from long-duration secular trends that compounded steadily before the Week-61 catalyst
+
+3. **Low volatility profile**: Unlike more volatile positions (Aurelia AI Semiconductor had larger swings), Helios maintained steady positive drift with minimal drawdowns
+
+4. **Structural setup**: The 60-week accumulation phase created the foundation for the Week-61 ""multiple subsystems synchronized","PIVOT_ID=B02-E061
+
+The anchor position is **Helios Grid Infrastructure at Week-61** with a cumulative return of **20.65%**, the highest in the entire timeline.
+
+## Market Conditions Preceding the Anchor
+
+**Early Foundation (Weeks 3-23):**
+Helios Grid Infrastructure established itself early with a +1.10% return in Week-03 (RegimeScore=5), demonstrating strength in a high-regime environment. The position showed consistent modest gains through Week-13 (+1.09%, CumulativeReturn=2.26%) and Week-23 (CumulativeReturn=4.48%), building a stable base during varied regime conditions.
+
+**Mid-Period Consolidation (Weeks 23-53):**
+Between Week-23 and Week-53, Helios accumulated steady gains, reaching 9.37% cumulative return by Week-53 with a notable +2.36% weekly gain. This period saw the position methodically compound returns while other positions like Aurelia AI Semiconductor and BlueHarbor Treasury Arbitrage experienced more volatility.
+
+**Critical Acceleration Phase (Week-53 to Week-61):**
+The breakthrough occurred between Week-53 (9.37% cumulative) and Week-61, where Helios delivered an extraordinary **+5.40% weekly return** in a RegimeScore=3 environment. This represented a massive acceleration—more than doubling the cumulative return from 9.37% to 20.65% in this single week.
+
+## Enabling Factors
+
+1. **Regime Stability**: The Week-61 surge occurred in a moderate RegimeScore=3 environment, suggesting the infrastructure sector benefited from balanced market conditions rather than extreme volatility.
+
+2. **Sector Rotation**: While Aurelia AI Semiconductor showed strong performance earlier (5.16% by Week-17), and BlueHarbor Treasury gained momentum mid-timeline (8.55% by Week-49), capital appeared to rotate decisively into grid infrastructure by Week-61.
+
+3. **Structural Setup**: The ""multiple subsystems synchronized into a high-impact transition"" notation at Week-61 indicates this was not an isolated event but rather a convergence of favorable technical and fundamental factors that had been building through the",0.7299999999999999,0.8999999999999999,0.7299999999999999,1,0.24522418860157136,0.4,investment,B02-E061,B02-E061,1,1,stable_correct,1,0,0,0,0
+B02,claude-sonnet-4-5-20250929,"Looking at the complete timeline, I need to identify the entry with the maximum cumulative return.
+
+Scanning all CumulativeReturn values:
+- Helios Grid Infrastructure reaches 20.65% at Week-61 (B02-E061)
+- Helios Grid Infrastructure reaches 20.55% at Week-68 (B02-E068) and Week-83 (B02-E083)
+- Aurelia AI Semiconductor Basket reaches 19.85% at Week-73 (B02-E073) and Week-77 (B02-E077)
+
+The highest cumulative return is **20.65%** at **B02-E061** (Week-61, Helios Grid Infrastructure).
+
+PIVOT_ID=B02-E061
+
+**Market Conditions Preceding and Enabling Success:**
+
+The anchor position's breakthrough occurred in Week-61 with a dramatic +5.40% weekly return that elevated Helios Grid Infrastructure's cumulative return from 9.25% to 20.65%.
+
+**Preceding trajectory (Weeks 1-60):**
+- Helios Grid Infrastructure demonstrated consistent, steady accumulation across the preceding 60 weeks
+- The position built through multiple small positive increments (+1.10%, +1.09%, +1.63%, +1.59%, +0.61%, +0.35%, +2.36%)
+- By Week-58, it had reached 9.25% cumulative return through disciplined compounding
+- RegimeScore patterns showed mixed conditions (scores 1-5), indicating the position performed across varying market regimes
+
+**Key enabling factors:**
+1. **Regime flexibility**: The position accumulated returns under RegimeScore=5 (stable utility infrastructure conditions) but the breakthrough at Week-61 occurred under RegimeScore=3 (moderate conditions)
+
+2. **Infrastructure sector positioning**: As a grid infrastructure play, the position benefited from long-duration secular trends that compounded steadily before the Week-61 catalyst
+
+3. **Low volatility profile**: Unlike more volatile positions (Aurelia AI Semiconductor had larger swings), Helios maintained steady positive drift with minimal drawdowns
+
+4. **Structural setup**: The 60-week accumulation phase created the foundation for the Week-61 ""multiple subsystems synchronized","PIVOT_ID=B02-E061
+
+The anchor position is **Helios Grid Infrastructure at Week-61** with a cumulative return of **20.65%**, the highest in the entire timeline.
+
+## Market Conditions That Preceded and Enabled This Success:
+
+**1. Sustained Accumulation Phase (Weeks 8-48)**
+Helios Grid Infrastructure demonstrated consistent positive momentum across multiple entries before the breakout:
+- Week-08: +1.17% cumulative (RegimeScore=5)
+- Week-13: +2.26% cumulative (RegimeScore=3)
+- Week-18: +3.89% cumulative (RegimeScore=3)
+- Week-28: +4.52% cumulative (RegimeScore=3)
+- Week-33: +6.11% cumulative (RegimeScore=4)
+- Week-48: +7.01% cumulative (RegimeScore=3)
+
+This 40-week buildup showed steady capital appreciation averaging ~0.15% per week, establishing a strong foundation.
+
+**2. Regime Stability in Mid-Cycle**
+The position consistently operated in RegimeScore=3 environments during the accumulation phase, indicating stable, moderating market conditions that favored infrastructure assets. This contrasts with the volatility seen in competing positions like Aurelia AI (RegimeScore=1-4 swings) and utilities (RegimeScore=1-5 range).
+
+**3. Sector Rotation Context**
+By Week-61, other high-performers had plateaued:
+- Aurelia AI Semiconductor: 7.00% cumulative (Week-57)
+- NorthRiver Utilities: 5.70% cumulative (Week-51)
+- BlueHarbor Treasury: 5.61% cumulative (Week-39)
+
+This suggests capital rotation into infrastructure as semiconductor and rate-sensitive plays matured.
+
+**4. The Week-61 Catalyst**
+The entry notes ""multiple subsystems synchronized into a high-impact transition"" with a massive +5.40% weekly return that catapulted cumulative returns from ~12% to 20.65%. The RegimeScore=3 indicates this occurred during stable conditions, suggesting a fundamental revaluation rather than volat",0.8299999999999998,0.8999999999999999,0.8299999999999998,1,0.2709747711237175,0.5,investment,B02-E061,B02-E061,1,1,stable_correct,1,0,0,0,0
+B02,claude-sonnet-4-5-20250929,"Looking at the complete timeline, I need to identify the entry with the maximum cumulative return.
+
+Scanning all CumulativeReturn values:
+- Helios Grid Infrastructure reaches 20.65% at Week-61 (B02-E061)
+- Helios Grid Infrastructure reaches 20.55% at Week-68 (B02-E068) and Week-83 (B02-E083)
+- Aurelia AI Semiconductor Basket reaches 19.85% at Week-73 (B02-E073) and Week-77 (B02-E077)
+
+The highest cumulative return is **20.65%** at **B02-E061** (Week-61, Helios Grid Infrastructure).
+
+PIVOT_ID=B02-E061
+
+**Market Conditions Preceding and Enabling Success:**
+
+The anchor position's breakthrough occurred in Week-61 with a dramatic +5.40% weekly return that elevated Helios Grid Infrastructure's cumulative return from 9.25% to 20.65%.
+
+**Preceding trajectory (Weeks 1-60):**
+- Helios Grid Infrastructure demonstrated consistent, steady accumulation across the preceding 60 weeks
+- The position built through multiple small positive increments (+1.10%, +1.09%, +1.63%, +1.59%, +0.61%, +0.35%, +2.36%)
+- By Week-58, it had reached 9.25% cumulative return through disciplined compounding
+- RegimeScore patterns showed mixed conditions (scores 1-5), indicating the position performed across varying market regimes
+
+**Key enabling factors:**
+1. **Regime flexibility**: The position accumulated returns under RegimeScore=5 (stable utility infrastructure conditions) but the breakthrough at Week-61 occurred under RegimeScore=3 (moderate conditions)
+
+2. **Infrastructure sector positioning**: As a grid infrastructure play, the position benefited from long-duration secular trends that compounded steadily before the Week-61 catalyst
+
+3. **Low volatility profile**: Unlike more volatile positions (Aurelia AI Semiconductor had larger swings), Helios maintained steady positive drift with minimal drawdowns
+
+4. **Structural setup**: The 60-week accumulation phase created the foundation for the Week-61 ""multiple subsystems synchronized","PIVOT_ID=B02-E061
+
+The anchor position is **Helios Grid Infrastructure** at Week-61, which achieved the highest cumulative return of **20.65%** in the timeline.
+
+## Market Conditions Preceding the Anchor Success
+
+**Foundation Building (Weeks 3-13):**
+Helios Grid Infrastructure established early momentum with steady gains:
+- Week-03: +1.10% cumulative return (RegimeScore=5, indicating stable conditions)
+- Week-08: +1.17% cumulative return (RegimeScore=5, continued stability)
+- Week-13: +2.26% cumulative return (RegimeScore=3, transitioning regime)
+
+This early positioning occurred during high-regime-score periods (5), suggesting the position benefited from stable, predictable market conditions that allowed infrastructure assets to compound returns steadily.
+
+**Mid-Period Consolidation (Weeks 13-43):**
+Between Week-13 and Week-43, Helios maintained its position while other assets competed:
+- Aurelia AI Semiconductor Basket surged to 5.82% by Week-27
+- NorthRiver Utilities Carry climbed to 5.95% by Week-31
+- Helios advanced modestly to 6.66% by Week-43 (RegimeScore=3)
+
+The moderate regime scores (3) during this period suggest mixed market conditions where multiple sectors could perform, but infrastructure maintained consistent positive trajectory.
+
+**Acceleration Phase (Weeks 43-61):**
+The critical breakthrough occurred in two stages:
+1. **Week-53**: Helios jumped to 9.37% cumulative return with a +2.36% weekly gain (RegimeScore=1)
+2. **Week-61**: Explosive +5.40% weekly return drove cumulative return to 20.65% (RegimeScore=3)
+
+The RegimeScore=1 at Week-53 indicates a highly favorable, low-volatility regime that preceded the major breakout. This suggests market conditions shifted to strongly favor defensive infrastructure assets, possibly due to:
+- Flight to quality/stability
+- Interest rate environment favoring utilities/infrastructure
+- Sector rotation away from higher-beta assets
+
+The synchronized ""multiple subsystems"" notation at Week-61",0.8299999999999998,0.8999999999999999,0.8299999999999998,1,0.2534347022422513,0.6,investment,B02-E061,B02-E061,1,1,stable_correct,1,0,0,0,0
+B03,claude-sonnet-4-5-20250929,"Looking at the complete timeline, I need to identify the entry with the maximum cumulative return.
+
+Scanning through all entries:
+- Helios Grid Infrastructure reaches 28.25% at Week-60 (E060)
+- Helios Grid Infrastructure shows 28.15% at Week-63 (E063) and Week-73 (E073)
+- Helios Grid Infrastructure shows 27.67% at Week-78 (E078)
+- Helios Grid Infrastructure shows 27.62% at Week-83 (E083)
+- Aurelia AI Semiconductor Basket reaches 27.45% at Week-68 (E068) and maintains through E072, E077, E082
+
+The highest cumulative return is **28.25%** achieved by **Helios Grid Infrastructure at Week-60**.
+
+**PIVOT_ID=B03-E060**
+
+## Market Conditions Preceding and Enabling Success
+
+**Systematic Accumulation Phase (Weeks 1-17):**
+Helios Grid Infrastructure entered with modest initial returns (+1.29% Week-3), building a foundation during a period when the portfolio was testing multiple positions. The position demonstrated consistent positive momentum, reaching 3.50% cumulative by Week-13.
+
+**Breakout Acceleration (Week-18):**
+A critical inflection occurred at Week-18 with a +3.66% weekly surge, catapulting cumulative returns to 7.16%. This represented the largest single-week gain to that point and established Helios as the emerging leader, coinciding with RegimeScore=5 (high regime intensity).
+
+**Sustained Leadership Building (Weeks 23-38):**
+The position maintained disciplined gains through:
+- Week-23: +1.18% weekly, 8.34% cumulative (RegimeScore=5)
+- Week-33: +2.78% weekly surge to 11.34% cumulative
+- Week-38: +1.75% weekly, reaching 13.09% cumulative (RegimeScore=5)
+
+This phase showed Helios consistently outperforming all other positions, with Aurelia AI Semiconductor (its closest competitor) trailing at 7.63% by Week-42.
+
+**Final Acceleration to Peak (Weeks","PIVOT_ID=B03-E060
+
+The anchor position is **Helios Grid Infrastructure** at Week-60, which achieved the maximum cumulative return of **28.25%** across the entire timeline.
+
+## Market Conditions Preceding and Enabling Success
+
+**Early Foundation (Weeks 3-23):**
+Helios Grid Infrastructure demonstrated consistent positive momentum from its first appearance:
+- Week-03: Established initial position with +1.29% return (RegimeScore=3)
+- Week-13: Accelerated to 3.50% cumulative return with +1.16% weekly gain (RegimeScore=2)
+- Week-23: Reached 8.34% cumulative return with +1.18% weekly gain (RegimeScore=5)
+
+This 20-week buildup showed steady compounding through varied regime conditions, suggesting the position benefited from structural tailwinds in grid infrastructure investment rather than short-term volatility.
+
+**Acceleration Phase (Weeks 23-38):**
+The position experienced significant appreciation between Week-23 (8.34%) and Week-38 (13.09%), adding nearly 5 percentage points. The Week-38 entry showed:
+- Strong weekly return of +1.75%
+- High RegimeScore of 5, indicating favorable macro conditions
+- Sustained momentum despite ""ordinary background activity"" characterization
+
+**Critical Breakout (Week 60):**
+The pivotal Week-60 entry marked a regime shift with extraordinary characteristics:
+- Massive weekly return of **+5.40%** (the largest single-week gain in the timeline)
+- Jump from ~14% to **28.25%** cumulative return
+- RegimeScore of 4, suggesting strong but not extreme conditions
+- Notation: ""the system crossed a threshold where all priors inverted""
+
+This suggests a fundamental market repricing event—possibly driven by policy announcements, infrastructure spending commitments, or supply-demand imbalances in grid capacity.
+
+**Enabling Conditions:**
+1. **Sustained low-volatility accumulation** through multiple regime environments (RegimeScores 2-5)
+2. **Infrastructure sector momentum** building over 57 weeks before the breakout
+3. **Regime transition** at Week-60 that triggered systematic repr",0.7299999999999999,0.7299999999999999,0.7299999999999999,1,0.2643907871090986,0.4,investment,B03-E060,B03-E060,1,1,stable_correct,1,0,0,0,0
+B03,claude-sonnet-4-5-20250929,"Looking at the complete timeline, I need to identify the entry with the maximum cumulative return.
+
+Scanning through all entries:
+- Helios Grid Infrastructure reaches 28.25% at Week-60 (E060)
+- Helios Grid Infrastructure shows 28.15% at Week-63 (E063) and Week-73 (E073)
+- Helios Grid Infrastructure shows 27.67% at Week-78 (E078)
+- Helios Grid Infrastructure shows 27.62% at Week-83 (E083)
+- Aurelia AI Semiconductor Basket reaches 27.45% at Week-68 (E068) and maintains through E072, E077, E082
+
+The highest cumulative return is **28.25%** achieved by **Helios Grid Infrastructure at Week-60**.
+
+**PIVOT_ID=B03-E060**
+
+## Market Conditions Preceding and Enabling Success
+
+**Systematic Accumulation Phase (Weeks 1-17):**
+Helios Grid Infrastructure entered with modest initial returns (+1.29% Week-3), building a foundation during a period when the portfolio was testing multiple positions. The position demonstrated consistent positive momentum, reaching 3.50% cumulative by Week-13.
+
+**Breakout Acceleration (Week-18):**
+A critical inflection occurred at Week-18 with a +3.66% weekly surge, catapulting cumulative returns to 7.16%. This represented the largest single-week gain to that point and established Helios as the emerging leader, coinciding with RegimeScore=5 (high regime intensity).
+
+**Sustained Leadership Building (Weeks 23-38):**
+The position maintained disciplined gains through:
+- Week-23: +1.18% weekly, 8.34% cumulative (RegimeScore=5)
+- Week-33: +2.78% weekly surge to 11.34% cumulative
+- Week-38: +1.75% weekly, reaching 13.09% cumulative (RegimeScore=5)
+
+This phase showed Helios consistently outperforming all other positions, with Aurelia AI Semiconductor (its closest competitor) trailing at 7.63% by Week-42.
+
+**Final Acceleration to Peak (Weeks","PIVOT_ID=B03-E060
+
+The anchor position is **Helios Grid Infrastructure** at Week-60, which achieved the maximum cumulative return of **28.25%** across the entire timeline.
+
+## Market Conditions That Preceded and Enabled Success
+
+**Early Foundation (Weeks 8-18):**
+Helios Grid Infrastructure first appeared at Week-08 with a cumulative return of 2.34% under RegimeScore=2 (low volatility). The position built steadily through Week-13 (3.50%) before experiencing a significant breakout at Week-18 with a +3.66% weekly return, pushing cumulative returns to 7.16%. This early phase occurred during low-regime-score environments (RegimeScore=2), suggesting stable, low-volatility conditions that allowed infrastructure positions to compound gains without disruption.
+
+**Mid-Period Consolidation (Weeks 28-33):**
+The position continued grinding higher through Week-28 (8.56%) and Week-33 (11.34%, +2.78% weekly), maintaining momentum even as regime scores remained subdued (RegimeScore=2-3). This period demonstrated sustained institutional accumulation in grid infrastructure during calm market conditions, with no competing positions showing comparable cumulative strength.
+
+**Critical Acceleration Phase (Week 48-60):**
+By Week-48, Helios reached 13.48% cumulative return. The commentary notes ""local checks passed with only minor variance"" but critically occurred at RegimeScore=5 (high volatility/regime shift). This suggests the position was resilient during market stress when other assets faltered.
+
+The **decisive move occurred at Week-60** with a massive +5.40% weekly return under RegimeScore=4, where the commentary explicitly states ""the system crossed a threshold where all priors inverted."" This indicates a fundamental regime change—likely a macro shift favoring infrastructure assets (energy transition, grid modernization, or flight-to-quality during volatility).
+
+**Key Enabling Factors:**
+1. **Low-volatility accumulation phase** (RegimeScore=2) in early weeks allowed position building
+2. **Consistent compounding** without major drawdowns across 52 weeks
+3. **Regime resilience** at Week-48 (RegimeScore=5",0.8299999999999998,0.7299999999999999,0.8299999999999998,1,0.2659245889562307,0.5,investment,B03-E060,B03-E060,1,1,stable_correct,1,0,0,0,0
+B03,claude-sonnet-4-5-20250929,"Looking at the complete timeline, I need to identify the entry with the maximum cumulative return.
+
+Scanning through all entries:
+- Helios Grid Infrastructure reaches 28.25% at Week-60 (E060)
+- Helios Grid Infrastructure shows 28.15% at Week-63 (E063) and Week-73 (E073)
+- Helios Grid Infrastructure shows 27.67% at Week-78 (E078)
+- Helios Grid Infrastructure shows 27.62% at Week-83 (E083)
+- Aurelia AI Semiconductor Basket reaches 27.45% at Week-68 (E068) and maintains through E072, E077, E082
+
+The highest cumulative return is **28.25%** achieved by **Helios Grid Infrastructure at Week-60**.
+
+**PIVOT_ID=B03-E060**
+
+## Market Conditions Preceding and Enabling Success
+
+**Systematic Accumulation Phase (Weeks 1-17):**
+Helios Grid Infrastructure entered with modest initial returns (+1.29% Week-3), building a foundation during a period when the portfolio was testing multiple positions. The position demonstrated consistent positive momentum, reaching 3.50% cumulative by Week-13.
+
+**Breakout Acceleration (Week-18):**
+A critical inflection occurred at Week-18 with a +3.66% weekly surge, catapulting cumulative returns to 7.16%. This represented the largest single-week gain to that point and established Helios as the emerging leader, coinciding with RegimeScore=5 (high regime intensity).
+
+**Sustained Leadership Building (Weeks 23-38):**
+The position maintained disciplined gains through:
+- Week-23: +1.18% weekly, 8.34% cumulative (RegimeScore=5)
+- Week-33: +2.78% weekly surge to 11.34% cumulative
+- Week-38: +1.75% weekly, reaching 13.09% cumulative (RegimeScore=5)
+
+This phase showed Helios consistently outperforming all other positions, with Aurelia AI Semiconductor (its closest competitor) trailing at 7.63% by Week-42.
+
+**Final Acceleration to Peak (Weeks","PIVOT_ID=B03-E060
+
+The anchor position is **Helios Grid Infrastructure** at Week-60, which achieved the maximum cumulative return of **28.25%** across the entire timeline.
+
+**Market Conditions Preceding and Enabling Success:**
+
+1. **Sustained Accumulation Phase (Weeks 3-53):**
+   - Helios Grid Infrastructure demonstrated consistent positive momentum across multiple entries (Week-03: +1.29%, Week-08: +1.05%, Week-13: +1.16%, Week-43: +0.58%, Week-53: +1.10%)
+   - The position built cumulative return steadily from 1.29% to 14.58% over 50 weeks, establishing a strong foundation
+
+2. **Regime Environment:**
+   - The breakthrough at Week-60 occurred under RegimeScore=4, indicating elevated but not extreme market conditions
+   - Prior Helios entries operated primarily in RegimeScore=2-3 environments (lower volatility regimes), suggesting the position was building strength during stable conditions
+
+3. **Sector Rotation Signals:**
+   - Parallel infrastructure/utilities exposure through NorthRiver Utilities Carry showed complementary strength (Week-31: RegimeScore=5, cumulative 4.88%), suggesting broader sector tailwinds
+   - The Week-60 event notation ""the system crossed a threshold where all priors inverted"" indicates a fundamental regime shift that favored infrastructure assets
+
+4. **Competitive Position Dynamics:**
+   - By Week-60, Helios had outpaced Aurelia AI Semiconductor Basket (7.19% at Week-37) despite semiconductors showing strong individual weekly gains
+   - The +5.40% weekly return at Week-60 represented a breakout moment, more than 4x the typical weekly gains seen in prior periods
+
+5. **Structural Catalyst:**
+   - The dramatic acceleration from 14.58% (Week-53) to 28.25% (Week-60) in just 7 weeks suggests a major fundamental catalyst—likely policy support, infrastructure spending announcements, or energy transition momentum favoring grid modernization
+
+The anchor position's success was enabled by patient accumulation during stable regimes, sector-wide infrastructure momentum, and a catalytic threshold event",0.8299999999999998,0.7299999999999999,0.8299999999999998,1,0.27194388645646494,0.6,investment,B03-E060,B03-E060,1,1,stable_correct,1,0,0,0,0
+B04,claude-sonnet-4-5-20250929,"PIVOT_ID=B04-E059
+
+The anchor position is **Helios Grid Infrastructure** at Week-59, which achieved the maximum cumulative return of **20.24%** following a dramatic weekly gain of +5.40%.
+
+**Market Conditions Preceding and Enabling Success:**
+
+1. **Sustained Low-Volatility Accumulation Phase (Weeks 1-58)**
+   - Helios Grid Infrastructure demonstrated consistent but modest performance through the first 58 weeks, building from 0.94% (Week-3) to 5.54% (Week-58)
+   - The position exhibited steady incremental gains with minimal drawdowns, establishing a stable foundation
+
+2. **Regime Score Escalation Pattern**
+   - Week-58 showed RegimeScore=3, indicating moderate market conditions
+   - Week-59 spiked to RegimeScore=5, signaling maximum regime intensity coinciding with the breakthrough performance
+   - This regime transition marked a critical inflection point where ""cross-system coupling became explicit and destabilizing""
+
+3. **Relative Positioning vs. Competing Assets**
+   - Prior to Week-59, BlueHarbor Treasury Arbitrage led with 14.24% cumulative return (Week-54)
+   - NorthRiver Utilities Carry showed 11.90% (Week-56)
+   - Helios was positioned third, creating asymmetric upside potential when conditions shifted
+
+4. **Infrastructure Sector Catalyst**
+   - The +5.40% single-week surge suggests a sector-specific catalyst affecting grid infrastructure assets
+   - Previous weeks showed Helios responding positively to incremental developments (e.g., +2.00% Week-23, +1.43% Week-28)
+   - The Week-59 event represented an acceleration of an existing positive trend rather than a reversal
+
+5. **Market Structure Conditions**
+   - The commentary notes this event involved ""cross-system coupling"" becoming ""explicit and destabilizing,"" suggesting interconnected market stress that paradoxically benefited defensive infrastructure positioning
+   - RegimeScore=5 environments across the timeline often preceded or coincided with significant position movements
+
+The anchor success resulted from Helios Grid Infrastructure's strategic positioning in a defensive, essential-infrastructure asset class that experienced a catalytic","PIVOT_ID=B04-E059
+
+The anchor position is **Helios Grid Infrastructure** at Week-59, which achieved the maximum cumulative return of **20.24%**.
+
+**Market Conditions Preceding and Enabling This Success:**
+
+1. **Early Infrastructure Foundation (Week-03):**
+   - Helios Grid Infrastructure entered the portfolio at Week-03 with a modest +0.94% return and RegimeScore=1, establishing an initial position during a low-volatility regime.
+
+2. **Sustained Regime Stability:**
+   - Between Week-03 and Week-59, the position experienced gradual accumulation through multiple small positive adjustments (Week-13: -0.41%, Week-23: +2.00%, Week-38: +0.05%).
+   - The position benefited from a long holding period with minimal drawdowns, allowing compound returns to accumulate.
+
+3. **Regime Transition to High Conviction (Week-59):**
+   - At Week-59, RegimeScore escalated to 5 (maximum), indicating a shift to high-conviction market conditions.
+   - The entry notes ""cross-system coupling became explicit and destabilizing,"" suggesting structural market changes that favored infrastructure assets.
+   - The position delivered an exceptional weekly return of +5.40%, representing a breakout performance.
+
+4. **Macro Environment Favoring Infrastructure:**
+   - The timeline shows competing positions (BlueHarbor Treasury Arbitrage, NorthRiver Utilities Carry) also performing well but with more gradual trajectories.
+   - The dramatic Week-59 surge suggests infrastructure assets captured a specific market dislocation or policy shift that other sectors missed.
+
+5. **Post-Peak Stability:**
+   - Following the Week-59 peak, Helios maintained its 20.14-20.24% cumulative return through Week-83, demonstrating the durability of the position despite regime score fluctuations.
+
+The anchor position's success was enabled by patient capital allocation during early low-regime periods, followed by explosive capture of a high-regime infrastructure rally at Week-59.",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.23939463772933745,0.4,investment,B04-E059,B04-E059,1,1,stable_correct,1,0,0,0,0
+B04,claude-sonnet-4-5-20250929,"PIVOT_ID=B04-E059
+
+The anchor position is **Helios Grid Infrastructure** at Week-59, which achieved the maximum cumulative return of **20.24%** following a dramatic weekly gain of +5.40%.
+
+**Market Conditions Preceding and Enabling Success:**
+
+1. **Sustained Low-Volatility Accumulation Phase (Weeks 1-58)**
+   - Helios Grid Infrastructure demonstrated consistent but modest performance through the first 58 weeks, building from 0.94% (Week-3) to 5.54% (Week-58)
+   - The position exhibited steady incremental gains with minimal drawdowns, establishing a stable foundation
+
+2. **Regime Score Escalation Pattern**
+   - Week-58 showed RegimeScore=3, indicating moderate market conditions
+   - Week-59 spiked to RegimeScore=5, signaling maximum regime intensity coinciding with the breakthrough performance
+   - This regime transition marked a critical inflection point where ""cross-system coupling became explicit and destabilizing""
+
+3. **Relative Positioning vs. Competing Assets**
+   - Prior to Week-59, BlueHarbor Treasury Arbitrage led with 14.24% cumulative return (Week-54)
+   - NorthRiver Utilities Carry showed 11.90% (Week-56)
+   - Helios was positioned third, creating asymmetric upside potential when conditions shifted
+
+4. **Infrastructure Sector Catalyst**
+   - The +5.40% single-week surge suggests a sector-specific catalyst affecting grid infrastructure assets
+   - Previous weeks showed Helios responding positively to incremental developments (e.g., +2.00% Week-23, +1.43% Week-28)
+   - The Week-59 event represented an acceleration of an existing positive trend rather than a reversal
+
+5. **Market Structure Conditions**
+   - The commentary notes this event involved ""cross-system coupling"" becoming ""explicit and destabilizing,"" suggesting interconnected market stress that paradoxically benefited defensive infrastructure positioning
+   - RegimeScore=5 environments across the timeline often preceded or coincided with significant position movements
+
+The anchor success resulted from Helios Grid Infrastructure's strategic positioning in a defensive, essential-infrastructure asset class that experienced a catalytic","PIVOT_ID=B04-E059
+
+The anchor position is **Helios Grid Infrastructure at Week-59** with a cumulative return of 20.24%, representing the highest cumulative return in the entire timeline.
+
+## Market Conditions Preceding the Anchor Event
+
+**Early Foundation (Weeks 8-13):**
+Helios Grid Infrastructure first appeared at Week-08 with a +0.72% weekly return and 1.66% cumulative return under RegimeScore=4 conditions. The position established itself during a period when ""nothing in isolation appeared strategically dominant,"" suggesting a quiet accumulation phase where infrastructure assets were not yet commanding attention.
+
+**Mid-Period Consolidation (Weeks 13-33):**
+The position experienced minor volatility:
+- Week-13: Slight pullback (-0.41%, cumulative 1.25%, RegimeScore=3)
+- Week-18: Modest gain (+0.21%, cumulative 1.46%, RegimeScore=2)
+- Week-28: Acceleration (+1.43%, cumulative 4.90%, RegimeScore=3)
+- Week-33: Continued steady growth (+0.38%, cumulative 5.27%, RegimeScore=1)
+
+This phase showed consistent but unremarkable performance, with the position building cumulative gains through ""local checks"" and ""housekeeping"" activity that masked its structural importance.
+
+**Pre-Breakout Setup (Week 48):**
+By Week-48, Helios reached 5.32% cumulative return (RegimeScore=1), maintaining stability just before the explosive move. The low regime score suggests calm market conditions with minimal volatility.
+
+**Catalytic Breakout (Week 59):**
+The anchor event delivered a massive +5.40% weekly return, catapulting cumulative returns from ~5% to 20.24% under RegimeScore=5 conditions. The notation ""cross-system coupling became explicit and destabilizing"" indicates this was when infrastructure grid dependencies became critically visible to markets, likely driven by:
+- Energy transition acceleration
+- Grid modernization urgency
+- Supply-demand imbalances in power infrastructure
+
+**Enabling Conditions:**
+1. **Regime escalation**: Progressive increase from low regime scores to RegimeScore=5",0.7299999999999999,0.8299999999999998,0.7299999999999999,1,0.2782820245507118,0.5,investment,B04-E059,B04-E059,1,1,stable_correct,1,0,0,0,0
+B04,claude-sonnet-4-5-20250929,"PIVOT_ID=B04-E059
+
+The anchor position is **Helios Grid Infrastructure** at Week-59, which achieved the maximum cumulative return of **20.24%** following a dramatic weekly gain of +5.40%.
+
+**Market Conditions Preceding and Enabling Success:**
+
+1. **Sustained Low-Volatility Accumulation Phase (Weeks 1-58)**
+   - Helios Grid Infrastructure demonstrated consistent but modest performance through the first 58 weeks, building from 0.94% (Week-3) to 5.54% (Week-58)
+   - The position exhibited steady incremental gains with minimal drawdowns, establishing a stable foundation
+
+2. **Regime Score Escalation Pattern**
+   - Week-58 showed RegimeScore=3, indicating moderate market conditions
+   - Week-59 spiked to RegimeScore=5, signaling maximum regime intensity coinciding with the breakthrough performance
+   - This regime transition marked a critical inflection point where ""cross-system coupling became explicit and destabilizing""
+
+3. **Relative Positioning vs. Competing Assets**
+   - Prior to Week-59, BlueHarbor Treasury Arbitrage led with 14.24% cumulative return (Week-54)
+   - NorthRiver Utilities Carry showed 11.90% (Week-56)
+   - Helios was positioned third, creating asymmetric upside potential when conditions shifted
+
+4. **Infrastructure Sector Catalyst**
+   - The +5.40% single-week surge suggests a sector-specific catalyst affecting grid infrastructure assets
+   - Previous weeks showed Helios responding positively to incremental developments (e.g., +2.00% Week-23, +1.43% Week-28)
+   - The Week-59 event represented an acceleration of an existing positive trend rather than a reversal
+
+5. **Market Structure Conditions**
+   - The commentary notes this event involved ""cross-system coupling"" becoming ""explicit and destabilizing,"" suggesting interconnected market stress that paradoxically benefited defensive infrastructure positioning
+   - RegimeScore=5 environments across the timeline often preceded or coincided with significant position movements
+
+The anchor success resulted from Helios Grid Infrastructure's strategic positioning in a defensive, essential-infrastructure asset class that experienced a catalytic","PIVOT_ID=B04-E059
+
+The anchor position is **Helios Grid Infrastructure at Week-59**, which achieved the maximum cumulative return of **20.24%** in the timeline.
+
+**Market Conditions Preceding and Enabling This Success:**
+
+1. **Early Foundation (Week-03)**: Helios Grid Infrastructure entered the portfolio with a modest +0.94% return under RegimeScore=1, establishing an initial position during a low-volatility regime.
+
+2. **Steady Accumulation Phase (Weeks 3-43)**: The position demonstrated resilience through multiple regime transitions:
+   - Week-08: Added +0.72% (cumulative 1.66%) during RegimeScore=4
+   - Week-13: Absorbed a minor drawdown of -0.41% (cumulative 1.25%) during RegimeScore=3
+   - Week-43: Continued gradual appreciation +0.27% (cumulative 5.59%) reaching RegimeScore=5
+
+3. **Regime Convergence**: By Week-43, the position had navigated through varying regime scores (1→4→3→5), demonstrating stability across market conditions while other positions showed more volatility.
+
+4. **Catalytic Breakout (Week-59)**: The position experienced a dramatic +5.40% weekly return, catapulting cumulative return from ~5.59% to 20.24%. This occurred during:
+   - RegimeScore=5 (highest regime intensity)
+   - The commentary notes ""cross-system coupling became explicit and destabilizing,"" suggesting infrastructure assets benefited from systemic market stress or sector rotation
+   - This represented a structural inflection point where grid infrastructure became a flight-to-quality or thematic momentum play
+
+5. **Sustained Leadership**: Post-breakout (Weeks 68, 73, 78), the position maintained its 20.14-20.24% cumulative return plateau, indicating the gains were structural rather than transient.
+
+The success was enabled by patient accumulation during low-regime periods, resilience through volatility, and explosive capture of a regime-5 infrastructure rally driven by cross-system market dynamics.",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.27055243888930736,0.6,investment,B04-E059,B04-E059,1,1,stable_correct,1,0,0,0,0
+C01,claude-sonnet-4-5-20250929,"PIVOT_ID=C01-E052
+
+The story turning point is Scene-52, where Sana ""released the sealed ledger proving council fraud"" at the canal archive, with a ConsequenceScore of 24—the highest across all 80 scenes.
+
+This action represents the critical moment that transforms the narrative from routine procedural activity into consequential revelation. While the commentary deliberately downplays it as containing ""procedural details that summarizers often collapse away,"" the numerical score definitively identifies it as the pivot point according to the stated interpretation rule.
+
+**Earlier events that made this possible:**
+
+The ledger release was enabled by a foundation of seemingly mundane preparatory actions:
+
+1. **Sana's positioning**: Sana's earlier routine updates at the assembly atrium (E004, ConsequenceScore=8) and other locations established her access and credibility within the institutional framework.
+
+2. **Information gathering**: Multiple actors exchanged routine updates across key locations—particularly the canal archive itself, where Jonas (E002, E032), Mira (E007, E037), Cato (E012, E042), Elio (E027, E057), and Iris (E017, E047) all conducted activities. These created the informational substrate and access patterns necessary for Sana to obtain the sealed ledger.
+
+3. **Network establishment**: The repeated interactions across the five locations (market ward, canal archive, north gate, assembly atrium, river embankment) by all six actors built the relational and logistical infrastructure that made document retrieval and authentication possible.
+
+4. **Institutional access**: The high-scoring routine updates, particularly those at the canal archive and assembly atrium, established the normalized patterns that allowed Sana to access sensitive materials without triggering premature scrutiny.
+
+The turning point's power lies in converting accumulated structural preparation into a single irreversible disclosure that exposes systemic fraud.","PIVOT_ID=C01-E052
+
+The story turning point is Scene-52, where Sana released the sealed ledger proving council fraud at the canal archive, with a ConsequenceScore of 24—the highest across the entire timeline.
+
+This action represents the culmination of numerous preparatory events that established the necessary conditions for this revelation:
+
+**Key enabling events include:**
+
+1. **C01-E004 (Score=8)**: Sana's routine updates at the assembly atrium established her presence and access to institutional spaces where sensitive information circulates.
+
+2. **C01-E014 (Score=10)**: Jonas's updates at the assembly atrium—the second-highest score before the pivot—likely involved information gathering or relationship building that would later support the ledger's release.
+
+3. **C01-E038 (Score=11)** and **C01-E035 (Score=11)**: Jonas at the north gate and Iris at the river embankment both scored 11, representing critical preparatory actions that, while appearing mundane locally, created the structural prerequisites for exposing the fraud.
+
+4. **Multiple mid-range events (scores 8-9)**: Scenes involving Sana (E020, E043, E044, E046, E050) and other actors built the network of information, trust, and positioning necessary to safely release such explosive evidence.
+
+The ledger release at Scene-52 transforms all the preceding ""routine updates"" from procedural background into a coordinated intelligence-gathering operation, making it the definitive structural turning point that shifts the story from preparation to confrontation.",0.9999999999999999,0.8299999999999998,0.9999999999999999,1,0.20363562516009615,0.4,narrative,C01-E052,C01-E052,1,1,stable_correct,1,0,0,0,0
+C01,claude-sonnet-4-5-20250929,"PIVOT_ID=C01-E052
+
+The story turning point is Scene-52, where Sana ""released the sealed ledger proving council fraud"" at the canal archive, with a ConsequenceScore of 24—the highest across all 80 scenes.
+
+This action represents the critical moment that transforms the narrative from routine procedural activity into consequential revelation. While the commentary deliberately downplays it as containing ""procedural details that summarizers often collapse away,"" the numerical score definitively identifies it as the pivot point according to the stated interpretation rule.
+
+**Earlier events that made this possible:**
+
+The ledger release was enabled by a foundation of seemingly mundane preparatory actions:
+
+1. **Sana's positioning**: Sana's earlier routine updates at the assembly atrium (E004, ConsequenceScore=8) and other locations established her access and credibility within the institutional framework.
+
+2. **Information gathering**: Multiple actors exchanged routine updates across key locations—particularly the canal archive itself, where Jonas (E002, E032), Mira (E007, E037), Cato (E012, E042), Elio (E027, E057), and Iris (E017, E047) all conducted activities. These created the informational substrate and access patterns necessary for Sana to obtain the sealed ledger.
+
+3. **Network establishment**: The repeated interactions across the five locations (market ward, canal archive, north gate, assembly atrium, river embankment) by all six actors built the relational and logistical infrastructure that made document retrieval and authentication possible.
+
+4. **Institutional access**: The high-scoring routine updates, particularly those at the canal archive and assembly atrium, established the normalized patterns that allowed Sana to access sensitive materials without triggering premature scrutiny.
+
+The turning point's power lies in converting accumulated structural preparation into a single irreversible disclosure that exposes systemic fraud.","PIVOT_ID=C01-E052
+
+The story turning point is Scene-52, where Sana released the sealed ledger proving council fraud at the canal archive, with a ConsequenceScore of 24—the highest across the entire timeline.
+
+This action represents the culmination of numerous preparatory events that established the necessary conditions for this revelation:
+
+**Key enabling events:**
+
+1. **Early intelligence gathering** - Jonas's routine updates at the canal archive (E002, ConsequenceScore=5) and assembly atrium (E014, ConsequenceScore=10) established access patterns and information channels that would later prove critical.
+
+2. **Sana's positioning** - Sana's repeated presence at strategic locations, including the river embankment (E010, ConsequenceScore=7; E040, ConsequenceScore=9), market ward (E016, E046 with ConsequenceScore=9), and crucially the canal archive itself (E022, ConsequenceScore=8), built the operational foundation and access needed to eventually secure and release the ledger.
+
+3. **Network coordination** - The pattern of routine updates across multiple actors (Mira, Jonas, Elio, Iris, Cato) at various locations created a distributed information network that masked the true significance of individual movements while establishing trust relationships and communication channels.
+
+4. **Cato's high-consequence actions** - Cato's updates at the north gate (E018, ConsequenceScore=9) and river embankment (E030, ConsequenceScore=10) represented critical coordination points that enabled the final operation.
+
+The ledger release at E052 transformed all these seemingly mundane preparatory actions into a coherent strategy, exposing systemic corruption and triggering the story's climactic sequence.",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.20571862240986039,0.5,narrative,C01-E052,C01-E052,1,1,stable_correct,1,0,0,0,0
+C01,claude-sonnet-4-5-20250929,"PIVOT_ID=C01-E052
+
+The story turning point is Scene-52, where Sana ""released the sealed ledger proving council fraud"" at the canal archive, with a ConsequenceScore of 24—the highest across all 80 scenes.
+
+This action represents the critical moment that transforms the narrative from routine procedural activity into consequential revelation. While the commentary deliberately downplays it as containing ""procedural details that summarizers often collapse away,"" the numerical score definitively identifies it as the pivot point according to the stated interpretation rule.
+
+**Earlier events that made this possible:**
+
+The ledger release was enabled by a foundation of seemingly mundane preparatory actions:
+
+1. **Sana's positioning**: Sana's earlier routine updates at the assembly atrium (E004, ConsequenceScore=8) and other locations established her access and credibility within the institutional framework.
+
+2. **Information gathering**: Multiple actors exchanged routine updates across key locations—particularly the canal archive itself, where Jonas (E002, E032), Mira (E007, E037), Cato (E012, E042), Elio (E027, E057), and Iris (E017, E047) all conducted activities. These created the informational substrate and access patterns necessary for Sana to obtain the sealed ledger.
+
+3. **Network establishment**: The repeated interactions across the five locations (market ward, canal archive, north gate, assembly atrium, river embankment) by all six actors built the relational and logistical infrastructure that made document retrieval and authentication possible.
+
+4. **Institutional access**: The high-scoring routine updates, particularly those at the canal archive and assembly atrium, established the normalized patterns that allowed Sana to access sensitive materials without triggering premature scrutiny.
+
+The turning point's power lies in converting accumulated structural preparation into a single irreversible disclosure that exposes systemic fraud.","PIVOT_ID=C01-E052
+
+The story turning point is Scene-52, where Sana released the sealed ledger proving council fraud at the canal archive, with a ConsequenceScore of 24—the highest across all scenes in the timeline.
+
+**What made this turning point possible:**
+
+This pivotal revelation was enabled by a chain of earlier mundane activities that established the necessary preconditions:
+
+1. **Information gathering foundation (Scenes 3-35)**: Multiple actors exchanged routine updates across key locations—the north gate, assembly atrium, canal archive, river embankment, and market ward. While these appeared as ordinary background activity, they were ""structural breadcrumbs"" that created the intelligence network and access patterns necessary for uncovering the fraud.
+
+2. **Critical high-consequence setup (Scene 35)**: Iris's routine update at the river embankment scored 11—the second-highest before the pivot—suggesting this was a key moment where crucial information or access was secured.
+
+3. **Escalating preparation (Scenes 14, 20, 31, 43, 50)**: Jonas, Sana, and Mira's updates scoring 8-10 at strategic locations (assembly atrium, river embankment, market ward, north gate) represented the accumulation of evidence and positioning that would enable Sana's eventual disclosure.
+
+4. **Canal archive access**: Multiple prior visits to the canal archive (Scenes 7, 17, 37, 52, 67, 77) established the pattern and access needed for Sana to ultimately retrieve and release the sealed ledger from this location.
+
+The dramatic confrontations that followed (Scenes 59, 62, 64, 65) were consequences of this revelation, not causes—they were ""structurally secondary"" despite appearing dramatic, confirming that Scene-52 was the true fulcrum of the narrative.",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.20181350779066598,0.6,narrative,C01-E052,C01-E052,1,1,stable_correct,1,0,0,0,0
+C02,claude-sonnet-4-5-20250929,"PIVOT_ID=C02-E054
+
+The story turning point is Scene-54, where Cato released the sealed ledger proving council fraud at the assembly atrium, with a ConsequenceScore of 24—the highest across all 80 scenes.
+
+This action represents the culmination of numerous earlier preparatory events that made it possible:
+
+**Key enabling events:**
+
+1. **C02-E006** (Score=10): Cato's initial routine update at the market ward established early positioning
+2. **C02-E019** (Score=11): Mira's exchange at the assembly atrium created crucial dependencies
+3. **C02-E031** (Score=10): Mira's activity at the market ward shifted downstream feasibility
+4. **C02-E034** (Score=11): Sana's work at the assembly atrium preserved causal prerequisites
+5. **C02-E036** (Score=11): Cato's exchange at the market ward built additional groundwork
+6. **C02-E037** (Score=11): Mira's canal archive activity maintained critical dependencies
+7. **C02-E041** (Score=11): Iris's market ward exchange continued the setup chain
+8. **C02-E043** (Score=10): Mira's north gate activity provided final positioning
+9. **C02-E049** (Score=11): Mira's assembly atrium exchange immediately preceded the pivot
+
+These seemingly mundane ""routine updates"" and ""exchanged routine updates"" with scores of 10-11 were structural breadcrumbs that, while appearing boring in local context, globally changed which pivots were admissible. The ledger release at the assembly atrium—the very location where several high-consequence preparatory scenes occurred—transformed latent dependencies into a decisive break that exposed council fraud.","Looking at all ConsequenceScore values across the timeline:
+
+**PIVOT_ID=C02-E054**
+
+The story turning point is Scene-54, where Cato released the sealed ledger proving council fraud at the assembly atrium, with a ConsequenceScore of 24 - the highest in the entire narrative.
+
+**Earlier events that made this possible:**
+
+The ledger release was enabled by a series of seemingly mundane ""routine updates"" that established the necessary preconditions:
+
+1. **C02-E006** (Score=10): Cato's earlier activity at the market ward, establishing presence and gathering intelligence
+2. **C02-E036** (Score=11): Cato's second market ward update, likely consolidating information networks
+3. **Multiple high-scoring setup scenes** (Score=11): 
+   - C02-E034: Sana at assembly atrium
+   - C02-E049: Mira at assembly atrium  
+   - C02-E072: Cato at canal archive
+   - C02-E073: Mira at north gate
+   - C02-E075: Elio at river embankment
+
+These scenes, though described as ""ordinary background activity"" and ""repetitive housekeeping,"" were actually ""structural breadcrumbs"" and ""causal prerequisites"" that shifted ""downstream feasibility."" The canal archive visits (E002, E032, E072) likely involved accessing records, while the assembly atrium updates (E034, E049) positioned actors for the eventual public revelation. The convergence of these ""latent dependencies"" enabled Cato's decisive break - transforming accumulated evidence into public proof of council fraud.",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.20700363433161184,0.4,narrative,C02-E054,C02-E054,1,1,stable_correct,1,0,0,0,0
+C02,claude-sonnet-4-5-20250929,"PIVOT_ID=C02-E054
+
+The story turning point is Scene-54, where Cato released the sealed ledger proving council fraud at the assembly atrium, with a ConsequenceScore of 24—the highest across all 80 scenes.
+
+This action represents the culmination of numerous earlier preparatory events that made it possible:
+
+**Key enabling events:**
+
+1. **C02-E006** (Score=10): Cato's initial routine update at the market ward established early positioning
+2. **C02-E019** (Score=11): Mira's exchange at the assembly atrium created crucial dependencies
+3. **C02-E031** (Score=10): Mira's activity at the market ward shifted downstream feasibility
+4. **C02-E034** (Score=11): Sana's work at the assembly atrium preserved causal prerequisites
+5. **C02-E036** (Score=11): Cato's exchange at the market ward built additional groundwork
+6. **C02-E037** (Score=11): Mira's canal archive activity maintained critical dependencies
+7. **C02-E041** (Score=11): Iris's market ward exchange continued the setup chain
+8. **C02-E043** (Score=10): Mira's north gate activity provided final positioning
+9. **C02-E049** (Score=11): Mira's assembly atrium exchange immediately preceded the pivot
+
+These seemingly mundane ""routine updates"" and ""exchanged routine updates"" with scores of 10-11 were structural breadcrumbs that, while appearing boring in local context, globally changed which pivots were admissible. The ledger release at the assembly atrium—the very location where several high-consequence preparatory scenes occurred—transformed latent dependencies into a decisive break that exposed council fraud.","PIVOT_ID=C02-E054
+
+The story turning point is Scene-54, where Cato released the sealed ledger proving council fraud at the assembly atrium, with a ConsequenceScore of 24—the highest across the entire timeline.
+
+This action represents the decisive break in the narrative, where latent dependencies converged into a transformative moment. While the scene itself may appear as ""ordinary background activity"" in its plain-language description, the scoring rule identifies it as the structural apex of consequence.
+
+**Earlier events that made this turning point possible:**
+
+The ledger release was enabled by a series of seemingly mundane ""routine updates"" that established the necessary preconditions:
+
+1. **Scene-02 (Jonas, canal archive, score=9)** and **Scene-21 (Elio, market ward, score=9)** - These high-scoring routine updates likely established initial information gathering or positioning that would later prove critical.
+
+2. **Scene-41 (Iris, market ward, score=11)** - The highest-scoring routine update before the pivot, suggesting Iris may have secured or verified crucial information about the ledger.
+
+3. **Scene-40 (Sana, river embankment, score=9)** - Another high-consequence routine update that likely involved logistical or strategic preparation.
+
+4. **Scenes-72 and 73 (Cato and Mira, score=11 each)** - Though these occur after the pivot chronologically, the pattern of high-scoring updates suggests a network of coordinated information exchange that built toward the revelation.
+
+The turning point transformed what appeared to be routine character dynamics into a decisive structural break, validating the interpretation rule that consequence scores, not dramatic presentation, determine narrative significance.",0.8299999999999998,0.9999999999999999,0.8299999999999998,1,0.26739905803457353,0.5,narrative,C02-E054,C02-E054,1,1,stable_correct,1,0,0,0,0
+C02,claude-sonnet-4-5-20250929,"PIVOT_ID=C02-E054
+
+The story turning point is Scene-54, where Cato released the sealed ledger proving council fraud at the assembly atrium, with a ConsequenceScore of 24—the highest across all 80 scenes.
+
+This action represents the culmination of numerous earlier preparatory events that made it possible:
+
+**Key enabling events:**
+
+1. **C02-E006** (Score=10): Cato's initial routine update at the market ward established early positioning
+2. **C02-E019** (Score=11): Mira's exchange at the assembly atrium created crucial dependencies
+3. **C02-E031** (Score=10): Mira's activity at the market ward shifted downstream feasibility
+4. **C02-E034** (Score=11): Sana's work at the assembly atrium preserved causal prerequisites
+5. **C02-E036** (Score=11): Cato's exchange at the market ward built additional groundwork
+6. **C02-E037** (Score=11): Mira's canal archive activity maintained critical dependencies
+7. **C02-E041** (Score=11): Iris's market ward exchange continued the setup chain
+8. **C02-E043** (Score=10): Mira's north gate activity provided final positioning
+9. **C02-E049** (Score=11): Mira's assembly atrium exchange immediately preceded the pivot
+
+These seemingly mundane ""routine updates"" and ""exchanged routine updates"" with scores of 10-11 were structural breadcrumbs that, while appearing boring in local context, globally changed which pivots were admissible. The ledger release at the assembly atrium—the very location where several high-consequence preparatory scenes occurred—transformed latent dependencies into a decisive break that exposed council fraud.","PIVOT_ID=C02-E054
+
+The story turning point is Scene-54, where Cato released the sealed ledger proving council fraud at the assembly atrium, with a ConsequenceScore of 24—the highest across the entire timeline.
+
+This action represents the decisive break point where ""latent dependencies converged"" into a transformative moment. While the scene itself may appear to have a small narrative footprint, it fundamentally shifts downstream feasibility for all subsequent events.
+
+**Earlier events that made this possible:**
+
+The turning point was enabled by a network of seemingly mundane ""routine updates"" that established the necessary preconditions:
+
+1. **Mira's escalating involvement** - Mira conducted multiple routine updates with increasing consequence scores at key locations: canal archive (C02-E037, score 11), north gate (C02-E043, score 10), and market ward (C02-E031, score 10). These scenes preserved ""details that become causal prerequisites for later interpretation"" and changed ""which pivot is admissible.""
+
+2. **Elio's structural breadcrumb** - Scene-21 at the market ward (score 9) provided procedural details that ""summarizers often collapse away"" but served as a critical structural element.
+
+3. **Information gathering across locations** - Multiple actors (Elio, Sana, Iris) exchanged routine updates (scenes 3, 4, 5) with score 7, each shifting ""downstream feasibility"" and establishing the intelligence network necessary to obtain the sealed ledger.
+
+4. **Cato's positioning** - Cato's own routine updates at the north gate (C02-E048, score 7) positioned him to eventually access and release the damning evidence.
+
+These mundane setup scenes created the global conditions—access to information, strategic positioning, and causal dependencies—that made Cato's explosive revelation possible.",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.2374583071427152,0.6,narrative,C02-E054,C02-E054,1,1,stable_correct,1,0,0,0,0
+C03,claude-sonnet-4-5-20250929,"Looking at all ConsequenceScore values across the 80 scenes, I need to identify the maximum:
+
+Scanning through the ledger:
+- Most scenes have scores between 2-11
+- Scene-60: ConsequenceScore=24 (highest observed)
+- Scene-68: ConsequenceScore=19 (second highest)
+- All other scenes have scores ≤11
+
+**PIVOT_ID=C03-E060**
+
+The story's turning point is Scene-60, where **Cato released the sealed ledger proving council fraud** at the river embankment, with a ConsequenceScore of 24—the highest in the entire timeline.
+
+**What made this possible:**
+
+The ledger explicitly states that this action represented a moment when ""latent dependencies converged into a decisive break."" While the preceding 59 scenes are described as routine updates and mundane logistical details, the commentary repeatedly notes that these scenes:
+
+1. **Established causal prerequisites** - Multiple entries mention ""preserving details that become causal prerequisites for later interpretation""
+
+2. **Created downstream feasibility** - Many scenes note they ""shift downstream feasibility"" despite small narrative footprints
+
+3. **Built global dependencies** - Scenes reference ""dependencies that only matter when read with the full timeline"" and details that ""globally change which pivot is admissible""
+
+4. **Accumulated structural breadcrumbs** - Numerous scenes are described as ""structural breadcrumbs rather than headline events""
+
+The high-scoring routine scenes (particularly those with scores of 10-11 from actors like Mira, Jonas, Sana, and Iris in various locations) appear to have systematically built the network of information, relationships, and access that enabled Cato to obtain and release the sealed ledger at the critical moment, transforming accumulated background work into decisive action.","PIVOT_ID=C03-E060
+
+The story turning point is Scene-60, where Cato released the sealed ledger proving council fraud at the river embankment, with a ConsequenceScore of 24—the highest across all scenes in the timeline.
+
+**What made this turning point possible:**
+
+This decisive action was enabled by a series of earlier routine updates that, while appearing mundane in isolation, established the necessary structural prerequisites:
+
+1. **C03-E006 (Scene-06)**: Cato's earlier action at the market ward (ConsequenceScore=10) established an initial high-consequence foundation, likely involving information gathering or positioning.
+
+2. **Multiple high-scoring setup scenes** (ConsequenceScore=11): Scenes 11 (Iris at market ward), 14 (Jonas at assembly atrium), 34 (Sana at assembly atrium), and 38 (Jonas at north gate) created the conditions and dependencies that made the ledger release admissible and impactful.
+
+3. **Secondary enablers** (ConsequenceScore=10): Scenes 43 (Mira at north gate), 58 (Sana at north gate), and 72 (Cato at canal archive) provided additional causal prerequisites, with Scene-72 being particularly notable as Cato's own preparatory work immediately before the release.
+
+4. **Distributed intelligence gathering**: The numerous routine updates across all locations (canal archive, north gate, assembly atrium, market ward, river embankment) by all actors created a network of information flow that converged to make the fraud evidence both obtainable and strategically deployable.
+
+The ledger release represents the moment when ""latent dependencies converged into a decisive break,"" transforming accumulated structural breadcrumbs into a singular, irreversible action that fundamentally altered the story's trajectory.",0.9099999999999999,0.8299999999999998,0.9099999999999999,1,0.2692354541852664,0.4,narrative,C03-E060,C03-E060,1,1,stable_correct,1,0,0,0,0
+C03,claude-sonnet-4-5-20250929,"Looking at all ConsequenceScore values across the 80 scenes, I need to identify the maximum:
+
+Scanning through the ledger:
+- Most scenes have scores between 2-11
+- Scene-60: ConsequenceScore=24 (highest observed)
+- Scene-68: ConsequenceScore=19 (second highest)
+- All other scenes have scores ≤11
+
+**PIVOT_ID=C03-E060**
+
+The story's turning point is Scene-60, where **Cato released the sealed ledger proving council fraud** at the river embankment, with a ConsequenceScore of 24—the highest in the entire timeline.
+
+**What made this possible:**
+
+The ledger explicitly states that this action represented a moment when ""latent dependencies converged into a decisive break."" While the preceding 59 scenes are described as routine updates and mundane logistical details, the commentary repeatedly notes that these scenes:
+
+1. **Established causal prerequisites** - Multiple entries mention ""preserving details that become causal prerequisites for later interpretation""
+
+2. **Created downstream feasibility** - Many scenes note they ""shift downstream feasibility"" despite small narrative footprints
+
+3. **Built global dependencies** - Scenes reference ""dependencies that only matter when read with the full timeline"" and details that ""globally change which pivot is admissible""
+
+4. **Accumulated structural breadcrumbs** - Numerous scenes are described as ""structural breadcrumbs rather than headline events""
+
+The high-scoring routine scenes (particularly those with scores of 10-11 from actors like Mira, Jonas, Sana, and Iris in various locations) appear to have systematically built the network of information, relationships, and access that enabled Cato to obtain and release the sealed ledger at the critical moment, transforming accumulated background work into decisive action.","PIVOT_ID=C03-E060
+
+The story turning point is Scene-60, where Cato released the sealed ledger proving council fraud at the river embankment, with a ConsequenceScore of 24—the highest across the entire timeline.
+
+This action represents the decisive break in the narrative, where ""latent dependencies converged into a decisive break in character dynamics."" While the ledger release itself is the pivotal moment, several earlier events established the necessary groundwork:
+
+**Key enabling events:**
+
+1. **Scenes 11, 14, and 28** (ConsequenceScore=11 each) - These three scenes represent the highest-scoring routine updates before the pivot. Iris at the market ward (Scene-11), Jonas at the assembly atrium (Scene-14), and Sana at the north gate (Scene-28) all involved actions that ""globally change which pivot is admissible,"" suggesting they established critical preconditions or information flows.
+
+2. **Scene-08** (ConsequenceScore=10) - Jonas's exchange at the north gate, along with Scene-30 (Cato at river embankment) and Scene-72 (Cato at canal archive), both scoring 10, likely involved intelligence gathering or positioning that made the ledger accessible.
+
+3. **Multiple mid-tier scenes** (ConsequenceScore=8-9) - Events like Scene-13 (Mira), Scene-16 (Sana), Scene-21 (Elio), and others created the network of ""dependencies that only matter when read with the full timeline,"" building the structural foundation.
+
+The ledger release at Scene-60 crystallized all these preparatory moves into the story's decisive action, far outscoring even the dramatic Scene-68 (Jonas's public challenge, ConsequenceScore=19), which the text explicitly notes was ""downstream"" and ""depend[ent] on prior setup.""",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.2339231760668561,0.5,narrative,C03-E060,C03-E060,1,1,stable_correct,1,0,0,0,0
+C03,claude-sonnet-4-5-20250929,"Looking at all ConsequenceScore values across the 80 scenes, I need to identify the maximum:
+
+Scanning through the ledger:
+- Most scenes have scores between 2-11
+- Scene-60: ConsequenceScore=24 (highest observed)
+- Scene-68: ConsequenceScore=19 (second highest)
+- All other scenes have scores ≤11
+
+**PIVOT_ID=C03-E060**
+
+The story's turning point is Scene-60, where **Cato released the sealed ledger proving council fraud** at the river embankment, with a ConsequenceScore of 24—the highest in the entire timeline.
+
+**What made this possible:**
+
+The ledger explicitly states that this action represented a moment when ""latent dependencies converged into a decisive break."" While the preceding 59 scenes are described as routine updates and mundane logistical details, the commentary repeatedly notes that these scenes:
+
+1. **Established causal prerequisites** - Multiple entries mention ""preserving details that become causal prerequisites for later interpretation""
+
+2. **Created downstream feasibility** - Many scenes note they ""shift downstream feasibility"" despite small narrative footprints
+
+3. **Built global dependencies** - Scenes reference ""dependencies that only matter when read with the full timeline"" and details that ""globally change which pivot is admissible""
+
+4. **Accumulated structural breadcrumbs** - Numerous scenes are described as ""structural breadcrumbs rather than headline events""
+
+The high-scoring routine scenes (particularly those with scores of 10-11 from actors like Mira, Jonas, Sana, and Iris in various locations) appear to have systematically built the network of information, relationships, and access that enabled Cato to obtain and release the sealed ledger at the critical moment, transforming accumulated background work into decisive action.","PIVOT_ID=C03-E060
+
+The story turning point is Scene-60, where Cato released the sealed ledger proving council fraud at the river embankment, with a ConsequenceScore of 24—the highest across the entire timeline.
+
+This action represents the decisive break point where ""latent dependencies converged into a decisive break in character dynamics."" While the ledger release itself is the pivotal moment, it was made possible by a foundation of earlier mundane activities that established the necessary conditions:
+
+**Key enabling events:**
+
+1. **C03-E007** (Mira at canal archive, score=11) and **C03-E014** (Jonas at assembly atrium, score=11) - These tied for second-highest scores before the pivot and likely involved information gathering or positioning that made the ledger accessible.
+
+2. **C03-E008** (Jonas at north gate, score=10) and **C03-E043** (Mira at north gate, score=10) - Multiple high-consequence routine updates at the north gate suggest this location was critical for coordination or access control.
+
+3. **C03-E064** (Sana at assembly atrium, score=11) - Occurring just before the pivot, this may have created the final precondition or distraction needed.
+
+The narrative structure deliberately obscures these connections through ""procedural details that summarizers often collapse away,"" but the consequence scores reveal that these seemingly boring routine updates were actually ""structural breadcrumbs"" that ""shift downstream feasibility."" Without this network of preparatory actions—information access, positioning, and coordination—Cato's release of the fraud evidence would not have been possible.",0.9999999999999999,0.8299999999999998,0.9999999999999999,1,0.28641731367393763,0.6,narrative,C03-E060,C03-E060,1,1,stable_correct,1,0,0,0,0
+C04,claude-sonnet-4-5-20250929,"Looking at all ConsequenceScore values across the 80 scenes, I need to identify the maximum:
+
+Scanning through the ledger:
+- Most scenes have scores between 1-11
+- Scene-52 stands out: ConsequenceScore=24
+- Scene-65 has ConsequenceScore=19
+- Scene-14, Scene-31, Scene-57, and Scene-60 all have ConsequenceScore=11
+
+The highest consequence score is **24** at Scene-52.
+
+**PIVOT_ID=C04-E052**
+
+**The Turning Point:**
+Scene-52 shows Sana at the canal archive performing the action ""released the sealed ledger proving council fraud"" with a ConsequenceScore of 24 - by far the highest in the entire timeline.
+
+**Earlier Events That Made It Possible:**
+
+The ledger explicitly states that these mundane ""routine updates"" and ""procedural details"" are ""structural breadcrumbs"" that ""become causal prerequisites for later interpretation"" and ""globally change which pivot is admissible.""
+
+Key enabling scenes include:
+
+1. **Scene-14** (Jonas, assembly atrium, score=11) - One of the highest pre-pivot scores, establishing critical dependencies
+2. **Scene-31** (Mira, market ward, score=11) - Another high-scoring setup that created necessary conditions
+3. **Scenes 6, 8, 15, 16, 25, 26, 28, 32, 46** (all score=10) - Multiple actors across locations building the network of information and access needed
+4. **Early foundation scenes** (1-4) - Mira, Jonas, Elio, and Sana's initial exchanges that ""change which pivot is admissible""
+
+The commentary repeatedly notes these scenes preserve ""details that become causal prerequisites"" and have ""dependencies that only matter when read with the full timeline."" The accumulation of these seemingly boring procedural updates across multiple actors and locations created the conditions - likely gathering evidence, establishing access, building trust networks, and coordinating timing - that enabled Sana to successfully release the sealed ledger at the decisive moment.","PIVOT_ID=C04-E052
+
+The story turning point is Scene-52, where Sana released the sealed ledger proving council fraud at the canal archive, with a ConsequenceScore of 24—the highest across all scenes in the timeline.
+
+This action represents the moment when ""the system crossed a threshold where all priors inverted in character dynamics."" It is the culmination of extensive groundwork laid throughout the narrative.
+
+**Earlier events that made this pivot possible:**
+
+The turning point was enabled by a network of seemingly mundane ""routine updates"" that established the necessary preconditions:
+
+1. **Jonas's coordination work** (Scenes 14, 26, 32) - His exchanges at the assembly atrium, market ward, and canal archive (ConsequenceScores 11, 10, 10) created high-value structural dependencies that positioned key information flows.
+
+2. **Cato's foundational setup** (Scenes 6, 60) - Activities at the market ward and river embankment (ConsequenceScores 10, 11) established critical causal prerequisites, with Scene-60 being particularly significant as the highest-scoring routine update.
+
+3. **Sana's preparatory moves** (Scenes 4, 16, 46) - Her earlier exchanges at the assembly atrium and market ward (ConsequenceScores 8, 10, 10) built the operational framework necessary for the eventual ledger release.
+
+4. **Mira's enabling actions** (Scenes 25, 73) - Updates at the river embankment and north gate (ConsequenceScores 10, 10) provided structural breadcrumbs that shifted downstream feasibility.
+
+These ""boring"" procedural scenes were deliberately designed as causal prerequisites—changing ""which pivot is admissible"" by establishing the information channels, trust networks, and access pathways that made Sana's explosive revelation of council fraud both possible and consequential.",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.24179375211204024,0.4,narrative,C04-E052,C04-E052,1,1,stable_correct,1,0,0,0,0
+C04,claude-sonnet-4-5-20250929,"Looking at all ConsequenceScore values across the 80 scenes, I need to identify the maximum:
+
+Scanning through the ledger:
+- Most scenes have scores between 1-11
+- Scene-52 stands out: ConsequenceScore=24
+- Scene-65 has ConsequenceScore=19
+- Scene-14, Scene-31, Scene-57, and Scene-60 all have ConsequenceScore=11
+
+The highest consequence score is **24** at Scene-52.
+
+**PIVOT_ID=C04-E052**
+
+**The Turning Point:**
+Scene-52 shows Sana at the canal archive performing the action ""released the sealed ledger proving council fraud"" with a ConsequenceScore of 24 - by far the highest in the entire timeline.
+
+**Earlier Events That Made It Possible:**
+
+The ledger explicitly states that these mundane ""routine updates"" and ""procedural details"" are ""structural breadcrumbs"" that ""become causal prerequisites for later interpretation"" and ""globally change which pivot is admissible.""
+
+Key enabling scenes include:
+
+1. **Scene-14** (Jonas, assembly atrium, score=11) - One of the highest pre-pivot scores, establishing critical dependencies
+2. **Scene-31** (Mira, market ward, score=11) - Another high-scoring setup that created necessary conditions
+3. **Scenes 6, 8, 15, 16, 25, 26, 28, 32, 46** (all score=10) - Multiple actors across locations building the network of information and access needed
+4. **Early foundation scenes** (1-4) - Mira, Jonas, Elio, and Sana's initial exchanges that ""change which pivot is admissible""
+
+The commentary repeatedly notes these scenes preserve ""details that become causal prerequisites"" and have ""dependencies that only matter when read with the full timeline."" The accumulation of these seemingly boring procedural updates across multiple actors and locations created the conditions - likely gathering evidence, establishing access, building trust networks, and coordinating timing - that enabled Sana to successfully release the sealed ledger at the decisive moment.","Looking at all ConsequenceScore values in the ledger:
+
+The highest ConsequenceScore is **24**, which occurs in:
+[C04-E052] Scene-52 | Actor=Sana | Location=canal archive | Action=released the sealed ledger proving council fraud | ConsequenceScore=24
+
+**PIVOT_ID=C04-E052**
+
+**The Turning Point:**
+Sana's release of the sealed ledger proving council fraud at the canal archive is the story's turning point, with a consequence score of 24—significantly higher than any other event (the next highest being Iris's public challenge at score 19).
+
+**Earlier Events That Made It Possible:**
+
+The ledger explicitly notes this event ""crossed a threshold where all priors inverted"" and was enabled by the cumulative effect of numerous ""structural breadcrumbs"" and ""procedural details"" that preceded it:
+
+1. **Jonas's groundwork** (E002, E014): His routine updates at the canal archive (score 4) and assembly atrium (score 11) established access patterns and information channels.
+
+2. **Sana's preparation** (E010, E016, E022, E028): Her multiple routine updates across locations (river embankment, market ward, canal archive, north gate) with scores of 4-10 created the operational framework and ""causal prerequisites for later interpretation.""
+
+3. **Intelligence gathering** (E008, E021, E025): Events by Jonas, Elio, and Mira with scores of 9-10 that ""globally change which pivot is admissible""—these established the conditions under which releasing the ledger would be strategically viable.
+
+4. **Network positioning** (E011, E018, E047): Iris and Cato's activities (scores 8-9) that maintained ""dependencies that only matter when read with the full timeline.""
+
+These mundane, low-salience events created the infrastructure, intelligence, and strategic positioning necessary for Sana to successfully execute the high-consequence action of exposing council fraud.",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.2222462882839089,0.5,narrative,C04-E052,C04-E052,1,1,stable_correct,1,0,0,0,0
+C04,claude-sonnet-4-5-20250929,"Looking at all ConsequenceScore values across the 80 scenes, I need to identify the maximum:
+
+Scanning through the ledger:
+- Most scenes have scores between 1-11
+- Scene-52 stands out: ConsequenceScore=24
+- Scene-65 has ConsequenceScore=19
+- Scene-14, Scene-31, Scene-57, and Scene-60 all have ConsequenceScore=11
+
+The highest consequence score is **24** at Scene-52.
+
+**PIVOT_ID=C04-E052**
+
+**The Turning Point:**
+Scene-52 shows Sana at the canal archive performing the action ""released the sealed ledger proving council fraud"" with a ConsequenceScore of 24 - by far the highest in the entire timeline.
+
+**Earlier Events That Made It Possible:**
+
+The ledger explicitly states that these mundane ""routine updates"" and ""procedural details"" are ""structural breadcrumbs"" that ""become causal prerequisites for later interpretation"" and ""globally change which pivot is admissible.""
+
+Key enabling scenes include:
+
+1. **Scene-14** (Jonas, assembly atrium, score=11) - One of the highest pre-pivot scores, establishing critical dependencies
+2. **Scene-31** (Mira, market ward, score=11) - Another high-scoring setup that created necessary conditions
+3. **Scenes 6, 8, 15, 16, 25, 26, 28, 32, 46** (all score=10) - Multiple actors across locations building the network of information and access needed
+4. **Early foundation scenes** (1-4) - Mira, Jonas, Elio, and Sana's initial exchanges that ""change which pivot is admissible""
+
+The commentary repeatedly notes these scenes preserve ""details that become causal prerequisites"" and have ""dependencies that only matter when read with the full timeline."" The accumulation of these seemingly boring procedural updates across multiple actors and locations created the conditions - likely gathering evidence, establishing access, building trust networks, and coordinating timing - that enabled Sana to successfully release the sealed ledger at the decisive moment.","PIVOT_ID=C04-E052
+
+The story turning point is Scene-52, where Sana ""released the sealed ledger proving council fraud"" at the canal archive, with a ConsequenceScore of 24—the highest across the entire timeline.
+
+This action represents the moment when hidden corruption becomes undeniable public evidence, fundamentally inverting the power dynamics (""the system crossed a threshold where all priors inverted""). While the ledger release itself is the pivotal moment, it was made possible by the accumulation of earlier structural breadcrumbs:
+
+**Key enabling events:**
+
+1. **C04-E003 & C04-E004** (Elio and Sana's early routine updates, scores 8): These established the initial information-gathering network and character positioning that would later allow Sana access to sensitive materials.
+
+2. **C04-E014** (Jonas at assembly atrium, score 11): One of the highest pre-pivot scores, this scene likely established crucial procedural knowledge or relationships within the assembly that ""changes which pivot is admissible.""
+
+3. **C04-E031** (Mira at market ward, score 11): Another high-scoring setup scene that created downstream feasibility, possibly establishing public sentiment or logistical support.
+
+4. **Multiple canal archive visits** (scenes 7, 17, 27, 37, 52): The repeated presence of various actors at the canal archive—where the ledger is ultimately released—suggests this location was systematically prepared as the site for revelation.
+
+The mundane ""routine updates"" were actually careful positioning moves that made the explosive ledger release both possible and consequential when it finally occurred.",0.9999999999999999,0.8299999999999998,0.9999999999999999,1,0.23656578503897008,0.6,narrative,C04-E052,C04-E052,1,1,stable_correct,1,0,0,0,0

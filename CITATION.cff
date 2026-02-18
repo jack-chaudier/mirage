@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "Mirage: Endogenous Context, MirageBench, and Mirage-Aware Training"
+message: "If you use this repository, please cite it using the metadata below."
+type: software
+authors:
+  - family-names: Chaudier
+    given-names: Jack
+repository-code: "https://github.com/jack-chaudier/mirage"
+license: "Proprietary"

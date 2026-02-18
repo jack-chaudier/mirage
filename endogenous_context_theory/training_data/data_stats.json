@@ -1,0 +1,147 @@
+{
+  "config": {
+    "tasks_per_difficulty": 100,
+    "categories": [
+      "investment",
+      "incident",
+      "narrative"
+    ],
+    "difficulties": [
+      "easy",
+      "medium",
+      "hard",
+      "extreme"
+    ],
+    "compression_levels": [
+      0.4,
+      0.5,
+      0.6
+    ],
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "target_prereq_ratios": [
+      0.0,
+      0.25,
+      0.5,
+      0.75
+    ],
+    "train_task_count": 1000,
+    "valid_task_count": 200,
+    "max_context_words": 1200,
+    "split_seed": 42,
+    "balance_labels": false,
+    "balance_seed": 42
+  },
+  "pre_balance_counts": {
+    "train_total": 10000,
+    "train_strong": 1000,
+    "train_degraded": 9000,
+    "valid_total": 2000,
+    "valid_strong": 200,
+    "valid_degraded": 1800
+  },
+  "balance_info": {
+    "train": null,
+    "valid": null
+  },
+  "counts": {
+    "total_tasks": 1200,
+    "total_examples": 12000,
+    "train_examples": 10000,
+    "valid_examples": 2000,
+    "train_full_context_examples": 1000,
+    "valid_full_context_examples": 200,
+    "train_compressed_examples": 9000,
+    "valid_compressed_examples": 1800,
+    "task_counts_by_category": {
+      "incident": 400,
+      "narrative": 400,
+      "investment": 400
+    }
+  },
+  "label_balance": {
+    "train_degraded_count": 9000,
+    "valid_degraded_count": 1800,
+    "train_degraded_rate": 0.9,
+    "valid_degraded_rate": 0.9
+  },
+  "difficulty_counts": {
+    "train": {
+      "easy": 2500,
+      "extreme": 2460,
+      "medium": 2510,
+      "hard": 2530
+    },
+    "valid": {
+      "hard": 470,
+      "easy": 500,
+      "medium": 490,
+      "extreme": 540
+    }
+  },
+  "category_counts": {
+    "train": {
+      "incident": 3310,
+      "narrative": 3340,
+      "investment": 3350
+    },
+    "valid": {
+      "incident": 690,
+      "investment": 650,
+      "narrative": 660
+    }
+  },
+  "coverage_summary": {
+    "train": {
+      "num_tasks": 1000,
+      "examples_per_task": {
+        "min": 10,
+        "max": 10,
+        "mean": 10.0
+      },
+      "required_total_floor": 4,
+      "tasks_below_floor_count": 0,
+      "tasks_below_floor_examples": [],
+      "tasks_missing_compression_levels_count": 0,
+      "tasks_missing_compression_levels_examples": {},
+      "prereq_ratio_distribution": {
+        "0.00": 3000,
+        "0.25": 2000,
+        "0.50": 2000,
+        "0.75": 2000,
+        "1.00": 1000
+      },
+      "label_split": {
+        "strong": 1000,
+        "degraded": 9000
+      }
+    },
+    "valid": {
+      "num_tasks": 200,
+      "examples_per_task": {
+        "min": 10,
+        "max": 10,
+        "mean": 10.0
+      },
+      "required_total_floor": 4,
+      "tasks_below_floor_count": 0,
+      "tasks_below_floor_examples": [],
+      "tasks_missing_compression_levels_count": 0,
+      "tasks_missing_compression_levels_examples": {},
+      "prereq_ratio_distribution": {
+        "0.00": 600,
+        "0.25": 400,
+        "0.50": 400,
+        "0.75": 400,
+        "1.00": 200
+      },
+      "label_split": {
+        "strong": 200,
+        "degraded": 1800
+      }
+    }
+  }
+}

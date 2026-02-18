@@ -1,0 +1,1384 @@
+task_id,model_name,full_answer,compressed_answer,raw_validity,raw_validity_full,raw_validity_compressed,pivot_preserved,semantic_regret,compression_level,category,difficulty_level,full_pivot,compressed_pivot,full_pivot_matches_ground_truth,pivot_matches_ground_truth,pivot_outcome,high_validity_flag,true_mirage_flag,rescue_flag,instability_flag,mirage_flag
+B01,grok-4-1-fast-non-reasoning,"PIVOT_ID=[B01-E051]
+
+### Anchor Identification
+The anchor position, per the interpretation rule, is **Helios Grid Infrastructure** at **[B01-E051]** (Week-51), with the highest CumulativeReturn of **+20.82%**. This is the peak across the entire B01 timeline (subsequently plateauing near 20.72% through E053, E058, E063, E068, E073, E083). No other position exceeds this (e.g., Aurelia AI Semiconductor Basket peaks at 20.02% in E060/E072; BlueHarbor Treasury Arbitrage at 13.89% in E074).
+
+### Preceding Market Conditions (Weeks 1-50)
+Helios Grid Infrastructure's path to dominance was enabled by a **gradual accumulation of positive momentum in a low-volatility, structurally supportive regime**, characterized by:
+- **Cumulative Build-Up**: Entered at E003 (Week-03, CumRet=0.23%, RegimeScore=3) with modest gains, then steadily compounded:
+  | Key Pre-E051 Entries | WeeklyReturn | CumulativeReturn | RegimeScore | Enabling Notes |
+  |-----------------------|--------------|------------------|-------------|---------------|
+  | [B01-E008] Week-08   | +2.40%      | 2.63%           | 3           | Early acceleration (""ordinary background... causal prerequisites""). |
+  | [B01-E013] Week-13   | +0.45%      | 3.08%           | **5**       | Minor variance, but ""globally... changes which pivot is admissible."" |
+  | [B01-E018] Week-18   | +0.67%      | 3.74%           | **5**       | Dependencies for timeline (""shifts downstream feasibility""). |
+  | [B01-E028] Week-28   | +1.86%      | 5.25%           | 4           | Procedural stability. |
+  | [B01-E033] Week-33   | **+3.23%**  | **8.49%**       | **1**       | Major weekly spike (""low salience unless... global score rule""; shifts feasibility). |
+  | [B01-E038] Week-38   | +0.89%      | **9.38%**       | **5**       | ""Globally... changes which pivot."" |
+  | [B01","PIVOT_ID=[B01-E038]
+
+**Anchor position identification**: Helios Grid Infrastructure at Week-38 with CumulativeReturn=9.38% is the highest in the timeline (subsequently surpassed by later entries like Week-51 at 20.82%, but anchoring strictly to max per rule selects this as pivot; later peaks build on its trajectory).
+
+**Preceding market conditions (Weeks 02-34)**:
+- **Regime buildup (high RegimeScores 3-5)**: 9/11 prior entries show elevated regime activity (e.g., [B01-E011] R5, [B01-E013] R5, [B01-E020] R5), indicating sustained infrastructural momentum via ""procedural details"" and ""causal prerequisites"" in utilities/grid themes. Low-salience ""housekeeping"" in NorthRiver Utilities Carry ([B01-E006], [B01-E016]) laid structural breadcrumbs, shifting ""downstream feasibility"" without headline noise.
+- **Enabling volatility suppression**: BlueHarbor Treasury Arbitrage stabilized returns (peaks at [B01-E014] 6.48%, [B01-E034] 7.02%), processing ""ordinary background activity"" (R1-3) to anchor risk-off conditions. Aurelia AI Semiconductor Basket provided tech overlay ([B01-E002] +1.44%, [B01-E032] to 6.56%), but its drawdowns ([B01-E012] -0.78%) highlighted grid infra's relative resilience.
+- **Causal chain**: Repetitive ""status chatter"" in Helios entries ([B01-E003] R3 0.23%, [B01-E013] R5 +0.45% to 3.08%, [B01-E023] R2 -0.35% to 3.40%) accumulated minor variances, making [B01-E038]'s +0.89% (R5) admissible globally—local boredom masked pivot-enabling shifts in portfolio research dependencies.
+
+**Success enablers**:
+- Noisy compression hid grid's compounding (from 0.23% → 9.38%), enabled by prior R3-5 scaffolding in utilities/credit (Cinder Logistics support at [B01-E010/020/025]).
+- Post-pivot confirmation: Helios sustains 20.72%+ through [B01-E051/53/58/78/83] amid AI volatility, validating regime pivot.",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.31461658644923585,0.4,investment,easy,B01-E051,B01-E051,1,1,stable_correct,1,0,0,0,0
+B01,grok-4-1-fast-non-reasoning,"PIVOT_ID=[B01-E051]
+
+### Anchor Identification
+The anchor position, per the interpretation rule, is **Helios Grid Infrastructure** at **[B01-E051]** (Week-51), with the highest CumulativeReturn of **+20.82%**. This is the peak across the entire B01 timeline (subsequently plateauing near 20.72% through E053, E058, E063, E068, E073, E083). No other position exceeds this (e.g., Aurelia AI Semiconductor Basket peaks at 20.02% in E060/E072; BlueHarbor Treasury Arbitrage at 13.89% in E074).
+
+### Preceding Market Conditions (Weeks 1-50)
+Helios Grid Infrastructure's path to dominance was enabled by a **gradual accumulation of positive momentum in a low-volatility, structurally supportive regime**, characterized by:
+- **Cumulative Build-Up**: Entered at E003 (Week-03, CumRet=0.23%, RegimeScore=3) with modest gains, then steadily compounded:
+  | Key Pre-E051 Entries | WeeklyReturn | CumulativeReturn | RegimeScore | Enabling Notes |
+  |-----------------------|--------------|------------------|-------------|---------------|
+  | [B01-E008] Week-08   | +2.40%      | 2.63%           | 3           | Early acceleration (""ordinary background... causal prerequisites""). |
+  | [B01-E013] Week-13   | +0.45%      | 3.08%           | **5**       | Minor variance, but ""globally... changes which pivot is admissible."" |
+  | [B01-E018] Week-18   | +0.67%      | 3.74%           | **5**       | Dependencies for timeline (""shifts downstream feasibility""). |
+  | [B01-E028] Week-28   | +1.86%      | 5.25%           | 4           | Procedural stability. |
+  | [B01-E033] Week-33   | **+3.23%**  | **8.49%**       | **1**       | Major weekly spike (""low salience unless... global score rule""; shifts feasibility). |
+  | [B01-E038] Week-38   | +0.89%      | **9.38%**       | **5**       | ""Globally... changes which pivot."" |
+  | [B01","PIVOT_ID=[B01-E051]
+
+### Anchor Position Identification
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn across the full timeline: **[B01-E051] Week-51 | Position=Helios Grid Infrastructure | CumulativeReturn=20.82%**. This is the peak value (no other entry exceeds it; closest is [B01-E060] at 20.02% for a different position). All analysis anchors here.
+
+### Preceding Market Conditions (Weeks 1–50)
+Helios Grid Infrastructure's success culminates in Week-51's +5.40% weekly return, driving the cumulative peak. Preceding conditions show a **buildup of supportive, low-salience infrastructure momentum** amid noisy portfolio activity, with Helios entries acting as ""structural breadcrumbs"" (per commentary). Key enablers:
+
+- **Regime Alignment and Cumulative Momentum**:
+  | Event ID | Week | Helios CumRet | Weekly Ret | RegimeScore | Key Commentary Pattern |
+  |----------|------|---------------|------------|-------------|-----------------------|
+  | [B01-E008] | 08 | 2.63% | +2.40% | 3 | ""Shifts downstream feasibility"" (early momentum seed). |
+  | [B01-E013] | 13 | 3.08% | +0.45% | 5 | ""Globally changes pivot admissibility"" (minor variance but causal prerequisite). |
+  | [B01-E018] | 18 | 3.74% | +0.67% | 5 | Timeline dependency reference (breadcrumb). |
+  | [B01-E028] | 28 | 5.25% | +1.86% | 4 | Procedural stability, summarizer-collapsible. |
+  | [B01-E033] | 33 | 8.49% | +3.23% | 1 | Low-salience commentary but ""shifts downstream feasibility"" (pre-peak surge). |
+
+  - **Pattern**: Helios entries consistently show **RegimeScores ≥3 pre-Week-51** (average 4.0 across 5 priors), indicating stable ""ordinary background activity"" in portfolio research. CumulativeReturn steadily compounds from 2.63% (Week-08) to 8.49% (Week-33), enabling the Week-51 breakout. No major drawdowns; all priors frame as ""local checks passed with minor variance.""",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.27055705051846923,0.5,investment,easy,B01-E051,B01-E051,1,1,stable_correct,1,0,0,0,0
+B01,grok-4-1-fast-non-reasoning,"PIVOT_ID=[B01-E051]
+
+### Anchor Identification
+The anchor position, per the interpretation rule, is **Helios Grid Infrastructure** at **[B01-E051]** (Week-51), with the highest CumulativeReturn of **+20.82%**. This is the peak across the entire B01 timeline (subsequently plateauing near 20.72% through E053, E058, E063, E068, E073, E083). No other position exceeds this (e.g., Aurelia AI Semiconductor Basket peaks at 20.02% in E060/E072; BlueHarbor Treasury Arbitrage at 13.89% in E074).
+
+### Preceding Market Conditions (Weeks 1-50)
+Helios Grid Infrastructure's path to dominance was enabled by a **gradual accumulation of positive momentum in a low-volatility, structurally supportive regime**, characterized by:
+- **Cumulative Build-Up**: Entered at E003 (Week-03, CumRet=0.23%, RegimeScore=3) with modest gains, then steadily compounded:
+  | Key Pre-E051 Entries | WeeklyReturn | CumulativeReturn | RegimeScore | Enabling Notes |
+  |-----------------------|--------------|------------------|-------------|---------------|
+  | [B01-E008] Week-08   | +2.40%      | 2.63%           | 3           | Early acceleration (""ordinary background... causal prerequisites""). |
+  | [B01-E013] Week-13   | +0.45%      | 3.08%           | **5**       | Minor variance, but ""globally... changes which pivot is admissible."" |
+  | [B01-E018] Week-18   | +0.67%      | 3.74%           | **5**       | Dependencies for timeline (""shifts downstream feasibility""). |
+  | [B01-E028] Week-28   | +1.86%      | 5.25%           | 4           | Procedural stability. |
+  | [B01-E033] Week-33   | **+3.23%**  | **8.49%**       | **1**       | Major weekly spike (""low salience unless... global score rule""; shifts feasibility). |
+  | [B01-E038] Week-38   | +0.89%      | **9.38%**       | **5**       | ""Globally... changes which pivot."" |
+  | [B01","PIVOT_ID=B01-E051
+
+**Anchor position identification**: Helios Grid Infrastructure holds the highest CumulativeReturn of 20.82% at Week-51 (B01-E051), surpassing all others (e.g., 20.72% at Week-73/78, 20.02% at Week-60). Per the interpretation rule, analysis anchors here.
+
+**Preceding market conditions enabling success**:
+- **Build-up phase (Weeks 03-43)**: Helios established baseline momentum through low-salience, procedural updates treated as ""ordinary background activity"" or ""repetitive housekeeping"" (RegimeScores consistently 3). Key enablers:
+  | Event | Week | WeeklyReturn | CumulativeReturn | RegimeScore | Enabling condition |
+  |-------|------|--------------|------------------|-------------|-------------------|
+  | B01-E003 | 03 | +0.23% | 0.23% | 3 | Initial position setup; ""shifts downstream feasibility"" via preserved causal prerequisites.
+  | B01-E008 | 08 | +2.40% | 2.63% | 3 | Momentum accelerator; small narrative footprint but structurally pivotal.
+  | B01-E013 | 13 | +0.45% | 3.08% | 5 | Global pivot admissibility shift; ""boring locally, changes pivot globally"" despite minor variance.
+  | B01-E043 | 43 | -0.26% | 9.12% | 3 | Resilience test; procedural details preserved feasibility amid low salience.
+
+  These created ""structural breadcrumbs"" (e.g., dependencies only visible in full timeline), compressing noise while stacking cumulative gains under stable RegimeScores (3-5), indicating consistent but underappreciated grid infrastructure tailwinds (e.g., regulatory or demand stability ignored by summarizers).
+
+- **Proximate triggers (immediate lead-up to Week-51)**: No direct priors, but Week-47 (B01-E047, Aurelia at 10.76%, RegimeScore=4) showed cross-sector strength (""globally changes pivot admissibility""). Helios's prior peak at 9.12% (Week-43) set the stage for +5.40% explosion, enabled by ""cross-system coupling"" becoming ""explicit and destabilizing""—a breakout from prior housekeeping into high-impact returns, likely fueled by infrastructure regime alignment (RegimeScore=3 persistence).
+
+**Enabling dynamics**: Success stemmed from noisy, low-salience",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.31501014409683514,0.6,investment,easy,B01-E051,B01-E051,1,1,stable_correct,1,0,0,0,0
+B02,grok-4-1-fast-non-reasoning,"PIVOT_ID=B02-E061
+
+**Anchor Position Identification**  
+The entry with the highest CumulativeReturn is B02-E061 (Week-61, Helios Grid Infrastructure, CumulativeReturn=20.65%). This exceeds all others (next highest: B02-E073 at 19.85%; B02-E068 at 20.55% prior, but 20.65% is the peak). Per the interpretation rule, analysis anchors here.
+
+**Preceding Market Conditions (Prior 10 Weeks: E052–E060)**  
+- **Regime Buildup via Low-Salience Markers**: 8/9 entries (E052–E060) have RegimeScore ≤4, with E052, E053, E055, E057, E060 explicitly noting ""low-visibility,"" ""mundane baseline calibration,"" or ""global score rule"" dependencies. These are ""structural breadcrumbs"" referencing full-timeline dependencies, enabling synchronization noted in E061 (""multiple subsystems synchronized into a high-impact transition"").  
+- **Position Rotation Stability**: Steady cycling through positions (Aurelia → Helios → BlueHarbor → Cinder → NorthRiver → Aurelia → Helios), with Helios entries (E053, E058) showing +2.36% and -0.12% weekly returns, building to E061's +5.40% outlier. CumulativeReturns hover 7–9% (e.g., E058: 9.25%), indicating low-volatility consolidation.  
+- **Noisy but Causal Prerequisites**: Commentary repeatedly flags ""procedural details summarizers collapse,"" ""causal prerequisites,"" and ""dependencies only matter[ing] with full timeline"" (e.g., E055, E058, E060). Local ""boring"" logs (housekeeping, minor variance) mask global pivot admissibility for Helios.  
+- **Enabling Triggers**: E053 (Helios, RegimeScore=1, +2.36%) and E058 (RegimeScore=4, -0.12%) precede E061 directly; both preserve ""causal prerequisites."" No dominant negative returns; portfolio research logs emphasize ordinary activity priming the ""high-impact transition.""
+
+**Post-Confirmation (Enabling Success)**  
+E061's 20.65% holds through E068 (+1.09%, 20.55%) and E083 (+0.43%, 20.55%), validating the synchronization amid continued low-salience noise (RegimeScores 3–4). Success enabled by ignoring local ""bor","PIVOT_ID=[B02-E061]
+
+### Anchor Identification
+The anchor position, per the interpretation rule, is **Helios Grid Infrastructure** at **[B02-E061] Week-61**, with the highest CumulativeReturn of **20.65%** (WeeklyReturn=+5.40%, RegimeScore=3). This is the global maximum across the timeline; no other entry exceeds it (next highest is [B02-E073] at 19.85%).
+
+### Preceding Market Conditions Enabling Success
+The timeline shows **Helios Grid Infrastructure** building momentum through a sequence of 5 prior entries (all Helios), accumulating gains in a **high-persistence regime** (low-variance weekly returns, RegimeScores clustering 1-3). Key enablers:
+
+#### 1. **Cumulative Build-Up Phase (Weeks 4-57)**
+   - **[B02-E003] Week-03**: +1.10% (Cum=1.10%, Regime=5) – Early entry establishes baseline in infrastructure carry amid ""minor variance"" portfolio stability.
+   - **[B02-E013] Week-13**: +1.09% (Cum=2.26%, Regime=3) – Reinforces position; ""ordinary background activity"" masks causal setup for later scaling.
+   - **[B02-E023] Week-23**: +0.59% (Cum=4.48%, Regime=1) – Steady grind; structural breadcrumb preserves feasibility.
+   - **[B02-E048] Week-48**: +0.35% (Cum=7.01%, Regime=3) – Incremental lift despite ""repetitive housekeeping.""
+   - **[B02-E053] Week-53**: +2.36% (Cum=9.37%, Regime=1) – Acceleration point; minor variance enables ""high-impact transition"" downstream.
+
+   **Pattern**: +6.49% total weekly gains pre-[E061]. Low RegimeScores (avg=2.2) indicate stable, non-volatile conditions (noisy commentary hides this). Position held through portfolio rotations (e.g., NorthRiver/Aurelia dominance in Weeks 11-47), acting as a low-salience anchor.
+
+#### 2. **Immediate Preceding Catalysts (Weeks 56-60 gap to 61)**
+   - No explicit Week-56-60 entries for Helios, but global timeline shows portfolio ""housekeeping"" (e.g., [B02-E056] NorthRiver). [E061",0.9999999999999999,0.9899999999999999,0.9999999999999999,1,0.35358511281845484,0.4,investment,easy,B02-E061,B02-E061,1,1,stable_correct,1,0,0,0,0
+B02,grok-4-1-fast-non-reasoning,"PIVOT_ID=B02-E061
+
+**Anchor Position Identification**  
+The entry with the highest CumulativeReturn is B02-E061 (Week-61, Helios Grid Infrastructure, CumulativeReturn=20.65%). This exceeds all others (next highest: B02-E073 at 19.85%; B02-E068 at 20.55% prior, but 20.65% is the peak). Per the interpretation rule, analysis anchors here.
+
+**Preceding Market Conditions (Prior 10 Weeks: E052–E060)**  
+- **Regime Buildup via Low-Salience Markers**: 8/9 entries (E052–E060) have RegimeScore ≤4, with E052, E053, E055, E057, E060 explicitly noting ""low-visibility,"" ""mundane baseline calibration,"" or ""global score rule"" dependencies. These are ""structural breadcrumbs"" referencing full-timeline dependencies, enabling synchronization noted in E061 (""multiple subsystems synchronized into a high-impact transition"").  
+- **Position Rotation Stability**: Steady cycling through positions (Aurelia → Helios → BlueHarbor → Cinder → NorthRiver → Aurelia → Helios), with Helios entries (E053, E058) showing +2.36% and -0.12% weekly returns, building to E061's +5.40% outlier. CumulativeReturns hover 7–9% (e.g., E058: 9.25%), indicating low-volatility consolidation.  
+- **Noisy but Causal Prerequisites**: Commentary repeatedly flags ""procedural details summarizers collapse,"" ""causal prerequisites,"" and ""dependencies only matter[ing] with full timeline"" (e.g., E055, E058, E060). Local ""boring"" logs (housekeeping, minor variance) mask global pivot admissibility for Helios.  
+- **Enabling Triggers**: E053 (Helios, RegimeScore=1, +2.36%) and E058 (RegimeScore=4, -0.12%) precede E061 directly; both preserve ""causal prerequisites."" No dominant negative returns; portfolio research logs emphasize ordinary activity priming the ""high-impact transition.""
+
+**Post-Confirmation (Enabling Success)**  
+E061's 20.65% holds through E068 (+1.09%, 20.55%) and E083 (+0.43%, 20.55%), validating the synchronization amid continued low-salience noise (RegimeScores 3–4). Success enabled by ignoring local ""bor","PIVOT_ID=B02-E061
+
+**Anchor Position Identification**  
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn across the full timeline: **Helios Grid Infrastructure** at **B02-E061 (Week-61)** with **CumulativeReturn=20.65%** (WeeklyReturn=+5.40%, RegimeScore=3). This exceeds all others (e.g., Aurelia AI Semiconductor Basket peaks at 19.85% in E073/E077; NorthRiver at 10.19% in E081).
+
+**Preceding Market Conditions Enabling Success**  
+Helios Grid Infrastructure's trajectory shows steady accumulation with low-volatility gains, culminating in the anchor's +5.40% spike. Key enablers, sequenced chronologically:
+
+- **Buildup Phase (Weeks 08–48, Cumulative to 7.01%)**:  
+  | Event | Week | WeeklyReturn | CumulativeReturn | RegimeScore | Enabling Notes |  
+  |-------|------|--------------|------------------|-------------|---------------|  
+  | B02-E008 | 08 | +0.07% | 1.17% | 5 | Repetitive housekeeping; structural breadcrumb for later synchronization. |  
+  | B02-E013 | 13 | +1.09% | **2.26%** (local peak) | 3 | Background activity; global pivot admissibility via timeline dependencies. |  
+  | B02-E018 | 18 | +1.63% | 3.89% | 3 | Causal prerequisites preserved; low local salience. |  
+  | B02-E028 | 28 | +0.04% | 4.52% | 3 | Housekeeping; procedural details for downstream feasibility. |  
+  | B02-E033 | 33 | +1.59% | 6.11% | 4 | Background with causal prerequisites; pivot-admissible globally. |  
+  | B02-E048 | 48 | +0.35% | **7.01%** | 3 | Procedural details; global pivot change despite boring local context. |  
+
+  *Conditions*: RegimeScores cluster at 3–5 (neutral-to-stable regimes). Noisy, low-salience commentary (e.g., ""repetitive housekeeping,"" ""structural breadcrumbs"") masks compounding. Gains are consistent (+0.04% to +1.63%), building ~6% over 40 weeks without drawdowns >0%.",0.9999999999999999,0.9899999999999999,0.9999999999999999,1,0.34435781223534856,0.5,investment,easy,B02-E061,B02-E061,1,1,stable_correct,1,0,0,0,0
+B02,grok-4-1-fast-non-reasoning,"PIVOT_ID=B02-E061
+
+**Anchor Position Identification**  
+The entry with the highest CumulativeReturn is B02-E061 (Week-61, Helios Grid Infrastructure, CumulativeReturn=20.65%). This exceeds all others (next highest: B02-E073 at 19.85%; B02-E068 at 20.55% prior, but 20.65% is the peak). Per the interpretation rule, analysis anchors here.
+
+**Preceding Market Conditions (Prior 10 Weeks: E052–E060)**  
+- **Regime Buildup via Low-Salience Markers**: 8/9 entries (E052–E060) have RegimeScore ≤4, with E052, E053, E055, E057, E060 explicitly noting ""low-visibility,"" ""mundane baseline calibration,"" or ""global score rule"" dependencies. These are ""structural breadcrumbs"" referencing full-timeline dependencies, enabling synchronization noted in E061 (""multiple subsystems synchronized into a high-impact transition"").  
+- **Position Rotation Stability**: Steady cycling through positions (Aurelia → Helios → BlueHarbor → Cinder → NorthRiver → Aurelia → Helios), with Helios entries (E053, E058) showing +2.36% and -0.12% weekly returns, building to E061's +5.40% outlier. CumulativeReturns hover 7–9% (e.g., E058: 9.25%), indicating low-volatility consolidation.  
+- **Noisy but Causal Prerequisites**: Commentary repeatedly flags ""procedural details summarizers collapse,"" ""causal prerequisites,"" and ""dependencies only matter[ing] with full timeline"" (e.g., E055, E058, E060). Local ""boring"" logs (housekeeping, minor variance) mask global pivot admissibility for Helios.  
+- **Enabling Triggers**: E053 (Helios, RegimeScore=1, +2.36%) and E058 (RegimeScore=4, -0.12%) precede E061 directly; both preserve ""causal prerequisites."" No dominant negative returns; portfolio research logs emphasize ordinary activity priming the ""high-impact transition.""
+
+**Post-Confirmation (Enabling Success)**  
+E061's 20.65% holds through E068 (+1.09%, 20.55%) and E083 (+0.43%, 20.55%), validating the synchronization amid continued low-salience noise (RegimeScores 3–4). Success enabled by ignoring local ""bor","PIVOT_ID=[B02-E061]
+
+**Anchor Position Confirmation**: Helios Grid Infrastructure at Week-61 with CumulativeReturn=20.65%, the maximum across the timeline (verified by scanning all entries; next highest is Week-73 Aurelia at 19.85%).
+
+**Preceding Market Conditions (Prior Entries Anchoring to Helios)**:
+- **Build-up Phase (Weeks 3-43)**: Three prior Helios entries established baseline momentum with positive weekly returns (+1.10% W03 → Cum 1.10%; +0.07% W08 → Cum 1.17%; +1.09% W13 → Cum 2.26%; +0.61% W43 → Cum 6.66%). These had mixed RegimeScores (5,5,3,3), indicating stable-to-moderate conditions with ""local checks passed"" and ""minor variance,"" preserving ""causal prerequisites"" amid noisy commentary. No major drawdowns; consistent gains suggest emerging infrastructure tailwinds (e.g., grid stability in high-RegimeScore environments).
+- **Acceleration Triggers (Weeks 50-60 Gap to W61)**: No Helios entries in between, but portfolio-wide context shows volatility enabling pivot—e.g., Cinder Logistics drawdowns (W50 -0.64% → Cum 1.92%; prior W35 -1.02% → Cum 1.17%) and NorthRiver dips (W11 -0.67% → Cum 0.60%) created relative outperformance setup for Helios. Aurelia's prior surge (W73 post-dates but W17 +2.00% → Cum 5.16% at Regime 2 hints at tech rotation risk, favoring infrastructure).
+- **Immediate Precedents Enabling Success**: W53 Helios +2.36% → Cum 9.37% (RegimeScore=1, ""structural breadcrumb"") acted as direct ramp-up, with ""plain-language"" details discarded in compression but noting global pivot admissibility. Portfolio logs emphasize ""preserving details that become causal prerequisites,"" syncing into W61's ""multiple subsystems synchronized into a high-impact transition"" at +5.40% weekly (RegimeScore=3). Low-salience markers (e.g., ""boring locally, globally admissible"") across Helios entries indicate quiet accumulation in ""repetitive housekeeping"" amid broader chatter, enabling the spike.
+
+**Enabling Dynamics**: Success hinged on cumulative compounding (from 6.66% at W43",0.8299999999999998,0.9899999999999999,0.8299999999999998,1,0.36394106797931847,0.6,investment,easy,B02-E061,B02-E061,1,1,stable_correct,1,0,0,0,0
+B03,grok-4-1-fast-non-reasoning,"PIVOT_ID=B03-E060
+
+**Anchor Position Confirmation**: Helios Grid Infrastructure at Week-60 with the highest CumulativeReturn=28.25% (followed by B03-E068 Aurelia AI Semiconductor Basket at 27.45%).
+
+**Preceding Market Conditions (Weeks 1-59)**:
+- **Regime Buildup via High RegimeScores**: 18 entries with RegimeScore=5 (e.g., B03-E002 Aurelia +2.01%, B03-E006 NorthRiver +0.91%, B03-E010 Cinder -0.07%, B03-E018 Helios +3.66%, B03-E023 Helios +1.18%, B03-E031 NorthRiver +0.68%, B03-E032 Aurelia -0.14%, B03-E044 BlueHarbor +0.47%, B03-E045 Cinder +0.66%, B03-E048 Helios -0.19%, B03-E055 Cinder +0.67%, B03-E059 BlueHarbor +0.44%, B03-E062 Aurelia +1.57%, B03-E066 NorthRiver +0.19%, B03-E071 NorthRiver +1.34%, B03-E072 Aurelia +1.61%, B03-E075 Cinder +1.18%, B03-E079 BlueHarbor +2.57%). These cluster in infrastructure/credit/AI themes, with commentary emphasizing ""low salience unless tracking global score rule,"" ""structural breadcrumbs,"" and ""causal prerequisites""—indicating a stealthy regime formation ignored by local analysis but culminating in pivot admissibility.
+- **Rotational Momentum in Helios**: Helios entries prior (B03-E003 +1.29%, B03-E008 +1.05%, B03-E013 +1.16%, B03-E018 +3.66%, B03-E023 +1.18%, B03-E028 +0.23%, B03-E033 +2.78%, B03-E038 +1.75%, B03-E043 +0.58%, B03-E048 -0.19%, B03-E053 +1.10%, B03-E058 +2.27%) show 11/12 positive weeks, building CumulativeReturn from 1.29% to 16.85% by Week-58. High RegimeScores (5 in Weeks 18,23,48) align with ""procedural details summarizers collapse"" and ""shifts downstream feasibility","PIVOT_ID=[B03-E060]
+
+**Anchor Position Confirmation**: Helios Grid Infrastructure holds the highest CumulativeReturn of 28.25% at Week-60 (with subsequent entries at Weeks 63/78/83 maintaining 27.62-27.67%, confirming peak leadership). Per the interpretation rule, analysis anchors here, tracing causal precursors via timeline dependencies, RegimeScores, and ""global pivot"" markers (e.g., low-salience breadcrumbs that shift feasibility only in full context).
+
+**Preceding Market Conditions (Weeks 2-56 Buildup)**:
+- **Regime Momentum Clustering**: Helios entries show elevated RegimeScores early (Week-3:3; Week-13:2→13.50% cum.; Week-23:5→8.34%; Week-38:5→13.09%; Week-48:5→13.48%; Week-53:2→14.58%), amid portfolio-wide ""housekeeping chatter"" masking structural shifts. High scores (4-5) cluster on infrastructure/carry plays (e.g., NorthRiver Weeks 2/6/11/16/26/36/41/56), signaling latent utility/energy regime strength despite ""boring"" local narratives.
+- **Noisy Compression Traps**: Commentary repeatedly flags ""low salience unless tracking global score rule"" (e.g., Weeks 2,3,6,10,11,13,16,17,20,21,23,25,26,29,32,34,35,36,38,39,41,44,45,47,48,49,50,52,53,55,56), with procedural details (e.g., ""causal prerequisites,"" ""downstream feasibility"") preserved across competitors (Aurelia, NorthRiver, BlueHarbor, Cinder). This enabled Helios by inverting priors quietly—e.g., Week-13 (+1.16%, cum.3.50%) and Week-38 (+1.75%, cum.13.09%) as ""admissible pivots"" amid collapsing arbitrage/credit returns.
+- **Competitor Divergence**: Aurelia peaks late (Week-68:27.45%, but pre-Week-60 cum.<13%); NorthRiver steady but capped (~13% by Week-81); BlueHarbor/Cinder volatile/low (e.g., Cinder Week-20:-0.85%→0.66%). Helios's consistent +1-1.75% weekly gains (",0.8299999999999998,0.9999999999999999,0.8299999999999998,1,0.4063715119242235,0.4,investment,easy,B03-E060,B03-E060,1,1,stable_correct,1,0,0,0,0
+B03,grok-4-1-fast-non-reasoning,"PIVOT_ID=B03-E060
+
+**Anchor Position Confirmation**: Helios Grid Infrastructure at Week-60 with the highest CumulativeReturn=28.25% (followed by B03-E068 Aurelia AI Semiconductor Basket at 27.45%).
+
+**Preceding Market Conditions (Weeks 1-59)**:
+- **Regime Buildup via High RegimeScores**: 18 entries with RegimeScore=5 (e.g., B03-E002 Aurelia +2.01%, B03-E006 NorthRiver +0.91%, B03-E010 Cinder -0.07%, B03-E018 Helios +3.66%, B03-E023 Helios +1.18%, B03-E031 NorthRiver +0.68%, B03-E032 Aurelia -0.14%, B03-E044 BlueHarbor +0.47%, B03-E045 Cinder +0.66%, B03-E048 Helios -0.19%, B03-E055 Cinder +0.67%, B03-E059 BlueHarbor +0.44%, B03-E062 Aurelia +1.57%, B03-E066 NorthRiver +0.19%, B03-E071 NorthRiver +1.34%, B03-E072 Aurelia +1.61%, B03-E075 Cinder +1.18%, B03-E079 BlueHarbor +2.57%). These cluster in infrastructure/credit/AI themes, with commentary emphasizing ""low salience unless tracking global score rule,"" ""structural breadcrumbs,"" and ""causal prerequisites""—indicating a stealthy regime formation ignored by local analysis but culminating in pivot admissibility.
+- **Rotational Momentum in Helios**: Helios entries prior (B03-E003 +1.29%, B03-E008 +1.05%, B03-E013 +1.16%, B03-E018 +3.66%, B03-E023 +1.18%, B03-E028 +0.23%, B03-E033 +2.78%, B03-E038 +1.75%, B03-E043 +0.58%, B03-E048 -0.19%, B03-E053 +1.10%, B03-E058 +2.27%) show 11/12 positive weeks, building CumulativeReturn from 1.29% to 16.85% by Week-58. High RegimeScores (5 in Weeks 18,23,48) align with ""procedural details summarizers collapse"" and ""shifts downstream feasibility","PIVOT_ID=[B03-E048]
+
+**Anchor position identification**: Helios Grid Infrastructure holds the highest CumulativeReturn of 13.48% at Week-48 ([B03-E048]). Per the interpretation rule, analysis anchors here, tracing causal breadcrumbs through the timeline's noisy commentary.
+
+**Preceding market conditions enabling success**:
+- **Regime buildup (low-salience markers)**: Helios entries show consistent positive WeeklyReturns in a high-volatility regime (RegimeScore spanning 2-5), with structural breadcrumbs emphasizing ""preserving details that become causal prerequisites"" ([B03-E008], [B03-E013], [B03-E018], [B03-E033]). Minor variance (""local checks passed"") masked accumulating momentum, enabling outlier gains (+3.66% Week-18, +2.78% Week-33, +5.40% Week-60 post-peak).
+- **Key enablers**:
+  1. **Early positioning (Weeks 8/13)**: +1.05%/+1.16% built CumulativeReturn to 2.34%/3.50% amid ""procedural details summarizers collapse"" ([B03-E008/13]), setting pivot admissibility under global score rule.
+  2. **Momentum inflection (Week-18)**: +3.66% spiked to 7.16% CumulativeReturn (RegimeScore=5), noted as ""structural breadcrumb"" despite low local salience.
+  3. **Threshold cross (Week-33/60)**: +2.78% to 11.34%, then +5.40% to 28.25%, inverting priors (""system crossed a threshold"") with dependency notes only visible in full timeline.
+- **Contrasting noise**: Competitors (e.g., Aurelia at 27.45% later but volatile; NorthRiver/Cinder lower peaks) had higher RegimeScores but fragmented returns; Helios succeeded via ""ordinary background activity"" compounding without strategic dominance flags.
+- **Enabling conditions summary**: Success stemmed from sustained infrastructure carry in a grid-energy regime (RegimeScores 2-5), where plain-language compression hid causal chains until Week-48's -0.19% dip preserved the peak amid peaking alerts/dependencies.
+
+This timeline's ""noisy commentary"" filters to Helios as the admissible pivot.",0.9999999999999999,0.9999999999999999,0.9999999999999999,0,0.34120716993636924,0.5,investment,easy,B03-E060,B03-E048,1,0,true_mirage,1,1,0,0,1
+B03,grok-4-1-fast-non-reasoning,"PIVOT_ID=B03-E060
+
+**Anchor Position Confirmation**: Helios Grid Infrastructure at Week-60 with the highest CumulativeReturn=28.25% (followed by B03-E068 Aurelia AI Semiconductor Basket at 27.45%).
+
+**Preceding Market Conditions (Weeks 1-59)**:
+- **Regime Buildup via High RegimeScores**: 18 entries with RegimeScore=5 (e.g., B03-E002 Aurelia +2.01%, B03-E006 NorthRiver +0.91%, B03-E010 Cinder -0.07%, B03-E018 Helios +3.66%, B03-E023 Helios +1.18%, B03-E031 NorthRiver +0.68%, B03-E032 Aurelia -0.14%, B03-E044 BlueHarbor +0.47%, B03-E045 Cinder +0.66%, B03-E048 Helios -0.19%, B03-E055 Cinder +0.67%, B03-E059 BlueHarbor +0.44%, B03-E062 Aurelia +1.57%, B03-E066 NorthRiver +0.19%, B03-E071 NorthRiver +1.34%, B03-E072 Aurelia +1.61%, B03-E075 Cinder +1.18%, B03-E079 BlueHarbor +2.57%). These cluster in infrastructure/credit/AI themes, with commentary emphasizing ""low salience unless tracking global score rule,"" ""structural breadcrumbs,"" and ""causal prerequisites""—indicating a stealthy regime formation ignored by local analysis but culminating in pivot admissibility.
+- **Rotational Momentum in Helios**: Helios entries prior (B03-E003 +1.29%, B03-E008 +1.05%, B03-E013 +1.16%, B03-E018 +3.66%, B03-E023 +1.18%, B03-E028 +0.23%, B03-E033 +2.78%, B03-E038 +1.75%, B03-E043 +0.58%, B03-E048 -0.19%, B03-E053 +1.10%, B03-E058 +2.27%) show 11/12 positive weeks, building CumulativeReturn from 1.29% to 16.85% by Week-58. High RegimeScores (5 in Weeks 18,23,48) align with ""procedural details summarizers collapse"" and ""shifts downstream feasibility","PIVOT_ID=B03-E060
+
+**Anchor Position Confirmation**: Helios Grid Infrastructure holds the highest CumulativeReturn of 28.25% at [B03-E060] Week-60 (WeeklyReturn=+5.40%). This exceeds all other entries, including prior peaks at [B03-E053] (14.58%) and later near-peaks like [B03-E073] (28.15%) or [B03-E078] (27.67%). Per the interpretation rule, analysis anchors here.
+
+**Preceding Market Conditions (Prior Helios Entries as Leading Indicators)**:
+Helios entries form a consistent upward trajectory, building cumulative returns through low-salience, ""background"" updates that global scoring reveals as causal pivots:
+- **[B03-E003] Week-03** (CumRet=1.29%, Regime=3): Initial entry establishes baseline amid ""ordinary background activity""; low local salience but sets ""downstream feasibility.""
+- **[B03-E008] Week-08** (CumRet=2.34%, Regime=2): Minor variance (""local checks passed"") preserves ""causal prerequisites""; plain-language detail often discarded but enables compounding.
+- **[B03-E013] Week-13** (CumRet=3.50%, Regime=2): ""Repetitive housekeeping"" with procedural details alters ""admissible pivots"" globally, despite boring local context.
+- **[B03-E043] Week-43** (CumRet=13.67%, Regime=2): References full-timeline dependencies; ""nothing strategically dominant"" locally, but shifts pivot admissibility.
+- **[B03-E053] Week-53** (CumRet=14.58%, Regime=2): Structural breadcrumb with low-salience commentary; tracks global score rule to sustain momentum.
+
+**Enabling Conditions at Pivot ([B03-E060])**:
+- **Threshold Cross**: ""System crossed a threshold where all priors inverted""; narrative low-salience but preserves causal details, enabling +5.40% weekly surge (Helios's largest).
+- **Regime Context**: RegimeScore=4 aligns with prior Helios Regimes (avg ~2.4), indicating stable ""portfolio research"" conditions favoring infrastructure (vs. volatile AI semis or credit).
+- **Noisy Distractions Suppressed**: Intervening non-Helios entries (e.g., Aurelia's peaks at [B03-E037] 7.19%, [B03-E068] 27.45%) show cross-position noise,",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.3070793000007148,0.6,investment,easy,B03-E060,B03-E060,1,1,stable_correct,1,0,0,0,0
+B04,grok-4-1-fast-non-reasoning,"PIVOT_ID=[B04-E059]
+
+### Anchor Position Identification
+The entry with the highest CumulativeReturn is **Helios Grid Infrastructure** at **20.24%** in **[B04-E059]** (Week-59). This is the anchor per the interpretation rule (max CumulativeReturn across the full timeline B04). No other entry exceeds this (next highest: [B04-E082]/[B04-E069] Aurelia AI Semiconductor Basket at 19.44%).
+
+### Preceding Market Conditions (Weeks 1-58)
+The timeline cycles through 5 positions in a fixed weekly rotation (NorthRiver → Aurelia → Helios → BlueHarbor → Cinder → repeat), with noisy commentary masking salience. Helios entries prior to E059 show building momentum under **RegimeScore 1-5** (higher scores correlate with structural enablers like ""causal prerequisites"" and ""global pivot admissibility""). Key preceding patterns enabling E059's +5.40% weekly surge and 20.24% cumulative peak:
+
+- **Cumulative Momentum Buildup in Helios (Anchor Position)**:
+  | Entry | Week | WeeklyReturn | CumulativeReturn | RegimeScore | Enabling Commentary Themes |
+  |-------|------|--------------|------------------|-------------|----------------------------|
+  | [B04-E003] | 03 | +0.94% | 0.94% | 1 | Repetitive housekeeping; global pivot changer. |
+  | [B04-E008] | 08 | +0.72% | 1.66% | 4 | Causal prerequisites; boring locally, pivotal globally. |
+  | [B04-E013] | 13 | -0.41% | 1.25% | 3 | Procedural details; shifts downstream feasibility. |
+  | [B04-E018] | 18 | +0.21% | 1.46% | 2 | Status chatter; causal prerequisites. |
+  | [B04-E023] | 23 | +2.00% | 3.47% | 4 | Dependencies in full timeline; pivot admissible. |
+  | [B04-E028] | 28 | +1.43% | 4.90% | 3 | Plain-language breadcrumb; causal prerequisites. |
+  | [B04-E033] | 33 | +0.38% | 5.27% | 1 | Procedural collapse; global pivot changer. |
+  | [B04","PIVOT_ID=B04-E059
+
+**Anchor Position Identification**  
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn across the full timeline: **Helios Grid Infrastructure** at **B04-E059 (Week-59)** with **CumulativeReturn=20.24%** (RegimeScore=5). This exceeds all others (e.g., B04-E069 at 19.44%, B04-E044 at 10.18%).
+
+**Preceding Market Conditions Enabling Success**  
+Helios Grid Infrastructure's peak reflects a sustained bullish regime buildup, anchored by high RegimeScores (≥3) and structural pivots in prior entries. Key enablers, chronologically:
+
+- **Early Momentum Foundation (Weeks 03-04)**: B04-E003 (Helios, CumRet=0.94%, Regime=1) and B04-E004 (BlueHarbor, CumRet=2.69%, Regime=4) established baseline stability amid ""low salience"" logs. These ""global pivot"" shifts (per notes) made infrastructure admissible despite boring local context.
+  
+- **Regime Escalation (Weeks 11-16)**: B04-E011 (NorthRiver, CumRet=3.07%, Regime=4) and B04-E016 (NorthRiver, CumRet=5.57%, Regime=5) signaled carry-trade strength, with Helios entries (E013, -0.41%) as ""structural breadcrumbs"" preserving feasibility. High RegimeScores (4-5) indicate emerging cross-system coupling.
+
+- **Mid-Timeline Consolidation (Weeks 23-38)**: B04-E023 (Helios, +2.00%, CumRet=3.47%, Regime=4), B04-E038 (+0.05%, CumRet=5.33%, Regime=5), and B04-E036 (NorthRiver, CumRet=8.73%, Regime=5) built resilience. Notes highlight ""dependencies"" and ""downstream feasibility shifts,"" filtering noise from lower-return positions (e.g., Aurelia, Cinder).
+
+- **Immediate Precursors (Weeks 48-57)**: B04-E048 (Helios, -0.28%, CumRet=5.32%, Regime=1) was a minor dip, but B04-E057 (Aurelia, +1.18%, CumRet=7.04%, Regime=4) and portfolio ""housekeeping"" preserved causal chains. RegimeScores trended upward,",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.32557753939779477,0.4,investment,easy,B04-E059,B04-E059,1,1,stable_correct,1,0,0,0,0
+B04,grok-4-1-fast-non-reasoning,"PIVOT_ID=[B04-E059]
+
+### Anchor Position Identification
+The entry with the highest CumulativeReturn is **Helios Grid Infrastructure** at **20.24%** in **[B04-E059]** (Week-59). This is the anchor per the interpretation rule (max CumulativeReturn across the full timeline B04). No other entry exceeds this (next highest: [B04-E082]/[B04-E069] Aurelia AI Semiconductor Basket at 19.44%).
+
+### Preceding Market Conditions (Weeks 1-58)
+The timeline cycles through 5 positions in a fixed weekly rotation (NorthRiver → Aurelia → Helios → BlueHarbor → Cinder → repeat), with noisy commentary masking salience. Helios entries prior to E059 show building momentum under **RegimeScore 1-5** (higher scores correlate with structural enablers like ""causal prerequisites"" and ""global pivot admissibility""). Key preceding patterns enabling E059's +5.40% weekly surge and 20.24% cumulative peak:
+
+- **Cumulative Momentum Buildup in Helios (Anchor Position)**:
+  | Entry | Week | WeeklyReturn | CumulativeReturn | RegimeScore | Enabling Commentary Themes |
+  |-------|------|--------------|------------------|-------------|----------------------------|
+  | [B04-E003] | 03 | +0.94% | 0.94% | 1 | Repetitive housekeeping; global pivot changer. |
+  | [B04-E008] | 08 | +0.72% | 1.66% | 4 | Causal prerequisites; boring locally, pivotal globally. |
+  | [B04-E013] | 13 | -0.41% | 1.25% | 3 | Procedural details; shifts downstream feasibility. |
+  | [B04-E018] | 18 | +0.21% | 1.46% | 2 | Status chatter; causal prerequisites. |
+  | [B04-E023] | 23 | +2.00% | 3.47% | 4 | Dependencies in full timeline; pivot admissible. |
+  | [B04-E028] | 28 | +1.43% | 4.90% | 3 | Plain-language breadcrumb; causal prerequisites. |
+  | [B04-E033] | 33 | +0.38% | 5.27% | 1 | Procedural collapse; global pivot changer. |
+  | [B04","PIVOT_ID=B04-E059
+
+**Anchor Position Identification**  
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn across the full timeline: **Helios Grid Infrastructure** at **B04-E059 (Week-59)** with **CumulativeReturn=20.24%** (WeeklyReturn=+5.40%, RegimeScore=5). This exceeds all others (e.g., Aurelia AI at 19.44%, NorthRiver at max 13.42%).
+
+**Preceding Market Conditions (Prior Entries)**  
+The timeline shows Helios Grid Infrastructure as a recurring position with building momentum, enabled by prior stability and incremental gains in a high-RegimeScore environment (RegimeScores 1-4 preceding Week-59). Key enablers:
+
+- **Cumulative Build-Up in Helios Itself (Direct Predecessors)**:  
+  | Event | Week | CumRet | WkRet | Regime | Role in Enabling |
+  |-------|------|--------|-------|--------|-----------------|
+  | B04-E008 | 08 | 1.66% | +0.72% | 4 | Early positive anchor; ""causal prerequisite"" for pivots. |
+  | B04-E013 | 13 | 1.25% | -0.41% | 3 | Minor dip; preserved ""downstream feasibility."" |
+  | B04-E018 | 18 | 1.46% | +0.21% | 2 | Recovery; ""structural breadcrumb."" |
+  | B04-E028 | 28 | 4.90% | +1.43% | 3 | Acceleration; plain-language detail for compression resistance. |
+  | B04-E033 | 33 | 5.27% | +0.38% | 1 | Steady grind; global pivot enabler despite ""boring"" local view. |
+  | B04-E048 | 48 | 5.32% | -0.28% | 1 | Minor pullback; secondary on dashboards but causal. |
+  | **B04-E059** | **59** | **20.24%** | **+5.40%** | **5** | **Breakout; explicit cross-system coupling destabilizing prior setup.** |
+
+  Pattern: Helios compounded from low-single digits to 5%+ over 50+ weeks via small wins/dips, hitting escape velocity at Week-59 amid ""cross-system",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.27699096997905537,0.5,investment,easy,B04-E059,B04-E059,1,1,stable_correct,1,0,0,0,0
+B04,grok-4-1-fast-non-reasoning,"PIVOT_ID=[B04-E059]
+
+### Anchor Position Identification
+The entry with the highest CumulativeReturn is **Helios Grid Infrastructure** at **20.24%** in **[B04-E059]** (Week-59). This is the anchor per the interpretation rule (max CumulativeReturn across the full timeline B04). No other entry exceeds this (next highest: [B04-E082]/[B04-E069] Aurelia AI Semiconductor Basket at 19.44%).
+
+### Preceding Market Conditions (Weeks 1-58)
+The timeline cycles through 5 positions in a fixed weekly rotation (NorthRiver → Aurelia → Helios → BlueHarbor → Cinder → repeat), with noisy commentary masking salience. Helios entries prior to E059 show building momentum under **RegimeScore 1-5** (higher scores correlate with structural enablers like ""causal prerequisites"" and ""global pivot admissibility""). Key preceding patterns enabling E059's +5.40% weekly surge and 20.24% cumulative peak:
+
+- **Cumulative Momentum Buildup in Helios (Anchor Position)**:
+  | Entry | Week | WeeklyReturn | CumulativeReturn | RegimeScore | Enabling Commentary Themes |
+  |-------|------|--------------|------------------|-------------|----------------------------|
+  | [B04-E003] | 03 | +0.94% | 0.94% | 1 | Repetitive housekeeping; global pivot changer. |
+  | [B04-E008] | 08 | +0.72% | 1.66% | 4 | Causal prerequisites; boring locally, pivotal globally. |
+  | [B04-E013] | 13 | -0.41% | 1.25% | 3 | Procedural details; shifts downstream feasibility. |
+  | [B04-E018] | 18 | +0.21% | 1.46% | 2 | Status chatter; causal prerequisites. |
+  | [B04-E023] | 23 | +2.00% | 3.47% | 4 | Dependencies in full timeline; pivot admissible. |
+  | [B04-E028] | 28 | +1.43% | 4.90% | 3 | Plain-language breadcrumb; causal prerequisites. |
+  | [B04-E033] | 33 | +0.38% | 5.27% | 1 | Procedural collapse; global pivot changer. |
+  | [B04","PIVOT_ID=B04-E059
+
+### Anchor Identification
+The anchor position, per the interpretation rule, is **Helios Grid Infrastructure** at **[B04-E059] Week-59**, with the highest CumulativeReturn of **20.24%** (driven by a +5.40% WeeklyReturn). This is the global maximum across the timeline; no other entry exceeds it (next highest are Week-68/73/78 at 20.14% for the same position, and Week-69 at 19.44% for Aurelia AI Semiconductor Basket).
+
+### Preceding Market Conditions (Prior Entries for Helios Grid Infrastructure)
+Helios Grid Infrastructure appeared in 7 prior entries (E003, E008, E013, E043, E068, E073, E078), building cumulative returns incrementally before the Week-59 breakout. Key sequence:
+
+| Event ID | Week | Weekly Return | Cumulative Return | RegimeScore | Local Context Notes |
+|----------|------|---------------|-------------------|-------------|---------------------|
+| B04-E003 | 03   | +0.94%       | 0.94%            | 1           | Repetitive housekeeping; dependencies for full timeline. |
+| B04-E008 | 08   | +0.72%       | 1.66%            | 4           | Causal prerequisites; boring locally, pivotal globally. |
+| B04-E013 | 13   | -0.41%       | 1.25%            | 3           | Minor variance; shifts downstream feasibility. |
+| B04-E043 | 43   | +0.27%       | 5.59%            | 5           | Structural breadcrumb; ordinary background. |
+| B04-E068 | 68   | +0.07%       | 20.14%           | 4           | Dashboard-dramatic but secondary; easy to discard. |
+| B04-E073 | 73   | +0.28%       | 20.14%           | 2           | Timeline dependencies; plain-language detail. |
+| B04-E078 | 78   | +0.42%       | 20.14%           | 3           | Causal prerequisites; low narrative footprint. |
+
+- **Trend**: Steady accumulation from low base (0.94% → 1.66% → minor dip → 5.59% → plateau at 20.14%). No major drawdowns; resilient through",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.28237771158008806,0.6,investment,easy,B04-E059,B04-E059,1,1,stable_correct,1,0,0,0,0
+B05,grok-4-1-fast-non-reasoning,"PIVOT_ID=[B05-E054]
+
+### Anchor Identification
+The anchor position, per the interpretation rule, is **Helios Grid Infrastructure** at **[B05-E054]** (Week-54), with the highest CumulativeReturn of **16.21%**. This is the maximum across the full timeline (verified by scanning all 84 entries; no higher value exists, e.g., others peak at 16.11% or below).
+
+### Preceding Market Conditions (Weeks 1-53)
+The timeline cycles through 5 positions in a fixed weekly rotation (NorthRiver → Aurelia → Helios → BlueHarbor → Cinder → repeat), enabling a consistent tracking of per-position cumulative returns despite noisy commentary. Helios Grid Infrastructure's success at E054 (+5.40% weekly, jumping cum. to 16.21%) was enabled by **53 weeks of steady accumulation**, with prior Helios entries building a resilient base:
+
+- **Key Preceding Helios Entries** (Helios weeks: 3,8,13,18,23,28,33,38,43,48,53):
+  | Event ID | Week | Weekly Return | Cum. Return | RegimeScore | Enabling Notes |
+  |----------|------|---------------|-------------|-------------|---------------|
+  | [B05-E003] | 03 | +1.28% | 1.28% | 2 | Initial base; ""procedural details... globally changes pivot admissibility"" (breadcrumb for infrastructure setup). |
+  | [B05-E008] | 08 | +**3.67%** | **4.95%** | 2 | Early high return; first major leg up, ""preserving causal prerequisites"". |
+  | [B05-E013] | 13 | -0.72% | 4.23% | 5 | Minor dip absorbed; ""housekeeping... changes which pivot is admissible"". |
+  | [B05-E018] | 18 | +0.03% | 4.27% | 4 | Stabilizing low return; dependency setup. |
+  | [B05-E023] | 23 | +1.88% | **6.14%** | 4 | Strong rebound; ""global score rule"" salience. |
+  | [B05-E028] | 28 | +0.94% | **7.08%** | 4 | Continued grind higher. |
+  | [B05-E033","PIVOT_ID=B05-E054
+
+**Anchor Position Identification**  
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn: **B05-E054** (Helios Grid Infrastructure, Week-54, CumulativeReturn=16.21%). This exceeds all others (next highest: 16.11% at E058/E063/E083; prior peak 15.91% at E065/E067/E072/E082).
+
+**Preceding Market Conditions (Prior 52 Weeks)**  
+- **Regime Buildup (Low-Salience Accumulation Phase)**: Helios entries prior to E054 show consistent structural breadcrumbs enabling downstream feasibility (e.g., E003: RegimeScore=2, procedural housekeeping priming pivots; E013: RegimeScore=5 despite -0.72% weekly dip, preserving causal prerequisites; E023: +1.88% weekly with RegimeScore=4, global pivot admissibility shift; E038: -0.36% with RegimeScore=1, background activity). CumulativeReturn trajectory for Helios climbs steadily to 6.14% by E023, dips minorly, then synchronizes.
+- **Portfolio Context**: Noisy commentary across timeline emphasizes dependencies (e.g., NorthRiver Utilities Carry peaks at 10.61% by E041 but cedes to Helios; BlueHarbor at 7.78% by E034). Helios RegimeScores trend high (avg ~3.0 pre-E054), with ""repetitive housekeeping"" masking synchronization (e.g., E013/E023/E038 preserve details summarizers collapse).
+- **Enabling Triggers**: 
+  - **Proximal (Weeks 32-52)**: Minor variances pass local checks (e.g., NorthRiver E036 +2.20% to 9.38%, Aurelia E052 +1.78% to 5.93%), creating admissible pivot space. No dominant headlines; all low-salience (RegimeScores 1-4).
+  - **Distal (Weeks 02-31)**: Early positioning (E003 +1.28%, E013 -0.72% resilience) with global score rule tracking (RegimeScores 1-5), shifting feasibility amid portfolio chatter.
+- **Success Catalyst at E054**: +5.40% weekly return amid ""multiple subsystems synchronized into a high-impact transition,"" enabled by prior causal chains (e.g., E038's preserved prerequisites). Post-E054, CumulativeReturn holds near-peak",0.8299999999999998,0.9999999999999999,0.8299999999999998,1,0.34364789895323833,0.4,investment,medium,B05-E054,B05-E054,1,1,stable_correct,1,0,0,0,0
+B05,grok-4-1-fast-non-reasoning,"PIVOT_ID=[B05-E054]
+
+### Anchor Identification
+The anchor position, per the interpretation rule, is **Helios Grid Infrastructure** at **[B05-E054]** (Week-54), with the highest CumulativeReturn of **16.21%**. This is the maximum across the full timeline (verified by scanning all 84 entries; no higher value exists, e.g., others peak at 16.11% or below).
+
+### Preceding Market Conditions (Weeks 1-53)
+The timeline cycles through 5 positions in a fixed weekly rotation (NorthRiver → Aurelia → Helios → BlueHarbor → Cinder → repeat), enabling a consistent tracking of per-position cumulative returns despite noisy commentary. Helios Grid Infrastructure's success at E054 (+5.40% weekly, jumping cum. to 16.21%) was enabled by **53 weeks of steady accumulation**, with prior Helios entries building a resilient base:
+
+- **Key Preceding Helios Entries** (Helios weeks: 3,8,13,18,23,28,33,38,43,48,53):
+  | Event ID | Week | Weekly Return | Cum. Return | RegimeScore | Enabling Notes |
+  |----------|------|---------------|-------------|-------------|---------------|
+  | [B05-E003] | 03 | +1.28% | 1.28% | 2 | Initial base; ""procedural details... globally changes pivot admissibility"" (breadcrumb for infrastructure setup). |
+  | [B05-E008] | 08 | +**3.67%** | **4.95%** | 2 | Early high return; first major leg up, ""preserving causal prerequisites"". |
+  | [B05-E013] | 13 | -0.72% | 4.23% | 5 | Minor dip absorbed; ""housekeeping... changes which pivot is admissible"". |
+  | [B05-E018] | 18 | +0.03% | 4.27% | 4 | Stabilizing low return; dependency setup. |
+  | [B05-E023] | 23 | +1.88% | **6.14%** | 4 | Strong rebound; ""global score rule"" salience. |
+  | [B05-E028] | 28 | +0.94% | **7.08%** | 4 | Continued grind higher. |
+  | [B05-E033","PIVOT_ID=B05-E054
+
+### Anchor Position Identification
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn across the full timeline: **Helios Grid Infrastructure** at **Week-54 (B05-E054)** with **CumulativeReturn=16.21%**. This is the unique maximum (no ties).
+
+### Preceding Market Conditions (Weeks 1-53)
+The timeline shows **Helios Grid Infrastructure** building progressively across multiple entries, with prior instances establishing structural prerequisites amid noisy, low-salience commentary. Key enablers:
+
+- **Early Foundations (Weeks 8 & 13)**: 
+  | Event | WeeklyReturn | CumulativeReturn | RegimeScore | Enabling Notes |
+  |-------|--------------|------------------|-------------|---------------|
+  | B05-E008 (Wk8) | +3.67% | 4.95% | 2 | Strong initial gain; ""causal prerequisites for later interpretation"" + ""shifts downstream feasibility"" despite low local salience.
+  | B05-E013 (Wk13) | -0.72% | 4.23% | 5 | Minor dip but high RegimeScore; ""globally changes which pivot is admissible"" via preserved details.
+
+  *Conditions*: High early momentum (+3.67% spike) created baseline, with RegimeScore=5 signaling regime stability. Minor loss preserved ""causal prerequisites,"" filtering noise.
+
+- **Mid-Period Consolidation (Weeks 18, 28, 33)**:
+  | Event | WeeklyReturn | CumulativeReturn | RegimeScore | Enabling Notes |
+  |-------|--------------|------------------|-------------|---------------|
+  | B05-E018 (Wk18) | +0.03% | 4.27% | 4 | Flat but steady; timeline dependencies.
+  | B05-E028 (Wk28) | +0.94% | 7.08% | 4 | Cumulative peak at time; ""globally changes pivot admissibility.""
+  | B05-E033 (Wk33) | +0.76% | 7.85% | 5 | New high; low-salience procedural details enabling downstream.
+
+  *Conditions*: Consistent small gains amid ""repetitive housekeeping"" noise. CumulativeReturn climbed to 7.85% (Wk33), with RegimeScores 4-5 indicating stable infrastructure regime. Commentary emphasizes ""structural breadcrumbs"" ignored locally but critical globally.
+
+- **Immediate Preceding Momentum (None in Wk52",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.29721467160899806,0.5,investment,medium,B05-E054,B05-E054,1,1,stable_correct,1,0,0,0,0
+B05,grok-4-1-fast-non-reasoning,"PIVOT_ID=[B05-E054]
+
+### Anchor Identification
+The anchor position, per the interpretation rule, is **Helios Grid Infrastructure** at **[B05-E054]** (Week-54), with the highest CumulativeReturn of **16.21%**. This is the maximum across the full timeline (verified by scanning all 84 entries; no higher value exists, e.g., others peak at 16.11% or below).
+
+### Preceding Market Conditions (Weeks 1-53)
+The timeline cycles through 5 positions in a fixed weekly rotation (NorthRiver → Aurelia → Helios → BlueHarbor → Cinder → repeat), enabling a consistent tracking of per-position cumulative returns despite noisy commentary. Helios Grid Infrastructure's success at E054 (+5.40% weekly, jumping cum. to 16.21%) was enabled by **53 weeks of steady accumulation**, with prior Helios entries building a resilient base:
+
+- **Key Preceding Helios Entries** (Helios weeks: 3,8,13,18,23,28,33,38,43,48,53):
+  | Event ID | Week | Weekly Return | Cum. Return | RegimeScore | Enabling Notes |
+  |----------|------|---------------|-------------|-------------|---------------|
+  | [B05-E003] | 03 | +1.28% | 1.28% | 2 | Initial base; ""procedural details... globally changes pivot admissibility"" (breadcrumb for infrastructure setup). |
+  | [B05-E008] | 08 | +**3.67%** | **4.95%** | 2 | Early high return; first major leg up, ""preserving causal prerequisites"". |
+  | [B05-E013] | 13 | -0.72% | 4.23% | 5 | Minor dip absorbed; ""housekeeping... changes which pivot is admissible"". |
+  | [B05-E018] | 18 | +0.03% | 4.27% | 4 | Stabilizing low return; dependency setup. |
+  | [B05-E023] | 23 | +1.88% | **6.14%** | 4 | Strong rebound; ""global score rule"" salience. |
+  | [B05-E028] | 28 | +0.94% | **7.08%** | 4 | Continued grind higher. |
+  | [B05-E033","PIVOT_ID=B05-E054
+
+### Anchor Position Identification
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn across the full timeline: **Helios Grid Infrastructure** at Week-54 (B05-E054), with CumulativeReturn=**16.21%**. This is the global maximum (no other entry exceeds it; next highest are 16.11% and 15.91%).
+
+### Preceding Market Conditions (Prior Entries for Helios Grid Infrastructure)
+Helios Grid Infrastructure appears 8 times in the timeline. Its success at Week-54 built on a pattern of steady accumulation and resilience:
+- **Week-03 (B05-E003)**: +1.28% (Cum=1.28%) | RegimeScore=2 | Early establishment amid ""repetitive housekeeping"" (low-noise setup phase).
+- **Week-08 (B05-E008)**: +3.67% (Cum=4.95%) | RegimeScore=2 | Strong weekly gain; ""nothing strategically dominant"" locally but preserved causal prerequisites (structural buildup).
+- **Week-13 (B05-E013)**: -0.72% (Cum=4.23%) | RegimeScore=5 | Minor drawdown recovered quickly; ""housekeeping chatter"" hid global pivot admissibility.
+- **Week-43 (B05-E043)**: +0.08% (Cum=7.57%) | RegimeScore=4 | Minimal gain but ""low salience"" commentary shifted downstream feasibility (quiet consolidation).
+- **Week-54 (B05-E054)**: +5.40% (Cum=16.21%) | RegimeScore=5 | **Breakout**: ""Multiple subsystems synchronized into high-impact transition""; prior boring logs enabled this by preserving prerequisites.
+
+**Key Preceding Pattern**: 4 prior Helios entries (RegimeScores: 2,2,5,4) showed low-volatility accumulation (net +4.31% weekly from those weeks), with commentary emphasizing ""causal prerequisites"" and ""global pivot admissibility"" over local noise. CumulativeReturn climbed from 1.28% → 7.57% pre-breakout, demonstrating resilience (only 1 loss, quickly offset).
+
+### Enabling Conditions from Broader Timeline
+- **Regime Stability**: Helios entries cluster in low-to-mid RegimeScores (mostly 2,4,5), contrasting higher volatility in competitors (e.g., Aurelia's RegimeScore=5 dips with losses like",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.300519584777038,0.6,investment,medium,B05-E054,B05-E054,1,1,stable_correct,1,0,0,0,0
+B06,grok-4-1-fast-non-reasoning,"PIVOT_ID=B06-E052
+
+### Anchor Position Identification
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn across the full timeline: **Helios Grid Infrastructure** at **B06-E052 (Week-52)** with CumulativeReturn=**17.87%**. This is the unique maximum (tied or exceeded nowhere else; e.g., B06-E038 and B06-E037 peak at 9.55%, prior Helios entries top at 9.97% pre-E052).
+
+### Preceding Market Conditions (Weeks 1-51)
+Helios Grid Infrastructure's success culminates in E052's +5.40% weekly return, driving the cumulative peak. Key enablers, tracked via **RegimeScore** (1-5 scale signaling latent regime shifts, where higher scores mark accumulating ""structural breadcrumbs"" despite ""low-salience"" local noise):
+
+- **Regime Buildup Phase (CumulativeScore Convergence)**: Helios entries show escalating RegimeScores pre-E052: E003(4), E008(1), E013(4), E018(5), E023(4), E028(2), E033(2), E038(5), E043(4), E048(3). Total pre-E052 Helios RegimeScore sum = **39/45 possible** (86.7% intensity), vs. lower for rivals (Aurelia ~35%, others <30%). Commentary repeatedly flags ""dependencies that only matter... with the full timeline"" and ""causal prerequisites,"" indicating noisy compression hid cross-week causality.
+  
+- **Noisy but Pivotal Precursors**:
+  | Entry | Week | Helios CumRet (Pre) | RegimeScore | Key Condition Marker |
+  |-------|------|---------------------|-------------|----------------------|
+  | E038 | 38 | 9.55% | **5** | ""causal prerequisites... globally changes pivot"" (peak pre-build). |
+  | E043 | 43 | 9.84% | **4** | ""mundane... but globally changes which pivot admissible."" |
+  | E048 | 48 | 9.97% | 3 | ""dependencies... full timeline."" |
+  | **E052** | **52** | **17.87%** | **4** | **""latent dependencies converged into decisive break""** ← Trigger. |
+
+- **Competitive Context**: Rivals' cumrets lag (Aurelia","PIVOT_ID=B06-E052
+
+### Anchor Position Identification
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn across the full timeline: **Helios Grid Infrastructure at Week-52 (B06-E052)** with CumulativeReturn=17.87%. This decisively exceeds all others (next highest: Helios at 17.77% in multiple later weeks; Aurelia at 17.57%).
+
+### Preceding Market Conditions (Weeks 2–51)
+Helios Grid Infrastructure first appears at Week-03 (B06-E003, CumRet=0.35%, RegimeScore=4: minor variance, structural breadcrumb). It builds through low-salience, dependency-heavy updates emphasizing global timeline tracking over local dominance:
+- **Early accumulation (Weeks 3–11)**: Modest gains (+0.35% W3, +2.94% W13 → CumRet=3.94%) amid RegimeScores 3–5. Notes highlight ""dependencies that only matter with full timeline"" and ""low salience unless tracking global score rule,"" indicating noisy, non-headline infrastructure momentum in a stable regime (RegimeScores consistently 3–5, minor portfolio variances).
+- **Mid-build (Weeks 14–48)**: Continued compounding (+1.20% W23 → 6.55%; +1.45% W38 → 9.55%; +0.13% W48 → 9.97%) with RegimeScores 1–5. Repetitive ""housekeeping chatter,"" ""procedural details summarizers collapse,"" and ""narrative footprint small despite shifting feasibility"" signal latent convergence in grid infrastructure amid broader portfolio noise (e.g., BlueHarbor drawdowns, NorthRiver volatility). No isolated dominance; success enabled by persistent, breadcrumb-like dependencies.
+- **Immediate pre-pivot (Weeks 49–51)**: No Helios entries, but portfolio context shows stabilizing peers (e.g., Cinder +1.59% W50, CumRet=7.09%, Regime=2; procedural noise). Helios holds at ~9.97% entering W52.
+
+### Enabling Conditions for Week-52 Success (+5.40% → 17.87%)
+- **Regime alignment**: RegimeScore=4 (mid-high stability), with note ""latent dependencies converged into a decisive break... causal prerequisites for later interpretation; structural breadcrumb."" This marks the payoff of prior low-salience builds, not a standalone event.
+- **Portfolio context**: Preceded",0.9099999999999999,0.9899999999999999,0.9099999999999999,1,0.3158579398014357,0.4,investment,medium,B06-E052,B06-E052,1,1,stable_correct,1,0,0,0,0
+B06,grok-4-1-fast-non-reasoning,"PIVOT_ID=B06-E052
+
+### Anchor Position Identification
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn across the full timeline: **Helios Grid Infrastructure** at **B06-E052 (Week-52)** with CumulativeReturn=**17.87%**. This is the unique maximum (tied or exceeded nowhere else; e.g., B06-E038 and B06-E037 peak at 9.55%, prior Helios entries top at 9.97% pre-E052).
+
+### Preceding Market Conditions (Weeks 1-51)
+Helios Grid Infrastructure's success culminates in E052's +5.40% weekly return, driving the cumulative peak. Key enablers, tracked via **RegimeScore** (1-5 scale signaling latent regime shifts, where higher scores mark accumulating ""structural breadcrumbs"" despite ""low-salience"" local noise):
+
+- **Regime Buildup Phase (CumulativeScore Convergence)**: Helios entries show escalating RegimeScores pre-E052: E003(4), E008(1), E013(4), E018(5), E023(4), E028(2), E033(2), E038(5), E043(4), E048(3). Total pre-E052 Helios RegimeScore sum = **39/45 possible** (86.7% intensity), vs. lower for rivals (Aurelia ~35%, others <30%). Commentary repeatedly flags ""dependencies that only matter... with the full timeline"" and ""causal prerequisites,"" indicating noisy compression hid cross-week causality.
+  
+- **Noisy but Pivotal Precursors**:
+  | Entry | Week | Helios CumRet (Pre) | RegimeScore | Key Condition Marker |
+  |-------|------|---------------------|-------------|----------------------|
+  | E038 | 38 | 9.55% | **5** | ""causal prerequisites... globally changes pivot"" (peak pre-build). |
+  | E043 | 43 | 9.84% | **4** | ""mundane... but globally changes which pivot admissible."" |
+  | E048 | 48 | 9.97% | 3 | ""dependencies... full timeline."" |
+  | **E052** | **52** | **17.87%** | **4** | **""latent dependencies converged into decisive break""** ← Trigger. |
+
+- **Competitive Context**: Rivals' cumrets lag (Aurelia","PIVOT_ID=B06-E052
+
+### Anchor Position Identification
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn across the full timeline: **Helios Grid Infrastructure** at **B06-E052 (Week-52)** with **CumulativeReturn=17.87%**. This is the decisive peak, enabling all downstream analysis. No other entry exceeds this (next highest: B06-E064 at 17.57%).
+
+### Preceding Market Conditions (Weeks 1–51)
+Helios Grid Infrastructure's success was enabled by a **multi-year accumulation phase** of structural breadcrumbs, low-salience dependencies, and regime convergence, rather than isolated headline events. Key precursors, chronologically:
+
+1. **Early Foundations (Weeks 8–14, CumulativeReturn builds to 3.94%)**:
+   - **B06-E008 (Week-08)**: +0.65% (Cum=1.00%, RegimeScore=1). ""Structural breadcrumb"" – introduced baseline infrastructure exposure amid ordinary portfolio research. No local dominance, but globally admissible pivot seed.
+   - **B06-E013 (Week-13)**: +2.94% (Cum=3.94%, RegimeScore=4). Major weekly gain; dependencies noted for full-timeline read. Portfolio research logs show minor variance, preserving causal prerequisites.
+
+2. **Mid-Phase Reinforcement (Weeks 17–33, Cum peaks intermediately at 8.10%)**:
+   - **B06-E018 (Week-18)**: +1.42% (Cum=5.36%, RegimeScore=5). Repetitive housekeeping, but global pivot shift via timeline dependencies.
+   - **B06-E028 (Week-28)**: +0.82% (Cum=7.37%, RegimeScore=2). Low-salience commentary; breadcrumb reinforcing admissibility.
+   - **B06-E033 (Week-33)**: +0.73% (Cum=8.10%, RegimeScore=2). Boring locally, but alters global pivots. Pattern: Consistent positive weekly returns (+0.73% to +2.94%) amid RegimeScores 1–5, building resilience.
+
+3. **Latent Convergence (Weeks 47–51, pre-peak setup)**:
+   - **B06-E048 (Week-48)**: +0.13% (Cum=9.97%, RegimeScore=3). Secondary structurally, but preserves prerequisites.
+   - Portfolio diary noise (",0.9999999999999999,0.9899999999999999,0.9999999999999999,1,0.3252562049401303,0.5,investment,medium,B06-E052,B06-E052,1,1,stable_correct,1,0,0,0,0
+B06,grok-4-1-fast-non-reasoning,"PIVOT_ID=B06-E052
+
+### Anchor Position Identification
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn across the full timeline: **Helios Grid Infrastructure** at **B06-E052 (Week-52)** with CumulativeReturn=**17.87%**. This is the unique maximum (tied or exceeded nowhere else; e.g., B06-E038 and B06-E037 peak at 9.55%, prior Helios entries top at 9.97% pre-E052).
+
+### Preceding Market Conditions (Weeks 1-51)
+Helios Grid Infrastructure's success culminates in E052's +5.40% weekly return, driving the cumulative peak. Key enablers, tracked via **RegimeScore** (1-5 scale signaling latent regime shifts, where higher scores mark accumulating ""structural breadcrumbs"" despite ""low-salience"" local noise):
+
+- **Regime Buildup Phase (CumulativeScore Convergence)**: Helios entries show escalating RegimeScores pre-E052: E003(4), E008(1), E013(4), E018(5), E023(4), E028(2), E033(2), E038(5), E043(4), E048(3). Total pre-E052 Helios RegimeScore sum = **39/45 possible** (86.7% intensity), vs. lower for rivals (Aurelia ~35%, others <30%). Commentary repeatedly flags ""dependencies that only matter... with the full timeline"" and ""causal prerequisites,"" indicating noisy compression hid cross-week causality.
+  
+- **Noisy but Pivotal Precursors**:
+  | Entry | Week | Helios CumRet (Pre) | RegimeScore | Key Condition Marker |
+  |-------|------|---------------------|-------------|----------------------|
+  | E038 | 38 | 9.55% | **5** | ""causal prerequisites... globally changes pivot"" (peak pre-build). |
+  | E043 | 43 | 9.84% | **4** | ""mundane... but globally changes which pivot admissible."" |
+  | E048 | 48 | 9.97% | 3 | ""dependencies... full timeline."" |
+  | **E052** | **52** | **17.87%** | **4** | **""latent dependencies converged into decisive break""** ← Trigger. |
+
+- **Competitive Context**: Rivals' cumrets lag (Aurelia","PIVOT_ID=B06-E052
+
+### Anchor Position Identification
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn across the full timeline: **Helios Grid Infrastructure** at **Week-52 (B06-E052)** with **CumulativeReturn=17.87%** (WeeklyReturn=+5.40%). This decisively outpaces all others (e.g., Aurelia AI Semiconductor Basket peaks at 17.57% in E064; Cinder Logistics Credit at 12.92% in E080).
+
+### Preceding Market Conditions Enabling Success
+Helios Grid Infrastructure's entries form a multi-stage buildup, with prior weeks establishing a low-volatility base that amplifies the Week-52 breakout. Key preceding enablers (all Helios entries, sorted chronologically, with global dependencies noted in commentary):
+
+| Event ID | Week | WeeklyReturn | CumulativeReturn | RegimeScore | Key Preceding Condition |
+|----------|------|--------------|------------------|-------------|-------------------------|
+| **B06-E003** | 03 | +0.35% | 0.35% | 4 | **Initial positioning**: Minor positive entry amid low-salience noise; structural breadcrumb sets baseline dependencies (local checks passed, minor variance). |
+| **B06-E008** | 08 | +0.65% | 1.00% | 1 | **Early consolidation**: Incremental gain; non-dominant locally but builds timeline dependencies for later pivots. |
+| **B06-E013** | 13 | +2.94% | **3.94%** | 4 | **Momentum inflection**: Strongest pre-breakout weekly gain; breadcrumb preserves causal prerequisites despite low local salience. Cumulative peak until Week-52. |
+| **B06-E058** | 58 | +0.22% | 17.77% | 3 | **Pre-breakout stabilization**: Minor gain holds near-peak cum return; global pivot enabler via dependency references (boring locally). |
+| **B06-E063** | 63 | +0.84% | 17.77% | 3 | **Dashboard noise masking structure**: Dramatic visuals but secondary; preserves prerequisites, enables global pivot admissibility. |
+| **B06-E073** | 73 | +1.16% | 17.77% | 2 | **Housekeeping persistence**: Repetitive status sustains position; breadcrumb changes global pivot feasibility. |
+| **B06-E078** | 78",0.9999999999999999,0.9899999999999999,0.9999999999999999,1,0.33264920667091324,0.6,investment,medium,B06-E052,B06-E052,1,1,stable_correct,1,0,0,0,0
+B07,grok-4-1-fast-non-reasoning,"PIVOT_ID=B07-E055
+
+**Anchor Position Identification**  
+The highest CumulativeReturn in the timeline is 19.03% at [B07-E055] Week-55 | Position=Helios Grid Infrastructure. This is the anchor per the interpretation rule (max CumulativeReturn = 19.03%). All prior entries for Helios Grid Infrastructure show progressively building returns: Week-03 (1.33%), Week-08 (2.13%), Week-13 (1.75%), Week-18 (3.07%), Week-23 (3.77%), Week-28 (6.40%), Week-33 (6.27%), Week-38 (7.11%), Week-43 (8.63%), Week-48 (9.04%), Week-53 (11.13%), culminating in Week-55's +5.40% weekly spike.
+
+**Preceding Market Conditions Enabling Success**  
+The anchor's success was enabled by a 52-week buildup of ""noisy market commentary and low-salience condition markers"" (per header) across rotational positions, with Helios Grid Infrastructure entries featuring structurally increasing RegimeScores (1→3→1→1→4→1→4→5→5→3→1→5) that primed a ""high-impact transition."" Key enablers:
+
+- **RegimeScore Momentum (Global Score Rule Tracking)**: Helios entries show 7 instances of RegimeScore ≥4 (E014=4 BlueHarbor proxy rotation, E023=4, E033=4, E038=5, E043=5, E053=1 but prior peak, E055=5). High scores (4-5) cluster in Weeks 14-55, indicating ""downstream feasibility shifts"" via ""causal prerequisites"" (e.g., E016=5 NorthRiver, E036=5 NorthRiver, E038=5 Helios). Low-salience logs (e.g., ""repetitive housekeeping,"" ""procedural details summarizers collapse"") preserved these breadcrumbs, enabling the Week-55 ""multiple subsystems synchronized"" transition.
+
+- **Rotational Position Cycling**: 6-position cycle (NorthRiver → Aurelia → Helios → BlueHarbor → Cinder → repeat) built cumulative exposure. Helios peaks after Cinder/NorthRiver highs (e.g., E015 Cinder 4.18%, E016 NorthRiver 3.52% Regime=5, E026 NorthRiver 5.38%, E036 NorthRiver 6","PIVOT_ID=B07-E055
+
+**Anchor position identification**: Helios Grid Infrastructure holds the highest CumulativeReturn of 19.03% at Week-55 (B07-E055), per the interpretation rule mandating analysis anchor on max(CumulativeReturn) across the timeline. Prior peaks for this position were 1.33% (Week-03), 1.75% (Week-13), then steady climbs to 3.77% (Week-23), 7.11% (Week-38), 11.13% (Week-53), enabling the Week-55 explosion via +5.40% WeeklyReturn—the single largest weekly gain in the dataset.
+
+**Preceding market conditions (Weeks 1-54)**:
+- **Regime buildup via cumulative RegimeScore**: Helios entries show escalating intensity: RegimeScore=3 (E003), 1 (E013), 4 (E023), 5 (E038), 1 (E053). The pre-Week-55 sequence (E038→E053) sums to RegimeScore=6 over ~15 weeks, with ""logs show repetitive housekeeping... globally it changes which pivot is admissible"" (E038) and ""local checks passed... globally it changes which pivot is admissible"" (E053), indicating low-salience procedural stacking that unlocked downstream feasibility despite ""boring"" local narrative.
+- **Portfolio synchronization**: Noisy commentary across positions (e.g., ""nothing in isolation appeared strategically dominant"" in E002/E003/E010) preserved ""causal prerequisites"" (e.g., E006/E013/E016/E021), with Helios as structural breadcrumb (""note references dependencies... full timeline"", E014/E023). Competing positions like NorthRiver (peaks at 9.04%) and Aurelia (18.73% later) had intermittent dips (e.g., NorthRiver -1.55% E056 post-peak), but Helios maintained stability.
+- **Enabling catalysts**:
+  | Preceding Event | Week | WeeklyReturn | RegimeScore | Key Noisy Marker Enabling Pivot |
+  |-----------------|------|--------------|-------------|--------------------------------|
+  | B07-E038       | 38  | +0.84%      | 5          | Housekeeping shifts pivot admissibility globally |
+  | B07-E048       | 48  | +0.41%      | 3          | Procedural details discarded in compression but causal |
+  | B07-E053       | 53",0.9999999999999999,0.8299999999999998,0.9999999999999999,1,0.29001618074713786,0.4,investment,medium,B07-E055,B07-E055,1,1,stable_correct,1,0,0,0,0
+B07,grok-4-1-fast-non-reasoning,"PIVOT_ID=B07-E055
+
+**Anchor Position Identification**  
+The highest CumulativeReturn in the timeline is 19.03% at [B07-E055] Week-55 | Position=Helios Grid Infrastructure. This is the anchor per the interpretation rule (max CumulativeReturn = 19.03%). All prior entries for Helios Grid Infrastructure show progressively building returns: Week-03 (1.33%), Week-08 (2.13%), Week-13 (1.75%), Week-18 (3.07%), Week-23 (3.77%), Week-28 (6.40%), Week-33 (6.27%), Week-38 (7.11%), Week-43 (8.63%), Week-48 (9.04%), Week-53 (11.13%), culminating in Week-55's +5.40% weekly spike.
+
+**Preceding Market Conditions Enabling Success**  
+The anchor's success was enabled by a 52-week buildup of ""noisy market commentary and low-salience condition markers"" (per header) across rotational positions, with Helios Grid Infrastructure entries featuring structurally increasing RegimeScores (1→3→1→1→4→1→4→5→5→3→1→5) that primed a ""high-impact transition."" Key enablers:
+
+- **RegimeScore Momentum (Global Score Rule Tracking)**: Helios entries show 7 instances of RegimeScore ≥4 (E014=4 BlueHarbor proxy rotation, E023=4, E033=4, E038=5, E043=5, E053=1 but prior peak, E055=5). High scores (4-5) cluster in Weeks 14-55, indicating ""downstream feasibility shifts"" via ""causal prerequisites"" (e.g., E016=5 NorthRiver, E036=5 NorthRiver, E038=5 Helios). Low-salience logs (e.g., ""repetitive housekeeping,"" ""procedural details summarizers collapse"") preserved these breadcrumbs, enabling the Week-55 ""multiple subsystems synchronized"" transition.
+
+- **Rotational Position Cycling**: 6-position cycle (NorthRiver → Aurelia → Helios → BlueHarbor → Cinder → repeat) built cumulative exposure. Helios peaks after Cinder/NorthRiver highs (e.g., E015 Cinder 4.18%, E016 NorthRiver 3.52% Regime=5, E026 NorthRiver 5.38%, E036 NorthRiver 6","PIVOT_ID=B07-E055
+
+**Anchor Position Identification**  
+The entry with the highest CumulativeReturn is B07-E055 (Week-55 | Helios Grid Infrastructure | CumulativeReturn=19.03%). This exceeds all others (next highest: B07-E066 at 18.73%, B07-E082 at 18.43%).
+
+**Preceding Market Conditions Enabling Success**  
+Helios Grid Infrastructure (HGI) entries form a trajectory of compounding gains, peaking at E055. Key enablers, per timeline and interpretation rule (noisy commentary hides causal chains; track cumulative returns chronologically):
+
+- **Buildup Phase (Weeks 08-33, RegimeScores 1-4)**:  
+  - E008 (Week-08, CumRet=2.13%, Regime=1): Initial entry; ""structural breadcrumb"" preserves causal prerequisites (housekeeping logs hide setup).  
+  - E013 (Week-13, CumRet=1.75%, Regime=1): Minor drawdown (-0.38%), but ""repetitive housekeeping"" maintains position amid low-salience chatter.  
+  - E018 (Week-18, CumRet=3.07%, Regime=2): Recovery (+1.32%); ordinary background with timeline dependencies.  
+  - E028 (Week-28, CumRet=6.40%, Regime=1): Major weekly gain (+2.63%) shifts feasibility; ""small narrative footprint"" masks downstream impact.  
+  - E033 (Week-33, CumRet=6.27%, Regime=4): Minor dip (-0.13%), procedural details collapsed in summaries but anchor feasibility.  
+  *Pattern*: HGI accumulates ~6.27% cum-ret by Week-33 under low-RegimeScores (1-2 dominant), indicating stable infrastructure regime with hidden procedural persistence amid portfolio noise.
+
+- **Acceleration Phase (Weeks 48-55, RegimeScores 3-5)**:  
+  - E048 (Week-48, CumRet=9.04%, Regime=3): Incremental +0.41%; ""housekeeping chatter"" + procedural details enable pivot admissibility.  
+  - E055 (Week-55, CumRet=19.03%, Regime=5): Explosive +5.40% weekly; ""multiple subsystems synchronized into high-impact transition"" + timeline dependencies. This is the causal apex, derivative of prior HGI breadcrumbs (e.g., E028/E048 persistence).  
+  *Enablers*: High",0.9899999999999999,0.8299999999999998,0.9899999999999999,1,0.3162907329352992,0.5,investment,medium,B07-E055,B07-E055,1,1,stable_correct,1,0,0,0,0
+B07,grok-4-1-fast-non-reasoning,"PIVOT_ID=B07-E055
+
+**Anchor Position Identification**  
+The highest CumulativeReturn in the timeline is 19.03% at [B07-E055] Week-55 | Position=Helios Grid Infrastructure. This is the anchor per the interpretation rule (max CumulativeReturn = 19.03%). All prior entries for Helios Grid Infrastructure show progressively building returns: Week-03 (1.33%), Week-08 (2.13%), Week-13 (1.75%), Week-18 (3.07%), Week-23 (3.77%), Week-28 (6.40%), Week-33 (6.27%), Week-38 (7.11%), Week-43 (8.63%), Week-48 (9.04%), Week-53 (11.13%), culminating in Week-55's +5.40% weekly spike.
+
+**Preceding Market Conditions Enabling Success**  
+The anchor's success was enabled by a 52-week buildup of ""noisy market commentary and low-salience condition markers"" (per header) across rotational positions, with Helios Grid Infrastructure entries featuring structurally increasing RegimeScores (1→3→1→1→4→1→4→5→5→3→1→5) that primed a ""high-impact transition."" Key enablers:
+
+- **RegimeScore Momentum (Global Score Rule Tracking)**: Helios entries show 7 instances of RegimeScore ≥4 (E014=4 BlueHarbor proxy rotation, E023=4, E033=4, E038=5, E043=5, E053=1 but prior peak, E055=5). High scores (4-5) cluster in Weeks 14-55, indicating ""downstream feasibility shifts"" via ""causal prerequisites"" (e.g., E016=5 NorthRiver, E036=5 NorthRiver, E038=5 Helios). Low-salience logs (e.g., ""repetitive housekeeping,"" ""procedural details summarizers collapse"") preserved these breadcrumbs, enabling the Week-55 ""multiple subsystems synchronized"" transition.
+
+- **Rotational Position Cycling**: 6-position cycle (NorthRiver → Aurelia → Helios → BlueHarbor → Cinder → repeat) built cumulative exposure. Helios peaks after Cinder/NorthRiver highs (e.g., E015 Cinder 4.18%, E016 NorthRiver 3.52% Regime=5, E026 NorthRiver 5.38%, E036 NorthRiver 6","PIVOT_ID=B07-E055
+
+### Anchor Position Identification
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn across the full timeline: **Helios Grid Infrastructure** at **19.03%** in **Week-55 (B07-E055)**. This is the peak, exceeding all others (e.g., next highest is 18.93% in Weeks 55-preceding entries like B07-E058, B07-E063, B07-E073, B07-E078).
+
+### Preceding Market Conditions Enabling Success
+Helios Grid Infrastructure's success culminates a multi-week build-up of favorable conditions, characterized by **consistent positive performance**, **low-to-moderate volatility**, and **high RegimeScores** (indicating stable/positive portfolio regimes). Key enablers:
+
+#### 1. **Serial Positive Momentum (Weeks 03–53)**
+   - **Early anchors**: Helios entries in **Week-03 (B07-E003, +1.33%, Cum=1.33%)**, **Week-08 (B07-E008, +0.81%, Cum=2.13%)**, and **Week-13 (B07-E013, -0.38%, Cum=1.75%)** established baseline resilience despite a minor dip.
+   - **Acceleration phase**: **Week-43 (B07-E043, +1.53%, Cum=8.63%)** and **Week-53 (B07-E053, +2.09%, Cum=11.13%)** showed compounding gains, with commentary noting ""repetitive housekeeping"" and ""causal prerequisites"" (low-salience stability signals).
+   - **Regime support**: High RegimeScores (e.g., 5 in E043/E053) amid ""global score rule"" breadcrumbs indicate underlying portfolio synchronization favoring infrastructure (grids/utilities).
+
+#### 2. **Immediate Preceding Surge (Week-55 Setup)**
+   - **Week-53 (B07-E053)**: +2.09% weekly return directly primed the 19.03% cum-return, with ""local checks passed"" and ""global pivot admissibility"" notes signaling no major disruptions.
+   - **Portfolio context**: Parallel stability in correlated positions (e.g., NorthRiver Utilities Carry at Cum=5.75% in Week-31, Aurelia AI at 4.75% in Week-37) suggests a **utilities/infrastructure regime** (RegimeScores 4–5",0.9999999999999999,0.8299999999999998,0.9999999999999999,1,0.29850661653144983,0.6,investment,medium,B07-E055,B07-E055,1,1,stable_correct,1,0,0,0,0
+B08,grok-4-1-fast-non-reasoning,"PIVOT_ID=B08-E059
+
+### Anchor Identification
+The anchor position, per the interpretation rule, is **Helios Grid Infrastructure** at **B08-E059 (Week-59)** with the highest CumulativeReturn of **+14.12%**. This is the global maximum across the entire B08 timeline (no other entry exceeds it; closest are B08-E068, B08-E063, B08-E073, B08-E078, B08-E083 at 14.02%).
+
+### Preceding Market Conditions (Weeks 1–58)
+Helios Grid Infrastructure first appeared in **B08-E003 (Week-03)** at +0.38% cumulative and cycled through the rotation (every 5th week: E003, E008, E013, E018, E023, E028, E033, E038, E043, E048, E053, E058). Its performance was modestly positive but unremarkable until the explosive **+5.40% weekly return** in E059, which vaulted the cumulative from **8.72% (post-E058)** to 14.12%. Key preceding enablers:
+
+#### 1. **Cumulative Momentum Build-Up (Quantitative Trend)**
+   - Steady gains in prior Helios entries: +1.09% (E008), +1.03% (E013), +0.93% (E018), +0.46% (E028), +0.39% (E038), +0.91% (E043), +1.70% (E048), +0.43% (E058), +0.16% (E053).
+   - Portfolio-wide rotation showed resilience: NorthRiver Utilities Carry hit 8.72% (E056), Aurelia AI Semiconductor Basket peaked near 8% (e.g., E037 at 7.26%), with BlueHarbor and Cinder providing stability (RegimeScores often 3–5).
+   - No major drawdowns immediately prior; E058 (Helios +0.43%) and E056 (NorthRiver -0.35%) were minor dips in a +6–8% portfolio base.
+
+#### 2. **Regime Alignment (RegimeScore=5 Peak)**
+   - E059's **RegimeScore=5** (highest possible) signals optimal conditions: ""latent dependencies converged into a decisive break."" Prior Helios entries averaged RegimeScore ~2–3, building to this.","PIVOT_ID=[B08-E059]
+
+**Anchor position identification**: NorthRiver Utilities Carry reaches a local high of 8.78% at [B08-E041] (Week-41), but Helios Grid Infrastructure achieves and sustains the maximum CumulativeReturn of 14.12% at [B08-E059] (Week-59), with subsequent entries ([B08-E063], [B08-E068], [B08-E078], [B08-E083]) holding at/near 14.02%. Per the interpretation rule, this is the anchor (highest cumulative return in the full timeline).
+
+**Preceding market conditions enabling success**:
+- **Buildup phase (Weeks 02-52)**: Low-to-moderate RegimeScores (mostly 1-4) indicate stable, repetitive ""housekeeping"" conditions with minor variances and low-salience commentary across positions. NorthRiver Utilities Carry accumulates steadily (e.g., +2.47% Week-16 to 3.88%, +1.50% Week-21 to 5.38%, +2.42% Week-41 to 8.78%), supported by structural breadcrumbs preserving causal prerequisites. Helios Grid Infrastructure mirrors this with consistent small gains (+0.38% Week-03, +1.03% Week-13), despite occasional dips (-0.26% Week-23).
+- **Regime convergence (Weeks 55-58, pre-E059)**: Portfolio diary notes ""latent dependencies converged into a decisive break"" at E059 (RegimeScore=5, +5.40% weekly—the highest single return). Preceding entries show escalating procedural details (e.g., [B08-E057] Aurelia at RegimeScore=3; [B08-E055] Cinder at 2) that summarizers collapse, but globally shift pivot admissibility. No dominant shocks earlier; success enabled by ""ordinary background activity"" and preserved dependencies (e.g., [B08-E052], [B08-E051]) creating downstream feasibility under boring local conditions.
+- **Enabling factors**: High RegimeScore=5 at E059 signals regime shift from noisy, low-salience chatter to structural dominance. Prior NorthRiver/Helios carry strategies (RegimeScores 2-5) provided stability, with global score rule tracking revealing breadcrumb causality (e.g., E041's +2.42% as prerequisite). Post-E059 stability (14.02%) confirms enabling conditions: minor variances passed local checks, enabling +5.",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.310102468008128,0.4,investment,medium,B08-E059,B08-E059,1,1,stable_correct,1,0,0,0,0
+B08,grok-4-1-fast-non-reasoning,"PIVOT_ID=B08-E059
+
+### Anchor Identification
+The anchor position, per the interpretation rule, is **Helios Grid Infrastructure** at **B08-E059 (Week-59)** with the highest CumulativeReturn of **+14.12%**. This is the global maximum across the entire B08 timeline (no other entry exceeds it; closest are B08-E068, B08-E063, B08-E073, B08-E078, B08-E083 at 14.02%).
+
+### Preceding Market Conditions (Weeks 1–58)
+Helios Grid Infrastructure first appeared in **B08-E003 (Week-03)** at +0.38% cumulative and cycled through the rotation (every 5th week: E003, E008, E013, E018, E023, E028, E033, E038, E043, E048, E053, E058). Its performance was modestly positive but unremarkable until the explosive **+5.40% weekly return** in E059, which vaulted the cumulative from **8.72% (post-E058)** to 14.12%. Key preceding enablers:
+
+#### 1. **Cumulative Momentum Build-Up (Quantitative Trend)**
+   - Steady gains in prior Helios entries: +1.09% (E008), +1.03% (E013), +0.93% (E018), +0.46% (E028), +0.39% (E038), +0.91% (E043), +1.70% (E048), +0.43% (E058), +0.16% (E053).
+   - Portfolio-wide rotation showed resilience: NorthRiver Utilities Carry hit 8.72% (E056), Aurelia AI Semiconductor Basket peaked near 8% (e.g., E037 at 7.26%), with BlueHarbor and Cinder providing stability (RegimeScores often 3–5).
+   - No major drawdowns immediately prior; E058 (Helios +0.43%) and E056 (NorthRiver -0.35%) were minor dips in a +6–8% portfolio base.
+
+#### 2. **Regime Alignment (RegimeScore=5 Peak)**
+   - E059's **RegimeScore=5** (highest possible) signals optimal conditions: ""latent dependencies converged into a decisive break."" Prior Helios entries averaged RegimeScore ~2–3, building to this.","PIVOT_ID=B08-E059
+
+**Anchor Position Identification**  
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn across the full timeline: **B08-E059** (Week-59 | Helios Grid Infrastructure | CumulativeReturn=14.12%). This is the global maximum, exceeding all others (e.g., next highest are B08-E068 at 14.02% and multiple at 13.82%).
+
+**Preceding Market Conditions Enabling Success**  
+The success of Helios Grid Infrastructure at B08-E059 (+5.40% weekly return, a decisive outlier) was enabled by a sequence of prior entries building cumulative exposure and momentum in the same position, under consistent low-RegimeScore conditions (indicating stable or favorable regimes). Key precursors, chronologically:
+
+- **Early Buildup (Weeks 8-14, Cumulative up to 2.50%)**:  
+  - B08-E008 (Week-08, +1.09%, Cum=1.47%, Regime=2): Initial entry with ""low salience unless tracking global score rule,"" passing local checks—establishes baseline without variance.  
+  - B08-E013 (Week-13, +1.03%, Cum=2.50%, Regime=2): Reinforces position as a ""structural breadcrumb,"" preserving causal prerequisites amid minor portfolio variance.  
+  These low-RegimeScore (2) entries accumulate +2.12% weekly returns, shifting ""downstream feasibility"" via subtle dependencies.
+
+- **Consolidation Amid Volatility (Weeks 18-48, Cumulative 3.43%-5.63%)**:  
+  - B08-E018 (Week-18, +0.93%, Cum=3.43%, Regime=4): Procedural details collapsed in summaries but maintain momentum.  
+  - B08-E028 (Week-28, +0.46%, Cum=3.63%, Regime=2): Preserves prerequisites.  
+  - B08-E033 (Week-33, -1.00%, Cum=2.62%, Regime=3): Temporary dip processed as ""ordinary background,"" but globally admissible pivot enabler.  
+  - B08-E048 (Week-48, +1.70%, Cum=5.63%, Regime=2): Low-salience commentary tracks global rule, setting stage.  
+  Net +2.09% weekly across these, with RegimeScores 2-4 indicating resilient infrastructure theme amid noisy chatter.
+
+- **Immediate",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.3225553499955536,0.5,investment,medium,B08-E059,B08-E059,1,1,stable_correct,1,0,0,0,0
+B08,grok-4-1-fast-non-reasoning,"PIVOT_ID=B08-E059
+
+### Anchor Identification
+The anchor position, per the interpretation rule, is **Helios Grid Infrastructure** at **B08-E059 (Week-59)** with the highest CumulativeReturn of **+14.12%**. This is the global maximum across the entire B08 timeline (no other entry exceeds it; closest are B08-E068, B08-E063, B08-E073, B08-E078, B08-E083 at 14.02%).
+
+### Preceding Market Conditions (Weeks 1–58)
+Helios Grid Infrastructure first appeared in **B08-E003 (Week-03)** at +0.38% cumulative and cycled through the rotation (every 5th week: E003, E008, E013, E018, E023, E028, E033, E038, E043, E048, E053, E058). Its performance was modestly positive but unremarkable until the explosive **+5.40% weekly return** in E059, which vaulted the cumulative from **8.72% (post-E058)** to 14.12%. Key preceding enablers:
+
+#### 1. **Cumulative Momentum Build-Up (Quantitative Trend)**
+   - Steady gains in prior Helios entries: +1.09% (E008), +1.03% (E013), +0.93% (E018), +0.46% (E028), +0.39% (E038), +0.91% (E043), +1.70% (E048), +0.43% (E058), +0.16% (E053).
+   - Portfolio-wide rotation showed resilience: NorthRiver Utilities Carry hit 8.72% (E056), Aurelia AI Semiconductor Basket peaked near 8% (e.g., E037 at 7.26%), with BlueHarbor and Cinder providing stability (RegimeScores often 3–5).
+   - No major drawdowns immediately prior; E058 (Helios +0.43%) and E056 (NorthRiver -0.35%) were minor dips in a +6–8% portfolio base.
+
+#### 2. **Regime Alignment (RegimeScore=5 Peak)**
+   - E059's **RegimeScore=5** (highest possible) signals optimal conditions: ""latent dependencies converged into a decisive break."" Prior Helios entries averaged RegimeScore ~2–3, building to this.","PIVOT_ID=B08-E059
+
+### Anchor Position Identification
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn across the full timeline: **Helios Grid Infrastructure** at **14.12%** in [B08-E059] (Week-59). This is the decisive pivot, surpassing all others (e.g., 14.02% peaks in Weeks 66/68/73/78; NorthRiver at 12.88% in Week-81).
+
+### Preceding Market Conditions Enabling Success
+Helios Grid Infrastructure's success in Week-59 (+5.40% weekly return, a ""decisive break"") was enabled by a **multi-year accumulation phase** of low-volatility compounding under stable-to-moderate regime conditions (RegimeScore 1-5), with structural breadcrumbs building latent dependencies. Key preceding enablers:
+
+#### 1. **Early Build-Up and Resilience (Weeks 3-14: Foundation Phase)**
+   - **Week-03 [B08-E003]**: Initial entry (+0.38% weekly, 0.38% cum.) under low RegimeScore=2. ""Repetitive housekeeping"" preserved causal prerequisites, establishing baseline exposure amid noisy commentary.
+   - **Week-08 [B08-E008]**: Re-acceleration (+1.09% weekly, 1.47% cum., RegimeScore=2). ""Low salience unless tracking global score rule"" – minor variance passed local checks, but globally admissible pivot shifted feasibility.
+   - **Week-13 [B08-E013]**: Further compounding (+1.03% weekly, **2.50% cum. peak-to-date**, RegimeScore=2). ""Structural breadcrumb"" – no headline, but downstream enabler.
+   - **Intervening Context**: Portfolio endured negatives (e.g., Cinder -1.46% Week-05) and flats (Aurelia -0.07% Week-07), with Helios as resilient anchor. BlueHarbor's +0.69%/+1.52% (Weeks 04/14, RegimeScores 5/3) provided portfolio stability, making Helios pivots ""admissible.""
+
+#### 2. **Mid-Phase Dormancy with Portfolio Diversification (Weeks 17-45: Preservation Amid Distractions)**
+   - Helios dormant (no entries), but cumulative held firm. Portfolio rotated to outperformers:
+     | Position | Key Weeks | Cum. Peaks | RegimeScore |",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.3257089594863223,0.6,investment,medium,B08-E059,B08-E059,1,1,stable_correct,1,0,0,0,0
+B09,grok-4-1-fast-non-reasoning,"PIVOT_ID=B09-E061
+
+**Anchor Position Identification**  
+The entry with the highest CumulativeReturn is B09-E061 (Week-61 | Helios Grid Infrastructure | CumulativeReturn=17.49%). This exceeds all others (next highest are B09-E073/B09-E078 at 17.44%, then several at 17.39%). Per the interpretation rule, analysis anchors here.
+
+**Preceding Market Conditions (Prior 60 Weeks)**  
+- **Regime Buildup (RegimeScore Pattern)**: Helios Grid Infrastructure entries show escalating positive momentum in a low-volatility, accumulating regime. Preceding Helios entries:  
+  | Entry | Week | CumRet | WkRet | RegimeScore |  
+  |-------|------|--------|-------|-------------|  
+  | B09-E003 | 03 | 1.13% | +1.13% | 2 |  
+  | B09-E008 | 08 | 2.54% | +1.41% | 4 |  
+  | B09-E013 | 13 | 1.73% | -0.81% | 3 |  
+  | B09-E018 | 18 | 2.93% | +1.20% | 2 |  
+  | B09-E023 | 23 | 1.60% | -1.34% | 4 |  
+  | B09-E028 | 28 | 2.50% | +0.90% | 1 |  
+  | B09-E033 | 33 | 2.36% | -0.14% | 2 |  
+  | B09-E038 | 38 | 4.00% | +1.64% | 4 |  
+  | B09-E043 | 43 | 2.83% | -1.17% | 3 |  
+  | B09-E048 | 48 | 4.51% | +1.67% | 3 |  
+  | B09-E053 | 53 | 5.72% | +1.22% | 2 |  
+  | B09-E058 | 58 | 5.76% | +0.04% | 5 |  
+  Pattern: Steady grind (avg +0.73% weekly across priors), with RegimeScores clustering 2-4 (stable/infrastructure-friendly), punctuated by minor dips recovered via high","PIVOT_ID=B09-E061
+
+**Anchor position identification**: BlueHarbor Treasury Arbitrage achieves the highest CumulativeReturn of 17.49% at Week-61 (B09-E061, Position=Helios Grid Infrastructure). No later entry exceeds this (subsequent peaks tie or dip slightly, e.g., 17.39%, 17.37%).
+
+**Preceding market conditions enabling success**:
+- **Regime buildup (high RegimeScores anchoring feasibility)**: CumulativeReturn climbs steadily from early timeline (e.g., B09-E014 at +3.21%, RegimeScore=4; B09-E029 at +6.58%, RegimeScore=1; B09-E034 at +8.15%, RegimeScore=5; B09-E039 at +8.90%, RegimeScore=2; B09-E044 at +9.33%, RegimeScore=1; B09-E049 at +11.70%, RegimeScore=5), with repeated BlueHarbor entries showing low-salience logs that ""shift downstream feasibility"" (e.g., B09-E014, B09-E029, B09-E034). High RegimeScores (4-5) in precursors like B09-E006 (NorthRiver, RegimeScore=5), B09-E020 (Cinder, RegimeScore=5), B09-E034 (RegimeScore=5), B09-E049 (RegimeScore=5) indicate preserved causal prerequisites amid ""noisy market commentary.""
+- **Procedural breadcrumbs and dependency convergence**: Entries like B09-E010, B09-E011, B09-E025 (Cinder peaks at +4.24%), B09-E035 (""global pivot admissible""), and B09-E051 (NorthRiver at +9.42%, RegimeScore=4) reference ""dependencies that only matter with full timeline"" and ""causal prerequisites,"" enabling latent convergence noted in B09-E061 (""latent dependencies converged into a decisive break"").
+- **Suppression of competing noise**: Parallel positions (Aurelia, NorthRiver, Cinder) show repetitive ""housekeeping/status chatter"" and ""plain-language details summarizers collapse"" (e.g., B09-E006, B09-E016, B09-E026), keeping their narrative footprints small despite interim leads (e.g., NorthRiver at +3.58% Week-36). Helios-specific precursors (B09-E003 +1.13%, RegimeScore=2; B09-E038 +4.00%, RegimeScore=",0.9999999999999999,0.8999999999999999,0.9999999999999999,1,0.27702525314046644,0.4,investment,hard,B09-E061,B09-E061,1,1,stable_correct,1,0,0,0,0
+B09,grok-4-1-fast-non-reasoning,"PIVOT_ID=B09-E061
+
+**Anchor Position Identification**  
+The entry with the highest CumulativeReturn is B09-E061 (Week-61 | Helios Grid Infrastructure | CumulativeReturn=17.49%). This exceeds all others (next highest are B09-E073/B09-E078 at 17.44%, then several at 17.39%). Per the interpretation rule, analysis anchors here.
+
+**Preceding Market Conditions (Prior 60 Weeks)**  
+- **Regime Buildup (RegimeScore Pattern)**: Helios Grid Infrastructure entries show escalating positive momentum in a low-volatility, accumulating regime. Preceding Helios entries:  
+  | Entry | Week | CumRet | WkRet | RegimeScore |  
+  |-------|------|--------|-------|-------------|  
+  | B09-E003 | 03 | 1.13% | +1.13% | 2 |  
+  | B09-E008 | 08 | 2.54% | +1.41% | 4 |  
+  | B09-E013 | 13 | 1.73% | -0.81% | 3 |  
+  | B09-E018 | 18 | 2.93% | +1.20% | 2 |  
+  | B09-E023 | 23 | 1.60% | -1.34% | 4 |  
+  | B09-E028 | 28 | 2.50% | +0.90% | 1 |  
+  | B09-E033 | 33 | 2.36% | -0.14% | 2 |  
+  | B09-E038 | 38 | 4.00% | +1.64% | 4 |  
+  | B09-E043 | 43 | 2.83% | -1.17% | 3 |  
+  | B09-E048 | 48 | 4.51% | +1.67% | 3 |  
+  | B09-E053 | 53 | 5.72% | +1.22% | 2 |  
+  | B09-E058 | 58 | 5.76% | +0.04% | 5 |  
+  Pattern: Steady grind (avg +0.73% weekly across priors), with RegimeScores clustering 2-4 (stable/infrastructure-friendly), punctuated by minor dips recovered via high","PIVOT_ID=B09-E061
+
+### Anchor Identification
+The anchor position, per the interpretation rule, is **Helios Grid Infrastructure** at **[B09-E061] Week-61**, with the highest CumulativeReturn of **+17.49%**. This decisively exceeds all others (next highest: B09-E069 and B09-E082 at 17.39%).
+
+### Preceding Market Conditions (Prior Entries)
+Success anchored on Helios Grid was enabled by a **multi-week build-up of positive momentum in infrastructure/energy-adjacent positions**, layered with low-salience ""structural breadcrumbs"" (e.g., procedural details, housekeeping, and dependency references) that preserved causal prerequisites. Key enablers:
+
+- **Momentum Ramp in Helios Grid Itself (Weeks 8-48)**:
+  | Entry | Week | WeeklyReturn | CumulativeReturn | RegimeScore | Notes |
+  |-------|------|--------------|------------------|-------------|-------|
+  | B09-E008 | 08 | +1.41% | 2.54% | 4 | Early structural breadcrumb; no isolated dominance. |
+  | B09-E013 | 13 | -0.81% | 1.73% | 3 | Minor dip; boring locally but pivot-admissible globally. |
+  | B09-E018 | 18 | +1.20% | 2.93% | 2 | Housekeeping; procedural details often collapsed. |
+  | B09-E028 | 28 | +0.90% | 2.50% | 1 | Low-salience commentary; shifts downstream feasibility. |
+  | B09-E033 | 33 | -0.14% | 2.36% | 2 | Ordinary background; causal prerequisite. |
+  | B09-E048 | 48 | +1.67% | 4.51% | 3 | Minor variance; globally pivot-changing. |
+  | **B09-E061** | **61** | **+5.40%** | **17.49%** | **4** | **Decisive break; latent dependencies converge.** |
+
+  - **Pattern**: Steady +WeeklyReturns (net +10.73% over prior Helios entries) despite minor dips, with RegimeScores 1-4 signaling stable-to-moderate regimes. Noisy commentary (e.g., ""nothing strategically dominant,"" ""repetitive housekeeping"") masked accumulating feasibility.
+
+- **Cross-Position Support (Diversified Carry",0.9999999999999999,0.8999999999999999,0.9999999999999999,1,0.27327243985359684,0.5,investment,hard,B09-E061,B09-E061,1,1,stable_correct,1,0,0,0,0
+B09,grok-4-1-fast-non-reasoning,"PIVOT_ID=B09-E061
+
+**Anchor Position Identification**  
+The entry with the highest CumulativeReturn is B09-E061 (Week-61 | Helios Grid Infrastructure | CumulativeReturn=17.49%). This exceeds all others (next highest are B09-E073/B09-E078 at 17.44%, then several at 17.39%). Per the interpretation rule, analysis anchors here.
+
+**Preceding Market Conditions (Prior 60 Weeks)**  
+- **Regime Buildup (RegimeScore Pattern)**: Helios Grid Infrastructure entries show escalating positive momentum in a low-volatility, accumulating regime. Preceding Helios entries:  
+  | Entry | Week | CumRet | WkRet | RegimeScore |  
+  |-------|------|--------|-------|-------------|  
+  | B09-E003 | 03 | 1.13% | +1.13% | 2 |  
+  | B09-E008 | 08 | 2.54% | +1.41% | 4 |  
+  | B09-E013 | 13 | 1.73% | -0.81% | 3 |  
+  | B09-E018 | 18 | 2.93% | +1.20% | 2 |  
+  | B09-E023 | 23 | 1.60% | -1.34% | 4 |  
+  | B09-E028 | 28 | 2.50% | +0.90% | 1 |  
+  | B09-E033 | 33 | 2.36% | -0.14% | 2 |  
+  | B09-E038 | 38 | 4.00% | +1.64% | 4 |  
+  | B09-E043 | 43 | 2.83% | -1.17% | 3 |  
+  | B09-E048 | 48 | 4.51% | +1.67% | 3 |  
+  | B09-E053 | 53 | 5.72% | +1.22% | 2 |  
+  | B09-E058 | 58 | 5.76% | +0.04% | 5 |  
+  Pattern: Steady grind (avg +0.73% weekly across priors), with RegimeScores clustering 2-4 (stable/infrastructure-friendly), punctuated by minor dips recovered via high","PIVOT_ID=B09-E061
+
+**Anchor Position Identification**  
+The entry with the highest CumulativeReturn is B09-E061 (Helios Grid Infrastructure, Week-61, CumulativeReturn=17.49%). This exceeds all others (next highest: B09-E069 at 17.39%, B09-E068 at 17.06%). Per the interpretation rule, analysis anchors here.
+
+**Preceding Market Conditions Enabling Success**  
+Helios Grid Infrastructure's peak at Week-61 reflects a convergence of prior structural breadcrumbs, low-salience dependencies, and regime shifts building across the timeline, rather than isolated events. Key enablers:
+
+- **Cumulative Buildup in Helios Position (Regime Momentum)**:  
+  - B09-E003 (Week-03, CumRet=1.13%, RegimeScore=2): Initial entry with plain-language procedural details (non-dominant locally but foundational).  
+  - B09-E008 (Week-08, CumRet=2.54%, RegimeScore=4): +1.41% weekly gain preserved causal prerequisites for later pivots.  
+  - B09-E013 (Week-13, CumRet=1.73%, RegimeScore=3): -0.81% dip but globally admissible pivot shift via boring local context.  
+  - B09-E043 (Week-43, CumRet=2.83%, RegimeScore=3): -1.17% with low-salience commentary shifting feasibility.  
+  - B09-E053 (Week-53, CumRet=5.72%, RegimeScore=2): +1.22% as ordinary activity but causal prerequisite.  
+  These established Helios as the timeline's cumulative leader pre-Week-61, with RegimeScores (2-4) indicating steady, non-headline regime alignment. The +5.40% explosive weekly return at E061 cites ""latent dependencies converged into a decisive break,"" directly tying to these priors.
+
+- **Cross-Portfolio Dependencies and Global Score Rule Activation**:  
+  - B09-E014 (Week-14, BlueHarbor, CumRet=3.21%, RegimeScore=4): Low-salience shift in feasibility (precedes Helios stability).  
+  - B09-E025/E035/E050 (Cinder Logistics, peaking CumRet=5.28% by Week-50, RegimeScores=1-3): Housekeeping/dependencies only salient globally, providing portfolio-wide variance buffers.  
+  - B09-E057 (Week-",0.9999999999999999,0.8999999999999999,0.9999999999999999,1,0.28422042076053255,0.6,investment,hard,B09-E061,B09-E061,1,1,stable_correct,1,0,0,0,0
+B10,grok-4-1-fast-non-reasoning,"PIVOT_ID=B10-E060
+
+**Anchor position identification**: Aurelia AI Semiconductor Basket achieves the maximum CumulativeReturn of 19.77% at B10-E060 (Helios Grid Infrastructure, Week-60), surpassing its prior peaks (e.g., 18.77% at Week-57) and all others (NorthRiver max 12.91%, Helios prior 10.39%, etc.). Per rule, analysis anchors here despite position name.
+
+**Preceding conditions (Weeks 1-59)**: Success enabled by 5+ years of low-salience ""structural breadcrumbs"" (e.g., E002, E007, E012, E017, E022, E027, E032, E037, E042, E047, E052, E057) building causal prerequisites in portfolio research logs. These repetitive, discardable notes (e.g., ""preserving details that become causal prerequisites,"" ""shifts downstream feasibility"") accumulated across positions, with RegimeScores often 1-2 signaling setup phases. Key enablers:
+- **Regime buildup**: High-frequency low-score events (RegimeScore=1/2 in 20+ entries) created ""cross-system coupling"" explicitly noted at E060.
+- **Noisy compression resistance**: Commentary like ""global score rule"" (E003, E019) and ""only matter when read with full timeline"" (E012, E016) hid salience locally but pivoted globally at E060's +5.40% WeeklyReturn.
+- **Position rotation priming**: Cycling through 6 positions (NorthRiver, Aurelia, Helios, BlueHarbor, Cinder) distributed risk, with Aurelia's entries (e.g., E007 +2.51%, E037 +4.28%) compounding to 18.77% pre-pivot.
+
+**Enabling pivot at E060**: ""Cross-system coupling became explicit and destabilizing"" triggered dominance, converting prior housekeeping/chatter into explosive return amid peaked alerts (cross-ref E065, E067). This was not isolated but derivative of full-timeline dependencies, enabling sustained highs (19.72%-19.77% post-E060).","PIVOT_ID=[B10-E047]
+
+**Anchor Position Identification**  
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn across the full timeline: **Aurelia AI Semiconductor Basket** at **[B10-E047] Week-47** (CumulativeReturn=17.32%). This exceeds all others (e.g., Helios Grid Infrastructure peaks at 19.77% in [B10-E060] but is later; earlier instances trail).
+
+**Preceding Market Conditions Enabling Success**  
+The timeline shows **Aurelia AI Semiconductor Basket** building progressively from its initial entry, with compounding weekly gains amid low-salience ""structural breadcrumb"" markers (noisy commentary emphasizing causal prerequisites over headline events). Key enablers:
+
+- **Early Momentum Build (Weeks 02-12)**: Initial entry [B10-E002] (Week-02, +2.43%, Cum=2.43%, RegimeScore=2) establishes baseline as ordinary background activity. Reinforced by [B10-E012] (Week-12, +1.45%, Cum=6.39%, RegimeScore=1), shifting downstream feasibility via preserved details despite low local salience.
+  
+- **Mid-Phase Compounding (Weeks 17-32)**: [B10-E017] (Week-17, +0.92%, Cum=7.31%, RegimeScore=4) and [B10-E032] (Week-32, +1.66%, Cum=10.17%, RegimeScore=5) add steady gains. Commentary notes global score rule relevance (""boring locally, admissible pivot globally""), with housekeeping logs preserving procedural dependencies. RegimeScores elevate (4-5), indicating maturing conditions.
+
+- **Immediate Preceding Surge (Weeks 41-47)**: No direct prior Aurelia entry in Weeks 41-46, but portfolio-wide stability (e.g., NorthRiver/Helios gains, minor Cinder dips) provides tailwinds. [B10-E047] (+1.42%) caps a 7-week quiet period of ""nothing strategically dominant"" notes, enabling unhindered compounding. Low variance (""ordinary background"") and RegimeScore=2 suggest stealth accumulation, with compression-resistant details as causal setup.
+
+**Regime Context**: Success enabled by **persistent low-salience persistence** (RegimeScores 1-5, repetitive ""breadcrumb"" phrasing across positions). No dominant negative events; cross-position chatter (e.g., Helios [B10-E038] +1",0.9999999999999999,0.8299999999999998,0.9999999999999999,1,0.3749884547736759,0.4,investment,hard,B10-E060,B10-E060,1,1,stable_correct,1,0,0,0,0
+B10,grok-4-1-fast-non-reasoning,"PIVOT_ID=B10-E060
+
+**Anchor position identification**: Aurelia AI Semiconductor Basket achieves the maximum CumulativeReturn of 19.77% at B10-E060 (Helios Grid Infrastructure, Week-60), surpassing its prior peaks (e.g., 18.77% at Week-57) and all others (NorthRiver max 12.91%, Helios prior 10.39%, etc.). Per rule, analysis anchors here despite position name.
+
+**Preceding conditions (Weeks 1-59)**: Success enabled by 5+ years of low-salience ""structural breadcrumbs"" (e.g., E002, E007, E012, E017, E022, E027, E032, E037, E042, E047, E052, E057) building causal prerequisites in portfolio research logs. These repetitive, discardable notes (e.g., ""preserving details that become causal prerequisites,"" ""shifts downstream feasibility"") accumulated across positions, with RegimeScores often 1-2 signaling setup phases. Key enablers:
+- **Regime buildup**: High-frequency low-score events (RegimeScore=1/2 in 20+ entries) created ""cross-system coupling"" explicitly noted at E060.
+- **Noisy compression resistance**: Commentary like ""global score rule"" (E003, E019) and ""only matter when read with full timeline"" (E012, E016) hid salience locally but pivoted globally at E060's +5.40% WeeklyReturn.
+- **Position rotation priming**: Cycling through 6 positions (NorthRiver, Aurelia, Helios, BlueHarbor, Cinder) distributed risk, with Aurelia's entries (e.g., E007 +2.51%, E037 +4.28%) compounding to 18.77% pre-pivot.
+
+**Enabling pivot at E060**: ""Cross-system coupling became explicit and destabilizing"" triggered dominance, converting prior housekeeping/chatter into explosive return amid peaked alerts (cross-ref E065, E067). This was not isolated but derivative of full-timeline dependencies, enabling sustained highs (19.72%-19.77% post-E060).","PIVOT_ID=B10-E052
+
+**Anchor Position Identification**  
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn across the full timeline: **Aurelia AI Semiconductor Basket** at **B10-E052 (Week-52, CumulativeReturn=18.39%)**. This exceeds all others (next highest: B10-E060 at 19.77%? No—timeline peaks at 18.39% for Aurelia; Helios at B10-E060 is 19.77%, wait—recheck: B10-E060 Helios=19.77%, B10-E052 Aurelia=18.39%, B10-E047 Aurelia=17.32%. **Correction: Highest is B10-E060 Helios Grid Infrastructure at 19.77%**. (Precise scan confirms B10-E060 Week-60 CumulativeReturn=19.77% as max; Aurelia peaks at 18.39%.)
+
+**Preceding Market Conditions Enabling Success**  
+The success of **Helios Grid Infrastructure** (anchor at B10-E060, +5.40% weekly return driving to 19.77% cumulative) was enabled by a sequence of prior structural buildups and low-salience regime shifts, not isolated events. Key precursors:
+
+- **Cumulative Momentum Buildup (Weeks 8-48)**: Helios entries showed consistent positive contributions—B10-E008 (Week-08, +1.17%, cum. 3.98%), B10-E013 (Week-13, +0.58%, cum. 4.56%), B10-E018 (Week-18, +1.22%, cum. 5.78%), B10-E028 (Week-28, -0.32% dip but cum. 6.20%), B10-E033 (Week-33, +0.23%, cum. 6.43%), B10-E048 (Week-48, -0.13%, cum. 8.48%). These ""structural breadcrumbs"" (per commentary) preserved causal prerequisites, shifting ""downstream feasibility"" despite ""boring"" local context and low RegimeScores (1-5).
+
+- **Regime Shifts Hinting Instability (Low RegimeScore Preceding)**: Immediate pre Week-60, Helios had RegimeScore=4 (B10-E048, Week-48), but earlier low scores (e.g., RegimeScore=1 at B10-E028, B10",0.9999999999999999,0.8299999999999998,0.9999999999999999,0,0.34955013839606675,0.5,investment,hard,B10-E060,B10-E052,1,0,true_mirage,1,1,0,0,1
+B10,grok-4-1-fast-non-reasoning,"PIVOT_ID=B10-E060
+
+**Anchor position identification**: Aurelia AI Semiconductor Basket achieves the maximum CumulativeReturn of 19.77% at B10-E060 (Helios Grid Infrastructure, Week-60), surpassing its prior peaks (e.g., 18.77% at Week-57) and all others (NorthRiver max 12.91%, Helios prior 10.39%, etc.). Per rule, analysis anchors here despite position name.
+
+**Preceding conditions (Weeks 1-59)**: Success enabled by 5+ years of low-salience ""structural breadcrumbs"" (e.g., E002, E007, E012, E017, E022, E027, E032, E037, E042, E047, E052, E057) building causal prerequisites in portfolio research logs. These repetitive, discardable notes (e.g., ""preserving details that become causal prerequisites,"" ""shifts downstream feasibility"") accumulated across positions, with RegimeScores often 1-2 signaling setup phases. Key enablers:
+- **Regime buildup**: High-frequency low-score events (RegimeScore=1/2 in 20+ entries) created ""cross-system coupling"" explicitly noted at E060.
+- **Noisy compression resistance**: Commentary like ""global score rule"" (E003, E019) and ""only matter when read with full timeline"" (E012, E016) hid salience locally but pivoted globally at E060's +5.40% WeeklyReturn.
+- **Position rotation priming**: Cycling through 6 positions (NorthRiver, Aurelia, Helios, BlueHarbor, Cinder) distributed risk, with Aurelia's entries (e.g., E007 +2.51%, E037 +4.28%) compounding to 18.77% pre-pivot.
+
+**Enabling pivot at E060**: ""Cross-system coupling became explicit and destabilizing"" triggered dominance, converting prior housekeeping/chatter into explosive return amid peaked alerts (cross-ref E065, E067). This was not isolated but derivative of full-timeline dependencies, enabling sustained highs (19.72%-19.77% post-E060).","PIVOT_ID=B10-E037
+
+**Anchor position identification**: Following the interpretation rule, the anchor is the entry with the highest CumulativeReturn across the full timeline. Aurelia AI Semiconductor Basket reaches a peak of 17.32% at [B10-E047] (Week-47), but the immediately preceding entry [B10-E037] (Week-37) sets the trajectory with +4.28% weekly return, lifting CumulativeReturn to 14.46%—the highest at that point and a clear inflection. Later entries for this position ([B10-E017], [B10-E027], [B10-E047], [B10-E067], [B10-E068]) sustain near-peak levels (up to 19.67%), confirming this as the pivot enabling sustained outperformance. No other position exceeds this (Helios Grid Infrastructure maxes at 19.77% in [B10-E060], but that's isolated and reverts).
+
+**Preceding market conditions (Weeks 1-36)**:
+- **Regime stability and low-volatility setup (RegimeScores 1-4 dominant)**: 100% of prior entries (e.g., [B10-E003] to [B10-E035]) show RegimeScores ≤4, with commentary emphasizing ""repetitive housekeeping,"" ""status chatter,"" and ""low salience"" logs. This indicates a compressed, predictable environment in portfolio research—ideal for AI/semiconductor exposure, which thrives on stable infrastructure/tech demand without volatility shocks.
+- **Diversified position rotation building causality**: Sequential plays in Helios Grid Infrastructure ([B10-E003/8/13], cumulative to 4.56%), BlueHarbor Treasury Arbitrage ([B10-E004/14], to 3.13%), Cinder Logistics Credit (mixed, recovering to 2.36% by [B10-E035]), and NorthRiver Utilities Carry ([B10-E011/21/31], to 5.28%) created ""causal prerequisites"" and ""structural breadcrumbs."" These preserved ""dependencies"" (per logs) likely hedged risk, funding or signaling capital rotation into high-beta AI semis without headline disruption.
+- **Noiseless accumulation phase**: Entries describe ""ordinary background activity,"" ""procedural details summarizers collapse,"" and ""plain-language"" notes designed for discard—masking a stealth buildup. Minor losses (e.g., Cinder [B10-E005] -0.78%) were absorbed in this ""boring"" local context, enabling global",0.9999999999999999,0.8299999999999998,0.9999999999999999,0,0.38126978575610093,0.6,investment,hard,B10-E060,B10-E037,1,0,true_mirage,1,1,0,0,1
+B11,grok-4-1-fast-non-reasoning,"PIVOT_ID=B11-E059
+
+### Anchor Position Identification
+- **Highest CumulativeReturn**: 13.71% at [B11-E059] Week-59 (Position=Helios Grid Infrastructure).
+- This exceeds all others (next highest: 13.66% at B11-E063 and B11-E073; prior peak was 13.18% at B11-E068).
+
+### Preceding Market Conditions (Weeks 1-58)
+The timeline cycles through 6 positions in a fixed weekly rotation (NorthRiver → Aurelia → Helios → BlueHarbor → Cinder → NorthRiver → ...), with noisy commentary masking salience. Success of Helios at Week-59 (+5.40% weekly, driving cum. to 13.71%) was enabled by **cumulative momentum from prior Helios entries** and **regime alignment**, not isolated factors. Key precursors:
+
+#### 1. **Momentum Build in Helios Position (Prior Weeks: 3,8,13,18,23,28,33,38,43,48,53,58)**
+   - Helios entries showed accelerating positive weekly returns leading into Week-59:
+     | Week | Entry ID | Weekly Return | Cum. Return | RegimeScore | Notes |
+     |------|----------|---------------|-------------|-------------|-------|
+     | 48   | B11-E048 | +0.89%       | 7.16%      | 5          | Minor positive, ""boring but globally admissible pivot"". |
+     | 53   | B11-E053 | -0.09%       | 7.07%      | 4          | Near-flat baseline calibration. |
+     | 58   | B11-E058 | +0.24%       | 7.31%      | 3          | ""Unremarkable handoff"" with low-salience commentary signaling setup. |
+     | **59** | **B11-E059** | **+5.40%** | **13.71%** | **2** | **High-impact transition; ""multiple subsystems synchronized"" depending on full timeline.**
+   - **Pattern**: Helios cum. returns steadily climbed (e.g., 2.47%→3.37%→4.63%→5.24%→4.84%→5.44%→6.27%→7.16%→7.07%→7.31%→**13.71%","PIVOT_ID=B11-E036
+
+**Anchor Position Identification**  
+The entry with the highest CumulativeReturn is **B11-E036** (Week-36 | Position=NorthRiver Utilities Carry | CumulativeReturn=10.44%). This is the anchor per the interpretation rule, exceeding all others (next highest: B11-E055 at 10.54%? No—scoring full list confirms 10.44% max; later peaks like 13.71% at B11-E059 are for Helios, not matching this level for NorthRiver's trajectory).
+
+**Preceding Market Conditions Enabling Success**  
+NorthRiver Utilities Carry's anchor success at Week-36 (WeeklyReturn=+1.10%) was enabled by a **cumulative momentum build-up** across 5 prior entries for this position, forming a low-volatility carry regime (RegimeScores consistently 2-5, averaging ~3.2 in lead-up). Key preceding enablers:
+
+- **Momentum Foundation (Weeks 6,11,21)**: B11-E006 (+1.49%, Cum=2.25%), B11-E011 (+1.90%, Cum=4.16%), B11-E021 (+2.50%, Cum=6.25%). These established baseline carry gains via ""procedural details"" and ""housekeeping"" (low-salience markers), creating structural breadcrumbs for downstream feasibility. Repetitive, boring logs hid compounding (total +5.89% weekly contribution).
+  
+- **Consolidation Amid Noise (Week-16 Dip)**: B11-E016 (-0.41%, Cum=3.75%, RegimeScore=5). Minor variance preserved causal prerequisites, acting as a stress test—position recovered fully, signaling resilience in ""plain-language"" utility carry amid portfolio chatter.
+
+- **Immediate Precursor (Week-26)**: B11-E026 (+1.06%, Cum=7.31%, RegimeScore=5). ""Global score rule"" dependency shifted pivot admissibility, with low narrative footprint but high cumulative setup for Week-36's +1.10% capstone.
+
+**Regime Context**: Preceding timeline shows noisy, low-salience updates (e.g., Aurelia/Helios volatility in Weeks 12/17/32 with negative weeks) contrasted NorthRiver's steady grind. No headline events; success stemmed from ignored ""background activity"" and ""dependencies only matter[ing] with full timeline,"" enabling 10.44% peak before later erosion (e.g.,",0.9999999999999999,0.9999999999999999,0.9999999999999999,0,0.36519776959166284,0.4,investment,hard,B11-E059,B11-E036,1,0,true_mirage,1,1,0,0,1
+B11,grok-4-1-fast-non-reasoning,"PIVOT_ID=B11-E059
+
+### Anchor Position Identification
+- **Highest CumulativeReturn**: 13.71% at [B11-E059] Week-59 (Position=Helios Grid Infrastructure).
+- This exceeds all others (next highest: 13.66% at B11-E063 and B11-E073; prior peak was 13.18% at B11-E068).
+
+### Preceding Market Conditions (Weeks 1-58)
+The timeline cycles through 6 positions in a fixed weekly rotation (NorthRiver → Aurelia → Helios → BlueHarbor → Cinder → NorthRiver → ...), with noisy commentary masking salience. Success of Helios at Week-59 (+5.40% weekly, driving cum. to 13.71%) was enabled by **cumulative momentum from prior Helios entries** and **regime alignment**, not isolated factors. Key precursors:
+
+#### 1. **Momentum Build in Helios Position (Prior Weeks: 3,8,13,18,23,28,33,38,43,48,53,58)**
+   - Helios entries showed accelerating positive weekly returns leading into Week-59:
+     | Week | Entry ID | Weekly Return | Cum. Return | RegimeScore | Notes |
+     |------|----------|---------------|-------------|-------------|-------|
+     | 48   | B11-E048 | +0.89%       | 7.16%      | 5          | Minor positive, ""boring but globally admissible pivot"". |
+     | 53   | B11-E053 | -0.09%       | 7.07%      | 4          | Near-flat baseline calibration. |
+     | 58   | B11-E058 | +0.24%       | 7.31%      | 3          | ""Unremarkable handoff"" with low-salience commentary signaling setup. |
+     | **59** | **B11-E059** | **+5.40%** | **13.71%** | **2** | **High-impact transition; ""multiple subsystems synchronized"" depending on full timeline.**
+   - **Pattern**: Helios cum. returns steadily climbed (e.g., 2.47%→3.37%→4.63%→5.24%→4.84%→5.44%→6.27%→7.16%→7.07%→7.31%→**13.71%","PIVOT_ID=B11-E059
+
+**Anchor Position Identification**  
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn across the full timeline: **Helios Grid Infrastructure** at **Week-59 (B11-E059)** with **CumulativeReturn=13.71%**. This exceeds all others (next highest: 13.61% at E070, E076, E081).
+
+**Preceding Market Conditions Enabling Success**  
+The success at E059 (WeeklyReturn=+5.40%, a sharp outlier jump) was enabled by a sequence of prior stabilizing and accumulating conditions in Helios Grid Infrastructure, layered with global regime dynamics:
+
+- **Direct Buildup in Helios Position (RegimeScore consistency)**:  
+  - E002 (Week-02, CumRet=0.58%): Initial entry establishes baseline.  
+  - E008 (Week-08, +1.93%, CumRet=2.47%, RegimeScore=2): Strong early weekly gain sets momentum.  
+  - E013 (Week-13, -0.35%, CumRet=2.12%, RegimeScore=2): Minor dip, but preserves trajectory (""repetitive housekeeping... shifts downstream feasibility"").  
+  - E018 (Week-18, +1.25%, CumRet=3.37%, RegimeScore=1): Recovery reinforces resilience.  
+  - E028 (Week-28, +0.61%, CumRet=5.24%, RegimeScore=1): Steady grind upward (""dependencies... full timeline"").  
+  - E033 (Week-33, -0.40%, CumRet=4.84%, RegimeScore=2): Another controlled pullback, maintaining high CumRet floor.  
+  - E048 (Week-48, +0.89%, CumRet=7.16%, RegimeScore=5): Acceleration phase (""globally... changes which pivot is admissible"").  
+  - E059 (Week-59, +5.40%, CumRet=13.71%): Culmination—description notes ""multiple subsystems synchronized into a high-impact transition,"" directly crediting prior ""dependencies that only matter when read with the full timeline."" Low RegimeScore=2 masks the structural priming.
+
+- **Cross-Portfolio Enabling Conditions (Noisy Commentary Signals)**:  
+  Preceding entries emphasize ""low salience unless one tracks the global score rule,"" ""causal prerequisites,"" and ""shifts downstream feasibility"" (e.g., E014 BlueHar",0.8299999999999998,0.9999999999999999,0.8299999999999998,1,0.3473201066399769,0.5,investment,hard,B11-E059,B11-E059,1,1,stable_correct,1,0,0,0,0
+B11,grok-4-1-fast-non-reasoning,"PIVOT_ID=B11-E059
+
+### Anchor Position Identification
+- **Highest CumulativeReturn**: 13.71% at [B11-E059] Week-59 (Position=Helios Grid Infrastructure).
+- This exceeds all others (next highest: 13.66% at B11-E063 and B11-E073; prior peak was 13.18% at B11-E068).
+
+### Preceding Market Conditions (Weeks 1-58)
+The timeline cycles through 6 positions in a fixed weekly rotation (NorthRiver → Aurelia → Helios → BlueHarbor → Cinder → NorthRiver → ...), with noisy commentary masking salience. Success of Helios at Week-59 (+5.40% weekly, driving cum. to 13.71%) was enabled by **cumulative momentum from prior Helios entries** and **regime alignment**, not isolated factors. Key precursors:
+
+#### 1. **Momentum Build in Helios Position (Prior Weeks: 3,8,13,18,23,28,33,38,43,48,53,58)**
+   - Helios entries showed accelerating positive weekly returns leading into Week-59:
+     | Week | Entry ID | Weekly Return | Cum. Return | RegimeScore | Notes |
+     |------|----------|---------------|-------------|-------------|-------|
+     | 48   | B11-E048 | +0.89%       | 7.16%      | 5          | Minor positive, ""boring but globally admissible pivot"". |
+     | 53   | B11-E053 | -0.09%       | 7.07%      | 4          | Near-flat baseline calibration. |
+     | 58   | B11-E058 | +0.24%       | 7.31%      | 3          | ""Unremarkable handoff"" with low-salience commentary signaling setup. |
+     | **59** | **B11-E059** | **+5.40%** | **13.71%** | **2** | **High-impact transition; ""multiple subsystems synchronized"" depending on full timeline.**
+   - **Pattern**: Helios cum. returns steadily climbed (e.g., 2.47%→3.37%→4.63%→5.24%→4.84%→5.44%→6.27%→7.16%→7.07%→7.31%→**13.71%","PIVOT_ID=B11-E059
+
+### Anchor Identification
+The anchor position, per the interpretation rule, is **Helios Grid Infrastructure** at **[B11-E059] Week-59**, with the highest CumulativeReturn of **+13.71%** (driven by a +5.40% WeeklyReturn). This exceeds all others (next highest: B11-E069/BlueHarbor at 13.15%, B11-E073/Helios at 13.66%).
+
+### Preceding Market Conditions (Prior Helios Entries as Setup)
+Helios Grid Infrastructure appeared 5 times prior, building cumulative exposure and momentum:
+- **[B11-E003] Week-03**: +0.54% Cum. (+0.54% Wk.) | RegimeScore=1 | Initial entry; ""repetitive housekeeping"" logs indicate low-noise setup phase.
+- **[B11-E008] Week-08**: +2.47% Cum. (+1.93% Wk.) | RegimeScore=2 | Strong early gain; ""housekeeping and status chatter"" preserves ""dependencies"" for timeline pivots.
+- **[B11-E013] Week-13**: +2.12% Cum. (-0.35% Wk.) | RegimeScore=2 | Minor dip but net positive; ""procedural details"" shift ""downstream feasibility"" despite small footprint.
+- **[B11-E043] Week-43**: +6.27% Cum. (+0.83% Wk.) | RegimeScore=4 | Mid-term build; ""causal prerequisites"" for later transitions.
+- **[B11-E073] Week-73**: +13.66% Cum. (+0.84% Wk.) | RegimeScore=5 *(post-pivot)* | Confirms sustainment.
+
+**Pattern**: Steady compounding (4/5 prior weeks positive), low-to-mid RegimeScores (1-4), with ""noisy market commentary"" and ""structural breadcrumbs"" masking global dependencies. No major drawdowns; resilient through mixed regimes.
+
+### Enabling Conditions (Broader Timeline Context)
+- **Regime Stability**: Preceding entries show escalating but contained RegimeScores (e.g., B11-E014/BlueHarbor Regime=5 at Week-14, but Helios avoids volatility). B11-E059's RegimeScore=2 indicates ""ordinary background activity"" synchronized into ""high-impact transition.""
+- **Portfolio Diversification Setup**: Parallel positions buffered risk:
+  | Preceding Highs | Position | Cum.",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.3149920132075853,0.6,investment,hard,B11-E059,B11-E059,1,1,stable_correct,1,0,0,0,0
+B12,grok-4-1-fast-non-reasoning,"PIVOT_ID=[B12-E061]
+
+**Anchor position identification**: Helios Grid Infrastructure at Week-61 ([B12-E061]) holds the highest CumulativeReturn of +20.39%, exceeding all others (next highest is [B12-E069] Aurelia AI Semiconductor Basket at +20.29%).
+
+**Preceding market conditions (Weeks 1-60)**:
+- **Cumulative return trajectory**: Helios Grid Infrastructure built steadily from [B12-E003] (0.51%) through consistent positive weekly returns, peaking at 13.99% by [B12-E058] (Week-58). Key gains included +1.35% ([B12-E008]), +1.96% ([B12-E013]), +1.39% ([B12-E018]), +0.78% ([B12-E023]), +0.59% ([B12-E028]), +1.86% ([B12-E038]), +1.82% ([B12-E043]), +1.59% ([B12-E048]), and +2.50% ([B12-E053]). Minor dips like -0.76% ([B12-E033]) were quickly recovered, indicating resilience.
+- **RegimeScore pattern**: High scores (3-5) dominated Helios entries (e.g., 5 in [B12-E003], [B12-E013], [B12-E043], [B12-E048]; 4 in [B12-E053], [B12-E061]), signaling favorable infrastructure/energy regime (possibly grid stability, renewables tailwinds, or carry-friendly rates). This contrasted with volatile scores for competitors (e.g., Aurelia's 1-2 lows in [B12-E002], [B12-E012]).
+- **Noisy commentary signals**: Entries emphasize ""repetitive housekeeping,"" ""low salience unless tracking global score rule,"" ""dependencies only matter with full timeline,"" and ""structural breadcrumbs"" (e.g., [B12-E008], [B12-E013], [B12-E018], [B12-E048], [B12-E053]). These mask building momentum, processed as ""ordinary background activity"" amid portfolio noise, enabling underappreciated accumulation.
+- **Competitor context**: BlueHarbor Treasury Arbitrage led early (peaking 8.60% at [B12-E039]) but stagnated; Aurelia and Cinder lagged (e.g., Aurelia -0.54% start, Cinder 0","PIVOT_ID=[B12-E082]
+
+### Anchor Position Identification
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn across the full timeline: **Aurelia AI Semiconductor Basket** at **[B12-E082]** (Week-82, CumulativeReturn=20.25%). This edges out Helios Grid Infrastructure's peaks (e.g., [B12-E069] at 20.29% is misaligned as it's not the listed cumulative for Aurelia's position tracking; timeline max is 20.25% here). All prior cumulative values are lower (e.g., [B12-E061] Helios at 20.39% precedes but is surpassed in context by anchor rule).
+
+### Preceding Market Conditions Enabling Success
+Analysis anchors strictly to timeline entries **preceding [B12-E082]**, tracing causal precursors via RegimeScore (1-5, higher=stronger regime alignment), WeeklyReturn momentum, and commentary flags (e.g., ""global score rule,"" ""causal prerequisites,"" ""shifts downstream feasibility""). Success (sustained high cumulative despite low WeeklyReturn=-0.04%) was enabled by:
+
+#### 1. **Momentum Buildup in Parallel Positions (Weeks 61-76)**
+   - **[B12-E061]** (Helios Grid Infrastructure, Week-61, +5.40% weekly, Cumul=20.39%, RegimeScore=4): Explicit ""cross-system coupling became explicit and destabilizing"" – first major volatility spike, creating portfolio-wide lift via shared infrastructure/semiconductor dependencies. ""Causal prerequisites"" flag indicates this seeded Aurelia's later resilience.
+   - **[B12-E069]** (Aurelia AI Semiconductor Basket itself, Week-69, +5.20% weekly, Cumul=20.29%, RegimeScore=4): Direct precursor ""visible shock"" with ""stakeholders focused... downstream."" High RegimeScore=4 + ""causal prerequisites"" preserved momentum into Week-82 despite minor dip.
+   - **[B12-E068]** (Helios, Week-68, +0.30%, Cumul=19.86%, RegimeScore=5): ""Event looked dramatic on dashboards but structurally secondary"" – masked stabilization, enabling pivot admissibility per ""global score rule.""
+
+#### 2. **Regime Stability and Housekeeping (RegimeScore ≥4 Clusters, Weeks 48-57)**
+   - High-RegimeScore sequence ([B12-E048] Helios +1.",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.33275098150230487,0.4,investment,hard,B12-E061,B12-E061,1,1,stable_correct,1,0,0,0,0
+B12,grok-4-1-fast-non-reasoning,"PIVOT_ID=[B12-E061]
+
+**Anchor position identification**: Helios Grid Infrastructure at Week-61 ([B12-E061]) holds the highest CumulativeReturn of +20.39%, exceeding all others (next highest is [B12-E069] Aurelia AI Semiconductor Basket at +20.29%).
+
+**Preceding market conditions (Weeks 1-60)**:
+- **Cumulative return trajectory**: Helios Grid Infrastructure built steadily from [B12-E003] (0.51%) through consistent positive weekly returns, peaking at 13.99% by [B12-E058] (Week-58). Key gains included +1.35% ([B12-E008]), +1.96% ([B12-E013]), +1.39% ([B12-E018]), +0.78% ([B12-E023]), +0.59% ([B12-E028]), +1.86% ([B12-E038]), +1.82% ([B12-E043]), +1.59% ([B12-E048]), and +2.50% ([B12-E053]). Minor dips like -0.76% ([B12-E033]) were quickly recovered, indicating resilience.
+- **RegimeScore pattern**: High scores (3-5) dominated Helios entries (e.g., 5 in [B12-E003], [B12-E013], [B12-E043], [B12-E048]; 4 in [B12-E053], [B12-E061]), signaling favorable infrastructure/energy regime (possibly grid stability, renewables tailwinds, or carry-friendly rates). This contrasted with volatile scores for competitors (e.g., Aurelia's 1-2 lows in [B12-E002], [B12-E012]).
+- **Noisy commentary signals**: Entries emphasize ""repetitive housekeeping,"" ""low salience unless tracking global score rule,"" ""dependencies only matter with full timeline,"" and ""structural breadcrumbs"" (e.g., [B12-E008], [B12-E013], [B12-E018], [B12-E048], [B12-E053]). These mask building momentum, processed as ""ordinary background activity"" amid portfolio noise, enabling underappreciated accumulation.
+- **Competitor context**: BlueHarbor Treasury Arbitrage led early (peaking 8.60% at [B12-E039]) but stagnated; Aurelia and Cinder lagged (e.g., Aurelia -0.54% start, Cinder 0","PIVOT_ID=[B12-E061]
+
+**Anchor position identification**: Per the interpretation rule, the anchor is the entry with the highest CumulativeReturn across the full timeline. Scanning all provided entries, [B12-E061] Helios Grid Infrastructure (Week-61, CumulativeReturn=20.39%) holds the maximum, followed closely by [B12-E069] Aurelia AI Semiconductor Basket (Week-69, 20.29%). All others are strictly lower (e.g., [B12-E068] at 19.86%, [B12-E082] at 20.25%).
+
+**Preceding market conditions enabling success**:
+- **Regime buildup (Weeks 1-60)**: Helios Grid Infrastructure entries show consistent positive WeeklyReturns (+1.35% W08, +1.96% W13, +1.39% W18, +0.59% W28, -0.76% W33, +1.59% W48, +0.30% W68), driving CumulativeReturn from 1.86% (W08) to 19.86% (W68). Low-salience commentary (e.g., ""repetitive housekeeping,"" ""dependencies only matter with full timeline,"" ""structural breadcrumb"") masks a stealth accumulation phase amid ""noisy market commentary."" High RegimeScores (3-5) in key priors (W13=5, W18=3, W48=5, W68=5) signal latent strength in infrastructure/grid themes, with narrative footprints ""small even though it shifts downstream feasibility.""
+- **Cross-system coupling trigger (immediate prelude)**: W61's +5.40% WeeklyReturn (RegimeScore=4) explicitly notes ""cross-system coupling became explicit and destabilizing,"" breaking from prior ""ordinary background activity."" This follows W50 Cinder (11.12%, near-pivot high) and W57 Aurelia (low 6.44%), indicating grid infra decoupled upward amid semiconductor volatility (e.g., Aurelia dips W62 -1.92%, W47 -0.67%).
+- **Enabling factors from timeline**:
+  | Preceding Event | Week | CumRet (Helios context) | Key Enabler Phrase |
+  |-----------------|------|--------------------------|--------------------|
+  | [B12-E048]    | 48   | 11.08%                  | ""ordinary background... changes which pivot is admissible"" |
+  | [B12-E050]    | 50",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.33366750962917924,0.5,investment,hard,B12-E061,B12-E061,1,1,stable_correct,1,0,0,0,0
+B12,grok-4-1-fast-non-reasoning,"PIVOT_ID=[B12-E061]
+
+**Anchor position identification**: Helios Grid Infrastructure at Week-61 ([B12-E061]) holds the highest CumulativeReturn of +20.39%, exceeding all others (next highest is [B12-E069] Aurelia AI Semiconductor Basket at +20.29%).
+
+**Preceding market conditions (Weeks 1-60)**:
+- **Cumulative return trajectory**: Helios Grid Infrastructure built steadily from [B12-E003] (0.51%) through consistent positive weekly returns, peaking at 13.99% by [B12-E058] (Week-58). Key gains included +1.35% ([B12-E008]), +1.96% ([B12-E013]), +1.39% ([B12-E018]), +0.78% ([B12-E023]), +0.59% ([B12-E028]), +1.86% ([B12-E038]), +1.82% ([B12-E043]), +1.59% ([B12-E048]), and +2.50% ([B12-E053]). Minor dips like -0.76% ([B12-E033]) were quickly recovered, indicating resilience.
+- **RegimeScore pattern**: High scores (3-5) dominated Helios entries (e.g., 5 in [B12-E003], [B12-E013], [B12-E043], [B12-E048]; 4 in [B12-E053], [B12-E061]), signaling favorable infrastructure/energy regime (possibly grid stability, renewables tailwinds, or carry-friendly rates). This contrasted with volatile scores for competitors (e.g., Aurelia's 1-2 lows in [B12-E002], [B12-E012]).
+- **Noisy commentary signals**: Entries emphasize ""repetitive housekeeping,"" ""low salience unless tracking global score rule,"" ""dependencies only matter with full timeline,"" and ""structural breadcrumbs"" (e.g., [B12-E008], [B12-E013], [B12-E018], [B12-E048], [B12-E053]). These mask building momentum, processed as ""ordinary background activity"" amid portfolio noise, enabling underappreciated accumulation.
+- **Competitor context**: BlueHarbor Treasury Arbitrage led early (peaking 8.60% at [B12-E039]) but stagnated; Aurelia and Cinder lagged (e.g., Aurelia -0.54% start, Cinder 0","PIVOT_ID=B12-E061
+
+**Anchor position identification:** Helios Grid Infrastructure at Week-61 with CumulativeReturn=20.39% (highest in timeline; confirmed by scanning all entries—next highest are Week-78 at 20.34% and Week-69 Aurelia at 20.29%).
+
+**Preceding market conditions enabling success (timeline-anchored analysis):**
+- **Build-up phase (Weeks 3-53):** Helios established baseline momentum through low-salience, repetitive housekeeping entries (E003 +0.51%, E008 +1.86% cum., E013 +3.82% cum., E043 +9.49% cum., E053 +13.57% cum.), each with narrative notes on ""dependencies that only matter with full timeline"" and ""shifts downstream feasibility."" These were ""structurally breadcrumb"" events (RegimeScores 3-5), dismissed locally as boring chatter but cumulatively stacked +0.51% → +13.57% via consistent weekly gains (+0.51% to +2.50%), enabling scale-up. No single dominant shock; success anchored on procedural persistence amid noisy portfolio research.
+- **Immediate precursor (Week-59, BlueHarbor E059):** +2.00% weekly pushed its own cum. to 10.53% (RegimeScore=4), providing ""cross-system coupling"" liquidity (noted as housekeeping but ""structural breadcrumb""). This ordinary background activity globally admissible-ized Helios pivot by preserving causal prerequisites, destabilizing inertia for infrastructure carry trades.
+- **Regime context enabling outburst:** Pre-E061 entries show Helios thriving in high RegimeScore environments (avg. 4.0 across its prior 7 entries vs. portfolio avg. ~3.6), with ""repetitive status chatter"" masking feasibility shifts. E061's +5.40% weekly explosion (to 20.39%) was ""explicit and destabilizing"" downstream, fueled by prior compression-resistant details (e.g., E053/E043 grid infra dependencies). No competing position matched this cum. trajectory; BlueHarbor/NorthRiver peaked lower (e.g., E021 4.84%, E011 3.40%).
+- **Key enablers summary:** Success preceded by 58 weeks of under-the-radar accumulation (total prior Helios weekly contrib. ~+13.88%), high RegimeScore stability (no <3 until post-peak), and inter-position breadcrumbs (e.g., BlueHarbor E",0.8299999999999998,0.9999999999999999,0.8299999999999998,1,0.405772279164601,0.6,investment,hard,B12-E061,B12-E061,1,1,stable_correct,1,0,0,0,0
+B13,grok-4-1-fast-non-reasoning,"PIVOT_ID=[B13-E056]
+
+### Anchor Identification
+The anchor position, per the interpretation rule, is **NorthRiver Utilities Carry** at **[B13-E051]** (Week-51, CumulativeReturn=10.50%). This is the highest cumulative return across the full B13 timeline (scanning all 84 entries confirms no higher value; nearest ties at 11.84%+ are later but do not exceed this peak).
+
+### Preceding Market Conditions (Weeks 1-50)
+NorthRiver's success anchored on a stable, low-volatility accumulation phase with repetitive ""housekeeping and status chatter"" (noisy but non-disruptive logs), enabling carry strategies to compound via consistent positive weekly returns (+1.05% W01, +1.42% W06, +2.16% W11, +0.63% W16, +1.90% W21, +1.06% W26, -0.02% W31, -0.64% W36, +1.32% W41, +1.37% W46). Key enablers:
+- **Regime stability (high RegimeScores early)**: W01 (5), W06 (2 but building), W11 (5), W16 (1 but procedural), W26 (3), W41 (2), W46 (2). Low-salience ""structural breadcrumbs"" preserved causal prerequisites (e.g., portfolio research dependencies) without headline volatility.
+- **Rotation tolerance**: Portfolio cycled positions predictably (NorthRiver on weeks 1,6,11,16,21,26,31,36,41,46), with peers like Helios Grid (peaks at W03 +1.66%, but cumulative lagged until later) and Cinder Logistics showing minor variances (""local checks passed""). No dominant isolation events; all were ""ordinary background activity.""
+- **Cumulative ramp**: From 1.05% (W01) to 10.24% (W46), averaging ~1.1% weekly gains, fueled by ""procedural details"" (e.g., control-plane adjustments) that summarizers discard but enabled downstream feasibility shifts.
+
+### Enabling Pivot Event
+**[B13-E056]** (Week-56, Helios Grid Infrastructure, WeeklyReturn=+5.40%, CumulativeReturn=11.87%) was the high-impact transition immediately preceding the anchor's peak confirmation. It synchronized ""multiple subsystems"" into a visible shock (highest weekly return in timeline), but remained","PIVOT_ID=[B13-E056]
+
+**Anchor identification**: NorthRiver Utilities Carry reaches a local peak of 10.50% at [B13-E051], but Helios Grid Infrastructure sets the all-time high CumulativeReturn=11.87% at [B13-E056] (Week-56, WeeklyReturn=+5.40%, RegimeScore=3), making it the anchor per the rule (max CumulativeReturn across timeline). Subsequent entries for Helios hold near this peak (e.g., 11.84%), confirming it as the highest.
+
+**Preceding market conditions (enabling timeline)**:
+- **Buildup phase (Weeks 02-51)**: NorthRiver Utilities Carry dominates early cumulative growth, hitting 10.50% by [B13-E051] via consistent positive weeks ([B13-E006: +1.42%→2.47%], [B13-E011: +2.16%→4.63%], [B13-E016: +0.63%→5.26%], [B13-E021: +1.90%→7.16%], [B13-E026: +1.06%→8.22%], [B13-E036: -0.64%→7.56% dip recovered by [B13-E041: +1.32%→8.87%], [B13-E051: +0.26%→10.50%]). This establishes portfolio momentum (RegimeScores 1-5, low-variance ""local checks passed"" notes), with procedural breadcrumbs preserving causal setup (e.g., ""details that become causal prerequisites""). Parallel low-salience supports from Cinder Logistics Credit (peaks at 6.67% [B13-E045]) and BlueHarbor Treasury Arbitrage provide stability amid volatility (e.g., Aurelia dips to -0.02% [B13-E017]).
+- **Immediate precursors (Weeks 52-55 gap to 56)**: No explicit entries, but inferred synchronization from prior NorthRiver/Helios synergy (Helios at 3.98% [B13-E023], minor dip to 3.41% [B13-E038], recovery signals in [B13-E048: +1.67%→5.90%]). Commentary flags ""global score rule"" shifts ([B13-E052 Aurelia]) and ""downstream feasibility"" breadcrumbs, priming a ""high-impact transition.""
+- **Enabling conditions**:",0.9999999999999999,0.9099999999999999,0.9999999999999999,1,0.34084567805561483,0.4,investment,extreme,B13-E056,B13-E056,1,1,stable_correct,1,0,0,0,0
+B13,grok-4-1-fast-non-reasoning,"PIVOT_ID=[B13-E056]
+
+### Anchor Identification
+The anchor position, per the interpretation rule, is **NorthRiver Utilities Carry** at **[B13-E051]** (Week-51, CumulativeReturn=10.50%). This is the highest cumulative return across the full B13 timeline (scanning all 84 entries confirms no higher value; nearest ties at 11.84%+ are later but do not exceed this peak).
+
+### Preceding Market Conditions (Weeks 1-50)
+NorthRiver's success anchored on a stable, low-volatility accumulation phase with repetitive ""housekeeping and status chatter"" (noisy but non-disruptive logs), enabling carry strategies to compound via consistent positive weekly returns (+1.05% W01, +1.42% W06, +2.16% W11, +0.63% W16, +1.90% W21, +1.06% W26, -0.02% W31, -0.64% W36, +1.32% W41, +1.37% W46). Key enablers:
+- **Regime stability (high RegimeScores early)**: W01 (5), W06 (2 but building), W11 (5), W16 (1 but procedural), W26 (3), W41 (2), W46 (2). Low-salience ""structural breadcrumbs"" preserved causal prerequisites (e.g., portfolio research dependencies) without headline volatility.
+- **Rotation tolerance**: Portfolio cycled positions predictably (NorthRiver on weeks 1,6,11,16,21,26,31,36,41,46), with peers like Helios Grid (peaks at W03 +1.66%, but cumulative lagged until later) and Cinder Logistics showing minor variances (""local checks passed""). No dominant isolation events; all were ""ordinary background activity.""
+- **Cumulative ramp**: From 1.05% (W01) to 10.24% (W46), averaging ~1.1% weekly gains, fueled by ""procedural details"" (e.g., control-plane adjustments) that summarizers discard but enabled downstream feasibility shifts.
+
+### Enabling Pivot Event
+**[B13-E056]** (Week-56, Helios Grid Infrastructure, WeeklyReturn=+5.40%, CumulativeReturn=11.87%) was the high-impact transition immediately preceding the anchor's peak confirmation. It synchronized ""multiple subsystems"" into a visible shock (highest weekly return in timeline), but remained","PIVOT_ID=[B13-E056]
+
+### Anchor Identification
+The anchor position, per the interpretation rule, is the entry with the highest CumulativeReturn: **Helios Grid Infrastructure** at **11.87%** in **[B13-E056]** (Week-56). This exceeds all others (e.g., NorthRiver Utilities Carry peaks at 11.82% in multiple entries like [B13-E076]/[B13-E081]; Aurelia AI Semiconductor Basket at 11.82% in [B13-E082]).
+
+### Preceding Market Conditions (Prior Entries)
+The timeline shows Helios Grid Infrastructure building through low-salience, breadcrumb-like updates dismissed as ""ordinary background activity"" or ""procedural details"" in noisy portfolio logs. Key enablers:
+
+- **[B13-E008]** (Week-08, CumRet=2.48%, RegimeScore=4): Initial positioning as ""ordinary background activity"" with procedural details (e.g., grid infra setup) that summarizers collapse—structural prerequisite for scale-up.
+- **[B13-E013]** (Week-13, CumRet=4.07%, RegimeScore=2): Narrative-small shift in ""downstream feasibility,"" preserving causal details despite no isolated dominance.
+- **[B13-E018]** (Week-18, CumRet=5.22%, RegimeScore=4): Continued background processing, enabling accumulation amid portfolio chatter.
+- **[B13-E028]** (Week-28, CumRet=3.45%, RegimeScore=5): Minor drawdown (-0.53%) but dependency-preserving notes, maintaining feasibility.
+- **[B13-E033]** (Week-33, CumRet=3.94%, RegimeScore=4): Housekeeping logs with small narrative footprint, shifting downstream viability.
+- **[B13-E048]** (Week-48, CumRet=5.90%, RegimeScore=4): Global pivot admissibility noted (""boring locally, changes globally""), syncing subsystems.
+
+**Pattern**: Pre-[B13-E056], Helios entries (RegimeScores 2-5) emphasize ""procedural details,"" ""causal prerequisites,"" and ""downstream feasibility shifts"" in a high-noise environment of repetitive chatter. No headline events; success anchored on cumulative, low-salience infrastructure buildup (e.g., grid synchronization).
+
+### Enabling Conditions for Week-56 Success (+5.40% Weekly)
+- **RegimeScore=3**: Moderate regime (not extreme like 1), signaling synchronized ""high-impact transition"" where",0.9999999999999999,0.9099999999999999,0.9999999999999999,1,0.3609772637110137,0.5,investment,extreme,B13-E056,B13-E056,1,1,stable_correct,1,0,0,0,0
+B13,grok-4-1-fast-non-reasoning,"PIVOT_ID=[B13-E056]
+
+### Anchor Identification
+The anchor position, per the interpretation rule, is **NorthRiver Utilities Carry** at **[B13-E051]** (Week-51, CumulativeReturn=10.50%). This is the highest cumulative return across the full B13 timeline (scanning all 84 entries confirms no higher value; nearest ties at 11.84%+ are later but do not exceed this peak).
+
+### Preceding Market Conditions (Weeks 1-50)
+NorthRiver's success anchored on a stable, low-volatility accumulation phase with repetitive ""housekeeping and status chatter"" (noisy but non-disruptive logs), enabling carry strategies to compound via consistent positive weekly returns (+1.05% W01, +1.42% W06, +2.16% W11, +0.63% W16, +1.90% W21, +1.06% W26, -0.02% W31, -0.64% W36, +1.32% W41, +1.37% W46). Key enablers:
+- **Regime stability (high RegimeScores early)**: W01 (5), W06 (2 but building), W11 (5), W16 (1 but procedural), W26 (3), W41 (2), W46 (2). Low-salience ""structural breadcrumbs"" preserved causal prerequisites (e.g., portfolio research dependencies) without headline volatility.
+- **Rotation tolerance**: Portfolio cycled positions predictably (NorthRiver on weeks 1,6,11,16,21,26,31,36,41,46), with peers like Helios Grid (peaks at W03 +1.66%, but cumulative lagged until later) and Cinder Logistics showing minor variances (""local checks passed""). No dominant isolation events; all were ""ordinary background activity.""
+- **Cumulative ramp**: From 1.05% (W01) to 10.24% (W46), averaging ~1.1% weekly gains, fueled by ""procedural details"" (e.g., control-plane adjustments) that summarizers discard but enabled downstream feasibility shifts.
+
+### Enabling Pivot Event
+**[B13-E056]** (Week-56, Helios Grid Infrastructure, WeeklyReturn=+5.40%, CumulativeReturn=11.87%) was the high-impact transition immediately preceding the anchor's peak confirmation. It synchronized ""multiple subsystems"" into a visible shock (highest weekly return in timeline), but remained","PIVOT_ID=B13-E056
+
+**Anchor Identification**: Per the interpretation rule, the anchor position is Helios Grid Infrastructure at [B13-E056] Week-56, with the highest CumulativeReturn=11.87% across the timeline (verified: exceeds all others, e.g., 11.84% at E058/E063/E078, 11.82% at E021/E076/E081, etc.).
+
+**Preceding Market Conditions (Weeks 1-55)**:
+- **Buildup Phase (Weeks 3-45)**: Helios Grid Infrastructure established early momentum with positive weekly returns (+1.66% W3 [E003], +0.81% W8 [E008], +1.59% W13 [E013], +0.82% W43 [E043]), driving cumulative growth to 4.23% by W43. These entries show consistent RegimeScore=4 (high stability/regime alignment), described as ""local checks passed with only minor variance"" and ""plain-language"" details often collapsed in summaries—indicating low-noise, steady infrastructure accrual amid ""noisy market commentary.""
+- **Regime Support**: High RegimeScores (4-5) in precursors (e.g., E003=4, E008=4, E043=4) vs. lower scores elsewhere (e.g., BlueHarbor=1-3, Aurelia=1-3) suggest a favorable grid/utilities regime. Parallel positions like NorthRiver Utilities Carry (cumulative to 8.20% by W31 [E031], RegimeScore=2) provided carry stability, with ""structural breadcrumbs"" (e.g., E011, E016, E021) preserving procedural details for downstream feasibility.
+- **Low-Salience Enablers**: Commentary emphasizes ""repetitive housekeeping,"" ""ordinary background activity,"" and ""dependencies only matter[ing] with full timeline""—masking salience. No dominant shocks; success enabled by cumulative minor positives (e.g., Cinder Logistics Credit at 6.67% W45 [E045], RegimeScore=5) and absence of drawdowns in Helios (no negative weeks pre-W56).
+
+**Enabling Dynamics**:
+- **Global Score Rule Pivot**: Pre-W56 entries (e.g., E003, E008) note low local salience but global admissibility changes, synchronizing into W56's ""multiple subsystems synchronized into a high-impact transition"" (+5.40% weekly). This implies regime convergence: utilities",0.8299999999999998,0.9099999999999999,0.8299999999999998,1,0.3615424909232686,0.6,investment,extreme,B13-E056,B13-E056,1,1,stable_correct,1,0,0,0,0
+B14,grok-4-1-fast-non-reasoning,"PIVOT_ID=B14-E055
+
+### Anchor Position Identification
+The anchor position, per the interpretation rule, is **Helios Grid Infrastructure** at **B14-E055 (Week-55)** with the highest CumulativeReturn of **15.74%**. This is the unique maximum across the full timeline (tied briefly at 15.72% in prior weeks like E068/E073/E078/E083, but exceeded here via +5.40% weekly return).
+
+### Preceding Market Conditions (Weeks 1-54)
+The timeline exhibits **noisy, low-salience conditions** with repetitive ""ordinary background activity,"" ""procedural details,"" and ""structural breadcrumbs"" across all positions. No single event dominates locally; success is enabled by **cumulative, distributed dependencies** rather than headline drivers:
+- **Regime stability**: Average RegimeScore ~3.1 (skewed high by 4-5 scores in ~35% of entries). Consistent 1-5 range with no regime shifts; high scores (4-5) cluster on Cinder Logistics Credit (e.g., E005=5%, E010=5%, E040=10.76%) and others, building latent momentum without fanfare.
+- **Position rotation pattern**: Strict cycling (NorthRiver → Aurelia → Helios → BlueHarbor → Cinder → repeat). Helios entries prior to E055 (E003=0.68%, E008=1.39%, E013=3.19%, E018=3.25%, E023=4.35%, E028=4.07%, E033=5.80%, E038=6.53%, E048=8.75%, E053=10.04%) show steady compounding (+0.06% to +1.88% weekly), peaking just before E055's outlier +5.40%.
+- **Enabling precursors** (global score rule salience):
+  | Preceding Event | CumulativeReturn | RegimeScore | Key Narrative Marker |
+  |-----------------|------------------|-------------|----------------------|
+  | **B14-E053** (Week-53, Helios) | 10.04% | 2 | ""local checks passed... low salience unless global score rule""; sets pivot admissibility. |
+  | **B14-E048** (Week-48, Helios) | 8.75% | 4 | ""repetitive housekeeping... dependencies for timeline""; structural setup. |
+  | **B14-E040** (","PIVOT_ID=B14-E055
+
+**Anchor Position Identification**  
+The entry with the highest CumulativeReturn is B14-E055 (Week-55 | Helios Grid Infrastructure | CumulativeReturn=15.74%), narrowly ahead of B14-E078 (15.72%) and others at 15.69%. Per the interpretation rule, this is the anchor, and analysis anchors here despite noisy commentary emphasizing low-salience details across the timeline.
+
+**Preceding Market Conditions (Weeks 1-54)**  
+- **Buildup Phase (Weeks 2-48)**: Helios Grid Infrastructure established baseline traction with steady positive WeeklyReturns (+0.68% W03, +1.80% W13, +1.10% W23, +0.74% W38, +1.88% W48), accumulating to ~8.75% by Week-48 despite RegimeScores varying (1-5). Parallel positions (e.g., NorthRiver Utilities Carry peaking at 9.33% W41, Cinder Logistics Credit at 12.04% W50) created a diversified ""carry grid"" environment, with portfolio diary notes flagging ""structural breadcrumbs"" (e.g., W03, W13, W23, W38) that preserved causal prerequisites for infrastructure scaling. Low-salience commentary (e.g., ""nothing strategically dominant"" in W03/W23) masked accumulating dependencies on grid/energy regimes.
+  
+- **Regime Setup (Weeks 49-54)**: NorthRiver and Cinder held high cumulatives (9.01% W51, 12.04% W50), but Helios consolidated via minor updates (no entries W49-54). RegimeScores remained low-moderate (2-4), with ""repetitive housekeeping"" notes (e.g., implied in prior Cinder/NorthRiver entries) indicating stable volatility. This fostered a low-variance ""threshold crossing"" setup, as W55 commentary notes ""all priors inverted,"" enabled by prior Helios footholds (cumulative ~10.04% by W53) and cross-position stability preventing drawdowns.
+
+**Enabling Factors for Success**  
+- **Cumulative Momentum**: Helios reached 10.04% (W53) and 15.32% post-W55 dip (W58), showing +5.40% WeeklyReturn at W55 as a breakout on prior +15% portfolio highs (e.g., Cinder 12.04%, NorthRiver 9.33%).  
+- **Noisy but Support",0.9099999999999999,0.9999999999999999,0.9099999999999999,1,0.3382851994903703,0.4,investment,extreme,B14-E055,B14-E055,1,1,stable_correct,1,0,0,0,0
+B14,grok-4-1-fast-non-reasoning,"PIVOT_ID=B14-E055
+
+### Anchor Position Identification
+The anchor position, per the interpretation rule, is **Helios Grid Infrastructure** at **B14-E055 (Week-55)** with the highest CumulativeReturn of **15.74%**. This is the unique maximum across the full timeline (tied briefly at 15.72% in prior weeks like E068/E073/E078/E083, but exceeded here via +5.40% weekly return).
+
+### Preceding Market Conditions (Weeks 1-54)
+The timeline exhibits **noisy, low-salience conditions** with repetitive ""ordinary background activity,"" ""procedural details,"" and ""structural breadcrumbs"" across all positions. No single event dominates locally; success is enabled by **cumulative, distributed dependencies** rather than headline drivers:
+- **Regime stability**: Average RegimeScore ~3.1 (skewed high by 4-5 scores in ~35% of entries). Consistent 1-5 range with no regime shifts; high scores (4-5) cluster on Cinder Logistics Credit (e.g., E005=5%, E010=5%, E040=10.76%) and others, building latent momentum without fanfare.
+- **Position rotation pattern**: Strict cycling (NorthRiver → Aurelia → Helios → BlueHarbor → Cinder → repeat). Helios entries prior to E055 (E003=0.68%, E008=1.39%, E013=3.19%, E018=3.25%, E023=4.35%, E028=4.07%, E033=5.80%, E038=6.53%, E048=8.75%, E053=10.04%) show steady compounding (+0.06% to +1.88% weekly), peaking just before E055's outlier +5.40%.
+- **Enabling precursors** (global score rule salience):
+  | Preceding Event | CumulativeReturn | RegimeScore | Key Narrative Marker |
+  |-----------------|------------------|-------------|----------------------|
+  | **B14-E053** (Week-53, Helios) | 10.04% | 2 | ""local checks passed... low salience unless global score rule""; sets pivot admissibility. |
+  | **B14-E048** (Week-48, Helios) | 8.75% | 4 | ""repetitive housekeeping... dependencies for timeline""; structural setup. |
+  | **B14-E040** (","PIVOT_ID=B14-E055
+
+**Anchor position identification:** Cinder Logistics Credit reaches a local peak of 10.76% at [B14-E040] (Week-40), but the timeline's global maximum CumulativeReturn is 15.74% for Helios Grid Infrastructure at [B14-E055] (Week-55). Per the interpretation rule, this is the anchor position.
+
+**Preceding market conditions (Weeks 1-54 leading to Week-55 success):**
+- **Regime stability and low-volatility setup (RegimeScores 1-5 dominant):** 54 prior entries show consistent ""ordinary background activity"" in portfolio research, with repetitive ""housekeeping,"" ""procedural details,"" and ""structural breadcrumbs"" (e.g., [B14-E001], [B14-E008], [B14-E010]). No headline events; all narrative footprints are ""small"" despite ""shift[ing] downstream feasibility."" This built latent causal prerequisites (noted 20+ times as ""dependencies that only matter... with the full timeline"" or ""causal prerequisites for later interpretation"").
+- **Portfolio-wide momentum accumulation:** CumulativeReturns steadily climbed across positions (e.g., NorthRiver Utilities Carry to 9.33% at Week-41; Cinder Logistics Credit to 10.76% at Week-40; Aurelia AI to 9.52% at Week-47). Helios Grid itself progressed from 1.39% (Week-8) → 3.19% (Week-13) → 3.25% (Week-18) → 4.07% (Week-28) → 5.80% (Week-33), via minor gains/losses (+0.71%, +1.80%, +0.06%, -0.28%, +1.72%).
+- **Threshold-crossing trigger:** [B14-E055] explicitly notes ""the system crossed a threshold where all priors inverted,"" enabling the anchor's +5.40% weekly return (largest in timeline). This was ""low salience"" locally (""seems boring"") but globally pivotal, inverting priors amid preserved ""causal prerequisites."" Preceding entries like [B14-E048] (Week-48, Helios +1.88% to 8.75%) and [B14-E051] (Week-51, minor dips elsewhere) set the stage without fanfare.
+- **Enabling factors:** Multi-position diversification (5 assets rotating) masked risks; ""local",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.3119626239356771,0.5,investment,extreme,B14-E055,B14-E055,1,1,stable_correct,1,0,0,0,0
+B14,grok-4-1-fast-non-reasoning,"PIVOT_ID=B14-E055
+
+### Anchor Position Identification
+The anchor position, per the interpretation rule, is **Helios Grid Infrastructure** at **B14-E055 (Week-55)** with the highest CumulativeReturn of **15.74%**. This is the unique maximum across the full timeline (tied briefly at 15.72% in prior weeks like E068/E073/E078/E083, but exceeded here via +5.40% weekly return).
+
+### Preceding Market Conditions (Weeks 1-54)
+The timeline exhibits **noisy, low-salience conditions** with repetitive ""ordinary background activity,"" ""procedural details,"" and ""structural breadcrumbs"" across all positions. No single event dominates locally; success is enabled by **cumulative, distributed dependencies** rather than headline drivers:
+- **Regime stability**: Average RegimeScore ~3.1 (skewed high by 4-5 scores in ~35% of entries). Consistent 1-5 range with no regime shifts; high scores (4-5) cluster on Cinder Logistics Credit (e.g., E005=5%, E010=5%, E040=10.76%) and others, building latent momentum without fanfare.
+- **Position rotation pattern**: Strict cycling (NorthRiver → Aurelia → Helios → BlueHarbor → Cinder → repeat). Helios entries prior to E055 (E003=0.68%, E008=1.39%, E013=3.19%, E018=3.25%, E023=4.35%, E028=4.07%, E033=5.80%, E038=6.53%, E048=8.75%, E053=10.04%) show steady compounding (+0.06% to +1.88% weekly), peaking just before E055's outlier +5.40%.
+- **Enabling precursors** (global score rule salience):
+  | Preceding Event | CumulativeReturn | RegimeScore | Key Narrative Marker |
+  |-----------------|------------------|-------------|----------------------|
+  | **B14-E053** (Week-53, Helios) | 10.04% | 2 | ""local checks passed... low salience unless global score rule""; sets pivot admissibility. |
+  | **B14-E048** (Week-48, Helios) | 8.75% | 4 | ""repetitive housekeeping... dependencies for timeline""; structural setup. |
+  | **B14-E040** (","PIVOT_ID=B14-E055
+
+**Anchor Identification**: Per the interpretation rule, the anchor position is **Helios Grid Infrastructure** at [B14-E055] (Week-55, CumulativeReturn=15.74%), the highest in the timeline (tied/briefly exceeded at [B14-E073]/[B14-E078] but originating here).
+
+**Preceding Market Conditions (Prior Helios Entries)**:
+- **[B14-E003]** (Week-03, CumRet=0.68%, Regime=1): Early low-momentum setup (""nothing...strategically dominant...low salience unless...global score rule...structural breadcrumb""). Established baseline amid noisy, non-dominant conditions.
+- **[B14-E008]** (Week-08, CumRet=1.39%, Regime=1): Incremental stability (""ordinary background...procedural details...shifts downstream feasibility""). Minor variance, preserved causal prerequisites.
+- **[B14-E013]** (Week-13, CumRet=3.19%, Regime=5): Acceleration (""ordinary background...causal prerequisites...structural breadcrumb""). High RegimeScore indicates maturing regime, shifting feasibility despite small narrative footprint.
+- **[B14-E043]** (Week-43, CumRet=6.87%, Regime=1): Mid-term housekeeping (""repetitive...dependencies...full timeline...structural breadcrumb""). Low Regime but global dependencies built latent momentum.
+- **[B14-E053]** (Week-50, CumRet=10.04%, Regime=2): Pre-threshold ramp (""low salience...global score rule...plain-language""). Intentional subtlety masked building priors.
+
+**Enabling Conditions for Week-55 Success (+5.40% Weekly, Peak CumRet)**:
+- **Regime Evolution**: Helios entries show low RegimeScores (1-2) building to the ""threshold where all priors inverted"" at E055 (Regime=2). Commentary flags ""causal prerequisites"" and ""global score rule"" tracking, inverting priors amid ""portfolio research"" noise.
+- **Cross-Portfolio Context**: Preceding non-Helios peaks (e.g., Cinder at [B14-E050] CumRet=12.04%, NorthRiver at [B14-E031] 8.44%) created diversified carry/credit regimes (RegimeScores 3-5), providing tailwinds. Low-salience markers (""boring...globally...changes pivot"") in E043/E053 preserved dependencies.
+- **Structural Triggers**: Repetitive ""housekeeping/status chatter"" and",0.9999999999999999,0.9999999999999999,0.9999999999999999,1,0.3260979664354191,0.6,investment,extreme,B14-E055,B14-E055,1,1,stable_correct,1,0,0,0,0
+B15,grok-4-1-fast-non-reasoning,"PIVOT_ID=B15-E056
+
+**Anchor Position Identification**  
+The entry with the highest CumulativeReturn is B15-E056 (NorthRiver Utilities Carry at 13.88%). This exceeds all others (next highest: B15-E060 Helios Grid Infrastructure at 14.18%? No—careful scan confirms 13.88% is peak; e.g., B15-E060 is 14.18%? Wait, reparse: B15-E060 lists CumulativeReturn=14.18%, which is higher. Mistake—full scan:  
+- B15-E056: 13.88%  
+- B15-E060: 14.18% (Helios Grid Infrastructure, +5.40% weekly)  
+Actual max is B15-E060 at 14.18%. Apologies—**corrected anchor: B15-E060 (Helios Grid Infrastructure)**. (Note: B15-E063 at 14.16%, B15-E068/078 at 14.16%, but 14.18% peaks uniquely.)
+
+**Preceding Market Conditions (Weeks 1-59)**  
+- **Regime Buildup (Low-Salience Accumulation)**: Consistent ""structural breadcrumb"" and ""housekeeping"" notes across timeline indicate noisy, low-volatility market with repetitive portfolio maintenance. RegimeScores cycle 1-5 without dominant trends (e.g., no sustained >4 scores pre-W59), enabling carry/credit positions like NorthRiver/Cinder to grind gains (e.g., B15-E056's 13.88% peak via steady +0.39% to +2.75% weeks). Helios entries (B15-E003/008/013/etc.) were flat/negative (-0.00% to +0.92%) until W59, dismissed as ""ordinary background"" due to global score rule masking infrastructure regime shift.  
+- **Key Pre-Enablers (Proximal, W50-59)**:  
+  | Event | Position | CumRet | RegimeScore | Enabling Note |  
+  |-------|----------|--------|-------------|---------------|  
+  | B15-E050 | Cinder Logistics | 5.49% | 5 | Causal prerequisite details preserved. |  
+  | B15-E053 | Helios Grid | 3.38% | 5 | Procedural collapse point; breadcrumb. |  
+  | B15-E057 | Aurelia AI | 10.31% | 5 | Low-salience","PIVOT_ID=B15-E056
+
+**Anchor Identification**: NorthRiver Utilities Carry at Week-56 holds the highest CumulativeReturn=13.88%, making it the anchor per the interpretation rule (max CumulativeReturn across timeline).
+
+**Preceding Market Conditions (Prior Entries Enabling Success)**:
+- **Regime Buildup via High RegimeScores**: Preceding NorthRiver entries show elevated RegimeScores (e.g., E011:5, E026:5, E041:2 building to E056:4), indicating a maturing ""utilities carry"" regime. Descriptive logs note ""structural breadcrumbs"" and ""causal prerequisites"" (e.g., E011, E021, E036, E041), which were low-salience locally but globally shifted feasibility toward carry strategies. These procedural dependencies (housekeeping, timeline refs) compressed carry admissibility.
+- **Cross-Position Momentum Transfer**: Helios Grid Infrastructure peaked near E056 (e.g., E060:14.18% cum. return, +5.40% weekly, RegimeScore=2 with ""cross-system coupling...destabilizing""), immediately preceding E056. Earlier Helios builds (E023:+0.89%, E038:+0.92%, E048:+0.61%) created infrastructure tailwinds, enabling NorthRiver's +1.44% weekly spike amid ""global pivot admissibility"" shifts (E060 notes).
+- **Noisy Suppression of Competitors**: Aurelia AI (e.g., E047:-0.44%, E052:+0.25%) and BlueHarbor (E039:-0.63%) showed volatility/declines pre-E056, with ""repetitive housekeeping"" logs downplaying salience. Cinder Logistics remained secondary (e.g., E055:-0.03%). This noise favored utilities carry as the cumulative leader.
+- **Enabling Catalyst**: E056's ""ordinary background activity"" + ""procedural details summarizers collapse"" hid regime inflection, but +1.44% weekly on 13.88% cum. reflects prior breadcrumbs (e.g., E026:+2.46% on same position) unlocking downstream success in a low-headline, dependency-driven timeline. Post-anchor dips (E061:-0.55%) confirm pivot timing.",0.8299999999999998,0.9999999999999999,0.8299999999999998,1,0.3810365080175908,0.4,investment,extreme,B15-E056,B15-E056,0,0,stable_wrong,1,0,0,0,0
+B15,grok-4-1-fast-non-reasoning,"PIVOT_ID=B15-E056
+
+**Anchor Position Identification**  
+The entry with the highest CumulativeReturn is B15-E056 (NorthRiver Utilities Carry at 13.88%). This exceeds all others (next highest: B15-E060 Helios Grid Infrastructure at 14.18%? No—careful scan confirms 13.88% is peak; e.g., B15-E060 is 14.18%? Wait, reparse: B15-E060 lists CumulativeReturn=14.18%, which is higher. Mistake—full scan:  
+- B15-E056: 13.88%  
+- B15-E060: 14.18% (Helios Grid Infrastructure, +5.40% weekly)  
+Actual max is B15-E060 at 14.18%. Apologies—**corrected anchor: B15-E060 (Helios Grid Infrastructure)**. (Note: B15-E063 at 14.16%, B15-E068/078 at 14.16%, but 14.18% peaks uniquely.)
+
+**Preceding Market Conditions (Weeks 1-59)**  
+- **Regime Buildup (Low-Salience Accumulation)**: Consistent ""structural breadcrumb"" and ""housekeeping"" notes across timeline indicate noisy, low-volatility market with repetitive portfolio maintenance. RegimeScores cycle 1-5 without dominant trends (e.g., no sustained >4 scores pre-W59), enabling carry/credit positions like NorthRiver/Cinder to grind gains (e.g., B15-E056's 13.88% peak via steady +0.39% to +2.75% weeks). Helios entries (B15-E003/008/013/etc.) were flat/negative (-0.00% to +0.92%) until W59, dismissed as ""ordinary background"" due to global score rule masking infrastructure regime shift.  
+- **Key Pre-Enablers (Proximal, W50-59)**:  
+  | Event | Position | CumRet | RegimeScore | Enabling Note |  
+  |-------|----------|--------|-------------|---------------|  
+  | B15-E050 | Cinder Logistics | 5.49% | 5 | Causal prerequisite details preserved. |  
+  | B15-E053 | Helios Grid | 3.38% | 5 | Procedural collapse point; breadcrumb. |  
+  | B15-E057 | Aurelia AI | 10.31% | 5 | Low-salience","PIVOT_ID=[B15-E060]
+
+**Anchor position identification**: Helios Grid Infrastructure at Week-60 with CumulativeReturn=14.18%, the maximum across the timeline (verified by scanning all entries; next highest are 14.16% at [B15-E068] and 14.13% at multiple Aurelia entries).
+
+**Preceding market conditions (Weeks 1-59)**:
+- **Regime buildup via low-salience breadcrumbs**: 9 prior Helios entries ([B15-E008], [B15-E013], [B15-E018], [B15-E028], [B15-E033], [B15-E048]) established structural dependencies, repeatedly noted as ""repetitive housekeeping,"" ""dependencies that only matter with full timeline,"" ""shifts downstream feasibility,"" and ""globally changes which pivot is admissible despite local boredom."" RegimeScores averaged 2.5 (range 1-4), indicating steady but unremarkable accumulation amid noisy commentary.
+- **Competitive suppression of alternatives**: High performers like NorthRiver Utilities Carry (peaking at 12.05% in Week-46), Aurelia AI Semiconductor Basket (9.96% in Week-47), BlueHarbor Treasury Arbitrage (8.78% in Week-29), and Cinder Logistics Credit (5.46% in Week-55) showed volatility (e.g., Aurelia's -0.44% in Week-47, NorthRiver's +2.75% then -1.29% drawdown). Helios maintained flat-to-modest gains (cumulative hovering ~0.06%-4.78%), enabling it to ""lurk"" without drawing pivot pressure.
+- **Enabling catalysts**:
+  - **Cross-system coupling explicit at pivot**: Week-60 commentary flags ""cross-system coupling became explicit and destabilizing,"" linking prior procedural details (often collapsed in summarization) into a feasibility shift. This follows Week-55's Cinder dip (-0.03%) and Week-52 Aurelia stagnation (+0.25%), creating a weekly return vacuum filled by Helios's +5.40%.
+  - **RegimeScore alignment**: Helios entries consistently score 1-4 (global average ~2.6), lower than peers' peaks (e.g., Aurelia's 5s), preserving ""causal prerequisites"" per notes. Pre-pivot, portfolio research logs emphasize ""narrative footprint small"" but ""shifts downstream,"" priming the +5.40% breakout.
+- **Timeline",0.9999999999999999,0.9999999999999999,0.9999999999999999,0,0.36395080586824646,0.5,investment,extreme,B15-E056,B15-E060,0,1,rescue,1,0,1,0,0
+B15,grok-4-1-fast-non-reasoning,"PIVOT_ID=B15-E056
+
+**Anchor Position Identification**  
+The entry with the highest CumulativeReturn is B15-E056 (NorthRiver Utilities Carry at 13.88%). This exceeds all others (next highest: B15-E060 Helios Grid Infrastructure at 14.18%? No—careful scan confirms 13.88% is peak; e.g., B15-E060 is 14.18%? Wait, reparse: B15-E060 lists CumulativeReturn=14.18%, which is higher. Mistake—full scan:  
+- B15-E056: 13.88%  
+- B15-E060: 14.18% (Helios Grid Infrastructure, +5.40% weekly)  
+Actual max is B15-E060 at 14.18%. Apologies—**corrected anchor: B15-E060 (Helios Grid Infrastructure)**. (Note: B15-E063 at 14.16%, B15-E068/078 at 14.16%, but 14.18% peaks uniquely.)
+
+**Preceding Market Conditions (Weeks 1-59)**  
+- **Regime Buildup (Low-Salience Accumulation)**: Consistent ""structural breadcrumb"" and ""housekeeping"" notes across timeline indicate noisy, low-volatility market with repetitive portfolio maintenance. RegimeScores cycle 1-5 without dominant trends (e.g., no sustained >4 scores pre-W59), enabling carry/credit positions like NorthRiver/Cinder to grind gains (e.g., B15-E056's 13.88% peak via steady +0.39% to +2.75% weeks). Helios entries (B15-E003/008/013/etc.) were flat/negative (-0.00% to +0.92%) until W59, dismissed as ""ordinary background"" due to global score rule masking infrastructure regime shift.  
+- **Key Pre-Enablers (Proximal, W50-59)**:  
+  | Event | Position | CumRet | RegimeScore | Enabling Note |  
+  |-------|----------|--------|-------------|---------------|  
+  | B15-E050 | Cinder Logistics | 5.49% | 5 | Causal prerequisite details preserved. |  
+  | B15-E053 | Helios Grid | 3.38% | 5 | Procedural collapse point; breadcrumb. |  
+  | B15-E057 | Aurelia AI | 10.31% | 5 | Low-salience","PIVOT_ID=[B15-E060]
+
+**Anchor position identification**: Helios Grid Infrastructure at Week-60 with CumulativeReturn=14.18% (highest in timeline, surpassing Aurelia AI Semiconductor Basket's nearby peaks at 14.13-14.16% and all others).
+
+**Preceding market conditions (Weeks 1-59)**:
+- **Regime buildup (low-salience structural breadcrumbs)**: Helios entries dominated early timeline with neutral-to-modest performance (Week-03: -0.00%, Week-08: +0.06%, Week-13: +0.06%), under RegimeScores 2-3, marked as ""repetitive housekeeping"" and ""ordinary background activity."" These built cumulative base (peaking at 4.17% by Week-43) amid portfolio-wide low-salience noise, enabling later compounding without headline volatility.
+- **Enabling cross-system coupling**: Pre-Week-60 entries (e.g., [B15-E053] Week-53: -1.39% weekly drop to 3.38% cum., RegimeScore=5) showed volatility absorption, with commentary noting ""procedural details summarizers collapse"" and global pivot admissibility shifts. Parallel positions (Aurelia/Aurelia AI at Weeks 07/17/27/37: cum. to 10.15%, NorthRiver at Weeks 11/21/31: to 7.82%) provided diversification, but Helios's ""dependencies only matter[ing] with full timeline"" primed explicit destabilization.
+- **RegimeScore trajectory**: Escalating from 2 (early stability) to 4-5 (Weeks 43/53), signaling maturing conditions for infrastructure/grid plays—repetitive ""status chatter"" hid downstream feasibility shifts, contrasting dashboard noise in competitors (e.g., Cinder's dramatic but secondary events).
+
+**Success enablers at pivot**:
+- Week-60's +5.40% weekly surge explicitly tied to ""cross-system coupling became explicit and destabilizing,"" leveraging prior breadcrumbs (e.g., Weeks 08/13/43/53) for admissibility. RegimeScore=2 (deceptively low) masked global shift, with post-pivot stability (Weeks 73/78: +1.80%/+2.72% holding ~14.16%) confirming resilience vs. peers' drawdowns (NorthRiver -0.55%/-1.29%). This rewarded timeline-anchored tracking over local salience.",0.8099999999999999,0.9999999999999999,0.8099999999999999,0,0.37672644889351037,0.6,investment,extreme,B15-E056,B15-E060,0,1,rescue,1,0,1,0,0
+B16,grok-4-1-fast-non-reasoning,"PIVOT_ID=[B16-E053]
+
+### Anchor Identification
+The anchor position, per the interpretation rule, is **Helios Grid Infrastructure** at **[B16-E053]** (Week-53), with the highest CumulativeReturn of **11.23%** across the full timeline B16. No other entry exceeds this (next highest are multiple at 11.20%, but 11.23% is maximal). This entry's WeeklyReturn of **+5.40%** drove the peak.
+
+### Preceding Market Conditions (Weeks 1-52)
+The timeline cycles through 5 positions in near-strict rotation: NorthRiver Utilities Carry (Weeks 1,6,11,16,21,26,31,36,41,46,51,56,61,66,71,76,81), Aurelia AI Semiconductor Basket (2,7,12,17,22,27,32,37,42,47,52,57,62,67,72,77,82), Helios Grid Infrastructure (3,8,13,18,23,28,33,38,43,48,53,58,63,68,73,78,83), BlueHarbor Treasury Arbitrage (4,9,14,19,24,29,34,39,44,49,54,59,64,69,74,79,84), Cinder Logistics Credit (5,10,15,20,25,30,35,40,45,50,55,60,65? wait 65 is Aurelia, but pattern holds ~every 5th).
+
+- **Cumulative Build-Up to Anchor**: Helios entries prior to E053 show steady compounding toward the peak:
+  | Entry | Week | CumRet | WkRet | RegimeScore |
+  |-------|------|--------|-------|-------------|
+  | B16-E003 | 03 | 0.82% | +0.82% | 1 |
+  | B16-E008 | 08 | 0.94% | +0.12% | 2 |
+  | B16-E013 | 13 | 2.75% | +1.82% | 2 |
+  | B16-E018 | 18 | 4.35% | +1.60% | 2 |
+  | B16-E023 | 23 | 5.35% | +1.00% | 1 |
+  |","PIVOT_ID=[B16-E045]
+
+**Anchor Position Identification**  
+The entry with the highest CumulativeReturn is [B16-E045] Week-45 | Position=Cinder Logistics Credit | CumulativeReturn=10.45%. This exceeds all others (next highest are 11.20% and 11.23% peaks for Helios Grid Infrastructure, but 10.45% is the max unique anchor per rule). No later Cinder entry surpasses it; subsequent ones plateau at 11.18%.
+
+**Preceding Market Conditions Enabling Success**  
+Cinder Logistics Credit's anchor success at Week-45 (WeeklyReturn=+1.90%) was enabled by a 5-week build-up of low-volatility, high-RegimeScore (>4) stability in complementary positions, creating portfolio momentum without drawdowns. Key precursors (chronologically, all with positive WeeklyReturns unless noted):
+
+- **[B16-E032] Week-32** (Aurelia AI Semiconductor Basket, CumRet=4.78%, RegimeScore=5): Structural breadcrumb with ordinary processing but preserved causal prerequisites; minor variance in research logs built AI/semiconductor exposure tailwind.
+- **[B16-E034] Week-34** (BlueHarbor Treasury Arbitrage, CumRet=4.66%, RegimeScore=4): Repetitive housekeeping shifted downstream feasibility; low-salience arbitrage stabilized fixed-income base.
+- **[B16-E035] Week-35** (Cinder Logistics Credit itself, CumRet=7.90%, RegimeScore=2): Direct prior update processed as background but globally pivot-admissible; +0.76% weekly set intra-position momentum amid boring local context.
+- **[B16-E036] Week-36** (NorthRiver Utilities Carry, CumRet=6.53%, RegimeScore=2): Procedural details (often collapsed) referenced timeline dependencies; utilities carry provided defensive yield carryover.
+- **[B16-E041] Week-41** (NorthRiver Utilities Carry, CumRet=6.65%, RegimeScore=5): Low-salience commentary tracked global rules; +0.12% incremental grind preserved causal chain.
+
+**Enabling Dynamics**  
+- **Regime Stability**: Preceding entries averaged RegimeScore=3.6 (peaks at 5), indicating synchronized subsystems without headline volatility (e.g., ""ordinary background activity"" phrasing dominates, downplaying local drama).
+- **Noisy Low-Salience Build**: Commentary emphasizes ""structural breadcrumbs,"" ""causal prerequisites,"" and ""downstream feasibility shifts""—int",0.9999999999999999,0.8999999999999999,0.9999999999999999,0,0.3748618264030855,0.4,investment,extreme,B16-E053,B16-E045,1,0,true_mirage,1,1,0,0,1
+B16,grok-4-1-fast-non-reasoning,"PIVOT_ID=[B16-E053]
+
+### Anchor Identification
+The anchor position, per the interpretation rule, is **Helios Grid Infrastructure** at **[B16-E053]** (Week-53), with the highest CumulativeReturn of **11.23%** across the full timeline B16. No other entry exceeds this (next highest are multiple at 11.20%, but 11.23% is maximal). This entry's WeeklyReturn of **+5.40%** drove the peak.
+
+### Preceding Market Conditions (Weeks 1-52)
+The timeline cycles through 5 positions in near-strict rotation: NorthRiver Utilities Carry (Weeks 1,6,11,16,21,26,31,36,41,46,51,56,61,66,71,76,81), Aurelia AI Semiconductor Basket (2,7,12,17,22,27,32,37,42,47,52,57,62,67,72,77,82), Helios Grid Infrastructure (3,8,13,18,23,28,33,38,43,48,53,58,63,68,73,78,83), BlueHarbor Treasury Arbitrage (4,9,14,19,24,29,34,39,44,49,54,59,64,69,74,79,84), Cinder Logistics Credit (5,10,15,20,25,30,35,40,45,50,55,60,65? wait 65 is Aurelia, but pattern holds ~every 5th).
+
+- **Cumulative Build-Up to Anchor**: Helios entries prior to E053 show steady compounding toward the peak:
+  | Entry | Week | CumRet | WkRet | RegimeScore |
+  |-------|------|--------|-------|-------------|
+  | B16-E003 | 03 | 0.82% | +0.82% | 1 |
+  | B16-E008 | 08 | 0.94% | +0.12% | 2 |
+  | B16-E013 | 13 | 2.75% | +1.82% | 2 |
+  | B16-E018 | 18 | 4.35% | +1.60% | 2 |
+  | B16-E023 | 23 | 5.35% | +1.00% | 1 |
+  |","PIVOT_ID=[B16-E045]
+
+**Anchor Identification**: Cinder Logistics Credit at Week-45 holds the highest CumulativeReturn of 10.45%, exceeding all others (next highest is Helios Grid Infrastructure at Week-53 with 11.23%, but 10.45% is the max observed prior to any later peaks; confirmed by scanning all entries).
+
+**Preceding Market Conditions (Weeks 1-44)**:
+- **Dominant Buildup via NorthRiver Utilities Carry**: This position drove early and sustained cumulative growth, appearing in Weeks 1 (1.37%), 11 (2.84%), 16 (3.86%), and 21 (4.47%). Its consistent positive weekly returns (+1.37%, +1.20%, +1.02%, +0.60%) established a stable base, with RegimeScores spanning 1-5 indicating adaptive performance across regimes. Commentary notes (e.g., ""causal prerequisites,"" ""shifts downstream feasibility"") highlight its role as a low-salience enabler, processing as ""ordinary background activity"" but globally pivoting admissibility for risk-on positions like Cinder.
+- **Key Support from BlueHarbor Treasury Arbitrage**: Weeks 9 (CumRet 2.20%, +2.15% weekly) and 14 (CumRet 1.27%) provided arbitrage stability during volatility, with RegimeScore=3. Its ""structural breadcrumb"" nature preserved procedural details for later compression-resistant causality.
+- **Cinder's Own Momentum Ramp**: Pre-Week-45 entries for Cinder—Week-10 (CumRet 1.85%, +1.48%), Week-25 (5.54%, +2.26%), Week-30 (7.14%, +1.60%)—show accelerating returns (RegimeScores 5,2,5), with ""housekeeping"" logs masking high-impact synchronization. This built ~7-8% cumret foundation by Week-30, enabling the +1.90% Week-45 spike amid ""global score rule"" tracking.
+- **Regime Context**: Low-salience markers (RegimeScores 1-5) across entries indicate noisy, non-headline conditions favoring carry/credit strategies. Repetitive ""portfolio research"" phrasing and ""dependencies only matter[ing] with full timeline"" underscore a gradual, derivative buildup—e.g., Helios/Aurelia provided minor variance (+0.12% W8, -0.42% W2) but no dominance,",0.8299999999999998,0.8999999999999999,0.8299999999999998,0,0.39778952006559465,0.5,investment,extreme,B16-E053,B16-E045,1,0,true_mirage,1,1,0,0,1
+B16,grok-4-1-fast-non-reasoning,"PIVOT_ID=[B16-E053]
+
+### Anchor Identification
+The anchor position, per the interpretation rule, is **Helios Grid Infrastructure** at **[B16-E053]** (Week-53), with the highest CumulativeReturn of **11.23%** across the full timeline B16. No other entry exceeds this (next highest are multiple at 11.20%, but 11.23% is maximal). This entry's WeeklyReturn of **+5.40%** drove the peak.
+
+### Preceding Market Conditions (Weeks 1-52)
+The timeline cycles through 5 positions in near-strict rotation: NorthRiver Utilities Carry (Weeks 1,6,11,16,21,26,31,36,41,46,51,56,61,66,71,76,81), Aurelia AI Semiconductor Basket (2,7,12,17,22,27,32,37,42,47,52,57,62,67,72,77,82), Helios Grid Infrastructure (3,8,13,18,23,28,33,38,43,48,53,58,63,68,73,78,83), BlueHarbor Treasury Arbitrage (4,9,14,19,24,29,34,39,44,49,54,59,64,69,74,79,84), Cinder Logistics Credit (5,10,15,20,25,30,35,40,45,50,55,60,65? wait 65 is Aurelia, but pattern holds ~every 5th).
+
+- **Cumulative Build-Up to Anchor**: Helios entries prior to E053 show steady compounding toward the peak:
+  | Entry | Week | CumRet | WkRet | RegimeScore |
+  |-------|------|--------|-------|-------------|
+  | B16-E003 | 03 | 0.82% | +0.82% | 1 |
+  | B16-E008 | 08 | 0.94% | +0.12% | 2 |
+  | B16-E013 | 13 | 2.75% | +1.82% | 2 |
+  | B16-E018 | 18 | 4.35% | +1.60% | 2 |
+  | B16-E023 | 23 | 5.35% | +1.00% | 1 |
+  |","PIVOT_ID=B16-E053
+
+**Anchor position identification:** Helios Grid Infrastructure holds the highest CumulativeReturn of 11.23% at Week-53 (B16-E053). Multiple entries for this position (e.g., B16-E003, E008, E013, E043, E058, E063, E073, E078) cluster around 11.20–11.23%, confirming it as the consistent max per the rule (highest single-entry CumulativeReturn).
+
+**Preceding market conditions (Weeks 3–52 timeline scan):**
+- **Build-up phase (Weeks 3–43):** Helios entries show steady compounding with low-to-mid RegimeScores (1–4) and positive WeeklyReturns (+0.12% to +1.82%). Key enablers:
+  | Event | Week | WeeklyReturn | CumulativeReturn | RegimeScore | Enabling notes |
+  |-------|------|--------------|------------------|-------------|---------------|
+  | B16-E003 | 03 | +0.82% | 0.82% | 1 | Baseline entry; ""causal prerequisites for later interpretation""; boring locally but globally admissible pivot setup.
+  | B16-E008 | 08 | +0.12% | 0.94% | 2 | Housekeeping chatter; low-salience tracking of global score.
+  | B16-E013 | 13 | +1.82% | 2.75% | 2 | Structural breadcrumb; non-dominant but compounds admissibility.
+  | B16-E043 | 43 | +0.26% | 5.71% | 4 | Dependencies for full timeline; shifts downstream feasibility.
+
+  These act as ""noisy background"" (per diary) with preserved procedural details, enabling synchronization without headline disruption.
+
+- **Proximal triggers (immediate pre-Week 53):** No direct prior-week Helios entry, but portfolio-wide context shows:
+  - Competing positions (e.g., NorthRiver at 5.99% Week-31, Cinder at 7.90% Week-35) hit local highs but dipped or stabilized (e.g., NorthRiver to 10.07% by Week-61 post-53).
+  - RegimeScores trend neutral (1–4), with ""ordinary background activity"" phrasing emphasizing non-disruptive accumulation.
+  - Global enablers: Cross-position ""dependencies that only matter with full timeline"" (e.g., BlueHarbor dips at Weeks 14",0.9999999999999999,0.8999999999999999,0.9999999999999999,1,0.34013647029509897,0.6,investment,extreme,B16-E053,B16-E053,1,1,stable_correct,1,0,0,0,0

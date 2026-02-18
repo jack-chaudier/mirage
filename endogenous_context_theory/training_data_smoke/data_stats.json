@@ -1,0 +1,51 @@
+{
+  "config": {
+    "tasks_per_difficulty": 1,
+    "difficulties": [
+      "easy",
+      "medium",
+      "hard",
+      "extreme"
+    ],
+    "compression_levels": [
+      0.4,
+      0.5,
+      0.6
+    ],
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "train_task_count": 3,
+    "valid_task_count": 1,
+    "max_context_words": 600,
+    "split_seed": 42
+  },
+  "counts": {
+    "total_tasks": 4,
+    "total_examples": 40,
+    "train_examples": 30,
+    "valid_examples": 10,
+    "train_full_context_examples": 3,
+    "valid_full_context_examples": 1,
+    "train_compressed_examples": 27,
+    "valid_compressed_examples": 9
+  },
+  "label_balance": {
+    "train_degraded_count": 27,
+    "valid_degraded_count": 9,
+    "train_degraded_rate": 0.9,
+    "valid_degraded_rate": 0.9
+  },
+  "difficulty_counts": {
+    "train": {
+      "hard": 10,
+      "medium": 10,
+      "extreme": 10
+    },
+    "valid": {
+      "easy": 10
+    }
+  }
+}

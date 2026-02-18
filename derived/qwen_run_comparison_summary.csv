@@ -1,0 +1,18 @@
+metric,older_unbalanced_run,latest_balanced_run
+Total examples,100,400
+Degraded examples,56,371
+Strong examples,44,29
+Base pivot accuracy (all),15.0%,40.5%
+FT pivot accuracy (all),38.0%,99.2%
+Base pivot accuracy (degraded),14.3%,41.0%
+FT pivot accuracy (degraded),39.3%,99.2%
+Base silent mirage rate,100.0%,59.0%
+FT silent mirage rate,62.5%,0.3%
+Base degradation flag (when degraded),0.0%,0.0%
+FT degradation flag (when degraded),37.5%,95.4%
+Base false alarm (flagged when strong),0.0%,0.0%
+FT false alarm (flagged when strong),0.0%,0.0%
+Base format adherence,0.0%,0.0%
+FT format adherence,36.0%,100.0%
+Base flag_given_wrong,,0.0% (0/219)
+FT flag_given_wrong,,66.7% (2/3)

@@ -1,0 +1,8 @@
+group_type,group_value,n,n_degraded,n_strong,base_pivot_acc,ft_pivot_acc,ft_flag_degraded,ft_silent_mirage,ft_flag_given_wrong,ft_wrong_cases
+difficulty,easy,99,88,11,0.41414141414141414,1.0,1.0,0.0,,0
+difficulty,medium,107,101,6,0.3364485981308411,1.0,1.0,0.0,,0
+difficulty,hard,94,86,8,0.35106382978723405,1.0,1.0,0.0,,0
+difficulty,extreme,100,96,4,0.52,1.0,1.0,0.0,,0
+category,investment,139,127,12,0.19424460431654678,1.0,1.0,0.0,,0
+category,incident,143,135,8,0.43356643356643354,1.0,1.0,0.0,,0
+category,narrative,118,109,9,0.6186440677966102,1.0,1.0,0.0,,0

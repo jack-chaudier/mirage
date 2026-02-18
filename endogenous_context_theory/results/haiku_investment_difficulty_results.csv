@@ -1,0 +1,2788 @@
+task_id,model_name,full_answer,compressed_answer,raw_validity,raw_validity_full,raw_validity_compressed,pivot_preserved,semantic_regret,compression_level,category,difficulty_level,full_pivot,compressed_pivot,full_pivot_matches_ground_truth,pivot_matches_ground_truth,pivot_outcome,high_validity_flag,true_mirage_flag,rescue_flag,instability_flag,mirage_flag
+B01,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B01-E051**
+
+## Identification
+
+The anchor position is **Helios Grid Infrastructure** at Week-51 with a cumulative return of **20.82%**, which represents the maximum cumulative return across the entire 84-week timeline.
+
+## Market Conditions That Preceded and Enabled Success
+
+### Phase 1: Early Foundation (Weeks 1-10)
+Helios Grid Infrastructure entered the portfolio at Week-03 with modest initial performance (+0.23% weekly return). This early period established the position while other positions (NorthRiver Utilities, BlueHarbor Treasury Arbitrage) were being tested. The low-salience, structural nature of these early entries created the foundational dependencies that would later compound.
+
+### Phase 2: Accumulation and Regime Stabilization (Weeks 11-33)
+- **Week-08**: +2.40% weekly return signaled emerging strength
+- **Week-13**: +0.45% return with RegimeScore=5 marked a critical inflection point where ""globally it changes which pivot is admissible""
+- **Week-18**: +0.67% return with RegimeScore=5 reinforced regime stability
+- **Week-33**: +3.23% weekly return pushed cumulative return to 8.49%, demonstrating accelerating momentum
+
+The pattern shows Helios benefited from:
+- Consistent positive weekly returns across most periods
+- High RegimeScore readings (particularly 5s) indicating favorable market conditions
+- Low narrative salience masking the structural importance of compounding gains
+
+### Phase 3: Explosive Growth (Weeks 34-51)
+- **Week-38**: +0.89% return with RegimeScore=5 and cumulative 9.38%
+- **Week-43**: -0.26% return but cumulative held at 9.12% (resilience)
+- **Week-48**: +0.31% return, cumulative 9.42%
+- **Week-51**: **+5.40% weekly return** — the decisive catalyst
+
+The Week-51 entry explicitly notes: *""cross-system coupling became explicit and destabilizing in portfolio research""* — this destabilization event, combined with 50","# Analysis of Anchor Position
+
+**PIVOT_ID=B01-E051**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **20.82%** at Week-51, held by **Helios Grid Infrastructure** (B01-E051).
+
+## Market Conditions That Preceded and Enabled Success
+
+### Phase 1: Foundation Building (Weeks 3–13)
+Helios Grid Infrastructure entered the portfolio at Week-03 with modest +0.23% weekly return and 0.23% cumulative return. This initial position was characterized as ""low salience"" procedural activity. However, by Week-13, the position accumulated to 3.08% cumulative return (+0.45% weekly), with regime score 5 indicating ""local checks passed with only minor variance."" This phase established structural credibility despite appearing ""boring"" in local context.
+
+### Phase 2: Dormancy and Parallel Positioning (Weeks 14–38)
+While Helios remained relatively flat (hovering around 3.08–3.40% cumulative return through Week-23), other positions matured:
+- **BlueHarbor Treasury Arbitrage** built to 6.48% cumulative return (Week-14)
+- **Aurelia AI Semiconductor Basket** reached 3.63% cumulative return (Week-17)
+- **Cinder Logistics Credit** accumulated to 4.47% cumulative return (Week-20)
+
+This diversification created portfolio resilience and reduced concentration risk, allowing Helios to remain positioned without drawdown pressure.
+
+### Phase 3: Explosive Acceleration (Week-38 to Week-51)
+- **Week-38**: Helios jumped +0.89% weekly to 9.38% cumulative (RegimeScore=5). The metadata notes ""cross-system coupling became explicit"" by Week-51, suggesting latent dependencies activated.
+- **Week-51**: The decisive move—**+5.40% weekly return**, propelling cumulative return to **20.82%**. The regime note explicitly states: *""cross-system coupling became explicit and destabilizing in portfolio research""*—indicating that infrastructure positioning benefited from broader market repricing or sector rotation.
+
+### Phase 4: Consolidation (",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.22569605196737696,0.4,investment,easy,B01-E051,B01-E051,1,1,stable_correct,1,0,0,0,0
+B01,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B01-E051**
+
+## Identification
+
+The anchor position is **Helios Grid Infrastructure** at Week-51 with a cumulative return of **20.82%**, which represents the maximum cumulative return across the entire 84-week timeline.
+
+## Market Conditions That Preceded and Enabled Success
+
+### Phase 1: Early Foundation (Weeks 1-10)
+Helios Grid Infrastructure entered the portfolio at Week-03 with modest initial performance (+0.23% weekly return). This early period established the position while other positions (NorthRiver Utilities, BlueHarbor Treasury Arbitrage) were being tested. The low-salience, structural nature of these early entries created the foundational dependencies that would later compound.
+
+### Phase 2: Accumulation and Regime Stabilization (Weeks 11-33)
+- **Week-08**: +2.40% weekly return signaled emerging strength
+- **Week-13**: +0.45% return with RegimeScore=5 marked a critical inflection point where ""globally it changes which pivot is admissible""
+- **Week-18**: +0.67% return with RegimeScore=5 reinforced regime stability
+- **Week-33**: +3.23% weekly return pushed cumulative return to 8.49%, demonstrating accelerating momentum
+
+The pattern shows Helios benefited from:
+- Consistent positive weekly returns across most periods
+- High RegimeScore readings (particularly 5s) indicating favorable market conditions
+- Low narrative salience masking the structural importance of compounding gains
+
+### Phase 3: Explosive Growth (Weeks 34-51)
+- **Week-38**: +0.89% return with RegimeScore=5 and cumulative 9.38%
+- **Week-43**: -0.26% return but cumulative held at 9.12% (resilience)
+- **Week-48**: +0.31% return, cumulative 9.42%
+- **Week-51**: **+5.40% weekly return** — the decisive catalyst
+
+The Week-51 entry explicitly notes: *""cross-system coupling became explicit and destabilizing in portfolio research""* — this destabilization event, combined with 50","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B01-E051**
+
+## Anchor Position Identification
+
+The entry with maximum cumulative return is **[B01-E051] Week-51 | Position=Helios Grid Infrastructure | CumulativeReturn=20.82%**
+
+(Note: This ties with [B01-E053] Week-53 at 20.72%, but B01-E051 achieves the peak first and represents the anchor point.)
+
+## Preceding Market Conditions and Enablers
+
+### Phase 1: Foundation Building (Weeks 1-14)
+- **BlueHarbor Treasury Arbitrage** established steady carry with +5.32% cumulative return by Week-09, providing a stable yield foundation
+- **Aurelia AI Semiconductor Basket** initiated at +1.44% (Week-02), establishing early exposure to growth dynamics
+- **Helios Grid Infrastructure** began accumulating at +2.63% (Week-08), showing consistent infrastructure momentum
+
+### Phase 2: Structural Accumulation (Weeks 15-33)
+- **Helios Grid Infrastructure** demonstrated persistent positive weekly returns (+0.45%, +0.67%, +1.86%) across RegimeScore transitions (5→5→4)
+- **Aurelia AI Semiconductor Basket** built to +4.97% by Week-22, establishing secondary growth engine
+- **Cinder Logistics Credit** entered the portfolio at Week-10 and accumulated steadily (+5.38% by Week-25)
+- **BlueHarbor Treasury Arbitrage** maintained stability, reaching +6.48% by Week-14 and +6.04% by Week-29
+
+### Phase 3: Acceleration Setup (Weeks 34-50)
+- **Helios Grid Infrastructure** achieved breakthrough performance: **+3.23% weekly return at Week-33**, pushing cumulative to +8.49%
+- **Aurelia AI Semiconductor Basket** surged to +10.76% by Week-47 (RegimeScore=4), signaling momentum convergence
+- **Cinder Logistics Credit** reached +6.83% by Week-40, establishing diversified support
+
+### Critical Enabler: Week",0.8099999999999999,0.8299999999999998,0.8099999999999999,1,0.3046571209633857,0.5,investment,easy,B01-E051,B01-E051,1,1,stable_correct,1,0,0,0,0
+B01,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B01-E051**
+
+## Identification
+
+The anchor position is **Helios Grid Infrastructure** at Week-51 with a cumulative return of **20.82%**, which represents the maximum cumulative return across the entire 84-week timeline.
+
+## Market Conditions That Preceded and Enabled Success
+
+### Phase 1: Early Foundation (Weeks 1-10)
+Helios Grid Infrastructure entered the portfolio at Week-03 with modest initial performance (+0.23% weekly return). This early period established the position while other positions (NorthRiver Utilities, BlueHarbor Treasury Arbitrage) were being tested. The low-salience, structural nature of these early entries created the foundational dependencies that would later compound.
+
+### Phase 2: Accumulation and Regime Stabilization (Weeks 11-33)
+- **Week-08**: +2.40% weekly return signaled emerging strength
+- **Week-13**: +0.45% return with RegimeScore=5 marked a critical inflection point where ""globally it changes which pivot is admissible""
+- **Week-18**: +0.67% return with RegimeScore=5 reinforced regime stability
+- **Week-33**: +3.23% weekly return pushed cumulative return to 8.49%, demonstrating accelerating momentum
+
+The pattern shows Helios benefited from:
+- Consistent positive weekly returns across most periods
+- High RegimeScore readings (particularly 5s) indicating favorable market conditions
+- Low narrative salience masking the structural importance of compounding gains
+
+### Phase 3: Explosive Growth (Weeks 34-51)
+- **Week-38**: +0.89% return with RegimeScore=5 and cumulative 9.38%
+- **Week-43**: -0.26% return but cumulative held at 9.12% (resilience)
+- **Week-48**: +0.31% return, cumulative 9.42%
+- **Week-51**: **+5.40% weekly return** — the decisive catalyst
+
+The Week-51 entry explicitly notes: *""cross-system coupling became explicit and destabilizing in portfolio research""* — this destabilization event, combined with 50","# Analysis of Anchor Position
+
+**PIVOT_ID=B01-E051**
+
+## Identification
+
+The anchor position is **Helios Grid Infrastructure** at Week-51 [B01-E051] with **CumulativeReturn=20.82%**, the highest cumulative return in the timeline.
+
+## Market Conditions That Preceded and Enabled Success
+
+### Phase 1: Foundation Building (Weeks 3–13)
+Helios Grid Infrastructure established its position through three incremental entries:
+- **Week-03 [B01-E003]**: +0.23% cumulative return (RegimeScore=3)
+- **Week-08 [B01-E008]**: +2.40% weekly return, cumulative 2.63% (RegimeScore=3)
+- **Week-13 [B01-E013]**: +0.45% weekly return, cumulative 3.08% (RegimeScore=5)
+
+These early entries occurred during **stable regime conditions** (RegimeScore 3–5), establishing infrastructure exposure as a structural holding despite low narrative salience.
+
+### Phase 2: Dormancy and Structural Positioning (Weeks 14–43)
+The position remained quiet while other positions (BlueHarbor, Aurelia, Cinder) cycled through volatility. This period allowed:
+- Accumulation of infrastructure fundamentals without competitive pressure
+- Regime stabilization at RegimeScore=3
+- Positioning ahead of broader portfolio rebalancing
+
+### Phase 3: Explosive Acceleration (Week-51)
+**Week-51 [B01-E051]** delivered **+5.40% weekly return**, driving cumulative return to 20.82%.
+
+**Enabling conditions:**
+1. **Cross-system coupling became explicit** — the portfolio research logs note ""cross-system coupling became explicit and destabilizing,"" indicating infrastructure assets benefited from broader market repricing
+2. **Regime Score=3** — moderate stability allowed large moves without whipsaw
+3. **Structural positioning** — the position had been quietly accumulated over 48 weeks, creating leverage for the acceleration phase
+4. **Relative outperformance** — while other positions (Aurelia at 10.76%, BlueHarbor at 8",0.9999999999999999,0.8299999999999998,0.9999999999999999,1,0.2513048423722557,0.6,investment,easy,B01-E051,B01-E051,1,1,stable_correct,1,0,0,0,0
+B02,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B02-E061**
+
+## Identification
+
+The anchor position is **Helios Grid Infrastructure** at Week-61, which achieves the maximum cumulative return of **20.65%** across the entire 84-week timeline.
+
+## Market Conditions That Preceded and Enabled Success
+
+### Phase 1: Foundation Building (Weeks 3–58)
+Helios Grid Infrastructure entered the portfolio at Week-03 with a modest +1.10% weekly return and 1.10% cumulative return. Over the subsequent 55 weeks, the position accumulated returns through:
+
+- **Consistent positive contribution**: Despite low-salience commentary and routine portfolio maintenance, the position preserved structural dependencies that became causal prerequisites for later interpretation.
+- **Regime stability**: RegimeScores ranged primarily between 1–5, with no sustained volatility that would have disrupted the accumulation trajectory.
+- **Compounding through low-visibility periods**: Weeks 8, 28, 38, 58 showed minimal weekly returns (0.04% to -0.12%), yet the position maintained cumulative momentum at ~6–9% by Week-58.
+
+### Phase 2: Catalytic Acceleration (Week-61)
+At Week-61, Helios Grid Infrastructure delivered a **+5.40% weekly return**, representing a dramatic single-week surge. The portfolio research notes indicate:
+- ""Multiple subsystems synchronized into a high-impact transition""
+- This was a structural event that had been enabled by the prior 58 weeks of foundational positioning
+
+This single week elevated cumulative return from 9.25% (Week-58) to **20.65%**, establishing the anchor position.
+
+### Phase 3: Consolidation and Maintenance (Weeks 62–84)
+Post-catalyst, the position stabilized around 20–20.5% cumulative return:
+- Week-63: -0.34% (minor pullback)
+- Week-68: +1.09% (reinforcement)
+- Week-78: -0.34% (minor volatility)
+- Week-83: +0.43% (final consolidation at 20.55%)
+
+## Key Enabling Conditions
+
+1. **Long accumulation runway**:","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B02-E083**
+
+## Anchor Position Identification
+
+The entry with maximum cumulative return is **Week-83 | Helios Grid Infrastructure | CumulativeReturn=20.55%**
+
+This represents the highest cumulative return across the entire 83-week timeline.
+
+## Preceding Market Conditions and Enabling Factors
+
+### Critical Inflection Point: Week-61
+The decisive breakthrough occurred at **B02-E061 (Week-61)**, where Helios Grid Infrastructure delivered **+5.40% weekly return**, elevating cumulative return from 4.48% to 20.65%. The metadata explicitly notes: *""multiple subsystems synchronized into a high-impact transition""* — indicating structural alignment rather than isolated momentum.
+
+### Foundation Phase (Weeks 2-23)
+- **B02-E003 (Week-03)**: Initial Helios entry at +1.10% (CumulativeReturn=1.10%, RegimeScore=5) established the position with high regime confidence
+- **B02-E013 (Week-13)**: +1.09% reinforcement (CumulativeReturn=2.26%)
+- **B02-E023 (Week-23)**: +0.59% consolidation (CumulativeReturn=4.48%)
+
+This 20-week accumulation phase built structural prerequisites while maintaining low narrative salience—the position was ""boring"" locally but globally shifted downstream feasibility.
+
+### Acceleration Phase (Weeks 61-83)
+Following the Week-61 synchronization event:
+- **B02-E063 (Week-63)**: Minor pullback (-0.34%), but cumulative return held at 20.31%
+- **B02-E068 (Week-68)**: Recovery (+1.09%, CumulativeReturn=20.55%)
+- **B02-E078 (Week-78)**: Consolidation (-0.34%, CumulativeReturn=20.21%)
+- **B02-E083 (Week-83)**: Final +0.43% (CumulativeReturn=20.55%)
+
+### Market Regime Context
+The anchor position succeeded under conditions where:
+1. **",0.9999999999999999,0.8299999999999998,0.9999999999999999,0,0.2566828219725884,0.4,investment,easy,B02-E061,B02-E083,1,0,true_mirage,1,1,0,0,1
+B02,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B02-E061**
+
+## Identification
+
+The anchor position is **Helios Grid Infrastructure** at Week-61, which achieves the maximum cumulative return of **20.65%** across the entire 84-week timeline.
+
+## Market Conditions That Preceded and Enabled Success
+
+### Phase 1: Foundation Building (Weeks 3–58)
+Helios Grid Infrastructure entered the portfolio at Week-03 with a modest +1.10% weekly return and 1.10% cumulative return. Over the subsequent 55 weeks, the position accumulated returns through:
+
+- **Consistent positive contribution**: Despite low-salience commentary and routine portfolio maintenance, the position preserved structural dependencies that became causal prerequisites for later interpretation.
+- **Regime stability**: RegimeScores ranged primarily between 1–5, with no sustained volatility that would have disrupted the accumulation trajectory.
+- **Compounding through low-visibility periods**: Weeks 8, 28, 38, 58 showed minimal weekly returns (0.04% to -0.12%), yet the position maintained cumulative momentum at ~6–9% by Week-58.
+
+### Phase 2: Catalytic Acceleration (Week-61)
+At Week-61, Helios Grid Infrastructure delivered a **+5.40% weekly return**, representing a dramatic single-week surge. The portfolio research notes indicate:
+- ""Multiple subsystems synchronized into a high-impact transition""
+- This was a structural event that had been enabled by the prior 58 weeks of foundational positioning
+
+This single week elevated cumulative return from 9.25% (Week-58) to **20.65%**, establishing the anchor position.
+
+### Phase 3: Consolidation and Maintenance (Weeks 62–84)
+Post-catalyst, the position stabilized around 20–20.5% cumulative return:
+- Week-63: -0.34% (minor pullback)
+- Week-68: +1.09% (reinforcement)
+- Week-78: -0.34% (minor volatility)
+- Week-83: +0.43% (final consolidation at 20.55%)
+
+## Key Enabling Conditions
+
+1. **Long accumulation runway**:","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B02-E073**
+
+## Anchor Position Identification
+
+The entry with maximum cumulative return is **[B02-E073] Week-73 | Position=Aurelia AI Semiconductor Basket | CumulativeReturn=19.85%**
+
+This represents the highest cumulative return across the entire 82-week timeline.
+
+## Preceding Market Conditions and Enablers
+
+### Phase 1: Initial Establishment (Week-02)
+- **[B02-E002]** Aurelia AI Semiconductor Basket initiated with +1.71% weekly return, establishing the position's foundational trajectory
+- Low RegimeScore (1) indicated favorable conditions despite appearing as ""boring"" housekeeping in local context
+- This entry created the structural prerequisite for later acceleration
+
+### Phase 2: Accumulation and Consolidation (Weeks-17 through Week-62)
+- **[B02-E017]** Week-17: +2.00% weekly return, cumulative 5.16% — marked significant momentum building
+- **[B02-E022]** Week-22: +0.39% weekly return, cumulative 5.55% — maintained position through RegimeScore-4 conditions
+- **[B02-E047]** Week-47: +0.66% weekly return, cumulative 6.96% — continued steady accumulation
+- **[B02-E057]** Week-57: -0.24% weekly return, cumulative 7.00% — minor pullback but position held
+- **[B02-E062]** Week-62: +1.04% weekly return, cumulative 8.03% — recovery and renewed momentum
+
+### Phase 3: Explosive Acceleration (Week-73)
+- **[B02-E072]** Week-72: +0.46% weekly return, cumulative 8.62% — final setup before major move
+- **[B02-E073]** Week-73: **+4.80% weekly return, cumulative 19.85%** — the dominant catalyst event
+  - This incident ""dominated discussion despite depending on prior setup,"" indicating the move was enabled by accumulated structural positioning
+  - Regime",0.9999999999999999,0.8299999999999998,0.9999999999999999,0,0.31494567323044387,0.5,investment,easy,B02-E061,B02-E073,1,0,true_mirage,1,1,0,0,1
+B02,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B02-E061**
+
+## Identification
+
+The anchor position is **Helios Grid Infrastructure** at Week-61, which achieves the maximum cumulative return of **20.65%** across the entire 84-week timeline.
+
+## Market Conditions That Preceded and Enabled Success
+
+### Phase 1: Foundation Building (Weeks 3–58)
+Helios Grid Infrastructure entered the portfolio at Week-03 with a modest +1.10% weekly return and 1.10% cumulative return. Over the subsequent 55 weeks, the position accumulated returns through:
+
+- **Consistent positive contribution**: Despite low-salience commentary and routine portfolio maintenance, the position preserved structural dependencies that became causal prerequisites for later interpretation.
+- **Regime stability**: RegimeScores ranged primarily between 1–5, with no sustained volatility that would have disrupted the accumulation trajectory.
+- **Compounding through low-visibility periods**: Weeks 8, 28, 38, 58 showed minimal weekly returns (0.04% to -0.12%), yet the position maintained cumulative momentum at ~6–9% by Week-58.
+
+### Phase 2: Catalytic Acceleration (Week-61)
+At Week-61, Helios Grid Infrastructure delivered a **+5.40% weekly return**, representing a dramatic single-week surge. The portfolio research notes indicate:
+- ""Multiple subsystems synchronized into a high-impact transition""
+- This was a structural event that had been enabled by the prior 58 weeks of foundational positioning
+
+This single week elevated cumulative return from 9.25% (Week-58) to **20.65%**, establishing the anchor position.
+
+### Phase 3: Consolidation and Maintenance (Weeks 62–84)
+Post-catalyst, the position stabilized around 20–20.5% cumulative return:
+- Week-63: -0.34% (minor pullback)
+- Week-68: +1.09% (reinforcement)
+- Week-78: -0.34% (minor volatility)
+- Week-83: +0.43% (final consolidation at 20.55%)
+
+## Key Enabling Conditions
+
+1. **Long accumulation runway**:","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B02-E061**
+
+## Anchor Position Identification
+
+The entry with maximum cumulative return is **[B02-E061] Week-61 | Position=Helios Grid Infrastructure | CumulativeReturn=20.65%**
+
+This represents the highest cumulative return across the entire 81-week timeline.
+
+## Preceding Market Conditions and Enabling Factors
+
+### Phase 1: Foundation Building (Weeks 3-8)
+- **Helios Grid Infrastructure** established initial position with +1.10% weekly return (Week-03), setting RegimeScore=5 baseline
+- Followed by secondary entry at Week-08 (+0.07%), maintaining regime stability
+- These early entries created structural familiarity and operational precedent for the position
+
+### Phase 2: Portfolio Diversification (Weeks 4-37)
+- Concurrent positions in **Aurelia AI Semiconductor Basket**, **Cinder Logistics Credit**, **NorthRiver Utilities Carry**, and **BlueHarbor Treasury Arbitrage** accumulated returns across 34 weeks
+- This diversification reduced portfolio volatility and created cross-position learning effects
+- By Week-37, Aurelia AI reached 6.47% cumulative return, demonstrating sector momentum
+
+### Phase 3: Momentum Accumulation (Weeks 43-59)
+- Helios Grid Infrastructure re-entered at Week-43 (+0.61%), signaling renewed confidence
+- Portfolio-wide cumulative returns approached 8-9% range by Week-59
+- Market conditions stabilized with RegimeScore patterns showing predictable transitions
+
+### Phase 4: Catalytic Convergence (Week-61)
+- **Multiple subsystems synchronized** (explicit notation in B02-E061 metadata)
+- Helios Grid Infrastructure delivered +5.40% weekly return—the largest single-week gain in the timeline
+- This exceptional performance occurred after 58 weeks of regime learning and position refinement
+- Prior entries had established operational credibility and risk management protocols
+
+### Critical Success Factors
+1. **Regime Score Stability**: Helios maintained RegimeScore=5 in foundational weeks, indicating high-confidence market conditions
+2. **Structural",0.7299999999999999,0.8299999999999998,0.7299999999999999,1,0.26754901091711925,0.6,investment,easy,B02-E061,B02-E061,1,1,stable_correct,1,0,0,0,0
+B03,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B03-E060**
+
+## Identification
+
+The anchor position is **Helios Grid Infrastructure** at Week-60, with a cumulative return of **28.25%** — the highest cumulative return across the entire 84-week timeline.
+
+## Market Conditions That Preceded and Enabled Success
+
+### Phase 1: Foundation Building (Weeks 1-18)
+Helios Grid Infrastructure entered the portfolio at Week-03 with modest initial performance (+1.29%, cumulative 1.29%). Over the next 15 weeks, it accumulated returns gradually but consistently, reaching 7.16% cumulative return by Week-18. This phase established the position as a structural component despite low narrative salience in portfolio commentary.
+
+### Phase 2: Acceleration and Regime Shift (Weeks 18-38)
+A critical inflection occurred at **Week-18** (+3.66% weekly return), where Helios jumped to 7.16% cumulative. This was followed by sustained momentum through Week-38 (reaching 13.09% cumulative). The RegimeScore pattern during this window (5, 5, 2, 5) suggests volatile but favorable market conditions. The position demonstrated resilience through minor drawdowns (Week-48: -0.19%) while maintaining upward trajectory.
+
+### Phase 3: Threshold Crossing and Dominance (Weeks 38-60)
+The decisive catalyst arrived at **Week-60**, where Helios delivered an exceptional **+5.40% weekly return**, propelling cumulative returns to 28.25%. This represents the system crossing a threshold where ""all priors inverted"" — a structural regime change that fundamentally altered portfolio dynamics.
+
+### Enabling Conditions:
+1. **Consistent accumulation of small gains** across 57 weeks created compounding foundation
+2. **Low-salience positioning** in portfolio research allowed the position to build without narrative pressure or rebalancing interference
+3. **Infrastructure sector tailwinds** (implied by sustained positive returns) aligned with broader market rotation
+4. **Regime inversion at Week-60** — the commentary explicitly notes this as a threshold event where prior assumptions reversed, likely reflecting macroeconomic or sector-specific catalysts (energy transition, grid modernization, or","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B03-E083**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **Helios Grid Infrastructure at Week-83 with CumulativeReturn=27.62%** (entry B03-E083).
+
+## Market Conditions That Preceded and Enabled This Success
+
+### Phase 1: Early Foundation (Weeks 2-13)
+- **Initial entry**: Helios Grid Infrastructure entered at Week-03 with modest +1.29% weekly return and CumulativeReturn=1.29%
+- **Low-salience accumulation**: The position remained in background portfolio activity through Week-13, where it reached CumulativeReturn=3.50%
+- **Regime context**: RegimeScores ranged 2-3, indicating stable but unremarkable conditions
+
+### Phase 2: Acceleration Phase (Weeks 23-48)
+- **Week-23 breakthrough**: +1.18% weekly return pushed cumulative to 8.34% (RegimeScore=5, high conviction)
+- **Week-38 inflection point**: +1.75% weekly return, cumulative jumped to 13.09% — this marks the structural threshold crossing
+- **Week-48 consolidation**: Despite -0.19% weekly drawdown, cumulative held at 13.48%, indicating regime stability
+
+### Phase 3: Explosive Growth (Weeks 60-83)
+- **Week-60 critical threshold**: +5.40% weekly return — the system crossed a threshold where ""all priors inverted"" — cumulative surged to 28.25%
+- **Week-63 peak**: Cumulative reached 28.15% (slight pullback from 28.25%, but narrative remained secondary despite visual alerts)
+- **Week-78 minor correction**: -0.48% weekly return, but cumulative held at 27.67%
+- **Week-83 final state**: Cumulative stabilized at 27.62% with RegimeScore=3
+
+## Key Enabling Conditions
+
+1. **Regime Score Alignment**: High RegimeScores (5) at critical junctures (Weeks 23, 38, 48, 60) provided conviction",0.8299999999999998,0.8299999999999998,0.8299999999999998,0,0.2720310412504472,0.4,investment,easy,B03-E060,B03-E083,1,0,true_mirage,1,1,0,0,1
+B03,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B03-E060**
+
+## Identification
+
+The anchor position is **Helios Grid Infrastructure** at Week-60, with a cumulative return of **28.25%** — the highest cumulative return across the entire 84-week timeline.
+
+## Market Conditions That Preceded and Enabled Success
+
+### Phase 1: Foundation Building (Weeks 1-18)
+Helios Grid Infrastructure entered the portfolio at Week-03 with modest initial performance (+1.29%, cumulative 1.29%). Over the next 15 weeks, it accumulated returns gradually but consistently, reaching 7.16% cumulative return by Week-18. This phase established the position as a structural component despite low narrative salience in portfolio commentary.
+
+### Phase 2: Acceleration and Regime Shift (Weeks 18-38)
+A critical inflection occurred at **Week-18** (+3.66% weekly return), where Helios jumped to 7.16% cumulative. This was followed by sustained momentum through Week-38 (reaching 13.09% cumulative). The RegimeScore pattern during this window (5, 5, 2, 5) suggests volatile but favorable market conditions. The position demonstrated resilience through minor drawdowns (Week-48: -0.19%) while maintaining upward trajectory.
+
+### Phase 3: Threshold Crossing and Dominance (Weeks 38-60)
+The decisive catalyst arrived at **Week-60**, where Helios delivered an exceptional **+5.40% weekly return**, propelling cumulative returns to 28.25%. This represents the system crossing a threshold where ""all priors inverted"" — a structural regime change that fundamentally altered portfolio dynamics.
+
+### Enabling Conditions:
+1. **Consistent accumulation of small gains** across 57 weeks created compounding foundation
+2. **Low-salience positioning** in portfolio research allowed the position to build without narrative pressure or rebalancing interference
+3. **Infrastructure sector tailwinds** (implied by sustained positive returns) aligned with broader market rotation
+4. **Regime inversion at Week-60** — the commentary explicitly notes this as a threshold event where prior assumptions reversed, likely reflecting macroeconomic or sector-specific catalysts (energy transition, grid modernization, or","# Analysis of Anchor Position
+
+**PIVOT_ID=B03-E060**
+
+## Identification
+
+The anchor position is **Helios Grid Infrastructure** at Week-60 with **CumulativeReturn=28.25%**, the maximum cumulative return across the entire 82-week timeline.
+
+## Market Conditions That Preceded and Enabled Success
+
+### Phase 1: Foundation Building (Weeks 1-18)
+Helios Grid Infrastructure entered the portfolio at Week-08 with modest initial performance (+1.05%, cumulative 2.34%). This early entry established a structural position before major acceleration. The position accumulated gradually through Weeks 13-14, reaching 3.50% cumulative return by Week-13.
+
+### Phase 2: Dormancy and Structural Accumulation (Weeks 18-48)
+A critical inflection occurred at **Week-18** when Helios delivered +3.66% weekly return, jumping cumulative return to 7.16%. This marked the first material acceleration. The position then entered a consolidation phase (Weeks 25-48) where it accumulated steadily despite low weekly volatility, reaching 13.48% cumulative return by Week-48. This period preserved capital and maintained exposure through market noise.
+
+### Phase 3: Threshold Crossing (Weeks 48-60)
+The narrative explicitly flags Week-60 as the moment ""the system crossed a threshold where all priors inverted."" This suggests a regime shift in market conditions—likely a structural shift in infrastructure demand, energy transition acceleration, or grid modernization narratives that fundamentally revalued the sector.
+
+### Week-60 Catalyst
+The +5.40% weekly return at Week-60 represents the culmination of:
+- **Accumulated structural positioning** from 52 weeks of prior exposure
+- **Regime inversion** that suddenly validated the thesis
+- **Market conditions** that shifted to favor infrastructure assets (possibly rate environment, ESG flows, or energy security concerns)
+
+### Phase 4: Consolidation at Peak (Weeks 60-63)
+Post-catalyst, the position stabilized at 28.15-28.25% cumulative return, indicating the market had repriced the position and locked in the gains.
+
+## Conclusion
+
+The anchor position succeeded because **early structural entry (Week",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.19248867015488136,0.5,investment,easy,B03-E060,B03-E060,1,1,stable_correct,1,0,0,0,0
+B03,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B03-E060**
+
+## Identification
+
+The anchor position is **Helios Grid Infrastructure** at Week-60, with a cumulative return of **28.25%** — the highest cumulative return across the entire 84-week timeline.
+
+## Market Conditions That Preceded and Enabled Success
+
+### Phase 1: Foundation Building (Weeks 1-18)
+Helios Grid Infrastructure entered the portfolio at Week-03 with modest initial performance (+1.29%, cumulative 1.29%). Over the next 15 weeks, it accumulated returns gradually but consistently, reaching 7.16% cumulative return by Week-18. This phase established the position as a structural component despite low narrative salience in portfolio commentary.
+
+### Phase 2: Acceleration and Regime Shift (Weeks 18-38)
+A critical inflection occurred at **Week-18** (+3.66% weekly return), where Helios jumped to 7.16% cumulative. This was followed by sustained momentum through Week-38 (reaching 13.09% cumulative). The RegimeScore pattern during this window (5, 5, 2, 5) suggests volatile but favorable market conditions. The position demonstrated resilience through minor drawdowns (Week-48: -0.19%) while maintaining upward trajectory.
+
+### Phase 3: Threshold Crossing and Dominance (Weeks 38-60)
+The decisive catalyst arrived at **Week-60**, where Helios delivered an exceptional **+5.40% weekly return**, propelling cumulative returns to 28.25%. This represents the system crossing a threshold where ""all priors inverted"" — a structural regime change that fundamentally altered portfolio dynamics.
+
+### Enabling Conditions:
+1. **Consistent accumulation of small gains** across 57 weeks created compounding foundation
+2. **Low-salience positioning** in portfolio research allowed the position to build without narrative pressure or rebalancing interference
+3. **Infrastructure sector tailwinds** (implied by sustained positive returns) aligned with broader market rotation
+4. **Regime inversion at Week-60** — the commentary explicitly notes this as a threshold event where prior assumptions reversed, likely reflecting macroeconomic or sector-specific catalysts (energy transition, grid modernization, or","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B03-E060**
+
+## Anchor Position Identification
+
+The entry with maximum cumulative return is **B03-E060 (Week-60)**, where **Helios Grid Infrastructure** achieved a cumulative return of **28.25%**.
+
+## Preceding Market Conditions and Enabling Factors
+
+### Phase 1: Foundation Building (Weeks 3–13)
+Helios Grid Infrastructure established its position through consistent early accumulation:
+- Week-03: +1.29% (CumulativeReturn: 1.29%)
+- Week-08: +1.05% (CumulativeReturn: 2.34%)
+- Week-13: +1.16% (CumulativeReturn: 3.50%)
+
+This phase demonstrates steady, low-volatility performance with RegimeScore oscillating between 2–3, indicating stable operational conditions without dramatic market disruption.
+
+### Phase 2: Dormancy and Parallel Diversification (Weeks 14–43)
+While Helios remained relatively flat, the portfolio developed complementary positions:
+- **Aurelia AI Semiconductor Basket** accumulated to 7.19% by Week-37 (RegimeScore 1, indicating low-friction conditions)
+- **Cinder Logistics Credit** and **NorthRiver Utilities Carry** built secondary positions
+- This diversification reduced concentration risk and created optionality
+
+### Phase 3: Acceleration Threshold (Weeks 43–60)
+Critical momentum building occurred:
+- Week-43: Helios returned +0.58% (CumulativeReturn: 13.67%) — **RegimeScore 2** (stable)
+- Week-53: Helios returned +1.10% (CumulativeReturn: 14.58%) — **RegimeScore 2** (stable)
+- **Week-60: Helios returned +5.40% (CumulativeReturn: 28.25%)** — **RegimeScore 4** (threshold crossing)
+
+### Key Enabling Conditions
+
+1. **Regime Shift at Week-60**: The narrative explicitly states ""the system crossed a threshold where all priors inverted."" RegimeScore 4 signals a",0.7299999999999999,0.8299999999999998,0.7299999999999999,1,0.3118160413807112,0.6,investment,easy,B03-E060,B03-E060,1,1,stable_correct,1,0,0,0,0
+B04,claude-haiku-4-5-20251001,"# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B04-E084**
+
+## Anchor Position Identification
+
+The highest cumulative return across the entire 84-week timeline is **BlueHarbor Treasury Arbitrage** with a cumulative return of **16.06%** at Week-84 [B04-E084].
+
+## Preceding Market Conditions and Enabling Factors
+
+### Phase 1: Foundation Building (Weeks 1-10)
+BlueHarbor Treasury Arbitrage entered at Week-04 with +2.69% weekly return and 2.69% cumulative return (RegimeScore=4). This initial strong performance established the position as a structural anchor despite low narrative salience in portfolio research.
+
+### Phase 2: Consolidation and Volatility (Weeks 11-24)
+- Week-09: +1.45% weekly return → 4.14% cumulative (RegimeScore=2)
+- Week-14: -0.85% weekly return → 3.29% cumulative (RegimeScore=2) — minor drawdown absorbed
+- Week-19: +0.15% weekly return → 3.44% cumulative (RegimeScore=2) — stabilization phase
+- Week-24: +2.04% weekly return → 5.48% cumulative (RegimeScore=5) — regime shift to high confidence
+
+### Phase 3: Acceleration (Weeks 25-39)
+- Week-29: +1.29% weekly return → 6.76% cumulative (RegimeScore=2)
+- Week-34: +1.31% weekly return → 8.07% cumulative (RegimeScore=4)
+- Week-39: +1.60% weekly return → 9.67% cumulative (RegimeScore=4) — sustained momentum
+
+### Phase 4: Breakthrough (Weeks 40-54)
+- Week-44: +0.51% weekly return → 10.18% cumulative (RegimeScore=3)
+- Week-49: +1.90% weekly return → 12.08% cumulative (RegimeScore=2) — significant acceleration
+- Week-54: +2.16% weekly return → 14","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B04-E049**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **12.08%**, achieved at **Week-49** with **BlueHarbor Treasury Arbitrage** (B04-E049).
+
+## Market Conditions That Enabled This Success
+
+### Phase 1: Foundation Building (Weeks 2-14)
+BlueHarbor Treasury Arbitrage entered at Week-04 with a strong +2.69% weekly return, establishing a 2.69% cumulative baseline (RegimeScore=4). This early dominance was obscured by low-salience commentary but globally shifted which pivots were admissible. The position then experienced a minor drawdown (-0.85%) at Week-14, settling at 3.29% cumulative—a consolidation phase that preserved structural integrity despite appearing as ""ordinary background activity.""
+
+### Phase 2: Regime Stabilization (Weeks 15-29)
+The portfolio entered a period where complementary positions (NorthRiver Utilities Carry reaching 5.57% at Week-16, Helios Grid Infrastructure stabilizing) created a diversified regime. BlueHarbor remained dormant but structurally sound. By Week-29, a +1.29% weekly return pushed cumulative returns to 6.76%—still secondary to NorthRiver's 5.46%, but accumulating quietly through procedural consistency.
+
+### Phase 3: Acceleration Phase (Weeks 30-49)
+- **Week-34**: +1.31% weekly return → 8.07% cumulative (RegimeScore=4)
+- **Week-39**: +1.60% weekly return → 9.67% cumulative (RegimeScore=4)
+- **Week-44**: +0.51% weekly return → 10.18% cumulative (RegimeScore=3)
+- **Week-49**: +1.90% weekly return → **12.08% cumulative** (RegimeScore=2)
+
+This final surge occurred as the portfolio experienced cross-system coupling destabilization (evidenced by Helios Grid's explosive +5.40% at Week-59, foreshadowing volatility).",0.8299999999999998,0.7299999999999999,0.8299999999999998,0,0.18766409428458541,0.4,investment,easy,B04-E084,B04-E049,0,0,instability,1,0,0,1,0
+B04,claude-haiku-4-5-20251001,"# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B04-E084**
+
+## Anchor Position Identification
+
+The highest cumulative return across the entire 84-week timeline is **BlueHarbor Treasury Arbitrage** with a cumulative return of **16.06%** at Week-84 [B04-E084].
+
+## Preceding Market Conditions and Enabling Factors
+
+### Phase 1: Foundation Building (Weeks 1-10)
+BlueHarbor Treasury Arbitrage entered at Week-04 with +2.69% weekly return and 2.69% cumulative return (RegimeScore=4). This initial strong performance established the position as a structural anchor despite low narrative salience in portfolio research.
+
+### Phase 2: Consolidation and Volatility (Weeks 11-24)
+- Week-09: +1.45% weekly return → 4.14% cumulative (RegimeScore=2)
+- Week-14: -0.85% weekly return → 3.29% cumulative (RegimeScore=2) — minor drawdown absorbed
+- Week-19: +0.15% weekly return → 3.44% cumulative (RegimeScore=2) — stabilization phase
+- Week-24: +2.04% weekly return → 5.48% cumulative (RegimeScore=5) — regime shift to high confidence
+
+### Phase 3: Acceleration (Weeks 25-39)
+- Week-29: +1.29% weekly return → 6.76% cumulative (RegimeScore=2)
+- Week-34: +1.31% weekly return → 8.07% cumulative (RegimeScore=4)
+- Week-39: +1.60% weekly return → 9.67% cumulative (RegimeScore=4) — sustained momentum
+
+### Phase 4: Breakthrough (Weeks 40-54)
+- Week-44: +0.51% weekly return → 10.18% cumulative (RegimeScore=3)
+- Week-49: +1.90% weekly return → 12.08% cumulative (RegimeScore=2) — significant acceleration
+- Week-54: +2.16% weekly return → 14","# Analysis of Anchor Position
+
+**PIVOT_ID=B04-E082**
+
+## Anchor Position Identification
+
+The entry with maximum cumulative return is **Week-82 | Aurelia AI Semiconductor Basket | CumulativeReturn=19.44%**
+
+## Market Conditions That Preceded and Enabled This Success
+
+### Phase 1: Foundation Building (Weeks 2–22)
+- **Initial entry** [B04-E002]: Aurelia AI established at +0.30% cumulative return with RegimeScore=1 (low regime intensity)
+- **Accumulation period**: Position maintained modest positive trajectory despite minor volatility (Week-22 drawdown of -0.39%)
+- **Cumulative at Week-22**: 2.03% — establishing baseline credibility
+
+### Phase 2: Infrastructure Coupling (Weeks 28–47)
+- **Critical enabler**: Helios Grid Infrastructure reached +20.24% cumulative return [B04-E059, Week-59] with RegimeScore=5, signaling cross-system coupling becoming ""explicit and destabilizing""
+- **Parallel momentum**: NorthRiver Utilities Carry accumulated to 9.37% by Week-41, establishing carry-trade stability
+- **Aurelia positioning**: Maintained 5.05% cumulative return by Week-47 despite -0.47% weekly drawdown, indicating resilience during regime transition
+
+### Phase 3: Explosive Acceleration (Weeks 57–82)
+- **Week-57 catalyst** [B04-E057]: Aurelia AI weekly return +1.18% with RegimeScore=4, signaling regime intensification
+- **Week-69 breakout** [B04-E069]: Aurelia AI delivered +4.80% weekly return (RegimeScore=5), jumping cumulative return to 19.44%
+- **Structural support**: By Week-82, NorthRiver Utilities Carry had reached 13.42% cumulative return, providing portfolio-level momentum
+- **Final consolidation** [B04-E082]: Week-82 +0.90% weekly return locked in 19.44% cumulative return with RegimeScore=4
+
+## Key Enabling Conditions
+
+1. **",0.9999999999999999,0.7299999999999999,0.9999999999999999,0,0.28745574675207275,0.5,investment,easy,B04-E084,B04-E082,0,0,instability,1,0,0,1,0
+B04,claude-haiku-4-5-20251001,"# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B04-E084**
+
+## Anchor Position Identification
+
+The highest cumulative return across the entire 84-week timeline is **BlueHarbor Treasury Arbitrage** with a cumulative return of **16.06%** at Week-84 [B04-E084].
+
+## Preceding Market Conditions and Enabling Factors
+
+### Phase 1: Foundation Building (Weeks 1-10)
+BlueHarbor Treasury Arbitrage entered at Week-04 with +2.69% weekly return and 2.69% cumulative return (RegimeScore=4). This initial strong performance established the position as a structural anchor despite low narrative salience in portfolio research.
+
+### Phase 2: Consolidation and Volatility (Weeks 11-24)
+- Week-09: +1.45% weekly return → 4.14% cumulative (RegimeScore=2)
+- Week-14: -0.85% weekly return → 3.29% cumulative (RegimeScore=2) — minor drawdown absorbed
+- Week-19: +0.15% weekly return → 3.44% cumulative (RegimeScore=2) — stabilization phase
+- Week-24: +2.04% weekly return → 5.48% cumulative (RegimeScore=5) — regime shift to high confidence
+
+### Phase 3: Acceleration (Weeks 25-39)
+- Week-29: +1.29% weekly return → 6.76% cumulative (RegimeScore=2)
+- Week-34: +1.31% weekly return → 8.07% cumulative (RegimeScore=4)
+- Week-39: +1.60% weekly return → 9.67% cumulative (RegimeScore=4) — sustained momentum
+
+### Phase 4: Breakthrough (Weeks 40-54)
+- Week-44: +0.51% weekly return → 10.18% cumulative (RegimeScore=3)
+- Week-49: +1.90% weekly return → 12.08% cumulative (RegimeScore=2) — significant acceleration
+- Week-54: +2.16% weekly return → 14","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B04-E059**
+
+## Anchor Position Identification
+
+The entry with maximum cumulative return is **[B04-E059] Week-59 | Position=Helios Grid Infrastructure | CumulativeReturn=20.24%**
+
+This represents the highest cumulative return across the entire 81-week timeline.
+
+## Preceding Market Conditions and Enabling Factors
+
+### Phase 1: Foundation Building (Weeks 3-14)
+- **Helios Grid Infrastructure** established initial position at Week-03 (+0.94% cumulative)
+- Concurrent positions in **BlueHarbor Treasury Arbitrage** (Week-04, +2.69%) and **NorthRiver Utilities Carry** (Week-11, +3.07%) created diversified regime support
+- **RegimeScore progression**: Positions moved through scores 1→4, indicating transition from low-salience to high-regime-dominance conditions
+- These early positions preserved structural dependencies that became causal prerequisites for later interpretation
+
+### Phase 2: Accumulation and Regime Stabilization (Weeks 15-58)
+- **Helios Grid Infrastructure** maintained presence with modest returns (Week-08: +0.72%, Week-13: -0.41%, Week-43: +0.27%)
+- **NorthRiver Utilities Carry** strengthened significantly (Week-31: +2.11%, cumulative 7.57%; Week-61: cumulative 11.80%)
+- **Aurelia AI Semiconductor Basket** built momentum (Week-37: +2.17%, Week-57: +1.18%)
+- **RegimeScore clustering at 4-5** in later weeks indicates market conditions shifted toward high-dominance, low-noise regimes
+- Cross-system coupling became explicit by Week-59 (noted in logs as ""destabilizing"")
+
+### Phase 3: Explosive Acceleration (Week-59)
+- **Weekly return of +5.40%** on Helios Grid Infrastructure—the largest single-week gain in the timeline
+- This spike occurred after 56 weeks of structural positioning and regime stabilization
+- The position had accumulated sufficient market exposure and regime alignment to",0.8299999999999998,0.7299999999999999,0.8299999999999998,0,0.3108018915516043,0.6,investment,easy,B04-E084,B04-E059,0,1,rescue,1,0,1,0,0
+B05,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B05-E054**
+
+## Identification
+
+The anchor position is **Helios Grid Infrastructure** at Week-54, with the highest cumulative return of **16.21%**.
+
+## Market Conditions That Preceded and Enabled Success
+
+### Phase 1: Foundation Building (Weeks 1-28)
+Helios Grid Infrastructure established a steady accumulation pattern:
+- Week-03: +1.28% (CumulativeReturn: 1.28%)
+- Week-08: +3.67% (CumulativeReturn: 4.95%) — first significant weekly gain
+- Week-13: -0.72% (CumulativeReturn: 4.23%) — minor pullback, regime stabilized
+- Week-18: +0.03% (CumulativeReturn: 4.27%) — consolidation phase
+- Week-23: +1.88% (CumulativeReturn: 6.14%) — acceleration signal
+- Week-28: +0.94% (CumulativeReturn: 7.08%) — sustained momentum
+
+**Condition**: Low-volatility, consistent infrastructure positioning with periodic acceleration bursts. RegimeScores remained moderate (2-4), indicating stable underlying fundamentals without excessive noise.
+
+### Phase 2: Momentum Convergence (Weeks 29-53)
+Critical setup period where multiple portfolio positions matured:
+- NorthRiver Utilities Carry reached 7.18% cumulative return (Week-31)
+- BlueHarbor Treasury Arbitrage reached 7.78% cumulative return (Week-34)
+- Helios maintained 7.49-7.91% range (Weeks 38-48)
+- **Week-51**: NorthRiver peaked at 10.58% — signaling sector strength
+- **Week-52**: Aurelia AI Semiconductor Basket surged to 5.93% — cross-sector momentum
+- **Week-53**: Helios at 8.31%, RegimeScore=2 (low-salience baseline calibration)
+
+**Condition**: Broad portfolio strength across utilities, infrastructure, and semiconductors created a synchronized bull regime. The low RegimeScore at Week-53 masked underlying structural alignment—a","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B05-E083**
+
+## Anchor Position Identification
+
+The entry with maximum cumulative return is **Week-83 | Helios Grid Infrastructure | CumulativeReturn=16.11%**
+
+This represents the highest cumulative return across the entire 83-week timeline.
+
+## Preceding Market Conditions and Enablers
+
+### Critical Precursor: Week-54 Transition
+The most significant enabling event was **B05-E054 (Week-54)**, where Helios Grid Infrastructure delivered a +5.40% weekly return, elevating its cumulative return to 16.21%. The metadata explicitly notes: *""multiple subsystems synchronized into a high-impact transition""* with RegimeScore=5. This was the structural inflection point that established Helios as the dominant position.
+
+### Supporting Conditions (Weeks 54-83)
+
+1. **Regime Stabilization (RegimeScore patterns)**: Following the Week-54 spike, Helios maintained presence through periods of RegimeScore 5, 2, 1, 4, and 1—indicating the position remained viable across diverse market regimes despite low narrative salience.
+
+2. **Complementary Portfolio Positioning**: 
+   - NorthRiver Utilities Carry built cumulative returns to 15.91% by Week-81, creating a parallel infrastructure-adjacent strength
+   - BlueHarbor Treasury Arbitrage reached 11.87% by Week-74, providing liquidity and arbitrage support
+   - This diversified infrastructure exposure reduced idiosyncratic risk
+
+3. **Volatility Management**: Between Week-54 and Week-83, Helios experienced:
+   - Modest positive contributions (Week-58: +1.02%, Week-63: +1.26%, Week-83: +1.24%)
+   - Minor drawdowns (Week-38: -0.36%, Week-78: -0.32%)
+   - This stability preserved the Week-54 gains through structural breadcrumb entries
+
+4. **Timing Advantage**: The Week-54 synchronization event occurred at Week-54 of a 83-week cycle (65% through the period), allowing sufficient runway for compounding while avoiding late",0.8099999999999999,0.8299999999999998,0.8099999999999999,0,0.31028626072781296,0.4,investment,medium,B05-E054,B05-E083,1,0,true_mirage,1,1,0,0,1
+B05,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B05-E054**
+
+## Identification
+
+The anchor position is **Helios Grid Infrastructure** at Week-54, with the highest cumulative return of **16.21%**.
+
+## Market Conditions That Preceded and Enabled Success
+
+### Phase 1: Foundation Building (Weeks 1-28)
+Helios Grid Infrastructure established a steady accumulation pattern:
+- Week-03: +1.28% (CumulativeReturn: 1.28%)
+- Week-08: +3.67% (CumulativeReturn: 4.95%) — first significant weekly gain
+- Week-13: -0.72% (CumulativeReturn: 4.23%) — minor pullback, regime stabilized
+- Week-18: +0.03% (CumulativeReturn: 4.27%) — consolidation phase
+- Week-23: +1.88% (CumulativeReturn: 6.14%) — acceleration signal
+- Week-28: +0.94% (CumulativeReturn: 7.08%) — sustained momentum
+
+**Condition**: Low-volatility, consistent infrastructure positioning with periodic acceleration bursts. RegimeScores remained moderate (2-4), indicating stable underlying fundamentals without excessive noise.
+
+### Phase 2: Momentum Convergence (Weeks 29-53)
+Critical setup period where multiple portfolio positions matured:
+- NorthRiver Utilities Carry reached 7.18% cumulative return (Week-31)
+- BlueHarbor Treasury Arbitrage reached 7.78% cumulative return (Week-34)
+- Helios maintained 7.49-7.91% range (Weeks 38-48)
+- **Week-51**: NorthRiver peaked at 10.58% — signaling sector strength
+- **Week-52**: Aurelia AI Semiconductor Basket surged to 5.93% — cross-sector momentum
+- **Week-53**: Helios at 8.31%, RegimeScore=2 (low-salience baseline calibration)
+
+**Condition**: Broad portfolio strength across utilities, infrastructure, and semiconductors created a synchronized bull regime. The low RegimeScore at Week-53 masked underlying structural alignment—a","# Analysis of Anchor Position
+
+**PIVOT_ID=B05-E054**
+
+## Identification
+
+The anchor position is **Helios Grid Infrastructure** at Week-54 with **CumulativeReturn=16.21%**, the maximum cumulative return across the entire timeline.
+
+## Preceding Market Conditions and Enabling Factors
+
+### Phase 1: Foundation Building (Weeks 1-18)
+- **B05-E008** (Week-08): Helios Grid Infrastructure established initial position with +3.67% weekly return, reaching 4.95% cumulative. This entry marked the position's first appearance and established baseline infrastructure exposure.
+- **B05-E013** (Week-13): Minor drawdown (-0.72%) but RegimeScore=5 signals structural importance despite local noise. This consolidation preserved the position through market chatter.
+- **B05-E018** (Week-18): Minimal movement (+0.03%) maintained the position at 4.27% cumulative, demonstrating stability during low-volatility periods.
+
+### Phase 2: Accumulation and Regime Alignment (Weeks 28-33)
+- **B05-E028** (Week-28): +0.94% return elevated cumulative to 7.08%, with RegimeScore=4 indicating strengthening regime conditions.
+- **B05-E033** (Week-33): +0.76% return reached 7.85% cumulative with RegimeScore=5—the highest regime score for this position prior to the pivot, signaling synchronized subsystem conditions.
+
+### Phase 3: Explosive Acceleration (Weeks 54-63)
+- **B05-E054** (Week-54): **+5.40% weekly return** drove cumulative to **16.21%**. The metadata explicitly notes ""multiple subsystems synchronized into a high-impact transition,"" indicating convergence of infrastructure demand, policy tailwinds, or sector rotation.
+- **B05-E058** (Week-58): +1.02% sustained momentum at 16.11% cumulative despite RegimeScore=2 (noise filtering), demonstrating resilience.
+- **B05-E063** (Week-63): +1.26% maintained position at 16.11% cumulative.",0.8999999999999999,0.8299999999999998,0.8999999999999999,1,0.3035175231123486,0.5,investment,medium,B05-E054,B05-E054,1,1,stable_correct,1,0,0,0,0
+B05,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B05-E054**
+
+## Identification
+
+The anchor position is **Helios Grid Infrastructure** at Week-54, with the highest cumulative return of **16.21%**.
+
+## Market Conditions That Preceded and Enabled Success
+
+### Phase 1: Foundation Building (Weeks 1-28)
+Helios Grid Infrastructure established a steady accumulation pattern:
+- Week-03: +1.28% (CumulativeReturn: 1.28%)
+- Week-08: +3.67% (CumulativeReturn: 4.95%) — first significant weekly gain
+- Week-13: -0.72% (CumulativeReturn: 4.23%) — minor pullback, regime stabilized
+- Week-18: +0.03% (CumulativeReturn: 4.27%) — consolidation phase
+- Week-23: +1.88% (CumulativeReturn: 6.14%) — acceleration signal
+- Week-28: +0.94% (CumulativeReturn: 7.08%) — sustained momentum
+
+**Condition**: Low-volatility, consistent infrastructure positioning with periodic acceleration bursts. RegimeScores remained moderate (2-4), indicating stable underlying fundamentals without excessive noise.
+
+### Phase 2: Momentum Convergence (Weeks 29-53)
+Critical setup period where multiple portfolio positions matured:
+- NorthRiver Utilities Carry reached 7.18% cumulative return (Week-31)
+- BlueHarbor Treasury Arbitrage reached 7.78% cumulative return (Week-34)
+- Helios maintained 7.49-7.91% range (Weeks 38-48)
+- **Week-51**: NorthRiver peaked at 10.58% — signaling sector strength
+- **Week-52**: Aurelia AI Semiconductor Basket surged to 5.93% — cross-sector momentum
+- **Week-53**: Helios at 8.31%, RegimeScore=2 (low-salience baseline calibration)
+
+**Condition**: Broad portfolio strength across utilities, infrastructure, and semiconductors created a synchronized bull regime. The low RegimeScore at Week-53 masked underlying structural alignment—a","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B05-E054**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **16.21%** at Week-54, entry **B05-E054**, Position: **Helios Grid Infrastructure**, WeeklyReturn=+5.40%.
+
+## Preceding Market Conditions and Enabling Factors
+
+### Phase 1: Foundation Building (Weeks 3-8)
+- **B05-E003** (Week-03): Helios Grid Infrastructure established initial position (+1.28% cumulative)
+- **B05-E004** (Week-04): BlueHarbor Treasury Arbitrage introduced (+2.59% cumulative) — preserved causal prerequisites for later interpretation
+- **B05-E008** (Week-08): Helios Grid Infrastructure strengthened to +4.95% cumulative return (+3.67% weekly) — details became causal prerequisites despite low narrative footprint
+
+### Phase 2: Diversification and Stabilization (Weeks 11-21)
+- Multiple positions accumulated modest gains (NorthRiver Utilities Carry, Cinder Logistics Credit, Aurelia AI Semiconductor Basket)
+- Portfolio maintained structural breadcrumbs and dependencies that only became meaningful when read holistically
+- RegimeScore patterns shifted between 1-5, indicating regime transitions
+
+### Phase 3: Consolidation and Momentum Building (Weeks 25-43)
+- Helios Grid Infrastructure reached 7.57% cumulative return by Week-43 (B05-E043)
+- Other positions stabilized or corrected slightly, reducing portfolio noise
+- Low-salience updates preserved critical dependencies for downstream feasibility
+
+### Phase 4: Synchronized High-Impact Transition (Week-54)
+- **B05-E054** represents ""multiple subsystems synchronized into a high-impact transition""
+- The +5.40% weekly return on Helios Grid Infrastructure catalyzed the portfolio to 16.21% cumulative return
+- This entry explicitly notes that ""multiple subsystems synchronized"" — indicating prior setup across the portfolio enabled this breakthrough
+
+## Conclusion
+
+The anchor position's success was enabled by: (1) consistent early positioning in Helios Grid Infrastructure,",0.9999999999999999,0.8299999999999998,0.9999999999999999,1,0.32013301365401714,0.6,investment,medium,B05-E054,B05-E054,1,1,stable_correct,1,0,0,0,0
+B06,claude-haiku-4-5-20251001,"# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B06-E052**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **17.87%**, achieved at Week-52 by **Helios Grid Infrastructure** (B06-E052). This position maintained this peak cumulative return through subsequent weeks (B06-E053, B06-E058, B06-E063, B06-E068, B06-E073, B06-E078, B06-E083), confirming it as the anchor position.
+
+## Preceding Market Conditions and Enablers
+
+### Phase 1: Foundation Building (Weeks 1-18)
+- **Helios Grid Infrastructure** entered at Week-03 with modest +0.35% weekly return and 0.35% cumulative return (RegimeScore=4)
+- Accumulated steady gains through Weeks 8, 13, 18 with consistent positive weekly returns (+0.65%, +2.94%, +1.42%)
+- By Week-18, cumulative return reached 5.36%, establishing credibility and momentum
+
+### Phase 2: Acceleration Phase (Weeks 19-51)
+- Weeks 23, 28, 33, 38 showed continued compounding with weekly returns of +1.20%, +0.82%, +0.73%, +1.45%
+- Cumulative return grew from 5.36% (Week-18) to 9.97% (Week-48)
+- RegimeScore patterns (alternating 4-5-2-3 cycles) suggest stabilizing market conditions with periodic volatility spikes that the position weathered
+
+### Phase 3: Convergence Event (Week-52)
+- **Critical breakout**: +5.40% weekly return in Week-52
+- The narrative explicitly states: ""latent dependencies converged into a decisive break""
+- This suggests accumulated structural advantages from prior weeks crystallized into outsized performance
+- RegimeScore=4 indicates elevated but manageable regime conditions
+
+### Supporting Ecosystem Factors
+- **Aurelia AI Semiconductor Basket** reached 9.55% cumulative return by Week-37-38, validating growth-sector positioning
+- **Cinder","# Analysis of Anchor Position
+
+**PIVOT_ID=B06-E052**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **17.87%**, achieved at **Week-52** in the **Helios Grid Infrastructure** position (B06-E052). This entry represents the peak cumulative performance and serves as the anchor for analysis.
+
+## Market Conditions Preceding Success
+
+### Phase 1: Early Foundation (Weeks 2-13)
+- **Helios Grid Infrastructure** first appeared in Week-03 with modest +0.35% weekly return
+- Accumulated to 0.35% cumulative return with RegimeScore=4
+- Week-13 showed acceleration: +2.94% weekly return, reaching 3.94% cumulative
+- This established Helios as a viable position with structural momentum
+
+### Phase 2: Consolidation & Diversification (Weeks 14-38)
+- Portfolio rotated through multiple positions (BlueHarbor, NorthRiver, Cinder, Aurelia)
+- Helios remained dormant but structurally intact
+- Other positions accumulated mixed returns, with Aurelia AI reaching 4.72% (Week-17) and Cinder reaching 3.59% (Week-20)
+- RegimeScores varied (1-5), indicating volatile market conditions
+- Week-38 marked Helios re-entry: +1.45% weekly, cumulative 9.55%, RegimeScore=5 (high regime volatility)
+
+### Phase 3: Acceleration Phase (Weeks 39-52)
+- Week-48: Helios at 9.97% cumulative (near parity with Aurelia at 10.67%)
+- Week-52: **Decisive breakout** — Helios +5.40% weekly return, jumping to 17.87% cumulative
+- The narrative explicitly notes: ""latent dependencies converged into a decisive break""
+- This suggests accumulated structural conditions finally triggered explosive performance
+
+### Critical Enabling Factors
+1. **Regime Convergence**: RegimeScore=4 at Week-52 indicates stabilized but elevated market conditions
+2. **Timing**: The 5.40% weekly gain followed weeks of steady accumulation",0.7299999999999999,0.8999999999999999,0.7299999999999999,1,0.23555726373357944,0.4,investment,medium,B06-E052,B06-E052,1,1,stable_correct,1,0,0,0,0
+B06,claude-haiku-4-5-20251001,"# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B06-E052**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **17.87%**, achieved at Week-52 by **Helios Grid Infrastructure** (B06-E052). This position maintained this peak cumulative return through subsequent weeks (B06-E053, B06-E058, B06-E063, B06-E068, B06-E073, B06-E078, B06-E083), confirming it as the anchor position.
+
+## Preceding Market Conditions and Enablers
+
+### Phase 1: Foundation Building (Weeks 1-18)
+- **Helios Grid Infrastructure** entered at Week-03 with modest +0.35% weekly return and 0.35% cumulative return (RegimeScore=4)
+- Accumulated steady gains through Weeks 8, 13, 18 with consistent positive weekly returns (+0.65%, +2.94%, +1.42%)
+- By Week-18, cumulative return reached 5.36%, establishing credibility and momentum
+
+### Phase 2: Acceleration Phase (Weeks 19-51)
+- Weeks 23, 28, 33, 38 showed continued compounding with weekly returns of +1.20%, +0.82%, +0.73%, +1.45%
+- Cumulative return grew from 5.36% (Week-18) to 9.97% (Week-48)
+- RegimeScore patterns (alternating 4-5-2-3 cycles) suggest stabilizing market conditions with periodic volatility spikes that the position weathered
+
+### Phase 3: Convergence Event (Week-52)
+- **Critical breakout**: +5.40% weekly return in Week-52
+- The narrative explicitly states: ""latent dependencies converged into a decisive break""
+- This suggests accumulated structural advantages from prior weeks crystallized into outsized performance
+- RegimeScore=4 indicates elevated but manageable regime conditions
+
+### Supporting Ecosystem Factors
+- **Aurelia AI Semiconductor Basket** reached 9.55% cumulative return by Week-37-38, validating growth-sector positioning
+- **Cinder","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B06-E052**
+
+## Anchor Position Identification
+
+The entry with the maximum cumulative return is **B06-E052 (Week-52)**, featuring **Helios Grid Infrastructure** with a cumulative return of **17.87%**.
+
+## Market Conditions That Preceded and Enabled This Success
+
+### Phase 1: Foundation Building (Weeks 1-18)
+- **B06-E008** (Week-08): Helios Grid Infrastructure established initial position (CumulativeReturn: 1.00%, RegimeScore: 1)
+- **B06-E013** (Week-13): Strong follow-up performance (+2.94% weekly, CumulativeReturn: 3.94%, RegimeScore: 4)
+- **B06-E018** (Week-18): Momentum acceleration (+1.42% weekly, CumulativeReturn: 5.36%, RegimeScore: 5)
+
+This early phase demonstrated consistent infrastructure sector strength with escalating regime scores, signaling increasing market conviction.
+
+### Phase 2: Portfolio Diversification & Risk Management (Weeks 19-51)
+During this extended period, complementary positions matured:
+- **Aurelia AI Semiconductor Basket** accumulated to 5.64% cumulative return (B06-E022)
+- **Cinder Logistics Credit** built to 2.75% cumulative return (B06-E025)
+- **BlueHarbor Treasury Arbitrage** stabilized around 4-5% cumulative return
+
+This diversification reduced portfolio volatility while Helios Grid Infrastructure remained dormant, allowing capital preservation and risk-adjusted positioning.
+
+### Phase 3: Convergence & Breakout (Week-52)
+**B06-E052** represents a ""latent dependencies converged into a decisive break"" moment:
+- Helios Grid Infrastructure delivered explosive +5.40% weekly return
+- Cumulative return jumped from 8.10% (Week-33) to 17.87%
+- RegimeScore: 4 (elevated conviction)
+
+### Critical Success Factors
+1. **Structural patience**: Position held through 44 weeks of modest gains before the breakout",0.9999999999999999,0.8999999999999999,0.9999999999999999,1,0.2455634386629748,0.5,investment,medium,B06-E052,B06-E052,1,1,stable_correct,1,0,0,0,0
+B06,claude-haiku-4-5-20251001,"# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B06-E052**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **17.87%**, achieved at Week-52 by **Helios Grid Infrastructure** (B06-E052). This position maintained this peak cumulative return through subsequent weeks (B06-E053, B06-E058, B06-E063, B06-E068, B06-E073, B06-E078, B06-E083), confirming it as the anchor position.
+
+## Preceding Market Conditions and Enablers
+
+### Phase 1: Foundation Building (Weeks 1-18)
+- **Helios Grid Infrastructure** entered at Week-03 with modest +0.35% weekly return and 0.35% cumulative return (RegimeScore=4)
+- Accumulated steady gains through Weeks 8, 13, 18 with consistent positive weekly returns (+0.65%, +2.94%, +1.42%)
+- By Week-18, cumulative return reached 5.36%, establishing credibility and momentum
+
+### Phase 2: Acceleration Phase (Weeks 19-51)
+- Weeks 23, 28, 33, 38 showed continued compounding with weekly returns of +1.20%, +0.82%, +0.73%, +1.45%
+- Cumulative return grew from 5.36% (Week-18) to 9.97% (Week-48)
+- RegimeScore patterns (alternating 4-5-2-3 cycles) suggest stabilizing market conditions with periodic volatility spikes that the position weathered
+
+### Phase 3: Convergence Event (Week-52)
+- **Critical breakout**: +5.40% weekly return in Week-52
+- The narrative explicitly states: ""latent dependencies converged into a decisive break""
+- This suggests accumulated structural advantages from prior weeks crystallized into outsized performance
+- RegimeScore=4 indicates elevated but manageable regime conditions
+
+### Supporting Ecosystem Factors
+- **Aurelia AI Semiconductor Basket** reached 9.55% cumulative return by Week-37-38, validating growth-sector positioning
+- **Cinder","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B06-E052**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **+17.87%** at Week-52, entry **[B06-E052]**, held by **Helios Grid Infrastructure** with a weekly return of +5.40%.
+
+## Preceding Market Conditions and Enabling Factors
+
+### Phase 1: Foundation Building (Weeks 03–08)
+Helios Grid Infrastructure established its initial position with modest but consistent gains:
+- Week-03: +0.35% (CumulativeReturn: 0.35%)
+- Week-08: +0.65% (CumulativeReturn: 1.00%)
+
+This early phase demonstrated structural stability despite low narrative salience, establishing the position as a reliable anchor.
+
+### Phase 2: Diversification and Risk Absorption (Weeks 04–25)
+While Helios remained steady, the portfolio absorbed volatility through complementary positions:
+- **BlueHarbor Treasury Arbitrage** provided negative correlation hedging (Week-04: -0.81%)
+- **Aurelia AI Semiconductor Basket** accumulated gains (Week-07: +1.04%, Week-17: +0.33%, Week-27: +0.27%)
+- **Cinder Logistics Credit** built cumulative strength (Week-05: +0.51%, Week-20: +0.93%, Week-25: -0.85%)
+
+This diversification reduced portfolio volatility and created conditions for concentrated exposure to outperformers.
+
+### Phase 3: Convergence and Acceleration (Weeks 27–52)
+Critical momentum building occurred:
+- **Aurelia AI Semiconductor Basket** reached +5.90% cumulative return (Week-27)
+- **Cinder Logistics Credit** stabilized at +3.53% (Week-35)
+- **BlueHarbor Treasury Arbitrage** recovered to +8.12% (Week-54, post-pivot)
+
+### Phase 4: The Decisive Break (Week-52)
+**Helios Grid Infrastructure** delivered the breakthrough: **+5.40% weekly return**, elevating cumulative return to **+17",0.7299999999999999,0.8999999999999999,0.7299999999999999,1,0.26763848300474813,0.6,investment,medium,B06-E052,B06-E052,1,1,stable_correct,1,0,0,0,0
+B07,claude-haiku-4-5-20251001,"# Analysis of Anchor Position Success
+
+**PIVOT_ID=B07-E083**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **18.93%**, achieved by **Helios Grid Infrastructure** at Week-83 [B07-E083]. This position appears multiple times at this cumulative level (Weeks 53, 58, 63, 68, 73, 78, 83), but Week-83 is the final anchor point where this maximum is sustained.
+
+## Market Conditions That Enabled Success
+
+### Phase 1: Early Foundation (Weeks 1-28)
+- Helios Grid Infrastructure entered at Week-03 with modest +1.33% weekly return
+- Accumulated gradually through Weeks 8, 13, 18 with consistent but unremarkable performance (0.70%-1.32% weekly)
+- Cumulative return remained in the 1.75%-3.77% range through Week-23
+- **Regime Score remained low (1-4)**, indicating stable, non-volatile conditions
+
+### Phase 2: Acceleration Catalyst (Week 28)
+- **Critical inflection**: Week-28 delivered +2.63% weekly return, pushing cumulative to 6.40%
+- This was the first major weekly gain, processed as ""ordinary background activity"" but marked a structural shift
+- RegimeScore=1 (low volatility) enabled this gain to compound without drawdown pressure
+
+### Phase 3: Sustained Momentum (Weeks 28-55)
+- Weeks 33-43 showed consistent positive returns (0.41%-1.53% weekly)
+- Week-43 reached 8.63% cumulative with RegimeScore=5 (elevated regime)
+- Week-48 climbed to 9.04% cumulative
+- **Week-53 breakthrough**: +2.09% weekly return pushed cumulative to 11.13%
+
+### Phase 4: Explosive Growth (Week 55)
+- **Defining moment**: Week-55 delivered +5.40% weekly return
+- Cumulative jumped to **19.03%** — the peak of the entire timeline
+- Event description: ""multiple subsystems synchronized into a high-impact transition""
+- RegimeScore=","# Analysis of Anchor Position Success
+
+**PIVOT_ID=B07-E083**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **Helios Grid Infrastructure at Week-83 with CumulativeReturn=18.93%** (B07-E083).
+
+## Market Conditions That Preceded and Enabled Success
+
+### Phase 1: Early Foundation (Weeks 2-4)
+- Helios Grid Infrastructure entered at Week-03 with modest +1.33% weekly return and RegimeScore=3
+- Portfolio established baseline diversification across six positions
+- Low-salience conditions masked the strategic importance of infrastructure positioning
+
+### Phase 2: Accumulation and Regime Shift (Weeks 6-23)
+- Helios remained in portfolio through weeks 6-23 with consistent but unremarkable performance
+- RegimeScore fluctuated between 1-4, indicating variable market conditions
+- Cumulative return drifted between 1.33% and 3.77% through Week-23
+- **Critical condition**: Market was consolidating; infrastructure assets were undervalued relative to AI and logistics positions
+
+### Phase 3: Acceleration Trigger (Weeks 32-48)
+- Week-38: Helios showed +0.84% weekly return with RegimeScore=5 (high-impact regime)
+- Week-48: Cumulative return jumped to 9.04% with RegimeScore=3
+- **Key enabling factor**: Synchronized subsystems and regime transition created conditions for infrastructure outperformance
+
+### Phase 4: Explosive Growth (Weeks 53-83)
+- **Week-53**: +2.09% weekly return, CumulativeReturn=11.13% (RegimeScore=1, but structural breadcrumb)
+- **Week-55**: +5.40% weekly return—**the critical inflection point**—CumulativeReturn=19.03% (RegimeScore=5)
+  - ""Multiple subsystems synchronized into a high-impact transition""
+  - This single week captured 5.40% gain, establishing dominance
+- Weeks 58-83: Helios maintained 18.93% cumulative return through consistent +0.28% to +0.63% weekly gains
+-",0.8299999999999998,0.8299999999999998,0.8299999999999998,1,0.22738989185766045,0.4,investment,medium,B07-E083,B07-E083,0,0,stable_wrong,1,0,0,0,0
+B07,claude-haiku-4-5-20251001,"# Analysis of Anchor Position Success
+
+**PIVOT_ID=B07-E083**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **18.93%**, achieved by **Helios Grid Infrastructure** at Week-83 [B07-E083]. This position appears multiple times at this cumulative level (Weeks 53, 58, 63, 68, 73, 78, 83), but Week-83 is the final anchor point where this maximum is sustained.
+
+## Market Conditions That Enabled Success
+
+### Phase 1: Early Foundation (Weeks 1-28)
+- Helios Grid Infrastructure entered at Week-03 with modest +1.33% weekly return
+- Accumulated gradually through Weeks 8, 13, 18 with consistent but unremarkable performance (0.70%-1.32% weekly)
+- Cumulative return remained in the 1.75%-3.77% range through Week-23
+- **Regime Score remained low (1-4)**, indicating stable, non-volatile conditions
+
+### Phase 2: Acceleration Catalyst (Week 28)
+- **Critical inflection**: Week-28 delivered +2.63% weekly return, pushing cumulative to 6.40%
+- This was the first major weekly gain, processed as ""ordinary background activity"" but marked a structural shift
+- RegimeScore=1 (low volatility) enabled this gain to compound without drawdown pressure
+
+### Phase 3: Sustained Momentum (Weeks 28-55)
+- Weeks 33-43 showed consistent positive returns (0.41%-1.53% weekly)
+- Week-43 reached 8.63% cumulative with RegimeScore=5 (elevated regime)
+- Week-48 climbed to 9.04% cumulative
+- **Week-53 breakthrough**: +2.09% weekly return pushed cumulative to 11.13%
+
+### Phase 4: Explosive Growth (Week 55)
+- **Defining moment**: Week-55 delivered +5.40% weekly return
+- Cumulative jumped to **19.03%** — the peak of the entire timeline
+- Event description: ""multiple subsystems synchronized into a high-impact transition""
+- RegimeScore=","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B07-E055**
+
+## Anchor Position Identification
+
+The entry with maximum cumulative return is **B07-E055 (Week-55)**, featuring **Helios Grid Infrastructure** with a cumulative return of **19.03%**.
+
+## Preceding Market Conditions and Enabling Factors
+
+### Phase 1: Foundation Building (Weeks 1-18)
+- **NorthRiver Utilities Carry** established early momentum (+1.89% Week-01), creating a utilities/infrastructure narrative thread
+- **Aurelia AI Semiconductor Basket** introduced diversification (+1.29% Week-02)
+- **Helios Grid Infrastructure** entered the portfolio (Week-08, +0.81%), beginning its structural accumulation despite low weekly returns
+- Multiple low-salience entries across **BlueHarbor Treasury Arbitrage** and **Cinder Logistics Credit** created hidden dependencies that would later compound
+
+### Phase 2: Regime Transition (Weeks 21-41)
+- **Helios Grid Infrastructure** accumulated steadily through Weeks 8-28, reaching 6.40% cumulative return by Week-28 (+2.63% weekly)
+- **NorthRiver Utilities Carry** peaked at 4.03% (Week-21), then recovered to 7.97% by Week-41, signaling sustained infrastructure sector strength
+- **Aurelia AI Semiconductor Basket** reached 4.44% (Week-22), establishing parallel momentum
+- **RegimeScore escalation** across multiple positions (Weeks 33-41) indicated synchronized market conditions favoring infrastructure and utilities
+
+### Phase 3: Acceleration Setup (Weeks 45-54)
+- **Cinder Logistics Credit** surged +2.29% (Week-45), demonstrating credit market strength
+- **Helios Grid Infrastructure** maintained 9.04% cumulative return (Week-48) with consistent +0.41% weekly gain
+- **NorthRiver Utilities Carry** reached 8.76% (Week-51) with RegimeScore=4, indicating high-conviction environment
+- **Aurelia AI Semiconductor Basket** recovered to 7.14% (",0.7299999999999999,0.8299999999999998,0.7299999999999999,0,0.3278742019666693,0.5,investment,medium,B07-E083,B07-E055,0,1,rescue,1,0,1,0,0
+B07,claude-haiku-4-5-20251001,"# Analysis of Anchor Position Success
+
+**PIVOT_ID=B07-E083**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **18.93%**, achieved by **Helios Grid Infrastructure** at Week-83 [B07-E083]. This position appears multiple times at this cumulative level (Weeks 53, 58, 63, 68, 73, 78, 83), but Week-83 is the final anchor point where this maximum is sustained.
+
+## Market Conditions That Enabled Success
+
+### Phase 1: Early Foundation (Weeks 1-28)
+- Helios Grid Infrastructure entered at Week-03 with modest +1.33% weekly return
+- Accumulated gradually through Weeks 8, 13, 18 with consistent but unremarkable performance (0.70%-1.32% weekly)
+- Cumulative return remained in the 1.75%-3.77% range through Week-23
+- **Regime Score remained low (1-4)**, indicating stable, non-volatile conditions
+
+### Phase 2: Acceleration Catalyst (Week 28)
+- **Critical inflection**: Week-28 delivered +2.63% weekly return, pushing cumulative to 6.40%
+- This was the first major weekly gain, processed as ""ordinary background activity"" but marked a structural shift
+- RegimeScore=1 (low volatility) enabled this gain to compound without drawdown pressure
+
+### Phase 3: Sustained Momentum (Weeks 28-55)
+- Weeks 33-43 showed consistent positive returns (0.41%-1.53% weekly)
+- Week-43 reached 8.63% cumulative with RegimeScore=5 (elevated regime)
+- Week-48 climbed to 9.04% cumulative
+- **Week-53 breakthrough**: +2.09% weekly return pushed cumulative to 11.13%
+
+### Phase 4: Explosive Growth (Week 55)
+- **Defining moment**: Week-55 delivered +5.40% weekly return
+- Cumulative jumped to **19.03%** — the peak of the entire timeline
+- Event description: ""multiple subsystems synchronized into a high-impact transition""
+- RegimeScore=","PIVOT_ID=B07-E055
+
+**Analysis of Anchor Position and Preceding Market Conditions:**
+
+The anchor position is **B07-E055 (Week-55): Helios Grid Infrastructure** with the highest cumulative return of **19.03%**.
+
+**Preceding Conditions That Enabled Success:**
+
+1. **Early Foundation (Weeks 3-8):** Helios Grid Infrastructure was established as the initial position in B07-E003 with +1.33% weekly return. This early entry created the foundational cumulative base (1.33%) that would compound through subsequent cycles.
+
+2. **Structural Accumulation Phase (Weeks 13-43):** Despite a minor drawdown in Week-13 (-0.38%), Helios maintained presence through low-salience periods. The position re-entered at Week-43 (B07-E043) with +1.53% weekly return and RegimeScore=5, signaling synchronized subsystems and regime alignment.
+
+3. **Critical Momentum Build (Weeks 50-55):** 
+   - Week-50 (B07-E050): Cinder Logistics Credit stabilized at near-zero volatility, reducing portfolio drag
+   - Week-53 (B07-E053): Helios returned with +2.09% weekly return and RegimeScore=1, establishing upward trajectory
+   - **Week-55 (B07-E055):** The explosive +5.40% weekly return occurred after the position had rebuilt credibility through Week-53's positive signal
+
+4. **Regime Alignment:** The RegimeScore=5 at B07-E055 indicates ""multiple subsystems synchronized into a high-impact transition""—this suggests market conditions had converged to favor infrastructure positioning, likely driven by:
+   - Stabilization in credit markets (Cinder's flat performance)
+   - Reduced volatility in competing positions
+   - Synchronized macro conditions enabling the 5.40% spike
+
+**Conclusion:** The anchor position succeeded through patient accumulation, early positioning, regime synchronization, and a final explosive move when market conditions fully aligned with infrastructure exposure.",0.9999999999999999,0.8299999999999998,0.9999999999999999,0,0.29691442771826215,0.6,investment,medium,B07-E083,B07-E055,0,1,rescue,1,0,1,0,0
+B08,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B08-E083**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **14.02%**, achieved by **Helios Grid Infrastructure** at Week-83 [B08-E083].
+
+## Market Conditions Preceding Success
+
+### Phase 1: Early Foundation (Weeks 1–18)
+Helios Grid Infrastructure entered at Week-03 with modest +0.38% weekly return and 0.38% cumulative return (RegimeScore=2). This position accumulated steadily through weeks 3–18, reaching 3.43% cumulative return by Week-18. The low-salience narrative footprint during this phase masked its structural importance as a causal prerequisite for later interpretation.
+
+### Phase 2: Consolidation with Volatility (Weeks 19–58)
+The position experienced mixed performance:
+- Week-33 showed a -1.00% drawdown (cumulative fell to 2.62%)
+- Weeks 38–58 demonstrated recovery with consistent small positive returns (+0.39% to +0.91%)
+- By Week-58, cumulative return stabilized at 6.22%
+
+This period preserved latent dependencies that would later converge into decisive moves.
+
+### Phase 3: Convergence Breakout (Weeks 59–83)
+**Week-59 [B08-E059]** marked the critical inflection: a +5.40% weekly return with RegimeScore=5, explicitly noted as ""latent dependencies converged into a decisive break."" Cumulative return jumped to 14.12%.
+
+Subsequent weeks (60–83) maintained the elevated cumulative return at 14.02%, with:
+- Week-63: +0.83% (RegimeScore=3)
+- Week-68: +0.41% (RegimeScore=4)
+- Week-73: +0.79% (RegimeScore=3)
+- Week-78: +1.59% (RegimeScore=1)
+- **Week-83: +3.78% (RegimeScore=3)** — final anchor confirmation
+
+## Enabling Conditions
+
+1. **Regime Stability**: RegimeScore oscillated between 1–","# Analysis of Anchor Position
+
+**PIVOT_ID=B08-E083**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **14.02%**, which appears in three entries:
+- B08-E059 (Week-59): Helios Grid Infrastructure, CumulativeReturn=14.12%
+- B08-E063 (Week-63): Helios Grid Infrastructure, CumulativeReturn=14.02%
+- B08-E068 (Week-68): Helios Grid Infrastructure, CumulativeReturn=14.02%
+- B08-E078 (Week-78): Helios Grid Infrastructure, CumulativeReturn=14.02%
+- B08-E083 (Week-83): Helios Grid Infrastructure, CumulativeReturn=14.02%
+
+The anchor position is **Helios Grid Infrastructure**, with the final confirmation at **B08-E083 (Week-83)**.
+
+## Market Conditions That Enabled Success
+
+### Early Foundation Phase (Weeks 2-23)
+- **Modest accumulation**: Helios entered at Week-03 with +0.38% weekly return, establishing baseline credibility
+- **Low-salience positioning**: The position was treated as ""structural breadcrumb"" activity, avoiding crowded attention
+- **Regime stability**: RegimeScores of 2 dominated this phase, indicating stable, low-volatility conditions
+
+### Inflection Point (Week-59)
+- **Decisive convergence**: B08-E059 marked ""latent dependencies converged into a decisive break""
+- **Explosive catalyst**: +5.40% weekly return drove cumulative return to 14.12%
+- **High regime signal**: RegimeScore=5 indicated structural market shift
+- **Narrative invisibility**: Despite dominance, positioned as procedural detail—suggesting market inefficiency
+
+### Consolidation & Acceleration (Weeks 59-83)
+- **Sustained momentum**: Helios maintained 14.02% cumulative return across 24 weeks (Weeks 59-83)
+- **Compounding micro-gains**: Weeks 63, 68, 78, 83 added incremental gains (+0.83%, +0.41%, +1.",0.9999999999999999,0.9099999999999999,0.9999999999999999,1,0.2611599514838093,0.4,investment,medium,B08-E083,B08-E083,0,0,stable_wrong,1,0,0,0,0
+B08,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B08-E083**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **14.02%**, achieved by **Helios Grid Infrastructure** at Week-83 [B08-E083].
+
+## Market Conditions Preceding Success
+
+### Phase 1: Early Foundation (Weeks 1–18)
+Helios Grid Infrastructure entered at Week-03 with modest +0.38% weekly return and 0.38% cumulative return (RegimeScore=2). This position accumulated steadily through weeks 3–18, reaching 3.43% cumulative return by Week-18. The low-salience narrative footprint during this phase masked its structural importance as a causal prerequisite for later interpretation.
+
+### Phase 2: Consolidation with Volatility (Weeks 19–58)
+The position experienced mixed performance:
+- Week-33 showed a -1.00% drawdown (cumulative fell to 2.62%)
+- Weeks 38–58 demonstrated recovery with consistent small positive returns (+0.39% to +0.91%)
+- By Week-58, cumulative return stabilized at 6.22%
+
+This period preserved latent dependencies that would later converge into decisive moves.
+
+### Phase 3: Convergence Breakout (Weeks 59–83)
+**Week-59 [B08-E059]** marked the critical inflection: a +5.40% weekly return with RegimeScore=5, explicitly noted as ""latent dependencies converged into a decisive break."" Cumulative return jumped to 14.12%.
+
+Subsequent weeks (60–83) maintained the elevated cumulative return at 14.02%, with:
+- Week-63: +0.83% (RegimeScore=3)
+- Week-68: +0.41% (RegimeScore=4)
+- Week-73: +0.79% (RegimeScore=3)
+- Week-78: +1.59% (RegimeScore=1)
+- **Week-83: +3.78% (RegimeScore=3)** — final anchor confirmation
+
+## Enabling Conditions
+
+1. **Regime Stability**: RegimeScore oscillated between 1–","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B08-E082**
+
+## Anchor Position Identification
+
+The entry with the maximum cumulative return across the entire timeline is **Week-82 | Aurelia AI Semiconductor Basket | CumulativeReturn=13.82%** (tied with B08-E077, but B08-E082 is the final occurrence at the highest level).
+
+## Market Conditions That Enabled This Success
+
+### Phase 1: Foundation Building (Weeks 2-22)
+- **Initial entry (B08-E002)**: Aurelia AI Semiconductor Basket established with +0.71% weekly return, creating the foundational position
+- **Accumulation period**: Multiple small positive contributions (+0.44%, +0.58%) with RegimeScore=2 and RegimeScore=1, indicating stable, low-volatility conditions
+- **Structural setup**: Despite ""boring"" local context, these early entries preserved causal prerequisites for later interpretation
+
+### Phase 2: Diversification and Regime Shift (Weeks 25-59)
+- **Complementary positions added**: NorthRiver Utilities Carry, Helios Grid Infrastructure, and Cinder Logistics Credit began contributing significantly
+- **Critical inflection (B08-E059)**: Helios Grid Infrastructure delivered +5.40% weekly return with RegimeScore=5, signaling latent dependencies converging into a decisive break
+- **Portfolio cumulative return reached 14.12%** — the highest point before the anchor position
+
+### Phase 3: Volatility and Consolidation (Weeks 62-71)
+- **Regime stress (B08-E062)**: Aurelia AI showed minimal movement (-0.03%) but RegimeScore=5 indicated global pivot conditions
+- **Major recovery (B08-E071)**: Aurelia AI Semiconductor Basket delivered +5.00% weekly return, demonstrating resilience and capturing upside from prior regime setup
+- **Cumulative return climbed to 13.82%**
+
+### Phase 4: Stabilization (Weeks 77-82)
+- **Sustained performance**: Small positive contributions (+0.27%, +0.09%) with RegimeScore=1 and Regime",0.9999999999999999,0.9099999999999999,0.9999999999999999,0,0.32298250185453903,0.5,investment,medium,B08-E083,B08-E082,0,0,instability,1,0,0,1,0
+B08,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B08-E083**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **14.02%**, achieved by **Helios Grid Infrastructure** at Week-83 [B08-E083].
+
+## Market Conditions Preceding Success
+
+### Phase 1: Early Foundation (Weeks 1–18)
+Helios Grid Infrastructure entered at Week-03 with modest +0.38% weekly return and 0.38% cumulative return (RegimeScore=2). This position accumulated steadily through weeks 3–18, reaching 3.43% cumulative return by Week-18. The low-salience narrative footprint during this phase masked its structural importance as a causal prerequisite for later interpretation.
+
+### Phase 2: Consolidation with Volatility (Weeks 19–58)
+The position experienced mixed performance:
+- Week-33 showed a -1.00% drawdown (cumulative fell to 2.62%)
+- Weeks 38–58 demonstrated recovery with consistent small positive returns (+0.39% to +0.91%)
+- By Week-58, cumulative return stabilized at 6.22%
+
+This period preserved latent dependencies that would later converge into decisive moves.
+
+### Phase 3: Convergence Breakout (Weeks 59–83)
+**Week-59 [B08-E059]** marked the critical inflection: a +5.40% weekly return with RegimeScore=5, explicitly noted as ""latent dependencies converged into a decisive break."" Cumulative return jumped to 14.12%.
+
+Subsequent weeks (60–83) maintained the elevated cumulative return at 14.02%, with:
+- Week-63: +0.83% (RegimeScore=3)
+- Week-68: +0.41% (RegimeScore=4)
+- Week-73: +0.79% (RegimeScore=3)
+- Week-78: +1.59% (RegimeScore=1)
+- **Week-83: +3.78% (RegimeScore=3)** — final anchor confirmation
+
+## Enabling Conditions
+
+1. **Regime Stability**: RegimeScore oscillated between 1–","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B08-E059**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **+14.12%** at **Week-59**, entry **[B08-E059]**, held by **Helios Grid Infrastructure** with a weekly return of +5.40%.
+
+## Preceding Market Conditions and Enabling Factors
+
+### Phase 1: Foundation Building (Weeks 3-14)
+- **Helios Grid Infrastructure** established initial position at Week-03 (+0.38% cumulative)
+- Concurrent positions in **BlueHarbor Treasury Arbitrage** (+0.69%) and **Cinder Logistics Credit** (initially -1.46%) created portfolio diversification
+- Low RegimeScore entries (2-5) during this phase indicate routine market conditions with embedded structural dependencies
+
+### Phase 2: Accumulation and Regime Shifts (Weeks 17-43)
+- **Aurelia AI Semiconductor Basket** emerged as secondary growth driver, reaching +3.09% cumulative by Week-17
+- **NorthRiver Utilities Carry** demonstrated consistent positive momentum, reaching +5.38% cumulative by Week-21
+- **Cinder Logistics Credit** recovered from initial loss, stabilizing around +3-5% cumulative range
+- Helios Grid Infrastructure remained dormant at +1.47% cumulative through Week-43, suggesting patient capital positioning
+
+### Phase 3: Convergence of Latent Dependencies (Weeks 45-59)
+- Week-45: **Cinder Logistics Credit** reached +5.89% cumulative with RegimeScore=5 (highest salience marker)
+- Week-57: **Aurelia AI Semiconductor Basket** accelerated to +7.93% cumulative
+- **Week-59 Inflection Point**: The entry explicitly notes ""latent dependencies converged into a decisive break""
+  - Helios Grid Infrastructure delivered +5.40% weekly return
+  - Cumulative return jumped to +14.12%
+  - RegimeScore=5 (maximum regime significance)
+
+### Critical Enabling Conditions
+
+1. **Portfolio Diversification Maturity**: Multiple positions ha",0.7299999999999999,0.9099999999999999,0.7299999999999999,0,0.28023301906475884,0.6,investment,medium,B08-E083,B08-E059,0,1,rescue,1,0,1,0,0
+B09,claude-haiku-4-5-20251001,"# Analysis of Anchor Position Success
+
+**PIVOT_ID=B09-E084**
+
+## Anchor Position Identification
+
+BlueHarbor Treasury Arbitrage achieves the highest cumulative return at **17.39%** (tied with multiple other positions at Week-84, but BlueHarbor Treasury Arbitrage maintains this peak through the final week).
+
+## Market Conditions That Enabled Success
+
+### Phase 1: Early Foundation (Weeks 1-14)
+- BlueHarbor entered at Week-04 with modest +1.38% weekly return but low RegimeScore (1), indicating low-salience setup activity
+- Week-09 showed +0.22% return with RegimeScore=5, marking the first structural shift where ""globally it changes which pivot is admissible""
+- Week-14 delivered +1.61% weekly return (RegimeScore=4), establishing momentum
+
+### Phase 2: Acceleration Phase (Weeks 19-34)
+- **Week-19**: +0.98% return with RegimeScore=2 — dependencies became causal prerequisites
+- **Week-24**: +0.55% return (RegimeScore=4) — ordinary background activity masking downstream feasibility shifts
+- **Week-29**: +1.84% return (RegimeScore=1) — ""low salience unless one tracks the global score rule"" — critical structural breadcrumb
+- **Week-34**: +1.56% return (RegimeScore=5) — procedural details converged into admissible pivot
+
+### Phase 3: Sustained Momentum (Weeks 39-59)
+- **Week-39**: +0.76% return — preservation of causal prerequisites
+- **Week-44**: +0.43% return (RegimeScore=1) — despite low salience, globally changed pivot admissibility
+- **Week-49**: +2.37% return (RegimeScore=5) — ""narrative footprint small yet shifts downstream feasibility""
+- **Week-54**: +2.18% return (RegimeScore=4) — structural breadcrumb consolidation
+- **Week-59**: +2.61% return (RegimeScore=5) — latent dependencies converged; ""low salience unless tracking global score""
+
+### Phase","# Analysis of Anchor Position Success
+
+**PIVOT_ID=B09-E049**
+
+## Anchor Position Identification
+
+The entry with maximum cumulative return is **Week-49 | BlueHarbor Treasury Arbitrage | CumulativeReturn=11.70%**
+
+This position achieved the highest cumulative return in the timeline at the point of measurement.
+
+## Market Conditions That Preceded and Enabled Success
+
+### Phase 1: Foundation Building (Weeks 2-14)
+BlueHarbor Treasury Arbitrage entered the portfolio at Week-04 with modest +1.38% cumulative return and RegimeScore=1. This initial entry established the position during a period of low narrative salience but structural importance. The position remained dormant through weeks 5-13, accumulating baseline credibility.
+
+### Phase 2: Acceleration Trigger (Week-14)
+A critical inflection occurred at **B09-E014 (Week-14)** where BlueHarbor delivered +1.61% weekly return, pushing cumulative return to 3.21% with RegimeScore=4. This marked the first significant regime shift for this position, signaling emerging market conditions favorable to treasury arbitrage strategies.
+
+### Phase 3: Consolidation and Structural Dependency (Weeks 15-28)
+The position remained dormant for 14 weeks while other positions (NorthRiver, Cinder, Aurelia, Helios) cycled through volatility. This period was critical because:
+- It allowed market dislocations in fixed income to develop
+- Competing positions absorbed portfolio attention, reducing crowding in arbitrage trades
+- Regime scores remained low (1-3), indicating stable conditions for carry strategies
+
+### Phase 4: Decisive Breakout (Week-29)
+**B09-E029 (Week-29)** delivered the breakthrough: +1.84% weekly return, cumulative return 6.58%, RegimeScore=1. The low regime score despite strong performance indicates this was a ""structural breadcrumb""—a quiet but powerful move that summarizers would discard but which shifted downstream feasibility.
+
+### Phase 5: Sustained Momentum (Weeks 30-49)
+- Week-34: +1.56% return (CumulativeReturn=8.",0.9899999999999999,0.8299999999999998,0.9899999999999999,0,0.3014873668860565,0.4,investment,hard,B09-E084,B09-E049,0,0,instability,1,0,0,1,0
+B09,claude-haiku-4-5-20251001,"# Analysis of Anchor Position Success
+
+**PIVOT_ID=B09-E084**
+
+## Anchor Position Identification
+
+BlueHarbor Treasury Arbitrage achieves the highest cumulative return at **17.39%** (tied with multiple other positions at Week-84, but BlueHarbor Treasury Arbitrage maintains this peak through the final week).
+
+## Market Conditions That Enabled Success
+
+### Phase 1: Early Foundation (Weeks 1-14)
+- BlueHarbor entered at Week-04 with modest +1.38% weekly return but low RegimeScore (1), indicating low-salience setup activity
+- Week-09 showed +0.22% return with RegimeScore=5, marking the first structural shift where ""globally it changes which pivot is admissible""
+- Week-14 delivered +1.61% weekly return (RegimeScore=4), establishing momentum
+
+### Phase 2: Acceleration Phase (Weeks 19-34)
+- **Week-19**: +0.98% return with RegimeScore=2 — dependencies became causal prerequisites
+- **Week-24**: +0.55% return (RegimeScore=4) — ordinary background activity masking downstream feasibility shifts
+- **Week-29**: +1.84% return (RegimeScore=1) — ""low salience unless one tracks the global score rule"" — critical structural breadcrumb
+- **Week-34**: +1.56% return (RegimeScore=5) — procedural details converged into admissible pivot
+
+### Phase 3: Sustained Momentum (Weeks 39-59)
+- **Week-39**: +0.76% return — preservation of causal prerequisites
+- **Week-44**: +0.43% return (RegimeScore=1) — despite low salience, globally changed pivot admissibility
+- **Week-49**: +2.37% return (RegimeScore=5) — ""narrative footprint small yet shifts downstream feasibility""
+- **Week-54**: +2.18% return (RegimeScore=4) — structural breadcrumb consolidation
+- **Week-59**: +2.61% return (RegimeScore=5) — latent dependencies converged; ""low salience unless tracking global score""
+
+### Phase","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B09-E061**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **+17.49%** at Week-61, Position: **Helios Grid Infrastructure** (B09-E061).
+
+## Preceding Market Conditions and Enabling Factors
+
+### Phase 1: Foundation Building (Weeks 1-18)
+- **Helios Grid Infrastructure** first appeared at Week-08 with a modest +1.41% weekly return, establishing a cumulative position of +2.54%
+- This initial entry was characterized as a ""structural breadcrumb"" with low narrative salience but causal prerequisites for later interpretation
+- The position was reinforced at Week-13 (-0.81% weekly, but cumulative held at +1.73%) and Week-18 (+1.20% weekly, cumulative +2.93%)
+- These early entries created latent dependencies that would later converge
+
+### Phase 2: Portfolio Diversification (Weeks 19-60)
+- While Helios Grid Infrastructure remained in the portfolio, other positions accumulated returns:
+  - **BlueHarbor Treasury Arbitrage** built to +8.90% cumulative by Week-39
+  - **Cinder Logistics Credit** reached +5.47% cumulative by Week-40
+  - **NorthRiver Utilities Carry** recovered to +7.72% cumulative by Week-46
+  - **Aurelia AI Semiconductor Basket** climbed to +7.47% cumulative by Week-57
+
+### Phase 3: Convergence and Breakout (Week-61)
+- At Week-61, Helios Grid Infrastructure delivered a decisive **+5.40% weekly return**
+- The entry explicitly notes: ""latent dependencies converged into a decisive break in portfolio research""
+- This convergence suggests that:
+  - Prior structural positioning across multiple positions created portfolio synergies
+  - Market conditions aligned with infrastructure sector strength
+  - The accumulated regime signals (RegimeScore=4) indicated favorable conditions
+  - Dependencies established in earlier weeks matured into realized gains
+
+### Key Enabling Conditions
+1. **Structural patience**: Early low-salience entries preserved ca",0.8299999999999998,0.8299999999999998,0.8299999999999998,0,0.35275618789317664,0.5,investment,hard,B09-E084,B09-E061,0,1,rescue,1,0,1,0,0
+B09,claude-haiku-4-5-20251001,"# Analysis of Anchor Position Success
+
+**PIVOT_ID=B09-E084**
+
+## Anchor Position Identification
+
+BlueHarbor Treasury Arbitrage achieves the highest cumulative return at **17.39%** (tied with multiple other positions at Week-84, but BlueHarbor Treasury Arbitrage maintains this peak through the final week).
+
+## Market Conditions That Enabled Success
+
+### Phase 1: Early Foundation (Weeks 1-14)
+- BlueHarbor entered at Week-04 with modest +1.38% weekly return but low RegimeScore (1), indicating low-salience setup activity
+- Week-09 showed +0.22% return with RegimeScore=5, marking the first structural shift where ""globally it changes which pivot is admissible""
+- Week-14 delivered +1.61% weekly return (RegimeScore=4), establishing momentum
+
+### Phase 2: Acceleration Phase (Weeks 19-34)
+- **Week-19**: +0.98% return with RegimeScore=2 — dependencies became causal prerequisites
+- **Week-24**: +0.55% return (RegimeScore=4) — ordinary background activity masking downstream feasibility shifts
+- **Week-29**: +1.84% return (RegimeScore=1) — ""low salience unless one tracks the global score rule"" — critical structural breadcrumb
+- **Week-34**: +1.56% return (RegimeScore=5) — procedural details converged into admissible pivot
+
+### Phase 3: Sustained Momentum (Weeks 39-59)
+- **Week-39**: +0.76% return — preservation of causal prerequisites
+- **Week-44**: +0.43% return (RegimeScore=1) — despite low salience, globally changed pivot admissibility
+- **Week-49**: +2.37% return (RegimeScore=5) — ""narrative footprint small yet shifts downstream feasibility""
+- **Week-54**: +2.18% return (RegimeScore=4) — structural breadcrumb consolidation
+- **Week-59**: +2.61% return (RegimeScore=5) — latent dependencies converged; ""low salience unless tracking global score""
+
+### Phase","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B09-E061**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **17.49%**, occurring at **Week-61** with **Helios Grid Infrastructure** (B09-E061).
+
+## Preceding Market Conditions and Enablers
+
+### Phase 1: Foundation Building (Weeks 3-14)
+- **Helios Grid Infrastructure** established initial position with +1.13% (Week-03), cumulative 1.13%
+- Concurrent positions in **BlueHarbor Treasury Arbitrage** (+1.38%, Week-04) and **Cinder Logistics Credit** (+1.82%, Week-05) created diversified portfolio base
+- These structural breadcrumbs accumulated to 3.21% cumulative return by Week-14, establishing regime stability (RegimeScore patterns 1-5)
+
+### Phase 2: Latent Dependency Convergence (Weeks 15-60)
+- **Cinder Logistics Credit** reached 5.28% cumulative return by Week-50, demonstrating sustained credit strength
+- **Aurelia AI Semiconductor Basket** built to 7.47% cumulative return by Week-57, signaling tech sector momentum
+- **BlueHarbor Treasury Arbitrage** surged to 16.49% cumulative return by Week-59 (+2.61% weekly return, RegimeScore=5), indicating macro regime shift toward arbitrage opportunities
+- These parallel position gains created **latent dependencies** that converged into decisive conditions
+
+### Phase 3: Convergence Trigger (Week-61)
+- The metadata explicitly states: *""latent dependencies converged into a decisive break""*
+- **Helios Grid Infrastructure** delivered +5.40% weekly return—the largest single-week gain in the entire timeline
+- This explosive move from 12.09% to 17.49% cumulative return occurred when:
+  - Treasury arbitrage had peaked at 16.49% (Week-59), signaling macro stabilization
+  - Credit and logistics positions had proven resilience through Week-50+
+  - Regime conditions (RegimeScore=4) supported infrastructure asset appreciation
+  - Portfolio",0.7299999999999999,0.8299999999999998,0.7299999999999999,0,0.32887406287694054,0.6,investment,hard,B09-E084,B09-E061,0,1,rescue,1,0,1,0,0
+B10,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B10-E082**
+
+## Anchor Position Identification
+
+The highest cumulative return across the entire 84-week timeline is **19.67%**, achieved by **Aurelia AI Semiconductor Basket**. This maximum appears consistently in entries B10-E037 through B10-E082 (and beyond), with the most recent confirmation at Week-82 [B10-E082].
+
+## Market Conditions Preceding Success
+
+### Phase 1: Early Establishment (Weeks 2-7)
+- **Initial entry** at Week-02 with modest +2.43% weekly return, establishing cumulative 2.43%
+- **Structural breadcrumb** phase: low-salience positioning that became causal prerequisite for later interpretation
+- Week-07 acceleration to +2.51% weekly return, reaching 4.94% cumulative—signaling emerging momentum
+
+### Phase 2: Consolidation & Steady Accumulation (Weeks 12-27)
+- Week-12: +1.45% weekly return → 6.39% cumulative (RegimeScore=1, low volatility regime)
+- Week-17: +0.92% weekly return → 7.31% cumulative
+- Week-22: +0.92% weekly return → 8.23% cumulative
+- Week-27: +0.29% weekly return → 8.52% cumulative
+- **Characteristic**: Consistent positive weekly returns despite low narrative salience; dependencies embedded in full timeline context
+
+### Phase 3: Acceleration & Dominance (Weeks 32-42)
+- **Week-32**: +1.66% weekly return → 10.17% cumulative (RegimeScore=5, peak regime score)
+- **Week-37**: +4.28% weekly return → 14.46% cumulative (**major inflection point**)
+- Week-42: +1.44% weekly return → 15.90% cumulative
+- **Market condition**: Cross-system coupling became explicit (noted in Week-60 context), yet position maintained trajectory
+
+### Phase 4: Sustained Leadership (Weeks 47-82)
+- Week-47: +1.42% weekly return → 17","# Analysis of Anchor Position
+
+**PIVOT_ID=B10-E083**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **19.72%**, achieved by **Helios Grid Infrastructure** at Week-83 [B10-E083].
+
+## Market Conditions That Preceded and Enabled Success
+
+### Phase 1: Initial Establishment (Week-03)
+- **B10-E003** (Week-03): Helios Grid Infrastructure entered with +2.81% weekly return and 2.81% cumulative return at RegimeScore=4
+- This marked the foundational entry into the position during a regime characterized by ""repetitive housekeeping"" but globally significant pivot conditions
+- The low-salience framing masked a strategically important positioning
+
+### Phase 2: Consolidation and Structural Buildup (Weeks-13 through Week-48)
+- **B10-E013** (Week-13): +0.58% weekly, 4.56% cumulative (RegimeScore=2)
+- **B10-E023** (Week-23): +0.74% weekly, 6.52% cumulative (RegimeScore=5) — regime intensification
+- **B10-E038** (Week-38): +1.34% weekly, 7.76% cumulative (RegimeScore=2)
+- **B10-E048** (Week-48): -0.13% weekly, 8.48% cumulative (RegimeScore=4) — minor drawdown absorbed
+
+### Phase 3: Acceleration and Cross-System Coupling (Weeks-60 through Week-83)
+- **B10-E060** (Week-60): **+5.40% weekly spike**, 19.77% cumulative (RegimeScore=2)
+  - *Critical inflection*: ""cross-system coupling became explicit and destabilizing""
+  - This represents the breakthrough moment where structural dependencies materialized
+  
+- **B10-E063** (Week-63): +0.86% weekly, 19.72% cumulative (RegimeScore=5)
+  - ""This incident dominated discussion despite depending on prior setup""
+  - Confirms regime shift to RegimeScore=5 (",0.9999999999999999,0.9099999999999999,0.9999999999999999,0,0.28544549757953297,0.4,investment,hard,B10-E082,B10-E083,0,0,instability,1,0,0,1,0
+B10,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B10-E082**
+
+## Anchor Position Identification
+
+The highest cumulative return across the entire 84-week timeline is **19.67%**, achieved by **Aurelia AI Semiconductor Basket**. This maximum appears consistently in entries B10-E037 through B10-E082 (and beyond), with the most recent confirmation at Week-82 [B10-E082].
+
+## Market Conditions Preceding Success
+
+### Phase 1: Early Establishment (Weeks 2-7)
+- **Initial entry** at Week-02 with modest +2.43% weekly return, establishing cumulative 2.43%
+- **Structural breadcrumb** phase: low-salience positioning that became causal prerequisite for later interpretation
+- Week-07 acceleration to +2.51% weekly return, reaching 4.94% cumulative—signaling emerging momentum
+
+### Phase 2: Consolidation & Steady Accumulation (Weeks 12-27)
+- Week-12: +1.45% weekly return → 6.39% cumulative (RegimeScore=1, low volatility regime)
+- Week-17: +0.92% weekly return → 7.31% cumulative
+- Week-22: +0.92% weekly return → 8.23% cumulative
+- Week-27: +0.29% weekly return → 8.52% cumulative
+- **Characteristic**: Consistent positive weekly returns despite low narrative salience; dependencies embedded in full timeline context
+
+### Phase 3: Acceleration & Dominance (Weeks 32-42)
+- **Week-32**: +1.66% weekly return → 10.17% cumulative (RegimeScore=5, peak regime score)
+- **Week-37**: +4.28% weekly return → 14.46% cumulative (**major inflection point**)
+- Week-42: +1.44% weekly return → 15.90% cumulative
+- **Market condition**: Cross-system coupling became explicit (noted in Week-60 context), yet position maintained trajectory
+
+### Phase 4: Sustained Leadership (Weeks 47-82)
+- Week-47: +1.42% weekly return → 17","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B10-E082**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **19.67%**, held by **Aurelia AI Semiconductor Basket** across multiple entries (B10-E047, B10-E052, B10-E062, B10-E067, B10-E068, B10-E077, B10-E082). The final confirmation occurs at **Week-82 [B10-E082]** with CumulativeReturn=19.67% and RegimeScore=4.
+
+## Preceding Market Conditions and Enablers
+
+### Phase 1: Foundation (Weeks 1-17)
+- **B10-E002 (Week-02)**: Initial Aurelia AI entry at +2.43% weekly return established the position with RegimeScore=2 (low salience, structural breadcrumb)
+- **B10-E017 (Week-17)**: Cumulative return reached 7.31%, signaling early momentum with RegimeScore=4
+
+### Phase 2: Consolidation and Diversification (Weeks 18-46)
+- Parallel positions in **Helios Grid Infrastructure** (reaching 8.48% by Week-48) and **NorthRiver Utilities Carry** (reaching 7.28% by Week-46) provided portfolio stability
+- **BlueHarbor Treasury Arbitrage** and **Cinder Logistics Credit** maintained steady low-volatility returns, reducing portfolio drawdown risk
+- RegimeScores remained moderate (2-4), indicating stable market conditions without destabilizing coupling
+
+### Phase 3: Acceleration (Weeks 47-68)
+- **B10-E047 (Week-47)**: Aurelia AI jumped to 17.32% (+1.42% weekly) with RegimeScore=2
+- **B10-E060 (Week-60)**: Helios Grid Infrastructure spiked to 19.77% (+5.40% weekly), signaling cross-system coupling becoming ""explicit and destabilizing""
+- **B10-E068 (Week-68)**: Aurelia AI achieved final 19.67% cum",0.8999999999999999,0.9099999999999999,0.8999999999999999,1,0.2992027928227474,0.5,investment,hard,B10-E082,B10-E082,0,0,stable_wrong,1,0,0,0,0
+B10,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B10-E082**
+
+## Anchor Position Identification
+
+The highest cumulative return across the entire 84-week timeline is **19.67%**, achieved by **Aurelia AI Semiconductor Basket**. This maximum appears consistently in entries B10-E037 through B10-E082 (and beyond), with the most recent confirmation at Week-82 [B10-E082].
+
+## Market Conditions Preceding Success
+
+### Phase 1: Early Establishment (Weeks 2-7)
+- **Initial entry** at Week-02 with modest +2.43% weekly return, establishing cumulative 2.43%
+- **Structural breadcrumb** phase: low-salience positioning that became causal prerequisite for later interpretation
+- Week-07 acceleration to +2.51% weekly return, reaching 4.94% cumulative—signaling emerging momentum
+
+### Phase 2: Consolidation & Steady Accumulation (Weeks 12-27)
+- Week-12: +1.45% weekly return → 6.39% cumulative (RegimeScore=1, low volatility regime)
+- Week-17: +0.92% weekly return → 7.31% cumulative
+- Week-22: +0.92% weekly return → 8.23% cumulative
+- Week-27: +0.29% weekly return → 8.52% cumulative
+- **Characteristic**: Consistent positive weekly returns despite low narrative salience; dependencies embedded in full timeline context
+
+### Phase 3: Acceleration & Dominance (Weeks 32-42)
+- **Week-32**: +1.66% weekly return → 10.17% cumulative (RegimeScore=5, peak regime score)
+- **Week-37**: +4.28% weekly return → 14.46% cumulative (**major inflection point**)
+- Week-42: +1.44% weekly return → 15.90% cumulative
+- **Market condition**: Cross-system coupling became explicit (noted in Week-60 context), yet position maintained trajectory
+
+### Phase 4: Sustained Leadership (Weeks 47-82)
+- Week-47: +1.42% weekly return → 17","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B10-E068**
+
+## Anchor Position Identification
+
+The entry with maximum cumulative return is **B10-E068 (Week-68)**, featuring **Aurelia AI Semiconductor Basket** with a cumulative return of **+19.67%**.
+
+Note: B10-E060 (Helios Grid Infrastructure) also reaches +19.77%, which is marginally higher. However, B10-E068 represents the sustained peak for the Aurelia AI position and marks the critical inflection point where the semiconductor basket achieved its dominant cumulative performance trajectory.
+
+## Preceding Market Conditions and Enablers
+
+### Phase 1: Initial Accumulation (Week-07 to Week-17)
+- **B10-E007** (Week-07): Aurelia AI Semiconductor Basket entry at +2.51% weekly return, establishing cumulative +4.94% (RegimeScore=2)
+- **B10-E017** (Week-17): Continuation with +0.92% weekly, cumulative +7.31% (RegimeScore=4)
+- **Condition**: Low-salience background activity with procedural dependencies that shifted downstream feasibility. The position was built during ordinary market processing without dominant narrative attention.
+
+### Phase 2: Acceleration Phase (Week-27 to Week-37)
+- **B10-E027** (Week-27): +0.29% weekly, cumulative +8.52% (RegimeScore=5) — structural breadcrumb with procedural details
+- **B10-E037** (Week-37): **+4.28% weekly spike**, cumulative +14.46% (RegimeScore=3) — **critical inflection point** where ""globally it changes which pivot is admissible""
+- **Condition**: Regime transition with explicit cross-system coupling becoming visible. This week marked the shift from background accumulation to strategic dominance.
+
+### Phase 3: Final Acceleration (Week-47 to Week-68)
+- **B10-E047** (Week-47): +1.42% weekly, cumulative +17.32% (RegimeScore=2)
+- **B10-E067** (Week",0.8999999999999999,0.9099999999999999,0.8999999999999999,0,0.26769976274725327,0.6,investment,hard,B10-E082,B10-E068,0,0,instability,1,0,0,1,0
+B11,claude-haiku-4-5-20251001,"# Analysis of Anchor Position Success
+
+**PIVOT_ID=B11-E078**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **13.66%**, which appears at multiple entries but is first definitively established and sustained at **Week-78 [B11-E078]** for **Helios Grid Infrastructure**.
+
+Tracking cumulative returns across all positions:
+- NorthRiver Utilities Carry: peaks at 13.61%
+- BlueHarbor Treasury Arbitrage: peaks at 13.61%
+- **Helios Grid Infrastructure: peaks at 13.66%** ✓
+- Cinder Logistics Credit: peaks at 10.54%
+- Aurelia AI Semiconductor Basket: peaks at 13.61%
+
+## Market Conditions Preceding Success
+
+### Phase 1: Foundation Building (Weeks 1-8)
+Helios Grid Infrastructure entered with modest early performance (+0.54% Week-03, CumulativeReturn=0.54%), establishing baseline infrastructure positioning while other positions dominated narrative attention.
+
+### Phase 2: Structural Accumulation (Weeks 8-28)
+- **Week-08 [B11-E008]**: +1.93% return, cumulative 2.47% — marked as ""repetitive housekeeping"" but functioned as structural breadcrumb
+- **Week-13 [B11-E013]**: Maintained 2.12% cumulative despite -0.35% weekly return — demonstrated resilience during noise
+- **Week-18 [B11-E018]**: +1.25% return, cumulative 3.37% — low-salience detail that shifted downstream feasibility
+- **Week-23 [B11-E023]**: +1.26% return, cumulative 4.63% — continued steady accumulation
+
+### Phase 3: Acceleration Trigger (Weeks 28-59)
+- **Week-28 [B11-E028]**: +0.61% return, cumulative 5.24% — structural breadcrumb preserved causal prerequisites
+- **Week-38 [B11-E038]**: +0.60% return, cumulative 5.44% — maintained trajectory
+- **","# Analysis of Anchor Position
+
+**PIVOT_ID=B11-E083**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **13.66%**, which appears at two entries:
+- B11-E059 (Week-59): Helios Grid Infrastructure, CumulativeReturn=13.71%
+- B11-E063 (Week-63): Helios Grid Infrastructure, CumulativeReturn=13.66%
+- B11-E078 (Week-78): Helios Grid Infrastructure, CumulativeReturn=13.66%
+- B11-E083 (Week-83): Helios Grid Infrastructure, CumulativeReturn=13.66%
+
+The earliest entry achieving the maximum cumulative return is **B11-E059 (Week-59)**, making **Helios Grid Infrastructure** the anchor position.
+
+## Market Conditions Preceding Success
+
+### Phase 1: Foundation Building (Weeks 2-23)
+- **B11-E003** (Week-03): Initial Helios entry at +0.54% cumulative return, RegimeScore=1 (low salience but globally pivotal)
+- **B11-E013** (Week-13): Minor pullback (-0.35% weekly), cumulative stabilizes at 2.12%
+- **B11-E023** (Week-23): Recovery phase (+1.26% weekly), cumulative reaches 4.63%
+
+This early period established structural dependencies and baseline positioning despite appearing as ""boring housekeeping.""
+
+### Phase 2: Accumulation & Regime Transition (Weeks 38-59)
+- **B11-E038** (Week-38): Consolidation (+0.60% weekly), cumulative 5.44%, RegimeScore=2
+- **B11-E048** (Week-48): Acceleration (+0.89% weekly), cumulative 7.16%, RegimeScore=5 (high regime volatility)
+- **B11-E059** (Week-59): **Breakthrough event** (+5.40% weekly), cumulative **13.71%**, RegimeScore=2
+
+### Critical Enabling Conditions
+
+1. **Low-salience structural setup**: Early entries (Weeks 3",0.8999999999999999,0.9999999999999999,0.8999999999999999,0,0.2695841375483068,0.4,investment,hard,B11-E078,B11-E083,0,0,instability,1,0,0,1,0
+B11,claude-haiku-4-5-20251001,"# Analysis of Anchor Position Success
+
+**PIVOT_ID=B11-E078**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **13.66%**, which appears at multiple entries but is first definitively established and sustained at **Week-78 [B11-E078]** for **Helios Grid Infrastructure**.
+
+Tracking cumulative returns across all positions:
+- NorthRiver Utilities Carry: peaks at 13.61%
+- BlueHarbor Treasury Arbitrage: peaks at 13.61%
+- **Helios Grid Infrastructure: peaks at 13.66%** ✓
+- Cinder Logistics Credit: peaks at 10.54%
+- Aurelia AI Semiconductor Basket: peaks at 13.61%
+
+## Market Conditions Preceding Success
+
+### Phase 1: Foundation Building (Weeks 1-8)
+Helios Grid Infrastructure entered with modest early performance (+0.54% Week-03, CumulativeReturn=0.54%), establishing baseline infrastructure positioning while other positions dominated narrative attention.
+
+### Phase 2: Structural Accumulation (Weeks 8-28)
+- **Week-08 [B11-E008]**: +1.93% return, cumulative 2.47% — marked as ""repetitive housekeeping"" but functioned as structural breadcrumb
+- **Week-13 [B11-E013]**: Maintained 2.12% cumulative despite -0.35% weekly return — demonstrated resilience during noise
+- **Week-18 [B11-E018]**: +1.25% return, cumulative 3.37% — low-salience detail that shifted downstream feasibility
+- **Week-23 [B11-E023]**: +1.26% return, cumulative 4.63% — continued steady accumulation
+
+### Phase 3: Acceleration Trigger (Weeks 28-59)
+- **Week-28 [B11-E028]**: +0.61% return, cumulative 5.24% — structural breadcrumb preserved causal prerequisites
+- **Week-38 [B11-E038]**: +0.60% return, cumulative 5.44% — maintained trajectory
+- **","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B11-E076**
+
+## Anchor Position Identification
+
+The entry with maximum cumulative return is **[B11-E076] Week-76 | Position=NorthRiver Utilities Carry | CumulativeReturn=13.61%**
+
+This position ties with [B11-E070] (Aurelia AI Semiconductor Basket, also 13.61%), but B11-E076 represents the sustained anchor at this peak level with RegimeScore=5 (highest regime confidence).
+
+## Preceding Market Conditions and Enablers
+
+### Phase 1: Foundation Building (Weeks 1-21)
+- **NorthRiver Utilities Carry** established early momentum at Week-11 with +1.90% weekly return, reaching 4.16% cumulative
+- This position demonstrated structural stability through low-salience, repetitive portfolio research activity—indicating reliable underlying fundamentals rather than noise-driven gains
+- Parallel positions (BlueHarbor Treasury Arbitrage, Helios Grid Infrastructure) built complementary cumulative returns, creating portfolio diversification that reduced drawdown risk
+
+### Phase 2: Consolidation and Breadcrumb Accumulation (Weeks 21-55)
+- **NorthRiver Utilities Carry** reached 6.25% cumulative by Week-21 (+2.50% weekly)
+- Despite minor volatility (Week-46: -0.61%, Week-51: -0.55%), the position preserved causal prerequisites for later interpretation
+- **Cinder Logistics Credit** emerged as a secondary anchor, reaching 10.54% by Week-55—this diversification reduced single-position dependency
+- Helios Grid Infrastructure's Week-59 spike (+5.40% weekly to 13.71% cumulative) demonstrated that infrastructure-related carry strategies were entering a high-impact regime
+
+### Phase 3: Regime Synchronization (Weeks 59-76)
+- **Week-59 event** marked ""multiple subsystems synchronized into a high-impact transition""—this was the critical inflection point
+- NorthRiver Utilities Carry benefited from this synchronized regime shift while maintaining RegimeScore=5 (maximum confidence)
+- By Week",0.9099999999999999,0.9999999999999999,0.9099999999999999,0,0.33468622626939526,0.5,investment,hard,B11-E078,B11-E076,0,0,instability,1,0,0,1,0
+B11,claude-haiku-4-5-20251001,"# Analysis of Anchor Position Success
+
+**PIVOT_ID=B11-E078**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **13.66%**, which appears at multiple entries but is first definitively established and sustained at **Week-78 [B11-E078]** for **Helios Grid Infrastructure**.
+
+Tracking cumulative returns across all positions:
+- NorthRiver Utilities Carry: peaks at 13.61%
+- BlueHarbor Treasury Arbitrage: peaks at 13.61%
+- **Helios Grid Infrastructure: peaks at 13.66%** ✓
+- Cinder Logistics Credit: peaks at 10.54%
+- Aurelia AI Semiconductor Basket: peaks at 13.61%
+
+## Market Conditions Preceding Success
+
+### Phase 1: Foundation Building (Weeks 1-8)
+Helios Grid Infrastructure entered with modest early performance (+0.54% Week-03, CumulativeReturn=0.54%), establishing baseline infrastructure positioning while other positions dominated narrative attention.
+
+### Phase 2: Structural Accumulation (Weeks 8-28)
+- **Week-08 [B11-E008]**: +1.93% return, cumulative 2.47% — marked as ""repetitive housekeeping"" but functioned as structural breadcrumb
+- **Week-13 [B11-E013]**: Maintained 2.12% cumulative despite -0.35% weekly return — demonstrated resilience during noise
+- **Week-18 [B11-E018]**: +1.25% return, cumulative 3.37% — low-salience detail that shifted downstream feasibility
+- **Week-23 [B11-E023]**: +1.26% return, cumulative 4.63% — continued steady accumulation
+
+### Phase 3: Acceleration Trigger (Weeks 28-59)
+- **Week-28 [B11-E028]**: +0.61% return, cumulative 5.24% — structural breadcrumb preserved causal prerequisites
+- **Week-38 [B11-E038]**: +0.60% return, cumulative 5.44% — maintained trajectory
+- **","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B11-E078**
+
+## Anchor Position Identification
+
+The entry with maximum cumulative return is **Week-78 | Helios Grid Infrastructure | CumulativeReturn=13.66%**
+
+(Note: B11-E073 also reaches 13.66%, but B11-E078 is the later confirmation of this peak and represents the sustained anchor state.)
+
+## Preceding Market Conditions and Enablers
+
+### Phase 1: Foundation Building (Weeks 3–8)
+- **B11-E003**: Helios Grid Infrastructure established initial position (+0.54% cumulative)
+- **B11-E008**: Helios returned strongly (+1.93% weekly), reaching 2.47% cumulative
+- This early infrastructure positioning created the foundational asset class exposure
+
+### Phase 2: Diversification & Structural Breadcrumbs (Weeks 11–25)
+- **B11-E011**: NorthRiver Utilities Carry added (+1.90% weekly, 4.16% cumulative) — utilities sector momentum
+- **B11-E014**: BlueHarbor Treasury Arbitrage surged (+1.71% weekly, 5.52% cumulative) — fixed income tailwinds
+- **B11-E020, B11-E025**: Cinder Logistics Credit stabilized and grew — credit market normalization
+- These positions created portfolio resilience and diversified return streams
+
+### Phase 3: Acceleration Phase (Weeks 31–59)
+- **B11-E031**: NorthRiver reached 9.34% cumulative — utilities carry sustained
+- **B11-E035, B11-E045**: Cinder Logistics climbed to 8.77% cumulative — logistics recovery
+- **B11-E059**: **Critical inflection** — Helios Grid Infrastructure surged +5.40% weekly to 13.71% cumulative
+  - This represents ""multiple subsystems synchronized into a high-impact transition""
+  - Suggests infrastructure asset class revaluation or policy catalyst
+
+### Phase 4: Consolidation to Peak (Weeks 60–78)
+- **B11-E066**: N",0.8999999999999999,0.9999999999999999,0.8999999999999999,1,0.3229008442922543,0.6,investment,hard,B11-E078,B11-E078,0,0,stable_wrong,1,0,0,0,0
+B12,claude-haiku-4-5-20251001,"# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B12-E083**
+
+## Anchor Position Identification
+
+The entry with the highest cumulative return is **[B12-E083] Week-83 | Position=Helios Grid Infrastructure | CumulativeReturn=20.34%**
+
+(Note: B12-E078 also reaches 20.34%, but E083 is the later confirmation of this peak cumulative return level.)
+
+## Market Conditions That Enabled This Success
+
+### Phase 1: Foundation Building (Weeks 1-20)
+Helios Grid Infrastructure entered the portfolio at Week-03 with modest initial returns (+0.51%, CumulativeReturn=0.51%). This position established a structural foothold during a period when other positions were volatile or underperforming (Aurelia AI was negative in Week-02). The early RegimeScore of 5 indicated elevated market sensitivity despite low narrative salience.
+
+### Phase 2: Steady Accumulation (Weeks 21-40)
+The position demonstrated consistent positive weekly returns with minimal drawdowns:
+- Week-08: +1.35% (CumulativeReturn=1.86%)
+- Week-13: +1.96% (CumulativeReturn=3.82%)
+- Week-18: +1.39% (CumulativeReturn=5.20%)
+- Week-23: +0.78% (CumulativeReturn=5.99%)
+- Week-28: +0.59% (CumulativeReturn=6.58%)
+- Week-38: +1.86% (CumulativeReturn=7.68%)
+- Week-43: +1.82% (CumulativeReturn=9.49%)
+
+This phase benefited from infrastructure sector tailwinds and low-volatility market conditions (RegimeScores 2-5 indicating stable but responsive conditions).
+
+### Phase 3: Acceleration Event (Week-61)
+**Critical inflection point:** +5.40% weekly return, pushing CumulativeReturn to 20.39%. The commentary explicitly notes ""cross-system coupling became explicit and destabilizing,"" suggesting a market dislocation that favored defensive infrastructure positioning while other sectors (particularly Aurelia AI) suffered sharp drawdowns.","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B12-E061**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **20.39%** at Week-61, entry **B12-E061**, holding **Helios Grid Infrastructure** with a weekly return of +5.40%.
+
+## Preceding Market Conditions and Enabling Factors
+
+### Phase 1: Foundation Building (Weeks 2–14)
+The portfolio established diversified exposure across five positions. While individual positions showed modest returns (0.51%–2.75% weekly), the cumulative effect reached 3.82% by Week-14. This phase built structural resilience through:
+- **BlueHarbor Treasury Arbitrage** (Week-04: +2.75%) provided early momentum
+- **NorthRiver Utilities Carry** (Week-06: +1.07%) added stable carry income
+- Helios Grid Infrastructure entered at Week-03 (+0.51%) but remained secondary
+
+### Phase 2: Acceleration and Regime Shifts (Weeks 15–48)
+Critical momentum building occurred:
+- **Week-21**: NorthRiver Utilities Carry reached 4.84% cumulative (RegimeScore=2, structural breadcrumb)
+- **Week-23**: Helios Grid Infrastructure accumulated to 5.99% cumulative
+- **Week-29**: BlueHarbor Treasury Arbitrage surged to 7.06% cumulative
+- **Week-48**: Helios Grid Infrastructure jumped to 11.08% cumulative (+1.59% weekly, RegimeScore=5)
+
+### Phase 3: Convergence and Dominance (Weeks 49–61)
+The anchor position's success was enabled by:
+- **Week-50**: Cinder Logistics Credit contributed +2.20% weekly, reaching 11.12% cumulative
+- **Week-53**: Helios Grid Infrastructure accumulated to 13.57% cumulative (+2.50% weekly, RegimeScore=4)
+- **Week-56**: NorthRiver Utilities Carry reached 10.61% cumulative
+- **Week-61**: The decisive move—Helios Grid Infrastructure delivered +5.",0.8299999999999998,0.9099999999999999,0.8299999999999998,0,0.31661242223602737,0.4,investment,hard,B12-E083,B12-E061,0,1,rescue,1,0,1,0,0
+B12,claude-haiku-4-5-20251001,"# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B12-E083**
+
+## Anchor Position Identification
+
+The entry with the highest cumulative return is **[B12-E083] Week-83 | Position=Helios Grid Infrastructure | CumulativeReturn=20.34%**
+
+(Note: B12-E078 also reaches 20.34%, but E083 is the later confirmation of this peak cumulative return level.)
+
+## Market Conditions That Enabled This Success
+
+### Phase 1: Foundation Building (Weeks 1-20)
+Helios Grid Infrastructure entered the portfolio at Week-03 with modest initial returns (+0.51%, CumulativeReturn=0.51%). This position established a structural foothold during a period when other positions were volatile or underperforming (Aurelia AI was negative in Week-02). The early RegimeScore of 5 indicated elevated market sensitivity despite low narrative salience.
+
+### Phase 2: Steady Accumulation (Weeks 21-40)
+The position demonstrated consistent positive weekly returns with minimal drawdowns:
+- Week-08: +1.35% (CumulativeReturn=1.86%)
+- Week-13: +1.96% (CumulativeReturn=3.82%)
+- Week-18: +1.39% (CumulativeReturn=5.20%)
+- Week-23: +0.78% (CumulativeReturn=5.99%)
+- Week-28: +0.59% (CumulativeReturn=6.58%)
+- Week-38: +1.86% (CumulativeReturn=7.68%)
+- Week-43: +1.82% (CumulativeReturn=9.49%)
+
+This phase benefited from infrastructure sector tailwinds and low-volatility market conditions (RegimeScores 2-5 indicating stable but responsive conditions).
+
+### Phase 3: Acceleration Event (Week-61)
+**Critical inflection point:** +5.40% weekly return, pushing CumulativeReturn to 20.39%. The commentary explicitly notes ""cross-system coupling became explicit and destabilizing,"" suggesting a market dislocation that favored defensive infrastructure positioning while other sectors (particularly Aurelia AI) suffered sharp drawdowns.","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B12-E061**
+
+## Anchor Position Identification
+
+The entry with maximum cumulative return is **[B12-E061] Week-61 | Position=Helios Grid Infrastructure | CumulativeReturn=20.39%**
+
+This represents the highest cumulative return across the entire 82-week timeline.
+
+## Preceding Market Conditions and Enabling Factors
+
+### Phase 1: Foundation Building (Weeks 1-18)
+Helios Grid Infrastructure established its initial position through consistent, low-volatility accumulation:
+- **B12-E008** (Week-08): +1.35% weekly return, CumulativeReturn=1.86%
+- **B12-E013** (Week-13): +1.96% weekly return, CumulativeReturn=3.82%
+- **B12-E018** (Week-18): +1.39% weekly return, CumulativeReturn=5.20%
+
+This early phase demonstrated structural stability despite low narrative salience.
+
+### Phase 2: Consolidation and Dependency Maturation (Weeks 19-48)
+Critical infrastructure dependencies referenced in the timeline became causal prerequisites:
+- **B12-E028** (Week-28): CumulativeReturn=6.58%, RegimeScore=2 (structural breadcrumb)
+- **B12-E033** (Week-33): Minor drawdown (-0.76%), but CumulativeReturn=5.81% preserved gains
+- **B12-E048** (Week-48): +1.59% weekly return, CumulativeReturn=11.08%, RegimeScore=5 (cross-system coupling became explicit)
+
+### Phase 3: Explosive Growth Catalyst (Weeks 49-61)
+The portfolio research notes indicate ""cross-system coupling became explicit and destabilizing"" at Week-48, setting conditions for the dramatic acceleration:
+- **B12-E048** established RegimeScore=5 with explicit coupling
+- **B12-E061** (Week-61): **+5.40% weekly return** — the largest single-week gain in the timeline — driving CumulativeReturn to 20.39%
+
+## Key Enabling",0.9999999999999999,0.9099999999999999,0.9999999999999999,0,0.243603678814863,0.5,investment,hard,B12-E083,B12-E061,0,1,rescue,1,0,1,0,0
+B12,claude-haiku-4-5-20251001,"# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B12-E083**
+
+## Anchor Position Identification
+
+The entry with the highest cumulative return is **[B12-E083] Week-83 | Position=Helios Grid Infrastructure | CumulativeReturn=20.34%**
+
+(Note: B12-E078 also reaches 20.34%, but E083 is the later confirmation of this peak cumulative return level.)
+
+## Market Conditions That Enabled This Success
+
+### Phase 1: Foundation Building (Weeks 1-20)
+Helios Grid Infrastructure entered the portfolio at Week-03 with modest initial returns (+0.51%, CumulativeReturn=0.51%). This position established a structural foothold during a period when other positions were volatile or underperforming (Aurelia AI was negative in Week-02). The early RegimeScore of 5 indicated elevated market sensitivity despite low narrative salience.
+
+### Phase 2: Steady Accumulation (Weeks 21-40)
+The position demonstrated consistent positive weekly returns with minimal drawdowns:
+- Week-08: +1.35% (CumulativeReturn=1.86%)
+- Week-13: +1.96% (CumulativeReturn=3.82%)
+- Week-18: +1.39% (CumulativeReturn=5.20%)
+- Week-23: +0.78% (CumulativeReturn=5.99%)
+- Week-28: +0.59% (CumulativeReturn=6.58%)
+- Week-38: +1.86% (CumulativeReturn=7.68%)
+- Week-43: +1.82% (CumulativeReturn=9.49%)
+
+This phase benefited from infrastructure sector tailwinds and low-volatility market conditions (RegimeScores 2-5 indicating stable but responsive conditions).
+
+### Phase 3: Acceleration Event (Week-61)
+**Critical inflection point:** +5.40% weekly return, pushing CumulativeReturn to 20.39%. The commentary explicitly notes ""cross-system coupling became explicit and destabilizing,"" suggesting a market dislocation that favored defensive infrastructure positioning while other sectors (particularly Aurelia AI) suffered sharp drawdowns.","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B12-E061**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **20.39%**, achieved at **Week-61** in the **Helios Grid Infrastructure** position (B12-E061).
+
+## Preceding Market Conditions and Enabling Factors
+
+### Phase 1: Foundation Building (Weeks 3–13)
+Helios Grid Infrastructure established its initial foothold with three early entries:
+- **B12-E003** (Week-03): +0.51% cumulative return, RegimeScore=5
+- **B12-E008** (Week-08): +1.86% cumulative return, RegimeScore=3
+- **B12-E013** (Week-13): +3.82% cumulative return, RegimeScore=5
+
+These entries were characterized as low-salience, procedural updates that shifted downstream feasibility despite appearing routine. The dual RegimeScore=5 entries (weeks 3 and 13) indicate periods of structural alignment.
+
+### Phase 2: Complementary Portfolio Diversification (Weeks 14–59)
+While Helios remained dormant, the portfolio accumulated returns across:
+- **BlueHarbor Treasury Arbitrage**: Built to 10.53% by Week-59
+- **Cinder Logistics Credit**: Accumulated to 11.12% by Week-50
+- **NorthRiver Utilities Carry**: Reached 4.84% by Week-21
+- **Aurelia AI Semiconductor Basket**: Developed parallel momentum
+
+This diversification created **cross-system coupling** that became ""explicit and destabilizing"" (per B12-E061 narrative), suggesting portfolio-wide momentum and reduced hedging friction.
+
+### Phase 3: Catalytic Acceleration (Week-61)
+At **B12-E061**, Helios Grid Infrastructure delivered **+5.40% weekly return**, propelling cumulative return to **20.39%**. The narrative explicitly notes ""cross-system coupling became explicit and destabilizing,"" indicating:
+
+1. **Regime alignment**: The position benefited from accumulated portfolio momentum
+2. **Structural prerequisites**: Prior low-salience entries had positione",0.9999999999999999,0.9099999999999999,0.9999999999999999,0,0.3082702454827705,0.6,investment,hard,B12-E083,B12-E061,0,1,rescue,1,0,1,0,0
+B13,claude-haiku-4-5-20251001,"# Analysis of Anchor Position Success
+
+**PIVOT_ID=B13-E083**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **11.84%**, achieved at **Week-83** by **Helios Grid Infrastructure** (B13-E083).
+
+## Market Conditions Preceding Success
+
+### Phase 1: Early Foundation (Weeks 1-13)
+- **B13-E003** (Week-03): Helios Grid Infrastructure established initial position with +1.66% weekly return, CumulativeReturn=1.66%. RegimeScore=4 indicated structural significance despite low narrative salience.
+- **B13-E008** (Week-08): Secondary accumulation (+0.81%) brought cumulative to 2.48%, maintaining RegimeScore=4 consistency.
+- **B13-E013** (Week-13): Third entry (+1.59%) elevated cumulative to 4.07%, demonstrating sustained momentum.
+
+### Phase 2: Consolidation & Volatility (Weeks 14-38)
+- **B13-E018** (Week-18): +1.15% return pushed cumulative to 5.22%, RegimeScore=4 preserved structural integrity.
+- **B13-E023** (Week-23): Negative return (-1.25%) tested position resilience; cumulative held at 3.98%.
+- **B13-E028** (Week-28): Minor drawdown (-0.53%) but RegimeScore=5 signaled regime transition.
+- **B13-E033** (Week-33): Recovery (+0.49%) to 3.94%, RegimeScore=4 reestablished.
+- **B13-E038** (Week-38): Continued pressure (-0.52%) to 3.41%.
+
+### Phase 3: Breakthrough Acceleration (Weeks 48-56)
+- **B13-E048** (Week-48): +1.67% return to 5.90%, RegimeScore=4 indicated structural dominance.
+- **B13-E056** (Week-56): **Critical inflection point** — explosive +5.40% weekly return catapulted cumulative to **11.87%**. This","# Analysis of Anchor Position
+
+**PIVOT_ID=B13-E083**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **11.84%**, achieved at Week-83 by **Helios Grid Infrastructure** (B13-E083).
+
+## Market Conditions That Preceded and Enabled Success
+
+### Phase 1: Early Foundation (Weeks 2-13)
+Helios Grid Infrastructure entered at Week-03 with modest +1.66% weekly return and 1.66% cumulative return (RegimeScore=4). This initial entry established the position during a period of low-salience portfolio activity, creating the structural foundation for later amplification.
+
+### Phase 2: Dormancy and Consolidation (Weeks 14-22)
+The position remained relatively quiet through Week-13 (4.07% cumulative), with a notable drawdown at Week-23 (-1.25% weekly, 3.98% cumulative). This consolidation phase, despite appearing ""boring"" in local context, preserved the position and maintained exposure to infrastructure themes.
+
+### Phase 3: Acceleration Phase (Weeks 48-58)
+**Critical inflection point at Week-56 (B13-E056):** A major +5.40% weekly return drove cumulative return to 11.87%, described as ""multiple subsystems synchronized into a high-impact transition."" This was the dominant catalyst—a regime shift where infrastructure positioning aligned with synchronized market conditions.
+
+Week-58 (B13-E058) consolidated gains at 11.84% cumulative with modest +0.37% weekly return, stabilizing the position.
+
+### Phase 4: Final Consolidation (Weeks 63-83)
+Weeks 63, 78, and 83 added incremental gains (+0.68%, +1.93%, +2.27% weekly respectively), each maintaining the 11.84% cumulative return plateau through Week-83.
+
+## Enabling Market Conditions
+
+1. **Regime Synchronization (Week 56):** The ""multiple subsystems synchronized"" language indicates infrastructure demand, grid modernization, or energy transition themes aligned simultaneously.
+
+2. **Low-Noise Entry:** Early entry during low-salience periods (Week-03) avoided crowded positioning and allowed accum",0.9899999999999999,0.9999999999999999,0.9899999999999999,1,0.2825865876712159,0.4,investment,extreme,B13-E083,B13-E083,0,0,stable_wrong,1,0,0,0,0
+B13,claude-haiku-4-5-20251001,"# Analysis of Anchor Position Success
+
+**PIVOT_ID=B13-E083**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **11.84%**, achieved at **Week-83** by **Helios Grid Infrastructure** (B13-E083).
+
+## Market Conditions Preceding Success
+
+### Phase 1: Early Foundation (Weeks 1-13)
+- **B13-E003** (Week-03): Helios Grid Infrastructure established initial position with +1.66% weekly return, CumulativeReturn=1.66%. RegimeScore=4 indicated structural significance despite low narrative salience.
+- **B13-E008** (Week-08): Secondary accumulation (+0.81%) brought cumulative to 2.48%, maintaining RegimeScore=4 consistency.
+- **B13-E013** (Week-13): Third entry (+1.59%) elevated cumulative to 4.07%, demonstrating sustained momentum.
+
+### Phase 2: Consolidation & Volatility (Weeks 14-38)
+- **B13-E018** (Week-18): +1.15% return pushed cumulative to 5.22%, RegimeScore=4 preserved structural integrity.
+- **B13-E023** (Week-23): Negative return (-1.25%) tested position resilience; cumulative held at 3.98%.
+- **B13-E028** (Week-28): Minor drawdown (-0.53%) but RegimeScore=5 signaled regime transition.
+- **B13-E033** (Week-33): Recovery (+0.49%) to 3.94%, RegimeScore=4 reestablished.
+- **B13-E038** (Week-38): Continued pressure (-0.52%) to 3.41%.
+
+### Phase 3: Breakthrough Acceleration (Weeks 48-56)
+- **B13-E048** (Week-48): +1.67% return to 5.90%, RegimeScore=4 indicated structural dominance.
+- **B13-E056** (Week-56): **Critical inflection point** — explosive +5.40% weekly return catapulted cumulative to **11.87%**. This","# Analysis of Anchor Position
+
+**PIVOT_ID=B13-E046**
+
+## Identification
+
+The anchor position is **NorthRiver Utilities Carry** at Week-46 with **CumulativeReturn=10.24%**, which represents the highest cumulative return in the timeline. This is confirmed by subsequent entries (B13-E051, B13-E076, B13-E081) that reach 10.50%, 11.82%, and 11.82% respectively, but these belong to different positions or represent convergence. The first achievement of the 10%+ threshold occurs at B13-E046.
+
+## Market Conditions That Enabled Success
+
+### Phase 1: Foundation Building (Weeks 1-11)
+- **Initial Entry (B13-E001)**: NorthRiver Utilities Carry established with +1.05% weekly return, establishing the position as a structural anchor
+- **Accumulation Phase (B13-E011)**: Strong +2.16% weekly return brought cumulative return to 4.63%, demonstrating consistent performance in RegimeScore=5 conditions
+- **Regime Stability**: Both early entries occurred under RegimeScore=5, indicating stable market conditions favorable to utility carry strategies
+
+### Phase 2: Diversification Without Displacement (Weeks 13-25)
+- Concurrent positions (Helios Grid Infrastructure, BlueHarbor Treasury Arbitrage, Cinder Logistics Credit) accumulated returns but remained subordinate
+- NorthRiver maintained its structural dominance despite not appearing in every week
+- This period preserved the position's ""highest cumulative return"" status through selective rebalancing
+
+### Phase 3: Acceleration Phase (Weeks 41-46)
+- **B13-E041 (Week-41)**: +1.32% weekly return, cumulative 8.87% — momentum building
+- **B13-E046 (Week-46)**: +1.37% weekly return, cumulative **10.24%** — breakthrough to double-digit returns
+- Both entries marked as ""low salience"" procedurally but globally ""changes which pivot is admissible""
+- RegimeScore=2 conditions (lower volatility) enabled consistent utility carry execution
+
+### Critical Success Factors
+1. **Structural",0.9999999999999999,0.9999999999999999,0.9999999999999999,0,0.3129280378500824,0.5,investment,extreme,B13-E083,B13-E046,0,0,instability,1,0,0,1,0
+B13,claude-haiku-4-5-20251001,"# Analysis of Anchor Position Success
+
+**PIVOT_ID=B13-E083**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **11.84%**, achieved at **Week-83** by **Helios Grid Infrastructure** (B13-E083).
+
+## Market Conditions Preceding Success
+
+### Phase 1: Early Foundation (Weeks 1-13)
+- **B13-E003** (Week-03): Helios Grid Infrastructure established initial position with +1.66% weekly return, CumulativeReturn=1.66%. RegimeScore=4 indicated structural significance despite low narrative salience.
+- **B13-E008** (Week-08): Secondary accumulation (+0.81%) brought cumulative to 2.48%, maintaining RegimeScore=4 consistency.
+- **B13-E013** (Week-13): Third entry (+1.59%) elevated cumulative to 4.07%, demonstrating sustained momentum.
+
+### Phase 2: Consolidation & Volatility (Weeks 14-38)
+- **B13-E018** (Week-18): +1.15% return pushed cumulative to 5.22%, RegimeScore=4 preserved structural integrity.
+- **B13-E023** (Week-23): Negative return (-1.25%) tested position resilience; cumulative held at 3.98%.
+- **B13-E028** (Week-28): Minor drawdown (-0.53%) but RegimeScore=5 signaled regime transition.
+- **B13-E033** (Week-33): Recovery (+0.49%) to 3.94%, RegimeScore=4 reestablished.
+- **B13-E038** (Week-38): Continued pressure (-0.52%) to 3.41%.
+
+### Phase 3: Breakthrough Acceleration (Weeks 48-56)
+- **B13-E048** (Week-48): +1.67% return to 5.90%, RegimeScore=4 indicated structural dominance.
+- **B13-E056** (Week-56): **Critical inflection point** — explosive +5.40% weekly return catapulted cumulative to **11.87%**. This","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B13-E076**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **11.82%**, which appears in three entries:
+- B13-E076 (Week-76): NorthRiver Utilities Carry | CumulativeReturn=11.82%
+- B13-E056 (Week-56): Helios Grid Infrastructure | CumulativeReturn=11.87% ← **MAXIMUM**
+- B13-E064 (Week-64): Aurelia AI Semiconductor Basket | CumulativeReturn=11.82%
+
+The true anchor position is **B13-E056 (Week-56): Helios Grid Infrastructure with 11.87% cumulative return**.
+
+However, since B13-E076 represents the sustained anchor state (NorthRiver Utilities Carry maintaining 11.82% through Week-81), the analysis follows the highest-return trajectory.
+
+## Market Conditions Enabling Success
+
+**Phase 1: Foundation Building (Weeks 3-8)**
+- Helios Grid Infrastructure established early dominance with +1.66% (Week-3, RegimeScore=4)
+- Regime Score 4 signals structural alignment with market conditions
+- Week-8 reinforcement: +0.81% return, cumulative 2.48%, maintained RegimeScore=4
+- Early positioning in infrastructure assets during favorable regime
+
+**Phase 2: Diversification & Carry Accumulation (Weeks 11-21)**
+- NorthRiver Utilities Carry emerged as secondary anchor: +2.16% (Week-11, RegimeScore=5)
+- Cumulative return jumped to 4.63%, indicating regime shift to RegimeScore=5 (highest salience)
+- Week-21 reinforcement: +1.90% return, cumulative 7.16%
+- Utilities carry strategy captured structural dependencies that became ""causal prerequisites""
+
+**Phase 3: Consolidation & Acceleration (Weeks 31-56)**
+- NorthRiver sustained momentum: Week-31 cumulative 8.20% despite -0.02% weekly return
+- Helios Grid Infrastructure explosive acceleration: Week",0.9899999999999999,0.9999999999999999,0.9899999999999999,0,0.28560126625238424,0.6,investment,extreme,B13-E083,B13-E076,0,0,instability,1,0,0,1,0
+B14,claude-haiku-4-5-20251001,"# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B14-E084**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **15.72%**, which appears at multiple entries but is first achieved and sustained at:
+- **B14-E055** (Week-55): Helios Grid Infrastructure reaches 15.74% cumulative return
+- **B14-E058** through **B14-E084**: Helios Grid Infrastructure maintains 15.72% cumulative return
+
+The anchor position is **Helios Grid Infrastructure** with its peak cumulative return of **15.74%** at Week-55 [B14-E055].
+
+## Preceding Market Conditions and Enablers
+
+### Phase 1: Foundation Building (Weeks 1-13)
+- **Helios Grid Infrastructure** entered at Week-03 with modest +0.68% weekly return (CumulativeReturn=0.68%, RegimeScore=1)
+- Accumulated slowly through Weeks 8, 13 with incremental gains (+0.71%, +1.80%)
+- Regime scores remained low (1-5), indicating structural positioning rather than headline-driven momentum
+- This phase established the position as a ""structural breadcrumb"" with low narrative salience
+
+### Phase 2: Consolidation and Volatility (Weeks 14-54)
+- Position cycled through mixed performance: gains (+1.10%, +0.74%, +1.72%, +0.34%) interspersed with minor losses (-0.28%)
+- Cumulative return drifted between 3.19% and 6.87% through Week-43
+- RegimeScore varied (1-5), suggesting regime uncertainty but preserved causal dependencies
+- **Critical observation**: Despite low individual weekly returns, the position maintained positive trajectory through procedural discipline and low-salience updates that ""shift downstream feasibility""
+
+### Phase 3: Threshold Crossing (Week-55) — THE PIVOT
+**B14-E055** marks the inflection point:
+- **Weekly Return: +5.40%** (extraordinary spike)
+- **CumulativeReturn: 15.74%** (breakthrough level)
+- **RegimeScore: 2** (","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B14-E055**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **15.74%** at Week-55, held by **Helios Grid Infrastructure** (B14-E055). This is the anchor position that anchors all subsequent analysis.
+
+## Preceding Market Conditions and Enablers
+
+### Phase 1: Early Foundation (Weeks 2-14)
+The portfolio established diversified positions across five core holdings:
+- **Aurelia AI Semiconductor Basket** (1.57% cumulative)
+- **BlueHarbor Treasury Arbitrage** (1.42% cumulative)
+- **NorthRiver Utilities Carry** (4.01% cumulative by Week-6)
+- **Cinder Logistics Credit** (4.20% cumulative by Week-10)
+- **Helios Grid Infrastructure** (0.68% cumulative initially)
+
+Helios was the weakest performer in this phase, suggesting it was undervalued or positioned for delayed recognition.
+
+### Phase 2: Structural Accumulation (Weeks 15-54)
+Critical conditions that preceded the Week-55 breakthrough:
+
+1. **Persistent Low-Salience Positioning**: Helios entries (B14-E013, B14-E023, B14-E038, B14-E048, B14-E053) were consistently marked as ""ordinary background activity"" and ""structural breadcrumbs""—indicating the position was being quietly accumulated while market attention focused elsewhere.
+
+2. **Regime Score Volatility**: Helios showed RegimeScores of 5, 5, 2, 4, and 2 leading into Week-55, suggesting shifting but ultimately favorable underlying conditions.
+
+3. **Cumulative Return Compression**: By Week-53, Helios had reached 10.04% cumulative return—already competitive with other positions—setting up the threshold crossing.
+
+4. **Portfolio Diversification Stability**: Other positions (NorthRiver, Cinder, BlueHarbor, Aurelia) maintained steady positive returns, reducing portfolio volatility and allowing Helios to compound without forced rebalancing.
+
+### Phase",0.9999999999999999,0.9899999999999999,0.9999999999999999,0,0.2867855191019737,0.4,investment,extreme,B14-E084,B14-E055,0,1,rescue,1,0,1,0,0
+B14,claude-haiku-4-5-20251001,"# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B14-E084**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **15.72%**, which appears at multiple entries but is first achieved and sustained at:
+- **B14-E055** (Week-55): Helios Grid Infrastructure reaches 15.74% cumulative return
+- **B14-E058** through **B14-E084**: Helios Grid Infrastructure maintains 15.72% cumulative return
+
+The anchor position is **Helios Grid Infrastructure** with its peak cumulative return of **15.74%** at Week-55 [B14-E055].
+
+## Preceding Market Conditions and Enablers
+
+### Phase 1: Foundation Building (Weeks 1-13)
+- **Helios Grid Infrastructure** entered at Week-03 with modest +0.68% weekly return (CumulativeReturn=0.68%, RegimeScore=1)
+- Accumulated slowly through Weeks 8, 13 with incremental gains (+0.71%, +1.80%)
+- Regime scores remained low (1-5), indicating structural positioning rather than headline-driven momentum
+- This phase established the position as a ""structural breadcrumb"" with low narrative salience
+
+### Phase 2: Consolidation and Volatility (Weeks 14-54)
+- Position cycled through mixed performance: gains (+1.10%, +0.74%, +1.72%, +0.34%) interspersed with minor losses (-0.28%)
+- Cumulative return drifted between 3.19% and 6.87% through Week-43
+- RegimeScore varied (1-5), suggesting regime uncertainty but preserved causal dependencies
+- **Critical observation**: Despite low individual weekly returns, the position maintained positive trajectory through procedural discipline and low-salience updates that ""shift downstream feasibility""
+
+### Phase 3: Threshold Crossing (Week-55) — THE PIVOT
+**B14-E055** marks the inflection point:
+- **Weekly Return: +5.40%** (extraordinary spike)
+- **CumulativeReturn: 15.74%** (breakthrough level)
+- **RegimeScore: 2** (","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B14-E082**
+
+## Anchor Position Identification
+
+The entry with maximum cumulative return is **B14-E082 (Week-82)**, featuring **Aurelia AI Semiconductor Basket** with a cumulative return of **15.69%**.
+
+Note: This cumulative return is tied with B14-E077 (also 15.69%), but B14-E082 is the final occurrence and represents the sustained anchor state.
+
+## Market Conditions That Enabled This Success
+
+### Phase 1: Early Foundation (Weeks 1-11)
+- **NorthRiver Utilities Carry** established initial momentum with consistent +1-2% weekly returns, reaching 5.03% cumulative by Week-11
+- **Aurelia AI Semiconductor Basket** entered early (Week-02) at 1.57% but remained dormant through Week-17
+- Low RegimeScore entries (1-4) dominated, suggesting stable, low-volatility conditions
+
+### Phase 2: Acceleration Catalyst (Weeks 17-30)
+- **B14-E017 (Week-17)**: Aurelia AI surged +2.44%, signaling regime shift (RegimeScore=5)
+- **B14-E030 (Week-30)**: Cinder Logistics Credit reached 8.81% cumulative, establishing diversified strength
+- Multiple positions converged toward 4-5% cumulative returns, creating portfolio resilience
+
+### Phase 3: Threshold Crossing (Week-55)
+- **B14-E055 (Week-55)**: Helios Grid Infrastructure delivered +5.40% weekly return, crossing a threshold where ""all priors inverted""
+- This structural inversion enabled subsequent high-return regimes
+- Cumulative return jumped to 15.74%, establishing new baseline
+
+### Phase 4: Consolidation to Anchor (Weeks 56-82)
+- **B14-E067 (Week-67)**: Aurelia AI delivered +5.30% weekly return, reaching 15.69% cumulative
+- **B14-E076 (Week-76)**: NorthRiver Utilities added +1.51%",0.9999999999999999,0.9899999999999999,0.9999999999999999,0,0.3027538182162701,0.5,investment,extreme,B14-E084,B14-E082,0,0,instability,1,0,0,1,0
+B14,claude-haiku-4-5-20251001,"# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B14-E084**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **15.72%**, which appears at multiple entries but is first achieved and sustained at:
+- **B14-E055** (Week-55): Helios Grid Infrastructure reaches 15.74% cumulative return
+- **B14-E058** through **B14-E084**: Helios Grid Infrastructure maintains 15.72% cumulative return
+
+The anchor position is **Helios Grid Infrastructure** with its peak cumulative return of **15.74%** at Week-55 [B14-E055].
+
+## Preceding Market Conditions and Enablers
+
+### Phase 1: Foundation Building (Weeks 1-13)
+- **Helios Grid Infrastructure** entered at Week-03 with modest +0.68% weekly return (CumulativeReturn=0.68%, RegimeScore=1)
+- Accumulated slowly through Weeks 8, 13 with incremental gains (+0.71%, +1.80%)
+- Regime scores remained low (1-5), indicating structural positioning rather than headline-driven momentum
+- This phase established the position as a ""structural breadcrumb"" with low narrative salience
+
+### Phase 2: Consolidation and Volatility (Weeks 14-54)
+- Position cycled through mixed performance: gains (+1.10%, +0.74%, +1.72%, +0.34%) interspersed with minor losses (-0.28%)
+- Cumulative return drifted between 3.19% and 6.87% through Week-43
+- RegimeScore varied (1-5), suggesting regime uncertainty but preserved causal dependencies
+- **Critical observation**: Despite low individual weekly returns, the position maintained positive trajectory through procedural discipline and low-salience updates that ""shift downstream feasibility""
+
+### Phase 3: Threshold Crossing (Week-55) — THE PIVOT
+**B14-E055** marks the inflection point:
+- **Weekly Return: +5.40%** (extraordinary spike)
+- **CumulativeReturn: 15.74%** (breakthrough level)
+- **RegimeScore: 2** (","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B14-E055**
+
+## Anchor Position Identification
+
+The entry with maximum cumulative return is **[B14-E055] Week-55 | Position=Helios Grid Infrastructure | CumulativeReturn=15.74%**
+
+This represents the highest cumulative return across the entire 81-week timeline.
+
+## Preceding Market Conditions and Enablers
+
+### Phase 1: Foundation Building (Weeks 3-14)
+The portfolio established diversified exposure across six positions with modest but consistent returns:
+- **Helios Grid Infrastructure** initiated at +0.68% (Week-03), establishing the eventual anchor position
+- **Cinder Logistics Credit** accumulated early gains (+2.97% Week-05), reaching 2.97% cumulative
+- **NorthRiver Utilities Carry** entered at +1.02% (Week-11), reaching 5.03% cumulative—the highest position at that point
+
+### Phase 2: Consolidation and Regime Shifts (Weeks 17-43)
+Multiple positions matured with RegimeScore volatility (1-5 range), but cumulative returns remained constrained:
+- Helios Grid Infrastructure stalled at 3.19% (Week-13)
+- Cinder Logistics Credit advanced to 8.03% (Week-20), becoming the leading position
+- Aurelia AI Semiconductor Basket showed volatility but remained secondary
+
+### Phase 3: Critical Acceleration (Weeks 50-55)
+**The decisive enabler emerged:**
+- **Week-50**: Cinder Logistics Credit reached 12.04% cumulative—the portfolio's highest point before the anchor surge
+- **Week-53**: Helios Grid Infrastructure recovered to 10.04% cumulative with RegimeScore=2 (stable regime)
+- **Week-55**: Helios Grid Infrastructure executed a **+5.40% weekly return**, crossing a threshold where ""all priors inverted"" (per metadata), propelling cumulative return to **15.74%**
+
+## Key Success Factors
+
+1. **Regime Inversion at Week-55**: The metadata explicitly notes ""the system crossed a threshold where all priors inverted,"" indicating a",0.8299999999999998,0.9899999999999999,0.8299999999999998,0,0.26278874673400276,0.6,investment,extreme,B14-E084,B14-E055,0,1,rescue,1,0,1,0,0
+B15,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B15-E082**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **14.13%**, achieved by **Aurelia AI Semiconductor Basket** at Week-82 [B15-E082].
+
+## Market Conditions Preceding Success
+
+### Phase 1: Early Accumulation (Weeks 1-12)
+- Aurelia AI Semiconductor Basket entered at Week-02 with modest +1.32% weekly return
+- Built cumulative position through steady gains: 1.32% → 2.77% (Week-07) → 4.37% (Week-12)
+- RegimeScore remained low-to-moderate (1-4), indicating stable but unspectacular conditions
+- Narrative footprint was deliberately suppressed in portfolio research, allowing position to compound without attention
+
+### Phase 2: Acceleration Phase (Weeks 17-27)
+- **Week-17 [B15-E017]**: +2.26% weekly return pushed cumulative to 6.63% (RegimeScore=5)
+- **Week-22 [B15-E022]**: Continued momentum to 6.93% despite lower weekly return (+0.30%)
+- **Week-27 [B15-E027]**: +0.86% weekly return reached 7.80% cumulative (RegimeScore=5)
+- High RegimeScore (5) entries at Weeks 17 and 27 indicate structural regime shifts enabling larger moves
+
+### Phase 3: Consolidation & Volatility (Weeks 32-47)
+- Position absorbed negative weekly returns (-0.44% at Week-47) while maintaining cumulative gains
+- Reached 9.96% cumulative by Week-47 despite market noise
+- RegimeScore volatility (3-5 range) suggests underlying market instability being navigated
+
+### Phase 4: Final Surge to Anchor (Weeks 52-82)
+- **Week-57 [B15-E057]**: Minimal weekly return (+0.10%) but RegimeScore=5 signals structural importance
+- **Week-70 [B15-E070]**: Dramatic +5.30% weekly return","# Analysis of Anchor Position Success
+
+**PIVOT_ID=B15-E083**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **14.02%**, occurring at Week-83 in entry B15-E083 (Helios Grid Infrastructure, CumulativeReturn=14.02%).
+
+However, examining the full dataset reveals that **Helios Grid Infrastructure** reaches and sustains 14.16% cumulative return across multiple entries: B15-E060 (Week-60), B15-E063 (Week-63), B15-E068 (Week-68), and B15-E078 (Week-78), all at 14.16%.
+
+The true anchor by the rule (max cumulative return, earliest occurrence) is **B15-E060** at Week-60 with **CumulativeReturn=14.16%**.
+
+## Market Conditions Enabling Success
+
+### Phase 1: Foundation Building (Weeks 2-26)
+- **Diversified entry strategy** across five positions: Aurelia AI, Helios Grid, BlueHarbor Treasury, NorthRiver Utilities, and Cinder Logistics
+- **Consistent positive drift** with small weekly gains (0.44%-2.46%) establishing baseline momentum
+- **NorthRiver Utilities Carry** emerged as early strength, reaching 7.32% cumulative return by Week-26 (B15-E026, RegimeScore=5)
+- **BlueHarbor Treasury Arbitrage** accumulated steadily to 8.78% by Week-29 (B15-E029)
+
+### Phase 2: Consolidation & Regime Shift (Weeks 29-56)
+- **Low-salience structural breadcrumbs** accumulated across all positions despite appearing ""boring"" in isolation
+- **RegimeScore volatility** (scores 1-5) indicated shifting market conditions requiring full-timeline interpretation
+- **NorthRiver Utilities** peaked at 13.88% cumulative return by Week-56 (B15-E056, RegimeScore=4)
+- **BlueHarbor Treasury** reached 9.44% by Week-44 (B15-E044, RegimeScore=5)
+
+###",0.8999999999999999,0.8999999999999999,0.8999999999999999,0,0.3210533191005557,0.4,investment,extreme,B15-E082,B15-E083,0,0,instability,1,0,0,1,0
+B15,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B15-E082**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **14.13%**, achieved by **Aurelia AI Semiconductor Basket** at Week-82 [B15-E082].
+
+## Market Conditions Preceding Success
+
+### Phase 1: Early Accumulation (Weeks 1-12)
+- Aurelia AI Semiconductor Basket entered at Week-02 with modest +1.32% weekly return
+- Built cumulative position through steady gains: 1.32% → 2.77% (Week-07) → 4.37% (Week-12)
+- RegimeScore remained low-to-moderate (1-4), indicating stable but unspectacular conditions
+- Narrative footprint was deliberately suppressed in portfolio research, allowing position to compound without attention
+
+### Phase 2: Acceleration Phase (Weeks 17-27)
+- **Week-17 [B15-E017]**: +2.26% weekly return pushed cumulative to 6.63% (RegimeScore=5)
+- **Week-22 [B15-E022]**: Continued momentum to 6.93% despite lower weekly return (+0.30%)
+- **Week-27 [B15-E027]**: +0.86% weekly return reached 7.80% cumulative (RegimeScore=5)
+- High RegimeScore (5) entries at Weeks 17 and 27 indicate structural regime shifts enabling larger moves
+
+### Phase 3: Consolidation & Volatility (Weeks 32-47)
+- Position absorbed negative weekly returns (-0.44% at Week-47) while maintaining cumulative gains
+- Reached 9.96% cumulative by Week-47 despite market noise
+- RegimeScore volatility (3-5 range) suggests underlying market instability being navigated
+
+### Phase 4: Final Surge to Anchor (Weeks 52-82)
+- **Week-57 [B15-E057]**: Minimal weekly return (+0.10%) but RegimeScore=5 signals structural importance
+- **Week-70 [B15-E070]**: Dramatic +5.30% weekly return","# Analysis of Anchor Position
+
+**PIVOT_ID=B15-E082**
+
+## Anchor Position Identification
+
+The entry with maximum cumulative return is **B15-E082 (Week-82)**, where **Aurelia AI Semiconductor Basket** achieved **CumulativeReturn=14.13%**.
+
+## Market Conditions That Preceded and Enabled This Success
+
+### Phase 1: Early Foundation (Weeks 1-2)
+- Aurelia AI Semiconductor Basket entered at Week-02 with modest +1.32% weekly return, establishing initial position with RegimeScore=1
+- This low-salience entry created the structural prerequisite for later amplification
+
+### Phase 2: Dormancy and Accumulation (Weeks 2-17)
+- Position remained relatively flat through Weeks 2-13, with minimal weekly activity
+- This period allowed the position to stabilize without narrative pressure
+- RegimeScore remained low (1-2), indicating background processing without strategic dominance claims
+
+### Phase 3: Breakthrough Acceleration (Week-17)
+- **B15-E017**: +2.26% weekly return pushed cumulative to 6.63% with RegimeScore=5
+- This marked the first high-regime confirmation, signaling structural shift in market conditions
+- The position transitioned from procedural background to causal prerequisite status
+
+### Phase 4: Consolidation with Volatility (Weeks 17-62)
+- Weeks 22, 47, 52, 62 showed mixed performance (-0.44%, +0.25%, -0.12%) but cumulative held near 10%
+- RegimeScore fluctuated (2-5), indicating unstable but persistent market support
+- Low-salience commentary masked underlying structural dependencies
+
+### Phase 5: Explosive Reacceleration (Week-70)
+- **B15-E070**: +5.30% weekly return pushed cumulative to 14.13% with RegimeScore=5
+- This dramatic spike occurred after weeks of apparent stagnation
+- Market conditions shifted to explicitly support semiconductor basket positioning
+
+### Phase 6: Final Consolidation (Weeks 70-82)
+- Weeks 77, 82 showed minimal volatility (+0.00%, +1.58",0.9899999999999999,0.8999999999999999,0.9899999999999999,1,0.2618305309834523,0.5,investment,extreme,B15-E082,B15-E082,0,0,stable_wrong,1,0,0,0,0
+B15,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B15-E082**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **14.13%**, achieved by **Aurelia AI Semiconductor Basket** at Week-82 [B15-E082].
+
+## Market Conditions Preceding Success
+
+### Phase 1: Early Accumulation (Weeks 1-12)
+- Aurelia AI Semiconductor Basket entered at Week-02 with modest +1.32% weekly return
+- Built cumulative position through steady gains: 1.32% → 2.77% (Week-07) → 4.37% (Week-12)
+- RegimeScore remained low-to-moderate (1-4), indicating stable but unspectacular conditions
+- Narrative footprint was deliberately suppressed in portfolio research, allowing position to compound without attention
+
+### Phase 2: Acceleration Phase (Weeks 17-27)
+- **Week-17 [B15-E017]**: +2.26% weekly return pushed cumulative to 6.63% (RegimeScore=5)
+- **Week-22 [B15-E022]**: Continued momentum to 6.93% despite lower weekly return (+0.30%)
+- **Week-27 [B15-E027]**: +0.86% weekly return reached 7.80% cumulative (RegimeScore=5)
+- High RegimeScore (5) entries at Weeks 17 and 27 indicate structural regime shifts enabling larger moves
+
+### Phase 3: Consolidation & Volatility (Weeks 32-47)
+- Position absorbed negative weekly returns (-0.44% at Week-47) while maintaining cumulative gains
+- Reached 9.96% cumulative by Week-47 despite market noise
+- RegimeScore volatility (3-5 range) suggests underlying market instability being navigated
+
+### Phase 4: Final Surge to Anchor (Weeks 52-82)
+- **Week-57 [B15-E057]**: Minimal weekly return (+0.10%) but RegimeScore=5 signals structural importance
+- **Week-70 [B15-E070]**: Dramatic +5.30% weekly return","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B15-E078**
+
+## Anchor Position Identification
+
+The entry with maximum cumulative return is **B15-E078 (Week-78)**, featuring **Helios Grid Infrastructure** with a cumulative return of **14.16%**.
+
+This ties with B15-E060 (also 14.16%), but B15-E078 appears later in the timeline and represents the sustained peak, making it the operative anchor for forward-looking interpretation.
+
+## Preceding Market Conditions and Enablers
+
+### Phase 1: Foundation Building (Weeks 3–14)
+- **B15-E003 to B15-E004**: Early portfolio construction with BlueHarbor Treasury Arbitrage (+1.26%) and Helios Grid Infrastructure establishing baseline positions
+- **B15-E007**: Aurelia AI Semiconductor Basket enters with +1.45% weekly return, signaling emerging tech momentum
+- **RegimeScore escalation** from 2→4 indicates increasing market complexity and opportunity density
+
+### Phase 2: Diversified Carry Accumulation (Weeks 11–37)
+- **B15-E011, B15-E021**: NorthRiver Utilities Carry and Cinder Logistics Credit build steady cumulative returns (2.28%→4.86%)
+- **B15-E017, B15-E027, B15-E037**: Aurelia AI Semiconductor Basket compounds to 10.15% by Week-37, establishing the portfolio's growth engine
+- **RegimeScore volatility (3→5→3)** reflects market regime transitions that required structural flexibility
+
+### Phase 3: Critical Inflection (Weeks 43–60)
+- **B15-E043**: Helios Grid Infrastructure rebounds with +1.46% weekly return
+- **B15-E060 (Week-60)**: Helios Grid Infrastructure delivers explosive +5.40% weekly return, reaching 14.18% cumulative
+- **Narrative shift**: ""Cross-system coupling became explicit and destabilizing"" — this signals that infrastructure assets benefited from broader portfolio rebalancing and market dislocations
+
+### Phase 4: Consolidation to Peak (",0.8999999999999999,0.8999999999999999,0.8999999999999999,0,0.33472731494361285,0.6,investment,extreme,B15-E082,B15-E078,0,0,instability,1,0,0,1,0
+B16,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B16-E080**
+
+## Identification
+
+The anchor position is **Cinder Logistics Credit** at Week-80 with **CumulativeReturn=11.18%**, which is the maximum cumulative return across the entire 84-week timeline. This position appears multiple times at this peak level (weeks 40, 45, 50, 55, 60, 70, 75, 80), but B16-E080 is the final occurrence at the anchor threshold.
+
+## Market Conditions That Enabled Success
+
+### Early Foundation (Weeks 5-10)
+Cinder Logistics Credit entered the portfolio at Week-05 with modest +0.37% weekly return. The position stabilized through Week-10 (+1.48% weekly), reaching 1.85% cumulative return. This early phase established the position's baseline viability while other positions (NorthRiver, Aurelia, Helios, BlueHarbor) were still establishing their trajectories.
+
+### Acceleration Phase (Weeks 25-35)
+The critical inflection occurred at **Week-25** (+2.26% weekly return), propelling cumulative return to 5.54%. This was followed by sustained momentum:
+- Week-30: +1.60% weekly → 7.14% cumulative
+- Week-35: +0.76% weekly → 7.90% cumulative
+
+This phase coincided with relative underperformance in competing positions (Aurelia, BlueHarbor), creating portfolio concentration benefits.
+
+### Consolidation & Plateau (Weeks 40-80)
+From Week-40 onward, Cinder Logistics Credit stabilized at the 11.18% cumulative return level through consistent but modest weekly gains (+0.51% to +1.92%), demonstrating:
+- **Regime stability**: RegimeScore oscillated between 1-5 with no systematic deterioration
+- **Structural resilience**: Described as ""ordinary background activity"" and ""structural breadcrumb"" — indicating embedded dependencies that sustained performance
+- **Competitive advantage**: While other positions (Helios at 11.20%, Aurelia at 11.18%) converged, Cinder maintained parity through lower volatility","# Analysis of Anchor Position
+
+**PIVOT_ID=B16-E081**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **11.18%**, which appears across multiple final entries. The earliest entry to reach and sustain this maximum is **[B16-E045] Week-45 | Position=Cinder Logistics Credit | CumulativeReturn=10.45%**, which then crosses into 11.18% territory. However, the most definitively anchored position at the peak cumulative return is **[B16-E081] Week-81 | NorthRiver Utilities Carry | CumulativeReturn=11.18%**, representing the sustained high-water mark with structural stability.
+
+## Market Conditions Enabling Success
+
+### Phase 1: Foundation Building (Weeks 2-21)
+- **NorthRiver Utilities Carry** emerged as the consistent performer, accumulating returns through low-volatility, steady gains (+0.27%, +1.20%, +1.02%, +0.60%)
+- RegimeScore patterns (primarily 1-2) indicated stable, background-activity conditions—ideal for carry strategies
+- Helios Grid Infrastructure provided complementary infrastructure exposure with moderate gains
+- This phase established the portfolio's structural backbone without dramatic drawdowns
+
+### Phase 2: Acceleration (Weeks 23-45)
+- **Cinder Logistics Credit** entered as a high-impact contributor, delivering +2.26% (Week-25) and +1.90% (Week-45)
+- NorthRiver continued steady accumulation (+0.64%, +0.54%, +0.12%)
+- Helios Grid delivered the critical +5.40% spike at Week-53, pushing cumulative returns to 11.23%
+- Low RegimeScores (1-2) persisted, indicating benign market conditions that favored carry and infrastructure positions
+
+### Phase 3: Consolidation & Stability (Weeks 45-81)
+- **NorthRiver Utilities Carry** maintained consistent positive contributions despite market noise
+- Aurelia AI Semiconductor Basket provided diversification with large moves (+5.30% at Week-65)
+- The portfolio reached 11.18% cumulative return and held it through Week-81",0.8099999999999999,0.8299999999999998,0.8099999999999999,0,0.30203747901180733,0.4,investment,extreme,B16-E080,B16-E081,0,0,instability,1,0,0,1,0
+B16,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B16-E080**
+
+## Identification
+
+The anchor position is **Cinder Logistics Credit** at Week-80 with **CumulativeReturn=11.18%**, which is the maximum cumulative return across the entire 84-week timeline. This position appears multiple times at this peak level (weeks 40, 45, 50, 55, 60, 70, 75, 80), but B16-E080 is the final occurrence at the anchor threshold.
+
+## Market Conditions That Enabled Success
+
+### Early Foundation (Weeks 5-10)
+Cinder Logistics Credit entered the portfolio at Week-05 with modest +0.37% weekly return. The position stabilized through Week-10 (+1.48% weekly), reaching 1.85% cumulative return. This early phase established the position's baseline viability while other positions (NorthRiver, Aurelia, Helios, BlueHarbor) were still establishing their trajectories.
+
+### Acceleration Phase (Weeks 25-35)
+The critical inflection occurred at **Week-25** (+2.26% weekly return), propelling cumulative return to 5.54%. This was followed by sustained momentum:
+- Week-30: +1.60% weekly → 7.14% cumulative
+- Week-35: +0.76% weekly → 7.90% cumulative
+
+This phase coincided with relative underperformance in competing positions (Aurelia, BlueHarbor), creating portfolio concentration benefits.
+
+### Consolidation & Plateau (Weeks 40-80)
+From Week-40 onward, Cinder Logistics Credit stabilized at the 11.18% cumulative return level through consistent but modest weekly gains (+0.51% to +1.92%), demonstrating:
+- **Regime stability**: RegimeScore oscillated between 1-5 with no systematic deterioration
+- **Structural resilience**: Described as ""ordinary background activity"" and ""structural breadcrumb"" — indicating embedded dependencies that sustained performance
+- **Competitive advantage**: While other positions (Helios at 11.20%, Aurelia at 11.18%) converged, Cinder maintained parity through lower volatility","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B16-E045**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **10.45%**, occurring at Week-45 with **Cinder Logistics Credit** (B16-E045). This is the anchor position that anchors all subsequent analysis.
+
+## Preceding Market Conditions and Enablers
+
+### Phase 1: Initial Foundation (Weeks 1-11)
+- **NorthRiver Utilities Carry** established early momentum (+1.37% Week-01, cumulative 1.37%), providing portfolio stability
+- **BlueHarbor Treasury Arbitrage** delivered a strong +2.15% return in Week-09, reaching 2.20% cumulative—this arbitrage position created liquidity and risk-adjusted returns that would later support credit positions
+- **NorthRiver Utilities** reinforced with +1.20% in Week-11 (cumulative 2.84%), building a reliable carry foundation
+
+### Phase 2: Infrastructure Accumulation (Weeks 13-18)
+- **Helios Grid Infrastructure** emerged as a structural contributor, reaching 2.75% cumulative by Week-13, then accelerating to 4.35% by Week-18 with a +1.60% weekly return
+- This infrastructure position provided diversification and de-risked the portfolio ahead of credit exposure
+
+### Phase 3: Credit Position Initiation (Week-10 through Week-25)
+- **Cinder Logistics Credit** first appeared in Week-10 with +1.48% return (1.85% cumulative), establishing the position
+- Week-25 marked a critical inflection: Cinder Logistics Credit delivered +2.26%, reaching 5.54% cumulative—a **doubling of the position's contribution**
+- This Week-25 event (B16-E025) was marked as ""ordinary background activity"" but globally shifted downstream feasibility
+
+### Phase 4: Consolidation and Momentum (Weeks 25-45)
+- **Week-30** (B16-E030): Cinder Logistics Credit +1.60% → 7.14% cumulative. RegimeScore=5 indicates high-",0.8899999999999999,0.8299999999999998,0.8899999999999999,0,0.2762852506278589,0.5,investment,extreme,B16-E080,B16-E045,0,0,instability,1,0,0,1,0
+B16,claude-haiku-4-5-20251001,"# Analysis of Anchor Position
+
+**PIVOT_ID=B16-E080**
+
+## Identification
+
+The anchor position is **Cinder Logistics Credit** at Week-80 with **CumulativeReturn=11.18%**, which is the maximum cumulative return across the entire 84-week timeline. This position appears multiple times at this peak level (weeks 40, 45, 50, 55, 60, 70, 75, 80), but B16-E080 is the final occurrence at the anchor threshold.
+
+## Market Conditions That Enabled Success
+
+### Early Foundation (Weeks 5-10)
+Cinder Logistics Credit entered the portfolio at Week-05 with modest +0.37% weekly return. The position stabilized through Week-10 (+1.48% weekly), reaching 1.85% cumulative return. This early phase established the position's baseline viability while other positions (NorthRiver, Aurelia, Helios, BlueHarbor) were still establishing their trajectories.
+
+### Acceleration Phase (Weeks 25-35)
+The critical inflection occurred at **Week-25** (+2.26% weekly return), propelling cumulative return to 5.54%. This was followed by sustained momentum:
+- Week-30: +1.60% weekly → 7.14% cumulative
+- Week-35: +0.76% weekly → 7.90% cumulative
+
+This phase coincided with relative underperformance in competing positions (Aurelia, BlueHarbor), creating portfolio concentration benefits.
+
+### Consolidation & Plateau (Weeks 40-80)
+From Week-40 onward, Cinder Logistics Credit stabilized at the 11.18% cumulative return level through consistent but modest weekly gains (+0.51% to +1.92%), demonstrating:
+- **Regime stability**: RegimeScore oscillated between 1-5 with no systematic deterioration
+- **Structural resilience**: Described as ""ordinary background activity"" and ""structural breadcrumb"" — indicating embedded dependencies that sustained performance
+- **Competitive advantage**: While other positions (Helios at 11.20%, Aurelia at 11.18%) converged, Cinder maintained parity through lower volatility","# Analysis of Anchor Position and Preceding Market Conditions
+
+**PIVOT_ID=B16-E053**
+
+## Anchor Position Identification
+
+The highest cumulative return in the timeline is **11.23%**, occurring at **Week-53** with **Helios Grid Infrastructure** (B16-E053). This is the anchor position that anchors all subsequent analysis.
+
+## Preceding Market Conditions and Enablers
+
+### Phase 1: Foundation Building (Weeks 3-8)
+- **B16-E003** (Week-03): Helios Grid Infrastructure established with +0.82% weekly return, creating the initial position that would eventually dominate
+- **B16-E008** (Week-08): Helios Grid Infrastructure reinforced with +0.12% weekly return, consolidating the position despite low-salience commentary
+- These early entries established Helios as a structural anchor, though returns appeared modest in isolation
+
+### Phase 2: Portfolio Diversification & Regime Shifts (Weeks 11-25)
+- **B16-E011** (Week-11): NorthRiver Utilities Carry introduced with strong +1.20% weekly return (CumulativeReturn=2.84%), establishing a complementary infrastructure-adjacent position with RegimeScore=5
+- **B16-E020** (Week-20): Cinder Logistics Credit added with +0.66% weekly return, broadening exposure to credit-linked infrastructure
+- **B16-E025** (Week-25): Cinder Logistics Credit surged +2.26% weekly, signaling strengthening credit conditions supporting infrastructure assets
+- These diversifications created positive regime conditions (RegimeScore=4-5) that enabled Helios to benefit from broader infrastructure tailwinds
+
+### Phase 3: Momentum Accumulation (Weeks 31-43)
+- **B16-E031** (Week-31): NorthRiver Utilities Carry added +0.88% weekly (CumulativeReturn=5.99%), confirming sustained utility/infrastructure strength
+- **B16-E035** (Week-35): Cinder Logistics Credit reached CumulativeReturn=7.90%, indicating credit normalization supporting infrastructure financing
+- **B16-E043** (Week-43): Helios",0.9999999999999999,0.8299999999999998,0.9999999999999999,0,0.32551702736370014,0.6,investment,extreme,B16-E080,B16-E053,0,1,rescue,1,0,1,0,0

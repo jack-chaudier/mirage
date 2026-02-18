@@ -1,0 +1,39 @@
+# Secrets / local config
+.env
+.env.*
+*.env
+
+# Python
+.venv/
+**/.venv/
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Large local artifacts
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# Model outputs / adapters
+endogenous_context_theory/adapters/
+
+# Generated heavy result artifacts
+endogenous_context_theory/results/raw/
+endogenous_context_theory/results/figures/
+
+# Keep curated train/valid; exclude oversized raw training dump
+endogenous_context_theory/training_data/train.jsonl
+
+# Temporary logs
+*.log
