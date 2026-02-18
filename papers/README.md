@@ -2,6 +2,7 @@
 
 Core manuscript set (ordered):
 
+0. `paper_00_continuous_control_structural_regularization.pdf` (Lorien origin paper)
 1. `paper_01_absorbing_states_in_greedy_search.pdf`
 2. `paper_02_streaming_oscillation_traps.pdf`
 3. `paper_03_validity_mirage_compression.pdf`

@@ -9,6 +9,16 @@ This repository contains MirageBench (a diagnostic benchmark that detects pivot
 substitution), multi-model and KV-cache experiments reproducing the effect, and a
 mirage-aware LoRA adapter that learns to flag its own evidence degradation.
 
+## Research Arc (Started Here -> Got Here)
+
+This work started as a narrative-AI systems project: generate a persistent world
+with characters, then extract coherent stories from event traces using weighted
+signals and structured constraints.
+
+- **Lorien (origin):** multi-agent narrative field, vector/weight-driven story extraction, and structural regularization (`papers/paper_00_continuous_control_structural_regularization.pdf`).
+- **Rhun (theory turn):** extraction failures were formalized as **absorbing states** under endogenous turning points (`papers/paper_01_absorbing_states_in_greedy_search.pdf`) and then extended to **streaming oscillation traps** (`papers/paper_02_streaming_oscillation_traps.pdf`).
+- **Mirage (current):** compression-safe semantics and benchmarked failure modes under context/memory compression, culminating in the **validity mirage** framework (`papers/paper_03_validity_mirage_compression.pdf`).
+
 ## The core result
 
 Across five instruction-tuned models, raw validity scores remain above 0.83
@@ -41,7 +51,7 @@ input text. This isolates the failure to internal attention, not input truncatio
 | `endogenous_context_theory/src/` | Tropical semiring algebra, compression, pivot-margin code |
 | `endogenous_context_theory/tests/` | 17 synthetic validation experiments |
 | `endogenous_context_theory/results/ntsb/` | Real-incident NTSB benchmark (external validation) |
-| `papers/` | Canonical paper sources (`papers/sources/*`) and release PDFs (`papers/paper_0*.pdf`) |
+| `papers/` | Canonical paper sources (`papers/sources/*`) and release PDFs (`papers/paper_00*.pdf` to `papers/paper_03*.pdf`) |
 
 ## Quick start
 
