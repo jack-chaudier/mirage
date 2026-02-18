@@ -1,90 +1,74 @@
 # Reproducibility Checklist
 
-## A. Verify Archive Integrity
-
+## A. Environment
 ```bash
-cd /Users/jackg/mirage_research_dossier_2026-02-17_v2
-shasum -a 256 -c provenance/SHA256SUMS.txt
+cd endogenous_context_theory
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
-## B. Recompute Both Qwen Runs from CSV
+## B. Run Core Theory Suite
+```bash
+cd endogenous_context_theory
+python scripts/run_all.py
+```
 
-Inputs:
+Check outputs:
+- `endogenous_context_theory/results/summary_report.md`
+- `endogenous_context_theory/results/raw/run_all_summary.csv`
 
-- Balanced: `external/downloads/mirage_aware_eval_results.csv`
-- Imbalanced: `external/downloads/mirage_aware_imbalanced_eval_results_2026-02-17.csv`
+## C. Generate Training Data
+```bash
+cd endogenous_context_theory
+python scripts/generate_training_data.py \
+  --output-dir data/processed \
+  --categories investment,incident,narrative \
+  --compression-levels 0.4,0.5,0.6 \
+  --seeds 101,202,303 \
+  --target-prereq-ratios 0.0,0.25,0.5,0.75 \
+  --max-context-words 1200 \
+  --split-seed 42 \
+  --no-balance-labels
+```
 
-Compare against:
+Validate:
+- `endogenous_context_theory/data/processed/data_stats.json`
 
+## D. Optional Balanced Train File
+```bash
+cd endogenous_context_theory
+python scripts/make_balanced_train.py \
+  --train-jsonl data/processed/train.jsonl \
+  --out-jsonl data/processed/train_balanced.jsonl \
+  --seed 42
+```
+
+## E. Run Mirage-Aware Training + Eval
+```bash
+cd endogenous_context_theory
+bash scripts/train_mirage_aware.sh
+```
+
+Outputs:
+- `endogenous_context_theory/results/mirage_aware_eval_results.csv`
+- `endogenous_context_theory/results/mirage_aware_eval_summary.csv`
+
+## F. Evaluate Existing Adapter Explicitly
+```bash
+cd endogenous_context_theory
+python scripts/eval_mirage_aware.py \
+  --valid-jsonl data/processed/valid.jsonl
+```
+
+## G. Compare Against Verified Tables
 - `derived/qwen_balanced_metrics_verified.csv`
 - `derived/qwen_imbalanced_metrics_verified_2026_02_17.csv`
 - `derived/qwen_balanced_vs_imbalanced_comparison_2026_02_17.csv`
 
-## C. Validate Balanced vs Imbalanced Delta Claims
-
-Use:
-
-- `derived/qwen_balanced_vs_imbalanced_example_deltas_2026_02_17.csv`
-
-Expected:
-
-- 3 FT pivot-correctness improvements
-- 0 FT regressions on this slice
-- additional degraded-flagging improvements in degraded rows
-
-## D. Validate Mirage Data Split Properties
-
-Inspect:
-
-- `projects/mirage/endogenous_context_theory/training_data/data_stats.json`
-
-Check:
-
-- train/valid task disjointness
-- per-task coverage and compression-level coverage
-- prereq ratio distribution includes graded bins
-
-## E. Rebuild Balanced Train (If Needed)
-
-```bash
-cd projects/mirage/endogenous_context_theory
-python3 make_balanced_train.py \
-  --train-jsonl training_data/train.jsonl \
-  --out-jsonl training_data/train_balanced.jsonl \
-  --seed 42
-```
-
-## F. Re-run Core Theory Suite
-
-```bash
-cd projects/mirage/endogenous_context_theory
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python run_all.py
-```
-
-Compare to:
-
-- `results/raw/run_all_summary.csv`
-- `results/artifact_correction_report.md`
-
-## G. Re-run Qwen Colab Ablations
-
-Balanced notebook:
-
-- `projects/mirage/qwen_mirage_aware_balanced_ablation_colab.ipynb`
-
-Imbalanced notebook artifact (captured from latest run):
-
-- `external/downloads/mirage_aware_colab_fixed_imbalanced_2026-02-17.ipynb`
-
-Eval subset lock:
-
-- seed = 42
-- shuffle valid
-- first 400 rows
-
-## H. Evaluator Guardrail
-
-`projects/mirage/endogenous_context_theory/eval_mirage_aware.py` should parse pivot IDs with 1–4 actor digits (`\d{1,4}`), matching notebook logic.
+## H. Legacy Command Compatibility
+These still work and delegate to `scripts/`:
+- `python endogenous_context_theory/run_all.py`
+- `python endogenous_context_theory/generate_training_data.py`
+- `python endogenous_context_theory/eval_mirage_aware.py`
+- `bash endogenous_context_theory/train_mirage_aware.sh`

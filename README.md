@@ -5,8 +5,14 @@ This repository contains the core code and curated research artifacts for the Mi
 - MirageBench experiments across compression and difficulty frontiers
 - Mirage-aware fine-tuning/evaluation workflows for explicit evidence degradation reporting
 
+## Paper Set
+- `papers/paper_01_absorbing_states_in_greedy_search.pdf`
+- `papers/paper_02_streaming_oscillation_traps.pdf`
+- `papers/paper_03_validity_mirage_compression.pdf`
+
 ## What Is Included
 - `endogenous_context_theory/`: core code, generators, tests, and runners
+- `papers/`: primary manuscript set and supporting roadmap document
 - `docs/`: consolidated research context, independent review, artifact index, reproducibility checklist
 - `derived/`: independently verified summary tables (balanced vs imbalanced Qwen comparisons)
 - Colab notebooks for training/evaluation:
@@ -32,7 +38,7 @@ See `derived/qwen_balanced_vs_imbalanced_comparison_2026_02_17.csv` for side-by-
 
 ## Reproducibility
 1. Start with `endogenous_context_theory/README.md`.
-2. Use the notebook(s) and scripts in `endogenous_context_theory/` for data generation, training, and eval.
+2. Use canonical scripts in `endogenous_context_theory/scripts/` and notebooks in `endogenous_context_theory/notebooks/`.
 3. Follow `docs/reproducibility-checklist.md`.
 
 ## Notes on Excluded Artifacts

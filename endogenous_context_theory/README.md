@@ -7,6 +7,19 @@ A publication-oriented Python test bench for validating or falsifying the **Trop
 ```text
 endogenous_context_theory/
 ├── README.md
+├── scripts/
+│   ├── run_all.py
+│   ├── run_miragebench_ollama.py
+│   ├── run_miragebench_api.py
+│   ├── generate_training_data.py
+│   ├── make_balanced_train.py
+│   ├── eval_mirage_aware.py
+│   └── train_mirage_aware.sh
+├── notebooks/
+│   └── miragebench_experiments_colab.ipynb
+├── data/
+│   ├── processed/
+│   └── smoke/
 ├── src/
 │   ├── tropical_semiring.py
 │   ├── holographic_tree.py
@@ -36,7 +49,15 @@ endogenous_context_theory/
 │   ├── summary_report.md
 │   ├── figures/
 │   └── raw/
-├── run_all.py
+├── run_all.py                # legacy wrapper -> scripts/run_all.py
+├── run_miragebench_ollama.py # legacy wrapper -> scripts/run_miragebench_ollama.py
+├── run_miragebench_api.py    # legacy wrapper -> scripts/run_miragebench_api.py
+├── generate_training_data.py # legacy wrapper -> scripts/generate_training_data.py
+├── make_balanced_train.py    # legacy wrapper -> scripts/make_balanced_train.py
+├── eval_mirage_aware.py      # legacy wrapper -> scripts/eval_mirage_aware.py
+├── train_mirage_aware.sh     # legacy wrapper -> scripts/train_mirage_aware.sh
+├── training_data -> data/processed     # compatibility symlink
+└── training_data_smoke -> data/smoke   # compatibility symlink
 └── requirements.txt
 ```
 
@@ -52,7 +73,7 @@ pip install -r requirements.txt
 ## Run Everything
 
 ```bash
-python run_all.py
+python scripts/run_all.py
 ```
 
 This will:
@@ -61,6 +82,12 @@ This will:
 3. Save raw CSV outputs under `results/raw/`.
 4. Save publication-style figures under `results/figures/`.
 5. Write `results/summary_report.md` with overall scientific assessment.
+
+## Legacy Compatibility
+
+Top-level script names are preserved as wrappers. Existing commands like
+`python run_all.py` and `python generate_training_data.py` still work and
+delegate to `scripts/` entrypoints.
 
 ## Notes
 

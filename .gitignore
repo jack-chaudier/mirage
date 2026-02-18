@@ -34,6 +34,7 @@ endogenous_context_theory/results/figures/
 
 # Keep curated train/valid; exclude oversized raw training dump
 endogenous_context_theory/training_data/train.jsonl
+endogenous_context_theory/data/processed/train.jsonl
 
 # Temporary logs
 *.log

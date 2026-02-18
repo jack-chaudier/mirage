@@ -4,6 +4,16 @@
 **Updated:** February 17, 2026 (after both balanced + imbalanced Qwen runs)  
 **Archive root:** `repository root`
 
+Note: this document was imported from a broader research dossier, so some
+references use archival path labels (`projects/...`, `external/...`). In this
+repository, runnable code lives under `endogenous_context_theory/`.
+
+## 0. Paper Set (Primary Reading Order)
+
+1. `papers/paper_01_absorbing_states_in_greedy_search.pdf`
+2. `papers/paper_02_streaming_oscillation_traps.pdf`
+3. `papers/paper_03_validity_mirage_compression.pdf`
+
 ## 1. One-line Thesis
 
 "Infinite context" is not just a larger token window. It is the problem of preserving endogenous semantics when interpretation depends on a pivot selected from within the sequence (argmax), making naive compression/truncation/early commitment semantically unsafe.
@@ -242,4 +252,3 @@ Lorien:
 ## Appendix B: Archive Scale
 
 Current authoritative totals are in `provenance/archive_summary.json`.
-

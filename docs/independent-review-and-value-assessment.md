@@ -1,6 +1,14 @@
 # Independent Review and Value Assessment
 
+Primary papers in this repository:
+- `papers/paper_01_absorbing_states_in_greedy_search.pdf`
+- `papers/paper_02_streaming_oscillation_traps.pdf`
+- `papers/paper_03_validity_mirage_compression.pdf`
+
 ## Scope
+
+Note: some paths below use the original archival naming (`external/...`, `projects/...`).
+In this repository, canonical runnable code is under `endogenous_context_theory/`.
 
 This review is based on artifacts inside this dossier, especially:
 
