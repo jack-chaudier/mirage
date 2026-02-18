@@ -1,0 +1,74 @@
+{
+  "NTSB_SWA1380": {
+    "response": "PIVOT_ID=e08\nEvidence assessment: STRONG\nConfidence: HIGH\n\nPrerequisite events:\n- e03: confirmed in context\n- e04: confirmed in context\n- e05: confirmed in context\n- e06: confirmed in context\n- e07: confirmed in context",
+    "pivot": "e08",
+    "flagged_degraded": false,
+    "oracle_full_pivot": "e08"
+  },
+  "NTSB_ATLAS3591": {
+    "response": "PIVOT_ID=e09\nEvidence assessment: STRONG\nConfidence: HIGH\n\nPrerequisite events:\n- e04: confirmed in context\n- e05: confirmed in context\n- e06: confirmed in context\n- e07: confirmed in context\n- e08: confirmed in context",
+    "pivot": "e09",
+    "flagged_degraded": false,
+    "oracle_full_pivot": "e09"
+  },
+  "NTSB_N72EX": {
+    "response": "PIVOT_ID=e09\nEvidence assessment: STRONG\nConfidence: HIGH\n\nPrerequisite events:\n- e05: confirmed in context\n- e06: confirmed in context\n- e07: confirmed in context\n- e08: confirmed in context",
+    "pivot": "e09",
+    "flagged_degraded": false,
+    "oracle_full_pivot": "e09"
+  },
+  "NTSB_USAir1549": {
+    "response": "PIVOT_ID=e04\nEvidence assessment: STRONG\nConfidence: HIGH\n\nPrerequisite events:\n- e03: confirmed in context",
+    "pivot": "e04",
+    "flagged_degraded": false,
+    "oracle_full_pivot": "e04"
+  },
+  "NTSB_AMERISTAR9363": {
+    "response": "PIVOT_ID=e07\nEvidence assessment: STRONG\nConfidence: HIGH\n\nPrerequisite events:\n- e01: confirmed in context\n- e04: confirmed in context\n- e05: confirmed in context\n- e06: confirmed in context",
+    "pivot": "e07",
+    "flagged_degraded": false,
+    "oracle_full_pivot": "e07"
+  },
+  "NTSB_PENAIR3296": {
+    "response": "PIVOT_ID=e07\nEvidence assessment: STRONG\nConfidence: HIGH\n\nPrerequisite events:\n- e03: confirmed in context\n- e04: confirmed in context\n- e05: confirmed in context\n- e06: confirmed in context",
+    "pivot": "e07",
+    "flagged_degraded": false,
+    "oracle_full_pivot": "e07"
+  },
+  "NTSB_HAWAII_PARA": {
+    "response": "PIVOT_ID=e05\nEvidence assessment: STRONG\nConfidence: HIGH\n\nPrerequisite events:\n- e01: confirmed in context\n- e03: confirmed in context\n- e04: confirmed in context",
+    "pivot": "e05",
+    "flagged_degraded": false,
+    "oracle_full_pivot": "e05"
+  },
+  "NTSB_HOTAIRBALLOON": {
+    "response": "PIVOT_ID=e06\nEvidence assessment: STRONG\nConfidence: HIGH\n\nPrerequisite events:\n- e01: confirmed in context\n- e04: confirmed in context\n- e05: confirmed in context",
+    "pivot": "e06",
+    "flagged_degraded": false,
+    "oracle_full_pivot": "e06"
+  },
+  "NTSB_DELTA1086": {
+    "response": "PIVOT_ID=e06\nEvidence assessment: STRONG\nConfidence: HIGH\n\nPrerequisite events:\n- e03: confirmed in context\n- e04: confirmed in context\n- e05: confirmed in context",
+    "pivot": "e06",
+    "flagged_degraded": false,
+    "oracle_full_pivot": "e06"
+  },
+  "NTSB_EXECUFLIGHT1526": {
+    "response": "PIVOT_ID=e07\nEvidence assessment: STRONG\nConfidence: HIGH\n\nPrerequisite events:\n- e03: confirmed in context\n- e04: confirmed in context\n- e05: confirmed in context\n- e06: confirmed in context",
+    "pivot": "e07",
+    "flagged_degraded": false,
+    "oracle_full_pivot": "e07"
+  },
+  "NTSB_AERO_STALL": {
+    "response": "PIVOT_ID=e05\nEvidence assessment: STRONG\nConfidence: HIGH\n\nPrerequisite events:\n- e01: confirmed in context\n- e03: confirmed in context\n- e04: confirmed in context",
+    "pivot": "e05",
+    "flagged_degraded": false,
+    "oracle_full_pivot": "e05"
+  },
+  "TECH_KNIGHT_CAPITAL": {
+    "response": "PIVOT_ID=e07\nEvidence assessment: STRONG\nConfidence: HIGH\n\nPrerequisite events:\n- e01: confirmed in context\n- e04: confirmed in context\n- e05: confirmed in context\n- e06: confirmed in context",
+    "pivot": "e07",
+    "flagged_degraded": false,
+    "oracle_full_pivot": "e07"
+  }
+}

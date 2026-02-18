@@ -1,0 +1,56 @@
+{
+  "input_json": "/Users/jackg/Downloads/ntsb_event_graphs.json",
+  "manifest_csv": "/Users/jackg/mirage/endogenous_context_theory/data/ntsb/ntsb_k_phase_cleanup_manifest.csv",
+  "output_json": "/Users/jackg/mirage/endogenous_context_theory/data/ntsb/ntsb_event_graphs.cleaned.json",
+  "applied_changes_count": 6,
+  "applied_changes": [
+    {
+      "incident_id": "NTSB_USAir1549",
+      "action_type": "k_adjust",
+      "target_event_id": null,
+      "old_value": "k=3",
+      "new_value": "k=1",
+      "justification": "Sudden exogenous event (bird strike), no progressive decision chain. Honest k is 1."
+    },
+    {
+      "incident_id": "NTSB_AMERISTAR9363",
+      "action_type": "phase_relabel",
+      "target_event_id": "e01",
+      "old_value": "SETUP",
+      "new_value": "DEVELOPMENT",
+      "justification": "Active corrosion degrading slat actuator over time, not static background."
+    },
+    {
+      "incident_id": "NTSB_HAWAII_PARA",
+      "action_type": "phase_relabel",
+      "target_event_id": "e01",
+      "old_value": "SETUP",
+      "new_value": "DEVELOPMENT",
+      "justification": "Active engine degradation pilot had evidence of from prior flights."
+    },
+    {
+      "incident_id": "NTSB_HOTAIRBALLOON",
+      "action_type": "phase_relabel",
+      "target_event_id": "e01",
+      "old_value": "SETUP",
+      "new_value": "DEVELOPMENT",
+      "justification": "Ongoing medication impairment directly enabling pivot, biggest contributing factor (w=70)."
+    },
+    {
+      "incident_id": "NTSB_AERO_STALL",
+      "action_type": "phase_relabel",
+      "target_event_id": "e01",
+      "old_value": "SETUP",
+      "new_value": "DEVELOPMENT",
+      "justification": "Progressive icing accumulation during flight, not a static precondition."
+    },
+    {
+      "incident_id": "TECH_KNIGHT_CAPITAL",
+      "action_type": "phase_relabel",
+      "target_event_id": "e01",
+      "old_value": "SETUP",
+      "new_value": "DEVELOPMENT",
+      "justification": "Latent code fault with repurposed flag is active part of failure chain, not background."
+    }
+  ]
+}

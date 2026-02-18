@@ -1,0 +1,7 @@
+incident_id,action_type,target_event_id,old_value,new_value,justification
+NTSB_USAir1549,k_adjust,,k=3,k=1,"Sudden exogenous event (bird strike), no progressive decision chain. Honest k is 1."
+NTSB_AMERISTAR9363,phase_relabel,e01,SETUP,DEVELOPMENT,"Active corrosion degrading slat actuator over time, not static background."
+NTSB_HAWAII_PARA,phase_relabel,e01,SETUP,DEVELOPMENT,"Active engine degradation pilot had evidence of from prior flights."
+NTSB_HOTAIRBALLOON,phase_relabel,e01,SETUP,DEVELOPMENT,"Ongoing medication impairment directly enabling pivot, biggest contributing factor (w=70)."
+NTSB_AERO_STALL,phase_relabel,e01,SETUP,DEVELOPMENT,"Progressive icing accumulation during flight, not a static precondition."
+TECH_KNIGHT_CAPITAL,phase_relabel,e01,SETUP,DEVELOPMENT,"Latent code fault with repurposed flag is active part of failure chain, not background."

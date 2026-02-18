@@ -1,0 +1,7 @@
+method,budget,n,n_degraded,n_strong,pivot_accuracy,pivot_accuracy_ci_low,pivot_accuracy_ci_high,pivot_preservation,true_mirage_rate,rescue_rate,instability_rate,info_shift_rate,model_error_rate,silent_mirage_rate,silent_mirage_ci_low,silent_mirage_ci_high,flag_degraded_rate,flag_degraded_ci_low,flag_degraded_ci_high,false_alarm_rate,flag_given_wrong,mean_prereq_ratio,mean_achieved_retention
+contract,0.3,60,10,50,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,,0.9666666666666667,0.45056980056980056
+contract,0.5,60,8,52,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,,0.9733333333333333,0.4875356125356126
+contract,0.7,60,4,56,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,,0.9866666666666667,0.6868589743589746
+naive,0.3,60,57,3,1.0,1.0,1.0,0.23333333333333334,0.0,0.0,0.7666666666666667,0.7666666666666667,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,,0.3186111111111111,0.3131410256410257
+naive,0.5,60,56,4,1.0,1.0,1.0,0.45,0.0,0.0,0.55,0.55,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,,0.5055555555555556,0.4782763532763533
+naive,0.7,60,51,9,1.0,1.0,1.0,0.6,0.0,0.0,0.4,0.4,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,,0.6675,0.6868589743589746

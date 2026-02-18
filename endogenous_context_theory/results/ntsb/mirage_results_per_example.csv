@@ -1,0 +1,5821 @@
+incident_id,method,budget,seed,n_events_total,n_events_kept,achieved_retention,k_recommended,prereq_count,prereq_ratio,oracle_full_pivot,oracle_compressed_pivot,predicted_full_pivot,predicted_pivot,full_correct,pivot_correct,pivot_preserved,oracle_degraded,flagged_degraded,false_alarm,true_mirage,rescue,instability,info_shift,model_error,silent_mirage,raw_response,raw_response_full,backend,model
+NTSB_SWA1380,naive,0.7,11,13,9,0.6923076923076923,4,5,0.4,e08,e08,e08,e08,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: not found in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,naive,0.7,22,13,9,0.6923076923076923,4,5,0.6,e08,e08,e08,e08,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: confirmed in context
+- e07: not found in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,naive,0.7,33,13,9,0.6923076923076923,4,5,1.0,e08,e08,e08,e08,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,naive,0.7,44,13,9,0.6923076923076923,4,5,0.4,e08,e10,e08,e10,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e10
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: not found in context
+- e05: not found in context
+- e06: not found in context
+- e07: confirmed in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,naive,0.7,55,13,9,0.6923076923076923,4,5,0.8,e08,e08,e08,e08,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: confirmed in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,naive,0.5,11,13,6,0.46153846153846156,4,5,0.2,e08,e08,e08,e08,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context
+- e07: not found in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,naive,0.5,22,13,6,0.46153846153846156,4,5,0.4,e08,e08,e08,e08,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context
+- e07: not found in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,naive,0.5,33,13,6,0.46153846153846156,4,5,0.6,e08,e08,e08,e08,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: not found in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,naive,0.5,44,13,6,0.46153846153846156,4,5,0.4,e08,e09,e08,e09,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: not found in context
+- e05: not found in context
+- e06: not found in context
+- e07: confirmed in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,naive,0.5,55,13,6,0.46153846153846156,4,5,0.6,e08,e11,e08,e11,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e11
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: not found in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,naive,0.3,11,13,4,0.3076923076923077,4,5,0.0,e08,e08,e08,e08,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: not found in context
+- e05: not found in context
+- e06: not found in context
+- e07: not found in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,naive,0.3,22,13,4,0.3076923076923077,4,5,0.4,e08,e10,e08,e10,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e10
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context
+- e07: not found in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,naive,0.3,33,13,4,0.3076923076923077,4,5,0.4,e08,e10,e08,e10,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e10
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context
+- e07: not found in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,naive,0.3,44,13,4,0.3076923076923077,4,5,0.2,e08,e09,e08,e09,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: not found in context
+- e05: not found in context
+- e06: not found in context
+- e07: confirmed in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,naive,0.3,55,13,4,0.3076923076923077,4,5,0.6,e08,e04,e08,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: not found in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,contract,0.7,11,13,9,0.6923076923076923,4,5,1.0,e08,e08,e08,e08,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,contract,0.7,22,13,9,0.6923076923076923,4,5,1.0,e08,e08,e08,e08,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,contract,0.7,33,13,9,0.6923076923076923,4,5,0.8,e08,e08,e08,e08,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: confirmed in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,contract,0.7,44,13,9,0.6923076923076923,4,5,1.0,e08,e08,e08,e08,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,contract,0.7,55,13,9,0.6923076923076923,4,5,1.0,e08,e08,e08,e08,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,contract,0.5,11,13,6,0.46153846153846156,4,5,1.0,e08,e08,e08,e08,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,contract,0.5,22,13,6,0.46153846153846156,4,5,1.0,e08,e08,e08,e08,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,contract,0.5,33,13,6,0.46153846153846156,4,5,0.8,e08,e08,e08,e08,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: confirmed in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,contract,0.5,44,13,6,0.46153846153846156,4,5,0.8,e08,e08,e08,e08,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: confirmed in context
+- e07: confirmed in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,contract,0.5,55,13,6,0.46153846153846156,4,5,0.8,e08,e08,e08,e08,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: confirmed in context
+- e07: confirmed in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,contract,0.3,11,13,5,0.38461538461538464,4,5,0.8,e08,e08,e08,e08,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: confirmed in context
+- e07: confirmed in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,contract,0.3,22,13,5,0.38461538461538464,4,5,0.8,e08,e08,e08,e08,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: confirmed in context
+- e07: confirmed in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,contract,0.3,33,13,5,0.38461538461538464,4,5,0.8,e08,e08,e08,e08,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: confirmed in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,contract,0.3,44,13,5,0.38461538461538464,4,5,0.8,e08,e08,e08,e08,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: confirmed in context
+- e07: confirmed in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_SWA1380,contract,0.3,55,13,5,0.38461538461538464,4,5,0.8,e08,e08,e08,e08,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: confirmed in context
+- e07: confirmed in context","PIVOT_ID=e08
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,naive,0.7,11,12,8,0.6666666666666666,4,5,0.6,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: not found in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,naive,0.7,22,12,8,0.6666666666666666,4,5,0.6,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: not found in context
+- e06: confirmed in context
+- e07: not found in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,naive,0.7,33,12,8,0.6666666666666666,4,5,1.0,e09,e09,e09,e09,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,naive,0.7,44,12,8,0.6666666666666666,4,5,0.6,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,naive,0.7,55,12,8,0.6666666666666666,4,5,0.8,e09,e08,e09,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: not found in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,naive,0.5,11,12,6,0.5,4,5,0.4,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context
+- e07: not found in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,naive,0.5,22,12,6,0.5,4,5,0.6,e09,e08,e09,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: not found in context
+- e06: confirmed in context
+- e07: not found in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,naive,0.5,33,12,6,0.5,4,5,0.8,e09,e08,e09,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: not found in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,naive,0.5,44,12,6,0.5,4,5,0.4,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context
+- e07: confirmed in context
+- e08: not found in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,naive,0.5,55,12,6,0.5,4,5,0.6,e09,e02,e09,e02,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e02
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: not found in context
+- e08: not found in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,naive,0.3,11,12,4,0.3333333333333333,4,5,0.2,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: not found in context
+- e05: not found in context
+- e06: not found in context
+- e07: not found in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,naive,0.3,22,12,4,0.3333333333333333,4,5,0.4,e09,e08,e09,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context
+- e07: not found in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,naive,0.3,33,12,4,0.3333333333333333,4,5,0.4,e09,e10,e09,e10,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e10
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: not found in context
+- e08: not found in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,naive,0.3,44,12,4,0.3333333333333333,4,5,0.2,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: not found in context
+- e05: not found in context
+- e06: not found in context
+- e07: confirmed in context
+- e08: not found in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,naive,0.3,55,12,4,0.3333333333333333,4,5,0.4,e09,e02,e09,e02,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e02
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: not found in context
+- e08: not found in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,contract,0.7,11,12,8,0.6666666666666666,4,5,1.0,e09,e09,e09,e09,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,contract,0.7,22,12,8,0.6666666666666666,4,5,0.8,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,contract,0.7,33,12,8,0.6666666666666666,4,5,1.0,e09,e09,e09,e09,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,contract,0.7,44,12,8,0.6666666666666666,4,5,0.8,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,contract,0.7,55,12,8,0.6666666666666666,4,5,0.8,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,contract,0.5,11,12,6,0.5,4,5,0.8,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,contract,0.5,22,12,6,0.5,4,5,0.8,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,contract,0.5,33,12,6,0.5,4,5,0.8,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: not found in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,contract,0.5,44,12,6,0.5,4,5,0.8,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,contract,0.5,55,12,6,0.5,4,5,0.8,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,contract,0.3,11,12,5,0.4166666666666667,4,5,0.8,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,contract,0.3,22,12,5,0.4166666666666667,4,5,0.8,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,contract,0.3,33,12,5,0.4166666666666667,4,5,0.8,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: not found in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,contract,0.3,44,12,5,0.4166666666666667,4,5,0.8,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_ATLAS3591,contract,0.3,55,12,5,0.4166666666666667,4,5,0.8,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,naive,0.7,11,12,8,0.6666666666666666,4,4,0.5,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: not found in context
+- e07: not found in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,naive,0.7,22,12,8,0.6666666666666666,4,4,0.5,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e05: not found in context
+- e06: confirmed in context
+- e07: not found in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,naive,0.7,33,12,8,0.6666666666666666,4,4,1.0,e09,e09,e09,e09,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,naive,0.7,44,12,8,0.6666666666666666,4,4,0.5,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e05: not found in context
+- e06: not found in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,naive,0.7,55,12,8,0.6666666666666666,4,4,0.75,e09,e10,e09,e10,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e10
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: not found in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,naive,0.5,11,12,6,0.5,4,4,0.25,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e05: not found in context
+- e06: not found in context
+- e07: not found in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,naive,0.5,22,12,6,0.5,4,4,0.5,e09,e08,e09,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e05: not found in context
+- e06: confirmed in context
+- e07: not found in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,naive,0.5,33,12,6,0.5,4,4,0.75,e09,e10,e09,e10,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e10
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: not found in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,naive,0.5,44,12,6,0.5,4,4,0.25,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e05: not found in context
+- e06: not found in context
+- e07: confirmed in context
+- e08: not found in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,naive,0.5,55,12,6,0.5,4,4,0.5,e09,e06,e09,e06,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e06
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: not found in context
+- e08: not found in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,naive,0.3,11,12,4,0.3333333333333333,4,4,0.25,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e05: not found in context
+- e06: not found in context
+- e07: not found in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,naive,0.3,22,12,4,0.3333333333333333,4,4,0.25,e09,e08,e09,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e05: not found in context
+- e06: not found in context
+- e07: not found in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,naive,0.3,33,12,4,0.3333333333333333,4,4,0.25,e09,e10,e09,e10,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e10
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: not found in context
+- e07: not found in context
+- e08: not found in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,naive,0.3,44,12,4,0.3333333333333333,4,4,0.25,e09,e09,e09,e09,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e05: not found in context
+- e06: not found in context
+- e07: confirmed in context
+- e08: not found in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,naive,0.3,55,12,4,0.3333333333333333,4,4,0.25,e09,e05,e09,e05,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e05
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: not found in context
+- e07: not found in context
+- e08: not found in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,contract,0.7,11,12,8,0.6666666666666666,4,4,1.0,e09,e09,e09,e09,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,contract,0.7,22,12,8,0.6666666666666666,4,4,1.0,e09,e09,e09,e09,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,contract,0.7,33,12,8,0.6666666666666666,4,4,1.0,e09,e09,e09,e09,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,contract,0.7,44,12,8,0.6666666666666666,4,4,1.0,e09,e09,e09,e09,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,contract,0.7,55,12,8,0.6666666666666666,4,4,1.0,e09,e09,e09,e09,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,contract,0.5,11,12,6,0.5,4,4,1.0,e09,e09,e09,e09,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,contract,0.5,22,12,6,0.5,4,4,1.0,e09,e09,e09,e09,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,contract,0.5,33,12,6,0.5,4,4,1.0,e09,e09,e09,e09,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,contract,0.5,44,12,6,0.5,4,4,1.0,e09,e09,e09,e09,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,contract,0.5,55,12,6,0.5,4,4,1.0,e09,e09,e09,e09,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,contract,0.3,11,12,5,0.4166666666666667,4,4,1.0,e09,e09,e09,e09,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,contract,0.3,22,12,5,0.4166666666666667,4,4,1.0,e09,e09,e09,e09,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,contract,0.3,33,12,5,0.4166666666666667,4,4,1.0,e09,e09,e09,e09,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,contract,0.3,44,12,5,0.4166666666666667,4,4,1.0,e09,e09,e09,e09,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_N72EX,contract,0.3,55,12,5,0.4166666666666667,4,4,1.0,e09,e09,e09,e09,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context","PIVOT_ID=e09
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e05: confirmed in context
+- e06: confirmed in context
+- e07: confirmed in context
+- e08: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,naive,0.7,11,10,7,0.7,1,1,0.0,e04,e04,e04,e04,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,naive,0.7,22,10,7,0.7,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,naive,0.7,33,10,7,0.7,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,naive,0.7,44,10,7,0.7,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,naive,0.7,55,10,7,0.7,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,naive,0.5,11,10,5,0.5,1,1,0.0,e04,e04,e04,e04,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,naive,0.5,22,10,5,0.5,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,naive,0.5,33,10,5,0.5,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,naive,0.5,44,10,5,0.5,1,1,0.0,e04,e04,e04,e04,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,naive,0.5,55,10,5,0.5,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,naive,0.3,11,10,3,0.3,1,1,0.0,e04,e08,e04,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,naive,0.3,22,10,3,0.3,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,naive,0.3,33,10,3,0.3,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,naive,0.3,44,10,3,0.3,1,1,0.0,e04,e07,e04,e07,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,naive,0.3,55,10,3,0.3,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,contract,0.7,11,10,7,0.7,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,contract,0.7,22,10,7,0.7,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,contract,0.7,33,10,7,0.7,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,contract,0.7,44,10,7,0.7,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,contract,0.7,55,10,7,0.7,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,contract,0.5,11,10,5,0.5,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,contract,0.5,22,10,5,0.5,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,contract,0.5,33,10,5,0.5,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,contract,0.5,44,10,5,0.5,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,contract,0.5,55,10,5,0.5,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,contract,0.3,11,10,3,0.3,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,contract,0.3,22,10,3,0.3,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,contract,0.3,33,10,3,0.3,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,contract,0.3,44,10,3,0.3,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_USAir1549,contract,0.3,55,10,3,0.3,1,1,1.0,e04,e04,e04,e04,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context","PIVOT_ID=e04
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,naive,0.7,11,10,7,0.7,4,4,0.75,e07,e04,e07,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,naive,0.7,22,10,7,0.7,4,4,0.75,e07,e04,e07,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,naive,0.7,33,10,7,0.7,4,4,0.25,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,naive,0.7,44,10,7,0.7,4,4,0.25,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,naive,0.7,55,10,7,0.7,4,4,0.75,e07,e04,e07,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,naive,0.5,11,10,5,0.5,4,4,0.5,e07,e04,e07,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,naive,0.5,22,10,5,0.5,4,4,0.75,e07,e04,e07,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,naive,0.5,33,10,5,0.5,4,4,0.25,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,naive,0.5,44,10,5,0.5,4,4,0.25,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,naive,0.5,55,10,5,0.5,4,4,0.5,e07,e04,e07,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,naive,0.3,11,10,3,0.3,4,4,0.0,e07,e08,e07,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: not found in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,naive,0.3,22,10,3,0.3,4,4,0.5,e07,e04,e07,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,naive,0.3,33,10,3,0.3,4,4,0.25,e07,e04,e07,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,naive,0.3,44,10,3,0.3,4,4,0.0,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: not found in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,naive,0.3,55,10,3,0.3,4,4,0.25,e07,e04,e07,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,contract,0.7,11,10,7,0.7,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,contract,0.7,22,10,7,0.7,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,contract,0.7,33,10,7,0.7,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,contract,0.7,44,10,7,0.7,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,contract,0.7,55,10,7,0.7,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,contract,0.5,11,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,contract,0.5,22,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,contract,0.5,33,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,contract,0.5,44,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,contract,0.5,55,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,contract,0.3,11,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,contract,0.3,22,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,contract,0.3,33,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,contract,0.3,44,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AMERISTAR9363,contract,0.3,55,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,naive,0.7,11,10,7,0.7,4,4,0.75,e07,e08,e07,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,naive,0.7,22,10,7,0.7,4,4,0.75,e07,e08,e07,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,naive,0.7,33,10,7,0.7,4,4,0.5,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,naive,0.7,44,10,7,0.7,4,4,0.5,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,naive,0.7,55,10,7,0.7,4,4,0.75,e07,e08,e07,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,naive,0.5,11,10,5,0.5,4,4,0.5,e07,e08,e07,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,naive,0.5,22,10,5,0.5,4,4,0.75,e07,e04,e07,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,naive,0.5,33,10,5,0.5,4,4,0.5,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,naive,0.5,44,10,5,0.5,4,4,0.25,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,naive,0.5,55,10,5,0.5,4,4,0.75,e07,e08,e07,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,naive,0.3,11,10,3,0.3,4,4,0.0,e07,e08,e07,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: not found in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,naive,0.3,22,10,3,0.3,4,4,0.5,e07,e04,e07,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,naive,0.3,33,10,3,0.3,4,4,0.5,e07,e04,e07,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,naive,0.3,44,10,3,0.3,4,4,0.0,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: not found in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,naive,0.3,55,10,3,0.3,4,4,0.5,e07,e04,e07,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,contract,0.7,11,10,7,0.7,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,contract,0.7,22,10,7,0.7,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,contract,0.7,33,10,7,0.7,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,contract,0.7,44,10,7,0.7,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,contract,0.7,55,10,7,0.7,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,contract,0.5,11,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,contract,0.5,22,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,contract,0.5,33,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,contract,0.5,44,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,contract,0.5,55,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,contract,0.3,11,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,contract,0.3,22,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,contract,0.3,33,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,contract,0.3,44,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_PENAIR3296,contract,0.3,55,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,naive,0.7,11,9,6,0.6666666666666666,3,3,0.3333333333333333,e05,e05,e05,e05,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: not found in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,naive,0.7,22,9,6,0.6666666666666666,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,naive,0.7,33,9,6,0.6666666666666666,3,3,0.6666666666666666,e05,e03,e05,e03,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e03
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,naive,0.7,44,9,6,0.6666666666666666,3,3,0.6666666666666666,e05,e03,e05,e03,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e03
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,naive,0.7,55,9,6,0.6666666666666666,3,3,1.0,e05,e06,e05,e06,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e06
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,naive,0.5,11,9,4,0.4444444444444444,3,3,0.3333333333333333,e05,e05,e05,e05,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: not found in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,naive,0.5,22,9,4,0.4444444444444444,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,naive,0.5,33,9,4,0.4444444444444444,3,3,0.6666666666666666,e05,e03,e05,e03,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e03
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,naive,0.5,44,9,4,0.4444444444444444,3,3,0.3333333333333333,e05,e07,e05,e07,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: not found in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,naive,0.5,55,9,4,0.4444444444444444,3,3,0.3333333333333333,e05,e06,e05,e06,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e06
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: not found in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,naive,0.3,11,9,3,0.3333333333333333,3,3,0.3333333333333333,e05,e08,e05,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: not found in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,naive,0.3,22,9,3,0.3333333333333333,3,3,1.0,e05,e01,e05,e01,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e01
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,naive,0.3,33,9,3,0.3333333333333333,3,3,0.6666666666666666,e05,e03,e05,e03,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e03
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,naive,0.3,44,9,3,0.3333333333333333,3,3,0.0,e05,e07,e05,e07,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: not found in context
+- e04: not found in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,naive,0.3,55,9,3,0.3333333333333333,3,3,0.3333333333333333,e05,e02,e05,e02,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e02
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: not found in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,contract,0.7,11,9,6,0.6666666666666666,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,contract,0.7,22,9,6,0.6666666666666666,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,contract,0.7,33,9,6,0.6666666666666666,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,contract,0.7,44,9,6,0.6666666666666666,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,contract,0.7,55,9,6,0.6666666666666666,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,contract,0.5,11,9,4,0.4444444444444444,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,contract,0.5,22,9,4,0.4444444444444444,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,contract,0.5,33,9,4,0.4444444444444444,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,contract,0.5,44,9,4,0.4444444444444444,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,contract,0.5,55,9,4,0.4444444444444444,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,contract,0.3,11,9,4,0.4444444444444444,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,contract,0.3,22,9,4,0.4444444444444444,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,contract,0.3,33,9,4,0.4444444444444444,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,contract,0.3,44,9,4,0.4444444444444444,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HAWAII_PARA,contract,0.3,55,9,4,0.4444444444444444,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,naive,0.7,11,9,6,0.6666666666666666,3,3,0.6666666666666666,e06,e06,e06,e06,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,naive,0.7,22,9,6,0.6666666666666666,3,3,1.0,e06,e01,e06,e01,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e01
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,naive,0.7,33,9,6,0.6666666666666666,3,3,0.3333333333333333,e06,e07,e06,e07,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,naive,0.7,44,9,6,0.6666666666666666,3,3,0.3333333333333333,e06,e07,e06,e07,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,naive,0.7,55,9,6,0.6666666666666666,3,3,0.6666666666666666,e06,e06,e06,e06,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,naive,0.5,11,9,4,0.4444444444444444,3,3,0.6666666666666666,e06,e05,e06,e05,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e05
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,naive,0.5,22,9,4,0.4444444444444444,3,3,1.0,e06,e01,e06,e01,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e01
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,naive,0.5,33,9,4,0.4444444444444444,3,3,0.3333333333333333,e06,e07,e06,e07,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,naive,0.5,44,9,4,0.4444444444444444,3,3,0.3333333333333333,e06,e07,e06,e07,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,naive,0.5,55,9,4,0.4444444444444444,3,3,0.3333333333333333,e06,e06,e06,e06,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,naive,0.3,11,9,3,0.3333333333333333,3,3,0.3333333333333333,e06,e04,e06,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,naive,0.3,22,9,3,0.3333333333333333,3,3,0.6666666666666666,e06,e01,e06,e01,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e01
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,naive,0.3,33,9,3,0.3333333333333333,3,3,0.3333333333333333,e06,e07,e06,e07,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,naive,0.3,44,9,3,0.3333333333333333,3,3,0.0,e06,e07,e06,e07,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: not found in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,naive,0.3,55,9,3,0.3333333333333333,3,3,0.3333333333333333,e06,e02,e06,e02,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e02
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,contract,0.7,11,9,6,0.6666666666666666,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,contract,0.7,22,9,6,0.6666666666666666,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,contract,0.7,33,9,6,0.6666666666666666,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,contract,0.7,44,9,6,0.6666666666666666,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,contract,0.7,55,9,6,0.6666666666666666,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,contract,0.5,11,9,4,0.4444444444444444,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,contract,0.5,22,9,4,0.4444444444444444,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,contract,0.5,33,9,4,0.4444444444444444,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,contract,0.5,44,9,4,0.4444444444444444,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,contract,0.5,55,9,4,0.4444444444444444,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,contract,0.3,11,9,4,0.4444444444444444,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,contract,0.3,22,9,4,0.4444444444444444,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,contract,0.3,33,9,4,0.4444444444444444,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,contract,0.3,44,9,4,0.4444444444444444,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_HOTAIRBALLOON,contract,0.3,55,9,4,0.4444444444444444,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,naive,0.7,11,9,6,0.6666666666666666,3,3,0.6666666666666666,e06,e06,e06,e06,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,naive,0.7,22,9,6,0.6666666666666666,3,3,1.0,e06,e05,e06,e05,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e05
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,naive,0.7,33,9,6,0.6666666666666666,3,3,0.6666666666666666,e06,e07,e06,e07,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,naive,0.7,44,9,6,0.6666666666666666,3,3,0.6666666666666666,e06,e07,e06,e07,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,naive,0.7,55,9,6,0.6666666666666666,3,3,0.6666666666666666,e06,e06,e06,e06,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,naive,0.5,11,9,4,0.4444444444444444,3,3,0.6666666666666666,e06,e05,e06,e05,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e05
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,naive,0.5,22,9,4,0.4444444444444444,3,3,1.0,e06,e05,e06,e05,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e05
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,naive,0.5,33,9,4,0.4444444444444444,3,3,0.6666666666666666,e06,e07,e06,e07,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,naive,0.5,44,9,4,0.4444444444444444,3,3,0.3333333333333333,e06,e07,e06,e07,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: confirmed in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,naive,0.5,55,9,4,0.4444444444444444,3,3,0.3333333333333333,e06,e06,e06,e06,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: confirmed in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,naive,0.3,11,9,3,0.3333333333333333,3,3,0.3333333333333333,e06,e04,e06,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: confirmed in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,naive,0.3,22,9,3,0.3333333333333333,3,3,0.6666666666666666,e06,e04,e06,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,naive,0.3,33,9,3,0.3333333333333333,3,3,0.6666666666666666,e06,e07,e06,e07,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,naive,0.3,44,9,3,0.3333333333333333,3,3,0.0,e06,e07,e06,e07,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: not found in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,naive,0.3,55,9,3,0.3333333333333333,3,3,0.3333333333333333,e06,e04,e06,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: confirmed in context
+- e05: not found in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,contract,0.7,11,9,6,0.6666666666666666,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,contract,0.7,22,9,6,0.6666666666666666,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,contract,0.7,33,9,6,0.6666666666666666,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,contract,0.7,44,9,6,0.6666666666666666,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,contract,0.7,55,9,6,0.6666666666666666,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,contract,0.5,11,9,4,0.4444444444444444,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,contract,0.5,22,9,4,0.4444444444444444,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,contract,0.5,33,9,4,0.4444444444444444,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,contract,0.5,44,9,4,0.4444444444444444,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,contract,0.5,55,9,4,0.4444444444444444,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,contract,0.3,11,9,4,0.4444444444444444,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,contract,0.3,22,9,4,0.4444444444444444,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,contract,0.3,33,9,4,0.4444444444444444,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,contract,0.3,44,9,4,0.4444444444444444,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_DELTA1086,contract,0.3,55,9,4,0.4444444444444444,3,3,1.0,e06,e06,e06,e06,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context","PIVOT_ID=e06
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,naive,0.7,11,9,6,0.6666666666666666,4,4,0.75,e07,e08,e07,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,naive,0.7,22,9,6,0.6666666666666666,4,4,0.75,e07,e08,e07,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,naive,0.7,33,9,6,0.6666666666666666,4,4,0.5,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,naive,0.7,44,9,6,0.6666666666666666,4,4,0.5,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,naive,0.7,55,9,6,0.6666666666666666,4,4,0.75,e07,e06,e07,e06,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e06
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,naive,0.5,11,9,4,0.4444444444444444,4,4,0.5,e07,e08,e07,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,naive,0.5,22,9,4,0.4444444444444444,4,4,0.75,e07,e05,e07,e05,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e05
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,naive,0.5,33,9,4,0.4444444444444444,4,4,0.5,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,naive,0.5,44,9,4,0.4444444444444444,4,4,0.25,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,naive,0.5,55,9,4,0.4444444444444444,4,4,0.5,e07,e06,e07,e06,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e06
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,naive,0.3,11,9,3,0.3333333333333333,4,4,0.25,e07,e08,e07,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,naive,0.3,22,9,3,0.3333333333333333,4,4,0.5,e07,e04,e07,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,naive,0.3,33,9,3,0.3333333333333333,4,4,0.5,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,naive,0.3,44,9,3,0.3333333333333333,4,4,0.0,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: not found in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,naive,0.3,55,9,3,0.3333333333333333,4,4,0.25,e07,e04,e07,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e03: not found in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,contract,0.7,11,9,6,0.6666666666666666,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,contract,0.7,22,9,6,0.6666666666666666,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,contract,0.7,33,9,6,0.6666666666666666,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,contract,0.7,44,9,6,0.6666666666666666,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,contract,0.7,55,9,6,0.6666666666666666,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,contract,0.5,11,9,5,0.5555555555555556,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,contract,0.5,22,9,5,0.5555555555555556,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,contract,0.5,33,9,5,0.5555555555555556,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,contract,0.5,44,9,5,0.5555555555555556,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,contract,0.5,55,9,5,0.5555555555555556,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,contract,0.3,11,9,5,0.5555555555555556,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,contract,0.3,22,9,5,0.5555555555555556,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,contract,0.3,33,9,5,0.5555555555555556,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,contract,0.3,44,9,5,0.5555555555555556,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_EXECUFLIGHT1526,contract,0.3,55,9,5,0.5555555555555556,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e03: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,naive,0.7,11,8,6,0.75,3,3,0.6666666666666666,e05,e05,e05,e05,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,naive,0.7,22,8,6,0.75,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,naive,0.7,33,8,6,0.75,3,3,0.6666666666666666,e05,e05,e05,e05,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,naive,0.7,44,8,6,0.75,3,3,0.6666666666666666,e05,e05,e05,e05,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: not found in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,naive,0.7,55,8,6,0.75,3,3,0.6666666666666666,e05,e05,e05,e05,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: not found in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,naive,0.5,11,8,4,0.5,3,3,0.3333333333333333,e05,e05,e05,e05,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: not found in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,naive,0.5,22,8,4,0.5,3,3,0.6666666666666666,e05,e05,e05,e05,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: not found in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,naive,0.5,33,8,4,0.5,3,3,0.3333333333333333,e05,e06,e05,e06,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e06
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: confirmed in context
+- e04: not found in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,naive,0.5,44,8,4,0.5,3,3,0.3333333333333333,e05,e05,e05,e05,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: not found in context
+- e04: not found in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,naive,0.5,55,8,4,0.5,3,3,0.3333333333333333,e05,e03,e05,e03,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e03
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: confirmed in context
+- e04: not found in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,naive,0.3,11,8,2,0.25,3,3,0.0,e05,e07,e05,e07,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: not found in context
+- e04: not found in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,naive,0.3,22,8,2,0.25,3,3,0.3333333333333333,e05,e03,e05,e03,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e03
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: confirmed in context
+- e04: not found in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,naive,0.3,33,8,2,0.25,3,3,0.3333333333333333,e05,e06,e05,e06,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e06
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: confirmed in context
+- e04: not found in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,naive,0.3,44,8,2,0.25,3,3,0.0,e05,e05,e05,e05,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: not found in context
+- e04: not found in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,naive,0.3,55,8,2,0.25,3,3,0.0,e05,e02,e05,e02,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e02
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e03: not found in context
+- e04: not found in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,contract,0.7,11,8,6,0.75,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,contract,0.7,22,8,6,0.75,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,contract,0.7,33,8,6,0.75,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,contract,0.7,44,8,6,0.75,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,contract,0.7,55,8,6,0.75,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,contract,0.5,11,8,4,0.5,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,contract,0.5,22,8,4,0.5,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,contract,0.5,33,8,4,0.5,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,contract,0.5,44,8,4,0.5,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,contract,0.5,55,8,4,0.5,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,contract,0.3,11,8,4,0.5,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,contract,0.3,22,8,4,0.5,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,contract,0.3,33,8,4,0.5,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,contract,0.3,44,8,4,0.5,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+NTSB_AERO_STALL,contract,0.3,55,8,4,0.5,3,3,1.0,e05,e05,e05,e05,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context","PIVOT_ID=e05
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e03: confirmed in context
+- e04: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,naive,0.7,11,10,7,0.7,4,4,0.75,e07,e08,e07,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,naive,0.7,22,10,7,0.7,4,4,0.75,e07,e08,e07,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,naive,0.7,33,10,7,0.7,4,4,0.25,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,naive,0.7,44,10,7,0.7,4,4,0.25,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,naive,0.7,55,10,7,0.7,4,4,0.75,e07,e08,e07,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,naive,0.5,11,10,5,0.5,4,4,0.5,e07,e08,e07,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,naive,0.5,22,10,5,0.5,4,4,0.75,e07,e04,e07,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,naive,0.5,33,10,5,0.5,4,4,0.25,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,naive,0.5,44,10,5,0.5,4,4,0.25,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,naive,0.5,55,10,5,0.5,4,4,0.5,e07,e08,e07,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,naive,0.3,11,10,3,0.3,4,4,0.0,e07,e08,e07,e08,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e08
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: not found in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,naive,0.3,22,10,3,0.3,4,4,0.5,e07,e04,e07,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,naive,0.3,33,10,3,0.3,4,4,0.25,e07,e04,e07,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,naive,0.3,44,10,3,0.3,4,4,0.0,e07,e07,e07,e07,True,True,True,True,True,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: not found in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,naive,0.3,55,10,3,0.3,4,4,0.25,e07,e04,e07,e04,True,True,False,True,True,False,False,False,True,True,False,False,"PIVOT_ID=e04
+Evidence assessment: DEGRADED
+Confidence: LOW
+
+Prerequisite events:
+- e01: not found in context
+- e04: confirmed in context
+- e05: not found in context
+- e06: not found in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,contract,0.7,11,10,7,0.7,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,contract,0.7,22,10,7,0.7,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,contract,0.7,33,10,7,0.7,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,contract,0.7,44,10,7,0.7,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,contract,0.7,55,10,7,0.7,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,contract,0.5,11,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,contract,0.5,22,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,contract,0.5,33,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,contract,0.5,44,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,contract,0.5,55,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,contract,0.3,11,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,contract,0.3,22,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,contract,0.3,33,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,contract,0.3,44,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini
+TECH_KNIGHT_CAPITAL,contract,0.3,55,10,5,0.5,4,4,1.0,e07,e07,e07,e07,True,True,True,False,False,False,False,False,False,False,False,False,"PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context","PIVOT_ID=e07
+Evidence assessment: STRONG
+Confidence: HIGH
+
+Prerequisite events:
+- e01: confirmed in context
+- e04: confirmed in context
+- e05: confirmed in context
+- e06: confirmed in context",rule,gpt-4o-mini

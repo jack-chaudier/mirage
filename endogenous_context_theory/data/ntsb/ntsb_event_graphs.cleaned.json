@@ -1,0 +1,1235 @@
+{
+  "metadata": {
+    "name": "NTSB Incident Event Graphs for Endogenous Pivot Validation",
+    "version": "1.0",
+    "description": "Real-world incident reports mapped to Rhun-compatible event graphs. Each incident has timestamped events, actor assignments, severity weights, and a ground-truth pivot (probable cause / turning point). Designed to validate the validity mirage under progressive compression.",
+    "source": "NTSB accident reports (public domain), supplemented with tech postmortems",
+    "schema": {
+      "events": "Timestamped incident events with actor, weight, and phase label",
+      "pivot_ground_truth": "The event identified as probable cause / turning point by investigators",
+      "competing_pivots": "Alternative high-weight events that a compressor might substitute",
+      "grammar": {
+        "phases": [
+          "SETUP",
+          "DEVELOPMENT",
+          "TURNING_POINT",
+          "RESOLUTION"
+        ],
+        "k_min_dev": "Minimum DEVELOPMENT events before TURNING_POINT"
+      }
+    },
+    "weight_rubric": {
+      "description": "Weights 1-100 assigned by causal centrality: how many downstream consequences depend on this event",
+      "90-100": "Root cause / probable cause event (the pivot)",
+      "70-89": "Major contributing factor or critical failure in causal chain",
+      "50-69": "Significant precondition or exacerbating factor",
+      "30-49": "Relevant context or minor contributing factor",
+      "10-29": "Background setup or post-incident response"
+    }
+  },
+  "incidents": [
+    {
+      "id": "NTSB_SWA1380",
+      "title": "Southwest Airlines Flight 1380 \u2014 Engine Failure and Depressurization",
+      "date": "2018-04-17",
+      "ntsb_id": "DCA18MA142",
+      "report": "NTSB/AAR-19/03",
+      "summary": "Fan blade fatigue fracture caused engine failure, cowl separation struck fuselage, cabin window departed, one fatality.",
+      "probable_cause": "Low-cycle fatigue crack in dovetail of fan blade No. 13 causing blade separation and cowl fragment impact on fuselage window.",
+      "focal_actor": "engine_nacelle_system",
+      "k_recommended": 4,
+      "events": [
+        {
+          "id": "e01",
+          "t": 1,
+          "actor": "maintenance",
+          "weight": 35,
+          "desc": "Fan blade set last overhauled (Nov 2012) with visual and fluorescent penetrant inspections",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e02",
+          "t": 2,
+          "actor": "regulatory",
+          "weight": 30,
+          "desc": "CFM56-7B engine and 737-700 certificated (1996-97) using then-current analytical tools",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e03",
+          "t": 3,
+          "actor": "maintenance",
+          "weight": 45,
+          "desc": "Six fan blade relubrications with visual inspections \u2014 crack not detected",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e04",
+          "t": 4,
+          "actor": "engine_nacelle_system",
+          "weight": 65,
+          "desc": "Low-cycle fatigue crack initiates in fan blade 13 dovetail due to higher-than-expected stresses",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e05",
+          "t": 5,
+          "actor": "regulatory",
+          "weight": 50,
+          "desc": "SWA Flight 3472 (Aug 2016) \u2014 similar fan blade fracture on same engine type, prompting new eddy current inspection AD",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e06",
+          "t": 6,
+          "actor": "maintenance",
+          "weight": 40,
+          "desc": "Crack most likely not detectable by fluorescent penetrant inspection at last overhaul",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e07",
+          "t": 7,
+          "actor": "operations",
+          "weight": 15,
+          "desc": "Flight 1380 departs LaGuardia for Dallas Love Field with 144 passengers and 5 crew",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e08",
+          "t": 8,
+          "actor": "engine_nacelle_system",
+          "weight": 95,
+          "desc": "Fan blade 13 separates in flight at FL320 \u2014 impacts fan case at critical structural location",
+          "phase": "TURNING_POINT"
+        },
+        {
+          "id": "e09",
+          "t": 9,
+          "actor": "engine_nacelle_system",
+          "weight": 80,
+          "desc": "Fan cowl structural failure \u2014 loads through radial restraint fitting cause cowl separation",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e10",
+          "t": 10,
+          "actor": "engine_nacelle_system",
+          "weight": 85,
+          "desc": "Inboard fan cowl aft latch keeper strikes fuselage near row 14 window \u2014 window departs",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e11",
+          "t": 11,
+          "actor": "operations",
+          "weight": 70,
+          "desc": "Rapid cabin depressurization \u2014 one passenger fatally injured",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e12",
+          "t": 12,
+          "actor": "flight_crew",
+          "weight": 25,
+          "desc": "Flight crew conducts emergency descent and diverts to Philadelphia",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e13",
+          "t": 13,
+          "actor": "regulatory",
+          "weight": 20,
+          "desc": "NTSB issues 7 safety recommendations including fan cowl redesign",
+          "phase": "RESOLUTION"
+        }
+      ],
+      "pivot_ground_truth": "e08",
+      "competing_pivots": [
+        "e04",
+        "e09",
+        "e10"
+      ],
+      "mirage_scenario": "Under compression, if e04 (crack initiation) and e05-e06 (inspection history) are summarized away, a model may reattribute the pivot to e09 (cowl failure) or e10 (window departure) \u2014 both are dramatic but are consequences, not the root cause."
+    },
+    {
+      "id": "NTSB_ATLAS3591",
+      "title": "Atlas Air Flight 3591 \u2014 Rapid Descent and Crash into Trinity Bay",
+      "date": "2019-02-23",
+      "ntsb_id": "DCA19MA086",
+      "report": "NTSB/AAR-20/02",
+      "summary": "First officer's inappropriate response to inadvertent go-around activation led to spatial disorientation and unrecoverable dive. All 3 crew killed.",
+      "probable_cause": "First officer's inappropriate response to inadvertent go-around mode activation, leading to spatial disorientation and nose-down inputs.",
+      "focal_actor": "first_officer",
+      "k_recommended": 4,
+      "events": [
+        {
+          "id": "e01",
+          "t": 1,
+          "actor": "first_officer",
+          "weight": 60,
+          "desc": "FO has history of training performance deficiencies at multiple prior employers",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e02",
+          "t": 2,
+          "actor": "first_officer",
+          "weight": 55,
+          "desc": "FO deliberately conceals performance history on resumes and applications to Atlas Air",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e03",
+          "t": 3,
+          "actor": "regulatory",
+          "weight": 45,
+          "desc": "FAA fails to implement robust pilot records database per 2010 congressional mandate",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e04",
+          "t": 4,
+          "actor": "atlas_air",
+          "weight": 40,
+          "desc": "Atlas relies on designated agents rather than flight operations experts to review pilot records",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e05",
+          "t": 5,
+          "actor": "first_officer",
+          "weight": 50,
+          "desc": "FO demonstrates maladaptive stress response and impulsive reactions in training scenarios",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e06",
+          "t": 6,
+          "actor": "operations",
+          "weight": 15,
+          "desc": "Cargo flight departs Miami for Houston with captain, FO, and jumpseat pilot",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e07",
+          "t": 7,
+          "actor": "weather",
+          "weight": 30,
+          "desc": "Flight encounters leading edge of cold front with light turbulence at ~6,300 ft during descent",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e08",
+          "t": 8,
+          "actor": "aircraft_systems",
+          "weight": 65,
+          "desc": "Go-around mode inadvertently activated \u2014 likely by FO's wrist/watch contacting switch in turbulence",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e09",
+          "t": 9,
+          "actor": "first_officer",
+          "weight": 95,
+          "desc": "FO experiences somatogravic illusion from acceleration, makes nose-down elevator inputs placing aircraft in steep dive",
+          "phase": "TURNING_POINT"
+        },
+        {
+          "id": "e10",
+          "t": 10,
+          "actor": "captain",
+          "weight": 55,
+          "desc": "Captain fails to adequately monitor flightpath and does not assume positive control in time",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e11",
+          "t": 11,
+          "actor": "aircraft_systems",
+          "weight": 25,
+          "desc": "Only 32 seconds between go-around activation and ground impact",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e12",
+          "t": 12,
+          "actor": "operations",
+          "weight": 20,
+          "desc": "Aircraft crashes into shallow marsh in Trinity Bay \u2014 all three crew killed, aircraft destroyed",
+          "phase": "RESOLUTION"
+        }
+      ],
+      "pivot_ground_truth": "e09",
+      "competing_pivots": [
+        "e08",
+        "e01",
+        "e10"
+      ],
+      "mirage_scenario": "Compression may merge e01-e05 (FO background) into a generic 'crew issues' summary, making e08 (go-around activation) appear to be the pivot. This substitutes a triggering event for the actual root cause (the FO's inappropriate response to that trigger)."
+    },
+    {
+      "id": "NTSB_N72EX",
+      "title": "Island Express Helicopters \u2014 Calabasas Terrain Impact",
+      "date": "2020-01-26",
+      "ntsb_id": "DCA20MA059",
+      "report": "NTSB/AAR-21/01",
+      "summary": "Helicopter pilot continued VFR flight into IMC, experienced spatial disorientation, lost control. 9 fatalities including pilot.",
+      "probable_cause": "Pilot's decision to continue VFR flight into instrument meteorological conditions, resulting in spatial disorientation and loss of control.",
+      "focal_actor": "pilot",
+      "k_recommended": 4,
+      "events": [
+        {
+          "id": "e01",
+          "t": 1,
+          "actor": "weather",
+          "weight": 40,
+          "desc": "Dense fog and low clouds throughout LA basin \u2014 Van Nuys reports 1,100 ft overcast, 2.5 mi visibility",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e02",
+          "t": 2,
+          "actor": "operator",
+          "weight": 35,
+          "desc": "Island Express not certified for IFR operations \u2014 VFR only",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e03",
+          "t": 3,
+          "actor": "pilot",
+          "weight": 45,
+          "desc": "Pilot deems conditions 'OK' in text messages despite fog warnings",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e04",
+          "t": 4,
+          "actor": "operations",
+          "weight": 15,
+          "desc": "Helicopter departs John Wayne Airport with pilot and 8 passengers",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e05",
+          "t": 5,
+          "actor": "pilot",
+          "weight": 50,
+          "desc": "Pilot requests and receives Special VFR clearance \u2014 circles for 12 minutes awaiting approval",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e06",
+          "t": 6,
+          "actor": "pilot",
+          "weight": 55,
+          "desc": "Pilot flies at 400-600 ft AGL below cloud layer, navigating visually along terrain",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e07",
+          "t": 7,
+          "actor": "pilot",
+          "weight": 60,
+          "desc": "Self-induced pressure to complete flight for high-profile client affects decision-making",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e08",
+          "t": 8,
+          "actor": "pilot",
+          "weight": 65,
+          "desc": "Plan continuation bias \u2014 pilot continues despite deteriorating weather and rising terrain",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e09",
+          "t": 9,
+          "actor": "pilot",
+          "weight": 95,
+          "desc": "Pilot continues VFR into IMC \u2014 initiates climb to get above cloud layers near rising terrain over US-101",
+          "phase": "TURNING_POINT"
+        },
+        {
+          "id": "e10",
+          "t": 10,
+          "actor": "pilot",
+          "weight": 75,
+          "desc": "Pilot enters clouds, experiences spatial disorientation \u2014 believes climbing when actually descending",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e11",
+          "t": 11,
+          "actor": "pilot",
+          "weight": 35,
+          "desc": "Pilot reports 'climbing to four thousand' to ATC \u2014 aircraft actually descending at ~4,000 fpm",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e12",
+          "t": 12,
+          "actor": "aircraft",
+          "weight": 25,
+          "desc": "Helicopter impacts hillside at >184 mph in left-banked descent \u2014 all 9 aboard killed",
+          "phase": "RESOLUTION"
+        }
+      ],
+      "pivot_ground_truth": "e09",
+      "competing_pivots": [
+        "e10",
+        "e07",
+        "e08"
+      ],
+      "mirage_scenario": "Under compression, the gradual decision chain (e05-e08) gets collapsed. A model may identify e10 (spatial disorientation) as the pivot rather than e09 (the decision to continue into IMC), substituting the proximate physiological failure for the causal decision."
+    },
+    {
+      "id": "NTSB_USAir1549",
+      "title": "US Airways Flight 1549 \u2014 Ditching in Hudson River (Miracle on the Hudson)",
+      "date": "2009-01-15",
+      "ntsb_id": "DCA09MA026",
+      "report": "NTSB/AAR-10/03",
+      "summary": "Both engines lost thrust after ingesting Canada geese during climb. Crew ditched in Hudson River. All 155 survived.",
+      "probable_cause": "Dual-engine thrust loss due to bird ingestion from encounter with flock of Canada geese at ~2,800 ft during climb.",
+      "focal_actor": "aircraft_engines",
+      "k_recommended": 1,
+      "events": [
+        {
+          "id": "e01",
+          "t": 1,
+          "actor": "wildlife",
+          "weight": 35,
+          "desc": "Flock of Canada geese present at ~2,800 ft in departure corridor from LaGuardia",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e02",
+          "t": 2,
+          "actor": "operations",
+          "weight": 15,
+          "desc": "A320 departs LaGuardia Runway 4 with 150 passengers and 5 crew",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e03",
+          "t": 3,
+          "actor": "operations",
+          "weight": 20,
+          "desc": "Aircraft climbing normally through ~2,800 ft AGL about 90 seconds after takeoff",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e04",
+          "t": 4,
+          "actor": "aircraft_engines",
+          "weight": 95,
+          "desc": "Both engines ingest multiple Canada geese \u2014 dual engine thrust loss",
+          "phase": "TURNING_POINT"
+        },
+        {
+          "id": "e05",
+          "t": 5,
+          "actor": "flight_crew",
+          "weight": 80,
+          "desc": "Captain Sullenberger takes controls, assesses options \u2014 determines cannot reach any airport",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e06",
+          "t": 6,
+          "actor": "flight_crew",
+          "weight": 40,
+          "desc": "FO Skiles runs dual-engine failure checklist \u2014 attempts engine restart unsuccessful",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e07",
+          "t": 7,
+          "actor": "flight_crew",
+          "weight": 75,
+          "desc": "Captain decides to ditch in Hudson River \u2014 the only viable option within glide range",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e08",
+          "t": 8,
+          "actor": "flight_crew",
+          "weight": 60,
+          "desc": "Successful water landing at ~150 kt \u2014 aircraft remains intact and afloat",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e09",
+          "t": 9,
+          "actor": "rescue",
+          "weight": 30,
+          "desc": "Ferry boats and emergency responders rescue all 155 occupants",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e10",
+          "t": 10,
+          "actor": "regulatory",
+          "weight": 20,
+          "desc": "NTSB recommendations on bird-strike standards and engine ingestion certification",
+          "phase": "RESOLUTION"
+        }
+      ],
+      "pivot_ground_truth": "e04",
+      "competing_pivots": [
+        "e07",
+        "e05"
+      ],
+      "mirage_scenario": "This incident has strong resolution events (the heroic ditching). Under compression, e04 may be summarized as 'engine failure' and the narrative weight shifts to e07 (decision to ditch) as the apparent pivot \u2014 replacing the causal event with the response."
+    },
+    {
+      "id": "NTSB_AMERISTAR9363",
+      "title": "Ameristar Air Cargo Flight 9363 \u2014 Runway Overrun During Rejected Takeoff",
+      "date": "2017-03-08",
+      "ntsb_id": "DCA17MA087",
+      "report": "NTSB/AAR-19/01",
+      "summary": "MD-83 crew rejected takeoff at high speed after captain observed abnormal left roll, overran runway. No fatalities, substantial damage.",
+      "probable_cause": "Flight crew's decision to reject the takeoff after the airplane had exceeded V1 speed, which resulted in a runway overrun.",
+      "focal_actor": "flight_crew",
+      "k_recommended": 4,
+      "events": [
+        {
+          "id": "e01",
+          "t": 1,
+          "actor": "maintenance",
+          "weight": 50,
+          "desc": "Left outboard leading edge slat actuator had pre-existing internal corrosion limiting extension",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e02",
+          "t": 2,
+          "actor": "maintenance",
+          "weight": 45,
+          "desc": "Maintenance procedures did not detect slat actuator degradation",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e03",
+          "t": 3,
+          "actor": "operations",
+          "weight": 15,
+          "desc": "MD-83 cargo flight prepares for departure from Willow Run Airport, Ypsilanti, Michigan",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e04",
+          "t": 4,
+          "actor": "aircraft_systems",
+          "weight": 60,
+          "desc": "During takeoff roll, left outboard slat fails to extend fully \u2014 creates asymmetric lift",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e05",
+          "t": 5,
+          "actor": "flight_crew",
+          "weight": 55,
+          "desc": "Captain perceives abnormal left roll tendency during takeoff acceleration",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e06",
+          "t": 6,
+          "actor": "flight_crew",
+          "weight": 40,
+          "desc": "Aircraft exceeds V1 (takeoff decision speed) \u2014 standard procedure requires continuing takeoff",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e07",
+          "t": 7,
+          "actor": "flight_crew",
+          "weight": 95,
+          "desc": "Captain decides to reject takeoff above V1 speed \u2014 initiates high-speed abort",
+          "phase": "TURNING_POINT"
+        },
+        {
+          "id": "e08",
+          "t": 8,
+          "actor": "aircraft_systems",
+          "weight": 30,
+          "desc": "Deceleration insufficient for remaining runway \u2014 aircraft overruns at ~60 kt",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e09",
+          "t": 9,
+          "actor": "operations",
+          "weight": 25,
+          "desc": "Aircraft crosses airport perimeter road and stops in field \u2014 substantial damage, no injuries",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e10",
+          "t": 10,
+          "actor": "regulatory",
+          "weight": 20,
+          "desc": "NTSB recommends improved slat inspection procedures and rejected takeoff training",
+          "phase": "RESOLUTION"
+        }
+      ],
+      "pivot_ground_truth": "e07",
+      "competing_pivots": [
+        "e04",
+        "e01"
+      ],
+      "mirage_scenario": "The slat malfunction (e04) is a compelling alternative pivot. Under compression, if the V1 exceedance context (e06) is lost, a model may reattribute the accident to the slat failure rather than the crew's decision to reject above V1."
+    },
+    {
+      "id": "NTSB_PENAIR3296",
+      "title": "PenAir Flight 3296 \u2014 Runway Overrun During Landing at Unalaska",
+      "date": "2019-10-17",
+      "ntsb_id": "DCA20MA003",
+      "report": "NTSB/AAR-21/05",
+      "summary": "Saab 2000 overran runway during landing at Dutch Harbor in marginal weather. Crew did not execute go-around despite unstabilized approach.",
+      "probable_cause": "Flight crew's continuation of an unstabilized approach and failure to execute a go-around.",
+      "focal_actor": "flight_crew",
+      "k_recommended": 4,
+      "events": [
+        {
+          "id": "e01",
+          "t": 1,
+          "actor": "environment",
+          "weight": 40,
+          "desc": "Challenging approach to Unalaska \u2014 short runway, mountainous terrain, marginal weather",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e02",
+          "t": 2,
+          "actor": "operator",
+          "weight": 35,
+          "desc": "Company procedures specify stabilized approach criteria and go-around requirements",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e03",
+          "t": 3,
+          "actor": "weather",
+          "weight": 45,
+          "desc": "Low ceilings, gusty crosswinds, and reduced visibility at Dutch Harbor airport",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e04",
+          "t": 4,
+          "actor": "flight_crew",
+          "weight": 55,
+          "desc": "Approach becomes unstabilized \u2014 aircraft above glidepath and faster than target speed",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e05",
+          "t": 5,
+          "actor": "flight_crew",
+          "weight": 50,
+          "desc": "Multiple stabilized approach criteria exceeded \u2014 go-around warranted per company SOP",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e06",
+          "t": 6,
+          "actor": "flight_crew",
+          "weight": 60,
+          "desc": "Captain decides to continue approach despite exceeding stabilized approach criteria",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e07",
+          "t": 7,
+          "actor": "flight_crew",
+          "weight": 95,
+          "desc": "Crew continues unstabilized approach to landing \u2014 fails to execute mandatory go-around",
+          "phase": "TURNING_POINT"
+        },
+        {
+          "id": "e08",
+          "t": 8,
+          "actor": "flight_crew",
+          "weight": 65,
+          "desc": "Aircraft touches down long and fast \u2014 insufficient runway remaining to stop",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e09",
+          "t": 9,
+          "actor": "operations",
+          "weight": 30,
+          "desc": "Aircraft overruns runway, goes down embankment \u2014 1 passenger fatality, multiple injuries",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e10",
+          "t": 10,
+          "actor": "regulatory",
+          "weight": 20,
+          "desc": "NTSB recommends enhanced go-around decision support and unstabilized approach monitoring",
+          "phase": "RESOLUTION"
+        }
+      ],
+      "pivot_ground_truth": "e07",
+      "competing_pivots": [
+        "e06",
+        "e08",
+        "e03"
+      ],
+      "mirage_scenario": "Weather (e03) and the landing itself (e08) are salient compression targets. If the progressive decision chain (e04-e06) is lost, the model may pivot to 'bad weather caused crash' rather than 'crew continued when they should have gone around.'"
+    },
+    {
+      "id": "NTSB_HAWAII_PARA",
+      "title": "Beech King Air 65-A90 \u2014 Parachute Jump Flight Crash at Mokuleia",
+      "date": "2019-06-21",
+      "ntsb_id": "DCA19MA190",
+      "report": "NTSB/AAR-21/02",
+      "summary": "King Air crashed on takeoff from Dillingham Airfield during skydiving operations. Engine lost power, aircraft stalled. 11 fatalities.",
+      "probable_cause": "Pilot's decision to take off with an engine that was not producing full power, leading to loss of control during climb.",
+      "focal_actor": "pilot",
+      "k_recommended": 3,
+      "events": [
+        {
+          "id": "e01",
+          "t": 1,
+          "actor": "maintenance",
+          "weight": 55,
+          "desc": "Left engine had pre-existing condition \u2014 not producing rated power due to fuel system issue",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e02",
+          "t": 2,
+          "actor": "operator",
+          "weight": 40,
+          "desc": "Skydiving operation at Dillingham Airfield \u2014 short runway near ocean with obstructions",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e03",
+          "t": 3,
+          "actor": "pilot",
+          "weight": 50,
+          "desc": "Pilot had made multiple flights that day \u2014 earlier flights showed signs of reduced left engine power",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e04",
+          "t": 4,
+          "actor": "operations",
+          "weight": 20,
+          "desc": "Aircraft loaded with pilot and 10 skydivers \u2014 near maximum weight for conditions",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e05",
+          "t": 5,
+          "actor": "pilot",
+          "weight": 95,
+          "desc": "Pilot elects to take off despite indications of degraded left engine performance",
+          "phase": "TURNING_POINT"
+        },
+        {
+          "id": "e06",
+          "t": 6,
+          "actor": "aircraft_systems",
+          "weight": 70,
+          "desc": "Left engine power insufficient for climb \u2014 aircraft unable to maintain altitude after takeoff",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e07",
+          "t": 7,
+          "actor": "pilot",
+          "weight": 45,
+          "desc": "Pilot loses control \u2014 aircraft stalls at low altitude",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e08",
+          "t": 8,
+          "actor": "operations",
+          "weight": 25,
+          "desc": "Aircraft crashes near runway \u2014 fire ensues, all 11 aboard killed",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e09",
+          "t": 9,
+          "actor": "regulatory",
+          "weight": 20,
+          "desc": "NTSB recommendations on parachute jump operation oversight and engine health monitoring",
+          "phase": "RESOLUTION"
+        }
+      ],
+      "pivot_ground_truth": "e05",
+      "competing_pivots": [
+        "e01",
+        "e06"
+      ],
+      "mirage_scenario": "The engine condition (e01) is the intuitive 'mechanical failure' narrative. Compression may drop e03 (prior flights showing reduced power) and reattribute to 'engine failure' rather than 'pilot decision to fly with known degraded engine.'"
+    },
+    {
+      "id": "NTSB_HOTAIRBALLOON",
+      "title": "Heart of Texas Hot Air Balloon \u2014 Power Line Strike at Lockhart",
+      "date": "2016-07-30",
+      "ntsb_id": "DCA16MA195",
+      "report": "NTSB/AAR-17/03",
+      "summary": "Hot air balloon struck power lines during descent in morning haze. Fire and crash killed all 16 aboard. Pilot had impairing medications.",
+      "probable_cause": "Pilot's decision to fly into deteriorating weather conditions and his impairment from medications.",
+      "focal_actor": "pilot",
+      "k_recommended": 3,
+      "events": [
+        {
+          "id": "e01",
+          "t": 1,
+          "actor": "pilot",
+          "weight": 70,
+          "desc": "Pilot was taking multiple impairing medications including opioids, benzodiazepines, and antihistamines",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e02",
+          "t": 2,
+          "actor": "pilot",
+          "weight": 45,
+          "desc": "Pilot had history of DWI convictions \u2014 FAA unaware due to inadequate medical screening",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e03",
+          "t": 3,
+          "actor": "regulatory",
+          "weight": 35,
+          "desc": "Balloon pilots not required to hold medical certificate \u2014 no drug screening requirement",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e04",
+          "t": 4,
+          "actor": "weather",
+          "weight": 40,
+          "desc": "Morning fog and haze reducing visibility \u2014 conditions deteriorating during flight",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e05",
+          "t": 5,
+          "actor": "pilot",
+          "weight": 60,
+          "desc": "Pilot continues flight into area with power lines despite reduced visibility",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e06",
+          "t": 6,
+          "actor": "pilot",
+          "weight": 95,
+          "desc": "Pilot's impaired judgment and decision-making leads to continued flight into hazardous conditions",
+          "phase": "TURNING_POINT"
+        },
+        {
+          "id": "e07",
+          "t": 7,
+          "actor": "operations",
+          "weight": 75,
+          "desc": "Balloon contacts high-voltage power lines during descent \u2014 fire erupts",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e08",
+          "t": 8,
+          "actor": "operations",
+          "weight": 30,
+          "desc": "Balloon envelope separates from gondola \u2014 crashes into field, all 16 killed",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e09",
+          "t": 9,
+          "actor": "regulatory",
+          "weight": 25,
+          "desc": "NTSB recommends FAA require medical certification for balloon pilots",
+          "phase": "RESOLUTION"
+        }
+      ],
+      "pivot_ground_truth": "e06",
+      "competing_pivots": [
+        "e01",
+        "e07",
+        "e05"
+      ],
+      "mirage_scenario": "The power line strike (e07) is the most visually dramatic event. Under compression, the medication impairment chain (e01-e02) is easily lost, shifting the narrative from 'impaired pilot made bad decisions' to 'balloon hit power lines.'"
+    },
+    {
+      "id": "NTSB_DELTA1086",
+      "title": "Delta Air Lines Flight 1086 \u2014 Runway Excursion at LaGuardia",
+      "date": "2015-03-05",
+      "ntsb_id": "DCA15FA085",
+      "report": "NTSB/AAR-16/02",
+      "summary": "MD-88 landed during snowstorm at LaGuardia, left runway, penetrated airport fence, stopped on embankment over Flushing Bay.",
+      "probable_cause": "Captain's failure to maintain directional control during landing in snow, and his delayed use of reverse thrust.",
+      "focal_actor": "flight_crew",
+      "k_recommended": 3,
+      "events": [
+        {
+          "id": "e01",
+          "t": 1,
+          "actor": "weather",
+          "weight": 45,
+          "desc": "Heavy snowfall at LaGuardia \u2014 runway contaminated with snow and reduced braking action",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e02",
+          "t": 2,
+          "actor": "airport",
+          "weight": 40,
+          "desc": "Runway friction reports indicated deteriorating conditions \u2014 'fair' braking reported",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e03",
+          "t": 3,
+          "actor": "flight_crew",
+          "weight": 35,
+          "desc": "Flight crew briefs approach and landing \u2014 discusses contaminated runway procedures",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e04",
+          "t": 4,
+          "actor": "flight_crew",
+          "weight": 50,
+          "desc": "Aircraft approaches runway 13 \u2014 crosswind from left",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e05",
+          "t": 5,
+          "actor": "flight_crew",
+          "weight": 55,
+          "desc": "Aircraft touches down with left drift \u2014 captain's rudder input insufficient to track centerline",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e06",
+          "t": 6,
+          "actor": "flight_crew",
+          "weight": 95,
+          "desc": "Captain fails to maintain directional control and delays reverse thrust application",
+          "phase": "TURNING_POINT"
+        },
+        {
+          "id": "e07",
+          "t": 7,
+          "actor": "aircraft",
+          "weight": 65,
+          "desc": "Aircraft departs left side of runway \u2014 travels across grass and through perimeter fence",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e08",
+          "t": 8,
+          "actor": "operations",
+          "weight": 40,
+          "desc": "Aircraft stops on embankment feet from Flushing Bay \u2014 24 minor injuries, substantial damage",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e09",
+          "t": 9,
+          "actor": "regulatory",
+          "weight": 20,
+          "desc": "NTSB recommends improved contaminated runway training and braking action reports",
+          "phase": "RESOLUTION"
+        }
+      ],
+      "pivot_ground_truth": "e06",
+      "competing_pivots": [
+        "e01",
+        "e05"
+      ],
+      "mirage_scenario": "Weather (e01) is the obvious alternative pivot. Compression tends to merge the crew's specific directional control failure (e06) into the weather narrative, shifting blame from pilot technique to conditions."
+    },
+    {
+      "id": "NTSB_EXECUFLIGHT1526",
+      "title": "Execuflight Flight 1526 \u2014 Crash During Nonprecision Approach",
+      "date": "2015-11-10",
+      "ntsb_id": "ERA16MA029",
+      "report": "NTSB/AAR-16/03",
+      "summary": "HS 125 crashed short of Akron airport during nonprecision approach in IMC. Crew descended below MDA without required visual references.",
+      "probable_cause": "Flight crew's continuation of approach below minimum descent altitude without required visual references, and their failure to execute a missed approach.",
+      "focal_actor": "flight_crew",
+      "k_recommended": 4,
+      "events": [
+        {
+          "id": "e01",
+          "t": 1,
+          "actor": "operator",
+          "weight": 45,
+          "desc": "Execuflight had history of FAA oversight concerns \u2014 inadequate training program for Part 135",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e02",
+          "t": 2,
+          "actor": "flight_crew",
+          "weight": 40,
+          "desc": "Captain's training records showed deficiencies \u2014 company did not adequately address them",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e03",
+          "t": 3,
+          "actor": "weather",
+          "weight": 35,
+          "desc": "IMC conditions at Akron-Fulton airport \u2014 low ceilings requiring instrument approach",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e04",
+          "t": 4,
+          "actor": "flight_crew",
+          "weight": 50,
+          "desc": "Crew conducts VOR approach with high workload \u2014 multiple altitude and configuration deviations",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e05",
+          "t": 5,
+          "actor": "flight_crew",
+          "weight": 55,
+          "desc": "Aircraft reaches minimum descent altitude \u2014 required visual references not acquired",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e06",
+          "t": 6,
+          "actor": "flight_crew",
+          "weight": 60,
+          "desc": "Missed approach criteria met \u2014 crew required to execute missed approach per regulations",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e07",
+          "t": 7,
+          "actor": "flight_crew",
+          "weight": 95,
+          "desc": "Crew continues descent below MDA without visual references \u2014 does not execute missed approach",
+          "phase": "TURNING_POINT"
+        },
+        {
+          "id": "e08",
+          "t": 8,
+          "actor": "aircraft",
+          "weight": 70,
+          "desc": "Aircraft impacts terrain and apartment building short of runway \u2014 both crew and 1 occupant killed",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e09",
+          "t": 9,
+          "actor": "regulatory",
+          "weight": 30,
+          "desc": "NTSB cites inadequate FAA oversight of Execuflight and recommends enhanced Part 135 surveillance",
+          "phase": "RESOLUTION"
+        }
+      ],
+      "pivot_ground_truth": "e07",
+      "competing_pivots": [
+        "e01",
+        "e04",
+        "e08"
+      ],
+      "mirage_scenario": "The operator's systemic issues (e01-e02) and the terrain impact (e08) compete for pivot status. Compression may drop the specific MDA decision chain (e05-e06) and reframe as either 'company was unsafe' or 'aircraft hit building' rather than the crew's specific decision to continue below minimums."
+    },
+    {
+      "id": "NTSB_AERO_STALL",
+      "title": "Embraer EMB-500 \u2014 Aerodynamic Stall on Approach at Gaithersburg",
+      "date": "2014-12-08",
+      "ntsb_id": "CEN15FA080",
+      "report": "NTSB/AAR-16/01",
+      "summary": "Pilot lost control during instrument approach in icing conditions. Aircraft stalled and impacted residential area. All 3 aboard plus 2 on ground killed.",
+      "probable_cause": "Pilot's failure to maintain adequate airspeed during approach, leading to aerodynamic stall. Ice contamination was a contributing factor.",
+      "focal_actor": "pilot",
+      "k_recommended": 3,
+      "events": [
+        {
+          "id": "e01",
+          "t": 1,
+          "actor": "weather",
+          "weight": 50,
+          "desc": "Moderate icing conditions reported along approach path \u2014 freezing precipitation",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e02",
+          "t": 2,
+          "actor": "pilot",
+          "weight": 40,
+          "desc": "Pilot had limited experience in actual icing conditions in Phenom 100",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e03",
+          "t": 3,
+          "actor": "aircraft_systems",
+          "weight": 45,
+          "desc": "Ice accumulation on airframe \u2014 wing deicing system engaged but ice accretion affects stall margin",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e04",
+          "t": 4,
+          "actor": "pilot",
+          "weight": 55,
+          "desc": "Pilot configures for approach \u2014 extends flaps and slows aircraft",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e05",
+          "t": 5,
+          "actor": "pilot",
+          "weight": 95,
+          "desc": "Pilot allows airspeed to decrease below safe approach speed in icing conditions \u2014 fails to maintain adequate margin above stall",
+          "phase": "TURNING_POINT"
+        },
+        {
+          "id": "e06",
+          "t": 6,
+          "actor": "aircraft",
+          "weight": 75,
+          "desc": "Aircraft enters aerodynamic stall at low altitude \u2014 loss of control",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e07",
+          "t": 7,
+          "actor": "operations",
+          "weight": 35,
+          "desc": "Aircraft impacts residential area \u2014 3 aboard and 2 on ground killed",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e08",
+          "t": 8,
+          "actor": "regulatory",
+          "weight": 20,
+          "desc": "NTSB recommends enhanced icing awareness training for light jet pilots",
+          "phase": "RESOLUTION"
+        }
+      ],
+      "pivot_ground_truth": "e05",
+      "competing_pivots": [
+        "e01",
+        "e03",
+        "e06"
+      ],
+      "mirage_scenario": "Icing (e01, e03) provides a strong competing narrative. Compression may drop the specific airspeed management failure (e05) and attribute the accident to 'ice brought down the plane' rather than 'pilot didn't fly fast enough in icing conditions.'"
+    },
+    {
+      "id": "TECH_KNIGHT_CAPITAL",
+      "title": "Knight Capital Group \u2014 Algorithmic Trading System Failure",
+      "date": "2012-08-01",
+      "ntsb_id": "N/A",
+      "report": "SEC Administrative Proceeding 3-15570",
+      "summary": "Software deployment error activated obsolete test code, causing $440M loss in 45 minutes of erratic trading. Company forced into acquisition.",
+      "probable_cause": "Deployment of new SMARS code to 7 of 8 servers left one server running obsolete Power Peg code, which executed millions of unintended trades.",
+      "focal_actor": "deployment_system",
+      "k_recommended": 4,
+      "events": [
+        {
+          "id": "e01",
+          "t": 1,
+          "actor": "engineering",
+          "weight": 55,
+          "desc": "Legacy Power Peg code remains on servers \u2014 repurposed flag used by new RLP code",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e02",
+          "t": 2,
+          "actor": "engineering",
+          "weight": 40,
+          "desc": "No automated deployment verification system \u2014 manual process for code rollout",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e03",
+          "t": 3,
+          "actor": "operations",
+          "weight": 35,
+          "desc": "NYSE announces new Retail Liquidity Program starting Aug 1 \u2014 Knight develops new SMARS code",
+          "phase": "SETUP"
+        },
+        {
+          "id": "e04",
+          "t": 4,
+          "actor": "deployment_system",
+          "weight": 60,
+          "desc": "Technician deploys new SMARS code to 7 of 8 servers \u2014 8th server retains obsolete Power Peg code",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e05",
+          "t": 5,
+          "actor": "deployment_system",
+          "weight": 50,
+          "desc": "No deployment verification run \u2014 mismatch between servers goes undetected",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e06",
+          "t": 6,
+          "actor": "operations",
+          "weight": 30,
+          "desc": "Market opens Aug 1 \u2014 RLP orders route to all 8 SMARS servers",
+          "phase": "DEVELOPMENT"
+        },
+        {
+          "id": "e07",
+          "t": 7,
+          "actor": "deployment_system",
+          "weight": 95,
+          "desc": "Server 8 receives RLP orders, activates dormant Power Peg code \u2014 begins executing millions of unintended trades",
+          "phase": "TURNING_POINT"
+        },
+        {
+          "id": "e08",
+          "t": 8,
+          "actor": "operations",
+          "weight": 70,
+          "desc": "Knight accumulates massive unintended positions \u2014 $440M loss in 45 minutes",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e09",
+          "t": 9,
+          "actor": "operations",
+          "weight": 45,
+          "desc": "Kill switch not available \u2014 45 minutes to identify and stop the errant server",
+          "phase": "RESOLUTION"
+        },
+        {
+          "id": "e10",
+          "t": 10,
+          "actor": "operations",
+          "weight": 25,
+          "desc": "Knight Capital forced into emergency acquisition by Getco to avoid bankruptcy",
+          "phase": "RESOLUTION"
+        }
+      ],
+      "pivot_ground_truth": "e07",
+      "competing_pivots": [
+        "e04",
+        "e01"
+      ],
+      "mirage_scenario": "The deployment error (e04) is the intuitive 'human error' pivot. Under compression, the specific server-level activation mechanism (e07) gets merged with the deployment, losing the distinction between 'incomplete deployment' and 'dormant code activated by new order routing.'"
+    }
+  ]
+}
