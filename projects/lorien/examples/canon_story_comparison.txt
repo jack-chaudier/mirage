@@ -1,0 +1,26 @@
+=== CANON STORY COMPARISON ===
+
+Story B Fresh (seed 51, no canon)
+---------------------------------
+Protagonist: thorne
+Words: 2156
+Scenes: 2
+Cost: $0.0399
+Time: 105.66s
+Opening line: "The table was set with the kind of precision that suggested apology. White linen, a candle at the ce..."
+
+Story B Canon (seed 51, with Story A canon)
+---------------------------------------------
+Protagonist: victor
+Words: 2813
+Scenes: 3
+Cost: $0.0602
+Time: 150.61s
+Opening line: "The table was set with white plates that caught the light—too bright, Diana thought, and immediately..."
+
+Key differences in simulation input:
+  Inherited beliefs: 18
+  Starting location tension: dining_table=0.97, foyer=0.52
+  First event divergence: index 0 (fresh=confide, canon=reveal)
+
+Total generation cost: $0.1000

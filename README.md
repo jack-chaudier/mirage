@@ -9,11 +9,17 @@ This repository contains the core code and curated research artifacts for the Mi
 - `papers/paper_01_absorbing_states_in_greedy_search.pdf`
 - `papers/paper_02_streaming_oscillation_traps.pdf`
 - `papers/paper_03_validity_mirage_compression.pdf`
+- Full LaTeX sources (all paper drafts + bib + figures):
+  - `papers/sources/rhun/`
+  - `papers/sources/lorien/`
 
 ## What Is Included
 - `endogenous_context_theory/`: core code, generators, tests, and runners
 - `papers/`: primary manuscript set and supporting roadmap document
+- `projects/rhun/`: imported Rhun code, experiments, context docs, and paper workspace
+- `projects/lorien/`: imported Lorien code, docs, specs, examples, and paper workspace
 - `docs/`: consolidated research context, independent review, artifact index, reproducibility checklist
+  - unified mirror map: `docs/unified-repo-map.md`
 - `derived/`: independently verified summary tables (balanced vs imbalanced Qwen comparisons)
 - Colab notebooks for training/evaluation:
   - `qwen_mirage_aware_training_eval_colab.ipynb`
@@ -69,6 +75,12 @@ Detailed write-up:
 1. Start with `endogenous_context_theory/README.md`.
 2. Use canonical scripts in `endogenous_context_theory/scripts/` and notebooks in `endogenous_context_theory/notebooks/`.
 3. Follow `docs/reproducibility-checklist.md`.
+
+## Unified Workspace Notes
+- This repo is the canonical home for ongoing work across Mirage + Rhun + Lorien.
+- External repos are mirrored under `projects/` with caches, secrets, and heavy runtime outputs excluded.
+- Paper 3 PDF here is synced to the latest `projects/rhun/paper/context_algebra_draft.pdf`.
+- Re-sync helper: `scripts/sync_external_projects.sh`.
 
 ## Notes on Excluded Artifacts
 Large tar/zip model artifacts and local environment files are intentionally excluded from git history via `.gitignore`.

@@ -1,0 +1,40 @@
+{
+  "seed": 51,
+  "status": "complete",
+  "word_count": 2416,
+  "scenes_total": 3,
+  "scenes_ok": 3,
+  "scenes_failed": 0,
+  "scene_outcomes": [
+    {
+      "scene_index": 0,
+      "status": "ok",
+      "word_count": 612,
+      "error_type": null,
+      "retries": 0,
+      "generation_time_s": 31.79
+    },
+    {
+      "scene_index": 1,
+      "status": "ok",
+      "word_count": 1307,
+      "error_type": null,
+      "retries": 0,
+      "generation_time_s": 46.28
+    },
+    {
+      "scene_index": 2,
+      "status": "ok",
+      "word_count": 491,
+      "error_type": null,
+      "retries": 0,
+      "generation_time_s": 27.75
+    }
+  ],
+  "total_generation_time_s": 127.48,
+  "input_tokens": 22858,
+  "output_tokens": 6748,
+  "est_cost": 0.045278399999999996,
+  "repetitions_removed": 0,
+  "timestamp": "2026-02-09T17:16:42"
+}

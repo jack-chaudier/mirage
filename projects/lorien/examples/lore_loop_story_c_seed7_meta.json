@@ -1,0 +1,103 @@
+{
+  "label": "Story C",
+  "seed": 7,
+  "status": "complete",
+  "protagonist": "lydia",
+  "word_count": 2549,
+  "scene_count": 3,
+  "generation_time_seconds": 132.36,
+  "estimated_cost_usd": 0.0589984,
+  "model_used": "grok-4-1-fast",
+  "input_tokens": 29623,
+  "output_tokens": 8825,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 0,
+  "model_history": [
+    {
+      "provider": "anthropic",
+      "tier": "creative",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "provider": "xai",
+      "tier": "structural",
+      "model": "grok-4-1-fast"
+    },
+    {
+      "provider": "anthropic",
+      "tier": "creative",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "provider": "xai",
+      "tier": "structural",
+      "model": "grok-4-1-fast"
+    },
+    {
+      "provider": "anthropic",
+      "tier": "creative_deep",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "provider": "xai",
+      "tier": "structural",
+      "model": "grok-4-1-fast"
+    },
+    {
+      "provider": "xai",
+      "tier": "structural",
+      "model": "grok-4-1-fast"
+    },
+    {
+      "provider": "xai",
+      "tier": "structural",
+      "model": "grok-4-1-fast"
+    },
+    {
+      "provider": "xai",
+      "tier": "structural",
+      "model": "grok-4-1-fast"
+    },
+    {
+      "provider": "xai",
+      "tier": "structural",
+      "model": "grok-4-1-fast"
+    },
+    {
+      "provider": "xai",
+      "tier": "structural",
+      "model": "grok-4-1-fast"
+    },
+    {
+      "provider": "xai",
+      "tier": "structural",
+      "model": "grok-4-1-fast"
+    }
+  ],
+  "arc_used_fallback": false,
+  "arc_validation_valid": true,
+  "arc_event_count": 20,
+  "arc_diagnostics": null,
+  "fallback_warning": null,
+  "lore_scene_count": 3,
+  "lore_canon_fact_count": 7,
+  "lore_texture_fact_count": 12,
+  "texture_committed_count": 12,
+  "texture_committed_keys": [
+    "canon_story_story_c_seed7__tf_0_0",
+    "canon_story_story_c_seed7__tf_0_1",
+    "canon_story_story_c_seed7__tf_0_2",
+    "canon_story_story_c_seed7__tf_0_3",
+    "canon_story_story_c_seed7__tf_1_0",
+    "canon_story_story_c_seed7__tf_1_1",
+    "canon_story_story_c_seed7__tf_1_2",
+    "canon_story_story_c_seed7__tf_1_3",
+    "canon_story_story_c_seed7__tf_2_0",
+    "canon_story_story_c_seed7__tf_2_1",
+    "canon_story_story_c_seed7__tf_2_2",
+    "canon_story_story_c_seed7__tf_2_3"
+  ],
+  "starting_canon_texture_count": 24,
+  "ending_canon_texture_count": 36,
+  "error": null
+}

@@ -1,0 +1,644 @@
+{
+  "format_version": "1.0.0",
+  "generated_at": "2026-02-11T17:33:34.093363+00:00",
+  "parameters": {
+    "scenario": "dinner_party",
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      42,
+      51
+    ],
+    "explicit_seed_mode": true,
+    "event_limit": 200,
+    "tick_limit": 300,
+    "time_scale": 4.0
+  },
+  "environment": {
+    "engine_python": "src/engine/.venv/bin/python"
+  },
+  "determinism_check": {
+    "seed": 1,
+    "pyhashseeds": [
+      "12345",
+      "67890"
+    ],
+    "event_stream_sha256": [
+      "af713f951a2fee99261946c3d24501a6e5d326a3616f540aad7844c5fa1a540a",
+      "af713f951a2fee99261946c3d24501a6e5d326a3616f540aad7844c5fa1a540a"
+    ],
+    "matches": true
+  },
+  "aggregate": {
+    "run_count": 12,
+    "mean_total_sim_time": 118.5,
+    "min_total_sim_time": 115.0,
+    "max_total_sim_time": 125.0,
+    "runs_with_catastrophe": 12,
+    "total_catastrophes": 50,
+    "dominant_catastrophe_agent": "victor",
+    "dominant_catastrophe_share": 0.34,
+    "catastrophes_by_agent": {
+      "diana": 3,
+      "elena": 2,
+      "lydia": 4,
+      "marcus": 11,
+      "thorne": 13,
+      "victor": 17
+    },
+    "mean_location_share": {
+      "balcony": 0.12916666666666668,
+      "bathroom": 0.030416666666666665,
+      "dining_table": 0.7683333333333334,
+      "foyer": 0.04041666666666666,
+      "kitchen": 0.03166666666666667
+    },
+    "representative_seed_ranking": [
+      {
+        "rank": 1,
+        "seed": 9,
+        "score": {
+          "catastrophe_count": 8,
+          "catastrophe_agent_diversity": 6,
+          "locations_used_count": 5,
+          "total_sim_time": 125.0
+        }
+      },
+      {
+        "rank": 2,
+        "seed": 10,
+        "score": {
+          "catastrophe_count": 7,
+          "catastrophe_agent_diversity": 6,
+          "locations_used_count": 4,
+          "total_sim_time": 121.0
+        }
+      },
+      {
+        "rank": 3,
+        "seed": 6,
+        "score": {
+          "catastrophe_count": 7,
+          "catastrophe_agent_diversity": 5,
+          "locations_used_count": 5,
+          "total_sim_time": 125.0
+        }
+      },
+      {
+        "rank": 4,
+        "seed": 42,
+        "score": {
+          "catastrophe_count": 5,
+          "catastrophe_agent_diversity": 3,
+          "locations_used_count": 5,
+          "total_sim_time": 121.0
+        }
+      },
+      {
+        "rank": 5,
+        "seed": 4,
+        "score": {
+          "catastrophe_count": 4,
+          "catastrophe_agent_diversity": 3,
+          "locations_used_count": 5,
+          "total_sim_time": 120.0
+        }
+      },
+      {
+        "rank": 6,
+        "seed": 51,
+        "score": {
+          "catastrophe_count": 4,
+          "catastrophe_agent_diversity": 3,
+          "locations_used_count": 5,
+          "total_sim_time": 115.0
+        }
+      },
+      {
+        "rank": 7,
+        "seed": 3,
+        "score": {
+          "catastrophe_count": 3,
+          "catastrophe_agent_diversity": 3,
+          "locations_used_count": 5,
+          "total_sim_time": 118.0
+        }
+      },
+      {
+        "rank": 8,
+        "seed": 5,
+        "score": {
+          "catastrophe_count": 3,
+          "catastrophe_agent_diversity": 3,
+          "locations_used_count": 5,
+          "total_sim_time": 116.0
+        }
+      },
+      {
+        "rank": 9,
+        "seed": 7,
+        "score": {
+          "catastrophe_count": 3,
+          "catastrophe_agent_diversity": 3,
+          "locations_used_count": 5,
+          "total_sim_time": 116.0
+        }
+      },
+      {
+        "rank": 10,
+        "seed": 1,
+        "score": {
+          "catastrophe_count": 2,
+          "catastrophe_agent_diversity": 2,
+          "locations_used_count": 5,
+          "total_sim_time": 115.0
+        }
+      },
+      {
+        "rank": 11,
+        "seed": 2,
+        "score": {
+          "catastrophe_count": 2,
+          "catastrophe_agent_diversity": 2,
+          "locations_used_count": 5,
+          "total_sim_time": 115.0
+        }
+      },
+      {
+        "rank": 12,
+        "seed": 8,
+        "score": {
+          "catastrophe_count": 2,
+          "catastrophe_agent_diversity": 2,
+          "locations_used_count": 5,
+          "total_sim_time": 115.0
+        }
+      }
+    ],
+    "representative_seed_top3": [
+      {
+        "rank": 1,
+        "seed": 9,
+        "score": {
+          "catastrophe_count": 8,
+          "catastrophe_agent_diversity": 6,
+          "locations_used_count": 5,
+          "total_sim_time": 125.0
+        }
+      },
+      {
+        "rank": 2,
+        "seed": 10,
+        "score": {
+          "catastrophe_count": 7,
+          "catastrophe_agent_diversity": 6,
+          "locations_used_count": 4,
+          "total_sim_time": 121.0
+        }
+      },
+      {
+        "rank": 3,
+        "seed": 6,
+        "score": {
+          "catastrophe_count": 7,
+          "catastrophe_agent_diversity": 5,
+          "locations_used_count": 5,
+          "total_sim_time": 125.0
+        }
+      }
+    ]
+  },
+  "runs": [
+    {
+      "seed": 1,
+      "time_scale": 4.0,
+      "total_sim_time": 115.0,
+      "total_ticks": 33,
+      "event_count": 200,
+      "catastrophe_count": 2,
+      "catastrophes_by_agent": {
+        "thorne": 1,
+        "victor": 1
+      },
+      "locations_used_count": 5,
+      "locations_used": [
+        "balcony",
+        "bathroom",
+        "dining_table",
+        "foyer",
+        "kitchen"
+      ],
+      "location_distribution": {
+        "balcony": 0.13,
+        "bathroom": 0.02,
+        "dining_table": 0.705,
+        "foyer": 0.055,
+        "kitchen": 0.09
+      },
+      "event_stream_sha256": "af713f951a2fee99261946c3d24501a6e5d326a3616f540aad7844c5fa1a540a",
+      "determinism_metadata": {
+        "python_version": "3.14.2 (main, Dec  5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.6.3.2)]",
+        "git_commit": "55acd121c1b89c2e954358c6e0704b5c3cd2fb7f",
+        "config_hash": "888448c06b85"
+      },
+      "scene_count": 23
+    },
+    {
+      "seed": 2,
+      "time_scale": 4.0,
+      "total_sim_time": 115.0,
+      "total_ticks": 33,
+      "event_count": 200,
+      "catastrophe_count": 2,
+      "catastrophes_by_agent": {
+        "thorne": 1,
+        "victor": 1
+      },
+      "locations_used_count": 5,
+      "locations_used": [
+        "balcony",
+        "bathroom",
+        "dining_table",
+        "foyer",
+        "kitchen"
+      ],
+      "location_distribution": {
+        "balcony": 0.08,
+        "bathroom": 0.04,
+        "dining_table": 0.795,
+        "foyer": 0.07,
+        "kitchen": 0.015
+      },
+      "event_stream_sha256": "4a34959ace37826b715daaca6ea351925c7908dcc8bc6346796dd11bb8b54e13",
+      "determinism_metadata": {
+        "python_version": "3.14.2 (main, Dec  5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.6.3.2)]",
+        "git_commit": "55acd121c1b89c2e954358c6e0704b5c3cd2fb7f",
+        "config_hash": "888448c06b85"
+      },
+      "scene_count": 29
+    },
+    {
+      "seed": 3,
+      "time_scale": 4.0,
+      "total_sim_time": 118.0,
+      "total_ticks": 33,
+      "event_count": 200,
+      "catastrophe_count": 3,
+      "catastrophes_by_agent": {
+        "marcus": 1,
+        "thorne": 1,
+        "victor": 1
+      },
+      "locations_used_count": 5,
+      "locations_used": [
+        "balcony",
+        "bathroom",
+        "dining_table",
+        "foyer",
+        "kitchen"
+      ],
+      "location_distribution": {
+        "balcony": 0.135,
+        "bathroom": 0.025,
+        "dining_table": 0.78,
+        "foyer": 0.015,
+        "kitchen": 0.045
+      },
+      "event_stream_sha256": "65a2768d0c5732a58dad9e8ed7d948a5af50a2ecc1b6cabb32298cbe4bc5be3d",
+      "determinism_metadata": {
+        "python_version": "3.14.2 (main, Dec  5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.6.3.2)]",
+        "git_commit": "55acd121c1b89c2e954358c6e0704b5c3cd2fb7f",
+        "config_hash": "888448c06b85"
+      },
+      "scene_count": 26
+    },
+    {
+      "seed": 4,
+      "time_scale": 4.0,
+      "total_sim_time": 120.0,
+      "total_ticks": 33,
+      "event_count": 200,
+      "catastrophe_count": 4,
+      "catastrophes_by_agent": {
+        "marcus": 1,
+        "thorne": 1,
+        "victor": 2
+      },
+      "locations_used_count": 5,
+      "locations_used": [
+        "balcony",
+        "bathroom",
+        "dining_table",
+        "foyer",
+        "kitchen"
+      ],
+      "location_distribution": {
+        "balcony": 0.135,
+        "bathroom": 0.015,
+        "dining_table": 0.78,
+        "foyer": 0.06,
+        "kitchen": 0.01
+      },
+      "event_stream_sha256": "5b00745d0ff327d0d21ac4372cf889255edec59eb5a232dcff28df885aeb8a90",
+      "determinism_metadata": {
+        "python_version": "3.14.2 (main, Dec  5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.6.3.2)]",
+        "git_commit": "55acd121c1b89c2e954358c6e0704b5c3cd2fb7f",
+        "config_hash": "888448c06b85"
+      },
+      "scene_count": 29
+    },
+    {
+      "seed": 5,
+      "time_scale": 4.0,
+      "total_sim_time": 116.0,
+      "total_ticks": 32,
+      "event_count": 200,
+      "catastrophe_count": 3,
+      "catastrophes_by_agent": {
+        "marcus": 1,
+        "thorne": 1,
+        "victor": 1
+      },
+      "locations_used_count": 5,
+      "locations_used": [
+        "balcony",
+        "bathroom",
+        "dining_table",
+        "foyer",
+        "kitchen"
+      ],
+      "location_distribution": {
+        "balcony": 0.125,
+        "bathroom": 0.035,
+        "dining_table": 0.78,
+        "foyer": 0.02,
+        "kitchen": 0.04
+      },
+      "event_stream_sha256": "98f55cee7036797cef28865a985780d9d82e2a134f9141225b4b2f36769cd7cd",
+      "determinism_metadata": {
+        "python_version": "3.14.2 (main, Dec  5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.6.3.2)]",
+        "git_commit": "55acd121c1b89c2e954358c6e0704b5c3cd2fb7f",
+        "config_hash": "888448c06b85"
+      },
+      "scene_count": 25
+    },
+    {
+      "seed": 6,
+      "time_scale": 4.0,
+      "total_sim_time": 125.0,
+      "total_ticks": 33,
+      "event_count": 200,
+      "catastrophe_count": 7,
+      "catastrophes_by_agent": {
+        "diana": 1,
+        "lydia": 1,
+        "marcus": 1,
+        "thorne": 2,
+        "victor": 2
+      },
+      "locations_used_count": 5,
+      "locations_used": [
+        "balcony",
+        "bathroom",
+        "dining_table",
+        "foyer",
+        "kitchen"
+      ],
+      "location_distribution": {
+        "balcony": 0.12,
+        "bathroom": 0.025,
+        "dining_table": 0.805,
+        "foyer": 0.03,
+        "kitchen": 0.02
+      },
+      "event_stream_sha256": "c82075e4b100c7122fe34f8aba14fb33333a4fecf7927804f0c210b3b48bf561",
+      "determinism_metadata": {
+        "python_version": "3.14.2 (main, Dec  5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.6.3.2)]",
+        "git_commit": "55acd121c1b89c2e954358c6e0704b5c3cd2fb7f",
+        "config_hash": "888448c06b85"
+      },
+      "scene_count": 24
+    },
+    {
+      "seed": 7,
+      "time_scale": 4.0,
+      "total_sim_time": 116.0,
+      "total_ticks": 32,
+      "event_count": 200,
+      "catastrophe_count": 3,
+      "catastrophes_by_agent": {
+        "marcus": 1,
+        "thorne": 1,
+        "victor": 1
+      },
+      "locations_used_count": 5,
+      "locations_used": [
+        "balcony",
+        "bathroom",
+        "dining_table",
+        "foyer",
+        "kitchen"
+      ],
+      "location_distribution": {
+        "balcony": 0.13,
+        "bathroom": 0.02,
+        "dining_table": 0.745,
+        "foyer": 0.055,
+        "kitchen": 0.05
+      },
+      "event_stream_sha256": "69e6a9a3276bb3a93f8233cbbb763a6c888a5e6f34218fc44ceeb4d0bb91c10e",
+      "determinism_metadata": {
+        "python_version": "3.14.2 (main, Dec  5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.6.3.2)]",
+        "git_commit": "55acd121c1b89c2e954358c6e0704b5c3cd2fb7f",
+        "config_hash": "888448c06b85"
+      },
+      "scene_count": 22
+    },
+    {
+      "seed": 8,
+      "time_scale": 4.0,
+      "total_sim_time": 115.0,
+      "total_ticks": 33,
+      "event_count": 200,
+      "catastrophe_count": 2,
+      "catastrophes_by_agent": {
+        "lydia": 1,
+        "marcus": 1
+      },
+      "locations_used_count": 5,
+      "locations_used": [
+        "balcony",
+        "bathroom",
+        "dining_table",
+        "foyer",
+        "kitchen"
+      ],
+      "location_distribution": {
+        "balcony": 0.145,
+        "bathroom": 0.02,
+        "dining_table": 0.77,
+        "foyer": 0.035,
+        "kitchen": 0.03
+      },
+      "event_stream_sha256": "05e891cd341a31b2f357ea204b46fdc8e31c7241fc676de1338d6a0b77b94c0d",
+      "determinism_metadata": {
+        "python_version": "3.14.2 (main, Dec  5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.6.3.2)]",
+        "git_commit": "55acd121c1b89c2e954358c6e0704b5c3cd2fb7f",
+        "config_hash": "888448c06b85"
+      },
+      "scene_count": 26
+    },
+    {
+      "seed": 9,
+      "time_scale": 4.0,
+      "total_sim_time": 125.0,
+      "total_ticks": 32,
+      "event_count": 200,
+      "catastrophe_count": 8,
+      "catastrophes_by_agent": {
+        "diana": 1,
+        "elena": 1,
+        "lydia": 1,
+        "marcus": 2,
+        "thorne": 1,
+        "victor": 2
+      },
+      "locations_used_count": 5,
+      "locations_used": [
+        "balcony",
+        "bathroom",
+        "dining_table",
+        "foyer",
+        "kitchen"
+      ],
+      "location_distribution": {
+        "balcony": 0.255,
+        "bathroom": 0.055,
+        "dining_table": 0.635,
+        "foyer": 0.03,
+        "kitchen": 0.025
+      },
+      "event_stream_sha256": "115bfab0a2440b3e647167c7cd74091fca77c66fa80b897c95296a2998c2aa67",
+      "determinism_metadata": {
+        "python_version": "3.14.2 (main, Dec  5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.6.3.2)]",
+        "git_commit": "55acd121c1b89c2e954358c6e0704b5c3cd2fb7f",
+        "config_hash": "888448c06b85"
+      },
+      "scene_count": 24
+    },
+    {
+      "seed": 10,
+      "time_scale": 4.0,
+      "total_sim_time": 121.0,
+      "total_ticks": 33,
+      "event_count": 200,
+      "catastrophe_count": 7,
+      "catastrophes_by_agent": {
+        "diana": 1,
+        "elena": 1,
+        "lydia": 1,
+        "marcus": 1,
+        "thorne": 1,
+        "victor": 2
+      },
+      "locations_used_count": 4,
+      "locations_used": [
+        "balcony",
+        "bathroom",
+        "dining_table",
+        "foyer"
+      ],
+      "location_distribution": {
+        "balcony": 0.1,
+        "bathroom": 0.035,
+        "dining_table": 0.81,
+        "foyer": 0.055
+      },
+      "event_stream_sha256": "c41029d2998d9ac3fb6406e1a08095874a5abcd6adf91554badc345fe46e11eb",
+      "determinism_metadata": {
+        "python_version": "3.14.2 (main, Dec  5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.6.3.2)]",
+        "git_commit": "55acd121c1b89c2e954358c6e0704b5c3cd2fb7f",
+        "config_hash": "888448c06b85"
+      },
+      "scene_count": 28
+    },
+    {
+      "seed": 42,
+      "time_scale": 4.0,
+      "total_sim_time": 121.0,
+      "total_ticks": 33,
+      "event_count": 200,
+      "catastrophe_count": 5,
+      "catastrophes_by_agent": {
+        "marcus": 1,
+        "thorne": 2,
+        "victor": 2
+      },
+      "locations_used_count": 5,
+      "locations_used": [
+        "balcony",
+        "bathroom",
+        "dining_table",
+        "foyer",
+        "kitchen"
+      ],
+      "location_distribution": {
+        "balcony": 0.09,
+        "bathroom": 0.04,
+        "dining_table": 0.8,
+        "foyer": 0.025,
+        "kitchen": 0.045
+      },
+      "event_stream_sha256": "1cdf660c4472a69067c54880adac77649186a2c434ac4881aef47addbc6dc250",
+      "determinism_metadata": {
+        "python_version": "3.14.2 (main, Dec  5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.6.3.2)]",
+        "git_commit": "55acd121c1b89c2e954358c6e0704b5c3cd2fb7f",
+        "config_hash": "888448c06b85"
+      },
+      "scene_count": 30
+    },
+    {
+      "seed": 51,
+      "time_scale": 4.0,
+      "total_sim_time": 115.0,
+      "total_ticks": 32,
+      "event_count": 200,
+      "catastrophe_count": 4,
+      "catastrophes_by_agent": {
+        "marcus": 1,
+        "thorne": 1,
+        "victor": 2
+      },
+      "locations_used_count": 5,
+      "locations_used": [
+        "balcony",
+        "bathroom",
+        "dining_table",
+        "foyer",
+        "kitchen"
+      ],
+      "location_distribution": {
+        "balcony": 0.105,
+        "bathroom": 0.035,
+        "dining_table": 0.815,
+        "foyer": 0.035,
+        "kitchen": 0.01
+      },
+      "event_stream_sha256": "8b6b6c16730f674809dd40051e3fc63997fbf50708d6b2d02c6b1ec288802871",
+      "determinism_metadata": {
+        "python_version": "3.14.2 (main, Dec  5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.6.3.2)]",
+        "git_commit": "55acd121c1b89c2e954358c6e0704b5c3cd2fb7f",
+        "config_hash": "888448c06b85"
+      },
+      "scene_count": 27
+    }
+  ]
+}

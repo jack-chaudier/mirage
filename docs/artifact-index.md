@@ -6,12 +6,33 @@
 - `docs/massive-context-document.md`
 - `docs/independent-review-and-value-assessment.md`
 - `docs/reproducibility-checklist.md`
+- `docs/unified-repo-map.md`
 
 ## Papers
 - `papers/paper_01_absorbing_states_in_greedy_search.pdf`
 - `papers/paper_02_streaming_oscillation_traps.pdf`
 - `papers/paper_03_validity_mirage_compression.pdf`
+- `papers/sources/rhun/` (all Rhun paper sources, including latest P3 TeX)
+- `papers/sources/lorien/` (all Lorien paper sources)
 - `papers/lorien_audit_and_roadmap.docx`
+
+## Imported Project Context (Unified Repo)
+- `projects/rhun/README.md`
+- `projects/rhun/RHUN_CONTEXT.md`
+- `projects/rhun/RHUN_CONTEXT_v2.md`
+- `projects/rhun/RHUN_CONTEXT_v3.md`
+- `projects/rhun/RHUN_CONTEXT_v4.md`
+- `projects/rhun/rhun/` (core Rhun library code)
+- `projects/rhun/experiments/` (experiment runners; heavy outputs excluded)
+- `projects/rhun/paper/` (native Rhun paper workspace)
+- `projects/lorien/README.md`
+- `projects/lorien/docs/`
+- `projects/lorien/specs/`
+- `projects/lorien/src/engine/`
+- `projects/lorien/src/visualization/src/`
+- `projects/lorien/paper/` (native Lorien paper workspace)
+- `scripts/sync_external_projects.sh` (one-command mirror refresh)
+- `docs/imported-projects-sha256.txt` (provenance hash manifest for mirrored files)
 
 ## Core Theory and Experiments
 - `endogenous_context_theory/src/`

@@ -1,0 +1,56 @@
+=== LORE LOOP CHAIN: A → B → C ===
+
+Texture compounding across three stories:
+
+Story A (seed 42)
+-----------------
+  Protagonist: lydia
+  Words: 2945
+  Scenes: 3
+  Arc valid: True
+  Arc used fallback: False
+  Cost: $0.0684
+  Time: 189.8s
+  Starting texture count: 0
+  Ending texture count: 9
+  Texture committed this story: 9
+  Lore: scenes=3, canon_facts=9, texture_facts=9
+
+Story B (seed 51)
+-----------------
+  Protagonist: victor
+  Words: 3154
+  Scenes: 3
+  Arc valid: True
+  Arc used fallback: False
+  Cost: $0.0744
+  Time: 192.6s
+  Starting texture count: 9
+  Ending texture count: 24
+  Texture committed this story: 15
+  Lore: scenes=3, canon_facts=10, texture_facts=15
+
+Story C (seed 7)
+----------------
+  Protagonist: lydia
+  Words: 2549
+  Scenes: 3
+  Arc valid: True
+  Arc used fallback: False
+  Cost: $0.0590
+  Time: 132.4s
+  Starting texture count: 24
+  Ending texture count: 36
+  Texture committed this story: 12
+  Lore: scenes=3, canon_facts=7, texture_facts=12
+
+Texture accumulation summary:
+  Story A: 0 → 9 texture facts
+  Story B: 9 → 24 texture facts
+  Story C: 24 → 36 texture facts
+
+Monotonic texture growth: YES
+Cross-story compounding (C inherits > A produced): YES
+
+Total chain cost: $0.2018
+Total chain time: 515.1s

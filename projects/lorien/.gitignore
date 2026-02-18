@@ -1,0 +1,54 @@
+# JS
+node_modules/
+dist/
+.vite/
+.npm-cache/
+
+# Local tools
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+**/*.egg-info/
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# NarrativeField generated outputs (keep canonical examples)
+data/*.nf-sim.json
+data/*.nf-viz.json
+!data/fake-dinner-party.nf-viz.json
+!data/dinner_party_001.nf-sim.json
+!data/dinner_party_001.nf-viz.json
+
+# Engine live test outputs
+src/engine/scripts/output/
+
+# Science harness outputs
+science_report.json
+data/science_report.json
+
+# Checkpoint artifacts (keep committed canonical checkpoints via allowlist)
+data/checkpoints/*.json
+!data/checkpoints/2026-02-checkpoint-science.json
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+
+# OS
+.DS_Store
+
+# Local docs (do not commit)
+Lorien_Audit_and_Roadmap.docx

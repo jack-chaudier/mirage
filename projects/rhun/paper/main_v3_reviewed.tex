@@ -1,0 +1,373 @@
+\documentclass{article}
+\usepackage[preprint]{neurips_2023}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsfonts}
+\usepackage{nicefrac}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\title{Absorbing States in Greedy Search: When Endogenous Constraints Break Sequential Extraction}
+\author{Anonymous}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+\newtheorem{observation}{Observation}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We study constrained extraction of weighted event subsequences under a sequential phase grammar with an endogenous turning point. The turning point is defined by an \texttt{argmax} over the selected subset, so feasibility constraints depend on the evolving solution itself. We prove a sufficient-condition impossibility result for a common greedy policy: if the number of development-eligible events before the greedy-forced turning point is smaller than the required prefix length, greedy cannot produce any valid sequence. The proof uses an absorbing-state argument in the product automaton of event graph and grammar DFA. Empirically, the result is exact in its domain: across 11{,}400 boundary instances, false positives are zero under the development-eligible prefix measure, with only known measurement artifacts under alternate counters. We then present a complete failure taxonomy and a constructive algorithm hierarchy. The hierarchy reveals a partial order with sharp boundaries, including a constraint antagonism regime where span-only viability filtering collapses to 0\% validity on multi-burst+gap graphs. A TP-conditioned dynamic program recovers 94\% (multi-burst+gap) and 96\% (bursty+gap), while preserving zero regressions. Across valid cases, approximation quality is consistently high, showing a feasibility-dominated landscape.
+\end{abstract}
+
+\section{Introduction}
+Greedy selection is the default strategy for sequential extraction in many settings because it is simple, fast, and often effective. In hereditary systems with suitable exchange structure, greedy can enjoy strong guarantees. In many practical systems, however, feasibility constraints are \emph{endogenous}: a distinguished selected element determines how all other elements are interpreted. This coupling can invalidate classical greedy assumptions.
+
+We study extraction from temporally ordered event graphs under a phase grammar with ordered states \{SETUP, DEVELOPMENT, TURNING\_POINT, RESOLUTION\}. The grammar requires at least $k$ DEVELOPMENT events before the TURNING\_POINT. The turning point itself is endogenous: it is the maximum-weight focal-actor event in the extracted sequence.
+
+Our contributions are:
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{Prefix-Constraint Impossibility Theorem.} A sufficient-condition failure criterion with zero false positives in the validated regime (11{,}400+ instances).
+  \item \textbf{Complete failure taxonomy.} Four classes with mechanism, prevalence, and constructive fix or structural boundary.
+  \item \textbf{Constructive hierarchy.} From myopic greedy to viability-aware variants to TP-conditioned dynamic programming, including a constraint antagonism result.
+  \item \textbf{Feasibility-dominated quality result.} When valid sequences exist, approximation ratios are consistently high (typically $>0.95$).
+  \item \textbf{Invariance validation.} The theorem persists across actor count, event density, weight families, and topology sweeps.
+\end{enumerate}
+
+The empirical program was motivated by a predecessor system (3{,}250+ deterministic runs), but the framework studied here is domain-agnostic and uses only event, actor, timestamp, and grammar primitives.
+
+\section{Problem Formulation}
+\begin{definition}[Event Graph]
+An event graph is $G=(V,t,w,a)$ where $V$ is a finite event set, $t:V\to\mathbb{R}$ is a strict temporal order, $w:V\to\mathbb{R}_{>0}$ is a weight map, and $a:V\to A$ assigns actors.
+\end{definition}
+
+\begin{definition}[Phase Grammar]
+A phase grammar is a DFA $\mathcal{A}=(Q,\Sigma,\delta,q_0,F)$ over
+\[
+\Sigma=\{\text{SETUP},\text{DEVELOPMENT},\text{TURNING\_POINT},\text{RESOLUTION}\},
+\]
+with monotone phase transitions and acceptance requiring at least $k$ DEVELOPMENT labels before TURNING\_POINT.
+\end{definition}
+
+\begin{definition}[Phase Classifier]
+Given subsequence $S$ and designated turning point $\tau\in S$, classifier $\phi_\tau:S\to\Sigma$ assigns pre-$\tau$ events to SETUP/DEVELOPMENT (position-based rule), $\tau$ to TURNING\_POINT, and post-$\tau$ events to RESOLUTION.
+\end{definition}
+
+\begin{definition}[Endogenous Turning Point]
+For focal actor $a^*$, the turning point is
+\[
+\tau(S)=\arg\max_{v\in S,\, a(v)=a^*} w(v).
+\]
+Thus, TP identity depends on the selected set.
+\end{definition}
+
+\begin{definition}[Extraction Problem]
+Given $G$, focal actor $a^*$, grammar parameter $k$, length limit $L$, minimum timespan fraction $s$, and maximum temporal gap $G_{\max}$, find
+\[
+S^*=\arg\max_{S\subseteq V} \sum_{v\in S} w(v)
+\]
+subject to: (i) $|S|\le L$, (ii) $S$ accepted by $\mathcal{A}$ under $\phi_{\tau(S)}$, and (iii) auxiliary temporal constraints.
+\end{definition}
+
+\begin{definition}[Greedy Policy]
+Sort by decreasing weight, inject the max-weight focal event into each candidate pool, and construct a sequence by forward weight-maximizing selection.
+\end{definition}
+
+This differs from standard regular-language constrained optimization because the automaton pivot is endogenous rather than fixed.
+
+\begin{proposition}[Non-hereditary structure]
+\label{prop:nonhereditary}
+Under the extraction problem with endogenous TP, the feasible family $\mathcal{F} = \{S \subseteq V : S \text{ accepted by } \mathcal{A} \text{ under } \phi_{\tau(S)}\}$ violates both the hereditary axiom and the exchange axiom of greedoids.
+\end{proposition}
+\begin{proof}[Proof sketch]
+For hereditary violation: let $S \in \mathcal{F}$ and let $v = \tau(S)$ be the TP. Removing $v$ changes $\tau(S \setminus \{v\})$, reassigning all phase labels and potentially making $S \setminus \{v\} \notin \mathcal{F}$. For exchange violation: let $S_1, S_2 \in \mathcal{F}$ with $|S_1| < |S_2|$. Adding any $v \in S_2 \setminus S_1$ to $S_1$ can change $\tau(S_1 \cup \{v\})$, invalidating the phase structure. Empirically, both axioms fail on all 40 tested instances ($n{=}20$, $N_{\text{actors}}{=}3$).
+\end{proof}
+
+This places the system outside the Korte--Lov\'{a}sz greedoid framework \citep{korte1981mathematical,bjorner1992greedoids}, in the regime of general independence systems where greedy has no approximation guarantees.
+
+\section{Prefix-Constraint Impossibility Theorem}
+\begin{theorem}[Prefix-Constraint Impossibility]
+Let greedy force $e^*=\arg\max_{v:a(v)=a^*}w(v)$ as TURNING\_POINT. Let grammar require $k\ge 1$ DEVELOPMENT events before TURNING\_POINT. Let $j_{dev}$ be the number of development-eligible events (any actor) with timestamp strictly before $e^*$ in the candidate pool. If $j_{dev}<k$, greedy produces zero valid sequences.
+\end{theorem}
+
+\begin{proof}
+Use product automaton $\mathcal{P}=G\times\mathcal{A}$.
+(1) Injection forces $e^*$ as TP candidate by construction.
+(2) Once $e^*$ is consumed as TURNING\_POINT, DFA monotonicity forbids transitions back to DEVELOPMENT.
+(3) Any greedy pre-TP prefix can include at most $j_{dev}$ development-eligible events.
+(4) If $j_{dev}<k$, the required prefix count is unreachable.
+Hence no greedy completion can satisfy acceptance.\qedhere
+\end{proof}
+
+\begin{remark}
+The converse is false: $j_{dev}\ge k$ does not imply success.
+\end{remark}
+
+\begin{remark}
+Using focal-only counters yields false positives. Counting development-eligible prefix events across \emph{all} actors is required for zero-FP diagnosis.
+\end{remark}
+
+\paragraph{Empirical validation.}
+From the final boundary sweep (11{,}400 instances, $k\in\{0,\dots,5\}$, $\epsilon\in\{0.05,\dots,0.95\}$, 100 seeds per $\epsilon$):
+(1) zero false positives for the output-based development counter;
+(2) for pool-based $j_{dev}$, false positives are zero for $k\ge 2$ and eight at $k=1$, all diagnosed as timestamp-tie artifacts on one seed;
+(3) below-diagonal validity is exactly 0.000 for all cells with $k\ge 3$.
+The boundary is sharp: Figure~\ref{fig:kj_heatmap} shows the transition from zero validity below the diagonal to high validity above it. Figure~\ref{fig:position_sweep} shows how validity, absorption rate, and theorem accuracy co-vary with front-loading $\epsilon$.
+
+\textbf{Exogenous TP validation.} To isolate the role of endogenous TP selection, we repeated the boundary sweep with TP fixed exogenously at the median-timestamp focal event rather than the max-weight focal event. The diagonal barrier $j_{\text{dev}} < k \Rightarrow \text{zero validity}$ persists identically---it is a structural property of the grammar, not of TP selection. However, the probability of landing below the barrier drops sharply: under endogenous TP with $\varepsilon = 0.80$, $P(j_{\text{dev}} < k) = 13.6\%$; under exogenous TP, $P(j_{\text{dev}} < k) = 0.0\%$. This confirms that the absorbing state is activated by the interaction between weight-based TP selection and temporal front-loading, not by the grammar alone.
+
+Additionally, when the 11 Class-C/D failure cases at $\varepsilon{=}0.80$, $k{=}1$ (a representative adversarial cohort from the 138 baseline failures) are re-run with TP forced to the oracle's TP selection, 9/11 produce valid sequences. The 2 residual cases fail with \texttt{insufficient\_timespan}, a constraint orthogonal to TP selection. In this prefix-only regime, most failures localize to TP selection rather than sequence assembly.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\linewidth]{figures/kj_heatmap_envelope.pdf}
+  \caption{Greedy validity rate as a function of prefix requirement $k$ and development-eligible count $j_{\text{dev}}$ (pool-based: development-eligible events in the BFS+injection candidate set). Solid line: impossibility theorem boundary ($j_{\text{dev}} = k$); validity is exactly zero below. Dashed line: empirical 95\% success envelope ($j_{\text{dev}} \approx 5.31 \cdot k + 12.23$, fit by logistic regression on bursty generator with BFS+injection pool). The stochastic zone between the two boundaries contains the non-absorbing failure modes (Classes B--D).}
+  \label{fig:kj_heatmap}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.92\linewidth]{figures/position_sweep.pdf}
+  \caption{Position sweep: validity, absorption, and theorem accuracy versus front-loading $\epsilon$ (100 seeds per $\epsilon$). As $\epsilon$ increases, more high-weight events concentrate early, raising absorption probability. Theorem accuracy uses the pool-based development-eligible counter ($j_{\text{dev}}$).}
+  \label{fig:position_sweep}
+\end{figure}
+
+\section{Failure Taxonomy}
+
+Across the baseline evaluation ($\varepsilon{=}0.80$, $k{=}1$, 150 seeds), 138 instances exhibit greedy failure where the exact oracle succeeds---these are the false negatives that the taxonomy decomposes. The four failure classes form a progression from structural impossibility through pipeline artifacts to algorithmic ceilings, each with a precise constructive resolution or proved boundary (Table~\ref{tab:taxonomy}).
+
+\textbf{Class~A (Absorbing State)} captures the theorem's domain: when $j_{dev} < k$, no greedy sequence can satisfy the prefix constraint. This is not an algorithmic weakness but a structural impossibility given the endogenous TP. The only resolution is exogenous TP reassignment, which the hierarchy addresses at Level~3.
+
+\textbf{Class~B (Pipeline Coupling)} is a classifier artifact: the default position-based phase rule allocates too many pre-TP events to SETUP, leaving zero DEVELOPMENT slots even when development-eligible events exist. A grammar-aware classifier that reserves $k$ DEVELOPMENT slots before assigning SETUP recovers all 63 affected cases. This class is fully eliminated by a one-line fix.
+
+\textbf{Classes~C and~D} represent genuine algorithmic ceilings where the failure persists despite $j_{dev} \ge k$ and a correct classifier. Class~D (assembly compression) is solved by span-aware viability filtering: the greedy assembler compresses timespan below the minimum threshold, and a one-step lookahead prevents this (55/57 recoveries). Class~C (commitment timing) is the true frontier---greedy commits to high-weight events before recognizing the need for bridge or span-extending infrastructure. The TP-conditioned solver addresses this by factoring the endogenous TP out of the inner optimization. Residual Class~C failures at $M{=}25$ are pool-boundary cases: the exact solution requires events outside the BFS-reachable candidate set, a modeling choice rather than an algorithmic limitation.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.11\linewidth} >{\raggedright\arraybackslash}p{0.33\linewidth} >{\raggedright\arraybackslash}p{0.16\linewidth} >{\raggedright\arraybackslash}p{0.20\linewidth} >{\raggedright\arraybackslash}X}
+\toprule
+Class & Mechanism & Observed prevalence & Fix & Recovery \\
+\midrule
+A & Absorbing state ($j_{dev}<k$); TP enters post-TP DFA region before enough DEVELOPMENT capacity exists. & Theorem domain (conditioned on $k,\epsilon$). & Not repairable within endogenous greedy; requires TP reassignment. & Structural impossibility. \\
+B & Pipeline coupling in classifier (SETUP allocation consumes scarce pre-TP slots). & 63/138 initial failures (45.7\%). & Grammar-aware classifier preserving min DEVELOPMENT slots. & 63/63. \\
+C & Commitment timing: bridge/span infrastructure events exist but are selected too late; plus pool-boundary subcases. & Initial TP misselection: 18/138 (13.0\%); gap cohorts: 20 (multi-burst) and 26 (bursty) BVAG-fail/exact-valid. & TP-conditioned solver (plus explicit pool-boundary diagnosis). & 17/20 and 21/26. \\
+D & Assembly compression: weight-maximizing assembly collapses timespan below threshold. & 57/138 initial failures (41.3\%). & Span-VAG viability filter. & 55/57. \\
+\bottomrule
+\end{tabularx}
+\caption{Failure taxonomy with mechanism and constructive boundary.}
+\label{tab:taxonomy}
+\end{table}
+
+\section{Constructive Algorithm Hierarchy}
+\subsection{Viability-Aware Greedy (VAG)}
+Span-VAG enforces one-step timespan viability and recovers 55/57 Class-D cases (Figure~\ref{fig:hierarchy}). Gap-aware VAG enforces bridge existence per gap and reaches 81.3\% (bursty+gap) and 60\% (multi-burst+gap). BVAG adds a global bridge-budget lower bound and improves bursty from 81.3\% to 82.0\% (+3 cases), with no multi-burst gain.
+
+\subsection{Constraint Antagonism}
+\begin{observation}[Constraint Antagonism]
+Span-VAG achieves 0\% validity on multi-burst+gap, below myopic greedy (8\%).
+\end{observation}
+
+Mechanism: span viability prefers temporally distant endpoints, which skips valley bridge events needed for local gap feasibility (Figure~\ref{fig:antagonism}). This demonstrates that the hierarchy is a \textbf{partial order}: span-VAG and gap-VAG branch rather than forming a monotone chain.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\linewidth]{figures/hierarchy_comparison.pdf}
+  \caption{Validity by algorithm on bursty+gap and multi-burst+gap. Note the span-VAG adversarial collapse: multi-burst+gap validity drops to 0\%, below myopic greedy (8\%).}
+  \label{fig:hierarchy}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.92\linewidth]{figures/antagonism.pdf}
+  \caption{Constraint antagonism on multi-burst topology. Span viability favors burst endpoints (blue), skipping valley bridge events (red) required for gap feasibility.}
+  \label{fig:antagonism}
+\end{figure}
+
+\subsection{TP-Conditioned Dynamic Programming}
+The TP-conditioned solver factors endogenous TP coupling into an outer loop over top-$M$ TP candidates and solves each fixed-TP case by label-setting DP with dominance on $(\text{score},\text{slots},\text{first\_time})$. Fixing TP makes phase labels deterministic in the inner problem, yielding an RCSPP-style formulation \citep{irnich2005shortest}.
+
+At $M=25$, recovery is 94\% (multi-burst+gap) and 96.0\% (bursty+gap), with zero regressions versus BVAG. Residuals are diagnosed as either TP-candidate truncation (3 cases) or pool-construction boundary (5 bursty cases), not DP incompleteness.
+
+\begin{table*}[t]
+\centering
+\scriptsize
+\begin{tabular}{c l l l c c l c}
+\toprule
+Level & Algorithm & Search type & TP selection & MB+gap & Bursty+gap & Complexity & Median runtime \\
+\midrule
+0 & Myopic greedy & Forward, myopic & Endo.\ (max-$w$) & 8\% & 54.7\% & $O(n^2)$ & 1.3\,ms \\
+1 & Span-VAG & Forward, 1-step span & Endogenous & 0\% & 62.7\% & $O(n^2)$ & 9\,ms \\
+2 & Gap-aware VAG & Forward, depth-1 bridge & Endogenous & 60\% & 81.3\% & $O(n^2 \cdot \text{pool})$ & 10\,ms \\
+2.5 & BVAG & Forward, budget bound & Endogenous & 60\% & 82.0\% & $O(n^2 \cdot q)$ & 10\,ms \\
+3 & TP-solver ($M{=}25$) & Multi-pass DP & Outer loop (top-$M$) & 94\% & 96.0\% & $O(MLn^2 d)$ & 2.3\,s\,/\,5.7\,s \\
+$\infty$ & Exact oracle & Exhaustive DP & All focal events & 100\% & 99.3\% & $O(n^2 S)$ & 4.4\,s\,/\,3.1\,s \\
+\bottomrule
+\end{tabular}
+\caption{Algorithm hierarchy from myopic greedy to exhaustive oracle. MB = multi-burst. Runtime shown as multi-burst\,/\,bursty. $S$ = exhaustive search space size. TP-solver is faster than oracle on multi-burst but slower on bursty at $M{=}25$; adaptive $M$ with early exit (not shown) restores competitive runtime.}
+\label{tab:hierarchy}
+\end{table*}
+
+\section{Approximation Quality}
+\begin{observation}[Bimodal quality]
+When valid sequences are produced, approximation ratios are near one:
+\begin{itemize}[leftmargin=1.3em]
+  \item Bursty (no gap): mean 0.996, minimum 0.975.
+  \item Multi-burst (no gap): mean 0.9905, minimum 0.9512.
+  \item Zero cases below 0.90 in either no-gap topology.
+\end{itemize}
+\end{observation}
+
+Interpretation: the landscape is feasibility-dominated. The dominant failure mode is inability to enter the feasible region; optimization quality inside that region is high.
+
+\section{Invariance Results}
+The theorem is stable across controlled sweeps:
+\begin{itemize}[leftmargin=1.3em]
+  \item \textbf{Actor count} ($N=2$ to $50$): 0 FPs; mean $j_{dev}$ constant at 48.264.
+  \item \textbf{Event density} ($n=50$ to $1000$): 0 FPs; mean $j_{dev}$ scales linearly (10.640, 21.392, 48.264, 101.280, 201.048).
+  \item \textbf{Weight distributions} (uniform, power-law, bimodal): 5 FPs total (0.67\%), all diagnosed as TP-identity shift artifacts under weight replacement.
+  \item \textbf{Multi-burst topology}: 0 FPs; theorem accuracy 0.948.
+\end{itemize}
+
+These results support structural robustness of the theorem under topology and parameter variation.
+
+\section{Related Work}
+Greedy guarantees in combinatorial optimization rely on structural assumptions such as hereditary/exchange properties \citep{korte1981mathematical,bjorner1992greedoids}. Our feasible family violates those assumptions because TP identity is endogenous (Proposition~\ref{prop:nonhereditary}).
+
+Process mining aligns event traces to process models, typically with fixed model semantics \citep{vanderaalst2016process}. Grammar-constrained decoding in language models uses automata or grammars during generation \citep{scholak2021picard,willard2023outlines}. Our setting differs because grammar semantics depend on an endogenous pivot selected by the solution itself.
+
+With TP fixed, the inner problem maps to resource-constrained shortest path formulations \citep{irnich2005shortest}. The $\arg\max$ coupling itself has been studied as a constraint-programming primitive \citep{gange2020argmax}; our contribution is its composition with REGULAR-like sequential grammar constraints under greedy commitment.
+
+\section{Discussion and Future Work}
+
+\textbf{TP-decoupling as Markovization.} The central mechanism underlying the entire hierarchy is endogenous TP coupling: because $\tau(S) = \arg\max_{v \in S,\, a(v)=a^*} w(v)$, modifying any element of $S$ can change the TP identity and trigger global phase reassignment. This coupling makes the search state \emph{non-local}: the feasibility of a partial sequence depends on its eventual completion through the TP identity. Factoring TP selection into an explicit outer loop \emph{Markovizes} the inner problem: with $\tau$ and $n_{\text{pre}}$ fixed, phase labels become deterministic functions of timestamp relative to $\tau$, and the inner problem reduces to a resource-constrained shortest path where label-setting DP applies with standard dominance. Note that fixing TP does not restore hereditary structure---the minimum-count grammar constraint ($\geq k$ development events) remains non-hereditary even under exogenous TP. What TP-conditioning removes is the \emph{global coupling} whereby any element change can cascade into full phase reclassification.
+
+\textbf{Failure decomposition.} The observed failure rate under any TP-selection policy $\pi$ and candidate-set function \textsc{Pool} decomposes as:
+\[
+  P(\text{fail}) \;=\;
+  P(j_{\text{dev}}(\tau_\pi) < k) \;+\;
+  \bigl(1 - P(j_{\text{dev}}(\tau_\pi) < k)\bigr) \cdot
+  P(\text{other failure} \mid j_{\text{dev}}(\tau_\pi) \geq k).
+\]
+The first term is the absorbing-state probability, controlled by the TP policy's interaction with the weight-timestamp distribution. The second term is the residual failure rate among non-absorbed instances, weighted by the probability of escaping absorption. Endogenous TP selection under front-loading inflates the first term; TP-conditioning reduces it by searching over multiple $\tau$ candidates. This decomposition clarifies what each level of the hierarchy addresses: VAG variants reduce the conditional residual rate, while TP-conditioning attacks the absorbing-state probability.
+
+\textbf{Forward filtering ceiling.} Depth-1 viability filters (span-VAG, gap-VAG, BVAG) improve specific failure classes but cannot close commitment-timing failures globally. The BVAG null result (0/20 multi-burst recoveries beyond gap-VAG) empirically demonstrates this ceiling. The fundamental limitation is that forward filters make irrevocable selections: once a high-weight event is chosen, the remaining budget and constraint state may preclude feasible completion, and no local lookahead can detect this without exploring the full constraint interaction.
+
+\textbf{Constraint antagonism.} The 0\% span-VAG result on multi-burst+gap is a structural phenomenon, not a corner case. When two constraints interact through incompatible local objectives, optimizing for one actively worsens the other under greedy composition. Span viability pushes selections toward temporally distant endpoints to satisfy timespan, but these selections skip valley bridge events required for gap feasibility. This antagonism is topology-dependent and manifests on multi-burst graphs with sparse valleys. The general lesson is that composing constraint-aware filters requires analyzing their interaction structure, not just their individual correctness.
+
+\begin{proposition}[Pool Temporal Coverage Barrier]
+\label{prop:pool_barrier}
+Let $P \subseteq V$ be a candidate pool. Define its temporal coverage
+$\tau(P) = \max_{v \in P} t(v) - \min_{v \in P} t(v)$ and the required span
+$s \cdot T$ where $T = \max_{v \in V} t(v) - \min_{v \in V} t(v)$. If
+$\tau(P) < s \cdot T$, then no sequence $S \subseteq P$ can satisfy the
+minimum timespan constraint, regardless of search strategy.
+\end{proposition}
+\begin{proof}
+For any $S \subseteq P$, $\mathrm{span}(S) \leq \tau(P) < s \cdot T$.
+\end{proof}
+
+\textbf{Pool construction boundary.} The TP-solver's residual failures are pool-boundary cases: the exact oracle's optimal sequence includes span-extending events at temporal extremes (very early or very late timestamps) outside the BFS-reachable candidate set. These events typically belong to non-focal actors with no causal path from the focal actor. The solver's best attempts within the BFS pool fail with \texttt{insufficient\_timespan}---not gap violations. Notably, the Pool Temporal Coverage Barrier (Proposition~\ref{prop:pool_barrier}) does not fully explain these residuals: the pool's aggregate temporal extent exceeds the required span (1.6--3.2$\times$ the minimum). However, the solver's weight-optimized sequences cluster in the high-weight temporal core and do not reach the pool's temporal extremes. The oracle succeeds by selecting specific low-weight endpoint events outside the BFS pool. This is a modeling choice---BFS-based pools enforce causal locality (appropriate for narrative or incident domains), while unrestricted pools include span-extending events at the cost of causal interpretability. The choice should be explicit in any deployment.
+
+\textbf{Applications.} The endogenous-pivot failure mode is plausible in any sequential extraction system where a distinguished element determines how other elements are interpreted: incident diagnosis systems anchoring on a root-cause event, constrained generation workflows committing to a high-salience token, and process mining alignments fixing a reference activity. The constructive hierarchy suggests a general recipe: when greedy fails due to endogenous coupling, factor the pivot into an outer enumeration and solve the residual as a constrained shortest path.
+
+\section{Conclusion}
+We isolate a precise failure mechanism for greedy extraction under endogenous sequential constraints, prove a sufficient-condition impossibility theorem, validate it with zero false positives in its measured domain, and map the constructive hierarchy needed to recover feasibility. The main empirical pattern is sharp: failures are structural and deterministic; successes are near-optimal.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\appendix
+\section{Full Experiment List (39)}
+\small
+\begin{table}[h]
+\centering
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.06\linewidth} >{\raggedright\arraybackslash}p{0.34\linewidth} >{\raggedright\arraybackslash}X}
+\toprule
+\# & Experiment & Key finding \\
+\midrule
+1--17 & Failure taxonomy phase & Position sweep, oracle divergence, classifier coupling (63), TP misselection (18), assembly compression (57), beam saturation, repair null. \\
+18--27 & Constructive phase & Exact oracle baseline, non-hereditary verification, VAG variants, gap adversarial tests, BVAG marginal gain (+3 bursty, +0 multi-burst). \\
+28--29 & Boundary mapping & k--j formalization and measurement companion (counter-definition mismatch resolved). \\
+30--36 & Final validation & FP diagnosis, final k--j boundary, invariance suite, weight-FP diagnosis, TP-solver evaluations ($M{=}10,25$), pool-boundary diagnosis. \\
+37 & Exogenous TP validation & Diagonal barrier persists under exogenous TP; $P(j_{dev}<k)$ drops from 13.6\% to 0.0\%; 9/11 Class-C/D cases recovered with oracle TP. \\
+38 & Empirical success envelope & Logistic regression on boundary data; 95\% contour at $j_{dev} \approx 5.31k + 12.23$; AUC = 0.92. \\
+39 & Pool barrier verification & Pool Temporal Coverage Barrier (Prop.~2) does not explain residuals (pool span 1.6--3.2$\times$ minimum); solver fails with \texttt{insufficient\_timespan} due to weight-optimized sequences not reaching temporal extremes. \\
+\bottomrule
+\end{tabularx}
+\caption{Condensed list of all 39 experiments from the canonical context.}
+\end{table}
+
+\section{Disproven Hypotheses}
+\small
+\begin{table}[h]
+\centering
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.44\linewidth} >{\raggedright\arraybackslash}X}
+\toprule
+Hypothesis & Result \\
+\midrule
+Shear determines contamination & Rejected ($r=0.033$, 0/9 fixed). \\
+Constraint relaxation is monotone-beneficial & Rejected (domain-dependent; monotone on synthetic, non-monotone in predecessor system). \\
+Beam width resolves assembly compression & Rejected (saturates at width 2; 0/57 Class-D recoveries). \\
+Local repair resolves timespan compression & Rejected (0/57). \\
+BVAG closes multi-burst gap frontier & Rejected (0/20 additional recoveries). \\
+Span-VAG is monotone improvement over greedy & Rejected (0\% on multi-burst+gap). \\
+\bottomrule
+\end{tabularx}
+\caption{Negative results that constrain the theory and algorithm design space.}
+\end{table}
+
+\section{TP-Conditioned Solver}
+
+Algorithm~\ref{alg:tp_solver} gives the full pseudocode for the TP-conditioned label-setting solver. The key insight is that fixing the TP candidate $\tau$ and pre-TP event count $n_{\text{pre}}$ makes phase labels deterministic, reducing the problem to a resource-constrained shortest path. In the pseudocode, $\ell \oplus v$ denotes extending label $\ell$ by appending event $v$: incrementing the score by $w(v)$, incrementing the slot count, updating the earliest timestamp, and advancing the DFA state.
+
+\begin{algorithm}[t]
+\caption{TP-Conditioned Label-Setting Solver}
+\label{alg:tp_solver}
+\begin{algorithmic}[1]
+\REQUIRE Event graph $G{=}(V,t,w,a)$, focal actor $a^*$, grammar $\mathcal{A}$ with prefix $k$, length $L$, candidate count $M$
+\ENSURE Best valid sequence $S^*$ or $\emptyset$
+\STATE $\mathcal{T} \gets$ top-$M$ focal-actor events by weight
+\STATE $S^* \gets \emptyset$;\; $\textit{best} \gets -\infty$
+\FOR{$\tau \in \mathcal{T}$}
+  \FOR{$n_{\text{pre}} = 0$ \TO $L{-}1$}
+    \STATE Assign deterministic phase labels given $(\tau, n_{\text{pre}})$
+    \STATE $\mathcal{L} \gets \{(\textit{score}{=}0,\; \textit{slots}{=}0,\; t_1{=}\infty,\; \textit{last}{=}\bot,\; \textit{dfa}{=}q_0)\}$
+    \FOR{event $v$ in temporal order within candidate pool}
+      \FOR{label $\ell \in \mathcal{L}$ with valid DFA transition $\delta(\ell.\textit{dfa}, \phi(v))$}
+        \STATE $\ell' \gets \ell \oplus v$:\; $\ell'.\textit{score} \gets \ell.\textit{score} + w(v)$; update slots, $t_1$, dfa
+        \IF{$\ell'$ not dominated in bucket $(\textit{last}{=}v,\; \textit{dfa}{=}\ell'.\textit{dfa})$}
+          \STATE Add $\ell'$; remove labels it dominates
+        \ENDIF
+      \ENDFOR
+    \ENDFOR
+    \FOR{accepting $\ell \in \mathcal{L}$ satisfying all constraints}
+      \IF{$\ell.\textit{score} > \textit{best}$}
+        \STATE $S^* \gets \text{Reconstruct}(\ell)$;\; $\textit{best} \gets \ell.\textit{score}$
+      \ENDIF
+    \ENDFOR
+  \ENDFOR
+\ENDFOR
+\RETURN $S^*$
+\end{algorithmic}
+\end{algorithm}
+
+\textbf{Dominance.} Label $A$ dominates $B$ in the same bucket if $A.\textit{score} \ge B.\textit{score}$, $A.\textit{slots} \le B.\textit{slots}$, and $A.t_1 \le B.t_1$. This three-dimensional criterion ensures that extending $A$ yields a sequence at least as good as extending $B$ along every constrained dimension.
+
+\textbf{Complexity.} The outer loops contribute $O(M \cdot L)$. The inner label-setting DP processes $O(n)$ events, each extending $O(|\mathcal{L}|)$ active labels with $O(d)$ DFA states, giving $O(M \cdot L \cdot n^2 \cdot d)$ worst case. Empirically at $M{=}25$: median 536K labels (multi-burst), 1.54M labels (bursty); median runtime 2.3\,s and 5.7\,s respectively.
+
+\end{document}

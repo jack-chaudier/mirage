@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Guide: Finite + Streaming Extraction Papers</title>
+  <style>
+    :root {
+      --bg: #f4f7f2;
+      --ink: #122620;
+      --muted: #3c5a52;
+      --card: #ffffff;
+      --line: #b7c8bc;
+      --accent: #0b7a75;
+      --accent-2: #d97706;
+      --accent-3: #0f4c81;
+      --ok: #2f855a;
+      --warn: #b45309;
+      --bad: #b42318;
+      --shadow: 0 10px 30px rgba(18, 38, 32, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 4%, rgba(11, 122, 117, 0.12), transparent 24%),
+        radial-gradient(circle at 90% 8%, rgba(217, 119, 6, 0.12), transparent 24%),
+        linear-gradient(160deg, #eef4ee 0%, #f9fbf8 45%, #f4f8f5 100%);
+      min-height: 100vh;
+    }
+
+    .wrap {
+      width: min(1200px, 94vw);
+      margin: 0 auto;
+      padding: 24px 0 48px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0b7a75 0%, #0f4c81 60%, #115f8d 100%);
+      border-radius: 18px;
+      color: #f7fffd;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 2.3vw, 2.4rem);
+      line-height: 1.2;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .hero p {
+      margin: 10px 0 0;
+      line-height: 1.5;
+      max-width: 82ch;
+      font-size: 0.99rem;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .chip {
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.82rem;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .grid {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      grid-column: span 12;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 1.15rem;
+      letter-spacing: 0.01em;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 0.95rem;
+    }
+
+    .map-layout {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .map-box {
+      border: 1px dashed var(--line);
+      border-radius: 14px;
+      padding: 8px;
+      background: #fcfffd;
+    }
+
+    .map-detail {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px;
+      min-height: 260px;
+      background: #f8fcfa;
+    }
+
+    .map-detail h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+    }
+
+    .map-detail p {
+      margin: 0 0 10px;
+      font-size: 0.92rem;
+      color: #243f39;
+      line-height: 1.45;
+    }
+
+    .kbd {
+      display: inline-block;
+      font-family: "Menlo", "SFMono-Regular", "Consolas", monospace;
+      background: #e8f2ef;
+      border: 1px solid #c9ddd7;
+      border-radius: 7px;
+      font-size: 0.8rem;
+      padding: 2px 6px;
+      color: #0f4c81;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .node rect {
+      stroke: #23423a;
+      stroke-width: 1.2;
+      cursor: pointer;
+      transition: transform 120ms ease, fill 120ms ease;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .node text {
+      pointer-events: none;
+      fill: #102f2a;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .node.active rect,
+    .node rect:hover {
+      transform: scale(1.05);
+      fill: #d6efe7;
+    }
+
+    .edge {
+      stroke: #5a7e74;
+      stroke-width: 1.5;
+      fill: none;
+      marker-end: url(#arrow);
+    }
+
+    .controls {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+    }
+
+    .control {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px;
+      background: #fdfefd;
+    }
+
+    .control label {
+      font-size: 0.82rem;
+      letter-spacing: 0.01em;
+      color: #2a4740;
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--accent);
+    }
+
+    select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 7px 8px;
+      background: #fff;
+      color: #19352f;
+    }
+
+    .reading {
+      font-size: 0.9rem;
+      color: #23423b;
+      margin-top: 4px;
+      font-family: "Menlo", "SFMono-Regular", "Consolas", monospace;
+    }
+
+    .status {
+      margin-top: 12px;
+      border-radius: 12px;
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      background: #f9fcfa;
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .status strong {
+      font-size: 0.98rem;
+    }
+
+    .status.bad {
+      border-color: #f0c3bc;
+      background: #fff4f2;
+    }
+
+    .status.warn {
+      border-color: #f4d8a7;
+      background: #fff9ef;
+    }
+
+    .status.ok {
+      border-color: #b9dec8;
+      background: #f1fbf4;
+    }
+
+    .gauge-wrap {
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fcfffd;
+    }
+
+    .gauge-track {
+      height: 14px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ffebe7 0%, #fff6d8 35%, #e6f9ec 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .marker {
+      position: absolute;
+      top: -3px;
+      width: 2px;
+      height: 20px;
+      background: #193b33;
+    }
+
+    .marker.envelope {
+      background: #0f4c81;
+      opacity: 0.88;
+    }
+
+    .dot {
+      position: absolute;
+      top: -3px;
+      width: 20px;
+      height: 20px;
+      margin-left: -10px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      background: #0b7a75;
+      box-shadow: 0 2px 8px rgba(16, 54, 45, 0.25);
+    }
+
+    .legend {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: #2c4a42;
+      font-size: 0.8rem;
+    }
+
+    .legend span::before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 5px;
+      vertical-align: -1px;
+      background: var(--accent);
+    }
+
+    .legend .barrier::before {
+      background: #193b33;
+      border-radius: 2px;
+      width: 2px;
+      height: 10px;
+    }
+
+    .legend .envelope::before {
+      background: #0f4c81;
+      border-radius: 2px;
+      width: 2px;
+      height: 10px;
+    }
+
+    .class-tabs {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .class-tab {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 7px 10px;
+      background: #fff;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #2a4740;
+    }
+
+    .class-tab.active {
+      background: #deefe8;
+      border-color: #8ebcae;
+      color: #12352f;
+    }
+
+    .class-body {
+      margin-top: 10px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      background: #f9fcfa;
+    }
+
+    .class-body h3 {
+      margin: 0 0 6px;
+      font-size: 1rem;
+    }
+
+    .class-body p {
+      margin: 0 0 8px;
+      color: #26413b;
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+
+    .stack {
+      margin-top: 8px;
+      height: 22px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .seg {
+      height: 100%;
+      color: #fff;
+      font-size: 0.74rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
+    .seg.b {
+      background: #0f766e;
+      width: 45.7%;
+    }
+
+    .seg.c {
+      background: #f59e0b;
+      width: 13%;
+    }
+
+    .seg.d {
+      background: #2563eb;
+      width: 41.3%;
+    }
+
+    .rows {
+      margin-top: 10px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .row {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px;
+      background: #fbfdfc;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .row h4 {
+      margin: 0 0 4px;
+      font-size: 0.9rem;
+    }
+
+    .row p {
+      margin: 0;
+      font-size: 0.82rem;
+      color: #3b5952;
+      line-height: 1.35;
+    }
+
+    .bar {
+      margin-top: 6px;
+      height: 10px;
+      border-radius: 999px;
+      background: #e6eeea;
+      overflow: hidden;
+    }
+
+    .bar > span {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, #0b7a75, #0f4c81);
+      transition: width 180ms ease;
+    }
+
+    .num {
+      font-family: "Menlo", "SFMono-Regular", "Consolas", monospace;
+      font-size: 0.82rem;
+      background: #ebf4f1;
+      border: 1px solid #cbddd7;
+      border-radius: 7px;
+      padding: 5px 8px;
+      color: #103731;
+      min-width: 64px;
+      text-align: center;
+    }
+
+    .mini-grid {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .mini {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px;
+      background: #fcfffd;
+    }
+
+    .mini h4 {
+      margin: 0 0 6px;
+      font-size: 0.86rem;
+    }
+
+    .mini svg {
+      border: 1px dashed #c5d7d0;
+      border-radius: 8px;
+      background: #fff;
+      height: 170px;
+    }
+
+    .small {
+      margin-top: 6px;
+      color: #45635b;
+      font-size: 0.78rem;
+      line-height: 1.35;
+    }
+
+    .footer {
+      margin-top: 12px;
+      color: #33544c;
+      font-size: 0.8rem;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 980px) {
+      .map-layout {
+        grid-template-columns: 1fr;
+      }
+      .mini-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>Interactive Guide to the Two RHUN Papers</h1>
+      <p>
+        This page turns the papers into manipulable diagrams so you can test intuition live:
+        <span class="kbd">finite theorem</span> (<span class="kbd">jdev &lt; k</span> barrier),
+        <span class="kbd">failure classes A-D</span>, and
+        <span class="kbd">streaming oscillation traps</span> with patience tradeoffs.
+      </p>
+      <div class="chips">
+        <span class="chip">Finite paper: Absorbing states + TP-conditioned solver</span>
+        <span class="chip">Streaming paper: Irreversible lock + oscillation traps</span>
+        <span class="chip">Default operating point: deferred commitment f~0.25</span>
+      </div>
+    </section>
+
+    <main class="grid">
+      <section class="card">
+        <h2>1) Concept Map: How the Papers Connect</h2>
+        <p>Click any node to see the plain-language meaning and why it matters.</p>
+        <div class="map-layout">
+          <div class="map-box">
+            <svg viewBox="0 0 960 320" role="img" aria-label="Concept map of finite and streaming papers">
+              <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M0,0 L10,5 L0,10 z" fill="#5a7e74"></path>
+                </marker>
+              </defs>
+
+              <path class="edge" d="M140,78 L250,78"></path>
+              <path class="edge" d="M360,78 L470,78"></path>
+              <path class="edge" d="M580,78 L700,78"></path>
+              <path class="edge" d="M360,95 L470,212"></path>
+              <path class="edge" d="M580,212 L700,212"></path>
+              <path class="edge" d="M360,212 L470,212"></path>
+
+              <g class="node active" data-key="finite_setup">
+                <rect x="30" y="46" rx="10" ry="10" width="110" height="64" fill="#eef8f5"></rect>
+                <text x="85" y="72" text-anchor="middle">Finite</text>
+                <text x="85" y="90" text-anchor="middle">Setup</text>
+              </g>
+
+              <g class="node" data-key="impossibility">
+                <rect x="250" y="46" rx="10" ry="10" width="110" height="64" fill="#eef8f5"></rect>
+                <text x="305" y="69" text-anchor="middle">Theorem 1</text>
+                <text x="305" y="88" text-anchor="middle">jdev &lt; k</text>
+              </g>
+
+              <g class="node" data-key="taxonomy">
+                <rect x="470" y="46" rx="10" ry="10" width="110" height="64" fill="#eef8f5"></rect>
+                <text x="525" y="69" text-anchor="middle">Failure</text>
+                <text x="525" y="88" text-anchor="middle">Classes A-D</text>
+              </g>
+
+              <g class="node" data-key="hierarchy">
+                <rect x="700" y="46" rx="10" ry="10" width="120" height="64" fill="#eef8f5"></rect>
+                <text x="760" y="69" text-anchor="middle">Hierarchy</text>
+                <text x="760" y="88" text-anchor="middle">Greedy->Oracle</text>
+              </g>
+
+              <g class="node" data-key="stream_model">
+                <rect x="250" y="180" rx="10" ry="10" width="110" height="64" fill="#fff7ea"></rect>
+                <text x="305" y="204" text-anchor="middle">Streaming</text>
+                <text x="305" y="223" text-anchor="middle">Model</text>
+              </g>
+
+              <g class="node" data-key="trap">
+                <rect x="470" y="180" rx="10" ry="10" width="110" height="64" fill="#fff7ea"></rect>
+                <text x="525" y="204" text-anchor="middle">Trap Rule</text>
+                <text x="525" y="223" text-anchor="middle">min_gap &lt; k</text>
+              </g>
+
+              <g class="node" data-key="deferred">
+                <rect x="700" y="180" rx="10" ry="10" width="120" height="64" fill="#fff7ea"></rect>
+                <text x="760" y="204" text-anchor="middle">Deferred</text>
+                <text x="760" y="223" text-anchor="middle">Patience f</text>
+              </g>
+            </svg>
+          </div>
+          <div class="map-detail" id="map-detail"></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>2) Finite-Paper Simulator: The jdev-vs-k Barrier</h2>
+        <p>Move the sliders to see when greedy is structurally blocked versus likely workable.</p>
+        <div class="controls">
+          <div class="control">
+            <label for="finite-k">Prefix requirement <span class="kbd">k</span></label>
+            <input id="finite-k" type="range" min="0" max="5" value="2" step="1">
+            <div class="reading" id="finite-k-read">k = 2</div>
+          </div>
+          <div class="control">
+            <label for="finite-jdev">Development-eligible pre-TP count <span class="kbd">jdev</span></label>
+            <input id="finite-jdev" type="range" min="0" max="60" value="11" step="1">
+            <div class="reading" id="finite-jdev-read">jdev = 11</div>
+          </div>
+          <div class="control">
+            <label for="counter-mode">Counter definition</label>
+            <select id="counter-mode">
+              <option value="all" selected>All-actor development-eligible (recommended)</option>
+              <option value="focal">Focal-only prefix counter (artifact-prone)</option>
+            </select>
+            <div class="reading" id="counter-note">Zero false positives observed in validated regime.</div>
+          </div>
+        </div>
+
+        <div class="status" id="finite-status"></div>
+
+        <div class="gauge-wrap">
+          <div class="gauge-track">
+            <div class="marker barrier" id="barrier-marker" title="Impossibility boundary jdev = k"></div>
+            <div class="marker envelope" id="envelope-marker" title="95% success envelope"></div>
+            <div class="dot" id="finite-dot" title="Your selected point"></div>
+          </div>
+          <div class="legend">
+            <span>Selected jdev</span>
+            <span class="barrier">Theorem boundary jdev = k</span>
+            <span class="envelope">95% envelope jdev ~ 5.31k + 12.23</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>3) Failure Taxonomy Explorer (Finite)</h2>
+        <p>These are the mechanisms behind greedy-oracle divergence and what fixes each one.</p>
+        <div class="class-tabs" id="class-tabs">
+          <button class="class-tab active" data-class="A">Class A</button>
+          <button class="class-tab" data-class="B">Class B</button>
+          <button class="class-tab" data-class="C">Class C</button>
+          <button class="class-tab" data-class="D">Class D</button>
+        </div>
+        <div class="class-body" id="class-body"></div>
+        <div class="stack" aria-label="Baseline prevalence among 138 false negatives">
+          <div class="seg b">B 45.7%</div>
+          <div class="seg c">C 13.0%</div>
+          <div class="seg d">D 41.3%</div>
+        </div>
+        <p class="footer">Stacked bar uses the baseline 138 false negatives where exact oracle succeeded. Class A is structural and condition-defined (jdev&lt;k), so it is not part of that denominator.</p>
+      </section>
+
+      <section class="card">
+        <h2>4) Algorithm Hierarchy Comparator (Finite)</h2>
+        <p>Switch topology to see how each method behaves under tougher constraint interactions.</p>
+        <div class="controls">
+          <div class="control">
+            <label for="algo-topology">Topology</label>
+            <select id="algo-topology">
+              <option value="mb">Multi-burst + gap</option>
+              <option value="bursty">Bursty + gap</option>
+            </select>
+            <div class="reading" id="topology-read">Showing validity (%) for Multi-burst + gap</div>
+          </div>
+        </div>
+        <div class="rows" id="algo-rows"></div>
+      </section>
+
+      <section class="card">
+        <h2>5) Streaming Trap + Patience Playground</h2>
+        <p>Test when irreversible commitment is risky, and how deferred patience <span class="kbd">f</span> changes quality.</p>
+        <div class="controls">
+          <div class="control">
+            <label for="stream-k">Prefix requirement k (streaming)</label>
+            <input id="stream-k" type="range" min="1" max="3" value="2" step="1">
+            <div class="reading" id="stream-k-read">k = 2</div>
+          </div>
+          <div class="control">
+            <label for="stream-gap">Observed min inter-record gap</label>
+            <input id="stream-gap" type="range" min="0" max="5" value="1" step="1">
+            <div class="reading" id="stream-gap-read">min_gap = 1</div>
+          </div>
+          <div class="control">
+            <label for="stream-f">Deferred patience fraction f</label>
+            <input id="stream-f" type="range" min="0" max="50" value="25" step="1">
+            <div class="reading" id="stream-f-read">f = 0.25</div>
+          </div>
+          <div class="control">
+            <label for="stream-eps">Epsilon slice (from Table 5)</label>
+            <select id="stream-eps">
+              <option value="0.10">epsilon = 0.10 (harder/late-pivot)</option>
+              <option value="0.70" selected>epsilon = 0.70 (easier/early-pivot)</option>
+            </select>
+            <div class="reading">Uses TP-consistent validity slices from the draft.</div>
+          </div>
+        </div>
+        <div class="status" id="stream-status"></div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <h4>Aggregate validity vs patience f (Exp 48c headline)</h4>
+            <svg id="validity-chart" viewBox="0 0 320 170" role="img" aria-label="Validity by patience"></svg>
+            <div class="small" id="validity-caption"></div>
+          </div>
+          <div class="mini">
+            <h4>Aggregate score vs patience f (Exp 48c headline)</h4>
+            <svg id="score-chart" viewBox="0 0 320 170" role="img" aria-label="Score by patience"></svg>
+            <div class="small" id="score-caption"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>6) One-Screen Mental Model</h2>
+        <p>
+          Finite paper: greedy can enter an absorbing dead-end when forced TP arrives before enough development capacity
+          (<span class="kbd">jdev &lt; k</span>), and TP-conditioning recovers most hard cases.
+          Streaming paper: even finite-feasible instances can fail if labels lock early while running-max pivot shifts;
+          deferred commitment fixes this timing mismatch and yields a strong practical default near <span class="kbd">f ~ 0.25</span>.
+        </p>
+        <p class="footer">
+          Data points shown here come directly from: theorem boundary sweep (11,400 instances), baseline failure taxonomy (138 false negatives), streaming organic prevalence (4,200 instances), and TP-consistent policy table.
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const mapData = {
+      finite_setup: {
+        title: "Finite setup",
+        body: "You have an endogenous turning point (TP): TP is the max-weight focal event inside the selected sequence, not fixed metadata. That coupling makes feasibility non-local.",
+        why: "Greedy assumptions break because adding/removing one event can change TP identity and relabel the whole sequence."
+      },
+      impossibility: {
+        title: "Theorem 1: jdev < k",
+        body: "If greedy forces TP early and the number of development-eligible pre-TP events is below required prefix length k, validity is impossible.",
+        why: "This is a structural impossibility, not a tuning issue."
+      },
+      taxonomy: {
+        title: "Failure classes A-D",
+        body: "A: structural absorbing barrier; B: classifier coupling artifact; C: commitment timing / bridge timing; D: assembly compression.",
+        why: "Different classes need different fixes; not all failures are the same."
+      },
+      hierarchy: {
+        title: "Constructive hierarchy",
+        body: "Greedy -> Span-VAG -> Gap-VAG -> BVAG -> TP-conditioned solver -> Oracle.",
+        why: "On hard topologies, TP-conditioned DP is where major recovery happens."
+      },
+      stream_model: {
+        title: "Streaming model",
+        body: "Events arrive online; labels are assigned relative to running-max TP and are irrevocable in commit-now policy.",
+        why: "This adds a new failure mode absent in finite offline extraction."
+      },
+      trap: {
+        title: "Streaming trap rule",
+        body: "In tested regime, min_gap < k predicts traps with 100% recall (0 false negatives), though not fully sufficient (false positives remain).",
+        why: "Mechanism detection is robust: if the gap is too small, commit-now is unsafe."
+      },
+      deferred: {
+        title: "Deferred commitment with patience f",
+        body: "Wait through fraction f of the stream, then commit to running-max pivot. Any nonzero f dominated commit-now in headline aggregate.",
+        why: "f~0.25 gave a practical balance: big validity gain with moderate latency."
+      }
+    };
+
+    const taxonomyData = {
+      A: {
+        title: "Class A: Absorbing State (structural)",
+        mechanism: "Forced TP enters post-TP region before enough development capacity exists (jdev < k).",
+        prevalence: "Condition-defined theorem domain, not a baseline percentage slice.",
+        fix: "Not repairable by endogenous greedy. Requires TP reassignment or TP-conditioned outer loop.",
+        recovery: "Structural impossibility under the forced-TP greedy policy."
+      },
+      B: {
+        title: "Class B: Pipeline Coupling",
+        mechanism: "Position-based SETUP allocation consumes scarce pre-TP slots and starves DEVELOPMENT.",
+        prevalence: "63/138 baseline failures (45.7%).",
+        fix: "Grammar-aware classifier that reserves k DEVELOPMENT slots first.",
+        recovery: "63/63 recovered."
+      },
+      C: {
+        title: "Class C: Commitment Timing / Bridge Timing",
+        mechanism: "Greedy commits to high-weight events before ensuring span/gap infrastructure events are in place.",
+        prevalence: "18/138 initial TP-misselection cases (+20 multi-burst gap and +26 bursty gap cohorts in BVAG-fail/exact-valid analysis).",
+        fix: "TP-conditioned solver + explicit pool-boundary diagnosis.",
+        recovery: "17/20 and 21/26 in the reported cohorts."
+      },
+      D: {
+        title: "Class D: Assembly Compression",
+        mechanism: "Weight-maximizing assembly collapses timespan below threshold.",
+        prevalence: "57/138 baseline failures (41.3%).",
+        fix: "Span-aware viability filtering (Span-VAG one-step lookahead).",
+        recovery: "55/57 recovered."
+      }
+    };
+
+    const algorithms = [
+      {
+        name: "Myopic greedy",
+        mb: 8,
+        bursty: 54.7,
+        runtime: "1.3 ms",
+        complexity: "O(n^2)",
+        note: "Very fast, but fragile under coupled constraints."
+      },
+      {
+        name: "Span-VAG",
+        mb: 0,
+        bursty: 62.7,
+        runtime: "9 ms",
+        complexity: "O(n^2)",
+        note: "Improves bursty, collapses on multi-burst+gap (constraint antagonism)."
+      },
+      {
+        name: "Gap-aware VAG",
+        mb: 60,
+        bursty: 81.3,
+        runtime: "10 ms",
+        complexity: "O(n^2*pool)",
+        note: "Large jump by respecting bridge feasibility."
+      },
+      {
+        name: "BVAG",
+        mb: 60,
+        bursty: 82.0,
+        runtime: "10 ms",
+        complexity: "O(n^2*q)",
+        note: "Marginal extra gain on bursty; no multi-burst gain."
+      },
+      {
+        name: "TP-solver (M=25)",
+        mb: 94,
+        bursty: 96.0,
+        runtime: "2.3s / 5.7s",
+        complexity: "O(M*Lmax*n^2*d)",
+        note: "Major recovery by decoupling TP in outer loop."
+      },
+      {
+        name: "Exact oracle",
+        mb: 100,
+        bursty: 99.3,
+        runtime: "4.4s / 3.1s",
+        complexity: "O(n^2*S)",
+        note: "Upper bound; includes unrestricted pool search."
+      }
+    ];
+
+    const aggregateValidityPoints = [
+      [0.0, 39.4],
+      [0.10, 62.6],
+      [0.25, 80.1],
+      [0.50, 88.2],
+      [1.00, 91.5]
+    ];
+
+    const aggregateScorePoints = [
+      [0.0, 6.68],
+      [0.10, 10.60],
+      [0.25, 14.17],
+      [0.50, 15.93],
+      [1.00, 16.58]
+    ];
+
+    const sliceValidity = {
+      "0.10": {
+        1: {0.05: 53.5, 0.10: 70.5, 0.25: 88.0, 0.50: 92.5},
+        2: {0.05: 22.0, 0.10: 43.5, 0.25: 68.0, 0.50: 83.5},
+        3: {0.05: 16.0, 0.10: 26.5, 0.25: 53.5, 0.50: 76.0}
+      },
+      "0.70": {
+        1: {0.05: 80.0, 0.10: 88.0, 0.25: 91.5, 0.50: 93.5},
+        2: {0.05: 65.0, 0.10: 75.5, 0.25: 87.0, 0.50: 89.5},
+        3: {0.05: 50.5, 0.10: 64.0, 0.25: 81.0, 0.50: 85.0}
+      }
+    };
+
+    function clamp(v, a, b) {
+      return Math.min(b, Math.max(a, v));
+    }
+
+    function pct(value, max) {
+      return `${clamp((value / max) * 100, 0, 100)}%`;
+    }
+
+    function interp(points, x) {
+      if (x <= points[0][0]) return points[0][1];
+      for (let i = 0; i < points.length - 1; i++) {
+        const [x1, y1] = points[i];
+        const [x2, y2] = points[i + 1];
+        if (x >= x1 && x <= x2) {
+          const t = (x - x1) / (x2 - x1 || 1);
+          return y1 + t * (y2 - y1);
+        }
+      }
+      return points[points.length - 1][1];
+    }
+
+    function drawLineChart(svgId, points, currentX, yMin, yMax, stroke) {
+      const svg = document.getElementById(svgId);
+      const w = 320;
+      const h = 170;
+      const m = {l: 34, r: 12, t: 14, b: 24};
+
+      const xTo = (x) => m.l + ((x - 0) / 0.50) * (w - m.l - m.r);
+      const yTo = (y) => h - m.b - ((y - yMin) / (yMax - yMin)) * (h - m.t - m.b);
+
+      const visible = points.filter(([x]) => x <= 0.50);
+      const path = visible.map(([x, y], i) => `${i === 0 ? "M" : "L"}${xTo(x)},${yTo(y)}`).join(" ");
+      const cy = yTo(interp(points, currentX));
+      const cx = xTo(clamp(currentX, 0, 0.50));
+
+      svg.innerHTML = `
+        <line x1="${m.l}" y1="${h - m.b}" x2="${w - m.r}" y2="${h - m.b}" stroke="#8ba79e" stroke-width="1"/>
+        <line x1="${m.l}" y1="${m.t}" x2="${m.l}" y2="${h - m.b}" stroke="#8ba79e" stroke-width="1"/>
+        <line x1="${xTo(0.25)}" y1="${m.t}" x2="${xTo(0.25)}" y2="${h - m.b}" stroke="#d5e4de" stroke-dasharray="4 4"/>
+        <text x="${xTo(0)}" y="${h - 6}" font-size="10" text-anchor="middle" fill="#3f5f56">0.00</text>
+        <text x="${xTo(0.25)}" y="${h - 6}" font-size="10" text-anchor="middle" fill="#3f5f56">0.25</text>
+        <text x="${xTo(0.50)}" y="${h - 6}" font-size="10" text-anchor="middle" fill="#3f5f56">0.50</text>
+        <path d="${path}" fill="none" stroke="${stroke}" stroke-width="3"/>
+        <circle cx="${cx}" cy="${cy}" r="5.5" fill="#fff" stroke="${stroke}" stroke-width="3"/>
+      `;
+    }
+
+    function initMap() {
+      const detail = document.getElementById("map-detail");
+      const nodes = Array.from(document.querySelectorAll(".node"));
+
+      function setMapNode(key) {
+        const d = mapData[key];
+        detail.innerHTML = `
+          <h3>${d.title}</h3>
+          <p><strong>What it says:</strong> ${d.body}</p>
+          <p><strong>Why it matters:</strong> ${d.why}</p>
+        `;
+        nodes.forEach((n) => n.classList.toggle("active", n.dataset.key === key));
+      }
+
+      nodes.forEach((node) => {
+        node.addEventListener("click", () => setMapNode(node.dataset.key));
+      });
+
+      setMapNode("finite_setup");
+    }
+
+    function updateFinite() {
+      const k = Number(document.getElementById("finite-k").value);
+      const jdev = Number(document.getElementById("finite-jdev").value);
+      const mode = document.getElementById("counter-mode").value;
+      const barrier = k;
+      const envelope = 5.31 * k + 12.23;
+      const status = document.getElementById("finite-status");
+
+      document.getElementById("finite-k-read").textContent = `k = ${k}`;
+      document.getElementById("finite-jdev-read").textContent = `jdev = ${jdev}`;
+      document.getElementById("counter-note").textContent = mode === "all"
+        ? "All-actor development-eligible counter: zero FP in validated regime."
+        : "Focal-only counter: known false positives in boundary analysis.";
+
+      if (jdev < barrier) {
+        status.className = "status bad";
+        status.innerHTML = `
+          <strong>Impossible region (Theorem 1).</strong>
+          Because <span class="kbd">jdev = ${jdev}</span> is below <span class="kbd">k = ${k}</span>, greedy has zero valid completions under forced TP.
+          Move to TP-conditioned search or change TP policy.
+        `;
+      } else if (jdev < envelope) {
+        status.className = "status warn";
+        status.innerHTML = `
+          <strong>Stochastic zone.</strong>
+          Barrier cleared (<span class="kbd">jdev >= k</span>), but you are below the empirical 95% envelope
+          (<span class="kbd">jdev ~ 5.31k + 12.23 = ${envelope.toFixed(2)}</span>). Non-absorbing failures (Classes B-D) can dominate.
+        `;
+      } else {
+        status.className = "status ok";
+        status.innerHTML = `
+          <strong>High-success zone.</strong>
+          You are above both theorem barrier and 95% envelope. Greedy is often viable, but classifier/pool details still matter.
+        `;
+      }
+
+      document.getElementById("barrier-marker").style.left = pct(barrier, 60);
+      document.getElementById("envelope-marker").style.left = pct(envelope, 60);
+      document.getElementById("finite-dot").style.left = pct(jdev, 60);
+    }
+
+    function initTaxonomy() {
+      const tabs = Array.from(document.querySelectorAll(".class-tab"));
+      const body = document.getElementById("class-body");
+
+      function show(c) {
+        const d = taxonomyData[c];
+        body.innerHTML = `
+          <h3>${d.title}</h3>
+          <p><strong>Mechanism:</strong> ${d.mechanism}</p>
+          <p><strong>Observed prevalence:</strong> ${d.prevalence}</p>
+          <p><strong>Constructive fix:</strong> ${d.fix}</p>
+          <p><strong>Recovery:</strong> ${d.recovery}</p>
+        `;
+        tabs.forEach((t) => t.classList.toggle("active", t.dataset.class === c));
+      }
+
+      tabs.forEach((tab) => tab.addEventListener("click", () => show(tab.dataset.class)));
+      show("A");
+    }
+
+    function updateAlgorithms() {
+      const topology = document.getElementById("algo-topology").value;
+      document.getElementById("topology-read").textContent =
+        topology === "mb"
+          ? "Showing validity (%) for Multi-burst + gap"
+          : "Showing validity (%) for Bursty + gap";
+
+      const rows = document.getElementById("algo-rows");
+      rows.innerHTML = "";
+      for (const algo of algorithms) {
+        const value = topology === "mb" ? algo.mb : algo.bursty;
+        const row = document.createElement("div");
+        row.className = "row";
+        row.innerHTML = `
+          <div>
+            <h4>${algo.name}</h4>
+            <p>${algo.note} Complexity: <span class="kbd">${algo.complexity}</span> | Runtime: <span class="kbd">${algo.runtime}</span></p>
+            <div class="bar"><span style="width:${value}%"></span></div>
+          </div>
+          <div class="num">${value.toFixed(1)}%</div>
+        `;
+        rows.appendChild(row);
+      }
+    }
+
+    function sliceInterp(eps, k, f) {
+      const raw = sliceValidity[eps][k];
+      const pts = Object.keys(raw)
+        .map(Number)
+        .sort((a, b) => a - b)
+        .map((x) => [x, raw[x]]);
+      return interp(pts, clamp(f, 0.05, 0.50));
+    }
+
+    function updateStreaming() {
+      const k = Number(document.getElementById("stream-k").value);
+      const minGap = Number(document.getElementById("stream-gap").value);
+      const f = Number(document.getElementById("stream-f").value) / 100;
+      const eps = document.getElementById("stream-eps").value;
+      const status = document.getElementById("stream-status");
+
+      document.getElementById("stream-k-read").textContent = `k = ${k}`;
+      document.getElementById("stream-gap-read").textContent = `min_gap = ${minGap}`;
+      document.getElementById("stream-f-read").textContent = `f = ${f.toFixed(2)}`;
+
+      const trapLikely = minGap < k;
+      const aggValidity = interp(aggregateValidityPoints, f);
+      const aggScore = interp(aggregateScorePoints, f);
+      const sliceVal = sliceInterp(eps, k, f);
+
+      if (trapLikely) {
+        status.className = "status bad";
+        status.innerHTML = `
+          <strong>Trap risk is high under commit-now.</strong>
+          Because <span class="kbd">min_gap = ${minGap}</span> is below <span class="kbd">k = ${k}</span>, the mechanism criterion says this run is trap-compatible.
+          In tested verification, this criterion had 100% recall and 0 false negatives.
+          Deferred commitment at <span class="kbd">f = ${f.toFixed(2)}</span> gives aggregate validity ~ <span class="kbd">${aggValidity.toFixed(1)}%</span>.
+        `;
+      } else {
+        status.className = "status ok";
+        status.innerHTML = `
+          <strong>Commit-now trap criterion is not triggered.</strong>
+          Here <span class="kbd">min_gap = ${minGap}</span> is not below <span class="kbd">k = ${k}</span>.
+          Deferred still improves quality-latency smoothly; at <span class="kbd">f = ${f.toFixed(2)}</span> aggregate validity is ~ <span class="kbd">${aggValidity.toFixed(1)}%</span>.
+        `;
+      }
+
+      drawLineChart("validity-chart", aggregateValidityPoints, f, 35, 93, "#0b7a75");
+      drawLineChart("score-chart", aggregateScorePoints, f, 6, 17, "#0f4c81");
+
+      document.getElementById("validity-caption").textContent =
+        `Headline aggregate: commit-now 39.4% -> deferred f=0.25 gives 80.1% -> finite 91.5%. Table-5 slice estimate at epsilon ${eps}, k=${k}, f=${f.toFixed(2)}: ${sliceVal.toFixed(1)}%.`;
+      document.getElementById("score-caption").textContent =
+        `Headline aggregate score: 6.68 (commit-now) -> ${aggScore.toFixed(2)} at f=${f.toFixed(2)} -> 16.58 (finite). Recommended default in paper: f~0.25.`;
+    }
+
+    function init() {
+      initMap();
+      initTaxonomy();
+      updateFinite();
+      updateAlgorithms();
+      updateStreaming();
+
+      document.getElementById("finite-k").addEventListener("input", updateFinite);
+      document.getElementById("finite-jdev").addEventListener("input", updateFinite);
+      document.getElementById("counter-mode").addEventListener("change", updateFinite);
+      document.getElementById("algo-topology").addEventListener("change", updateAlgorithms);
+      document.getElementById("stream-k").addEventListener("input", updateStreaming);
+      document.getElementById("stream-gap").addEventListener("input", updateStreaming);
+      document.getElementById("stream-f").addEventListener("input", updateStreaming);
+      document.getElementById("stream-eps").addEventListener("change", updateStreaming);
+    }
+
+    window.addEventListener("DOMContentLoaded", init);
+  </script>
+</body>
+</html>

@@ -1,0 +1,4037 @@
+{
+  "format_version": "1.0.0",
+  "metadata": {
+    "simulation_id": "fake_dinner_party_001",
+    "scenario": "dinner_party",
+    "total_ticks": 121,
+    "total_sim_time": 120.0,
+    "agent_count": 6,
+    "event_count": 70,
+    "snapshot_interval": 20,
+    "timestamp": "2026-02-07T02:44:57.239097Z"
+  },
+  "agents": [
+    {
+      "id": "thorne",
+      "name": "James Thorne",
+      "initial_location": "dining_table",
+      "goal_summary": "Maintain status and order; keep the evening smooth; stay loyal.",
+      "primary_flaw": "pride"
+    },
+    {
+      "id": "elena",
+      "name": "Elena Thorne",
+      "initial_location": "dining_table",
+      "goal_summary": "Protect secrecy and safety; avoid confrontation; seek autonomy.",
+      "primary_flaw": "guilt"
+    },
+    {
+      "id": "marcus",
+      "name": "Marcus Webb",
+      "initial_location": "dining_table",
+      "goal_summary": "Maximize secrecy and safety; deflect suspicion; control the narrative.",
+      "primary_flaw": "ambition"
+    },
+    {
+      "id": "lydia",
+      "name": "Lydia Cross",
+      "initial_location": "dining_table",
+      "goal_summary": "Seek truth while staying safe; protect Thorne without triggering conflict.",
+      "primary_flaw": "cowardice"
+    },
+    {
+      "id": "diana",
+      "name": "Diana Forrest",
+      "initial_location": "dining_table",
+      "goal_summary": "Balance loyalties; keep secrets contained; avoid financial collapse.",
+      "primary_flaw": "guilt"
+    },
+    {
+      "id": "victor",
+      "name": "Victor Hale",
+      "initial_location": "dining_table",
+      "goal_summary": "Pursue the truth about Marcus; probe for evidence; tolerate social discomfort.",
+      "primary_flaw": "obsession"
+    }
+  ],
+  "locations": [
+    {
+      "id": "dining_table",
+      "name": "Dining Table",
+      "privacy": 0.1,
+      "capacity": 6,
+      "adjacent": [
+        "kitchen",
+        "balcony",
+        "foyer",
+        "bathroom"
+      ],
+      "overhear_from": [],
+      "overhear_probability": 0.0,
+      "description": "The main dining table. Seats six. The social center of the evening \u2014 everyone can see and hear everything here."
+    },
+    {
+      "id": "kitchen",
+      "name": "Kitchen",
+      "privacy": 0.5,
+      "capacity": 3,
+      "adjacent": [
+        "dining_table"
+      ],
+      "overhear_from": [
+        "dining_table"
+      ],
+      "overhear_probability": 0.3,
+      "description": "An open-plan kitchen adjacent to the dining area. Semi-private \u2014 you can slip away under the pretense of getting more wine, but the dining table is within earshot."
+    },
+    {
+      "id": "balcony",
+      "name": "Balcony",
+      "privacy": 0.7,
+      "capacity": 3,
+      "adjacent": [
+        "dining_table"
+      ],
+      "overhear_from": [],
+      "overhear_probability": 0.0,
+      "description": "A small balcony off the dining room. Private enough for real conversations. Stepping outside signals you want a moment \u2014 or a confrontation away from the group."
+    },
+    {
+      "id": "foyer",
+      "name": "Foyer",
+      "privacy": 0.2,
+      "capacity": 4,
+      "adjacent": [
+        "dining_table"
+      ],
+      "overhear_from": [
+        "dining_table"
+      ],
+      "overhear_probability": 0.15,
+      "description": "The entrance hallway. People pass through here to arrive, leave, or make phone calls. Semi-public \u2014 you can catch snippets from the dining room."
+    },
+    {
+      "id": "bathroom",
+      "name": "Bathroom",
+      "privacy": 0.9,
+      "capacity": 2,
+      "adjacent": [
+        "dining_table"
+      ],
+      "overhear_from": [],
+      "overhear_probability": 0.0,
+      "description": "A small bathroom down the hall from the dining room. The most private space available. Ideal for intense private conversations \u2014 or hiding."
+    }
+  ],
+  "secrets": [
+    {
+      "id": "secret_affair_01",
+      "description": "Elena and Marcus are having a romantic affair behind Thorne's back.",
+      "truth_value": true,
+      "holder": [
+        "elena",
+        "marcus"
+      ],
+      "about": "elena",
+      "content_type": "affair",
+      "initial_knowers": [
+        "elena",
+        "marcus",
+        "diana"
+      ],
+      "initial_suspecters": [
+        "lydia"
+      ],
+      "dramatic_weight": 1.0,
+      "reveal_consequences": "Thorne's marriage and business partnership are both destroyed. The social fabric of the evening tears apart."
+    },
+    {
+      "id": "secret_embezzle_01",
+      "description": "Marcus has been embezzling money from the business he shares with Thorne.",
+      "truth_value": true,
+      "holder": [
+        "marcus"
+      ],
+      "about": "marcus",
+      "content_type": "financial",
+      "initial_knowers": [
+        "marcus"
+      ],
+      "initial_suspecters": [
+        "lydia",
+        "victor"
+      ],
+      "dramatic_weight": 0.9,
+      "reveal_consequences": "Marcus faces criminal charges. Thorne realizes his business partner betrayed him twice. Victor gets his story."
+    },
+    {
+      "id": "secret_diana_debt",
+      "description": "Diana owes Marcus a large sum of money, making her financially dependent on him.",
+      "truth_value": true,
+      "holder": [
+        "diana",
+        "marcus"
+      ],
+      "about": "diana",
+      "content_type": "financial",
+      "initial_knowers": [
+        "diana",
+        "marcus"
+      ],
+      "initial_suspecters": [],
+      "dramatic_weight": 0.6,
+      "reveal_consequences": "Diana's loyalty conflict becomes public. Elena realizes Diana might not be a trustworthy confidante. Marcus has leverage."
+    },
+    {
+      "id": "secret_lydia_knows",
+      "description": "Lydia has noticed financial discrepancies in the firm's books and suspects Marcus of wrongdoing.",
+      "truth_value": true,
+      "holder": [
+        "lydia"
+      ],
+      "about": "lydia",
+      "content_type": "knowledge",
+      "initial_knowers": [
+        "lydia"
+      ],
+      "initial_suspecters": [],
+      "dramatic_weight": 0.5,
+      "reveal_consequences": "If Marcus learns Lydia suspects him, she becomes a threat he needs to neutralize. If Thorne learns, he has an ally."
+    },
+    {
+      "id": "secret_victor_investigation",
+      "description": "Victor is secretly investigating Marcus's business dealings for a journalistic expose.",
+      "truth_value": true,
+      "holder": [
+        "victor"
+      ],
+      "about": "victor",
+      "content_type": "investigation",
+      "initial_knowers": [
+        "victor"
+      ],
+      "initial_suspecters": [
+        "marcus"
+      ],
+      "dramatic_weight": 0.7,
+      "reveal_consequences": "If Marcus confirms Victor is investigating, he'll try to buy Victor off, discredit him, or flee. If Thorne learns, Victor becomes an ally or a threat."
+    }
+  ],
+  "events": [
+    {
+      "id": "evt_0001",
+      "sim_time": 0.0,
+      "tick_id": 0,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "thorne",
+      "target_agents": [
+        "elena",
+        "marcus",
+        "lydia",
+        "diana",
+        "victor"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "elena",
+          "agent_b": "thorne",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "Thorne welcomes the guests and proposes a toast.",
+      "beat_type": "setup",
+      "metrics": {
+        "tension": 0.05,
+        "irony": 0.11,
+        "significance": 0.027,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.03636363636363637,
+          "time_pressure": 0.0,
+          "goal_frustration": 0.07272727272727274,
+          "relationship_volatility": 0.07272727272727274,
+          "information_gap": 0.07272727272727274,
+          "resource_scarcity": 0.03636363636363637,
+          "moral_cost": 0.03636363636363637,
+          "irony_density": 0.07272727272727274
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0002",
+      "sim_time": 1.25,
+      "tick_id": 1,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "diana",
+      "target_agents": [
+        "victor"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0001"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "victor",
+          "agent_b": "diana",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "(texture) chat #2",
+      "metrics": {
+        "tension": 0.04,
+        "irony": 0.088,
+        "significance": 0.021,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.02908517101266322,
+          "time_pressure": 6.311886070456428e-05,
+          "goal_frustration": 0.05817034202532644,
+          "relationship_volatility": 0.05817034202532644,
+          "information_gap": 0.05817034202532644,
+          "resource_scarcity": 0.02908517101266322,
+          "moral_cost": 0.02908517101266322,
+          "irony_density": 0.05817034202532644
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0003",
+      "sim_time": 2.5,
+      "tick_id": 2,
+      "order_in_tick": 0,
+      "type": "physical",
+      "source_agent": "marcus",
+      "target_agents": [
+        "thorne"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0002"
+      ],
+      "deltas": [],
+      "description": "(texture) physical #3",
+      "metrics": {
+        "tension": 0.05,
+        "irony": 0.11,
+        "significance": 0.027,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.0454097520596003,
+          "time_pressure": 0.0003941818755173637,
+          "goal_frustration": 0.0908195041192006,
+          "relationship_volatility": 0.0454097520596003,
+          "information_gap": 0.0454097520596003,
+          "resource_scarcity": 0.10898340494304072,
+          "moral_cost": 0.01816390082384012,
+          "irony_density": 0.0454097520596003
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0004",
+      "sim_time": 3.75,
+      "tick_id": 3,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "elena",
+      "target_agents": [
+        "marcus"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0003"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "marcus",
+          "agent_b": "elena",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "(texture) chat #4",
+      "metrics": {
+        "tension": 0.06,
+        "irony": 0.132,
+        "significance": 0.034,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.04355902162353775,
+          "time_pressure": 0.0008507621410847216,
+          "goal_frustration": 0.0871180432470755,
+          "relationship_volatility": 0.0871180432470755,
+          "information_gap": 0.0871180432470755,
+          "resource_scarcity": 0.04355902162353775,
+          "moral_cost": 0.04355902162353775,
+          "irony_density": 0.0871180432470755
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0005",
+      "sim_time": 5.0,
+      "tick_id": 5,
+      "order_in_tick": 0,
+      "type": "observe",
+      "source_agent": "lydia",
+      "target_agents": [],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0004"
+      ],
+      "deltas": [
+        {
+          "kind": "belief",
+          "agent": "lydia",
+          "attribute": "secret_embezzle_01",
+          "op": "set",
+          "value": "suspects",
+          "reason_code": "SUSPICIOUS_BEHAVIOR",
+          "reason_display": "Belief updated."
+        }
+      ],
+      "description": "Lydia notices Marcus checking his phone nervously under the table.",
+      "metrics": {
+        "tension": 0.15,
+        "irony": 0.73,
+        "significance": 0.103,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.06850346878097126,
+          "time_pressure": 0.0011892963330029731,
+          "goal_frustration": 0.13700693756194252,
+          "relationship_volatility": 0.03425173439048563,
+          "information_gap": 0.4452725470763132,
+          "resource_scarcity": 0.03425173439048563,
+          "moral_cost": 0.03425173439048563,
+          "irony_density": 0.4452725470763132
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0006",
+      "sim_time": 6.429,
+      "tick_id": 6,
+      "order_in_tick": 0,
+      "type": "physical",
+      "source_agent": "thorne",
+      "target_agents": [
+        "elena"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0005"
+      ],
+      "deltas": [],
+      "description": "(texture) physical #6",
+      "metrics": {
+        "tension": 0.08,
+        "irony": 0.176,
+        "significance": 0.048,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.07225592097722171,
+          "time_pressure": 0.00414789540044901,
+          "goal_frustration": 0.14451184195444342,
+          "relationship_volatility": 0.07225592097722171,
+          "information_gap": 0.07225592097722171,
+          "resource_scarcity": 0.17341421034533208,
+          "moral_cost": 0.02890236839088868,
+          "irony_density": 0.07225592097722171
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0007",
+      "sim_time": 7.857,
+      "tick_id": 7,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "victor",
+      "target_agents": [
+        "diana"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0006"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "diana",
+          "agent_b": "victor",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "(texture) chat #7",
+      "metrics": {
+        "tension": 0.09,
+        "irony": 0.198,
+        "significance": 0.056,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.06494830581109598,
+          "time_pressure": 0.0055686360779442865,
+          "goal_frustration": 0.12989661162219196,
+          "relationship_volatility": 0.12989661162219196,
+          "information_gap": 0.12989661162219196,
+          "resource_scarcity": 0.06494830581109598,
+          "moral_cost": 0.06494830581109598,
+          "irony_density": 0.12989661162219196
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0008",
+      "sim_time": 9.286,
+      "tick_id": 9,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "diana",
+      "target_agents": [
+        "victor"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0007"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "victor",
+          "agent_b": "diana",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "(texture) chat #8",
+      "metrics": {
+        "tension": 0.02,
+        "irony": 0.044,
+        "significance": 0.009,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.014388795092735805,
+          "time_pressure": 0.001723253979906124,
+          "goal_frustration": 0.02877759018547161,
+          "relationship_volatility": 0.02877759018547161,
+          "information_gap": 0.02877759018547161,
+          "resource_scarcity": 0.014388795092735805,
+          "moral_cost": 0.014388795092735805,
+          "irony_density": 0.02877759018547161
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0009",
+      "sim_time": 10.714,
+      "tick_id": 10,
+      "order_in_tick": 0,
+      "type": "physical",
+      "source_agent": "marcus",
+      "target_agents": [
+        "thorne"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0008"
+      ],
+      "deltas": [],
+      "description": "(texture) physical #9",
+      "metrics": {
+        "tension": 0.03,
+        "irony": 0.066,
+        "significance": 0.015,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.02678741758213074,
+          "time_pressure": 0.004270725277249447,
+          "goal_frustration": 0.05357483516426148,
+          "relationship_volatility": 0.02678741758213074,
+          "information_gap": 0.02678741758213074,
+          "resource_scarcity": 0.06428980219711378,
+          "moral_cost": 0.010714967032852296,
+          "irony_density": 0.02678741758213074
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0010",
+      "sim_time": 12.143,
+      "tick_id": 12,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "elena",
+      "target_agents": [
+        "marcus"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0009"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "marcus",
+          "agent_b": "elena",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "(texture) chat #10",
+      "metrics": {
+        "tension": 0.04,
+        "irony": 0.088,
+        "significance": 0.021,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.028559201489753955,
+          "time_pressure": 0.005848783612706484,
+          "goal_frustration": 0.05711840297950791,
+          "relationship_volatility": 0.05711840297950791,
+          "information_gap": 0.05711840297950791,
+          "resource_scarcity": 0.028559201489753955,
+          "moral_cost": 0.028559201489753955,
+          "irony_density": 0.05711840297950791
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0011",
+      "sim_time": 13.571,
+      "tick_id": 13,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "lydia",
+      "target_agents": [
+        "lydia"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0010"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "lydia",
+          "agent_b": "lydia",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "(texture) chat #11",
+      "metrics": {
+        "tension": 0.05,
+        "irony": 0.11,
+        "significance": 0.027,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.03553725149749693,
+          "time_pressure": 0.009090233527533772,
+          "goal_frustration": 0.07107450299499386,
+          "relationship_volatility": 0.07107450299499386,
+          "information_gap": 0.07107450299499386,
+          "resource_scarcity": 0.03553725149749693,
+          "moral_cost": 0.03553725149749693,
+          "irony_density": 0.07107450299499386
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0012",
+      "sim_time": 15.0,
+      "tick_id": 15,
+      "order_in_tick": 0,
+      "type": "social_move",
+      "source_agent": "elena",
+      "target_agents": [],
+      "location_id": "kitchen",
+      "causal_links": [
+        "evt_0011"
+      ],
+      "deltas": [
+        {
+          "kind": "agent_location",
+          "agent": "elena",
+          "attribute": "",
+          "op": "set",
+          "value": "kitchen",
+          "reason_code": "MOVE",
+          "reason_display": "Moved to kitchen."
+        }
+      ],
+      "description": "Elena excuses herself to check on dessert.",
+      "content_metadata": {
+        "from": "dining_table",
+        "to": "kitchen"
+      },
+      "metrics": {
+        "tension": 0.12,
+        "irony": 0.264,
+        "significance": 0.079,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.11770114942528737,
+          "time_pressure": 0.01839080459770115,
+          "goal_frustration": 0.17655172413793102,
+          "relationship_volatility": 0.11770114942528737,
+          "information_gap": 0.23540229885057473,
+          "resource_scarcity": 0.05885057471264368,
+          "moral_cost": 0.05885057471264368,
+          "irony_density": 0.17655172413793102
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0013",
+      "sim_time": 16.5,
+      "tick_id": 16,
+      "order_in_tick": 0,
+      "type": "social_move",
+      "source_agent": "marcus",
+      "target_agents": [],
+      "location_id": "kitchen",
+      "causal_links": [
+        "evt_0012"
+      ],
+      "deltas": [
+        {
+          "kind": "agent_location",
+          "agent": "marcus",
+          "attribute": "",
+          "op": "set",
+          "value": "kitchen",
+          "reason_code": "MOVE",
+          "reason_display": "Moved to kitchen."
+        }
+      ],
+      "description": "(texture) social_move #13",
+      "metrics": {
+        "tension": 0.16,
+        "irony": 0.352,
+        "significance": 0.111,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.1563060484640336,
+          "time_pressure": 0.029551612287731354,
+          "goal_frustration": 0.23445907269605035,
+          "relationship_volatility": 0.1563060484640336,
+          "information_gap": 0.3126120969280672,
+          "resource_scarcity": 0.0781530242320168,
+          "moral_cost": 0.0781530242320168,
+          "irony_density": 0.23445907269605035
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0014",
+      "sim_time": 18.0,
+      "tick_id": 18,
+      "order_in_tick": 0,
+      "type": "confide",
+      "source_agent": "elena",
+      "target_agents": [
+        "marcus"
+      ],
+      "location_id": "kitchen",
+      "causal_links": [
+        "evt_0012"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "marcus",
+          "agent_b": "elena",
+          "attribute": "trust",
+          "op": "add",
+          "value": 0.05,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        },
+        {
+          "kind": "pacing",
+          "agent": "elena",
+          "attribute": "stress",
+          "op": "add",
+          "value": 0.04,
+          "reason_code": "CONFESSION_WEIGHT",
+          "reason_display": "Pacing shift."
+        }
+      ],
+      "description": "Elena whispers that she fears Thorne suspects something.",
+      "content_metadata": {
+        "secret_id": "secret_affair_01"
+      },
+      "metrics": {
+        "tension": 0.36,
+        "irony": 0.792,
+        "significance": 0.293,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.10981887511916111,
+          "time_pressure": 0.024709246901811248,
+          "goal_frustration": 0.3294566253574833,
+          "relationship_volatility": 0.494184938036225,
+          "information_gap": 0.7687321258341278,
+          "resource_scarcity": 0.054909437559580554,
+          "moral_cost": 0.6040038131553861,
+          "irony_density": 0.494184938036225
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0015",
+      "sim_time": 19.0,
+      "tick_id": 19,
+      "order_in_tick": 0,
+      "type": "social_move",
+      "source_agent": "lydia",
+      "target_agents": [],
+      "location_id": "kitchen",
+      "causal_links": [
+        "evt_0014"
+      ],
+      "deltas": [
+        {
+          "kind": "agent_location",
+          "agent": "lydia",
+          "attribute": "",
+          "op": "set",
+          "value": "kitchen",
+          "reason_code": "MOVE",
+          "reason_display": "Moved to kitchen."
+        }
+      ],
+      "description": "(texture) social_move #15",
+      "metrics": {
+        "tension": 0.1,
+        "irony": 0.22,
+        "significance": 0.063,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.09696153522430773,
+          "time_pressure": 0.024307718205538256,
+          "goal_frustration": 0.1454423028364616,
+          "relationship_volatility": 0.09696153522430773,
+          "information_gap": 0.19392307044861545,
+          "resource_scarcity": 0.04848076761215386,
+          "moral_cost": 0.04848076761215386,
+          "irony_density": 0.1454423028364616
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0016",
+      "sim_time": 20.0,
+      "tick_id": 20,
+      "order_in_tick": 0,
+      "type": "observe",
+      "source_agent": "lydia",
+      "target_agents": [],
+      "location_id": "kitchen",
+      "causal_links": [
+        "evt_0014",
+        "evt_0015"
+      ],
+      "deltas": [
+        {
+          "kind": "belief",
+          "agent": "lydia",
+          "attribute": "secret_affair_01",
+          "op": "set",
+          "value": "suspects",
+          "reason_code": "OVERHEARD_WHISPER",
+          "reason_display": "Belief updated."
+        }
+      ],
+      "description": "Lydia overhears Elena and Marcus whispering in the kitchen.",
+      "content_metadata": {
+        "secret_id": "secret_affair_01",
+        "confidence": 0.75
+      },
+      "metrics": {
+        "tension": 0.344,
+        "irony": 1.157,
+        "significance": 0.284,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.15749999999999997,
+          "time_pressure": 0.04374999999999999,
+          "goal_frustration": 0.31499999999999995,
+          "relationship_volatility": 0.07874999999999999,
+          "information_gap": 1.0,
+          "resource_scarcity": 0.07874999999999999,
+          "moral_cost": 0.07874999999999999,
+          "irony_density": 1.0
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0017",
+      "sim_time": 21.25,
+      "tick_id": 21,
+      "order_in_tick": 0,
+      "type": "observe",
+      "source_agent": "lydia",
+      "target_agents": [],
+      "location_id": "kitchen",
+      "causal_links": [
+        "evt_0016"
+      ],
+      "deltas": [
+        {
+          "kind": "pacing",
+          "agent": "lydia",
+          "attribute": "stress",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "NOTICED_TENSION",
+          "reason_display": "Pacing shift."
+        }
+      ],
+      "description": "(texture) observe #17",
+      "metrics": {
+        "tension": 0.14,
+        "irony": 0.708,
+        "significance": 0.094,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.06287336297740148,
+          "time_pressure": 0.01971614789547421,
+          "goal_frustration": 0.12574672595480296,
+          "relationship_volatility": 0.03143668148870074,
+          "information_gap": 0.40867685935310966,
+          "resource_scarcity": 0.03143668148870074,
+          "moral_cost": 0.03143668148870074,
+          "irony_density": 0.40867685935310966
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0018",
+      "sim_time": 22.5,
+      "tick_id": 22,
+      "order_in_tick": 0,
+      "type": "observe",
+      "source_agent": "lydia",
+      "target_agents": [],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0017"
+      ],
+      "deltas": [
+        {
+          "kind": "pacing",
+          "agent": "lydia",
+          "attribute": "stress",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "NOTICED_TENSION",
+          "reason_display": "Pacing shift."
+        }
+      ],
+      "description": "(texture) observe #18",
+      "metrics": {
+        "tension": 0.12,
+        "irony": 0.664,
+        "significance": 0.079,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.053776805251641135,
+          "time_pressure": 0.018905908096280087,
+          "goal_frustration": 0.10755361050328227,
+          "relationship_volatility": 0.026888402625820568,
+          "information_gap": 0.3495492341356674,
+          "resource_scarcity": 0.026888402625820568,
+          "moral_cost": 0.026888402625820568,
+          "irony_density": 0.3495492341356674
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0019",
+      "sim_time": 23.75,
+      "tick_id": 23,
+      "order_in_tick": 0,
+      "type": "social_move",
+      "source_agent": "diana",
+      "target_agents": [],
+      "location_id": "bathroom",
+      "causal_links": [
+        "evt_0018"
+      ],
+      "deltas": [
+        {
+          "kind": "agent_location",
+          "agent": "diana",
+          "attribute": "",
+          "op": "set",
+          "value": "bathroom",
+          "reason_code": "MOVE",
+          "reason_display": "Moved to bathroom."
+        }
+      ],
+      "description": "(texture) social_move #19",
+      "metrics": {
+        "tension": 0.18,
+        "irony": 0.396,
+        "significance": 0.128,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.17159792081512323,
+          "time_pressure": 0.06721663347901419,
+          "goal_frustration": 0.25739688122268484,
+          "relationship_volatility": 0.17159792081512323,
+          "information_gap": 0.34319584163024647,
+          "resource_scarcity": 0.08579896040756162,
+          "moral_cost": 0.08579896040756162,
+          "irony_density": 0.25739688122268484
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0020",
+      "sim_time": 25.0,
+      "tick_id": 25,
+      "order_in_tick": 0,
+      "type": "physical",
+      "source_agent": "thorne",
+      "target_agents": [
+        "elena",
+        "marcus",
+        "lydia",
+        "diana",
+        "victor"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0019"
+      ],
+      "deltas": [],
+      "description": "Thorne refills wine glasses.",
+      "metrics": {
+        "tension": 0.05,
+        "irony": 0.11,
+        "significance": 0.027,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.041373365895704645,
+          "time_pressure": 0.03591438011779917,
+          "goal_frustration": 0.08274673179140929,
+          "relationship_volatility": 0.041373365895704645,
+          "information_gap": 0.041373365895704645,
+          "resource_scarcity": 0.09929607814969113,
+          "moral_cost": 0.016549346358281855,
+          "irony_density": 0.041373365895704645
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0021",
+      "sim_time": 27.5,
+      "tick_id": 27,
+      "order_in_tick": 0,
+      "type": "social_move",
+      "source_agent": "elena",
+      "target_agents": [],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0020"
+      ],
+      "deltas": [
+        {
+          "kind": "agent_location",
+          "agent": "elena",
+          "attribute": "",
+          "op": "set",
+          "value": "dining_table",
+          "reason_code": "MOVE",
+          "reason_display": "Moved to dining_table."
+        }
+      ],
+      "description": "(texture) social_move #21",
+      "metrics": {
+        "tension": 0.12,
+        "irony": 0.264,
+        "significance": 0.079,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.11260767742592406,
+          "time_pressure": 0.05913858059260768,
+          "goal_frustration": 0.16891151613888608,
+          "relationship_volatility": 0.11260767742592406,
+          "information_gap": 0.22521535485184813,
+          "resource_scarcity": 0.05630383871296203,
+          "moral_cost": 0.05630383871296203,
+          "irony_density": 0.16891151613888608
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0022",
+      "sim_time": 30.0,
+      "tick_id": 30,
+      "order_in_tick": 0,
+      "type": "confide",
+      "source_agent": "elena",
+      "target_agents": [
+        "diana"
+      ],
+      "location_id": "bathroom",
+      "causal_links": [
+        "evt_0014",
+        "evt_0016"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "diana",
+          "agent_b": "elena",
+          "attribute": "trust",
+          "op": "add",
+          "value": 0.05,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        },
+        {
+          "kind": "pacing",
+          "agent": "elena",
+          "attribute": "stress",
+          "op": "add",
+          "value": 0.04,
+          "reason_code": "CONFESSION_WEIGHT",
+          "reason_display": "Pacing shift."
+        }
+      ],
+      "description": "Elena confides to Diana about the affair, voice shaking.",
+      "content_metadata": {
+        "secret_id": "secret_affair_01"
+      },
+      "metrics": {
+        "tension": 0.4,
+        "irony": 0.88,
+        "significance": 0.333,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.12018779342723006,
+          "time_pressure": 0.07511737089201878,
+          "goal_frustration": 0.36056338028169016,
+          "relationship_volatility": 0.5408450704225353,
+          "information_gap": 0.8413145539906103,
+          "resource_scarcity": 0.06009389671361503,
+          "moral_cost": 0.6610328638497653,
+          "irony_density": 0.5408450704225353
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0023",
+      "sim_time": 31.6,
+      "tick_id": 31,
+      "order_in_tick": 0,
+      "type": "social_move",
+      "source_agent": "elena",
+      "target_agents": [],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0022"
+      ],
+      "deltas": [
+        {
+          "kind": "agent_location",
+          "agent": "elena",
+          "attribute": "",
+          "op": "set",
+          "value": "dining_table",
+          "reason_code": "MOVE",
+          "reason_display": "Moved to dining_table."
+        }
+      ],
+      "description": "(texture) social_move #23",
+      "metrics": {
+        "tension": 0.12,
+        "irony": 0.264,
+        "significance": 0.079,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.11042803645147684,
+          "time_pressure": 0.07657570838818523,
+          "goal_frustration": 0.16564205467721524,
+          "relationship_volatility": 0.11042803645147684,
+          "information_gap": 0.22085607290295367,
+          "resource_scarcity": 0.05521401822573842,
+          "moral_cost": 0.05521401822573842,
+          "irony_density": 0.16564205467721524
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0024",
+      "sim_time": 33.2,
+      "tick_id": 33,
+      "order_in_tick": 0,
+      "type": "social_move",
+      "source_agent": "marcus",
+      "target_agents": [],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0023"
+      ],
+      "deltas": [
+        {
+          "kind": "agent_location",
+          "agent": "marcus",
+          "attribute": "",
+          "op": "set",
+          "value": "dining_table",
+          "reason_code": "MOVE",
+          "reason_display": "Moved to dining_table."
+        }
+      ],
+      "description": "(texture) social_move #24",
+      "metrics": {
+        "tension": 0.13,
+        "irony": 0.286,
+        "significance": 0.086,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.11864772021447859,
+          "time_pressure": 0.09081823828417143,
+          "goal_frustration": 0.17797158032171786,
+          "relationship_volatility": 0.11864772021447859,
+          "information_gap": 0.23729544042895717,
+          "resource_scarcity": 0.05932386010723929,
+          "moral_cost": 0.05932386010723929,
+          "irony_density": 0.17797158032171786
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0025",
+      "sim_time": 34.8,
+      "tick_id": 34,
+      "order_in_tick": 0,
+      "type": "social_move",
+      "source_agent": "lydia",
+      "target_agents": [],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0024"
+      ],
+      "deltas": [
+        {
+          "kind": "agent_location",
+          "agent": "lydia",
+          "attribute": "",
+          "op": "set",
+          "value": "dining_table",
+          "reason_code": "MOVE",
+          "reason_display": "Moved to dining_table."
+        }
+      ],
+      "description": "(texture) social_move #25",
+      "metrics": {
+        "tension": 0.14,
+        "irony": 0.308,
+        "significance": 0.094,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.12668250197941408,
+          "time_pressure": 0.10653998416468724,
+          "goal_frustration": 0.19002375296912113,
+          "relationship_volatility": 0.12668250197941408,
+          "information_gap": 0.25336500395882816,
+          "resource_scarcity": 0.06334125098970704,
+          "moral_cost": 0.06334125098970704,
+          "irony_density": 0.19002375296912113
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0026",
+      "sim_time": 36.4,
+      "tick_id": 36,
+      "order_in_tick": 0,
+      "type": "physical",
+      "source_agent": "marcus",
+      "target_agents": [
+        "thorne"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0025"
+      ],
+      "deltas": [],
+      "description": "(texture) physical #26",
+      "metrics": {
+        "tension": 0.18,
+        "irony": 0.396,
+        "significance": 0.128,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.13533551930828513,
+          "time_pressure": 0.24904743008709093,
+          "goal_frustration": 0.27067103861657027,
+          "relationship_volatility": 0.13533551930828513,
+          "information_gap": 0.13533551930828513,
+          "resource_scarcity": 0.32480524633988433,
+          "moral_cost": 0.05413420772331406,
+          "irony_density": 0.13533551930828513
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0027",
+      "sim_time": 38.0,
+      "tick_id": 38,
+      "order_in_tick": 0,
+      "type": "internal",
+      "source_agent": "diana",
+      "target_agents": [],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0022"
+      ],
+      "deltas": [
+        {
+          "kind": "pacing",
+          "agent": "diana",
+          "attribute": "stress",
+          "op": "add",
+          "value": 0.03,
+          "reason_code": "RUMINATION",
+          "reason_display": "Pacing shift."
+        }
+      ],
+      "description": "Diana realizes her debt to Marcus traps her no matter what happens tonight.",
+      "content_metadata": {
+        "secret_id": "secret_diana_debt"
+      },
+      "metrics": {
+        "tension": 0.32,
+        "irony": 0.704,
+        "significance": 0.255,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.04922551009507531,
+          "time_pressure": 0.09872449524623436,
+          "goal_frustration": 0.7383826514261296,
+          "relationship_volatility": 0.09845102019015062,
+          "information_gap": 0.34457857066552716,
+          "resource_scarcity": 0.04922551009507531,
+          "moral_cost": 0.6399316312359791,
+          "irony_density": 0.5414806110458285
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0028",
+      "sim_time": 39.0,
+      "tick_id": 39,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "diana",
+      "target_agents": [
+        "marcus"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0027"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "marcus",
+          "agent_b": "diana",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "(texture) chat #28",
+      "metrics": {
+        "tension": 0.16,
+        "irony": 0.352,
+        "significance": 0.111,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.09761677788369877,
+          "time_pressure": 0.20621544327931365,
+          "goal_frustration": 0.19523355576739754,
+          "relationship_volatility": 0.19523355576739754,
+          "information_gap": 0.19523355576739754,
+          "resource_scarcity": 0.09761677788369877,
+          "moral_cost": 0.09761677788369877,
+          "irony_density": 0.19523355576739754
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0029",
+      "sim_time": 40.0,
+      "tick_id": 40,
+      "order_in_tick": 0,
+      "type": "observe",
+      "source_agent": "victor",
+      "target_agents": [],
+      "location_id": "dining_table",
+      "causal_links": [],
+      "deltas": [
+        {
+          "kind": "pacing",
+          "agent": "victor",
+          "attribute": "stress",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "NOTICED_TENSION",
+          "reason_display": "Pacing shift."
+        }
+      ],
+      "description": "Victor gets a text from an unknown number: 'Don't trust Marcus.'",
+      "content_metadata": {
+        "external": true
+      },
+      "metrics": {
+        "tension": 0.12,
+        "irony": 0.664,
+        "significance": 0.079,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.05158208955223881,
+          "time_pressure": 0.057313432835820896,
+          "goal_frustration": 0.10316417910447762,
+          "relationship_volatility": 0.025791044776119404,
+          "information_gap": 0.3352835820895523,
+          "resource_scarcity": 0.025791044776119404,
+          "moral_cost": 0.025791044776119404,
+          "irony_density": 0.3352835820895523
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0030",
+      "sim_time": 41.0,
+      "tick_id": 41,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "thorne",
+      "target_agents": [
+        "marcus"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0029"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "marcus",
+          "agent_b": "thorne",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        },
+        {
+          "kind": "agent_location",
+          "agent": "thorne",
+          "attribute": "",
+          "op": "set",
+          "value": "foyer",
+          "reason_code": "STEP_ASIDE",
+          "reason_display": "Moved to foyer."
+        },
+        {
+          "kind": "agent_location",
+          "agent": "marcus",
+          "attribute": "",
+          "op": "set",
+          "value": "foyer",
+          "reason_code": "FOLLOW",
+          "reason_display": "Moved to foyer."
+        }
+      ],
+      "description": "(texture) chat #30",
+      "metrics": {
+        "tension": 0.22,
+        "irony": 0.484,
+        "significance": 0.163,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.13198625143214246,
+          "time_pressure": 0.3081512342464326,
+          "goal_frustration": 0.2639725028642849,
+          "relationship_volatility": 0.2639725028642849,
+          "information_gap": 0.2639725028642849,
+          "resource_scarcity": 0.13198625143214246,
+          "moral_cost": 0.13198625143214246,
+          "irony_density": 0.2639725028642849
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0031",
+      "sim_time": 42.0,
+      "tick_id": 42,
+      "order_in_tick": 0,
+      "type": "lie",
+      "source_agent": "marcus",
+      "target_agents": [
+        "thorne"
+      ],
+      "location_id": "foyer",
+      "causal_links": [
+        "evt_0030"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "thorne",
+          "agent_b": "marcus",
+          "attribute": "trust",
+          "op": "add",
+          "value": -0.08,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        },
+        {
+          "kind": "belief",
+          "agent": "thorne",
+          "attribute": "secret_embezzle_01",
+          "op": "set",
+          "value": "believes_false",
+          "reason_code": "REASSURED",
+          "reason_display": "Belief updated."
+        }
+      ],
+      "description": "Marcus deflects Thorne's quiet question about the firm's finances.",
+      "content_metadata": {
+        "secret_id": "secret_embezzle_01"
+      },
+      "beat_type": "escalation",
+      "metrics": {
+        "tension": 0.45,
+        "irony": 1.39,
+        "significance": 0.384,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.22342901474010862,
+          "time_pressure": 0.1368502715283165,
+          "goal_frustration": 0.5027152831652444,
+          "relationship_volatility": 0.3351435221101629,
+          "information_gap": 0.8937160589604345,
+          "resource_scarcity": 0.055857253685027156,
+          "moral_cost": 0.8378588052754072,
+          "irony_density": 0.6144297905352988
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0032",
+      "sim_time": 44.0,
+      "tick_id": 44,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "marcus",
+      "target_agents": [
+        "thorne"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0031"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "thorne",
+          "agent_b": "marcus",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "(texture) chat #32",
+      "metrics": {
+        "tension": 0.18,
+        "irony": 0.396,
+        "significance": 0.128,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.10519480519480523,
+          "time_pressure": 0.28285714285714286,
+          "goal_frustration": 0.21038961038961046,
+          "relationship_volatility": 0.21038961038961046,
+          "information_gap": 0.21038961038961046,
+          "resource_scarcity": 0.10519480519480523,
+          "moral_cost": 0.10519480519480523,
+          "irony_density": 0.21038961038961046
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0033",
+      "sim_time": 46.0,
+      "tick_id": 46,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "victor",
+      "target_agents": [
+        "lydia"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0032"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "lydia",
+          "agent_b": "victor",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "Victor and Lydia trade careful small talk that edges toward money.",
+      "metrics": {
+        "tension": 0.14,
+        "irony": 0.308,
+        "significance": 0.094,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.080350737345556,
+          "time_pressure": 0.23614188919888404,
+          "goal_frustration": 0.160701474691112,
+          "relationship_volatility": 0.160701474691112,
+          "information_gap": 0.160701474691112,
+          "resource_scarcity": 0.080350737345556,
+          "moral_cost": 0.080350737345556,
+          "irony_density": 0.160701474691112
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0034",
+      "sim_time": 46.0,
+      "tick_id": 46,
+      "order_in_tick": 1,
+      "type": "chat",
+      "source_agent": "elena",
+      "target_agents": [
+        "thorne"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0033"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "thorne",
+          "agent_b": "elena",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "Elena overcompensates with tenderness toward Thorne; Marcus watches.",
+      "content_metadata": {
+        "contradiction": "smiles_through_fear"
+      },
+      "metrics": {
+        "tension": 0.16,
+        "irony": 0.352,
+        "significance": 0.111,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.09182941410920686,
+          "time_pressure": 0.26987644479872464,
+          "goal_frustration": 0.18365882821841373,
+          "relationship_volatility": 0.18365882821841373,
+          "information_gap": 0.18365882821841373,
+          "resource_scarcity": 0.09182941410920686,
+          "moral_cost": 0.09182941410920686,
+          "irony_density": 0.18365882821841373
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0035",
+      "sim_time": 48.0,
+      "tick_id": 48,
+      "order_in_tick": 0,
+      "type": "observe",
+      "source_agent": "victor",
+      "target_agents": [],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0031",
+        "evt_0033"
+      ],
+      "deltas": [
+        {
+          "kind": "belief",
+          "agent": "victor",
+          "attribute": "secret_embezzle_01",
+          "op": "set",
+          "value": "suspects",
+          "reason_code": "NUMBER_MISMATCH",
+          "reason_display": "Belief updated."
+        }
+      ],
+      "description": "Victor notices hints of a discrepancy in the numbers Marcus just quoted.",
+      "content_metadata": {
+        "secret_id": "secret_embezzle_01"
+      },
+      "metrics": {
+        "tension": 0.371,
+        "irony": 1.217,
+        "significance": 0.313,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.15916230366492146,
+          "time_pressure": 0.2546596858638744,
+          "goal_frustration": 0.3183246073298429,
+          "relationship_volatility": 0.07958115183246073,
+          "information_gap": 1.0,
+          "resource_scarcity": 0.07958115183246073,
+          "moral_cost": 0.07958115183246073,
+          "irony_density": 1.0
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0036",
+      "sim_time": 49.333,
+      "tick_id": 49,
+      "order_in_tick": 0,
+      "type": "physical",
+      "source_agent": "victor",
+      "target_agents": [
+        "marcus"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0035"
+      ],
+      "deltas": [],
+      "description": "(texture) physical #36",
+      "metrics": {
+        "tension": 0.14,
+        "irony": 0.308,
+        "significance": 0.094,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.09195250377368192,
+          "time_pressure": 0.31081796679159934,
+          "goal_frustration": 0.18390500754736383,
+          "relationship_volatility": 0.09195250377368192,
+          "information_gap": 0.09195250377368192,
+          "resource_scarcity": 0.22068600905683658,
+          "moral_cost": 0.03678100150947277,
+          "irony_density": 0.09195250377368192
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0037",
+      "sim_time": 50.667,
+      "tick_id": 50,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "thorne",
+      "target_agents": [
+        "victor"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0036"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "victor",
+          "agent_b": "thorne",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "(texture) chat #37",
+      "metrics": {
+        "tension": 0.16,
+        "irony": 0.352,
+        "significance": 0.111,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.0878790185274039,
+          "time_pressure": 0.31333079619855725,
+          "goal_frustration": 0.1757580370548078,
+          "relationship_volatility": 0.1757580370548078,
+          "information_gap": 0.1757580370548078,
+          "resource_scarcity": 0.0878790185274039,
+          "moral_cost": 0.0878790185274039,
+          "irony_density": 0.1757580370548078
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0038",
+      "sim_time": 52.0,
+      "tick_id": 52,
+      "order_in_tick": 0,
+      "type": "social_move",
+      "source_agent": "thorne",
+      "target_agents": [],
+      "location_id": "balcony",
+      "causal_links": [
+        "evt_0035",
+        "evt_0037"
+      ],
+      "deltas": [
+        {
+          "kind": "agent_location",
+          "agent": "thorne",
+          "attribute": "",
+          "op": "set",
+          "value": "balcony",
+          "reason_code": "MOVE",
+          "reason_display": "Moved to balcony."
+        }
+      ],
+      "description": "Thorne steps out to the balcony to get air, jaw tight.",
+      "content_metadata": {
+        "from": "dining_table",
+        "to": "balcony"
+      },
+      "metrics": {
+        "tension": 0.28,
+        "irony": 0.616,
+        "significance": 0.217,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.22677165354330708,
+          "time_pressure": 0.4258267716535433,
+          "goal_frustration": 0.3401574803149606,
+          "relationship_volatility": 0.22677165354330708,
+          "information_gap": 0.45354330708661417,
+          "resource_scarcity": 0.11338582677165354,
+          "moral_cost": 0.11338582677165354,
+          "irony_density": 0.3401574803149606
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0039",
+      "sim_time": 53.0,
+      "tick_id": 53,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "lydia",
+      "target_agents": [
+        "thorne"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0038"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "thorne",
+          "agent_b": "lydia",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "(texture) chat #39",
+      "metrics": {
+        "tension": 0.22,
+        "irony": 0.484,
+        "significance": 0.163,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.11810979588032436,
+          "time_pressure": 0.4607922453164321,
+          "goal_frustration": 0.23621959176064872,
+          "relationship_volatility": 0.23621959176064872,
+          "information_gap": 0.23621959176064872,
+          "resource_scarcity": 0.11810979588032436,
+          "moral_cost": 0.11810979588032436,
+          "irony_density": 0.23621959176064872
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0040",
+      "sim_time": 54.0,
+      "tick_id": 54,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "diana",
+      "target_agents": [
+        "elena"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0039"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "elena",
+          "agent_b": "diana",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "(texture) chat #40",
+      "metrics": {
+        "tension": 0.24,
+        "irony": 0.528,
+        "significance": 0.18,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.12757475083056477,
+          "time_pressure": 0.5166777408637874,
+          "goal_frustration": 0.25514950166112954,
+          "relationship_volatility": 0.25514950166112954,
+          "information_gap": 0.25514950166112954,
+          "resource_scarcity": 0.12757475083056477,
+          "moral_cost": 0.12757475083056477,
+          "irony_density": 0.25514950166112954
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0041",
+      "sim_time": 55.0,
+      "tick_id": 55,
+      "order_in_tick": 0,
+      "type": "conflict",
+      "source_agent": "victor",
+      "target_agents": [
+        "marcus"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0035",
+        "evt_0034"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "marcus",
+          "agent_b": "victor",
+          "attribute": "trust",
+          "op": "add",
+          "value": -0.25,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        },
+        {
+          "kind": "pacing",
+          "agent": "victor",
+          "attribute": "stress",
+          "op": "add",
+          "value": 0.06,
+          "reason_code": "CONFLICT_ESCALATION",
+          "reason_display": "Pacing shift."
+        }
+      ],
+      "description": "Victor asks a pointed question about the firm's accounts.",
+      "content_metadata": {
+        "secret_id": "secret_embezzle_01"
+      },
+      "metrics": {
+        "tension": 0.55,
+        "irony": 1.21,
+        "significance": 0.488,
+        "thematic_shift": {
+          "loyalty_betrayal": -0.15
+        },
+        "tension_components": {
+          "danger": 0.8990234538018528,
+          "time_pressure": 0.2221851264502128,
+          "goal_frustration": 0.6346047909189549,
+          "relationship_volatility": 0.8990234538018528,
+          "information_gap": 0.4759535931892162,
+          "resource_scarcity": 0.05288373257657958,
+          "moral_cost": 0.6874885234955346,
+          "irony_density": 0.5288373257657958
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0042",
+      "sim_time": 56.667,
+      "tick_id": 56,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "thorne",
+      "target_agents": [
+        "victor"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0041"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "victor",
+          "agent_b": "thorne",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "(texture) chat #42",
+      "metrics": {
+        "tension": 0.22,
+        "irony": 0.484,
+        "significance": 0.163,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.11384269608074955,
+          "time_pressure": 0.507730343111755,
+          "goal_frustration": 0.2276853921614991,
+          "relationship_volatility": 0.2276853921614991,
+          "information_gap": 0.2276853921614991,
+          "resource_scarcity": 0.11384269608074955,
+          "moral_cost": 0.11384269608074955,
+          "irony_density": 0.2276853921614991
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0043",
+      "sim_time": 58.333,
+      "tick_id": 58,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "victor",
+      "target_agents": [
+        "marcus"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0042"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "marcus",
+          "agent_b": "victor",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "(texture) chat #43",
+      "metrics": {
+        "tension": 0.24,
+        "irony": 0.528,
+        "significance": 0.18,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.12209060135997632,
+          "time_pressure": 0.5770033850402606,
+          "goal_frustration": 0.24418120271995264,
+          "relationship_volatility": 0.24418120271995264,
+          "information_gap": 0.24418120271995264,
+          "resource_scarcity": 0.12209060135997632,
+          "moral_cost": 0.12209060135997632,
+          "irony_density": 0.24418120271995264
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0044",
+      "sim_time": 60.0,
+      "tick_id": 60,
+      "order_in_tick": 0,
+      "type": "social_move",
+      "source_agent": "marcus",
+      "target_agents": [],
+      "location_id": "balcony",
+      "causal_links": [
+        "evt_0041",
+        "evt_0038"
+      ],
+      "deltas": [
+        {
+          "kind": "agent_location",
+          "agent": "marcus",
+          "attribute": "",
+          "op": "set",
+          "value": "balcony",
+          "reason_code": "MOVE",
+          "reason_display": "Moved to balcony."
+        }
+      ],
+      "description": "Marcus follows Thorne to the balcony.",
+      "content_metadata": {
+        "from": "dining_table",
+        "to": "balcony"
+      },
+      "metrics": {
+        "tension": 0.42,
+        "irony": 0.924,
+        "significance": 0.353,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.32,
+          "time_pressure": 0.7999999999999999,
+          "goal_frustration": 0.4799999999999999,
+          "relationship_volatility": 0.32,
+          "information_gap": 0.64,
+          "resource_scarcity": 0.16,
+          "moral_cost": 0.16,
+          "irony_density": 0.4799999999999999
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0045",
+      "sim_time": 61.667,
+      "tick_id": 61,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "lydia",
+      "target_agents": [
+        "thorne"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0044"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "thorne",
+          "agent_b": "lydia",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "(texture) chat #45",
+      "metrics": {
+        "tension": 0.26,
+        "irony": 0.572,
+        "significance": 0.199,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.127750843391879,
+          "time_pressure": 0.6747407226893309,
+          "goal_frustration": 0.255501686783758,
+          "relationship_volatility": 0.255501686783758,
+          "information_gap": 0.255501686783758,
+          "resource_scarcity": 0.127750843391879,
+          "moral_cost": 0.127750843391879,
+          "irony_density": 0.255501686783758
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0046",
+      "sim_time": 63.333,
+      "tick_id": 63,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "diana",
+      "target_agents": [
+        "elena"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0045"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "elena",
+          "agent_b": "diana",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "(texture) chat #46",
+      "metrics": {
+        "tension": 0.24,
+        "irony": 0.528,
+        "significance": 0.18,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.11586556182527126,
+          "time_pressure": 0.6454788199220161,
+          "goal_frustration": 0.23173112365054252,
+          "relationship_volatility": 0.23173112365054252,
+          "information_gap": 0.23173112365054252,
+          "resource_scarcity": 0.11586556182527126,
+          "moral_cost": 0.11586556182527126,
+          "irony_density": 0.23173112365054252
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0047",
+      "sim_time": 65.0,
+      "tick_id": 65,
+      "order_in_tick": 0,
+      "type": "conflict",
+      "source_agent": "thorne",
+      "target_agents": [
+        "marcus"
+      ],
+      "location_id": "balcony",
+      "causal_links": [
+        "evt_0044",
+        "evt_0031"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "marcus",
+          "agent_b": "thorne",
+          "attribute": "trust",
+          "op": "add",
+          "value": -0.25,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        },
+        {
+          "kind": "pacing",
+          "agent": "thorne",
+          "attribute": "stress",
+          "op": "add",
+          "value": 0.06,
+          "reason_code": "CONFLICT_ESCALATION",
+          "reason_display": "Pacing shift."
+        }
+      ],
+      "description": "Thorne confronts Marcus about the ledger, voice low and dangerous.",
+      "content_metadata": {
+        "secret_id": "secret_embezzle_01"
+      },
+      "beat_type": "escalation",
+      "metrics": {
+        "tension": 0.682,
+        "irony": 1.499,
+        "significance": 0.674,
+        "thematic_shift": {
+          "loyalty_betrayal": -0.15
+        },
+        "tension_components": {
+          "danger": 1.0,
+          "time_pressure": 0.3982652810735618,
+          "goal_frustration": 0.8144407167989526,
+          "relationship_volatility": 1.0,
+          "information_gap": 0.6108305375992145,
+          "resource_scarcity": 0.06787005973324604,
+          "moral_cost": 0.8823107765321986,
+          "irony_density": 0.6787005973324605
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0048",
+      "sim_time": 67.333,
+      "tick_id": 67,
+      "order_in_tick": 0,
+      "type": "physical",
+      "source_agent": "thorne",
+      "target_agents": [
+        "victor"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0047"
+      ],
+      "deltas": [],
+      "description": "(texture) physical #48",
+      "metrics": {
+        "tension": 0.2,
+        "irony": 0.44,
+        "significance": 0.145,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.10598236513850366,
+          "time_pressure": 0.6673551867811681,
+          "goal_frustration": 0.21196473027700732,
+          "relationship_volatility": 0.10598236513850366,
+          "information_gap": 0.10598236513850366,
+          "resource_scarcity": 0.25435767633240874,
+          "moral_cost": 0.04239294605540146,
+          "irony_density": 0.10598236513850366
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0049",
+      "sim_time": 69.667,
+      "tick_id": 69,
+      "order_in_tick": 0,
+      "type": "observe",
+      "source_agent": "victor",
+      "target_agents": [
+        "marcus"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0048"
+      ],
+      "deltas": [
+        {
+          "kind": "pacing",
+          "agent": "victor",
+          "attribute": "stress",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "NOTICED_TENSION",
+          "reason_display": "Pacing shift."
+        }
+      ],
+      "description": "(texture) observe #49",
+      "metrics": {
+        "tension": 0.28,
+        "irony": 1.016,
+        "significance": 0.217,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.1073286298724324,
+          "time_pressure": 0.36174897723243327,
+          "goal_frustration": 0.2146572597448648,
+          "relationship_volatility": 0.0536643149362162,
+          "information_gap": 0.6976360941708105,
+          "resource_scarcity": 0.0536643149362162,
+          "moral_cost": 0.0536643149362162,
+          "irony_density": 0.6976360941708105
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0050",
+      "sim_time": 72.0,
+      "tick_id": 72,
+      "order_in_tick": 0,
+      "type": "reveal",
+      "source_agent": "lydia",
+      "target_agents": [
+        "thorne"
+      ],
+      "location_id": "balcony",
+      "causal_links": [
+        "evt_0047",
+        "evt_0016"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "thorne",
+          "agent_b": "lydia",
+          "attribute": "trust",
+          "op": "add",
+          "value": 0.1,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        },
+        {
+          "kind": "belief",
+          "agent": "thorne",
+          "attribute": "secret_affair_01",
+          "op": "set",
+          "value": "suspects",
+          "reason_code": "NEW_INFO",
+          "reason_display": "Belief updated."
+        }
+      ],
+      "description": "Lydia finally tells Thorne what she overheard between Elena and Marcus.",
+      "content_metadata": {
+        "secret_id": "secret_affair_01"
+      },
+      "metrics": {
+        "tension": 0.664,
+        "irony": 1.462,
+        "significance": 0.63,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.5294403892944038,
+          "time_pressure": 0.47649635036496346,
+          "goal_frustration": 0.6618004866180048,
+          "relationship_volatility": 0.7941605839416058,
+          "information_gap": 1.0,
+          "resource_scarcity": 0.06618004866180048,
+          "moral_cost": 0.8603406326034063,
+          "irony_density": 0.9265206812652067
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0051",
+      "sim_time": 74.0,
+      "tick_id": 74,
+      "order_in_tick": 0,
+      "type": "social_move",
+      "source_agent": "thorne",
+      "target_agents": [],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0050"
+      ],
+      "deltas": [
+        {
+          "kind": "agent_location",
+          "agent": "thorne",
+          "attribute": "",
+          "op": "set",
+          "value": "dining_table",
+          "reason_code": "MOVE",
+          "reason_display": "Moved to dining_table."
+        }
+      ],
+      "description": "(texture) social_move #51",
+      "metrics": {
+        "tension": 0.24,
+        "irony": 0.528,
+        "significance": 0.18,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.16267357025182397,
+          "time_pressure": 0.6186114379854084,
+          "goal_frustration": 0.24401035537773594,
+          "relationship_volatility": 0.16267357025182397,
+          "information_gap": 0.32534714050364794,
+          "resource_scarcity": 0.08133678512591198,
+          "moral_cost": 0.08133678512591198,
+          "irony_density": 0.24401035537773594
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0052",
+      "sim_time": 76.0,
+      "tick_id": 76,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "marcus",
+      "target_agents": [
+        "diana"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0051"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "diana",
+          "agent_b": "marcus",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        },
+        {
+          "kind": "pacing",
+          "agent": "marcus",
+          "attribute": "stress",
+          "op": "add",
+          "value": 0.04,
+          "reason_code": "MASK_SLIP",
+          "reason_display": "Pacing shift."
+        }
+      ],
+      "description": "Marcus jokes too loudly as if nothing is wrong; his hands shake.",
+      "dialogue": "\"Relax. It's just dinner.\"",
+      "content_metadata": {
+        "contradictory_signal": true
+      },
+      "metrics": {
+        "tension": 0.22,
+        "irony": 0.484,
+        "significance": 0.163,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.09252336448598131,
+          "time_pressure": 0.7422429906542055,
+          "goal_frustration": 0.18504672897196262,
+          "relationship_volatility": 0.18504672897196262,
+          "information_gap": 0.18504672897196262,
+          "resource_scarcity": 0.09252336448598131,
+          "moral_cost": 0.09252336448598131,
+          "irony_density": 0.18504672897196262
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0053",
+      "sim_time": 78.0,
+      "tick_id": 78,
+      "order_in_tick": 0,
+      "type": "observe",
+      "source_agent": "elena",
+      "target_agents": [],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0050",
+        "evt_0052"
+      ],
+      "deltas": [
+        {
+          "kind": "pacing",
+          "agent": "elena",
+          "attribute": "stress",
+          "op": "add",
+          "value": 0.1,
+          "reason_code": "PANIC_RISE",
+          "reason_display": "Pacing shift."
+        }
+      ],
+      "description": "Elena sees Lydia on the balcony with Thorne and panics.",
+      "content_metadata": {
+        "secret_id": "secret_affair_01"
+      },
+      "metrics": {
+        "tension": 0.483,
+        "irony": 1.462,
+        "significance": 0.52,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.21357882623705404,
+          "time_pressure": 0.9023705408515533,
+          "goal_frustration": 0.4271576524741081,
+          "relationship_volatility": 0.10678941311852702,
+          "information_gap": 1.0,
+          "resource_scarcity": 0.10678941311852702,
+          "moral_cost": 0.10678941311852702,
+          "irony_density": 1.0
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0054",
+      "sim_time": 80.333,
+      "tick_id": 80,
+      "order_in_tick": 0,
+      "type": "social_move",
+      "source_agent": "marcus",
+      "target_agents": [],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0053"
+      ],
+      "deltas": [
+        {
+          "kind": "agent_location",
+          "agent": "marcus",
+          "attribute": "",
+          "op": "set",
+          "value": "dining_table",
+          "reason_code": "MOVE",
+          "reason_display": "Moved to dining_table."
+        }
+      ],
+      "description": "(texture) social_move #54",
+      "metrics": {
+        "tension": 0.24,
+        "irony": 0.528,
+        "significance": 0.18,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.15382740057648786,
+          "time_pressure": 0.689380795388097,
+          "goal_frustration": 0.23074110086473176,
+          "relationship_volatility": 0.15382740057648786,
+          "information_gap": 0.3076548011529757,
+          "resource_scarcity": 0.07691370028824393,
+          "moral_cost": 0.07691370028824393,
+          "irony_density": 0.23074110086473176
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0055",
+      "sim_time": 82.667,
+      "tick_id": 82,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "victor",
+      "target_agents": [
+        "lydia"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0054"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "lydia",
+          "agent_b": "victor",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "(texture) chat #55",
+      "metrics": {
+        "tension": 0.26,
+        "irony": 0.572,
+        "significance": 0.199,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.10150582640234214,
+          "time_pressure": 0.9634359095742364,
+          "goal_frustration": 0.20301165280468428,
+          "relationship_volatility": 0.20301165280468428,
+          "information_gap": 0.20301165280468428,
+          "resource_scarcity": 0.10150582640234214,
+          "moral_cost": 0.10150582640234214,
+          "irony_density": 0.20301165280468428
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0056",
+      "sim_time": 85.0,
+      "tick_id": 85,
+      "order_in_tick": 0,
+      "type": "lie",
+      "source_agent": "marcus",
+      "target_agents": [
+        "thorne",
+        "elena",
+        "lydia",
+        "diana",
+        "victor"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0047",
+        "evt_0050"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "thorne",
+          "agent_b": "marcus",
+          "attribute": "trust",
+          "op": "add",
+          "value": -0.08,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "Marcus tries to publicly deny everything with a practiced smile.",
+      "content_metadata": {
+        "secret_id": "secret_embezzle_01"
+      },
+      "beat_type": "escalation",
+      "metrics": {
+        "tension": 0.603,
+        "irony": 1.727,
+        "significance": 0.563,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.2754227320929336,
+          "time_pressure": 0.6909476525595296,
+          "goal_frustration": 0.6197011472091005,
+          "relationship_volatility": 0.41313409813940033,
+          "information_gap": 1.0,
+          "resource_scarcity": 0.0688556830232334,
+          "moral_cost": 1.0,
+          "irony_density": 0.7574125132555674
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0057",
+      "sim_time": 86.75,
+      "tick_id": 86,
+      "order_in_tick": 0,
+      "type": "observe",
+      "source_agent": "victor",
+      "target_agents": [],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0056"
+      ],
+      "deltas": [
+        {
+          "kind": "pacing",
+          "agent": "victor",
+          "attribute": "stress",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "NOTICED_TENSION",
+          "reason_display": "Pacing shift."
+        }
+      ],
+      "description": "(texture) observe #57",
+      "metrics": {
+        "tension": 0.28,
+        "irony": 1.016,
+        "significance": 0.217,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.098565150713605,
+          "time_pressure": 0.5151098625119125,
+          "goal_frustration": 0.19713030142721,
+          "relationship_volatility": 0.0492825753568025,
+          "information_gap": 0.6406734796384325,
+          "resource_scarcity": 0.0492825753568025,
+          "moral_cost": 0.0492825753568025,
+          "irony_density": 0.6406734796384325
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0058",
+      "sim_time": 88.5,
+      "tick_id": 88,
+      "order_in_tick": 0,
+      "type": "internal",
+      "source_agent": "elena",
+      "target_agents": [],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0057"
+      ],
+      "deltas": [
+        {
+          "kind": "pacing",
+          "agent": "elena",
+          "attribute": "stress",
+          "op": "add",
+          "value": 0.03,
+          "reason_code": "RUMINATION",
+          "reason_display": "Pacing shift."
+        }
+      ],
+      "description": "(texture) internal #58",
+      "metrics": {
+        "tension": 0.3,
+        "irony": 0.66,
+        "significance": 0.236,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.039423027565320054,
+          "time_pressure": 0.42884862173399724,
+          "goal_frustration": 0.5913454134798007,
+          "relationship_volatility": 0.07884605513064011,
+          "information_gap": 0.27596119295724036,
+          "resource_scarcity": 0.039423027565320054,
+          "moral_cost": 0.5124993583491607,
+          "irony_density": 0.4336533032185206
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0059",
+      "sim_time": 90.25,
+      "tick_id": 90,
+      "order_in_tick": 0,
+      "type": "observe",
+      "source_agent": "victor",
+      "target_agents": [],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0058"
+      ],
+      "deltas": [
+        {
+          "kind": "pacing",
+          "agent": "victor",
+          "attribute": "stress",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "NOTICED_TENSION",
+          "reason_display": "Pacing shift."
+        }
+      ],
+      "description": "(texture) observe #59",
+      "metrics": {
+        "tension": 0.3,
+        "irony": 1.06,
+        "significance": 0.236,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.10364353043272899,
+          "time_pressure": 0.5862382174272428,
+          "goal_frustration": 0.20728706086545798,
+          "relationship_volatility": 0.051821765216364495,
+          "information_gap": 0.6736829478127384,
+          "resource_scarcity": 0.051821765216364495,
+          "moral_cost": 0.051821765216364495,
+          "irony_density": 0.6736829478127384
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0060",
+      "sim_time": 92.0,
+      "tick_id": 92,
+      "order_in_tick": 0,
+      "type": "catastrophe",
+      "source_agent": "elena",
+      "target_agents": [
+        "thorne",
+        "marcus",
+        "lydia",
+        "diana",
+        "victor"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0053",
+        "evt_0056",
+        "evt_0022"
+      ],
+      "deltas": [
+        {
+          "kind": "belief",
+          "agent": "thorne",
+          "attribute": "secret_affair_01",
+          "op": "set",
+          "value": "believes_true",
+          "reason_code": "PUBLIC_CONFESSION",
+          "reason_display": "Belief updated."
+        },
+        {
+          "kind": "belief",
+          "agent": "marcus",
+          "attribute": "secret_affair_01",
+          "op": "set",
+          "value": "believes_true",
+          "reason_code": "PUBLIC_CONFESSION",
+          "reason_display": "Belief updated."
+        },
+        {
+          "kind": "belief",
+          "agent": "lydia",
+          "attribute": "secret_affair_01",
+          "op": "set",
+          "value": "believes_true",
+          "reason_code": "PUBLIC_CONFESSION",
+          "reason_display": "Belief updated."
+        },
+        {
+          "kind": "belief",
+          "agent": "diana",
+          "attribute": "secret_affair_01",
+          "op": "set",
+          "value": "believes_true",
+          "reason_code": "PUBLIC_CONFESSION",
+          "reason_display": "Belief updated."
+        },
+        {
+          "kind": "belief",
+          "agent": "victor",
+          "attribute": "secret_affair_01",
+          "op": "set",
+          "value": "believes_true",
+          "reason_code": "PUBLIC_CONFESSION",
+          "reason_display": "Belief updated."
+        },
+        {
+          "kind": "belief",
+          "agent": "elena",
+          "attribute": "secret_affair_01",
+          "op": "set",
+          "value": "believes_true",
+          "reason_code": "PUBLIC_CONFESSION",
+          "reason_display": "Belief updated."
+        },
+        {
+          "kind": "pacing",
+          "agent": "elena",
+          "attribute": "dramatic_budget",
+          "op": "add",
+          "value": -0.8,
+          "reason_code": "BREAKDOWN",
+          "reason_display": "Pacing shift."
+        }
+      ],
+      "description": "Elena breaks down and confesses the affair with Marcus.",
+      "dialogue": "\"I can't do this anymore. Marcus and I... it's true.\"",
+      "content_metadata": {
+        "secret_id": "secret_affair_01"
+      },
+      "beat_type": "turning_point",
+      "metrics": {
+        "tension": 0.845,
+        "irony": 1.859,
+        "significance": 0.94,
+        "thematic_shift": {
+          "truth_deception": 0.4,
+          "innocence_corruption": -0.25
+        },
+        "tension_components": {
+          "danger": 1.0,
+          "time_pressure": 0.7460382260159585,
+          "goal_frustration": 1.0,
+          "relationship_volatility": 1.0,
+          "information_gap": 0.9519391352755613,
+          "resource_scarcity": 0.06346260901837075,
+          "moral_cost": 1.0,
+          "irony_density": 1.0
+        },
+        "irony_collapse": {
+          "detected": true,
+          "drop": 0.62,
+          "collapsed_beliefs": [
+            {
+              "agent": "thorne",
+              "secret": "secret_affair_01",
+              "from": "unknown",
+              "to": "believes_true"
+            },
+            {
+              "agent": "victor",
+              "secret": "secret_affair_01",
+              "from": "unknown",
+              "to": "believes_true"
+            },
+            {
+              "agent": "lydia",
+              "secret": "secret_affair_01",
+              "from": "suspects",
+              "to": "believes_true"
+            }
+          ],
+          "score": 0.82
+        }
+      }
+    },
+    {
+      "id": "evt_0061",
+      "sim_time": 94.0,
+      "tick_id": 94,
+      "order_in_tick": 0,
+      "type": "internal",
+      "source_agent": "thorne",
+      "target_agents": [],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0060"
+      ],
+      "deltas": [
+        {
+          "kind": "pacing",
+          "agent": "thorne",
+          "attribute": "stress",
+          "op": "add",
+          "value": 0.03,
+          "reason_code": "RUMINATION",
+          "reason_display": "Pacing shift."
+        }
+      ],
+      "description": "(texture) internal #61",
+      "metrics": {
+        "tension": 0.3,
+        "irony": 0.66,
+        "significance": 0.236,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.038540458560085644,
+          "time_pressure": 0.4729770719957177,
+          "goal_frustration": 0.5781068784012846,
+          "relationship_volatility": 0.07708091712017129,
+          "information_gap": 0.2697832099205995,
+          "resource_scarcity": 0.038540458560085644,
+          "moral_cost": 0.5010259612811134,
+          "irony_density": 0.42394504416094214
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0062",
+      "sim_time": 96.0,
+      "tick_id": 96,
+      "order_in_tick": 0,
+      "type": "physical",
+      "source_agent": "diana",
+      "target_agents": [
+        "victor"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0061"
+      ],
+      "deltas": [],
+      "description": "(texture) physical #62",
+      "metrics": {
+        "tension": 0.2,
+        "irony": 0.44,
+        "significance": 0.145,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.07407407407407407,
+          "time_pressure": 0.9481481481481483,
+          "goal_frustration": 0.14814814814814814,
+          "relationship_volatility": 0.07407407407407407,
+          "information_gap": 0.07407407407407407,
+          "resource_scarcity": 0.17777777777777776,
+          "moral_cost": 0.029629629629629627,
+          "irony_density": 0.07407407407407407
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0063",
+      "sim_time": 98.0,
+      "tick_id": 98,
+      "order_in_tick": 0,
+      "type": "conflict",
+      "source_agent": "thorne",
+      "target_agents": [
+        "marcus"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0060"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "marcus",
+          "agent_b": "thorne",
+          "attribute": "trust",
+          "op": "add",
+          "value": -0.25,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        },
+        {
+          "kind": "pacing",
+          "agent": "thorne",
+          "attribute": "stress",
+          "op": "add",
+          "value": 0.06,
+          "reason_code": "CONFLICT_ESCALATION",
+          "reason_display": "Pacing shift."
+        }
+      ],
+      "description": "Thorne turns on Marcus. The betrayal is now double.",
+      "content_metadata": {
+        "secret_id": "secret_embezzle_01"
+      },
+      "beat_type": "consequence",
+      "metrics": {
+        "tension": 0.804,
+        "irony": 1.768,
+        "significance": 0.858,
+        "thematic_shift": {
+          "loyalty_betrayal": -0.15
+        },
+        "tension_components": {
+          "danger": 1.0,
+          "time_pressure": 1.0,
+          "goal_frustration": 0.9148908007941761,
+          "relationship_volatility": 1.0,
+          "information_gap": 0.686168100595632,
+          "resource_scarcity": 0.07624090006618134,
+          "moral_cost": 0.9911317008603574,
+          "irony_density": 0.7624090006618134
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0064",
+      "sim_time": 100.333,
+      "tick_id": 100,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "victor",
+      "target_agents": [
+        "thorne"
+      ],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0063"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "thorne",
+          "agent_b": "victor",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "(texture) chat #64",
+      "metrics": {
+        "tension": 0.257,
+        "irony": 0.566,
+        "significance": 0.236,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.09607092762339224,
+          "time_pressure": 1.0,
+          "goal_frustration": 0.19214185524678448,
+          "relationship_volatility": 0.19214185524678448,
+          "information_gap": 0.19214185524678448,
+          "resource_scarcity": 0.09607092762339224,
+          "moral_cost": 0.09607092762339224,
+          "irony_density": 0.19214185524678448
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0065",
+      "sim_time": 102.667,
+      "tick_id": 102,
+      "order_in_tick": 0,
+      "type": "physical",
+      "source_agent": "lydia",
+      "target_agents": [],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0064"
+      ],
+      "deltas": [],
+      "description": "(texture) physical #65",
+      "metrics": {
+        "tension": 0.23,
+        "irony": 0.506,
+        "significance": 0.217,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.09556476569583357,
+          "time_pressure": 1.0,
+          "goal_frustration": 0.19112953139166713,
+          "relationship_volatility": 0.09556476569583357,
+          "information_gap": 0.09556476569583357,
+          "resource_scarcity": 0.22935543767000055,
+          "moral_cost": 0.03822590627833343,
+          "irony_density": 0.09556476569583357
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0066",
+      "sim_time": 105.0,
+      "tick_id": 105,
+      "order_in_tick": 0,
+      "type": "social_move",
+      "source_agent": "thorne",
+      "target_agents": [],
+      "location_id": "foyer",
+      "causal_links": [
+        "evt_0063"
+      ],
+      "deltas": [
+        {
+          "kind": "agent_location",
+          "agent": "thorne",
+          "attribute": "",
+          "op": "set",
+          "value": "foyer",
+          "reason_code": "MOVE",
+          "reason_display": "Moved to foyer."
+        }
+      ],
+      "description": "Thorne storms toward the front door.",
+      "content_metadata": {
+        "from": "dining_table",
+        "to": "foyer"
+      },
+      "metrics": {
+        "tension": 0.483,
+        "irony": 1.062,
+        "significance": 0.652,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.3576846307385229,
+          "time_pressure": 1.0,
+          "goal_frustration": 0.5365269461077843,
+          "relationship_volatility": 0.3576846307385229,
+          "information_gap": 0.7153692614770458,
+          "resource_scarcity": 0.17884231536926146,
+          "moral_cost": 0.17884231536926146,
+          "irony_density": 0.5365269461077843
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0067",
+      "sim_time": 107.5,
+      "tick_id": 107,
+      "order_in_tick": 0,
+      "type": "physical",
+      "source_agent": "marcus",
+      "target_agents": [],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0066"
+      ],
+      "deltas": [],
+      "description": "(texture) physical #67",
+      "metrics": {
+        "tension": 0.196,
+        "irony": 0.431,
+        "significance": 0.145,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.06438541826768573,
+          "time_pressure": 1.0,
+          "goal_frustration": 0.12877083653537147,
+          "relationship_volatility": 0.06438541826768573,
+          "information_gap": 0.06438541826768573,
+          "resource_scarcity": 0.15452500384244575,
+          "moral_cost": 0.025754167307074294,
+          "irony_density": 0.06438541826768573
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0068",
+      "sim_time": 110.0,
+      "tick_id": 110,
+      "order_in_tick": 0,
+      "type": "internal",
+      "source_agent": "diana",
+      "target_agents": [],
+      "location_id": "dining_table",
+      "causal_links": [
+        "evt_0060",
+        "evt_0066"
+      ],
+      "deltas": [
+        {
+          "kind": "pacing",
+          "agent": "diana",
+          "attribute": "stress",
+          "op": "add",
+          "value": 0.03,
+          "reason_code": "RUMINATION",
+          "reason_display": "Pacing shift."
+        }
+      ],
+      "description": "Diana realizes she's free of Marcus's leverage now that everything is out.",
+      "content_metadata": {
+        "secret_id": "secret_diana_debt"
+      },
+      "metrics": {
+        "tension": 0.35,
+        "irony": 0.77,
+        "significance": 0.284,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.04191268191268191,
+          "time_pressure": 0.7043659043659042,
+          "goal_frustration": 0.6286902286902286,
+          "relationship_volatility": 0.08382536382536382,
+          "information_gap": 0.29338877338877334,
+          "resource_scarcity": 0.04191268191268191,
+          "moral_cost": 0.5448648648648649,
+          "irony_density": 0.46103950103950103
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0069",
+      "sim_time": 115.0,
+      "tick_id": 115,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "victor",
+      "target_agents": [
+        "thorne"
+      ],
+      "location_id": "foyer",
+      "causal_links": [
+        "evt_0068"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "thorne",
+          "agent_b": "victor",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "(texture) chat #69",
+      "metrics": {
+        "tension": 0.207,
+        "irony": 0.456,
+        "significance": 0.163,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.05992906124379285,
+          "time_pressure": 1.0,
+          "goal_frustration": 0.1198581224875857,
+          "relationship_volatility": 0.1198581224875857,
+          "information_gap": 0.1198581224875857,
+          "resource_scarcity": 0.05992906124379285,
+          "moral_cost": 0.05992906124379285,
+          "irony_density": 0.1198581224875857
+        },
+        "irony_collapse": null
+      }
+    },
+    {
+      "id": "evt_0070",
+      "sim_time": 120.0,
+      "tick_id": 120,
+      "order_in_tick": 0,
+      "type": "chat",
+      "source_agent": "victor",
+      "target_agents": [
+        "lydia"
+      ],
+      "location_id": "foyer",
+      "causal_links": [
+        "evt_0069"
+      ],
+      "deltas": [
+        {
+          "kind": "relationship",
+          "agent": "lydia",
+          "agent_b": "victor",
+          "attribute": "affection",
+          "op": "add",
+          "value": 0.02,
+          "reason_code": "REL_DELTA",
+          "reason_display": "Relationship shift."
+        }
+      ],
+      "description": "Victor quietly asks Lydia if she'll go on record when she's ready.",
+      "content_metadata": {
+        "note": "closing_beat"
+      },
+      "metrics": {
+        "tension": 0.18,
+        "irony": 0.396,
+        "significance": 0.128,
+        "thematic_shift": {},
+        "tension_components": {
+          "danger": 0.0464516129032258,
+          "time_pressure": 0.9290322580645161,
+          "goal_frustration": 0.0929032258064516,
+          "relationship_volatility": 0.0929032258064516,
+          "information_gap": 0.0929032258064516,
+          "resource_scarcity": 0.0464516129032258,
+          "moral_cost": 0.0464516129032258,
+          "irony_density": 0.0929032258064516
+        },
+        "irony_collapse": null
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_001",
+      "event_ids": [
+        "evt_0001",
+        "evt_0002",
+        "evt_0003",
+        "evt_0004",
+        "evt_0005",
+        "evt_0006",
+        "evt_0007",
+        "evt_0008",
+        "evt_0009",
+        "evt_0010",
+        "evt_0011",
+        "evt_0012"
+      ],
+      "location": "dining_table",
+      "participants": [
+        "diana",
+        "elena",
+        "lydia",
+        "marcus",
+        "thorne",
+        "victor"
+      ],
+      "time_start": 0.0,
+      "time_end": 15.0,
+      "tick_start": 0,
+      "tick_end": 15,
+      "tension_arc": [
+        0.05,
+        0.04,
+        0.05,
+        0.06,
+        0.15,
+        0.08,
+        0.09,
+        0.02,
+        0.03,
+        0.04,
+        0.05,
+        0.12
+      ],
+      "tension_peak": 0.15,
+      "tension_mean": 0.065,
+      "dominant_theme": "",
+      "scene_type": "maintenance",
+      "summary": "Arrival (dining_table)."
+    },
+    {
+      "id": "scene_002",
+      "event_ids": [
+        "evt_0013",
+        "evt_0014",
+        "evt_0015",
+        "evt_0016",
+        "evt_0017",
+        "evt_0018",
+        "evt_0019",
+        "evt_0020",
+        "evt_0021",
+        "evt_0022"
+      ],
+      "location": "kitchen",
+      "participants": [
+        "diana",
+        "elena",
+        "lydia",
+        "marcus",
+        "thorne",
+        "victor"
+      ],
+      "time_start": 16.5,
+      "time_end": 30.0,
+      "tick_start": 16,
+      "tick_end": 30,
+      "tension_arc": [
+        0.16,
+        0.36,
+        0.1,
+        0.344,
+        0.14,
+        0.12,
+        0.18,
+        0.05,
+        0.12,
+        0.4
+      ],
+      "tension_peak": 0.4,
+      "tension_mean": 0.1974,
+      "dominant_theme": "",
+      "scene_type": "bonding",
+      "summary": "Kitchen Meetings (kitchen)."
+    },
+    {
+      "id": "scene_003",
+      "event_ids": [
+        "evt_0023",
+        "evt_0024",
+        "evt_0025",
+        "evt_0026",
+        "evt_0027",
+        "evt_0028",
+        "evt_0029",
+        "evt_0030",
+        "evt_0031",
+        "evt_0032",
+        "evt_0033",
+        "evt_0034",
+        "evt_0035",
+        "evt_0036",
+        "evt_0037",
+        "evt_0038"
+      ],
+      "location": "dining_table",
+      "participants": [
+        "diana",
+        "elena",
+        "lydia",
+        "marcus",
+        "thorne",
+        "victor"
+      ],
+      "time_start": 31.6,
+      "time_end": 52.0,
+      "tick_start": 31,
+      "tick_end": 52,
+      "tension_arc": [
+        0.12,
+        0.13,
+        0.14,
+        0.18,
+        0.32,
+        0.16,
+        0.12,
+        0.22,
+        0.45,
+        0.18,
+        0.14,
+        0.16,
+        0.371,
+        0.14,
+        0.16,
+        0.28
+      ],
+      "tension_peak": 0.45,
+      "tension_mean": 0.2044375,
+      "dominant_theme": "",
+      "scene_type": "bonding",
+      "summary": "Escalating Suspicion (dining_table)."
+    },
+    {
+      "id": "scene_004",
+      "event_ids": [
+        "evt_0039",
+        "evt_0040",
+        "evt_0041",
+        "evt_0042",
+        "evt_0043",
+        "evt_0044",
+        "evt_0045",
+        "evt_0046",
+        "evt_0047",
+        "evt_0048",
+        "evt_0049",
+        "evt_0050",
+        "evt_0051",
+        "evt_0052",
+        "evt_0053"
+      ],
+      "location": "dining_table",
+      "participants": [
+        "diana",
+        "elena",
+        "lydia",
+        "marcus",
+        "thorne",
+        "victor"
+      ],
+      "time_start": 53.0,
+      "time_end": 78.0,
+      "tick_start": 53,
+      "tick_end": 78,
+      "tension_arc": [
+        0.22,
+        0.24,
+        0.55,
+        0.22,
+        0.24,
+        0.42,
+        0.26,
+        0.24,
+        0.682,
+        0.2,
+        0.28,
+        0.664,
+        0.24,
+        0.22,
+        0.483
+      ],
+      "tension_peak": 0.682,
+      "tension_mean": 0.3439333333333333,
+      "dominant_theme": "loyalty_betrayal",
+      "scene_type": "confrontation",
+      "summary": "Balcony Confrontation (dining_table)."
+    },
+    {
+      "id": "scene_005",
+      "event_ids": [
+        "evt_0054",
+        "evt_0055",
+        "evt_0056",
+        "evt_0057",
+        "evt_0058",
+        "evt_0059",
+        "evt_0060",
+        "evt_0061"
+      ],
+      "location": "dining_table",
+      "participants": [
+        "diana",
+        "elena",
+        "lydia",
+        "marcus",
+        "thorne",
+        "victor"
+      ],
+      "time_start": 80.333,
+      "time_end": 94.0,
+      "tick_start": 80,
+      "tick_end": 94,
+      "tension_arc": [
+        0.24,
+        0.26,
+        0.603,
+        0.28,
+        0.3,
+        0.3,
+        0.845,
+        0.3
+      ],
+      "tension_peak": 0.845,
+      "tension_mean": 0.391,
+      "dominant_theme": "truth_deception",
+      "scene_type": "catastrophe",
+      "summary": "The Unraveling (dining_table)."
+    },
+    {
+      "id": "scene_006",
+      "event_ids": [
+        "evt_0062",
+        "evt_0063",
+        "evt_0064",
+        "evt_0065",
+        "evt_0066",
+        "evt_0067",
+        "evt_0068",
+        "evt_0069",
+        "evt_0070"
+      ],
+      "location": "dining_table",
+      "participants": [
+        "diana",
+        "lydia",
+        "marcus",
+        "thorne",
+        "victor"
+      ],
+      "time_start": 96.0,
+      "time_end": 120.0,
+      "tick_start": 96,
+      "tick_end": 120,
+      "tension_arc": [
+        0.2,
+        0.804,
+        0.257,
+        0.23,
+        0.483,
+        0.196,
+        0.35,
+        0.207,
+        0.18
+      ],
+      "tension_peak": 0.804,
+      "tension_mean": 0.323,
+      "dominant_theme": "loyalty_betrayal",
+      "scene_type": "confrontation",
+      "summary": "Aftermath (dining_table)."
+    }
+  ],
+  "belief_snapshots": [
+    {
+      "tick_id": 0,
+      "sim_time": 0.0,
+      "beliefs": {
+        "thorne": {
+          "secret_affair_01": "unknown",
+          "secret_embezzle_01": "unknown",
+          "secret_diana_debt": "unknown",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "unknown"
+        },
+        "elena": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "unknown",
+          "secret_diana_debt": "suspects",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "unknown"
+        },
+        "marcus": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "believes_true",
+          "secret_diana_debt": "unknown",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "suspects"
+        },
+        "lydia": {
+          "secret_affair_01": "suspects",
+          "secret_embezzle_01": "suspects",
+          "secret_diana_debt": "unknown",
+          "secret_lydia_knows": "believes_true",
+          "secret_victor_investigation": "unknown"
+        },
+        "diana": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "unknown",
+          "secret_diana_debt": "believes_true",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "unknown"
+        },
+        "victor": {
+          "secret_affair_01": "unknown",
+          "secret_embezzle_01": "suspects",
+          "secret_diana_debt": "unknown",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "believes_true"
+        }
+      },
+      "agent_irony": {
+        "thorne": 2.5,
+        "elena": 1.25,
+        "marcus": 1.25,
+        "lydia": 0.5,
+        "diana": 1.0,
+        "victor": 0.0
+      },
+      "scene_irony": 1.38
+    },
+    {
+      "tick_id": 42,
+      "sim_time": 42.0,
+      "beliefs": {
+        "thorne": {
+          "secret_affair_01": "suspects",
+          "secret_embezzle_01": "unknown",
+          "secret_diana_debt": "unknown",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "unknown"
+        },
+        "elena": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "unknown",
+          "secret_diana_debt": "suspects",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "unknown"
+        },
+        "marcus": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "believes_true",
+          "secret_diana_debt": "unknown",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "suspects"
+        },
+        "lydia": {
+          "secret_affair_01": "suspects",
+          "secret_embezzle_01": "suspects",
+          "secret_diana_debt": "unknown",
+          "secret_lydia_knows": "believes_true",
+          "secret_victor_investigation": "suspects"
+        },
+        "diana": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "unknown",
+          "secret_diana_debt": "believes_true",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "unknown"
+        },
+        "victor": {
+          "secret_affair_01": "unknown",
+          "secret_embezzle_01": "suspects",
+          "secret_diana_debt": "unknown",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "believes_true"
+        }
+      },
+      "agent_irony": {
+        "thorne": 2.5,
+        "elena": 1.25,
+        "marcus": 1.25,
+        "lydia": 0.5,
+        "diana": 1.0,
+        "victor": 0.0
+      },
+      "scene_irony": 1.05
+    },
+    {
+      "tick_id": 78,
+      "sim_time": 78.0,
+      "beliefs": {
+        "thorne": {
+          "secret_affair_01": "suspects",
+          "secret_embezzle_01": "unknown",
+          "secret_diana_debt": "unknown",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "unknown"
+        },
+        "elena": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "unknown",
+          "secret_diana_debt": "suspects",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "unknown"
+        },
+        "marcus": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "believes_true",
+          "secret_diana_debt": "unknown",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "suspects"
+        },
+        "lydia": {
+          "secret_affair_01": "suspects",
+          "secret_embezzle_01": "suspects",
+          "secret_diana_debt": "unknown",
+          "secret_lydia_knows": "believes_true",
+          "secret_victor_investigation": "suspects"
+        },
+        "diana": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "unknown",
+          "secret_diana_debt": "believes_true",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "unknown"
+        },
+        "victor": {
+          "secret_affair_01": "unknown",
+          "secret_embezzle_01": "suspects",
+          "secret_diana_debt": "unknown",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "believes_true"
+        }
+      },
+      "agent_irony": {
+        "thorne": 2.5,
+        "elena": 1.25,
+        "marcus": 1.25,
+        "lydia": 0.5,
+        "diana": 1.0,
+        "victor": 0.0
+      },
+      "scene_irony": 0.92
+    },
+    {
+      "tick_id": 92,
+      "sim_time": 92.0,
+      "beliefs": {
+        "thorne": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "suspects",
+          "secret_diana_debt": "unknown",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "unknown"
+        },
+        "elena": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "unknown",
+          "secret_diana_debt": "suspects",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "unknown"
+        },
+        "marcus": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "believes_true",
+          "secret_diana_debt": "unknown",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "suspects"
+        },
+        "lydia": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "suspects",
+          "secret_diana_debt": "unknown",
+          "secret_lydia_knows": "believes_true",
+          "secret_victor_investigation": "suspects"
+        },
+        "diana": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "unknown",
+          "secret_diana_debt": "believes_true",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "unknown"
+        },
+        "victor": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "believes_true",
+          "secret_diana_debt": "unknown",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "believes_true"
+        }
+      },
+      "agent_irony": {
+        "thorne": 2.5,
+        "elena": 1.25,
+        "marcus": 1.25,
+        "lydia": 0.5,
+        "diana": 1.0,
+        "victor": 0.0
+      },
+      "scene_irony": 0.63
+    },
+    {
+      "tick_id": 110,
+      "sim_time": 110.0,
+      "beliefs": {
+        "thorne": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "believes_true",
+          "secret_diana_debt": "unknown",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "unknown"
+        },
+        "elena": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "unknown",
+          "secret_diana_debt": "suspects",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "unknown"
+        },
+        "marcus": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "believes_true",
+          "secret_diana_debt": "unknown",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "suspects"
+        },
+        "lydia": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "suspects",
+          "secret_diana_debt": "unknown",
+          "secret_lydia_knows": "believes_true",
+          "secret_victor_investigation": "suspects"
+        },
+        "diana": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "unknown",
+          "secret_diana_debt": "believes_true",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "unknown"
+        },
+        "victor": {
+          "secret_affair_01": "believes_true",
+          "secret_embezzle_01": "believes_true",
+          "secret_diana_debt": "unknown",
+          "secret_lydia_knows": "unknown",
+          "secret_victor_investigation": "believes_true"
+        }
+      },
+      "agent_irony": {
+        "thorne": 2.5,
+        "elena": 1.25,
+        "marcus": 1.25,
+        "lydia": 0.5,
+        "diana": 1.0,
+        "victor": 0.0
+      },
+      "scene_irony": 0.4
+    }
+  ]
+}
