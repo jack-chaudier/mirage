@@ -11,6 +11,7 @@ endogenous_context_theory/
 │   ├── run_all.py
 │   ├── run_miragebench_ollama.py
 │   ├── run_miragebench_api.py
+│   ├── build_release_assets.py
 │   ├── generate_training_data.py
 │   ├── make_balanced_train.py
 │   ├── eval_mirage_aware.py
@@ -49,6 +50,13 @@ endogenous_context_theory/
 │   ├── summary_report.md
 │   ├── figures/
 │   └── raw/
+├── release/
+│   ├── README.md
+│   ├── notebooks/
+│   ├── miragebench_tasks/
+│   ├── results/
+│   ├── adapters/
+│   └── figures/
 ├── run_all.py                # legacy wrapper -> scripts/run_all.py
 ├── run_miragebench_ollama.py # legacy wrapper -> scripts/run_miragebench_ollama.py
 ├── run_miragebench_api.py    # legacy wrapper -> scripts/run_miragebench_api.py
@@ -60,6 +68,14 @@ endogenous_context_theory/
 └── training_data_smoke -> data/smoke   # compatibility symlink
 └── requirements.txt
 ```
+
+## Curated Public-Release Bundle
+
+For the clean paper-facing artifact package (tasks + notebooks + CSVs + adapters), see:
+
+- `release/README.md`
+
+This release bundle is designed so external researchers can map artifacts directly to Paper 03 sections and reproduce headline tables quickly.
 
 ## Setup
 

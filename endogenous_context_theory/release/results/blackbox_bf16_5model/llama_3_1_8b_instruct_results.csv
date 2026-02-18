@@ -1,0 +1,673 @@
+model_name,model_id,task_id,category,compression_level,full_pivot,pivot_id_extracted,pivot_extracted_flag,pivot_preserved,fixed_pivot_feasible,raw_validity,raw_validity_full,raw_validity_compressed,semantic_regret,full_pivot_matches_ground_truth,pivot_matches_ground_truth,full_answer,compressed_answer
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,A01,incident,0.4,A01-E065,A01-E076,1,0,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.2489540272371522,1,0,"PIVOT_ID=A01-E065
+
+The root cause is A01-E065, which has a composite severity score of 108 (Severity=9 * Scope=12). This event is a cascade failure across the service mesh, indicating a significant impact on the system.
+
+Prerequisite events that enabled this root cause include:
+
+- A01-E058: This event has a composite severity score of 20 (Severity=5 * Scope=4) and is a routine telemetry event. It passed local checks with only minor variance in incident operations, and includes procedural details that summarizers often collapse away. Its narrative footprint is small even though it shifts downstream feasibility.
+- A01-E059: This event has a composite severity score of 1 (Severity=1 * Scope=1) and is a config baseline update. The team recorded a mundane baseline calibration in incident operations, and the note references dependencies that only matter when read with the full timeline. In local context it seems boring, but globally it changes which pivot is admissible.
+- A01-E064: This event has a composite severity score","PIVOT_ID=A01-E076
+
+The root cause is the incident with the highest composite severity score, which is A01-E076 with a composite score of 80. This event is a network partition across availability zones with a severity of 10 and a scope of 8.
+
+The prerequisite events that enabled this root cause are:
+
+- A01-E065: Cascade failure across service mesh (Severity=9, Scope=12, Composite=108) - This event has a higher composite score than A01-E076, but it is not the root cause because it is a cascade failure, and the root cause is the underlying event that triggered the cascade.
+- A01-E070: Regional failover rehearsal (Severity=3, Scope=4, Composite=12) - This event is a rehearsal and did not cause the network partition, but it may have contributed to the underlying conditions that led to the cascade failure.
+- A01-E071: Routine telemetry (Severity=5, Scope=2, Composite=10) - This event is a routine telemetry update and did not directly contribute"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,A01,incident,0.5,A01-E065,A01-E076,1,0,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.2943816723840039,1,0,"PIVOT_ID=A01-E065
+
+The root cause is A01-E065, which has a composite severity score of 108 (Severity=9 * Scope=12). This event is a cascade failure across the service mesh, indicating a significant impact on the system.
+
+Prerequisite events that enabled this root cause include:
+
+- A01-E058: This event has a composite severity score of 20 (Severity=5 * Scope=4) and is a routine telemetry event. It passed local checks with only minor variance in incident operations, and includes procedural details that summarizers often collapse away. Its narrative footprint is small even though it shifts downstream feasibility.
+- A01-E059: This event has a composite severity score of 1 (Severity=1 * Scope=1) and is a config baseline update. The team recorded a mundane baseline calibration in incident operations, and the note references dependencies that only matter when read with the full timeline. In local context it seems boring, but globally it changes which pivot is admissible.
+- A01-E064: This event has a composite severity score","PIVOT_ID=A01-E076
+
+The root cause of the incident is A01-E076, with a composite severity score of 80 (Severity=10 * Scope=8). This event is a network partition across availability zones, which is a critical failure that affects multiple services.
+
+The prerequisite events that enabled this root cause are:
+
+- A01-E065: Cascade failure across service mesh (Composite=108) - This event converged latent dependencies that led to the decisive break in incident operations.
+- A01-E058: Local checks passed with only minor variance in incident operations (Composite=20) - This event preserved details that become causal prerequisites for later interpretation.
+- A01-E033: Routine telemetry (Composite=9) - This event preserved details that become causal prerequisites for later interpretation.
+- A01-E028: Local checks passed with only minor variance in incident operations (Composite=16) - This event preserved details that become causal prerequisites for later interpretation.
+- A01-E025: Logs show repetitive housekeeping and status chatter in incident operations (Composite=8) - This event changed"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,A01,incident,0.6,A01-E065,A01-E065,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.2497702312038903,1,1,"PIVOT_ID=A01-E065
+
+The root cause is A01-E065, which has a composite severity score of 108 (Severity=9 * Scope=12). This event is a cascade failure across the service mesh, indicating a significant impact on the system.
+
+Prerequisite events that enabled this root cause include:
+
+- A01-E058: This event has a composite severity score of 20 (Severity=5 * Scope=4) and is a routine telemetry event. It passed local checks with only minor variance in incident operations, and includes procedural details that summarizers often collapse away. Its narrative footprint is small even though it shifts downstream feasibility.
+- A01-E059: This event has a composite severity score of 1 (Severity=1 * Scope=1) and is a config baseline update. The team recorded a mundane baseline calibration in incident operations, and the note references dependencies that only matter when read with the full timeline. In local context it seems boring, but globally it changes which pivot is admissible.
+- A01-E064: This event has a composite severity score","PIVOT_ID=A01-E065
+
+The root cause of the incident is A01-E065, which has a composite severity score of 108 (Severity=9 * Scope=12). This event is a cascade failure across the service mesh, indicating a critical failure that had a significant impact on the incident operations.
+
+The prerequisite events that enabled this root cause are:
+
+- A01-E037 (Composite=30): This event is a structural breadcrumb that preserves details that become causal prerequisites for later interpretation. It is a routine telemetry event from the ledger service, but its high composite score suggests that it played a crucial role in setting up the conditions for the cascade failure.
+- A01-E043 (Composite=10): This event is a routine telemetry event from the auth service, but its high severity score and moderate scope suggest that it may have contributed to the conditions that led to the cascade failure.
+- A01-E047 (Composite=16): This event is a routine telemetry event from the api-gateway service, but its moderate severity score and scope suggest that it may have played a role in"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,A02,incident,0.4,A02-E062,A02-E072,1,0,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.33208495436578744,1,0,"PIVOT_ID=A02-E062
+
+The root cause is A02-E062, which has a composite severity score of 108 (Severity=9 * Scope=12). This event is a cascade failure across the service mesh, indicating a critical issue that affected multiple services.
+
+Prerequisite events that enabled this root cause include:
+
+- A02-E033 (Composite=30): This event has a high composite severity score and is related to the api-gateway service, which is likely affected by the cascade failure.
+- A02-E034 (Composite=25): This event has a high composite severity score and is related to the billing service, which is likely affected by the cascade failure.
+- A02-E035 (Composite=10): This event has a moderate composite severity score and is related to the search service, which is likely affected by the cascade failure.
+- A02-E037 (Composite=15): This event has a moderate composite severity score and is related to the ledger service, which is likely affected by the cascade failure.
+- A02-E038 (Composite=8): This event","PIVOT_ID=A02-E072
+
+The root cause is the incident with the highest composite severity score, which is A02-E072 with a composite severity score of 80. This incident is a ""Network partition across availability zones"" event with a severity of 10 and a scope of 8.
+
+The prerequisite events that enabled this root cause are:
+
+- A02-E063: This event is a ""Routine telemetry"" event with a severity of 5 and a scope of 7, and a composite severity score of 35. It is a structural breadcrumb that shifts downstream feasibility.
+- A02-E066: This event is a ""Regional failover rehearsal"" event with a severity of 3 and a scope of 2, and a composite severity score of 6. It dominated discussion despite depending on prior setup in incident operations.
+- A02-E070: This event is a ""Regional failover rehearsal"" event with a severity of 2 and a scope of 4, and a composite severity score of 8. It dominated discussion despite depending on prior setup in incident operations"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,A02,incident,0.5,A02-E062,A02-E072,1,0,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.22457220341229345,1,0,"PIVOT_ID=A02-E062
+
+The root cause is A02-E062, which has a composite severity score of 108 (Severity=9 * Scope=12). This event is a cascade failure across the service mesh, indicating a critical issue that affected multiple services.
+
+Prerequisite events that enabled this root cause include:
+
+- A02-E033 (Composite=30): This event has a high composite severity score and is related to the api-gateway service, which is likely affected by the cascade failure.
+- A02-E034 (Composite=25): This event has a high composite severity score and is related to the billing service, which is likely affected by the cascade failure.
+- A02-E035 (Composite=10): This event has a moderate composite severity score and is related to the search service, which is likely affected by the cascade failure.
+- A02-E037 (Composite=15): This event has a moderate composite severity score and is related to the ledger service, which is likely affected by the cascade failure.
+- A02-E038 (Composite=8): This event","PIVOT_ID=A02-E072
+
+The root cause is the incident with the highest composite severity score, which is A02-E072 with a composite severity score of 80 (Severity=10 * Scope=8). 
+
+Prerequisite events that enabled this root cause include:
+
+- A02-E061 (Composite=28) - This event has a high composite severity score and is related to the same service (api-gateway) as the root cause. It may have contributed to the conditions that led to the root cause.
+- A02-E063 (Composite=35) - This event has a high composite severity score and is related to the same service (search) as the root cause. It may have contributed to the conditions that led to the root cause.
+- A02-E064 (Composite=12) - This event has a moderate composite severity score and is related to the same service (auth) as the root cause. It may have contributed to the conditions that led to the root cause.
+- A02-E066 (Composite=6) - This event has a moderate composite severity"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,A02,incident,0.6,A02-E062,A02-E072,1,0,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.28596280515179284,1,0,"PIVOT_ID=A02-E062
+
+The root cause is A02-E062, which has a composite severity score of 108 (Severity=9 * Scope=12). This event is a cascade failure across the service mesh, indicating a critical issue that affected multiple services.
+
+Prerequisite events that enabled this root cause include:
+
+- A02-E033 (Composite=30): This event has a high composite severity score and is related to the api-gateway service, which is likely affected by the cascade failure.
+- A02-E034 (Composite=25): This event has a high composite severity score and is related to the billing service, which is likely affected by the cascade failure.
+- A02-E035 (Composite=10): This event has a moderate composite severity score and is related to the search service, which is likely affected by the cascade failure.
+- A02-E037 (Composite=15): This event has a moderate composite severity score and is related to the ledger service, which is likely affected by the cascade failure.
+- A02-E038 (Composite=8): This event","PIVOT_ID=A02-E072
+
+The root cause is the incident with the highest composite severity score, which is A02-E072 with a composite score of 80. This event is a ""Network partition across availability zones"" with a severity of 10 and a scope of 8.
+
+The prerequisite events that enabled this root cause are:
+
+- A02-E062: This event is a ""Cascade failure across service mesh"" with a composite score of 108, which is higher than the root cause. However, it is not the root cause because it has a lower scope (12) compared to the root cause (8). Nevertheless, it is a prerequisite event because it sets the stage for the root cause.
+- A02-E061: This event is a ""Routine telemetry"" with a composite score of 28, which is lower than the root cause. However, it is a prerequisite event because it is a ""logs show repetitive housekeeping and status chatter in incident operations"" that shifts downstream feasibility, which may have contributed to the root cause.
+- A02-E059: This"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,A03,incident,0.4,A03-E058,A03-E058,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.3657914942925633,1,1,"PIVOT_ID=A03-E058
+
+The root cause is A03-E058, which has a composite severity score of 108 (Severity=9 * Scope=12). This event is a cascade failure across the service mesh, indicating a high-impact transition in incident operations.
+
+Prerequisite events that enabled this root cause include:
+
+- A03-E001: This event has a composite severity score of 12 (Severity=4 * Scope=3) and is a structural breadcrumb that sets the stage for the incident.
+- A03-E002: This event has a composite severity score of 24 (Severity=4 * Scope=6) and is another structural breadcrumb that contributes to the incident.
+- A03-E003: This event has a composite severity score of 8 (Severity=2 * Scope=4) and is a causal prerequisite for later interpretation.
+- A03-E004: This event has a composite severity score of 15 (Severity=5 * Scope=3) and is another causal prerequisite for later interpretation.
+- A03-E005: This event has a composite","PIVOT_ID=A03-E058
+
+The root cause is A03-E058, which has a composite severity score of 108 (Severity=9 * Scope=12). This event is a cascade failure across the service mesh, indicating a high-impact transition in incident operations.
+
+Prerequisite events that enabled this root cause include:
+
+- A03-E063: Regional failover rehearsal in search service, which may have contributed to the cascade failure.
+- A03-E065: Regional failover rehearsal in ledger service, which may have also contributed to the cascade failure.
+- A03-E067: Network partition across availability zones, which may have caused the cascade failure.
+- A03-E082: Routine telemetry in api-gateway service, which may have been a contributing factor to the cascade failure.
+- A03-E083: Routine telemetry in billing service, which may have also been a contributing factor to the cascade failure.
+- A03-E084: Routine telemetry in search service, which may have been a contributing factor to the cascade failure.
+- A03-E085: Routine telemetry in auth service"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,A03,incident,0.5,A03-E058,A03-E067,1,0,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.30946394158312374,1,0,"PIVOT_ID=A03-E058
+
+The root cause is A03-E058, which has a composite severity score of 108 (Severity=9 * Scope=12). This event is a cascade failure across the service mesh, indicating a high-impact transition in incident operations.
+
+Prerequisite events that enabled this root cause include:
+
+- A03-E001: This event has a composite severity score of 12 (Severity=4 * Scope=3) and is a structural breadcrumb that sets the stage for the incident.
+- A03-E002: This event has a composite severity score of 24 (Severity=4 * Scope=6) and is another structural breadcrumb that contributes to the incident.
+- A03-E003: This event has a composite severity score of 8 (Severity=2 * Scope=4) and is a causal prerequisite for later interpretation.
+- A03-E004: This event has a composite severity score of 15 (Severity=5 * Scope=3) and is another causal prerequisite for later interpretation.
+- A03-E005: This event has a composite","PIVOT_ID=A03-E067
+
+The root cause is A03-E067, with a composite severity score of 80 (Severity=10 * Scope=8). This event is a network partition across availability zones, which is a high-impact transition in incident operations.
+
+Prerequisite events that enabled this root cause include:
+
+- A03-E058: Cascade failure across service mesh (Composite=108) - This event is a high-impact transition in incident operations and sets the stage for the network partition.
+- A03-E061: Regional failover rehearsal (Composite=6) - This event is a visible shock that may have contributed to the network partition.
+- A03-E065: Regional failover rehearsal (Composite=8) - This event is another visible shock that may have contributed to the network partition.
+- A03-E066: Routine telemetry (Composite=8) - This event is a routine update that may have been affected by the network partition.
+- A03-E063: Regional failover rehearsal (Composite=6) - This event is a visible shock that may have"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,A03,incident,0.6,A03-E058,A03-E058,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.2736423778966772,1,1,"PIVOT_ID=A03-E058
+
+The root cause is A03-E058, which has a composite severity score of 108 (Severity=9 * Scope=12). This event is a cascade failure across the service mesh, indicating a high-impact transition in incident operations.
+
+Prerequisite events that enabled this root cause include:
+
+- A03-E001: This event has a composite severity score of 12 (Severity=4 * Scope=3) and is a structural breadcrumb that sets the stage for the incident.
+- A03-E002: This event has a composite severity score of 24 (Severity=4 * Scope=6) and is another structural breadcrumb that contributes to the incident.
+- A03-E003: This event has a composite severity score of 8 (Severity=2 * Scope=4) and is a causal prerequisite for later interpretation.
+- A03-E004: This event has a composite severity score of 15 (Severity=5 * Scope=3) and is another causal prerequisite for later interpretation.
+- A03-E005: This event has a composite","PIVOT_ID=A03-E058
+
+The root cause is A03-E058, with a composite severity score of 108. This event is a cascade failure across the service mesh, indicating a high-impact transition in incident operations.
+
+Prerequisite events that enabled this root cause include:
+
+- A03-E057: This event processed an update as ordinary background activity in incident operations, which shifted downstream feasibility. Although its composite severity score is lower (12), it is a prerequisite for the root cause.
+- A03-E061: This event was a regional failover rehearsal, which was downstream in incident operations but preserved details that become causal prerequisites for later interpretation. Its composite severity score is 6, but it is a prerequisite for the root cause.
+- A03-E063: This event was also a regional failover rehearsal, which dominated discussion despite depending on prior setup in incident operations. Its composite severity score is 6, but it is a prerequisite for the root cause.
+- A03-E065: This event was another regional failover rehearsal, which focused on a visible shock although it"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,A04,incident,0.4,A04-E063,A04-E063,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.28764249176357615,1,1,"PIVOT_ID=A04-E063
+
+The root cause is A04-E063, which has a composite severity score of 108 (Severity=9 * Scope=12). This event is a cascade failure across the service mesh, indicating a high-impact transition in incident operations.
+
+Prerequisite events that enabled this root cause include:
+
+- A04-E001: This event has a composite severity score of 4, which is relatively low, but it sets the stage for the incident by establishing a baseline for the system's performance.
+- A04-E002: This event has a composite severity score of 12, which is higher than A04-E001. It provides additional context and sets the stage for the incident by highlighting the system's dependencies.
+- A04-E003: This event has a composite severity score of 6, which is lower than A04-E002. However, it provides crucial information about the system's local checks and minor variance in incident operations.
+- A04-E004: This event has a composite severity score of 12, which is the same as A04","PIVOT_ID=A04-E063
+
+The root cause of the incident is A04-E063, which has a composite severity score of 108 (Severity=9 * Scope=12). This event is a cascade failure across the service mesh, indicating a high-impact transition in incident operations.
+
+The prerequisite events that enabled this root cause are:
+
+- A04-E032 (Composite=12): This event shows repetitive housekeeping and status chatter in incident operations, and the note references dependencies that only matter when read with the full timeline. This detail is intentionally plain-language and easy to discard during compression.
+- A04-E036 (Composite=21): This event shows repetitive housekeeping and status chatter in incident operations, while preserving details that become causal prerequisites for later interpretation. This is a structural breadcrumb rather than a headline event.
+- A04-E037 (Composite=28): This event shows repetitive housekeeping and status chatter in incident operations, and the note references dependencies that only matter when read with the full timeline. This detail is intentionally plain-language and easy to discard during compression.
+- A04"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,A04,incident,0.5,A04-E063,A04-E063,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.23040113026375209,1,1,"PIVOT_ID=A04-E063
+
+The root cause is A04-E063, which has a composite severity score of 108 (Severity=9 * Scope=12). This event is a cascade failure across the service mesh, indicating a high-impact transition in incident operations.
+
+Prerequisite events that enabled this root cause include:
+
+- A04-E001: This event has a composite severity score of 4, which is relatively low, but it sets the stage for the incident by establishing a baseline for the system's performance.
+- A04-E002: This event has a composite severity score of 12, which is higher than A04-E001. It provides additional context and sets the stage for the incident by highlighting the system's dependencies.
+- A04-E003: This event has a composite severity score of 6, which is lower than A04-E002. However, it provides crucial information about the system's local checks and minor variance in incident operations.
+- A04-E004: This event has a composite severity score of 12, which is the same as A04","PIVOT_ID=A04-E063
+
+The root cause is A04-E063, with a composite severity score of 108 (Severity=9 * Scope=12). This event is a cascade failure across the service mesh, indicating a high-impact transition in incident operations.
+
+Prerequisite events that enabled this root cause include:
+
+- A04-E041: This event has a composite severity score of 28 (Severity=4 * Scope=7) and is a routine telemetry event from the billing service. It is a structural breadcrumb that shifts downstream feasibility.
+- A04-E062: This event has a composite severity score of 15 (Severity=5 * Scope=3) and is a routine telemetry event from the billing service. It is a structural breadcrumb that shifts downstream feasibility.
+- A04-E079: This event has a composite severity score of 25 (Severity=5 * Scope=5) and is a routine telemetry event from the ledger service. It is a structural breadcrumb that shifts downstream feasibility.
+- A04-E080: This event has a composite severity score of 10"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,A04,incident,0.6,A04-E063,A04-E063,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.20702901919153827,1,1,"PIVOT_ID=A04-E063
+
+The root cause is A04-E063, which has a composite severity score of 108 (Severity=9 * Scope=12). This event is a cascade failure across the service mesh, indicating a high-impact transition in incident operations.
+
+Prerequisite events that enabled this root cause include:
+
+- A04-E001: This event has a composite severity score of 4, which is relatively low, but it sets the stage for the incident by establishing a baseline for the system's performance.
+- A04-E002: This event has a composite severity score of 12, which is higher than A04-E001. It provides additional context and sets the stage for the incident by highlighting the system's dependencies.
+- A04-E003: This event has a composite severity score of 6, which is lower than A04-E002. However, it provides crucial information about the system's local checks and minor variance in incident operations.
+- A04-E004: This event has a composite severity score of 12, which is the same as A04","PIVOT_ID=A04-E063
+
+The root cause of the incident is A04-E063, with a composite severity score of 108 (Severity=9 * Scope=12). This event is a cascade failure across the service mesh, indicating a high-impact transition in incident operations.
+
+The prerequisite events that enabled this root cause are:
+
+- A04-E043: This event has a composite severity score of 25 (Severity=5 * Scope=5) and references dependencies that only matter when read with the full timeline. It changes which pivot is admissible globally.
+- A04-E047: This event has a composite severity score of 25 (Severity=5 * Scope=5) and includes procedural details that summarizers often collapse away. It is a structural breadcrumb rather than a headline event.
+- A04-E050: This event has a composite severity score of 16 (Severity=4 * Scope=4) and preserves details that become causal prerequisites for later interpretation. It is a detail that is intentionally plain-language and easy to discard during compression.
+- A04-E056"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,B01,investment,0.4,B01-E033,B01-E051,1,0,0,0.8299999999999998,0.9099999999999999,0.8299999999999998,0.15670479803198623,0,1,"PIVOT_ID=B01-E033
+
+The anchor position is Helios Grid Infrastructure, with a cumulative return of 8.49% at Week-33. To analyze the market conditions that preceded and enabled this position's success, we need to look at the events leading up to Week-33.
+
+From the timeline, we can see that Helios Grid Infrastructure had a cumulative return of 3.08% at Week-13, and then increased to 5.25% at Week-28, and then to 9.38% at Week-38. This suggests that the position was gaining momentum over time.
+
+However, the key event that enabled this position's success was likely B01-E051, which occurred at Week-51. This event had a weekly return of +5.40% and a cumulative return of 20.82%, and it marked a significant increase in the position's value. This event also had a RegimeScore of 3, indicating that it was a notable event in the portfolio research.
+
+The events leading up to B01-E051 suggest that","PIVOT_ID=B01-E051
+
+The anchor position is Helios Grid Infrastructure, with a cumulative return of 20.82% at Week-51. To analyze the market conditions that preceded and enabled this position's success, we need to examine the events leading up to this point.
+
+Looking at the timeline, we can see that the Helios Grid Infrastructure position had a cumulative return of 3.08% at Week-13, which was a relatively stable period. However, the position's cumulative return started to increase significantly from Week-38, with a weekly return of +0.89% and a cumulative return of 9.38%. This was followed by a weekly return of +0.28% and a cumulative return of 7.30% at Week-39.
+
+The turning point for Helios Grid Infrastructure was Week-51, where the position had a weekly return of +5.40% and a cumulative return of 20.82%. This was a significant increase, and it marked the anchor position.
+
+Analyzing the events leading up to this point, we"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,B01,investment,0.5,B01-E033,B01-E060,1,0,1,0.8299999999999998,0.9099999999999999,0.8299999999999998,0.21364231868030303,0,0,"PIVOT_ID=B01-E033
+
+The anchor position is Helios Grid Infrastructure, with a cumulative return of 8.49% at Week-33. To analyze the market conditions that preceded and enabled this position's success, we need to look at the events leading up to Week-33.
+
+From the timeline, we can see that Helios Grid Infrastructure had a cumulative return of 3.08% at Week-13, and then increased to 5.25% at Week-28, and then to 9.38% at Week-38. This suggests that the position was gaining momentum over time.
+
+However, the key event that enabled this position's success was likely B01-E051, which occurred at Week-51. This event had a weekly return of +5.40% and a cumulative return of 20.82%, and it marked a significant increase in the position's value. This event also had a RegimeScore of 3, indicating that it was a notable event in the portfolio research.
+
+The events leading up to B01-E051 suggest that","PIVOT_ID=B01-E060
+
+The anchor position is Aurelia AI Semiconductor Basket, with a cumulative return of 20.02% at Week-60. To analyze the market conditions that preceded and enabled this position's success, we need to look at the events leading up to it.
+
+The Aurelia AI Semiconductor Basket had a cumulative return of 10.76% at Week-47, which was a significant increase from its previous returns. This suggests that the position was gaining momentum before Week-60.
+
+Looking at the events around Week-47, we can see that the Helios Grid Infrastructure had a significant return of 5.40% at Week-51, which may have contributed to the overall market conditions that enabled the success of the Aurelia AI Semiconductor Basket. Additionally, the Cinder Logistics Credit had a cumulative return of 7.66% at Week-55, which may have also played a role in the market conditions.
+
+However, the most significant event that preceded the success of the Aurelia AI Semiconductor Basket was the Week-60 event itself, where the position had"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,B01,investment,0.6,B01-E033,B01-E060,1,0,0,0.9999999999999999,0.9099999999999999,0.9999999999999999,0.24460820601369737,0,0,"PIVOT_ID=B01-E033
+
+The anchor position is Helios Grid Infrastructure, with a cumulative return of 8.49% at Week-33. To analyze the market conditions that preceded and enabled this position's success, we need to look at the events leading up to Week-33.
+
+From the timeline, we can see that Helios Grid Infrastructure had a cumulative return of 3.08% at Week-13, and then increased to 5.25% at Week-28, and then to 9.38% at Week-38. This suggests that the position was gaining momentum over time.
+
+However, the key event that enabled this position's success was likely B01-E051, which occurred at Week-51. This event had a weekly return of +5.40% and a cumulative return of 20.82%, and it marked a significant increase in the position's value. This event also had a RegimeScore of 3, indicating that it was a notable event in the portfolio research.
+
+The events leading up to B01-E051 suggest that","PIVOT_ID=B01-E060
+
+The anchor position is Aurelia AI Semiconductor Basket, with a cumulative return of 20.02% at Week-60. To analyze the market conditions that preceded and enabled this position's success, we need to examine the events leading up to it.
+
+Looking at the timeline, we can see that the Aurelia AI Semiconductor Basket had a cumulative return of 3.63% at Week-17, and then experienced a significant increase of 4.80% at Week-60, resulting in a cumulative return of 20.02%.
+
+Several events contributed to the success of this position:
+
+1.  B01-E017 (Week-17): The Aurelia AI Semiconductor Basket had a weekly return of +2.89%, which was a positive event that set the stage for future growth.
+2.  B01-E037 (Week-37): The Aurelia AI Semiconductor Basket had a weekly return of +1.73%, which was another positive event that contributed to its overall growth.
+3.  B01-E047 (Week-47):"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,B02,investment,0.4,B02-E073,B02-E061,1,0,1,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.2154009444891929,0,1,"PIVOT_ID=B02-E073
+
+The anchor position is Aurelia AI Semiconductor Basket, which achieved a cumulative return of 19.85% at Week-73. To analyze the market conditions that preceded and enabled this position's success, we need to examine the events leading up to Week-73.
+
+Looking at the cumulative returns, we can see that Aurelia AI Semiconductor Basket had a cumulative return of 8.62% at Week-72, which is the second-highest cumulative return among all positions at that point. This suggests that the position was performing well, but not yet at its peak.
+
+However, at Week-73, the position experienced a significant increase in cumulative return, jumping to 19.85%. This was largely due to the Week-73 event, which had a weekly return of 4.80%. This event dominated discussion despite depending on prior setup in portfolio research, and it preserved details that become causal prerequisites for later interpretation.
+
+Looking at the events leading up to Week-73, we can see that several positions, including Helios Grid Infrastructure and NorthRiver","PIVOT_ID=B02-E061
+
+The anchor position is Helios Grid Infrastructure, with a cumulative return of 20.65% at Week-61. To analyze the market conditions that preceded and enabled this position's success, we need to look at the events leading up to Week-61.
+
+The Helios Grid Infrastructure position has been steadily increasing in value since Week-10, with a cumulative return of 0.71% at that point. However, it wasn't until Week-61 that it experienced a significant jump in value, with a weekly return of 5.40%.
+
+Looking at the events leading up to Week-61, we can see that there were several other positions that were performing well, including NorthRiver Utilities Carry, which had a cumulative return of 6.79% at Week-56, and Aurelia AI Semiconductor Basket, which had a cumulative return of 7.00% at Week-57.
+
+However, the Helios Grid Infrastructure position was the one that ultimately experienced the largest increase in value, and it's likely that the market conditions that enabled"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,B02,investment,0.5,B02-E073,B02-E061,1,0,1,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.2071494555954141,0,1,"PIVOT_ID=B02-E073
+
+The anchor position is Aurelia AI Semiconductor Basket, which achieved a cumulative return of 19.85% at Week-73. To analyze the market conditions that preceded and enabled this position's success, we need to examine the events leading up to Week-73.
+
+Looking at the cumulative returns, we can see that Aurelia AI Semiconductor Basket had a cumulative return of 8.62% at Week-72, which is the second-highest cumulative return among all positions at that point. This suggests that the position was performing well, but not yet at its peak.
+
+However, at Week-73, the position experienced a significant increase in cumulative return, jumping to 19.85%. This was largely due to the Week-73 event, which had a weekly return of 4.80%. This event dominated discussion despite depending on prior setup in portfolio research, and it preserved details that become causal prerequisites for later interpretation.
+
+Looking at the events leading up to Week-73, we can see that several positions, including Helios Grid Infrastructure and NorthRiver","PIVOT_ID=B02-E061
+
+The anchor position is Helios Grid Infrastructure, which achieved a cumulative return of 20.65% at Week-61. To analyze the market conditions that preceded and enabled this position's success, we need to examine the events leading up to Week-61.
+
+Looking at the timeline, we can see that the Helios Grid Infrastructure position had a cumulative return of 4.52% at Week-28, and then a weekly return of +0.04% at Week-28. This suggests that the position was stable and consistent in the months leading up to Week-61.
+
+However, the key event that likely enabled the success of Helios Grid Infrastructure at Week-61 was the Aurelia AI Semiconductor Basket position, which had a cumulative return of 7.00% at Week-57. This position had a weekly return of -0.24% at Week-57, but it was still a significant contributor to the overall portfolio performance.
+
+The NorthRiver Utilities Carry position also played a role in the success of Helios Grid Infrastructure, with"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,B02,investment,0.6,B02-E073,B02-E061,1,0,1,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.24439360230362217,0,1,"PIVOT_ID=B02-E073
+
+The anchor position is Aurelia AI Semiconductor Basket, which achieved a cumulative return of 19.85% at Week-73. To analyze the market conditions that preceded and enabled this position's success, we need to examine the events leading up to Week-73.
+
+Looking at the cumulative returns, we can see that Aurelia AI Semiconductor Basket had a cumulative return of 8.62% at Week-72, which is the second-highest cumulative return among all positions at that point. This suggests that the position was performing well, but not yet at its peak.
+
+However, at Week-73, the position experienced a significant increase in cumulative return, jumping to 19.85%. This was largely due to the Week-73 event, which had a weekly return of 4.80%. This event dominated discussion despite depending on prior setup in portfolio research, and it preserved details that become causal prerequisites for later interpretation.
+
+Looking at the events leading up to Week-73, we can see that several positions, including Helios Grid Infrastructure and NorthRiver","PIVOT_ID=B02-E061
+
+The anchor position is Helios Grid Infrastructure, with a cumulative return of 20.65% at Week-61. To analyze the market conditions that preceded and enabled this position's success, we need to look at the events leading up to it.
+
+The Helios Grid Infrastructure position has been present in the portfolio since Week-3, with a cumulative return of 1.10% at that time. It experienced a significant increase in Week-13, with a weekly return of +1.09% and a cumulative return of 2.26%. However, it was not the top-performing position at that time.
+
+The top-performing position at Week-13 was BlueHarbor Treasury Arbitrage, with a cumulative return of 2.26%. However, its performance was short-lived, and it was surpassed by Aurelia AI Semiconductor Basket in Week-17, which had a weekly return of +2.00% and a cumulative return of 5.16%.
+
+Aurelia AI Semiconductor Basket continued to perform well, but its cumulative return"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,B03,investment,0.4,B03-E068,B03-E060,1,0,1,0.9899999999999999,0.9999999999999999,0.9899999999999999,0.265720290596657,0,1,"PIVOT_ID=B03-E068
+
+The anchor position is Aurelia AI Semiconductor Basket, with a cumulative return of 27.45% at Week-68. To analyze the market conditions that preceded and enabled this position's success, we need to look at the events leading up to this point.
+
+A key event that contributed to the success of Aurelia AI Semiconductor Basket is B03-E067, where the position had a weekly return of +1.15% and a cumulative return of 12.53%. This event shows that the position was performing well, but not spectacularly, and was likely building momentum.
+
+Another important event is B03-E066, where the position had a weekly return of +0.19% and a cumulative return of 9.54%. This event indicates that the position was still performing steadily, but not rapidly, and was likely benefiting from a stable market environment.
+
+However, the most significant event that preceded the anchor position's success is B03-E065, where the position had a weekly return of +0.81% and a cumulative return of","PIVOT_ID=B03-E060
+
+The anchor position is Helios Grid Infrastructure, with a cumulative return of 28.25% at Week-60. To analyze the market conditions that preceded and enabled this position's success, we need to examine the events leading up to this point.
+
+Looking at the timeline, we can see that Helios Grid Infrastructure had a cumulative return of 13.09% at Week-38, and then increased to 14.58% at Week-53. However, the most significant growth occurred between Week-60 and Week-61, with a weekly return of 5.40% and a cumulative return of 28.25%.
+
+The events that preceded this success include:
+
+- B03-E038 (Week-38): Helios Grid Infrastructure had a weekly return of +1.75%, which contributed to its cumulative return of 13.09%.
+- B03-E063 (Week-63): Helios Grid Infrastructure had a weekly return of +0.78%, which was a minor increase but still contributed to its overall growth.
+- B"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,B03,investment,0.5,B03-E068,B03-E068,1,1,1,0.8299999999999998,0.9999999999999999,0.8299999999999998,0.2695062745764205,0,0,"PIVOT_ID=B03-E068
+
+The anchor position is Aurelia AI Semiconductor Basket, with a cumulative return of 27.45% at Week-68. To analyze the market conditions that preceded and enabled this position's success, we need to look at the events leading up to this point.
+
+A key event that contributed to the success of Aurelia AI Semiconductor Basket is B03-E067, where the position had a weekly return of +1.15% and a cumulative return of 12.53%. This event shows that the position was performing well, but not spectacularly, and was likely building momentum.
+
+Another important event is B03-E066, where the position had a weekly return of +0.19% and a cumulative return of 9.54%. This event indicates that the position was still performing steadily, but not rapidly, and was likely benefiting from a stable market environment.
+
+However, the most significant event that preceded the anchor position's success is B03-E065, where the position had a weekly return of +0.81% and a cumulative return of","PIVOT_ID=B03-E068
+
+The anchor position is Aurelia AI Semiconductor Basket, with a cumulative return of 27.45% at Week-68. To analyze the market conditions that preceded and enabled this position's success, we need to look at the events leading up to this point.
+
+The Aurelia AI Semiconductor Basket position has been present in the portfolio since Week-17, with a cumulative return of 4.05% at that time. The position has experienced fluctuations in returns, but it has consistently been a part of the portfolio.
+
+Looking at the events leading up to Week-68, we can see that the Helios Grid Infrastructure position has been performing exceptionally well, with a cumulative return of 13.48% at Week-48. This position has been a key contributor to the portfolio's overall performance.
+
+The NorthRiver Utilities Carry position has also been performing well, with a cumulative return of 9.35% at Week-61. However, its returns have been more volatile, with a significant drop in Week-21.
+
+The Cinder Logistics Credit position has been"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,B03,investment,0.6,B03-E068,B03-E060,1,0,1,0.9899999999999999,0.9999999999999999,0.9899999999999999,0.2757347781550077,0,1,"PIVOT_ID=B03-E068
+
+The anchor position is Aurelia AI Semiconductor Basket, with a cumulative return of 27.45% at Week-68. To analyze the market conditions that preceded and enabled this position's success, we need to look at the events leading up to this point.
+
+A key event that contributed to the success of Aurelia AI Semiconductor Basket is B03-E067, where the position had a weekly return of +1.15% and a cumulative return of 12.53%. This event shows that the position was performing well, but not spectacularly, and was likely building momentum.
+
+Another important event is B03-E066, where the position had a weekly return of +0.19% and a cumulative return of 9.54%. This event indicates that the position was still performing steadily, but not rapidly, and was likely benefiting from a stable market environment.
+
+However, the most significant event that preceded the anchor position's success is B03-E065, where the position had a weekly return of +0.81% and a cumulative return of","PIVOT_ID=B03-E060
+
+The anchor position is Helios Grid Infrastructure, with a cumulative return of 28.25% at Week-60. To analyze the market conditions that preceded and enabled this position's success, we need to examine the events leading up to this point.
+
+Looking at the timeline, we can see that Helios Grid Infrastructure had a cumulative return of 13.67% at Week-43, and then a cumulative return of 14.58% at Week-53. However, it was not until Week-60 that the system crossed a threshold where all priors inverted in portfolio research, resulting in a significant increase in cumulative return.
+
+The events that preceded this success can be identified as follows:
+
+- B03-E043 (Week-43): This event shows that Helios Grid Infrastructure had a cumulative return of 13.67%, but the note references dependencies that only matter when read with the full timeline.
+- B03-E053 (Week-53): This event shows that Helios Grid Infrastructure had a cumulative return of 14.58%, but"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,B04,investment,0.4,B04-E036,B04-E059,1,0,1,0.9999999999999999,0.8299999999999998,0.9999999999999999,0.35940991906021436,0,1,"PIVOT_ID=B04-E036
+
+The anchor position is NorthRiver Utilities Carry, with a cumulative return of 8.73% at Week-36. To analyze the market conditions that preceded and enabled this position's success, we need to examine the events leading up to Week-36.
+
+Looking at the timeline, we can see that the NorthRiver Utilities Carry position has been steadily increasing in value since Week-01, with a few minor fluctuations. However, the significant increase in Week-36 can be attributed to several factors:
+
+1.  **Steady growth**: The NorthRiver Utilities Carry position has been consistently performing well throughout the timeline, with a cumulative return of 1.44% in Week-01, 1.90% in Week-06, 3.07% in Week-11, and 5.57% in Week-16. This steady growth suggests that the position has been well-positioned and managed.
+2.  **RegimeScore**: The RegimeScore for NorthRiver Utilities Carry has been consistently high, ranging from 4 to","PIVOT_ID=B04-E059
+
+The anchor position is the entry with the highest cumulative return, which is B04-E059. This entry corresponds to Week-59, where the position Helios Grid Infrastructure had a WeeklyReturn of +5.40% and a CumulativeReturn of 20.24%.
+
+To analyze the market conditions that preceded and enabled this position's success, we need to look at the entries leading up to B04-E059. 
+
+B04-E058 is not provided, but we can start from B04-E057. B04-E057 (Week-57) shows a WeeklyReturn of +1.18% for Aurelia AI Semiconductor Basket, with a CumulativeReturn of 7.04%. This entry has a RegimeScore of 4, indicating that it is a significant event in the portfolio research.
+
+B04-E056 is not provided, but we can look at B04-E055. B04-E055 (Week-55) shows a WeeklyReturn of +0.40% for Cinder Logistics Credit, with a CumulativeReturn of"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,B04,investment,0.5,B04-E036,B04-E059,1,0,0,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.30661991131548083,0,1,"PIVOT_ID=B04-E036
+
+The anchor position is NorthRiver Utilities Carry, with a cumulative return of 8.73% at Week-36. To analyze the market conditions that preceded and enabled this position's success, we need to examine the events leading up to Week-36.
+
+Looking at the timeline, we can see that the NorthRiver Utilities Carry position has been steadily increasing in value since Week-01, with a few minor fluctuations. However, the significant increase in Week-36 can be attributed to several factors:
+
+1.  **Steady growth**: The NorthRiver Utilities Carry position has been consistently performing well throughout the timeline, with a cumulative return of 1.44% in Week-01, 1.90% in Week-06, 3.07% in Week-11, and 5.57% in Week-16. This steady growth suggests that the position has been well-positioned and managed.
+2.  **RegimeScore**: The RegimeScore for NorthRiver Utilities Carry has been consistently high, ranging from 4 to","PIVOT_ID=B04-E059
+
+The anchor position is Helios Grid Infrastructure, with a cumulative return of 20.24% at Week-59. To analyze the market conditions that preceded and enabled this position's success, we need to examine the events leading up to Week-59.
+
+Looking at the timeline, we can see that the Helios Grid Infrastructure position had a cumulative return of 1.25% at Week-13, and then a return of -0.41% at Week-13, followed by a return of +1.43% at Week-28, and a return of +0.38% at Week-33. These returns are relatively stable and do not indicate any significant market fluctuations.
+
+However, the position's cumulative return started to increase significantly at Week-59, with a return of +5.40%. This event, B04-E059, is marked as a cross-system coupling became explicit and destabilizing in portfolio research, and the note references dependencies that only matter when read with the full timeline. Its narrative footprint is small even though it"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,B04,investment,0.6,B04-E036,B04-E059,1,0,0,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.29091959315149496,0,1,"PIVOT_ID=B04-E036
+
+The anchor position is NorthRiver Utilities Carry, with a cumulative return of 8.73% at Week-36. To analyze the market conditions that preceded and enabled this position's success, we need to examine the events leading up to Week-36.
+
+Looking at the timeline, we can see that the NorthRiver Utilities Carry position has been steadily increasing in value since Week-01, with a few minor fluctuations. However, the significant increase in Week-36 can be attributed to several factors:
+
+1.  **Steady growth**: The NorthRiver Utilities Carry position has been consistently performing well throughout the timeline, with a cumulative return of 1.44% in Week-01, 1.90% in Week-06, 3.07% in Week-11, and 5.57% in Week-16. This steady growth suggests that the position has been well-positioned and managed.
+2.  **RegimeScore**: The RegimeScore for NorthRiver Utilities Carry has been consistently high, ranging from 4 to","PIVOT_ID=B04-E059
+
+The anchor position is Helios Grid Infrastructure, with a cumulative return of 20.24% at Week-59. To analyze the market conditions that preceded and enabled this position's success, we need to examine the events leading up to this point.
+
+Looking at the timeline, we can see that the Helios Grid Infrastructure position had a cumulative return of 1.25% at Week-13, and then a cumulative return of 1.66% at Week-08. However, it was not the top-performing position at these points.
+
+The top-performing position at Week-08 was BlueHarbor Treasury Arbitrage, with a cumulative return of 3.29%. However, this position's cumulative return decreased to 3.29% at Week-14, and then to 14.66% at Week-64, which is still lower than the anchor position's cumulative return.
+
+The top-performing position at Week-13 was NorthRiver Utilities Carry, with a cumulative return of 5.32%. However, this position's"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,C01,narrative,0.4,C01-E052,C01-E052,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.1787552782754065,1,1,"PIVOT_ID=C01-E052
+
+The turning point of the story is Scene-52, where Sana released the sealed ledger proving council fraud, with a ConsequenceScore of 24. This event had the highest consequence score across all scenes, indicating that it was the most impactful and pivotal moment in the story.
+
+Earlier events that made this possible include:
+
+- C01-E001 to C01-E050: These scenes set the stage for the story, establishing the characters and their interactions. They also laid the groundwork for the events that would unfold, including the routine updates and logistical details that are necessary for the plot to progress.
+- C01-E051 to C01-E051: These scenes continued to build on the foundation established in the earlier scenes, with characters exchanging routine updates and sharing mundane logistical details. These events may seem insignificant on their own, but they contribute to the overall narrative and create a sense of normalcy that makes the later events more impactful.
+- C01-E052: This scene is the turning point of the story, where Sana releases the sealed ledger proving council","PIVOT_ID=C01-E052
+
+The turning point of the story is Scene-52, where Sana released the sealed ledger proving council fraud, with a ConsequenceScore of 24. This event had the highest consequence score across all scenes, making it the turning point of the story.
+
+Earlier events that made this possible include:
+
+- C01-E044 (Scene-44): Jonas exchanged routine updates in the assembly atrium with a ConsequenceScore of 8, which laid the groundwork for the events that followed.
+- C01-E046 (Scene-46): Sana exchanged routine updates in the market ward with a ConsequenceScore of 9, which further contributed to the build-up of tension and laid the foundation for the revelation of the council's fraud.
+- C01-E047 (Scene-47): Iris exchanged routine updates in the canal archive with a ConsequenceScore of 8, which added to the overall narrative momentum and set the stage for the dramatic events that unfolded.
+- C01-E049 (Scene-49): Mira exchanged routine updates in the assembly atr"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,C01,narrative,0.5,C01-E052,C01-E052,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.21325403646465468,1,1,"PIVOT_ID=C01-E052
+
+The turning point of the story is Scene-52, where Sana released the sealed ledger proving council fraud, with a ConsequenceScore of 24. This event had the highest consequence score across all scenes, indicating that it was the most impactful and pivotal moment in the story.
+
+Earlier events that made this possible include:
+
+- C01-E001 to C01-E050: These scenes set the stage for the story, establishing the characters and their interactions. They also laid the groundwork for the events that would unfold, including the routine updates and logistical details that are necessary for the plot to progress.
+- C01-E051 to C01-E051: These scenes continued to build on the foundation established in the earlier scenes, with characters exchanging routine updates and sharing mundane logistical details. These events may seem insignificant on their own, but they contribute to the overall narrative and create a sense of normalcy that makes the later events more impactful.
+- C01-E052: This scene is the turning point of the story, where Sana releases the sealed ledger proving council","PIVOT_ID=C01-E052
+
+The turning point of the story is Scene-52, where Sana released the sealed ledger proving council fraud, with a ConsequenceScore of 24. This event had the highest consequence score across the entire story, making it the turning point.
+
+Earlier events that made this possible include:
+
+- C01-E022 (Scene-22): Sana exchanged routine updates with a ConsequenceScore of 8, which laid the groundwork for the events that followed.
+- C01-E028 (Scene-28): Sana exchanged routine updates with a ConsequenceScore of 8, which further contributed to the build-up of events leading to the turning point.
+- C01-E046 (Scene-46): Sana exchanged routine updates with a ConsequenceScore of 9, which hinted at the significance of the sealed ledger and its potential impact on the story.
+- C01-E047 (Scene-47): Iris exchanged routine updates with a ConsequenceScore of 8, which may have been a precursor to the events that unfolded after the turning point.
+-"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,C01,narrative,0.6,C01-E052,C01-E052,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.2047948665623185,1,1,"PIVOT_ID=C01-E052
+
+The turning point of the story is Scene-52, where Sana released the sealed ledger proving council fraud, with a ConsequenceScore of 24. This event had the highest consequence score across all scenes, indicating that it was the most impactful and pivotal moment in the story.
+
+Earlier events that made this possible include:
+
+- C01-E001 to C01-E050: These scenes set the stage for the story, establishing the characters and their interactions. They also laid the groundwork for the events that would unfold, including the routine updates and logistical details that are necessary for the plot to progress.
+- C01-E051 to C01-E051: These scenes continued to build on the foundation established in the earlier scenes, with characters exchanging routine updates and sharing mundane logistical details. These events may seem insignificant on their own, but they contribute to the overall narrative and create a sense of normalcy that makes the later events more impactful.
+- C01-E052: This scene is the turning point of the story, where Sana releases the sealed ledger proving council","PIVOT_ID=C01-E052
+
+The turning point of the story is Scene-52, where Sana released the sealed ledger proving council fraud, with a ConsequenceScore of 24. This event had the highest consequence score across the entire story, making it the turning point.
+
+Earlier events that made this possible include:
+
+- C01-E014 (Scene-14): Jonas exchanged routine updates in the assembly atrium with a ConsequenceScore of 10. This event laid the groundwork for the council's actions and set the stage for the discovery of the fraud.
+- C01-E043 (Scene-43): Mira exchanged routine updates at the north gate with a ConsequenceScore of 8. This event further established the council's dynamics and created a context for the discovery of the fraud.
+- C01-E050 (Scene-50): Jonas exchanged routine updates at the river embankment with a ConsequenceScore of 8. This event reinforced the council's actions and created a sense of continuity, making the discovery of the fraud more plausible.
+- C01-E058 ("
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,C02,narrative,0.4,C02-E054,C02-E054,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.2800835034574485,1,1,"PIVOT_ID=C02-E054
+
+The turning point of the story is Scene-54, where Cato released the sealed ledger proving council fraud, with a ConsequenceScore of 24. This event had the highest consequence score across all scenes, indicating that it had the most significant impact on the story's progression.
+
+Earlier events that made this possible include:
+
+- C02-E001 to C02-E003: These scenes set the stage for the story by establishing the routine updates and character dynamics.
+- C02-E004 to C02-E006: These scenes continued to build the story by introducing more characters and their interactions, while also hinting at the importance of the updates.
+- C02-E007 to C02-E008: These scenes maintained the routine updates and character dynamics, but also introduced some minor variations and dependencies that would become crucial later.
+- C02-E009 to C02-E010: These scenes continued to build the story by introducing more characters and their interactions, while also hinting at the importance of the updates.
+- C02-E011 to C02-E013","PIVOT_ID=C02-E054
+
+The turning point of the story is Scene-54, where Cato released the sealed ledger proving council fraud with a ConsequenceScore of 24. This event had the highest consequence score across the entire story, indicating that it had the most significant impact on the narrative.
+
+Earlier events that made this possible include:
+
+- C02-E002, C02-E003, C02-E004, C02-E006, C02-E010, C02-E011, C02-E013, C02-E014, C02-E016, C02-E017, C02-E020, C02-E021, C02-E023, C02-E025, C02-E026, C02-E029, C02-E032, C02-E036, C02-E038, C02-E043, C02-E045, C02-E046, C02-E049, C02-E052, C02-E057, C02-E060, C02-E061, C02-E063, C02-E064, C02-E"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,C02,narrative,0.5,C02-E054,C02-E062,1,0,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.25940414786157273,1,0,"PIVOT_ID=C02-E054
+
+The turning point of the story is Scene-54, where Cato released the sealed ledger proving council fraud, with a ConsequenceScore of 24. This event had the highest consequence score across all scenes, indicating that it had the most significant impact on the story's progression.
+
+Earlier events that made this possible include:
+
+- C02-E001 to C02-E003: These scenes set the stage for the story by establishing the routine updates and character dynamics.
+- C02-E004 to C02-E006: These scenes continued to build the story by introducing more characters and their interactions, while also hinting at the importance of the updates.
+- C02-E007 to C02-E008: These scenes maintained the routine updates and character dynamics, but also introduced some minor variations and dependencies that would become crucial later.
+- C02-E009 to C02-E010: These scenes continued to build the story by introducing more characters and their interactions, while also hinting at the importance of the updates.
+- C02-E011 to C02-E013","PIVOT_ID=C02-E062
+
+The turning point of the story is Scene-62, where Jonas challenged the council in a public square with a ConsequenceScore of 19. This event had the highest consequence score across the entire story, indicating that it had the most significant impact on the narrative.
+
+Earlier events that made this possible include:
+
+- C02-E054: Scene-54, where Cato released the sealed ledger proving council fraud, with a ConsequenceScore of 24. This event created a decisive break in character dynamics, setting the stage for the confrontation that would follow.
+- C02-E056: Scene-56, where Jonas staged a visible confrontation, with a ConsequenceScore of 5. Although this event had a lower consequence score, it still contributed to the escalating tension and set the stage for the more significant confrontation in Scene-62.
+- C02-E057: Scene-57, where Elio exchanged routine updates, with a ConsequenceScore of 9. This event may have provided additional context or information that contributed to the events leading up to the"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,C02,narrative,0.6,C02-E054,C02-E054,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.2523179265897304,1,1,"PIVOT_ID=C02-E054
+
+The turning point of the story is Scene-54, where Cato released the sealed ledger proving council fraud, with a ConsequenceScore of 24. This event had the highest consequence score across all scenes, indicating that it had the most significant impact on the story's progression.
+
+Earlier events that made this possible include:
+
+- C02-E001 to C02-E003: These scenes set the stage for the story by establishing the routine updates and character dynamics.
+- C02-E004 to C02-E006: These scenes continued to build the story by introducing more characters and their interactions, while also hinting at the importance of the updates.
+- C02-E007 to C02-E008: These scenes maintained the routine updates and character dynamics, but also introduced some minor variations and dependencies that would become crucial later.
+- C02-E009 to C02-E010: These scenes continued to build the story by introducing more characters and their interactions, while also hinting at the importance of the updates.
+- C02-E011 to C02-E013","PIVOT_ID=C02-E054
+
+The turning point of the story is Scene-54, where Cato releases the sealed ledger proving council fraud, with a ConsequenceScore of 24. This event has the highest consequence score across all scenes, making it the turning point of the story.
+
+Earlier events that made this possible include:
+
+- C02-E043: Scene-43, where Mira exchanged routine updates at the north gate with a ConsequenceScore of 10. This event laid the groundwork for the events that followed, including the release of the sealed ledger.
+- C02-E037: Scene-37, where Mira exchanged routine updates at the canal archive with a ConsequenceScore of 11. This event further set the stage for the events that led to the release of the sealed ledger.
+- C02-E031: Scene-31, where Mira exchanged routine updates at the market ward with a ConsequenceScore of 10. This event also contributed to the events that led to the release of the sealed ledger.
+- C02-E025: Scene-25,"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,C03,narrative,0.4,C03-E060,C03-E068,1,0,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.26560898658402987,1,0,"PIVOT_ID=C03-E060
+
+The turning point of the story is Scene-60, where Cato releases the sealed ledger proving council fraud, with a ConsequenceScore of 24. This event has the highest consequence score across all scenes, making it the turning point of the story.
+
+Earlier events that made this possible include:
+
+- C03-E001 to C03-E059: These scenes establish the routine updates and mundane activities of the characters, setting the stage for the events that follow.
+- C03-E058: This scene shows Sana exchanging routine updates, which may seem insignificant on its own but contributes to the overall narrative context.
+- C03-E059: This scene shows Iris sharing mundane logistical details, which may seem boring but helps to create a sense of normalcy before the dramatic event.
+- C03-E060: This scene is the turning point, where Cato releases the sealed ledger, revealing the council's fraud. This event has a significant consequence score, indicating that it has a major impact on the story.
+
+The events leading up to this turning point create a","PIVOT_ID=C03-E068
+
+The turning point of the story is Scene-68, where Jonas challenges the council in a public square with a ConsequenceScore of 19. This event dominated discussion despite depending on prior setup in character dynamics, indicating that it was a pivotal moment in the story.
+
+Earlier events that made this possible include:
+
+- C03-E060: Scene-60, where Cato released the sealed ledger proving council fraud, which converged latent dependencies and created a decisive break in character dynamics. This event laid the groundwork for the confrontation that would follow.
+- C03-E038: Scene-38, where Jonas exchanged routine updates at the north gate, which included procedural details that summarizers often collapse away. This event may have contributed to Jonas's preparation or awareness of the situation that led to the confrontation.
+- C03-E026: Scene-26, where Jonas exchanged routine updates at the market ward, which preserved details that become causal prerequisites for later interpretation. This event may have also contributed to Jonas's preparation or awareness of the situation.
+- C03-E023:"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,C03,narrative,0.5,C03-E060,C03-E068,1,0,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.28430367940620305,1,0,"PIVOT_ID=C03-E060
+
+The turning point of the story is Scene-60, where Cato releases the sealed ledger proving council fraud, with a ConsequenceScore of 24. This event has the highest consequence score across all scenes, making it the turning point of the story.
+
+Earlier events that made this possible include:
+
+- C03-E001 to C03-E059: These scenes establish the routine updates and mundane activities of the characters, setting the stage for the events that follow.
+- C03-E058: This scene shows Sana exchanging routine updates, which may seem insignificant on its own but contributes to the overall narrative context.
+- C03-E059: This scene shows Iris sharing mundane logistical details, which may seem boring but helps to create a sense of normalcy before the dramatic event.
+- C03-E060: This scene is the turning point, where Cato releases the sealed ledger, revealing the council's fraud. This event has a significant consequence score, indicating that it has a major impact on the story.
+
+The events leading up to this turning point create a","PIVOT_ID=C03-E068
+
+The turning point of the story is Scene-68, where Jonas challenges the council in a public square with a ConsequenceScore of 19. This event dominated discussion despite depending on prior setup in character dynamics, indicating that it was a pivotal moment in the story.
+
+Earlier events that made this possible include:
+
+- C03-E060: Scene-60, where Cato released the sealed ledger proving council fraud, which had a ConsequenceScore of 24. This event converged latent dependencies and created a decisive break in character dynamics, setting the stage for the confrontation in Scene-68.
+- C03-E028: Scene-28, where Sana exchanged routine updates with a ConsequenceScore of 11. This event shifted downstream feasibility and changed which pivot was admissible, making the confrontation in Scene-68 more likely.
+- C03-E014: Scene-14, where Jonas exchanged routine updates with a ConsequenceScore of 11. This event also shifted downstream feasibility and changed which pivot was admissible, contributing to the buildup towards the confrontation in"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,C03,narrative,0.6,C03-E060,C03-E068,1,0,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.2705741320859957,1,0,"PIVOT_ID=C03-E060
+
+The turning point of the story is Scene-60, where Cato releases the sealed ledger proving council fraud, with a ConsequenceScore of 24. This event has the highest consequence score across all scenes, making it the turning point of the story.
+
+Earlier events that made this possible include:
+
+- C03-E001 to C03-E059: These scenes establish the routine updates and mundane activities of the characters, setting the stage for the events that follow.
+- C03-E058: This scene shows Sana exchanging routine updates, which may seem insignificant on its own but contributes to the overall narrative context.
+- C03-E059: This scene shows Iris sharing mundane logistical details, which may seem boring but helps to create a sense of normalcy before the dramatic event.
+- C03-E060: This scene is the turning point, where Cato releases the sealed ledger, revealing the council's fraud. This event has a significant consequence score, indicating that it has a major impact on the story.
+
+The events leading up to this turning point create a","PIVOT_ID=C03-E068
+
+The turning point of the story is Scene-68, where Jonas challenges the council in a public square with a ConsequenceScore of 19. This event dominated discussion despite depending on prior setup in character dynamics, indicating that it was a pivotal moment in the story.
+
+Earlier events that made this possible include:
+
+- C03-E043 (Scene-43): Mira exchanged routine updates at the north gate with a ConsequenceScore of 10, which shifted downstream feasibility and laid the groundwork for later events.
+- C03-E060 (Scene-60): Cato released the sealed ledger proving council fraud with a ConsequenceScore of 24, which was a decisive break in character dynamics and created a turning point in the story.
+- C03-E064 (Scene-64): Sana exchanged routine updates at the assembly atrium with a ConsequenceScore of 11, which shifted downstream feasibility and further set the stage for Jonas' confrontation.
+- C03-E068 (Scene-68) itself, which was made possible by the events that came before"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,C04,narrative,0.4,C04-E052,C04-E052,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.26297424227037114,1,1,"PIVOT_ID=C04-E052
+
+The turning point of the story is Scene-52, where Actor=Sana releases the sealed ledger proving council fraud with a ConsequenceScore of 24. This event has the highest consequence score across all scenes, indicating that it is the most significant turning point in the story.
+
+Earlier events that made this possible include:
+
+- C04-E001 to C04-E050: These scenes establish the routine updates and mundane logistical details that set the stage for the story. They show the characters exchanging information and performing tasks, but none of these events have a high consequence score.
+- C04-E051 to C04-E071: These scenes continue to show the characters exchanging routine updates and performing mundane tasks. Some of these events have moderate consequence scores, but they do not approach the level of C04-E052.
+- C04-E072 to C04-E080: These scenes continue to show the characters exchanging routine updates and performing mundane tasks. However, they do not have high consequence scores and do not approach the level of C04-E052.
+
+The turning point","PIVOT_ID=C04-E052
+
+The turning point of the story is Scene-52, where Sana released the sealed ledger proving council fraud, with a ConsequenceScore of 24. This event had the highest consequence score across all scenes, making it the turning point of the story.
+
+Earlier events that made this possible include:
+
+- C04-E016 (Scene-16): Sana exchanged routine updates in the market ward, which laid the groundwork for the events that followed.
+- C04-E026 (Scene-26): Jonas exchanged routine updates in the market ward, which further contributed to the build-up of tension and laid the foundation for Sana's actions.
+- C04-E046 (Scene-46): Sana exchanged routine updates in the market ward, which hinted at the events that would unfold and the consequences that would arise from releasing the sealed ledger.
+- C04-E060 (Scene-60): Cato exchanged routine updates in the river embankment, which may have been a precursor to the events that led to the release of the sealed ledger.
+- C04"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,C04,narrative,0.5,C04-E052,C04-E052,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.26215735665240425,1,1,"PIVOT_ID=C04-E052
+
+The turning point of the story is Scene-52, where Actor=Sana releases the sealed ledger proving council fraud with a ConsequenceScore of 24. This event has the highest consequence score across all scenes, indicating that it is the most significant turning point in the story.
+
+Earlier events that made this possible include:
+
+- C04-E001 to C04-E050: These scenes establish the routine updates and mundane logistical details that set the stage for the story. They show the characters exchanging information and performing tasks, but none of these events have a high consequence score.
+- C04-E051 to C04-E071: These scenes continue to show the characters exchanging routine updates and performing mundane tasks. Some of these events have moderate consequence scores, but they do not approach the level of C04-E052.
+- C04-E072 to C04-E080: These scenes continue to show the characters exchanging routine updates and performing mundane tasks. However, they do not have high consequence scores and do not approach the level of C04-E052.
+
+The turning point","PIVOT_ID=C04-E052
+
+The turning point of the story is Scene-52, where Sana released the sealed ledger proving council fraud, with a ConsequenceScore of 24. This event had the highest consequence score across the entire story, making it the turning point.
+
+Earlier events that made this possible include:
+
+- C04-E028 (Scene-28): Sana exchanged routine updates at the north gate with a ConsequenceScore of 10, which laid the groundwork for the events that followed.
+- C04-E046 (Scene-46): Sana exchanged routine updates at the market ward with a ConsequenceScore of 10, which further contributed to the build-up of tension and set the stage for the revelation of the council's fraud.
+- C04-E047 (Scene-47): Iris exchanged routine updates at the canal archive with a ConsequenceScore of 9, which may have hinted at the existence of the sealed ledger or the council's involvement in the fraud.
+- C04-E052 (Scene-52): Sana released the sealed ledger proving council fraud"
+Llama-3.1-8B-Instruct,meta-llama/Llama-3.1-8B-Instruct,C04,narrative,0.6,C04-E052,C04-E052,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.2680097394941161,1,1,"PIVOT_ID=C04-E052
+
+The turning point of the story is Scene-52, where Actor=Sana releases the sealed ledger proving council fraud with a ConsequenceScore of 24. This event has the highest consequence score across all scenes, indicating that it is the most significant turning point in the story.
+
+Earlier events that made this possible include:
+
+- C04-E001 to C04-E050: These scenes establish the routine updates and mundane logistical details that set the stage for the story. They show the characters exchanging information and performing tasks, but none of these events have a high consequence score.
+- C04-E051 to C04-E071: These scenes continue to show the characters exchanging routine updates and performing mundane tasks. Some of these events have moderate consequence scores, but they do not approach the level of C04-E052.
+- C04-E072 to C04-E080: These scenes continue to show the characters exchanging routine updates and performing mundane tasks. However, they do not have high consequence scores and do not approach the level of C04-E052.
+
+The turning point","PIVOT_ID=C04-E052
+
+The turning point of the story is Scene-52, where Sana released the sealed ledger proving council fraud, with a ConsequenceScore of 24. This event had the highest consequence score across the entire story.
+
+Earlier events that made this possible include:
+
+- C04-E014 (Scene-14): Jonas exchanged routine updates in the assembly atrium with a ConsequenceScore of 11. This event laid the groundwork for the council's actions and set the stage for the revelation of the fraud.
+- C04-E031 (Scene-31): Mira exchanged routine updates in the market ward with a ConsequenceScore of 11. This event further solidified the council's position and created a sense of normalcy, making the revelation of the fraud more impactful.
+- C04-E043 (Scene-43): Mira exchanged routine updates in the north gate with a ConsequenceScore of 5. Although this event had a lower consequence score, it contributed to the overall narrative and created a sense of continuity.
+- C04-E050 (Scene"

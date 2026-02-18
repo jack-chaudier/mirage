@@ -2,11 +2,22 @@
 
 ## Start Here
 - `README.md`
+- `endogenous_context_theory/release/README.md`
 - `papers/README.md`
 - `docs/massive-context-document.md`
 - `docs/independent-review-and-value-assessment.md`
 - `docs/reproducibility-checklist.md`
 - `docs/unified-repo-map.md`
+
+## Paper 03 Public Bundle
+- `endogenous_context_theory/release/README.md`
+- `endogenous_context_theory/release/miragebench_tasks/`
+- `endogenous_context_theory/release/notebooks/`
+- `endogenous_context_theory/release/results/blackbox_bf16_5model/`
+- `endogenous_context_theory/release/results/kv_cache_eviction_llama31_8b/`
+- `endogenous_context_theory/release/adapters/mirage_aware_v1/`
+- `endogenous_context_theory/release/figures/`
+- `endogenous_context_theory/release/SHA256SUMS.txt`
 
 ## Papers
 - `papers/paper_01_absorbing_states_in_greedy_search.pdf`

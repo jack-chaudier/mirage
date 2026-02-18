@@ -5,6 +5,17 @@ This repository contains the core code and curated research artifacts for the Mi
 - MirageBench experiments across compression and difficulty frontiers
 - Mirage-aware fine-tuning/evaluation workflows for explicit evidence degradation reporting
 
+## Paper 03 Public Release Bundle
+
+For artifact-first review (same layout intended for public release), start here:
+
+- `endogenous_context_theory/release/README.md`
+
+It includes:
+- section-to-artifact mapping for Paper 03
+- curated notebooks, tasks, results CSVs, and adapter weights
+- release figures and rebuild instructions
+
 ## Paper Set
 - `papers/paper_01_absorbing_states_in_greedy_search.pdf`
 - `papers/paper_02_streaming_oscillation_traps.pdf`
@@ -75,6 +86,7 @@ Detailed write-up:
 1. Start with `endogenous_context_theory/README.md`.
 2. Use canonical scripts in `endogenous_context_theory/scripts/` and notebooks in `endogenous_context_theory/notebooks/`.
 3. Follow `docs/reproducibility-checklist.md`.
+4. For public/arXiv publication handoff, follow `docs/public_release_checklist.md`.
 
 ## Unified Workspace Notes
 - This repo is the canonical home for ongoing work across Mirage + Rhun + Lorien.

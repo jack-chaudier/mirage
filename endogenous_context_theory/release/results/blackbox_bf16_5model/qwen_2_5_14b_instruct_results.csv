@@ -1,0 +1,611 @@
+model_name,model_id,task_id,category,compression_level,full_pivot,pivot_id_extracted,pivot_extracted_flag,pivot_preserved,fixed_pivot_feasible,raw_validity,raw_validity_full,raw_validity_compressed,semantic_regret,full_pivot_matches_ground_truth,pivot_matches_ground_truth,full_answer,compressed_answer
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,A01,incident,0.4,A01-E065,A01-E065,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.3397644886972945,1,1,"PIVOT_ID=A01-E065
+
+The root cause is identified as event A01-E065 due to its highest composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+
+- **A01-E059**: Config baseline update for cache on 2026-05-05, which has a composite score of 1 and although low, it references dependencies that only matter when read with the full timeline.
+- **A01-E005**: Routine telemetry for api-gateway on 2026-05-05, which has a composite score of 35 and includes procedural details that summarizers often collapse away, changing which pivot is admissible.
+- **A01-E019**: Routine telemetry for api-gateway on 2026-05-19, which has a composite score of 20 and includes procedural details that summarizers often collapse away, changing which pivot is","PIVOT_ID=A01-E065
+
+The root cause is identified as the event with the highest composite severity score, which is [A01-E065] 2026-05-11 17:28 | Service=ledger | Event=Cascade failure across service mesh | Severity=9 | Scope=12 | Composite=108.
+
+Prerequisite events that enabled this root cause include:
+
+- [A01-E002] 2026-05-02 09:07 | Service=ledger | Event=Routine telemetry | Severity=5 | Scope=3 | Composite=15
+- [A01-E003] 2026-05-03 10:14 | Service=cache | Event=Routine telemetry | Severity=3 | Scope=5 | Composite=15
+- [A01-E010] 2026-05-10 17:03"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,A01,incident,0.5,A01-E065,A01-E065,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.31574844092759446,1,1,"PIVOT_ID=A01-E065
+
+The root cause is identified as event A01-E065 due to its highest composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+
+- **A01-E059**: Config baseline update for cache on 2026-05-05, which has a composite score of 1 and although low, it references dependencies that only matter when read with the full timeline.
+- **A01-E005**: Routine telemetry for api-gateway on 2026-05-05, which has a composite score of 35 and includes procedural details that summarizers often collapse away, changing which pivot is admissible.
+- **A01-E019**: Routine telemetry for api-gateway on 2026-05-19, which has a composite score of 20 and includes procedural details that summarizers often collapse away, changing which pivot is","PIVOT_ID=A01-E065
+
+The root cause is identified as event [A01-E065], which has a composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+
+- [A01-E009] 2026-05-09 16:56 | Service=ledger | Event=Routine telemetry | Severity=4 | Scope=7 | Composite=28
+- [A01-E028] 2026-05-01 13:09 | Service=search | Event=Routine telemetry | Severity=4 | Scope=4 | Composite=16
+- [A01-E029] 2026-05-02 14:16 | Service=auth | Event=Routine telemetry | Severity=4 | Scope=5 | Composite=20
+- [A01-E030] 2"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,A01,incident,0.6,A01-E065,A01-E065,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.32573930464176637,1,1,"PIVOT_ID=A01-E065
+
+The root cause is identified as event A01-E065 due to its highest composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+
+- **A01-E059**: Config baseline update for cache on 2026-05-05, which has a composite score of 1 and although low, it references dependencies that only matter when read with the full timeline.
+- **A01-E005**: Routine telemetry for api-gateway on 2026-05-05, which has a composite score of 35 and includes procedural details that summarizers often collapse away, changing which pivot is admissible.
+- **A01-E019**: Routine telemetry for api-gateway on 2026-05-19, which has a composite score of 20 and includes procedural details that summarizers often collapse away, changing which pivot is","PIVOT_ID=A01-E065
+
+The root cause is identified as event A01-E065 with a composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+- A01-E005: With a composite severity score of 35 (Severity=5 * Scope=7), this event changes the pivot point for admissibility globally.
+- A01-E035: With a composite severity score of 24 (Severity=4 * Scope=6), this event preserves details that become causal prerequisites for later interpretation.
+- A01-E037: With a composite severity score of 30 (Severity=5 * Scope=6), this event also preserves details that become causal prerequisites for later interpretation.
+- A01-E043: With a composite severity score of 10 (Severity=5 * Scope=2), this event references dependencies that only matter when read with the full timeline.
+- A01-E"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,A02,incident,0.4,A02-E062,A02-E062,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.37729248707749596,1,1,"PIVOT_ID=A02-E062
+
+The root cause is identified as event A02-E062 with a composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+
+- **A02-E004** (Composite=35): Update processed as ordinary background activity in incident operations, with commentary that seems low salience unless one tracks the global score rule.
+- **A02-E013** (Composite=35): Update processed as ordinary background activity in incident operations, and the note references dependencies that only matter when read with the full timeline.
+- **A02-E018** (Composite=24): Update processed as ordinary background activity in incident operations, while preserving details that become causal prerequisites for later interpretation.
+- **A02-E032** (Composite=30): Local checks passed with only minor variance in incident operations, and includes procedural details that summarizers often collapse away.
+- **A02-E0","PIVOT_ID=A02-E062
+
+The root cause is identified as event A02-E062 due to its highest composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+- A02-E004: Service=queue | Event=Routine telemetry | Severity=5 | Scope=7 | Composite=35
+- A02-E013: Service=search | Event=Routine telemetry | Severity=3 | Scope=3 | Composite=9
+- A02-E018: Service=queue | Event=Routine telemetry | Severity=4 | Scope=6 | Composite=24
+- A02-E036: Service=auth | Event=Routine telemetry | Severity=2 | Scope=7 | Composite=14
+- A02-E045: Service=cache | Event=Routine telemetry | Severity=5 | Scope=2 | Composite=10
+- A02-E050:"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,A02,incident,0.5,A02-E062,A02-E062,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.2364554199753326,1,1,"PIVOT_ID=A02-E062
+
+The root cause is identified as event A02-E062 with a composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+
+- **A02-E004** (Composite=35): Update processed as ordinary background activity in incident operations, with commentary that seems low salience unless one tracks the global score rule.
+- **A02-E013** (Composite=35): Update processed as ordinary background activity in incident operations, and the note references dependencies that only matter when read with the full timeline.
+- **A02-E018** (Composite=24): Update processed as ordinary background activity in incident operations, while preserving details that become causal prerequisites for later interpretation.
+- **A02-E032** (Composite=30): Local checks passed with only minor variance in incident operations, and includes procedural details that summarizers often collapse away.
+- **A02-E0","PIVOT_ID=A02-E062
+
+The root cause is identified as event A02-E062 due to its composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+
+- **A02-E001** (Composite=20): Provides initial context and minor variance in incident operations that could influence system stability.
+- **A02-E003** (Not listed, but inferred from pattern): Likely an event that sets up dependencies or conditions necessary for later events.
+- **A02-E008** (Composite=10): Repetitive housekeeping and status chatter that might indicate underlying issues.
+- **A02-E013** (Composite=35): Routine telemetry that references dependencies critical for understanding the full timeline.
+- **A02-E018** (Composite=24): Update processed as ordinary background activity, but with details that become causal prerequisites.
+- **A02-E028**"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,A02,incident,0.6,A02-E062,A02-E062,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.35257562935348163,1,1,"PIVOT_ID=A02-E062
+
+The root cause is identified as event A02-E062 with a composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+
+- **A02-E004** (Composite=35): Update processed as ordinary background activity in incident operations, with commentary that seems low salience unless one tracks the global score rule.
+- **A02-E013** (Composite=35): Update processed as ordinary background activity in incident operations, and the note references dependencies that only matter when read with the full timeline.
+- **A02-E018** (Composite=24): Update processed as ordinary background activity in incident operations, while preserving details that become causal prerequisites for later interpretation.
+- **A02-E032** (Composite=30): Local checks passed with only minor variance in incident operations, and includes procedural details that summarizers often collapse away.
+- **A02-E0","PIVOT_ID=A02-E062
+
+The root cause is identified as event A02-E062 due to its composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+- [A02-E059] 2026-05-05 11:46 | Service=cache | Event=Routine telemetry | Severity=5 | Scope=5 | Composite=25 | This event includes procedural details that become causal prerequisites for later interpretation.
+- [A02-E061] 2026-05-07 13:00 | Service=api-gateway | Event=Routine telemetry | Severity=4 | Scope=7 | Composite=28 | This event also includes procedural details that become causal prerequisites for later interpretation.
+- [A02-E057] 2026-05-03 09:32 | Service=auth | Event=R"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,A03,incident,0.4,A03-E058,A03-E058,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.3484534611527942,1,1,"PIVOT_ID=A03-E058
+
+The root cause is identified as event A03-E058 due to its highest composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+- A03-E006: Service=billing | Routine telemetry | Severity=5 | Scope=7 | Composite=35
+- A03-E016: Service=ledger | Routine telemetry | Severity=4 | Scope=5 | Composite=20
+- A03-E020: Service=billing | Routine telemetry | Severity=5 | Scope=7 | Composite=35
+- A03-E024: Service=cache | Routine telemetry | Severity=5 | Scope=5 | Composite=25
+- A03-E028: Service=search | Routine telemetry | Severity=2 | Scope=4 | Composite=8
+- A03-E030: Service=ledger | Routine telemetry | Severity=4","PIVOT_ID=A03-E058
+
+The root cause is identified as event A03-E058 with a composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+
+- **A03-E002** (Composite=24): Local checks passed with minor variance, shifting downstream feasibility.
+- **A03-E006** (Composite=35): Update processed as ordinary background activity, referencing dependencies that matter with the full timeline.
+- **A03-E013** (Composite=25): Update processed as ordinary background activity, changing pivot admissibility globally.
+- **A03-E016** (Composite=20): Nothing strategically dominant in isolation, changing pivot admissibility globally.
+- **A03-E020** (Composite=35): Local checks passed with minor variance, acting as a structural breadcrumb.
+- **A03-E023** (Composite=14): Local"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,A03,incident,0.5,A03-E058,A03-E058,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.37818429512141316,1,1,"PIVOT_ID=A03-E058
+
+The root cause is identified as event A03-E058 due to its highest composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+- A03-E006: Service=billing | Routine telemetry | Severity=5 | Scope=7 | Composite=35
+- A03-E016: Service=ledger | Routine telemetry | Severity=4 | Scope=5 | Composite=20
+- A03-E020: Service=billing | Routine telemetry | Severity=5 | Scope=7 | Composite=35
+- A03-E024: Service=cache | Routine telemetry | Severity=5 | Scope=5 | Composite=25
+- A03-E028: Service=search | Routine telemetry | Severity=2 | Scope=4 | Composite=8
+- A03-E030: Service=ledger | Routine telemetry | Severity=4","PIVOT_ID=A03-E058
+
+The root cause is identified as event A03-E058 due to its maximum composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+
+- **A03-E008** (Composite=25): Logs show repetitive housekeeping and status chatter in incident operations, indicating ongoing maintenance activities that could affect system stability.
+- **A03-E029** (Composite=20): Local checks passed with only minor variance, but it references dependencies that only matter when read with the full timeline, suggesting underlying issues.
+- **A03-E030** (Composite=20): The update was processed as ordinary background activity, but it preserves details that become causal prerequisites for later interpretation, hinting at potential hidden issues.
+- **A03-E046** (Composite=20): Logs show repetitive housekeeping and status chatter in incident operations, while preserving details that become causal prerequisites for later interpretation"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,A03,incident,0.6,A03-E058,A03-E058,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.3941716728363427,1,1,"PIVOT_ID=A03-E058
+
+The root cause is identified as event A03-E058 due to its highest composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+- A03-E006: Service=billing | Routine telemetry | Severity=5 | Scope=7 | Composite=35
+- A03-E016: Service=ledger | Routine telemetry | Severity=4 | Scope=5 | Composite=20
+- A03-E020: Service=billing | Routine telemetry | Severity=5 | Scope=7 | Composite=35
+- A03-E024: Service=cache | Routine telemetry | Severity=5 | Scope=5 | Composite=25
+- A03-E028: Service=search | Routine telemetry | Severity=2 | Scope=4 | Composite=8
+- A03-E030: Service=ledger | Routine telemetry | Severity=4","PIVOT_ID=A03-E058
+
+The root cause is identified as event A03-E058 with a composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+
+- **A03-E008** (Composite=25): Logs show repetitive housekeeping and status chatter in incident operations, with commentary that seems low salience unless one tracks the global score rule. This event is a structural breadcrumb that sets up dependencies critical for understanding the full timeline.
+- **A03-E013** (Composite=25): The update was processed as ordinary background activity in incident operations, with commentary that seems low salience unless one tracks the global score rule. This event also serves as a structural breadcrumb.
+- **A03-E020** (Composite=35): Local checks passed with only minor variance in incident operations, and the note references dependencies that only matter when read with the full timeline. This event is another structural breadcrumb.
+- **A"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,A04,incident,0.4,A04-E063,A04-E063,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.3560513691481393,1,1,"PIVOT_ID=A04-E063
+
+The root cause is identified as event A04-E063 due to its highest composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+
+- **A04-E059** (Composite=2): Config baseline update for cache service, which might have introduced subtle changes affecting system stability.
+- **A04-E061** (Composite=2): Config baseline update for api-gateway, potentially altering how requests were handled or routed.
+- **A04-E065** (Composite=4): Regional failover rehearsal for ledger service, possibly stressing the system's resilience mechanisms.
+- **A04-E067** (Composite=8): Regional failover rehearsal for queue service, further testing the system's ability to handle disruptions.
+- **A04-E069** (Composite=4): Regional failover rehearsal for billing service, adding another layer of stress testing to the system.
+-","PIVOT_ID=A04-E063
+
+The root cause is identified as event A04-E063 with a composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+
+- [A04-E002] 2026-05-02 09:07 | Service=ledger | Event=Routine telemetry | Severity=3 | Scope=4 | Composite=12
+- [A04-E003] 2026-05-03 10:14 | Service=cache | Event=Routine telemetry | Severity=3 | Scope=2 | Composite=6
+- [A04-E004] 2026-05-04 11:21 | Service=queue | Event=Routine telemetry | Severity=3 | Scope=4 | Composite=12
+- [A04-E006] 2026"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,A04,incident,0.5,A04-E063,A04-E063,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.3567730389759193,1,1,"PIVOT_ID=A04-E063
+
+The root cause is identified as event A04-E063 due to its highest composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+
+- **A04-E059** (Composite=2): Config baseline update for cache service, which might have introduced subtle changes affecting system stability.
+- **A04-E061** (Composite=2): Config baseline update for api-gateway, potentially altering how requests were handled or routed.
+- **A04-E065** (Composite=4): Regional failover rehearsal for ledger service, possibly stressing the system's resilience mechanisms.
+- **A04-E067** (Composite=8): Regional failover rehearsal for queue service, further testing the system's ability to handle disruptions.
+- **A04-E069** (Composite=4): Regional failover rehearsal for billing service, adding another layer of stress testing to the system.
+-","PIVOT_ID=A04-E063
+
+The root cause is identified as event A04-E063 due to its highest composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+
+- **A04-E009** (Composite=25): Local checks passed with only minor variance, shifting downstream feasibility.
+- **A04-E011** (Composite=24): Local checks passed with only minor variance, changing which pivot is admissible.
+- **A04-E014** (Composite=16): Update processed as ordinary background activity, becoming causal prerequisites for later interpretation.
+- **A04-E028** (Composite=15): Nothing in isolation appeared strategically dominant, shifting downstream feasibility.
+- **A04-E029** (Composite=20): Update processed as ordinary background activity, shifting downstream feasibility.
+- **A04-E033** (Composite=20): Update processed as"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,A04,incident,0.6,A04-E063,A04-E063,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.3547558900352328,1,1,"PIVOT_ID=A04-E063
+
+The root cause is identified as event A04-E063 due to its highest composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+
+- **A04-E059** (Composite=2): Config baseline update for cache service, which might have introduced subtle changes affecting system stability.
+- **A04-E061** (Composite=2): Config baseline update for api-gateway, potentially altering how requests were handled or routed.
+- **A04-E065** (Composite=4): Regional failover rehearsal for ledger service, possibly stressing the system's resilience mechanisms.
+- **A04-E067** (Composite=8): Regional failover rehearsal for queue service, further testing the system's ability to handle disruptions.
+- **A04-E069** (Composite=4): Regional failover rehearsal for billing service, adding another layer of stress testing to the system.
+-","PIVOT_ID=A04-E063
+
+The root cause is identified as event A04-E063 due to its highest composite severity score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled this root cause include:
+
+- **A04-E003** (Composite=6): Minor variance in incident operations that preserves details crucial for later interpretation.
+- **A04-E004** (Composite=12): Minor variance in incident operations that shifts downstream feasibility.
+- **A04-E005** (Composite=12): Ordinary background activity that references dependencies important for the full timeline.
+- **A04-E007** (Composite=24): Details that are causal prerequisites for later interpretation.
+- **A04-E008** (Composite=20): Structural breadcrumb that preserves details for later interpretation.
+- **A04-E011** (Composite=24): Minor variance in incident operations that shifts downstream feasibility.
+- **A0"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,B01,investment,0.4,B01-E072,B01-E060,1,0,1,0.7299999999999999,0.7299999999999999,0.7299999999999999,0.26489499628085733,0,0,"PIVOT_ID=B01-E072
+
+The anchor position is Aurelia AI Semiconductor Basket at B01-E072 with a cumulative return of 20.02%. The market conditions preceding and enabling its success can be analyzed through several key events:
+
+1. **Initial Positive Performance (Weeks 2-7)**: Starting from Week 2, Aurelia AI Semiconductor Basket showed consistent positive weekly returns, contributing to a steady increase in cumulative returns. By Week 7, it had achieved a cumulative return of 1.52%, setting a positive trend.
+
+2. **Stabilization and Growth (Weeks 8-27)**: During this period, the position experienced both gains and losses but maintained a positive cumulative trajectory. Notably, the position saw significant growth in Weeks 27 and 32, where weekly returns were +1.09% and +0.50%, respectively, pushing the cumulative return closer to its peak.
+
+3. **Breakthrough Performance (Weeks 33-37)**:","PIVOT_ID=B01-E060
+
+The anchor position is Aurelia AI Semiconductor Basket at week 60, with a cumulative return of 20.02%. To analyze the market conditions preceding and enabling its success, we need to trace back through the timeline:
+
+1. **Initial Positive Momentum (Weeks 2-12):**
+   - The semiconductor basket showed steady growth from Week 2 to Week 12, with a few ups and downs. Notably, the position had a strong positive weekly return of +2.89% in Week 17, pushing the cumulative return to 3.63%, indicating initial positive momentum driven by favorable market conditions or specific sector performance.
+
+2. **Strengthening Performance (Weeks 13-39):**
+   - From Week 13 onwards, the semiconductor basket continued to perform well, with several weeks showing positive returns. For instance, in Week 29, the position saw a significant increase (+0.50%) bringing the cumulative return to 6"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,B01,investment,0.5,B01-E072,B01-E077,1,0,0,0.9999999999999999,0.7299999999999999,0.9999999999999999,0.30284559913792597,0,0,"PIVOT_ID=B01-E072
+
+The anchor position is Aurelia AI Semiconductor Basket at B01-E072 with a cumulative return of 20.02%. The market conditions preceding and enabling its success can be analyzed through several key events:
+
+1. **Initial Positive Performance (Weeks 2-7)**: Starting from Week 2, Aurelia AI Semiconductor Basket showed consistent positive weekly returns, contributing to a steady increase in cumulative returns. By Week 7, it had achieved a cumulative return of 1.52%, setting a positive trend.
+
+2. **Stabilization and Growth (Weeks 8-27)**: During this period, the position experienced both gains and losses but maintained a positive cumulative trajectory. Notably, the position saw significant growth in Weeks 27 and 32, where weekly returns were +1.09% and +0.50%, respectively, pushing the cumulative return closer to its peak.
+
+3. **Breakthrough Performance (Weeks 33-37)**:","PIVOT_ID=B01-E077
+
+The anchor position is Aurelia AI Semiconductor Basket (B01-E077), with a cumulative return of 20.02%. To analyze the market conditions that preceded and enabled its success, we need to trace back through the timeline focusing on key events and their cumulative returns:
+
+1. **Initial Positive Momentum**:
+   - **Week-02 (B01-E002)**: The position starts with a strong weekly return (+1.44%) and a cumulative return of 1.44%, indicating early positive momentum.
+   
+2. **Intermediate Growth Period**:
+   - **Week-17 (B01-E017)**: A significant weekly return (+2.89%) boosts the cumulative return to 3.63%, showing sustained growth.
+   - **Week-22 (B01-E022)**: Another notable weekly return (+1.34%) increases the cumulative return to 4.97%, further solidifying the position"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,B01,investment,0.6,B01-E072,B01-E060,1,0,0,0.8999999999999999,0.7299999999999999,0.8999999999999999,0.3027385985876061,0,0,"PIVOT_ID=B01-E072
+
+The anchor position is Aurelia AI Semiconductor Basket at B01-E072 with a cumulative return of 20.02%. The market conditions preceding and enabling its success can be analyzed through several key events:
+
+1. **Initial Positive Performance (Weeks 2-7)**: Starting from Week 2, Aurelia AI Semiconductor Basket showed consistent positive weekly returns, contributing to a steady increase in cumulative returns. By Week 7, it had achieved a cumulative return of 1.52%, setting a positive trend.
+
+2. **Stabilization and Growth (Weeks 8-27)**: During this period, the position experienced both gains and losses but maintained a positive cumulative trajectory. Notably, the position saw significant growth in Weeks 27 and 32, where weekly returns were +1.09% and +0.50%, respectively, pushing the cumulative return closer to its peak.
+
+3. **Breakthrough Performance (Weeks 33-37)**:","PIVOT_ID=B01-E060
+
+The anchor position is Aurelia AI Semiconductor Basket (B01-E060), which achieved a cumulative return of 20.02%. To analyze the market conditions preceding and enabling its success, we need to trace back through the timeline:
+
+1. **Initial Growth Phase**:
+   - **Week-07 (B01-E007)**: The semiconductor basket had a modest weekly return (+0.07%) but began to establish itself with a cumulative return of 1.52%, indicating early signs of potential growth.
+   - **Week-17 (B01-E017)**: The position showed significant growth (+2.89%), increasing the cumulative return to 3.63%. This suggests an underlying trend or favorable market conditions specific to the semiconductor sector.
+   - **Week-27 (B01-E027)**: The position continued to grow steadily (+1.09%), pushing the cumulative return to 6.06%. This"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,B02,investment,0.4,B02-E061,B02-E061,1,1,0,0.8899999999999999,0.7299999999999999,0.8899999999999999,0.31913149991102385,1,1,"PIVOT_ID=B02-E061
+
+The anchor position is Helios Grid Infrastructure with a cumulative return of 20.65%, occurring at Week-61. The market conditions preceding and enabling its success can be analyzed through several key points:
+
+1. **Cumulative Return Build-Up**: Prior to Week-61, Helios Grid Infrastructure had been steadily increasing its cumulative return, with significant gains starting from Week-53 where it began to outperform other positions. By Week-60, it had already reached a cumulative return of 9.37%.
+
+2. **RegimeScore Stability**: Throughout the period leading up to Week-61, Helios Grid Infrastructure maintained relatively stable RegimeScores (mostly 3 or 4), indicating consistent performance and reliability in the portfolio. This stability likely contributed to investor confidence and continued investment.
+
+3. **High-Impact Transition**: At Week-61, there was a noted ""high-impact transition"" in portfolio research, which could indicate a significant shift in market conditions favorable to grid infrastructure","PIVOT_ID=B02-E061
+
+The anchor position is identified as `B02-E061` with a cumulative return of 20.65%, indicating significant growth for Helios Grid Infrastructure. To analyze the market conditions preceding and enabling this position's success, we need to trace back through the timeline focusing on the cumulative returns and regime scores leading up to this point.
+
+1. **Cumulative Return Build-Up**: The cumulative return for Helios Grid Infrastructure steadily increased over time, with notable gains starting from week 13 (`B02-E013`) where the cumulative return was 2.26%. This suggests a consistent performance trend that built up over several weeks.
+
+2. **Regime Scores and Market Conditions**: The regime scores provide insights into the market conditions. For instance, `B02-E013` has a regime score of 3, indicating moderate market conditions that were favorable for the position. By `B02-E048`, the cumulative return had reached 7.01%, and"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,B02,investment,0.5,B02-E061,B02-E081,1,0,0,0.7299999999999999,0.7299999999999999,0.7299999999999999,0.3343906124003885,1,0,"PIVOT_ID=B02-E061
+
+The anchor position is Helios Grid Infrastructure with a cumulative return of 20.65%, occurring at Week-61. The market conditions preceding and enabling its success can be analyzed through several key points:
+
+1. **Cumulative Return Build-Up**: Prior to Week-61, Helios Grid Infrastructure had been steadily increasing its cumulative return, with significant gains starting from Week-53 where it began to outperform other positions. By Week-60, it had already reached a cumulative return of 9.37%.
+
+2. **RegimeScore Stability**: Throughout the period leading up to Week-61, Helios Grid Infrastructure maintained relatively stable RegimeScores (mostly 3 or 4), indicating consistent performance and reliability in the portfolio. This stability likely contributed to investor confidence and continued investment.
+
+3. **High-Impact Transition**: At Week-61, there was a noted ""high-impact transition"" in portfolio research, which could indicate a significant shift in market conditions favorable to grid infrastructure","PIVOT_ID=B02-E081
+
+The anchor position is NorthRiver Utilities Carry at Week-81 with a cumulative return of 10.19%. The market conditions preceding and enabling its success can be analyzed through several key events:
+
+1. **Initial Struggles and Recovery (Week-01 to Week-11)**: The position started with negative returns (-0.34% in Week-01 and -0.67% in Week-11), indicating initial volatility or unfavorable market conditions. However, it recovered significantly starting from Week-16 with a positive weekly return (+1.52%) and continued to grow steadily thereafter.
+
+2. **Steady Growth Phase (Week-16 to Week-47)**: From Week-16 onwards, the position showed consistent growth, with notable increases in cumulative return. For instance, Week-21 saw a significant jump to 4.17%, followed by further steady growth until Week-47 where it reached 5.70%.
+
+3."
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,B02,investment,0.6,B02-E061,B02-E061,1,1,0,0.8999999999999999,0.7299999999999999,0.8999999999999999,0.32269181255789847,1,1,"PIVOT_ID=B02-E061
+
+The anchor position is Helios Grid Infrastructure with a cumulative return of 20.65%, occurring at Week-61. The market conditions preceding and enabling its success can be analyzed through several key points:
+
+1. **Cumulative Return Build-Up**: Prior to Week-61, Helios Grid Infrastructure had been steadily increasing its cumulative return, with significant gains starting from Week-53 where it began to outperform other positions. By Week-60, it had already reached a cumulative return of 9.37%.
+
+2. **RegimeScore Stability**: Throughout the period leading up to Week-61, Helios Grid Infrastructure maintained relatively stable RegimeScores (mostly 3 or 4), indicating consistent performance and reliability in the portfolio. This stability likely contributed to investor confidence and continued investment.
+
+3. **High-Impact Transition**: At Week-61, there was a noted ""high-impact transition"" in portfolio research, which could indicate a significant shift in market conditions favorable to grid infrastructure","PIVOT_ID=B02-E061
+
+The anchor position is identified as `B02-E061` with a cumulative return of 20.65%, marking a significant milestone in the investment timeline. To analyze the market conditions preceding and enabling Helios Grid Infrastructure's success at this point:
+
+1. **Cumulative Performance Build-Up**: Prior to `B02-E061`, there were several instances where Helios Grid Infrastructure showed consistent positive performance, such as `B02-E003`, `B02-E013`, and `B02-E043`. These entries indicate a steady growth trajectory, suggesting underlying strength in the grid infrastructure sector or specific advantages held by Helios Grid Infrastructure.
+
+2. **Regime Score Dynamics**: The regime scores for Helios Grid Infrastructure entries fluctuated between 1 and 5, indicating varying levels of attention and possibly different market conditions affecting its performance. However, the cumulative return consistently grew, pointing towards a favorable long-term trend rather than short-term volatility.
+
+3. **"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,B03,investment,0.4,B03-E082,B03-E060,1,0,1,0.8899999999999999,0.9999999999999999,0.8899999999999999,0.3383593044613632,0,1,"PIVOT_ID=B03-E082
+
+The anchor position is Aurelia AI Semiconductor Basket (B03-E082), with a cumulative return of 27.45%. To analyze the market conditions that preceded and enabled its success, we need to trace back through the timeline focusing on the cumulative returns and regime scores:
+
+1. **Initial Growth Phase**:
+   - **Week-02 (B03-E002)**: The position starts with a strong weekly return (+2.01%) and a high cumulative return (2.01%). This indicates early positive momentum.
+   - **Week-07 (B03-E007)**: The position continues to perform well, adding +0.38% to its cumulative return, reaching 2.39%. This suggests sustained growth.
+   - **Week-12 (B03-E012)**: Despite a lower weekly return (+1.00%), the cumulative return reaches 3.38%, indicating consistent performance.
+   - **","PIVOT_ID=B03-E060
+
+The anchor position is identified as ""Helios Grid Infrastructure"" with a cumulative return of 28.25%, recorded at week-60 (B03-E060). To analyze the market conditions preceding and enabling its success, we need to trace back through the timeline focusing on this position and its interactions with other positions.
+
+1. **Week-06 (B03-E006)**: The first mention of NorthRiver Utilities Carry shows a cumulative return of 1.61%. At this point, Helios Grid Infrastructure has not been mentioned yet, indicating that NorthRiver Utilities Carry was performing well early on, potentially setting up a favorable environment for grid infrastructure investments due to positive spillover effects in related sectors.
+
+2. **Week-13 (B03-E013)**: Helios Grid Infrastructure starts showing a cumulative return of 3.50%, marking its initial significant performance. This suggests that the market conditions were becoming more favorable for grid infrastructure investments around this time"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,B03,investment,0.5,B03-E082,B03-E081,1,0,1,0.8999999999999999,0.9999999999999999,0.8999999999999999,0.3176518666925201,0,0,"PIVOT_ID=B03-E082
+
+The anchor position is Aurelia AI Semiconductor Basket (B03-E082), with a cumulative return of 27.45%. To analyze the market conditions that preceded and enabled its success, we need to trace back through the timeline focusing on the cumulative returns and regime scores:
+
+1. **Initial Growth Phase**:
+   - **Week-02 (B03-E002)**: The position starts with a strong weekly return (+2.01%) and a high cumulative return (2.01%). This indicates early positive momentum.
+   - **Week-07 (B03-E007)**: The position continues to perform well, adding +0.38% to its cumulative return, reaching 2.39%. This suggests sustained growth.
+   - **Week-12 (B03-E012)**: Despite a lower weekly return (+1.00%), the cumulative return reaches 3.38%, indicating consistent performance.
+   - **","PIVOT_ID=B03-E081
+
+The anchor position is NorthRiver Utilities Carry at week 81, with a cumulative return of 13.97%. To analyze the market conditions preceding and enabling its success, we need to trace back through the timeline focusing on the cumulative returns and regime scores of NorthRiver Utilities Carry:
+
+1. **Week 45 (B03-E045)**: Cinder Logistics Credit had a significant increase in cumulative return, reaching 4.45%, indicating a positive trend in credit markets that could have indirectly supported stable or growing utility stocks due to improved financial conditions.
+
+2. **Week 46 (B03-E046)**: NorthRiver Utilities Carry saw a modest increase in cumulative return to 7.13%, suggesting steady performance and possibly benefiting from the broader market stability observed in other positions like Cinder Logistics Credit.
+
+3. **Week 60 (B03-E060)**: Helios Grid Infrastructure experienced a substantial jump in cumulative return to 28.25%,"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,B03,investment,0.6,B03-E082,B03-E060,1,0,0,0.8899999999999999,0.9999999999999999,0.8899999999999999,0.32684606593341714,0,1,"PIVOT_ID=B03-E082
+
+The anchor position is Aurelia AI Semiconductor Basket (B03-E082), with a cumulative return of 27.45%. To analyze the market conditions that preceded and enabled its success, we need to trace back through the timeline focusing on the cumulative returns and regime scores:
+
+1. **Initial Growth Phase**:
+   - **Week-02 (B03-E002)**: The position starts with a strong weekly return (+2.01%) and a high cumulative return (2.01%). This indicates early positive momentum.
+   - **Week-07 (B03-E007)**: The position continues to perform well, adding +0.38% to its cumulative return, reaching 2.39%. This suggests sustained growth.
+   - **Week-12 (B03-E012)**: Despite a lower weekly return (+1.00%), the cumulative return reaches 3.38%, indicating consistent performance.
+   - **","PIVOT_ID=B03-E060
+
+The anchor position is Helios Grid Infrastructure, with a cumulative return of 28.25% at week 60 (B03-E060). The market conditions preceding and enabling its success can be analyzed through several key events:
+
+1. **Initial Growth Phase**: From Week 03 (B03-E003) to Week 43 (B03-E043), Helios Grid Infrastructure showed consistent positive weekly returns, contributing to a steady increase in cumulative returns. Notably, the cumulative return reached 13.67% by Week 43 (B03-E043).
+
+2. **Critical Threshold Crossing**: At Week 60 (B03-E060), the system crossed a significant threshold where all prior assumptions about the market or the position's performance were inverted. This event marked a pivotal shift, indicating a new phase of growth for Helios Grid Infrastructure. The cumulative return jumped from 13.67% to"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,B04,investment,0.4,B04-E069,B04-E059,1,0,1,0.8899999999999999,0.7299999999999999,0.8899999999999999,0.3420377102250246,0,1,"PIVOT_ID=B04-E069
+
+The anchor position is identified as ""Aurelia AI Semiconductor Basket"" at week 69 (B04-E069), where the cumulative return reached 19.44%. The analysis of preceding market conditions and enabling factors involves tracing back through the timeline to identify key events and trends that contributed to its success:
+
+1. **Initial Performance and Stability (Weeks 1-20)**: During the initial weeks, the position showed modest returns and stability, with cumulative returns ranging from 0.30% to 2.33%. This period established a baseline performance without significant volatility, indicating a stable underlying market condition or investment strategy.
+
+2. **Incremental Growth Phase (Weeks 21-40)**: From week 21 onwards, there was a noticeable trend of incremental growth, with occasional dips but overall positive cumulative returns. Notably, weeks 26, 30, and 34 saw slight increases in cumulative returns, suggesting a consistent upward trajectory despite minor","PIVOT_ID=B04-E059
+
+The anchor position is identified as Helios Grid Infrastructure (B04-E059), with a cumulative return of 20.24%. To analyze the market conditions preceding and enabling its success, we need to trace back through the timeline focusing on key events and their cumulative returns:
+
+1. **Week-59 (B04-E059)**: The cumulative return reaches 20.24%, marking the peak performance of the position. The note mentions ""cross-system coupling became explicit and destabilizing in portfolio research,"" indicating a significant shift or event that likely provided an opportunity for the position to perform well.
+
+2. **Week-57 (B04-E057)**: The cumulative return for Aurelia AI Semiconductor Basket increases to 7.04%, showing a positive trend that might have influenced overall market sentiment positively towards technology-related investments, including grid infrastructure.
+
+3. **Week-55 (B04-E055)**: Cinder Logistics Credit sees a slight increase"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,B04,investment,0.5,B04-E069,B04-E069,1,1,1,0.8999999999999999,0.7299999999999999,0.8999999999999999,0.31204552302767485,0,0,"PIVOT_ID=B04-E069
+
+The anchor position is identified as ""Aurelia AI Semiconductor Basket"" at week 69 (B04-E069), where the cumulative return reached 19.44%. The analysis of preceding market conditions and enabling factors involves tracing back through the timeline to identify key events and trends that contributed to its success:
+
+1. **Initial Performance and Stability (Weeks 1-20)**: During the initial weeks, the position showed modest returns and stability, with cumulative returns ranging from 0.30% to 2.33%. This period established a baseline performance without significant volatility, indicating a stable underlying market condition or investment strategy.
+
+2. **Incremental Growth Phase (Weeks 21-40)**: From week 21 onwards, there was a noticeable trend of incremental growth, with occasional dips but overall positive cumulative returns. Notably, weeks 26, 30, and 34 saw slight increases in cumulative returns, suggesting a consistent upward trajectory despite minor","PIVOT_ID=B04-E069
+
+The anchor position is identified as Aurelia AI Semiconductor Basket (Week-69), with a cumulative return of 19.44%. To analyze the market conditions preceding and enabling its success, we need to trace back through the timeline focusing on key events and their cumulative returns:
+
+1. **Initial Positive Momentum**:
+   - **B04-E002**: The initial entry for Aurelia AI Semiconductor Basket shows a modest start with a weekly return of +0.30%, setting a baseline performance.
+   
+2. **Intermediate Growth Periods**:
+   - **B04-E017**: By Week-17, the cumulative return had grown to 2.42%, indicating steady growth despite a lower weekly return of +0.09%.
+   - **B04-E027**: Although not explicitly listed, the trend suggests consistent performance leading up to Week-28 where the cumulative return was 4.90%.
+   - **B04-E0"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,B04,investment,0.6,B04-E069,B04-E059,1,0,1,0.8999999999999999,0.7299999999999999,0.8999999999999999,0.3609013912043213,0,1,"PIVOT_ID=B04-E069
+
+The anchor position is identified as ""Aurelia AI Semiconductor Basket"" at week 69 (B04-E069), where the cumulative return reached 19.44%. The analysis of preceding market conditions and enabling factors involves tracing back through the timeline to identify key events and trends that contributed to its success:
+
+1. **Initial Performance and Stability (Weeks 1-20)**: During the initial weeks, the position showed modest returns and stability, with cumulative returns ranging from 0.30% to 2.33%. This period established a baseline performance without significant volatility, indicating a stable underlying market condition or investment strategy.
+
+2. **Incremental Growth Phase (Weeks 21-40)**: From week 21 onwards, there was a noticeable trend of incremental growth, with occasional dips but overall positive cumulative returns. Notably, weeks 26, 30, and 34 saw slight increases in cumulative returns, suggesting a consistent upward trajectory despite minor","PIVOT_ID=B04-E059
+
+The anchor position is Helios Grid Infrastructure, with a cumulative return of 20.24% at week 59 (B04-E059). To analyze the market conditions preceding and enabling its success, we need to trace back through the timeline:
+
+1. **Week 43 (B04-E043)**: The cumulative return was 5.59%, indicating steady growth. The note mentions that the update was processed as ordinary background activity, suggesting consistent performance without significant external factors.
+
+2. **Week 45 (B04-E045)**: The cumulative return increased slightly to 5.37%. The note references dependencies that only matter when read with the full timeline, hinting at underlying systemic interdependencies that were becoming more apparent.
+
+3. **Week 47 (B04-E047)**: The cumulative return dropped slightly to 5.05%, but the note again references dependencies that only matter when read with the full timeline,"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,C01,narrative,0.4,C01-E052,C01-E052,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.17021883296512108,1,1,"PIVOT_ID=C01-E052
+
+The action with the highest consequence score is ""released the sealed ledger proving council fraud"" performed by Sana at the canal archive (C01-E052), with a ConsequenceScore of 24. This pivotal moment was enabled by several earlier events:
+
+- **C01-E014**: Jonas exchanged routine updates at the assembly atrium with a ConsequenceScore of 10. Although seemingly mundane, this scene likely set up Jonas's position or knowledge necessary for the subsequent release of the ledger.
+- **C01-E024**: Cato exchanged routine updates at the assembly atrium with a ConsequenceScore of 9. This could have been a preparatory step for the logistics or security arrangements needed for the release of sensitive information.
+- **C01-E046**: Sana exchanged routine updates at the market ward with a ConsequenceScore of 9. This might have been a critical setup for Sana's access or readiness to handle the sealed ledger.
+- **C","PIVOT_ID=C01-E052
+
+The action with the highest consequence score is ""released the sealed ledger proving council fraud"" performed by Sana at the canal archive (Scene-52), with a ConsequenceScore of 24. Earlier events that made this pivotal moment possible include:
+
+- [C01-E014]: Jonas exchanged routine updates at the assembly atrium with a ConsequenceScore of 10. This scene likely set up the groundwork for Jonas's involvement and trust or suspicion towards the council, which could have influenced Sana's actions.
+- [C01-E020]: Jonas exchanged routine updates at the river embankment with a ConsequenceScore of 8. This further established Jonas's role and possibly his interactions with Sana, contributing to the buildup of information or trust necessary for Sana to act.
+- [C01-E035]: Iris exchanged routine updates at the river embankment with a ConsequenceScore of 11. This might indicate a significant shift in Iris's stance or awareness"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,C01,narrative,0.5,C01-E052,C01-E052,1,1,0,0.9899999999999999,0.9999999999999999,0.9899999999999999,0.2175158318907051,1,1,"PIVOT_ID=C01-E052
+
+The action with the highest consequence score is ""released the sealed ledger proving council fraud"" performed by Sana at the canal archive (C01-E052), with a ConsequenceScore of 24. This pivotal moment was enabled by several earlier events:
+
+- **C01-E014**: Jonas exchanged routine updates at the assembly atrium with a ConsequenceScore of 10. Although seemingly mundane, this scene likely set up Jonas's position or knowledge necessary for the subsequent release of the ledger.
+- **C01-E024**: Cato exchanged routine updates at the assembly atrium with a ConsequenceScore of 9. This could have been a preparatory step for the logistics or security arrangements needed for the release of sensitive information.
+- **C01-E046**: Sana exchanged routine updates at the market ward with a ConsequenceScore of 9. This might have been a critical setup for Sana's access or readiness to handle the sealed ledger.
+- **C","PIVOT_ID=C01-E052
+
+The turning point of the story is identified as Scene-52 where Sana released the sealed ledger proving council fraud, with a ConsequenceScore of 24. This event stands out as the action with the highest consequence score, indicating its significant impact on the narrative's progression.
+
+Several earlier events contributed to making this pivotal moment possible:
+
+1. **Scene-10 (C01-E010)**: Sana exchanged routine updates at the river embankment with a ConsequenceScore of 7. Although seemingly mundane, this scene likely set up Sana's position or access to critical information that would later enable her to release the ledger.
+
+2. **Scene-28 (C01-E028)**: Sana exchanged routine updates at the north gate with a ConsequenceScore of 8. This scene could have further established Sana's trustworthiness or her strategic positioning within the community, crucial for her actions later.
+
+3. **Scene-40 (C01-E04"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,C01,narrative,0.6,C01-E052,C01-E052,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.20627682671295267,1,1,"PIVOT_ID=C01-E052
+
+The action with the highest consequence score is ""released the sealed ledger proving council fraud"" performed by Sana at the canal archive (C01-E052), with a ConsequenceScore of 24. This pivotal moment was enabled by several earlier events:
+
+- **C01-E014**: Jonas exchanged routine updates at the assembly atrium with a ConsequenceScore of 10. Although seemingly mundane, this scene likely set up Jonas's position or knowledge necessary for the subsequent release of the ledger.
+- **C01-E024**: Cato exchanged routine updates at the assembly atrium with a ConsequenceScore of 9. This could have been a preparatory step for the logistics or security arrangements needed for the release of sensitive information.
+- **C01-E046**: Sana exchanged routine updates at the market ward with a ConsequenceScore of 9. This might have been a critical setup for Sana's access or readiness to handle the sealed ledger.
+- **C","PIVOT_ID=C01-E052
+
+The turning point of the story is identified as Scene-52 where Sana released the sealed ledger proving council fraud, with a ConsequenceScore of 24. This event stands out as the most impactful action within the narrative, significantly altering the course of events and character dynamics.
+
+Earlier events that made this pivotal moment possible include:
+
+- **Scene-14 (C01-E014)**: Jonas exchanged routine updates at the assembly atrium with a ConsequenceScore of 10. Although seemingly mundane, this scene likely set up the context or provided necessary information that enabled Sana's subsequent actions.
+  
+- **Scene-35 (C01-E035)**: Iris exchanged routine updates at the river embankment with a ConsequenceScore of 11. This scene might have been crucial in establishing the groundwork for Iris's later challenges to the council, indirectly supporting Sana's efforts.
+  
+- **Scene-50 (C01-E050)**: Jonas exchanged routine"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,C02,narrative,0.4,C02-E054,C02-E054,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.2435495962372647,1,1,"PIVOT_ID=C02-E054
+The action with the highest consequence score is ""released the sealed ledger proving council fraud"" performed by Cato at the assembly atrium (Scene 54), with a ConsequenceScore of 24. Earlier events that made this pivotal moment possible include several routine exchanges of updates that gradually built up dependencies and shifted downstream feasibility. Notably, these include:
+
+- Mira's exchange of routine updates at the market ward (C02-E011) with a ConsequenceScore of 7, which preserved details that became causal prerequisites for later interpretation.
+- Jonas' exchange of routine updates at the canal archive (C02-E002) with a ConsequenceScore of 9, processed as ordinary background activity but tracking the global score rule reveals its importance.
+- Elio's exchange of routine updates at the north gate (C02-E003) with a ConsequenceScore of 7, which also preserved details that became causal prerequisites for later interpretation.
+- Sana's exchange of routine updates at","PIVOT_ID=C02-E054
+The action with the highest consequence score is ""released the sealed ledger proving council fraud"" performed by Cato at the assembly atrium (Scene-54), with a ConsequenceScore of 24. Earlier events that made this pivotal moment possible include several routine exchanges of updates that gradually built up dependencies and shifted downstream feasibility. Notably, these include:
+
+- [C02-E006] where Cato exchanged routine updates with a ConsequenceScore of 10, indicating significant underlying activities that were not immediately apparent.
+- [C02-E034] where Sana exchanged routine updates with a ConsequenceScore of 11, suggesting she had gathered or was involved in critical information.
+- [C02-E049] where Mira exchanged routine updates with a ConsequenceScore of 11, further reinforcing the idea that there were accumulating factors leading up to the release of the ledger.
+- [C02-E072] where Cato again exchanged routine updates with a"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,C02,narrative,0.5,C02-E054,C02-E054,1,1,0,0.8299999999999998,0.9999999999999999,0.8299999999999998,0.30205485684599054,1,1,"PIVOT_ID=C02-E054
+The action with the highest consequence score is ""released the sealed ledger proving council fraud"" performed by Cato at the assembly atrium (Scene 54), with a ConsequenceScore of 24. Earlier events that made this pivotal moment possible include several routine exchanges of updates that gradually built up dependencies and shifted downstream feasibility. Notably, these include:
+
+- Mira's exchange of routine updates at the market ward (C02-E011) with a ConsequenceScore of 7, which preserved details that became causal prerequisites for later interpretation.
+- Jonas' exchange of routine updates at the canal archive (C02-E002) with a ConsequenceScore of 9, processed as ordinary background activity but tracking the global score rule reveals its importance.
+- Elio's exchange of routine updates at the north gate (C02-E003) with a ConsequenceScore of 7, which also preserved details that became causal prerequisites for later interpretation.
+- Sana's exchange of routine updates at","PIVOT_ID=C02-E054
+
+The turning point of the story is identified as Scene-54 where Cato released the sealed ledger proving council fraud, with a ConsequenceScore of 24. Earlier events that made this pivotal moment possible include:
+
+- Scene-21 (Elio's routine update at market ward) and Scene-40 (Sana's routine update at river embankment), both with ConsequenceScores of 9, likely set up the groundwork for critical information gathering or verification processes.
+- Scene-41 (Iris' routine update at market ward) with a ConsequenceScore of 11, suggests significant procedural steps were taken that could have led to the discovery or confirmation of the fraudulent activities.
+- Scene-52 (Sana's routine update at canal archive) with a ConsequenceScore of 5, might indicate further investigative work or coordination among characters that enabled the final revelation.
+- The cumulative effect of these routine updates, each contributing procedural details and dependencies, built up the necessary conditions for Cato to release"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,C02,narrative,0.6,C02-E054,C02-E054,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.3096600534598922,1,1,"PIVOT_ID=C02-E054
+The action with the highest consequence score is ""released the sealed ledger proving council fraud"" performed by Cato at the assembly atrium (Scene 54), with a ConsequenceScore of 24. Earlier events that made this pivotal moment possible include several routine exchanges of updates that gradually built up dependencies and shifted downstream feasibility. Notably, these include:
+
+- Mira's exchange of routine updates at the market ward (C02-E011) with a ConsequenceScore of 7, which preserved details that became causal prerequisites for later interpretation.
+- Jonas' exchange of routine updates at the canal archive (C02-E002) with a ConsequenceScore of 9, processed as ordinary background activity but tracking the global score rule reveals its importance.
+- Elio's exchange of routine updates at the north gate (C02-E003) with a ConsequenceScore of 7, which also preserved details that became causal prerequisites for later interpretation.
+- Sana's exchange of routine updates at","PIVOT_ID=C02-E054
+The turning point in the story is Scene-54 where Cato released the sealed ledger proving council fraud at the assembly atrium, with a ConsequenceScore of 24. This pivotal moment was enabled by several earlier events:
+
+- **Scene-21 (C02-E021)**: Elio's action at the market ward had a ConsequenceScore of 9, indicating significant underlying changes in the narrative that set up the conditions for future actions. This scene likely involved some form of strategic planning or information gathering that was crucial for subsequent events.
+  
+- **Scene-31 (C02-E031)**: Mira's action at the market ward with a ConsequenceScore of 10 suggests a critical shift in the narrative that prepared the ground for the release of the ledger. This could have been related to securing evidence or aligning key players.
+  
+- **Scene-43 (C02-E043)**: Mira's action at the north gate with a"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,C03,narrative,0.4,C03-E060,C03-E060,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.25406898500168484,1,1,"PIVOT_ID=C03-E060
+The action with the highest consequence score is ""released the sealed ledger proving council fraud"" performed by Cato at the river embankment (C03-E060), with a ConsequenceScore of 24. Earlier events that made this pivotal moment possible include several routine exchanges of updates that gradually set up the necessary conditions and dependencies. Notably, these include:
+
+- C03-E006 where Cato exchanged routine updates in the market ward with a ConsequenceScore of 10, laying groundwork for future actions.
+- C03-E011 where Iris exchanged routine updates in the market ward with a ConsequenceScore of 11, indicating significant underlying changes.
+- C03-E014 where Jonas exchanged routine updates in the assembly atrium with a ConsequenceScore of 11, suggesting critical preparatory steps.
+- C03-E028 where Sana exchanged routine updates in the north gate with a ConsequenceScore of 11, further establishing the context","PIVOT_ID=C03-E060
+
+The action with the highest consequence score is ""released the sealed ledger proving council fraud"" performed by Elio at the river embankment (Scene-60), with a ConsequenceScore of 24. This pivotal moment was enabled by several earlier events:
+
+- **C03-E034**: Sana's exchange of routine updates at the assembly atrium (ConsequenceScore=11) laid foundational groundwork, providing necessary information or setting up dependencies that were crucial for the subsequent release of the ledger.
+- **C03-E011**: Iris's exchange of routine updates at the market ward (ConsequenceScore=11) also contributed to the setup, possibly involving critical communications or data exchanges that facilitated the conditions for releasing the ledger.
+- **C03-E038**: Jonas's exchange of routine updates at the north gate (ConsequenceScore=11) further established the context and dependencies required for the pivotal action.
+- **C03-E043**: Mira's"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,C03,narrative,0.5,C03-E060,C03-E068,1,0,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.276697845582749,1,0,"PIVOT_ID=C03-E060
+The action with the highest consequence score is ""released the sealed ledger proving council fraud"" performed by Cato at the river embankment (C03-E060), with a ConsequenceScore of 24. Earlier events that made this pivotal moment possible include several routine exchanges of updates that gradually set up the necessary conditions and dependencies. Notably, these include:
+
+- C03-E006 where Cato exchanged routine updates in the market ward with a ConsequenceScore of 10, laying groundwork for future actions.
+- C03-E011 where Iris exchanged routine updates in the market ward with a ConsequenceScore of 11, indicating significant underlying changes.
+- C03-E014 where Jonas exchanged routine updates in the assembly atrium with a ConsequenceScore of 11, suggesting critical preparatory steps.
+- C03-E028 where Sana exchanged routine updates in the north gate with a ConsequenceScore of 11, further establishing the context","PIVOT_ID=C03-E068
+The turning point in the story is Scene-68 where Jonas challenged the council in a public square, with a ConsequenceScore of 19. This pivotal moment was enabled by several earlier events:
+
+- **C03-E028**: Sana's exchange of routine updates at the north gate (ConsequenceScore=11) laid groundwork for the subsequent actions that led to the challenge.
+- **C03-E048**: Cato's exchange of routine updates at the north gate (ConsequenceScore=8) provided additional context and dependencies that were crucial for understanding the dynamics leading up to the challenge.
+- **C03-E060**: Cato released the sealed ledger proving council fraud at the river embankment (ConsequenceScore=24), which directly precipitated the conditions under which Jonas felt compelled to act publicly against the council.
+- **C03-E062**: Jonas staged a visible confrontation at the canal archive (ConsequenceScore=3), indicating a shift"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,C03,narrative,0.6,C03-E060,C03-E060,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.25683434008237793,1,1,"PIVOT_ID=C03-E060
+The action with the highest consequence score is ""released the sealed ledger proving council fraud"" performed by Cato at the river embankment (C03-E060), with a ConsequenceScore of 24. Earlier events that made this pivotal moment possible include several routine exchanges of updates that gradually set up the necessary conditions and dependencies. Notably, these include:
+
+- C03-E006 where Cato exchanged routine updates in the market ward with a ConsequenceScore of 10, laying groundwork for future actions.
+- C03-E011 where Iris exchanged routine updates in the market ward with a ConsequenceScore of 11, indicating significant underlying changes.
+- C03-E014 where Jonas exchanged routine updates in the assembly atrium with a ConsequenceScore of 11, suggesting critical preparatory steps.
+- C03-E028 where Sana exchanged routine updates in the north gate with a ConsequenceScore of 11, further establishing the context","PIVOT_ID=C03-E060
+The turning point in the story is Scene-60 where Cato released the sealed ledger proving council fraud at the river embankment, with a ConsequenceScore of 24. Earlier events that made this pivotal moment possible include:
+
+- **C03-E007 (Mira's exchange of routine updates at canal archive)**: With a ConsequenceScore of 11, this scene likely set up the groundwork for Mira to uncover or obtain information about the council's fraudulent activities.
+- **C03-E014 (Jonas' exchange of routine updates at assembly atrium)**: Jonas' high ConsequenceScore of 11 suggests he might have been involved in gathering evidence or coordinating with others who were investigating the council.
+- **C03-E043 (Mira's exchange of routine updates at north gate)**: Another high ConsequenceScore of 10 indicates further progress in Mira's investigation or coordination with other characters.
+- **C03-E064"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,C04,narrative,0.4,C04-E052,C04-E052,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.28500764977017257,1,1,"PIVOT_ID=C04-E052
+
+The action with the highest consequence score is ""released the sealed ledger proving council fraud"" performed by Sana at the canal archive (Scene-52), with a ConsequenceScore of 24. This action fundamentally alters the narrative trajectory due to its high impact on the overall storyline, despite being described as a structural breadcrumb.
+
+Earlier events that made this pivotal moment possible include several routine exchanges of updates that gradually built up dependencies and contextual information necessary for understanding the significance of releasing the ledger. Notably, scenes such as [C04-E006], [C04-E008], [C04-E014], [C04-E016], [C04-E026], [C04-E031], and [C04-E046] all contributed to establishing the groundwork for this critical revelation. These scenes, while individually appearing mundane, collectively provided the necessary background and procedural details that enabled the release of the ledger to have such a profound effect","PIVOT_ID=C04-E052
+
+The action with the highest consequence score is ""released the sealed ledger proving council fraud"" performed by Sana at the canal archive (Scene-52), with a ConsequenceScore of 24. This action represents a pivotal moment because it fundamentally alters the dynamics of the story, crossing a threshold where all prior assumptions and relationships between characters are inverted.
+
+Earlier events that made this turning point possible include several routine update exchanges that, while seemingly mundane, laid the groundwork for this revelation. Specifically:
+
+- **C04-E014** (Jonas exchanging routine updates at assembly atrium) had a ConsequenceScore of 11, indicating that it preserved critical details necessary for later interpretation.
+- **C04-E026** (Jonas exchanging routine updates at market ward) also had a ConsequenceScore of 10, suggesting it provided essential context or information.
+- **C04-E046** (Sana exchanging routine updates at market ward) had a ConsequenceScore of 1"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,C04,narrative,0.5,C04-E052,C04-E052,1,1,0,0.9899999999999999,0.9999999999999999,0.9899999999999999,0.27984618780285475,1,1,"PIVOT_ID=C04-E052
+
+The action with the highest consequence score is ""released the sealed ledger proving council fraud"" performed by Sana at the canal archive (Scene-52), with a ConsequenceScore of 24. This action fundamentally alters the narrative trajectory due to its high impact on the overall storyline, despite being described as a structural breadcrumb.
+
+Earlier events that made this pivotal moment possible include several routine exchanges of updates that gradually built up dependencies and contextual information necessary for understanding the significance of releasing the ledger. Notably, scenes such as [C04-E006], [C04-E008], [C04-E014], [C04-E016], [C04-E026], [C04-E031], and [C04-E046] all contributed to establishing the groundwork for this critical revelation. These scenes, while individually appearing mundane, collectively provided the necessary background and procedural details that enabled the release of the ledger to have such a profound effect","PIVOT_ID=C04-E052
+
+The turning point of the story is identified as Scene 52, where Sana released the sealed ledger proving council fraud, with a ConsequenceScore of 24. This action is pivotal because it marks a significant shift in the narrative, crossing a threshold where all prior assumptions and dynamics among characters are fundamentally altered.
+
+Earlier events that made this turning point possible include several routine exchanges of updates that, while seemingly mundane, laid the groundwork for the eventual revelation. For instance:
+
+- **Scene 14 (C04-E014)**: Jonas exchanged routine updates at the assembly atrium with a ConsequenceScore of 11. This scene preserved details that became causal prerequisites for later interpretation, setting up the context for deeper investigations or revelations.
+  
+- **Scene 21 (C04-E021)**: Elio exchanged routine updates at the market ward with a ConsequenceScore of 9. This scene also included procedural details that were crucial for understanding the broader narrative structure and dependencies.
+  
+- **"
+Qwen-2.5-14B-Instruct,Qwen/Qwen2.5-14B-Instruct,C04,narrative,0.6,C04-E052,C04-E052,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.2660525724229834,1,1,"PIVOT_ID=C04-E052
+
+The action with the highest consequence score is ""released the sealed ledger proving council fraud"" performed by Sana at the canal archive (Scene-52), with a ConsequenceScore of 24. This action fundamentally alters the narrative trajectory due to its high impact on the overall storyline, despite being described as a structural breadcrumb.
+
+Earlier events that made this pivotal moment possible include several routine exchanges of updates that gradually built up dependencies and contextual information necessary for understanding the significance of releasing the ledger. Notably, scenes such as [C04-E006], [C04-E008], [C04-E014], [C04-E016], [C04-E026], [C04-E031], and [C04-E046] all contributed to establishing the groundwork for this critical revelation. These scenes, while individually appearing mundane, collectively provided the necessary background and procedural details that enabled the release of the ledger to have such a profound effect","PIVOT_ID=C04-E052
+
+The turning point of the story is identified as Scene-52, where Sana released the sealed ledger proving council fraud, with a ConsequenceScore of 24. This action has the highest consequence score among all the scenes listed, indicating a significant shift in the narrative dynamics.
+
+Earlier events that made this turning point possible include several routine update exchanges that, while seemingly mundane, laid the groundwork for the pivotal moment. For instance:
+
+- **C04-E008** (Scene-08) and **C04-E014** (Scene-14), both involving Jonas exchanging routine updates at different locations, have high ConsequenceScores (10 and 11 respectively). These scenes likely involved discussions or information exchanges that were critical for setting up the conditions necessary for exposing the fraud.
+  
+- **C04-E021** (Scene-21) and **C04-E031** (Scene-31), both involving Elio and Mira exchanging routine updates"

@@ -1,0 +1,633 @@
+model_name,model_id,task_id,category,compression_level,full_pivot,pivot_id_extracted,pivot_extracted_flag,pivot_preserved,fixed_pivot_feasible,raw_validity,raw_validity_full,raw_validity_compressed,semantic_regret,full_pivot_matches_ground_truth,pivot_matches_ground_truth,full_answer,compressed_answer
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,A01,incident,0.4,A01-E065,A01-E065,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.23911763032564792,1,1,"PIVOT_ID=A01-E065
+
+Prerequisite events that enabled it:
+- A01-E057 (Control-plane adjustment)
+- A01-E059 (Baseline calibration)
+- A01-E060 (Routine telemetry)
+- A01-E061 (Maintenance annotation)
+- A01-E063 (Baseline calibration)
+- A01-E064 (Routine telemetry)
+- A01-E066 (Routine telemetry)
+- A01-E068 (Routine telemetry)
+- A01-E070 (Regional failover rehearsal)
+- A01-E074 (Regional failover rehearsal)
+- A01-E079 (Routine telemetry)
+- A01-E081 (R","PIVOT_ID=A01-E065
+
+Prerequisite events that enabled it:
+- A01-E029
+- A01-E037
+- A01-E038
+- A01-E042
+- A01-E044
+- A01-E045
+- A01-E046
+- A01-E047
+- A01-E050
+- A01-E053
+- A01-E054
+- A01-E055
+- A01-E056
+- A01-E060
+- A01-E062
+- A01-E065 (root cause)
+- A01-E066
+- A01-E067
+- A01-E069"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,A01,incident,0.5,A01-E065,A01-E065,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.24236631413783605,1,1,"PIVOT_ID=A01-E065
+
+Prerequisite events that enabled it:
+- A01-E057 (Control-plane adjustment)
+- A01-E059 (Baseline calibration)
+- A01-E060 (Routine telemetry)
+- A01-E061 (Maintenance annotation)
+- A01-E063 (Baseline calibration)
+- A01-E064 (Routine telemetry)
+- A01-E066 (Routine telemetry)
+- A01-E068 (Routine telemetry)
+- A01-E070 (Regional failover rehearsal)
+- A01-E074 (Regional failover rehearsal)
+- A01-E079 (Routine telemetry)
+- A01-E081 (R","PIVOT_ID=A01-E065
+
+Prerequisite events that enabled it:
+- A01-E008
+- A01-E009
+- A01-E010
+- A01-E013
+- A01-E014
+- A01-E016
+- A01-E017
+- A01-E018
+- A01-E021
+- A01-E025
+- A01-E028
+- A01-E029
+- A01-E030
+- A01-E033
+- A01-E039
+- A01-E040
+- A01-E041
+- A01-E045
+- A01-E046
+- A01"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,A01,incident,0.6,A01-E065,A01-E065,1,1,0,0.85,0.9999999999999999,0.85,0.2419388447279769,1,1,"PIVOT_ID=A01-E065
+
+Prerequisite events that enabled it:
+- A01-E057 (Control-plane adjustment)
+- A01-E059 (Baseline calibration)
+- A01-E060 (Routine telemetry)
+- A01-E061 (Maintenance annotation)
+- A01-E063 (Baseline calibration)
+- A01-E064 (Routine telemetry)
+- A01-E066 (Routine telemetry)
+- A01-E068 (Routine telemetry)
+- A01-E070 (Regional failover rehearsal)
+- A01-E074 (Regional failover rehearsal)
+- A01-E079 (Routine telemetry)
+- A01-E081 (R","PIVOT_ID=A01-E065
+
+Prerequisite events that enabled it:
+- A01-E035
+- A01-E047
+- A01-E056
+- A01-E070
+- A01-E072
+- A01-E074
+- A01-E076
+- A01-E081
+- A01-E083
+- A01-E084
+- A01-E085"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,A02,incident,0.4,A02-E062,A02-E062,1,1,0,0.85,0.85,0.85,0.09750402125770896,1,1,"PIVOT_ID=A02-E062
+
+Prerequisite events that enabled it:
+- A02-E054, A02-E055, A02-E056, A02-E057, A02-E058, A02-E059, A02-E060, A02-E061, A02-E064, A02-E065, A02-E067, A02-E069, A02-E071, A02-E074, A02-E076, A02-E079, A02-E082, A02-E084, A02-E086, A02-E087.","PIVOT_ID=A02-E062
+
+Prerequisite events that enabled it:
+- A02-E002, A02-E003, A02-E004, A02-E006, A02-E010, A02-E011, A02-E012, A02-E013, A02-E014, A02-E016, A02-E017, A02-E018, A02-E020, A02-E021, A02-E023, A02-E025, A02-E026, A02-E029, A02-E032, A02-E036, A02-E037, A02-"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,A02,incident,0.5,A02-E062,A02-E062,1,1,0,0.85,0.85,0.85,0.09750402125770896,1,1,"PIVOT_ID=A02-E062
+
+Prerequisite events that enabled it:
+- A02-E054, A02-E055, A02-E056, A02-E057, A02-E058, A02-E059, A02-E060, A02-E061, A02-E064, A02-E065, A02-E067, A02-E069, A02-E071, A02-E074, A02-E076, A02-E079, A02-E082, A02-E084, A02-E086, A02-E087.","PIVOT_ID=A02-E062
+
+Prerequisite events that enabled it:
+- A02-E001, A02-E002, A02-E008, A02-E009, A02-E010, A02-E011, A02-E013, A02-E014, A02-E016, A02-E017, A02-E018, A02-E021, A02-E025, A02-E028, A02-E029, A02-E030, A02-E033, A02-E039, A02-E040, A02-E041, A02-E045, A02-"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,A02,incident,0.6,A02-E062,A02-E062,1,1,0,0.65,0.85,0.65,0.08755734454342545,1,1,"PIVOT_ID=A02-E062
+
+Prerequisite events that enabled it:
+- A02-E054, A02-E055, A02-E056, A02-E057, A02-E058, A02-E059, A02-E060, A02-E061, A02-E064, A02-E065, A02-E067, A02-E069, A02-E071, A02-E074, A02-E076, A02-E079, A02-E082, A02-E084, A02-E086, A02-E087.","PIVOT_ID=A02-E062
+
+Prerequisite events that enabled it:
+- A02-E057, A02-E059, A02-E061, A02-E072, A02-E079, A02-E081, A02-E083, A02-E084, A02-E085"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,A03,incident,0.4,A03-E008,A03-E058,1,0,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.10368836145725657,0,1,"PIVOT_ID=A03-E008
+
+Prerequisite events that enabled it:
+- A03-E001
+- A03-E002
+- A03-E003
+- A03-E004
+- A03-E005
+- A03-E006
+- A03-E007
+- A03-E009
+- A03-E010
+- A03-E011
+- A03-E012
+- A03-E013
+- A03-E014
+- A03-E015
+- A03-E016
+- A03-E017
+- A03-E018
+- A03-E019
+- A03-E020
+- A03","PIVOT_ID=A03-E058
+
+Prerequisite events that enabled it:
+- A03-E029
+- A03-E032
+- A03-E036
+- A03-E037
+- A03-E038
+- A03-E042
+- A03-E044
+- A03-E045
+- A03-E046
+- A03-E047
+- A03-E061
+- A03-E062
+- A03-E063
+- A03-E064
+- A03-E065
+- A03-E066
+- A03-E070
+- A03-E071
+- A03-E073
+- A03"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,A03,incident,0.5,A03-E008,A03-E058,1,0,1,0.85,0.9999999999999999,0.85,0.07342828626650943,0,1,"PIVOT_ID=A03-E008
+
+Prerequisite events that enabled it:
+- A03-E001
+- A03-E002
+- A03-E003
+- A03-E004
+- A03-E005
+- A03-E006
+- A03-E007
+- A03-E009
+- A03-E010
+- A03-E011
+- A03-E012
+- A03-E013
+- A03-E014
+- A03-E015
+- A03-E016
+- A03-E017
+- A03-E018
+- A03-E019
+- A03-E020
+- A03","PIVOT_ID=A03-E058
+
+Prerequisite events that enabled it:
+1. A03-E001
+2. A03-E002
+3. A03-E008
+4. A03-E009
+5. A03-E010
+6. A03-E011
+7. A03-E013
+8. A03-E014
+9. A03-E016
+10. A03-E017
+11. A03-E018
+12. A03-E021
+13. A03-E025
+14. A03-E028
+15. A03-E029
+16. A03-E030
+17. A03-E033"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,A03,incident,0.6,A03-E008,A03-E058,1,0,1,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.06486992034195094,0,1,"PIVOT_ID=A03-E008
+
+Prerequisite events that enabled it:
+- A03-E001
+- A03-E002
+- A03-E003
+- A03-E004
+- A03-E005
+- A03-E006
+- A03-E007
+- A03-E009
+- A03-E010
+- A03-E011
+- A03-E012
+- A03-E013
+- A03-E014
+- A03-E015
+- A03-E016
+- A03-E017
+- A03-E018
+- A03-E019
+- A03-E020
+- A03","PIVOT_ID=A03-E058
+
+Prerequisite events that enabled it:
+- A03-E003
+- A03-E004
+- A03-E005
+- A03-E007
+- A03-E013
+- A03-E014
+- A03-E017
+- A03-E020
+- A03-E021
+- A03-E025
+- A03-E027
+- A03-E031
+- A03-E035
+- A03-E037
+- A03-E043
+- A03-E045
+- A03-E047
+- A03-E057
+- A03-E060
+- A03"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,A04,incident,0.4,A04-E063,A04-E063,1,1,0,0.85,0.85,0.85,0.10882974491090502,1,1,"PIVOT_ID=A04-E063
+
+Prerequisite events that enabled it:
+1. A04-E055
+2. A04-E057
+3. A04-E059
+4. A04-E060
+5. A04-E061
+6. A04-E064
+7. A04-E067
+8. A04-E068
+9. A04-E069
+10. A04-E071
+11. A04-E074
+12. A04-E077
+13. A04-E079
+14. A04-E081
+15. A04-E083
+16. A04-E085
+17. A04-E087","PIVOT_ID=A04-E063
+
+Prerequisite events that enabled it:
+1. A04-E002
+2. A04-E003
+3. A04-E004
+4. A04-E006
+5. A04-E010
+6. A04-E011
+7. A04-E012
+8. A04-E013
+9. A04-E014
+10. A04-E016
+11. A04-E017
+12. A04-E018
+13. A04-E020
+14. A04-E021
+15. A04-E023
+16. A04-E025
+17. A04-E026"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,A04,incident,0.5,A04-E063,A04-E063,1,1,0,0.85,0.85,0.85,0.11705570653519626,1,1,"PIVOT_ID=A04-E063
+
+Prerequisite events that enabled it:
+1. A04-E055
+2. A04-E057
+3. A04-E059
+4. A04-E060
+5. A04-E061
+6. A04-E064
+7. A04-E067
+8. A04-E068
+9. A04-E069
+10. A04-E071
+11. A04-E074
+12. A04-E077
+13. A04-E079
+14. A04-E081
+15. A04-E083
+16. A04-E085
+17. A04-E087","PIVOT_ID=A04-E063
+
+Prerequisite events that enabled it:
+- A04-E001, A04-E002, A04-E008, A04-E009, A04-E010, A04-E011, A04-E013, A04-E014, A04-E016, A04-E017, A04-E018, A04-E021, A04-E025, A04-E028, A04-E029, A04-E030, A04-E033, A04-E039, A04-E040, A04-E041, A04-E045, A04-"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,A04,incident,0.6,A04-E063,A04-E063,1,1,0,0.85,0.85,0.85,0.10882974491090502,1,1,"PIVOT_ID=A04-E063
+
+Prerequisite events that enabled it:
+1. A04-E055
+2. A04-E057
+3. A04-E059
+4. A04-E060
+5. A04-E061
+6. A04-E064
+7. A04-E067
+8. A04-E068
+9. A04-E069
+10. A04-E071
+11. A04-E074
+12. A04-E077
+13. A04-E079
+14. A04-E081
+15. A04-E083
+16. A04-E085
+17. A04-E087","PIVOT_ID=A04-E063
+
+Prerequisite events that enabled it:
+1. A04-E003
+2. A04-E004
+3. A04-E005
+4. A04-E007
+5. A04-E008
+6. A04-E011
+7. A04-E013
+8. A04-E014
+9. A04-E016
+10. A04-E017
+11. A04-E020
+12. A04-E021
+13. A04-E025
+14. A04-E027
+15. A04-E031
+16. A04-E035
+17. A04-E037"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,B01,investment,0.4,B01-E060,B01-E051,1,0,1,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.30695529126811505,0,1,"PIVOT_ID=B01-E060
+
+The market conditions that preceded and enabled the success of the anchor position (Aurelia AI Semiconductor Basket) can be traced back to Week-60. During this week, the position recorded a significant weekly return of +4.80%, contributing to a cumulative return of 20.02% by the end of the timeline.
+
+The success of Aurelia AI Semiconductor Basket can be attributed to several factors:
+
+1. Week-56: A +0.70% weekly return for NorthRiver Utilities Carry, which may have created a favorable market environment for the semiconductor sector.
+2. Week-57: A +0.61% weekly return for Aurelia AI Semiconductor Basket, which could have signaled a positive trend in the semiconductor market.
+3. Week-58: A +1.04% weekly return for Hel","PIVOT_ID=B01-E051
+
+The market conditions that preceded and enabled the success of the anchor position (Aurelia AI Semiconductor Basket) can be traced back to Week-51 (B01-E051). During this week, Helios Grid Infrastructure experienced a significant surge in return with +5.40%, which had a ripple effect on the overall portfolio. This event, while seemingly ordinary in local context, globally changed which pivot was admissible.
+
+The positive return of Helios Grid Infrastructure likely created a favorable environment for other related investments, such as Aurelia AI Semiconductor Basket. The increased return of Helios Grid Infrastructure might have indicated a positive trend in the infrastructure sector, which in turn boosted investor confidence in related sectors like semiconductors.
+
+Additionally, the RegimeScore of Helios Grid Infrastructure was 3 during Week-51, indicating that it was undergoing ordinary background activity"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,B01,investment,0.5,B01-E060,B01-E040,1,0,1,0.9999999999999999,0.8299999999999998,0.9999999999999999,0.3172987019875232,0,0,"PIVOT_ID=B01-E060
+
+The market conditions that preceded and enabled the success of the anchor position (Aurelia AI Semiconductor Basket) can be traced back to Week-60. During this week, the position recorded a significant weekly return of +4.80%, contributing to a cumulative return of 20.02% by the end of the timeline.
+
+The success of Aurelia AI Semiconductor Basket can be attributed to several factors:
+
+1. Week-56: A +0.70% weekly return for NorthRiver Utilities Carry, which may have created a favorable market environment for the semiconductor sector.
+2. Week-57: A +0.61% weekly return for Aurelia AI Semiconductor Basket, which could have signaled a positive trend in the semiconductor market.
+3. Week-58: A +1.04% weekly return for Hel","PIVOT_ID=B01-E040
+
+The market conditions that preceded and enabled the success of the anchor position (Helios Grid Infrastructure) can be traced back to several events in the timeline.
+
+1. B01-E008: Helios Grid Infrastructure was initially introduced with a weekly return of +2.40% and a cumulative return of 2.63%. This was the first positive movement for this position, setting the stage for its future growth.
+
+2. B01-E018: Helios Grid Infrastructure continued to perform well with a weekly return of +0.67% and a cumulative return of 3.74%. This performance was not the highest at the time, but it was a consistent positive movement that contributed to its overall growth.
+
+3. B01-E028: Another positive weekly return of +1.86% pushed the cumulative return to 5.25%. This was a"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,B01,investment,0.6,B01-E060,B01-E060,1,1,1,0.9899999999999999,0.8299999999999998,0.9899999999999999,0.3125380451087896,0,0,"PIVOT_ID=B01-E060
+
+The market conditions that preceded and enabled the success of the anchor position (Aurelia AI Semiconductor Basket) can be traced back to Week-60. During this week, the position recorded a significant weekly return of +4.80%, contributing to a cumulative return of 20.02% by the end of the timeline.
+
+The success of Aurelia AI Semiconductor Basket can be attributed to several factors:
+
+1. Week-56: A +0.70% weekly return for NorthRiver Utilities Carry, which may have created a favorable market environment for the semiconductor sector.
+2. Week-57: A +0.61% weekly return for Aurelia AI Semiconductor Basket, which could have signaled a positive trend in the semiconductor market.
+3. Week-58: A +1.04% weekly return for Hel","PIVOT_ID=B01-E060
+
+The market conditions that preceded and enabled the success of the position with the highest cumulative return, Helios Grid Infrastructure, can be traced back to several events in the timeline.
+
+1. PIVOT_ID=B01-E013 (Week-13): Helios Grid Infrastructure experienced a weekly return of +0.45%, contributing to a cumulative return of 3.08%. This event, while seemingly ordinary in local context, globally changed which pivot was admissible, setting the stage for future performance.
+
+2. PIVOT_ID=B01-E043 (Week-43): Despite a weekly return of -0.26%, Helios Grid Infrastructure's cumulative return increased to 9.12%. Cross-system coupling became explicit and destabilizing in portfolio research, and the note references dependencies that only matter when read with the full timeline, indicating"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,B02,investment,0.4,B02-E061,B02-E073,1,0,0,0.9899999999999999,0.8299999999999998,0.9899999999999999,0.37131018358025836,1,0,"PIVOT_ID=B02-E061
+
+The market conditions that preceded and enabled the success of the anchor position (NorthRiver Utilities Carry) can be traced back to Week-61. During this week, Helios Grid Infrastructure experienced a high-impact transition in portfolio research, which was a structural breadcrumb rather than a headline event. This event, while not dominating discussion, depended on prior setup and shifted downstream feasibility. The details of this transition were preserved, serving as a prerequisite for the subsequent success of NorthRiver Utilities Carry.
+
+Following Week-61, the portfolio diary shows a series of events that were processed as ordinary background activity, with commentary that seemed low salience unless one tracks the global score rule. These events included routine control-plane adjustments, mundane baseline calibrations, and repetitive housekeeping and status chatter. However, these seemingly minor events preserved details that became causal prerequisites for","PIVOT_ID=B02-E073
+
+The market conditions that preceded and enabled the success of the Aurelia AI Semiconductor Basket (B02-E073) can be traced back to several key events in the timeline.
+
+1. B02-E017: Week-17, Aurelia AI Semiconductor Basket had a weekly return of +2.00% and a cumulative return of 5.16%. This event marked the first significant positive return for this position, setting the stage for its future growth.
+
+2. B02-E039: Week-39, BlueHarbor Treasury Arbitrage (B02-E039) had a weekly return of +2.07% and a cumulative return of 5.61%. This event, while not the anchor position, contributed to a positive market environment that may have benefited Aurelia AI Semiconductor Basket."
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,B02,investment,0.5,B02-E061,B02-E017,1,0,0,0.9899999999999999,0.8299999999999998,0.9899999999999999,0.34653928703126025,1,0,"PIVOT_ID=B02-E061
+
+The market conditions that preceded and enabled the success of the anchor position (NorthRiver Utilities Carry) can be traced back to Week-61. During this week, Helios Grid Infrastructure experienced a high-impact transition in portfolio research, which was a structural breadcrumb rather than a headline event. This event, while not dominating discussion, depended on prior setup and shifted downstream feasibility. The details of this transition were preserved, serving as a prerequisite for the subsequent success of NorthRiver Utilities Carry.
+
+Following Week-61, the portfolio diary shows a series of events that were processed as ordinary background activity, with commentary that seemed low salience unless one tracks the global score rule. These events included routine control-plane adjustments, mundane baseline calibrations, and repetitive housekeeping and status chatter. However, these seemingly minor events preserved details that became causal prerequisites for","PIVOT_ID=B02-E017
+
+The market conditions that preceded and enabled the success of the position with the highest cumulative return, which is the Aurelia AI Semiconductor Basket (B02-E017), can be traced back to several events in the timeline.
+
+1. B02-E013: Helios Grid Infrastructure (Week-13) had a positive weekly return of 1.09%, contributing to a cumulative return of 2.26%. This position seems to have set the stage for the success of the Aurelia AI Semiconductor Basket, as it changed which pivot was admissible in the portfolio.
+
+2. B02-E014: BlueHarbor Treasury Arbitrage (Week-14) had a positive weekly return of 0.53%, shifting downstream feasibility and potentially preparing the market for the success of the Aurelia AI Semiconductor Basket"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,B02,investment,0.6,B02-E061,B02-E061,1,1,0,0.9999999999999999,0.8299999999999998,0.9999999999999999,0.35306146512820713,1,1,"PIVOT_ID=B02-E061
+
+The market conditions that preceded and enabled the success of the anchor position (NorthRiver Utilities Carry) can be traced back to Week-61. During this week, Helios Grid Infrastructure experienced a high-impact transition in portfolio research, which was a structural breadcrumb rather than a headline event. This event, while not dominating discussion, depended on prior setup and shifted downstream feasibility. The details of this transition were preserved, serving as a prerequisite for the subsequent success of NorthRiver Utilities Carry.
+
+Following Week-61, the portfolio diary shows a series of events that were processed as ordinary background activity, with commentary that seemed low salience unless one tracks the global score rule. These events included routine control-plane adjustments, mundane baseline calibrations, and repetitive housekeeping and status chatter. However, these seemingly minor events preserved details that became causal prerequisites for","PIVOT_ID=B02-E061
+
+The market conditions that preceded and enabled the success of the anchor position (Helios Grid Infrastructure) are as follows:
+
+1. Initial investment in Helios Grid Infrastructure was made in Week-03 (B02-E003) with a weekly return of +1.10% and a cumulative return of 1.10%. This position was followed by a relatively stable performance in Week-08 (B02-E013) with a weekly return of +1.09% and a cumulative return of 2.26%.
+
+2. In Week-20 (B02-E021), NorthRiver Utilities Carry had a significant weekly return of +2.05%, which might have influenced the overall portfolio performance and potentially set the stage for the subsequent performance of Helios Grid Infrastructure.
+
+3. The turning point for Helios Grid Infrastructure's success was in"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,B03,investment,0.4,B03-E018,B03-E068,1,0,0,0.9899999999999999,0.9099999999999999,0.9899999999999999,0.3183847533552451,0,0,"PIVOT_ID=B03-E018
+
+The market conditions that preceded and enabled the success of the anchor position (Helios Grid Infrastructure) can be traced back to several events in the timeline.
+
+1. Initial positioning: The first mention of Helios Grid Infrastructure was in Week-03 (B03-E003) with a weekly return of +1.29%. This positioning laid the foundation for the subsequent performance.
+
+2. Significant growth: The significant growth of Helios Grid Infrastructure started in Week-18 (B03-E018) with a weekly return of +3.66%. This week marked a turning point as the cumulative return for Helios Grid Infrastructure surpassed all other positions, becoming the anchor position.
+
+3. Consistent performance: From Week-18 onwards, Helios Grid Infrastructure maintained a consistent performance, with weekly returns of +1.16% (Week-19","PIVOT_ID=B03-E068
+
+The market conditions that preceded and enabled the success of the position with the highest cumulative return, which is the Aurelia AI Semiconductor Basket, can be traced back to Week-68 (B03-E068). During this week, the position recorded a significant weekly return of +4.80% and a cumulative return of 27.45%.
+
+Prior to this pivotal week, the following events contributed to the positive momentum:
+
+1. Week-65 (B03-E065): Cinder Logistics Credit recorded a weekly return of +1.18%, which, while not the highest return, was a structural breadcrumb that shifted downstream feasibility for the Aurelia AI Semiconductor Basket.
+2. Week-64 (B03-E064): BlueHarbor Treasury Arbitrage recorded a weekly return of +1.0"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,B03,investment,0.5,B03-E018,B03-E018,1,1,1,0.9999999999999999,0.9099999999999999,0.9999999999999999,0.2881269100709021,0,0,"PIVOT_ID=B03-E018
+
+The market conditions that preceded and enabled the success of the anchor position (Helios Grid Infrastructure) can be traced back to several events in the timeline.
+
+1. Initial positioning: The first mention of Helios Grid Infrastructure was in Week-03 (B03-E003) with a weekly return of +1.29%. This positioning laid the foundation for the subsequent performance.
+
+2. Significant growth: The significant growth of Helios Grid Infrastructure started in Week-18 (B03-E018) with a weekly return of +3.66%. This week marked a turning point as the cumulative return for Helios Grid Infrastructure surpassed all other positions, becoming the anchor position.
+
+3. Consistent performance: From Week-18 onwards, Helios Grid Infrastructure maintained a consistent performance, with weekly returns of +1.16% (Week-19","PIVOT_ID=B03-E018
+
+The market conditions that preceded and enabled the success of the anchor position (Helios Grid Infrastructure) can be traced back to several events in the timeline.
+
+1. B03-E013: Week-13 - Helios Grid Infrastructure showed a weekly return of +1.16%, contributing to a cumulative return of 2.34%. This event seems ordinary in local context but globally, it changes which pivot is admissible.
+
+2. B03-E014: Week-14 - BlueHarbor Treasury Arbitrage had a weekly return of +0.65%, adding to a cumulative return of 2.85%. This event also seems ordinary but globally, it changes which pivot is admissible.
+
+3. B03-E016: Week-16 - NorthRiver Utilities Carry had a weekly return of +0."
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,B03,investment,0.6,B03-E018,B03-E068,1,0,0,0.9899999999999999,0.9099999999999999,0.9899999999999999,0.29792391238892013,0,0,"PIVOT_ID=B03-E018
+
+The market conditions that preceded and enabled the success of the anchor position (Helios Grid Infrastructure) can be traced back to several events in the timeline.
+
+1. Initial positioning: The first mention of Helios Grid Infrastructure was in Week-03 (B03-E003) with a weekly return of +1.29%. This positioning laid the foundation for the subsequent performance.
+
+2. Significant growth: The significant growth of Helios Grid Infrastructure started in Week-18 (B03-E018) with a weekly return of +3.66%. This week marked a turning point as the cumulative return for Helios Grid Infrastructure surpassed all other positions, becoming the anchor position.
+
+3. Consistent performance: From Week-18 onwards, Helios Grid Infrastructure maintained a consistent performance, with weekly returns of +1.16% (Week-19","PIVOT_ID=B03-E068
+
+The market conditions that preceded and enabled the success of the anchor position (Helios Grid Infrastructure) can be traced back to the event with ID B03-E068, where the Aurelia AI Semiconductor Basket experienced a significant weekly return of +4.80%. This event, although it seemed low salience and was structurally secondary in portfolio research, played a crucial role in shifting downstream feasibility.
+
+Following B03-E068, the Aurelia AI Semiconductor Basket continued to perform well, with weekly returns of +1.15% (B03-E067) and +1.83% (B03-E037), contributing to its cumulative return. These returns created a favorable environment for other positions in the portfolio, including Helios Grid Infrastructure.
+
+In the weeks leading up to B03-E068, there"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,B04,investment,0.4,B04-E016,B04-E016,1,1,1,0.9899999999999999,0.9999999999999999,0.9899999999999999,0.18024269447046426,0,0,"PIVOT_ID=B04-E016
+
+The market conditions that preceded and enabled the success of the position with the highest cumulative return, NorthRiver Utilities Carry (B04-E016), can be traced back to several events in the timeline.
+
+1. B04-E001: The initial position in the portfolio was NorthRiver Utilities Carry, which returned +1.44% in the first week. This initial investment provided a foundation for the subsequent performance.
+
+2. B04-E006: In the sixth week, NorthRiver Utilities Carry returned an additional +0.46%, contributing to its cumulative return.
+
+3. B04-E011: In the eleventh week, the position returned +1.17%, further increasing its cumulative return.
+
+4. B04-E016: The anchor position, Week-16, saw a significant","PIVOT_ID=B04-E016
+
+The market conditions that preceded and enabled the success of the position with the highest cumulative return, NorthRiver Utilities Carry (B04-E016), can be traced back to several events in the timeline.
+
+1. B04-E006: NorthRiver Utilities Carry (Week-06) showed a weekly return of +0.46% and a RegimeScore of 4, indicating a structural breadcrumb that was processed as ordinary background activity in portfolio research. This event laid the foundation for the position's future performance.
+
+2. B04-E011 (Week-11) and B04-E016 (Week-16) both had weekly returns of +1.17% and +2.50%, respectively, for NorthRiver Utilities Carry. These two events marked significant increases in the position's performance, contributing to its"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,B04,investment,0.5,B04-E016,B04-E011,1,0,1,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.24371732385963518,0,0,"PIVOT_ID=B04-E016
+
+The market conditions that preceded and enabled the success of the position with the highest cumulative return, NorthRiver Utilities Carry (B04-E016), can be traced back to several events in the timeline.
+
+1. B04-E001: The initial position in the portfolio was NorthRiver Utilities Carry, which returned +1.44% in the first week. This initial investment provided a foundation for the subsequent performance.
+
+2. B04-E006: In the sixth week, NorthRiver Utilities Carry returned an additional +0.46%, contributing to its cumulative return.
+
+3. B04-E011: In the eleventh week, the position returned +1.17%, further increasing its cumulative return.
+
+4. B04-E016: The anchor position, Week-16, saw a significant","PIVOT_ID=B04-E011
+
+The market conditions that preceded and enabled the success of the position with the highest cumulative return, which is the NorthRiver Utilities Carry at Week-11 (B04-E011), were characterized by a series of relatively stable returns across various positions in the portfolio. Specifically, the following events set the stage for the success of NorthRiver Utilities Carry:
+
+1. Helios Grid Infrastructure (B04-E008) posted a +0.72% weekly return in Week-08, contributing to a cumulative return of 1.66%.
+2. BlueHarbor Treasury Arbitrage (B04-E009) had a +1.45% weekly return in Week-09, resulting in a cumulative return of 4.14%.
+3. Cinder Logistics Credit (B04-E010) experienced a -0.3"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,B04,investment,0.6,B04-E016,B04-E059,1,0,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.33356644303406413,0,1,"PIVOT_ID=B04-E016
+
+The market conditions that preceded and enabled the success of the position with the highest cumulative return, NorthRiver Utilities Carry (B04-E016), can be traced back to several events in the timeline.
+
+1. B04-E001: The initial position in the portfolio was NorthRiver Utilities Carry, which returned +1.44% in the first week. This initial investment provided a foundation for the subsequent performance.
+
+2. B04-E006: In the sixth week, NorthRiver Utilities Carry returned an additional +0.46%, contributing to its cumulative return.
+
+3. B04-E011: In the eleventh week, the position returned +1.17%, further increasing its cumulative return.
+
+4. B04-E016: The anchor position, Week-16, saw a significant","PIVOT_ID=B04-E059
+
+The market conditions that preceded and enabled the success of the anchor position (Helios Grid Infrastructure) are as follows:
+
+1. Initial investment in Helios Grid Infrastructure was made in Week-03 (B04-E003) with a cumulative return of 0.94%.
+2. In Week-07 (B04-E007), there was an entry (Aurelia AI Semiconductor Basket) that preserved details that become causal prerequisites for later interpretation, which may have set the stage for the success of Helios Grid Infrastructure.
+3. The position of Helios Grid Infrastructure was maintained in Week-08 (B04-E008) with a cumulative return of 1.66%.
+4. The significant pivot that enabled the success of Helios Grid Infrastructure occurred in Week-59 (B04-E059) when"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,C01,narrative,0.4,C01-E052,C01-E052,1,1,0,0.9999999999999999,0.8299999999999998,0.9999999999999999,0.2876258271752713,1,1,"PIVOT_ID=C01-E052
+
+The turning point of the story is the action where Sana released the sealed ledger proving council fraud (C01-E052). This event was made possible by a series of routine updates exchanged between the characters, which established the necessary context and set the stage for Sana's decisive action. These routine updates included exchanges of mundane logistical details, status checks, and handoffs between on-call rotations. These seemingly insignificant events collectively built the foundation that allowed Sana to expose the council's fraud.","PIVOT_ID=C01-E052
+
+The turning point of the story is the action where Sana releases the sealed ledger proving council fraud (C01-E052). This event was made possible by a series of routine updates exchanged by various characters throughout the story. These updates included ordinary background activities, structural breadcrumbs, and low-salience commentaries that seemed boring in local context but globally changed which pivot was admissible. Specifically, the updates by Jonas (C01-E014, C01-E020, C01-E050), Sana (C01-E004, C01-E010, C01-E049, C01-E058, C01-E076), Iris (C01-E017, C01-E035, C01-E057, C0"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,C01,narrative,0.5,C01-E052,C01-E052,1,1,0,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.33160893845904305,1,1,"PIVOT_ID=C01-E052
+
+The turning point of the story is the action where Sana released the sealed ledger proving council fraud (C01-E052). This event was made possible by a series of routine updates exchanged between the characters, which established the necessary context and set the stage for Sana's decisive action. These routine updates included exchanges of mundane logistical details, status checks, and handoffs between on-call rotations. These seemingly insignificant events collectively built the foundation that allowed Sana to expose the council's fraud.","PIVOT_ID=C01-E052
+
+The turning point of the story is the action where Sana released the sealed ledger proving council fraud (C01-E052). This event was made possible by several earlier actions:
+
+1. Scene-10: Sana exchanged routine updates (ConsequenceScore=7). This seemingly ordinary exchange of updates included details that became causal prerequisites for later interpretation.
+2. Scene-22: Sana exchanged routine updates (ConsequenceScore=8). This exchange of updates preserved details that became causal prerequisites for later interpretation.
+3. Scene-28: Sana exchanged routine updates (ConsequenceScore=8). This exchange of updates included procedural details that summarizers often collapse away, and its narrative footprint was small even though it shifted downstream feasibility.
+4. Scene-46: Sana exchanged routine updates (ConsequenceScore=9). This exchange of updates was"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,C01,narrative,0.6,C01-E052,C01-E014,1,0,0,0.7299999999999999,0.8299999999999998,0.7299999999999999,0.36914341236582315,1,0,"PIVOT_ID=C01-E052
+
+The turning point of the story is the action where Sana released the sealed ledger proving council fraud (C01-E052). This event was made possible by a series of routine updates exchanged between the characters, which established the necessary context and set the stage for Sana's decisive action. These routine updates included exchanges of mundane logistical details, status checks, and handoffs between on-call rotations. These seemingly insignificant events collectively built the foundation that allowed Sana to expose the council's fraud.","PIVOT_ID=C01-E014
+
+The turning point of the story is the action with the highest consequence score, which is Scene-14 where Jonas exchanged routine updates at the assembly atrium with a ConsequenceScore of 10. This detail is intentionally plain-language and easy to discard during compression.
+
+Earlier events that made it possible include:
+
+1. Scene-03 where Elio exchanged routine updates at the north gate with a ConsequenceScore of 7. This seemingly ordinary exchange changed which pivot was admissible.
+2. Scene-04 where Sana exchanged routine updates at the assembly atrium with a ConsequenceScore of 8. This detail also changed which pivot was admissible.
+3. Scene-05 where Iris exchanged routine updates at the river embankment with a ConsequenceScore of 5. This detail, while seemingly ordinary, also changed which pivot was admissible.
+4."
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,C02,narrative,0.4,C02-E054,C02-E034,1,0,0,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.3270123332855339,1,0,"PIVOT_ID=C02-E054
+
+The turning point of the story is the action where Cato releases the sealed ledger proving council fraud (C02-E054). This action was possible due to the cumulative effect of routine updates exchanged by the characters throughout the story. These updates included mundane logistical details, status chatter, and seemingly insignificant breadcrumbs that, when read together, provided the necessary context and dependencies for Cato to release the ledger. The routine updates also served to distract and divert attention away from the impending revelation, making it more impactful when it finally occurred.","PIVOT_ID=C02-E034
+
+The turning point of the story is the action where Mira exchanged routine updates at the assembly atrium with a ConsequenceScore of 11 (Scene-34). This event is significant because it involves Mira releasing the sealed ledger proving council fraud, which sets off a series of dramatic events.
+
+Earlier events that made it possible include:
+
+1. Scene-36: Cato exchanged routine updates at the market ward with a ConsequenceScore of 11, which included details that become causal prerequisites for later interpretation, setting the stage for Mira to release the ledger.
+2. Scene-32: Jonas exchanged routine updates at the canal archive with a ConsequenceScore of 6, which also included details that become causal prerequisites for later interpretation, hinting at his involvement in the council's downfall.
+3. Scene-38: Jonas exchanged routine updates"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,C02,narrative,0.5,C02-E054,C02-E054,1,1,0,0.9999999999999999,0.8299999999999998,0.9999999999999999,0.2141184704697019,1,1,"PIVOT_ID=C02-E054
+
+The turning point of the story is the action where Cato releases the sealed ledger proving council fraud (C02-E054). This action was possible due to the cumulative effect of routine updates exchanged by the characters throughout the story. These updates included mundane logistical details, status chatter, and seemingly insignificant breadcrumbs that, when read together, provided the necessary context and dependencies for Cato to release the ledger. The routine updates also served to distract and divert attention away from the impending revelation, making it more impactful when it finally occurred.","PIVOT_ID=C02-E054
+
+The turning point of the story is the action where Cato released the sealed ledger proving council fraud (C02-E054). This event was possible due to the routine updates exchanged by various characters throughout the story, which provided the necessary information and dependencies for Cato to take this decisive action. Specifically, the updates exchanged by Sana (C02-E040), Iris (C02-E041), and Sana again (C02-E045) laid the groundwork for Cato to have the necessary evidence to expose the council's fraud. Additionally, the confrontations staged by Elio (C02-E052), Iris (C02-E059), and Mira (C02-E061) created a tense atmosphere that made Cato's action more impactful."
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,C02,narrative,0.6,C02-E054,C02-E054,1,1,0,0.9999999999999999,0.8299999999999998,0.9999999999999999,0.22594980088049454,1,1,"PIVOT_ID=C02-E054
+
+The turning point of the story is the action where Cato releases the sealed ledger proving council fraud (C02-E054). This action was possible due to the cumulative effect of routine updates exchanged by the characters throughout the story. These updates included mundane logistical details, status chatter, and seemingly insignificant breadcrumbs that, when read together, provided the necessary context and dependencies for Cato to release the ledger. The routine updates also served to distract and divert attention away from the impending revelation, making it more impactful when it finally occurred.","PIVOT_ID=C02-E054
+
+The turning point of the story is the action where Cato released the sealed ledger proving council fraud (C02-E054). This event was possible due to the routine updates exchanged by various characters throughout the story, which provided the necessary information and set the stage for Cato's decisive action. Specifically, the routine updates exchanged by Mira (C02-E031, C02-E073) and Iris (C02-E021) contained details that became causal prerequisites for Cato's action. Additionally, the routine updates exchanged by Jonas (C02-E056, C02-E062) and Iris (C02-E061) staged visible confrontations that dominated discussion and likely put pressure on the council, making Cato's action more feasible."
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,C03,narrative,0.4,C03-E060,C03-E060,1,1,0,0.8299999999999998,0.9999999999999999,0.8299999999999998,0.27245626309990756,1,1,"PIVOT_ID=C03-E060
+
+The turning point of the story is the action where Cato released the sealed ledger proving council fraud (C03-E060). This event had a high consequence score of 24. Earlier events that made it possible include:
+
+1. Scene-02 (C03-E002) where Jonas exchanged routine updates at the canal archive, which set up the existence of the ledger.
+2. Scene-06 (C03-E006) where Cato exchanged routine updates at the market ward, which hinted at the existence of a critical piece of information.
+3. Scene-07 (C03-E007) where Mira exchanged routine updates at the canal archive, which provided procedural details that summarizers often collapse away, but were crucial for understanding the context of the ledger.
+4. Scene-12 (C03-E","PIVOT_ID=C03-E060
+
+The turning point of the story is the action where Mira released the sealed ledger proving council fraud (C03-E060). This event was possible due to the routine updates exchanged by various characters throughout the story, which laid the groundwork and established the necessary dependencies for Mira's action to have maximum impact. These routine updates included exchanging information, building trust, and setting up the circumstances that made it feasible for Mira to access and release the incriminating evidence. The high consequence score of this event is a result of its significant impact on the character dynamics, as it led to the downfall of the council and a shift in power within the city."
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,C03,narrative,0.5,C03-E060,C03-E060,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.28406934191902167,1,1,"PIVOT_ID=C03-E060
+
+The turning point of the story is the action where Cato released the sealed ledger proving council fraud (C03-E060). This event had a high consequence score of 24. Earlier events that made it possible include:
+
+1. Scene-02 (C03-E002) where Jonas exchanged routine updates at the canal archive, which set up the existence of the ledger.
+2. Scene-06 (C03-E006) where Cato exchanged routine updates at the market ward, which hinted at the existence of a critical piece of information.
+3. Scene-07 (C03-E007) where Mira exchanged routine updates at the canal archive, which provided procedural details that summarizers often collapse away, but were crucial for understanding the context of the ledger.
+4. Scene-12 (C03-E","PIVOT_ID=C03-E060
+
+The turning point of the story is the action where Cato released the sealed ledger proving council fraud (C03-E060). This event was possible due to the routine updates exchanged by various characters throughout the story, which provided the necessary information and dependencies for Cato to take this decisive action. Notable examples include the routine updates exchanged by Jonas (C03-E002, C03-E014), Elio (C03-E021), Sana (C03-E028, C03-E040), Iris (C03-E011, C03-E017, C03-E041, C03-E052, C03-E071, C03-E077), and Mira (C03-E011, C03-"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,C03,narrative,0.6,C03-E060,C03-E060,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.29016305309270196,1,1,"PIVOT_ID=C03-E060
+
+The turning point of the story is the action where Cato released the sealed ledger proving council fraud (C03-E060). This event had a high consequence score of 24. Earlier events that made it possible include:
+
+1. Scene-02 (C03-E002) where Jonas exchanged routine updates at the canal archive, which set up the existence of the ledger.
+2. Scene-06 (C03-E006) where Cato exchanged routine updates at the market ward, which hinted at the existence of a critical piece of information.
+3. Scene-07 (C03-E007) where Mira exchanged routine updates at the canal archive, which provided procedural details that summarizers often collapse away, but were crucial for understanding the context of the ledger.
+4. Scene-12 (C03-E","PIVOT_ID=C03-E060
+
+The turning point of the story is the action where Cato released the sealed ledger proving council fraud (C03-E060). This event had a high consequence score of 24. Earlier events that made it possible include routine updates exchanged by various characters (C03-E003, C03-E004, C03-E005, C03-E007, C03-E008, C03-E014, C03-E016, C03-E020, C03-E021, C03-E025, C03-E027, C03-E031, C03-E035, C03-E037, C03-E043, C03-E048, C"
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,C04,narrative,0.4,C04-E052,C04-E065,1,0,0,0.9099999999999999,0.8299999999999998,0.9099999999999999,0.22105489039209847,1,0,"PIVOT_ID=C04-E052
+
+The turning point of the story is the action where Sana released the sealed ledger proving council fraud (C04-E052). This event was possible due to the mundane routine updates exchanged by the characters throughout the story. These updates, while seemingly insignificant in isolation, provided crucial details and dependencies that became causal prerequisites for Sana to access and release the ledger. The repetitive housekeeping and status chatter in character dynamics, such as exchanging routine updates, served as structural breadcrumbs that led to the revelation of the council fraud.","PIVOT_ID=C04-E065
+
+The turning point of the story is the action where Iris challenged the council in a public square (C04-E065). This event had a ConsequenceScore of 19, making it the action with the highest consequence in the story.
+
+Earlier events that made it possible include routine updates exchanged by various characters (Jonas, Sana, Elio, Mira, Cato, and Iris) throughout the story. These updates, while seemingly mundane and low in ConsequenceScore, provided crucial details and dependencies that became causal prerequisites for Iris's public challenge. Specifically, these updates established the context, relationships, and power dynamics among the characters, which set the stage for Iris's decisive action. Additionally, Sana's action of releasing the sealed ledger proving council fraud (C04-E052) created the opportunity for Iris to challenge the council and expose their corruption."
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,C04,narrative,0.5,C04-E052,C04-E052,1,1,0,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.13814511203023805,1,1,"PIVOT_ID=C04-E052
+
+The turning point of the story is the action where Sana released the sealed ledger proving council fraud (C04-E052). This event was possible due to the mundane routine updates exchanged by the characters throughout the story. These updates, while seemingly insignificant in isolation, provided crucial details and dependencies that became causal prerequisites for Sana to access and release the ledger. The repetitive housekeeping and status chatter in character dynamics, such as exchanging routine updates, served as structural breadcrumbs that led to the revelation of the council fraud.","PIVOT_ID=C04-E052
+
+The turning point of the story is the action where Sana released the sealed ledger proving council fraud (C04-E052). This event was possible due to a series of routine updates exchanged by various characters throughout the story. These updates, while seemingly mundane and ordinary in local context, played a crucial role in changing which pivot was admissible. They provided the necessary details and dependencies that made Sana's action possible and shifted the downstream feasibility of events. The repetitive housekeeping and status chatter in character dynamics served as structural breadcrumbs, leading up to the revelation of the council fraud."
+Mistral-7B-Instruct-v0.3,mistralai/Mistral-7B-Instruct-v0.3,C04,narrative,0.6,C04-E052,C04-E052,1,1,0,0.9999999999999999,0.8299999999999998,0.9999999999999999,0.34507921855438006,1,1,"PIVOT_ID=C04-E052
+
+The turning point of the story is the action where Sana released the sealed ledger proving council fraud (C04-E052). This event was possible due to the mundane routine updates exchanged by the characters throughout the story. These updates, while seemingly insignificant in isolation, provided crucial details and dependencies that became causal prerequisites for Sana to access and release the ledger. The repetitive housekeeping and status chatter in character dynamics, such as exchanging routine updates, served as structural breadcrumbs that led to the revelation of the council fraud.","PIVOT_ID=C04-E052
+
+The turning point of the story is the action where Sana released the sealed ledger proving council fraud (C04-E052). This event had a high consequence score of 24. Earlier events that made it possible include routine updates exchanged by various characters (C04-E003, C04-E004, C04-E005, C04-E007, C04-E008, C04-E014, C004-E016, C04-E021, C04-E025, C04-E031, C04-E035, C04-E037, C04-E043, C04-E050, C04-E067, C04-E073)"

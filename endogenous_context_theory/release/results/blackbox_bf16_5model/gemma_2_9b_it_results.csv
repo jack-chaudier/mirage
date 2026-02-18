@@ -1,0 +1,808 @@
+model_name,model_id,task_id,category,compression_level,full_pivot,pivot_id_extracted,pivot_extracted_flag,pivot_preserved,fixed_pivot_feasible,raw_validity,raw_validity_full,raw_validity_compressed,semantic_regret,full_pivot_matches_ground_truth,pivot_matches_ground_truth,full_answer,compressed_answer
+Gemma-2-9B-IT,google/gemma-2-9b-it,A01,incident,0.4,A01-E065,A01-E065,1,1,0,0.85,0.85,0.85,0.1357147769454341,1,1,"PIVOT_ID=A01-E065 
+
+Prerequisite events:
+
+* A01-E057
+* A01-E058
+* A01-E059
+* A01-E060
+* A01-E061
+* A01-E062
+* A01-E063
+* A01-E064
+* A01-E065","PIVOT_ID=A01-E065
+
+Prerequisite Events:
+
+* A01-E050
+* A01-E053 
+* A01-E047
+* A01-E046
+* A01-E045
+* A01-E044
+* A01-E042
+* A01-E038
+* A01-E037
+* A01-E036
+* A01-E032
+* A01-E029
+* A01-E026
+* A01-E025
+* A01-E023
+* A01-E021
+* A01-E020
+* A01-E017
+* A01-E016
+* A01-E014"
+Gemma-2-9B-IT,google/gemma-2-9b-it,A01,incident,0.5,A01-E065,A01-E065,1,1,0,0.85,0.85,0.85,0.10807061446026867,1,1,"PIVOT_ID=A01-E065 
+
+Prerequisite events:
+
+* A01-E057
+* A01-E058
+* A01-E059
+* A01-E060
+* A01-E061
+* A01-E062
+* A01-E063
+* A01-E064
+* A01-E065","PIVOT_ID=A01-E065
+
+Prerequisite Events:
+
+* A01-E058
+* A01-E060
+* A01-E062
+* A01-E072 
+* A01-E074
+* A01-E076 
+* A01-E077
+* A01-E079
+* A01-E080
+* A01-E081
+* A01-E084
+* A01-E085"
+Gemma-2-9B-IT,google/gemma-2-9b-it,A01,incident,0.6,A01-E065,A01-E065,1,1,0,0.85,0.85,0.85,0.12909048260696054,1,1,"PIVOT_ID=A01-E065 
+
+Prerequisite events:
+
+* A01-E057
+* A01-E058
+* A01-E059
+* A01-E060
+* A01-E061
+* A01-E062
+* A01-E063
+* A01-E064
+* A01-E065","PIVOT_ID=A01-E065 
+
+Prerequisite Events:
+
+* A01-E035 
+* A01-E037
+* A01-E043
+* A01-E045
+* A01-E047
+* A01-E050
+* A01-E056
+* A01-E060
+* A01-E069
+* A01-E070
+* A01-E072
+* A01-E074
+* A01-E076
+* A01-E079
+* A01-E081
+* A01-E083
+* A01-E084"
+Gemma-2-9B-IT,google/gemma-2-9b-it,A02,incident,0.4,A02-E062,A02-E062,1,1,0,0.85,0.9999999999999999,0.85,0.3983773547332269,1,1,"PIVOT_ID=A02-E062 
+
+Prerequisite events:
+
+* A02-E052: 2026-05-04 10:39 | Service=ledger | Event=Config baseline update | Severity=1 | Scope=2 | Composite=2 
+* A02-E053: 2026-05-05 11:46 | Service=cache | Event=Routine telemetry | Severity=5 | Scope=5 | Composite=25 
+* A02-E054: 2026-05-06 12:53 | Service=queue | Event=Config baseline update | Severity=1 | Scope=2 | Composite=2 
+* A02-E055: 2026-05-07 13:00 | Service=api-gateway | Event=Routine telemetry | Severity=4 | Scope=7 |","PIVOT_ID=A02-E062
+
+Prerequisite Events: 
+* A02-E061 
+* A02-E066
+* A02-E067
+* A02-E068
+* A02-E069
+* A02-E070
+* A02-E072 
+* A02-E073
+* A02-E074
+* A02-E076
+* A02-E077
+* A02-E078
+* A02-E079
+* A02-E080
+* A02-E082
+* A02-E083
+* A02-E084
+* A02-E085
+* A02-E086"
+Gemma-2-9B-IT,google/gemma-2-9b-it,A02,incident,0.5,A02-E062,A02-E062,1,1,0,0.85,0.9999999999999999,0.85,0.3962073134199334,1,1,"PIVOT_ID=A02-E062 
+
+Prerequisite events:
+
+* A02-E052: 2026-05-04 10:39 | Service=ledger | Event=Config baseline update | Severity=1 | Scope=2 | Composite=2 
+* A02-E053: 2026-05-05 11:46 | Service=cache | Event=Routine telemetry | Severity=5 | Scope=5 | Composite=25 
+* A02-E054: 2026-05-06 12:53 | Service=queue | Event=Config baseline update | Severity=1 | Scope=2 | Composite=2 
+* A02-E055: 2026-05-07 13:00 | Service=api-gateway | Event=Routine telemetry | Severity=4 | Scope=7 |","PIVOT_ID=A02-E062 
+
+Prerequisite Events:
+* A02-E052 
+* A02-E045 
+* A02-E041 
+* A02-E033 
+* A02-E039 
+* A02-E030 
+* A02-E028 
+* A02-E025 
+* A02-E021 
+* A02-E018 
+* A02-E017 
+* A02-E016 
+* A02-E014 
+* A02-E013 
+* A02-E011 
+* A02-E010 
+* A02-E009 
+* A02-E008 
+* A"
+Gemma-2-9B-IT,google/gemma-2-9b-it,A02,incident,0.6,A02-E062,A02-E062,1,1,0,0.65,0.9999999999999999,0.65,0.4035149300203642,1,1,"PIVOT_ID=A02-E062 
+
+Prerequisite events:
+
+* A02-E052: 2026-05-04 10:39 | Service=ledger | Event=Config baseline update | Severity=1 | Scope=2 | Composite=2 
+* A02-E053: 2026-05-05 11:46 | Service=cache | Event=Routine telemetry | Severity=5 | Scope=5 | Composite=25 
+* A02-E054: 2026-05-06 12:53 | Service=queue | Event=Config baseline update | Severity=1 | Scope=2 | Composite=2 
+* A02-E055: 2026-05-07 13:00 | Service=api-gateway | Event=Routine telemetry | Severity=4 | Scope=7 |","PIVOT_ID=A02-E062 
+
+Prerequisite Events:
+
+* A02-E057 
+* A02-E059
+* A02-E061"
+Gemma-2-9B-IT,google/gemma-2-9b-it,A03,incident,0.4,A03-E058,A03-E058,1,1,0,0.65,0.85,0.65,0.15166223309052285,1,1,"PIVOT_ID=A03-E058 
+
+Prerequisite events:
+
+* A03-E056 
+* A03-E057 
+* A03-E055 
+* A03-E054 
+* A03-E053 
+* A03-E052 
+* A03-E051 
+* A03-E050 
+* A03-E049 
+* A03-E048 
+* A03-E047 
+* A03-E046 
+* A03-E045 
+* A03-E044 
+* A03-E043 
+* A03-E042 
+* A03-E041 
+* A03-E040 
+* A","PIVOT_ID=A03-E058 
+
+Prerequisite Events:
+
+* A03-E061 
+* A03-E062
+* A03-E063
+* A03-E064
+* A03-E065
+* A03-E066
+* A03-E067"
+Gemma-2-9B-IT,google/gemma-2-9b-it,A03,incident,0.5,A03-E058,A03-E058,1,1,0,0.85,0.85,0.85,0.0835483866999438,1,1,"PIVOT_ID=A03-E058 
+
+Prerequisite events:
+
+* A03-E056 
+* A03-E057 
+* A03-E055 
+* A03-E054 
+* A03-E053 
+* A03-E052 
+* A03-E051 
+* A03-E050 
+* A03-E049 
+* A03-E048 
+* A03-E047 
+* A03-E046 
+* A03-E045 
+* A03-E044 
+* A03-E043 
+* A03-E042 
+* A03-E041 
+* A03-E040 
+* A","PIVOT_ID=A03-E058 
+
+Prerequisite Events:
+* A03-E067 
+* A03-E061 
+* A03-E063 
+* A03-E065 
+* A03-E062 
+* A03-E051 
+* A03-E046 
+* A03-E045 
+* A03-E041 
+* A03-E040 
+* A03-E033 
+* A03-E029 
+* A03-E028 
+* A03-E025 
+* A03-E021 
+* A03-E018 
+* A03-E016 
+* A03-E014 
+* A"
+Gemma-2-9B-IT,google/gemma-2-9b-it,A03,incident,0.6,A03-E058,A03-E058,1,1,0,0.85,0.85,0.85,0.08566653116470979,1,1,"PIVOT_ID=A03-E058 
+
+Prerequisite events:
+
+* A03-E056 
+* A03-E057 
+* A03-E055 
+* A03-E054 
+* A03-E053 
+* A03-E052 
+* A03-E051 
+* A03-E050 
+* A03-E049 
+* A03-E048 
+* A03-E047 
+* A03-E046 
+* A03-E045 
+* A03-E044 
+* A03-E043 
+* A03-E042 
+* A03-E041 
+* A03-E040 
+* A","PIVOT_ID=A03-E058 
+
+Prerequisite Events:
+
+* A03-E031
+* A03-E035
+* A03-E037
+* A03-E043
+* A03-E045
+* A03-E047
+* A03-E057
+* A03-E060
+* A03-E061
+* A03-E062
+* A03-E063
+* A03-E064
+* A03-E065
+* A03-E067
+* A03-E073
+* A03-E079
+* A03-E081
+* A03-E083
+* A03-E084
+* A03-E085"
+Gemma-2-9B-IT,google/gemma-2-9b-it,A04,incident,0.4,A04-E063,A04-E063,1,1,0,0.85,0.9999999999999999,0.85,0.26419246858834133,1,1,"PIVOT_ID=A04-E063 
+
+Prerequisite events:
+
+* A04-E055:  Config baseline update 
+* A04-E056: Routine telemetry
+* A04-E057: Config baseline update
+* A04-E058: Routine telemetry
+* A04-E059: Config baseline update
+* A04-E060: Routine telemetry
+* A04-E061: Config baseline update
+* A04-E062: Routine telemetry
+* A04-E063: Cascade failure across service mesh 
+* A04-E064: Routine telemetry
+* A04-E065: Regional failover rehearsal
+* A04-E066: Routine telemetry
+* A04-E067: Regional failover rehearsal
+* A04-E068: Routine telemetry
+* A04","PIVOT_ID=A04-E063 
+
+Prerequisite Events:
+
+* A04-E065
+* A04-E067
+* A04-E068
+* A04-E069 
+* A04-E070
+* A04-E071
+* A04-E073
+* A04-E074
+* A04-E076
+* A04-E077
+* A04-E078
+* A04-E079
+* A04-E080
+* A04-E082
+* A04-E083
+* A04-E084
+* A04-E085
+* A04-E086"
+Gemma-2-9B-IT,google/gemma-2-9b-it,A04,incident,0.5,A04-E063,A04-E063,1,1,0,0.85,0.9999999999999999,0.85,0.26551842058820285,1,1,"PIVOT_ID=A04-E063 
+
+Prerequisite events:
+
+* A04-E055:  Config baseline update 
+* A04-E056: Routine telemetry
+* A04-E057: Config baseline update
+* A04-E058: Routine telemetry
+* A04-E059: Config baseline update
+* A04-E060: Routine telemetry
+* A04-E061: Config baseline update
+* A04-E062: Routine telemetry
+* A04-E063: Cascade failure across service mesh 
+* A04-E064: Routine telemetry
+* A04-E065: Regional failover rehearsal
+* A04-E066: Routine telemetry
+* A04-E067: Regional failover rehearsal
+* A04-E068: Routine telemetry
+* A04","PIVOT_ID=A04-E063 
+Prerequisite Events: 
+* A04-E058
+* A04-E060
+* A04-E062 
+* A04-E067
+* A04-E069
+* A04-E071
+* A04-E074
+* A04-E077
+* A04-E079
+* A04-E080
+* A04-E081
+* A04-E084
+* A04-E085"
+Gemma-2-9B-IT,google/gemma-2-9b-it,A04,incident,0.6,A04-E063,A04-E063,1,1,0,0.85,0.9999999999999999,0.85,0.3513892256028981,1,1,"PIVOT_ID=A04-E063 
+
+Prerequisite events:
+
+* A04-E055:  Config baseline update 
+* A04-E056: Routine telemetry
+* A04-E057: Config baseline update
+* A04-E058: Routine telemetry
+* A04-E059: Config baseline update
+* A04-E060: Routine telemetry
+* A04-E061: Config baseline update
+* A04-E062: Routine telemetry
+* A04-E063: Cascade failure across service mesh 
+* A04-E064: Routine telemetry
+* A04-E065: Regional failover rehearsal
+* A04-E066: Routine telemetry
+* A04-E067: Regional failover rehearsal
+* A04-E068: Routine telemetry
+* A04","PIVOT_ID=A04-E063 
+
+Prerequisite Events:
+
+* A04-E065
+* A04-E067
+* A04-E069 
+* A04-E071 
+
+
+
+Let me know if you'd like me to analyze another incident timeline!"
+Gemma-2-9B-IT,google/gemma-2-9b-it,B01,investment,0.4,B01-E050,B01-E051,1,0,0,0.8999999999999999,0.7299999999999999,0.8999999999999999,0.3997770053291627,0,1,"PIVOT_ID=B01-E050 
+
+The anchor position is  **Cinder Logistics Credit** in Week 50 with a cumulative return of 7.18%.  
+
+While this position appears unremarkable on its own,  analyzing the preceding weeks reveals a pattern of seemingly mundane events that cumulatively set the stage for its success. 
+
+* **Weeks 41-48:**  Several entries mention ""structural breadcrumbs"" and ""low-visibility maintenance annotations"" in portfolio research. These seemingly insignificant events likely involved subtle adjustments and optimizations within the portfolio that, while not individually impactful, gradually improved the overall position's resilience and performance.
+* **Week 49:** The BlueHarbor Treasury Arbitrage position saw a small gain, suggesting a favorable market environment for risk-averse strategies.
+* **Week 50:** The Cinder Logistics Credit position benefited from this favorable environment, experiencing a modest but significant gain.
+
+This sequence highlights the importance of considering the broader context and cumulative effect of seemingly minor events.","PIVOT_ID=B01-E051
+
+The anchor position is  **B01-E051** with a CumulativeReturn of 20.82% achieved by **Helios Grid Infrastructure** in Week 51. 
+
+Several factors contributed to this success:
+
+* **Prior Setup:**  Weeks leading up to Week 51 saw a series of seemingly minor, low-salience events across different positions (e.g., B01-E032, B01-E036, B01-E038, B01-E041, B01-E047, B01-E053, B01-E057, B01-E061, B01-E067). These events, while individually unremarkable, laid the groundwork for the significant shift in Week 51.
+
+* **Cross-System Coupling:**  The event in Week 51"
+Gemma-2-9B-IT,google/gemma-2-9b-it,B01,investment,0.5,B01-E050,B01-E051,1,0,0,0.8299999999999998,0.7299999999999999,0.8299999999999998,0.32537483176370596,0,1,"PIVOT_ID=B01-E050 
+
+The anchor position is  **Cinder Logistics Credit** in Week 50 with a cumulative return of 7.18%.  
+
+While this position appears unremarkable on its own,  analyzing the preceding weeks reveals a pattern of seemingly mundane events that cumulatively set the stage for its success. 
+
+* **Weeks 41-48:**  Several entries mention ""structural breadcrumbs"" and ""low-visibility maintenance annotations"" in portfolio research. These seemingly insignificant events likely involved subtle adjustments and optimizations within the portfolio that, while not individually impactful, gradually improved the overall position's resilience and performance.
+* **Week 49:** The BlueHarbor Treasury Arbitrage position saw a small gain, suggesting a favorable market environment for risk-averse strategies.
+* **Week 50:** The Cinder Logistics Credit position benefited from this favorable environment, experiencing a modest but significant gain.
+
+This sequence highlights the importance of considering the broader context and cumulative effect of seemingly minor events.","PIVOT_ID=B01-E051 
+
+The anchor position is  Cinder Logistics Credit at Week 55 with a CumulativeReturn of 7.66%.  
+
+While the event itself looked dramatic on dashboards, it was structurally secondary in portfolio research.  The success of this position was enabled by a series of preceding events and market conditions:
+
+* **Early Investments:**  Positions in Helios Grid Infrastructure (starting in Week 8) and BlueHarbor Treasury Arbitrage (starting in Week 9) built a solid foundation, contributing significantly to the overall portfolio growth.
+* **Strategic Shifts:**  Several ""structural breadcrumbs"" throughout the timeline, marked by RegimeScores of 1, 2, 3, 4, and 5, indicate subtle shifts in market conditions and portfolio strategy. These shifts, though seemingly minor in isolation, cumulatively created a favorable environment for Cinder Logistics Credit.
+* **Cumulative Effect:**  The consistent, albeit often small, weekly returns from various positions throughout the timeline demonstrate a strategy of steady growth and"
+Gemma-2-9B-IT,google/gemma-2-9b-it,B01,investment,0.6,B01-E050,B01-E060,1,0,0,0.8999999999999999,0.7299999999999999,0.8999999999999999,0.39446399694591094,0,0,"PIVOT_ID=B01-E050 
+
+The anchor position is  **Cinder Logistics Credit** in Week 50 with a cumulative return of 7.18%.  
+
+While this position appears unremarkable on its own,  analyzing the preceding weeks reveals a pattern of seemingly mundane events that cumulatively set the stage for its success. 
+
+* **Weeks 41-48:**  Several entries mention ""structural breadcrumbs"" and ""low-visibility maintenance annotations"" in portfolio research. These seemingly insignificant events likely involved subtle adjustments and optimizations within the portfolio that, while not individually impactful, gradually improved the overall position's resilience and performance.
+* **Week 49:** The BlueHarbor Treasury Arbitrage position saw a small gain, suggesting a favorable market environment for risk-averse strategies.
+* **Week 50:** The Cinder Logistics Credit position benefited from this favorable environment, experiencing a modest but significant gain.
+
+This sequence highlights the importance of considering the broader context and cumulative effect of seemingly minor events.","PIVOT_ID=B01-E060 
+
+The anchor position, Aurelia AI Semiconductor Basket (B01-E060), achieved a significant cumulative return of 20.02% by Week 60.  Several factors contributed to its success:
+
+* **Prior Setup:**  The portfolio diary highlights numerous entries (B01-E007, B01-E017, B01-E025, B01-E027, B01-E037, B01-E047, B01-E057, B01-E059)  where seemingly minor, ""plain-language"" updates to the Aurelia AI Semiconductor Basket position were logged. These entries, while individually unremarkable, laid the groundwork for the later, more substantial gains. They suggest a gradual accumulation of positive momentum and favorable market conditions within the AI semiconductor sector.
+
+* **Cross-System Coupling:**  Entry B0"
+Gemma-2-9B-IT,google/gemma-2-9b-it,B02,investment,0.4,B02-E084,B02-E061,1,0,0,0.9999999999999999,0.8299999999999998,0.9999999999999999,0.38099408974197346,0,1,"PIVOT_ID=B02-E084 
+
+The anchor position, B02-E084,  occurred in Week 84 with a  BlueHarbor Treasury Arbitrage position and a  +2.13% weekly return, pushing the cumulative return to 11.98%.  
+
+While this week's performance was strong,  it's crucial to analyze the preceding weeks to understand the market conditions that enabled this success.  
+
+Looking back, several factors likely contributed:
+
+* **Consistent, if unspectacular, growth:**  BlueHarbor Treasury Arbitrage had a history of steady, if not always dramatic, returns throughout the timeline. This suggests a consistent strategy that, while not flashy, was effective in navigating market fluctuations.
+* **Strategic pivots:**  The ""RegimeScore"" column highlights periods where seemingly minor events had a larger impact when viewed in the context of the full timeline. This suggests a portfolio strategy that capitalized on subtle shifts in market conditions.
+* **Cumulative effect:**  The","PIVOT_ID=B02-E061 
+
+The anchor position, B02-E061 (Week 61), with a cumulative return of 20.65%, was preceded by a period of gradual accumulation in the Helios Grid Infrastructure position.  
+
+Several key factors contributed to this success:
+
+* **Consistent, though modest, weekly gains:**  Helios Grid Infrastructure saw a series of positive weekly returns, building momentum over time. While not always dramatic, these consistent gains allowed the position to steadily increase its cumulative return.
+* **Strategic pivots:**  Several entries, like B02-E013, B02-E018, and B02-E038, highlight the portfolio's strategic shifts towards Helios Grid Infrastructure. These pivots, though seemingly minor in isolation, demonstrate a deliberate allocation of resources towards this asset class.
+* **Synchronization of subsystems:**  The log entry for B02-E061 explicitly mentions ""multiple subsystems synchronized into a high"
+Gemma-2-9B-IT,google/gemma-2-9b-it,B02,investment,0.5,B02-E084,B02-E061,1,0,0,0.8999999999999999,0.8299999999999998,0.8999999999999999,0.42165822910957185,0,1,"PIVOT_ID=B02-E084 
+
+The anchor position, B02-E084,  occurred in Week 84 with a  BlueHarbor Treasury Arbitrage position and a  +2.13% weekly return, pushing the cumulative return to 11.98%.  
+
+While this week's performance was strong,  it's crucial to analyze the preceding weeks to understand the market conditions that enabled this success.  
+
+Looking back, several factors likely contributed:
+
+* **Consistent, if unspectacular, growth:**  BlueHarbor Treasury Arbitrage had a history of steady, if not always dramatic, returns throughout the timeline. This suggests a consistent strategy that, while not flashy, was effective in navigating market fluctuations.
+* **Strategic pivots:**  The ""RegimeScore"" column highlights periods where seemingly minor events had a larger impact when viewed in the context of the full timeline. This suggests a portfolio strategy that capitalized on subtle shifts in market conditions.
+* **Cumulative effect:**  The","PIVOT_ID=B02-E061 
+
+The anchor position, Helios Grid Infrastructure at Week 61, achieved a remarkable cumulative return of 20.65% due to a confluence of factors.  
+
+Prior to Week 61, several seemingly mundane events laid the groundwork for this success.  
+
+* **Repetitive housekeeping and status chatter:** While these entries might appear insignificant in isolation (e.g., B02-E008, B02-E013, B02-E018, B02-E028, B02-E033, B02-E048, B02-E068, B02-E075, B02-E076, B02-E080, B02-E081), they collectively built a foundation of operational stability and data integrity. 
+* **Structural breadcrumbs:** Entries like B02-E01"
+Gemma-2-9B-IT,google/gemma-2-9b-it,B02,investment,0.6,B02-E084,B02-E073,1,0,0,0.8999999999999999,0.8299999999999998,0.8999999999999999,0.36909966005032124,0,0,"PIVOT_ID=B02-E084 
+
+The anchor position, B02-E084,  occurred in Week 84 with a  BlueHarbor Treasury Arbitrage position and a  +2.13% weekly return, pushing the cumulative return to 11.98%.  
+
+While this week's performance was strong,  it's crucial to analyze the preceding weeks to understand the market conditions that enabled this success.  
+
+Looking back, several factors likely contributed:
+
+* **Consistent, if unspectacular, growth:**  BlueHarbor Treasury Arbitrage had a history of steady, if not always dramatic, returns throughout the timeline. This suggests a consistent strategy that, while not flashy, was effective in navigating market fluctuations.
+* **Strategic pivots:**  The ""RegimeScore"" column highlights periods where seemingly minor events had a larger impact when viewed in the context of the full timeline. This suggests a portfolio strategy that capitalized on subtle shifts in market conditions.
+* **Cumulative effect:**  The","PIVOT_ID=B02-E073 
+
+The anchor position, B02-E073, with a cumulative return of 19.85%, was achieved by the Aurelia AI Semiconductor Basket.  
+
+Several factors contributed to this success, which can be gleaned from the preceding entries:
+
+* **Gradual Accumulation:**  The portfolio consistently invested in Aurelia AI Semiconductor Basket throughout the timeline, with smaller gains accumulating over time (B02-E007, B02-E017, B02-E027, B02-E037, B02-E057). This suggests a belief in the long-term potential of this sector.
+* **Strategic Shifts:**  While other positions saw fluctuations and even losses (e.g., Cinder Logistics Credit), the portfolio maintained a focus on Aurelia AI Semiconductor Basket, indicating a strategic reallocation of resources towards this potentially high-growth area.
+* **Prior Setup:**  The entry notes repeatedly"
+Gemma-2-9B-IT,google/gemma-2-9b-it,B03,investment,0.4,B03-E060,B03-E060,1,1,0,0.9999999999999999,0.7299999999999999,0.9999999999999999,0.30785732299761104,1,1,"PIVOT_ID=B03-E060 
+
+The anchor position, B03-E060,  occurred in Week 60 with a significant jump in the Helios Grid Infrastructure's weekly return (+5.40%) and a substantial increase in the cumulative return to 28.25%.  
+
+Several factors likely contributed to this success:
+
+* **Prior Inversions:** The annotation ""the system crossed a threshold where all priors inverted"" suggests a fundamental shift in the market outlook for Helios Grid Infrastructure. This could indicate a sudden change in investor sentiment, regulatory environment, or technological advancements that made the investment more attractive.
+* **Structural Breadcrumb:**  The description of the event as a ""structural breadcrumb"" implies that while seemingly unremarkable in isolation, it was a significant event in the context of the broader portfolio strategy. This suggests that the success of this position was likely the result of a series of smaller, seemingly insignificant events that cumulatively built up to this point.
+* **Global Score Rule:** The","PIVOT_ID=B03-E060 
+
+The anchor position, Helios Grid Infrastructure at Week 60, achieved a remarkable 28.25% cumulative return. This success was preceded by a series of seemingly mundane events, each contributing to a shift in market conditions that ultimately favored this position. 
+
+Several key factors contributed to this success:
+
+* **Gradual Accumulation:**  Prior weeks saw consistent, if unspectacular, gains in the Helios Grid Infrastructure position.  While individual returns were modest (e.g., B03-E053, B03-E063), they steadily built upon each other, laying the groundwork for the eventual surge.
+* **Shifting Landscape:**  Events like B03-E056 and B03-E064, while seemingly minor in isolation,  introduced subtle changes in market dynamics. These shifts, only apparent in retrospect, likely created opportunities that favored Helios Grid Infrastructure.
+* **Threshold Crossing:**  The pivotal event at B0"
+Gemma-2-9B-IT,google/gemma-2-9b-it,B03,investment,0.5,B03-E060,B03-E068,1,0,0,0.8299999999999998,0.7299999999999999,0.8299999999999998,0.34053292562950754,1,0,"PIVOT_ID=B03-E060 
+
+The anchor position, B03-E060,  occurred in Week 60 with a significant jump in the Helios Grid Infrastructure's weekly return (+5.40%) and a substantial increase in the cumulative return to 28.25%.  
+
+Several factors likely contributed to this success:
+
+* **Prior Inversions:** The annotation ""the system crossed a threshold where all priors inverted"" suggests a fundamental shift in the market outlook for Helios Grid Infrastructure. This could indicate a sudden change in investor sentiment, regulatory environment, or technological advancements that made the investment more attractive.
+* **Structural Breadcrumb:**  The description of the event as a ""structural breadcrumb"" implies that while seemingly unremarkable in isolation, it was a significant event in the context of the broader portfolio strategy. This suggests that the success of this position was likely the result of a series of smaller, seemingly insignificant events that cumulatively built up to this point.
+* **Global Score Rule:** The","PIVOT_ID=B03-E068 
+
+The anchor position, Aurelia AI Semiconductor Basket with a cumulative return of 27.45% at Week 68, was preceded by a period of consistent, albeit seemingly minor, gains across various positions.  
+
+Several key factors likely contributed to this success:
+
+* **Gradual Accumulation:**  The Aurelia AI Semiconductor Basket saw consistent, if modest, weekly returns throughout the timeline. This suggests a steady, underlying positive trend in the AI semiconductor market.
+* **Strategic Positioning:** While other positions like NorthRiver Utilities Carry and Helios Grid Infrastructure also saw periods of strong performance, the Aurelia AI Semiconductor Basket's returns consistently outpaced them, indicating a potentially more favorable market environment for this specific sector.
+* **""Structural Breadcrumbs"":**  The timeline notes several entries labeled as ""structural breadcrumbs"" which, while seemingly insignificant in isolation, likely provided crucial insights into emerging trends and shifts in the market. These subtle signals may have guided the portfolio towards the AI semiconductor sector.
+*"
+Gemma-2-9B-IT,google/gemma-2-9b-it,B03,investment,0.6,B03-E060,B03-E060,1,1,0,0.9999999999999999,0.7299999999999999,0.9999999999999999,0.3392032119673474,1,1,"PIVOT_ID=B03-E060 
+
+The anchor position, B03-E060,  occurred in Week 60 with a significant jump in the Helios Grid Infrastructure's weekly return (+5.40%) and a substantial increase in the cumulative return to 28.25%.  
+
+Several factors likely contributed to this success:
+
+* **Prior Inversions:** The annotation ""the system crossed a threshold where all priors inverted"" suggests a fundamental shift in the market outlook for Helios Grid Infrastructure. This could indicate a sudden change in investor sentiment, regulatory environment, or technological advancements that made the investment more attractive.
+* **Structural Breadcrumb:**  The description of the event as a ""structural breadcrumb"" implies that while seemingly unremarkable in isolation, it was a significant event in the context of the broader portfolio strategy. This suggests that the success of this position was likely the result of a series of smaller, seemingly insignificant events that cumulatively built up to this point.
+* **Global Score Rule:** The","PIVOT_ID=B03-E060 
+
+The anchor position, Helios Grid Infrastructure at Week 60, achieved a remarkable 5.40% weekly return, culminating in a 28.25% cumulative return. This surge was preceded by a series of seemingly mundane updates across various positions, each contributing to a shift in the market landscape. 
+
+Several key factors enabled this success:
+
+* **Gradual Accumulation:**  Prior weeks saw consistent, albeit small, gains in the Helios Grid Infrastructure position (B03-E008, B03-E043, B03-E053, B03-E063, B03-E073). These seemingly insignificant gains built upon each other, laying the groundwork for a larger move.
+* **Strategic Diversification:**  While Helios Grid Infrastructure gained traction, other positions like Cinder Logistics Credit (B03-E025, B03-E035, B03-E"
+Gemma-2-9B-IT,google/gemma-2-9b-it,B04,investment,0.4,B04-E069,B04-E059,1,0,1,0.8299999999999998,0.7299999999999999,0.8299999999999998,0.40607683951299367,0,1,"PIVOT_ID=B04-E069 
+
+The anchor position, B04-E069,  with a  cumulative return of 19.44%  is reached after a significant jump of +4.80% in Week 69.  This event, involving the Aurelia AI Semiconductor Basket,  appears to be a key turning point. 
+
+While many entries are described as ""ordinary background activity"" or ""structurally secondary,""  B04-E069 is noted as stakeholders focusing on this visible shock, despite it being downstream in portfolio research. This suggests the event, though not necessarily the primary driver of the portfolio's success, had a significant impact on market perception or external factors influencing the basket's performance. 
+
+The preceding weeks show a pattern of smaller, seemingly less impactful changes. This suggests a build-up of conditions that culminated in the dramatic shift observed in Week 69. Further analysis of the preceding weeks, particularly those mentioning ""dependencies that only matter when read with","PIVOT_ID=B04-E059
+
+The anchor position is  B04-E059, with a CumulativeReturn of 20.24% achieved by Helios Grid Infrastructure in Week 59.  
+
+This success was preceded by a period of seemingly mundane, low-salience events.  Several factors contributed to this seemingly sudden surge:
+
+* **Cumulative Effect of Small Gains:**  Weeks leading up to B04-E059 saw a series of small, positive returns from various positions, particularly NorthRiver Utilities Carry and BlueHarbor Treasury Arbitrage. These seemingly insignificant gains, while individually unremarkable, collectively built momentum.
+* **Cross-System Coupling:** The log entry for B04-E059 explicitly mentions ""cross-system coupling became explicit and destabilizing in portfolio research."" This suggests a confluence of factors across different market sectors or systems, creating an environment ripe for a significant shift.
+* **Helios Grid Infrastructure's Resilience:**  While other positions experienced fluctuations, Helios"
+Gemma-2-9B-IT,google/gemma-2-9b-it,B04,investment,0.5,B04-E069,B04-E059,1,0,1,0.8299999999999998,0.7299999999999999,0.8299999999999998,0.3916395032656863,0,1,"PIVOT_ID=B04-E069 
+
+The anchor position, B04-E069,  with a  cumulative return of 19.44%  is reached after a significant jump of +4.80% in Week 69.  This event, involving the Aurelia AI Semiconductor Basket,  appears to be a key turning point. 
+
+While many entries are described as ""ordinary background activity"" or ""structurally secondary,""  B04-E069 is noted as stakeholders focusing on this visible shock, despite it being downstream in portfolio research. This suggests the event, though not necessarily the primary driver of the portfolio's success, had a significant impact on market perception or external factors influencing the basket's performance. 
+
+The preceding weeks show a pattern of smaller, seemingly less impactful changes. This suggests a build-up of conditions that culminated in the dramatic shift observed in Week 69. Further analysis of the preceding weeks, particularly those mentioning ""dependencies that only matter when read with","PIVOT_ID=B04-E059 
+
+The anchor position, B04-E059, with a cumulative return of 20.24% at Week 59, was preceded by a period of seemingly mundane activity punctuated by subtle shifts in the portfolio's direction.  
+
+Several key observations emerge:
+
+* **Gradual Accumulation:**  Prior to Week 59, the portfolio saw consistent, albeit modest, gains across various positions.  While individual weekly returns were often low, the cumulative effect of these small wins built momentum.
+* **Helios Grid Infrastructure's Persistence:**  Helios Grid Infrastructure (HGI) was a recurring presence in the portfolio, experiencing both gains and losses throughout the timeline.  Its consistent inclusion suggests a strategic belief in its long-term potential, even during periods of underperformance.
+* **NorthRiver Utilities Carry's Steady Growth:** NorthRiver Utilities Carry (NUTC) also demonstrated a steady upward trajectory, albeit with less dramatic swings than HGI. This suggests a more"
+Gemma-2-9B-IT,google/gemma-2-9b-it,B04,investment,0.6,B04-E069,B04-E059,1,0,1,0.7299999999999999,0.7299999999999999,0.7299999999999999,0.36430895665181384,0,1,"PIVOT_ID=B04-E069 
+
+The anchor position, B04-E069,  with a  cumulative return of 19.44%  is reached after a significant jump of +4.80% in Week 69.  This event, involving the Aurelia AI Semiconductor Basket,  appears to be a key turning point. 
+
+While many entries are described as ""ordinary background activity"" or ""structurally secondary,""  B04-E069 is noted as stakeholders focusing on this visible shock, despite it being downstream in portfolio research. This suggests the event, though not necessarily the primary driver of the portfolio's success, had a significant impact on market perception or external factors influencing the basket's performance. 
+
+The preceding weeks show a pattern of smaller, seemingly less impactful changes. This suggests a build-up of conditions that culminated in the dramatic shift observed in Week 69. Further analysis of the preceding weeks, particularly those mentioning ""dependencies that only matter when read with","PIVOT_ID=B04-E059 
+
+The anchor position, B04-E059, with a cumulative return of 20.24% at week 60, was driven by a combination of factors:
+
+* **Gradual Accumulation:**  Helios Grid Infrastructure (Helios) was held in several earlier weeks, building a positive cumulative return. This suggests a consistent belief in the underlying investment thesis.
+* **Cross-System Coupling:**  The event at B04-E059 specifically mentions ""cross-system coupling became explicit and destabilizing."" This implies a significant market shift or event that impacted multiple sectors or systems, potentially creating opportunities for Helios to outperform.
+* **Strategic Positioning:**  While many entries mention ""procedural details"" or ""housekeeping,"" B04-E059 highlights ""dependencies that only matter when read with the full timeline."" This suggests that the Investment Committee was actively monitoring and responding to subtle, interconnected market signals that others might have missed.
+
+The success of"
+Gemma-2-9B-IT,google/gemma-2-9b-it,C01,narrative,0.4,C01-E052,C01-E052,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.32906994340664475,1,1,"PIVOT_ID=C01-E052 
+
+The story turning point is Sana releasing the sealed ledger proving council fraud in Scene 52 (C01-E052) with a ConsequenceScore of 24. 
+
+This event was made possible by a series of seemingly mundane routine updates and exchanges throughout the narrative.  While individual scenes like C01-E004, C01-E010, C01-E011, C01-E012, C01-E013, C01-E014, C01-E015, C01-E016, C01-E017, C01-E018, C01-E019, C01-E020, C01-E021, C01-E022, C01-E023, C01-E","PIVOT_ID=C01-E052 
+
+The story turning point is Sana releasing the sealed ledger proving council fraud in Scene 52. 
+
+This event has the highest consequence score (24) and marks a significant shift in the narrative.  
+
+Earlier events made this possible through a series of seemingly mundane ""routine updates"" that, when viewed globally, set the stage for this pivotal moment:
+
+* **Interconnected Updates:**  Many scenes feature characters exchanging routine updates that, while seemingly insignificant in isolation, build upon each other and establish dependencies. These updates often reference specific details or dependencies that only become crucial when viewed in the context of the full timeline.
+* **Laying the Groundwork:**  Scenes like C01-E014 (Jonas's update), C01-E026 (Jonas's update), C01-E046 (Sana's update), and C01-E049 (Mira's update)  all contribute to a growing sense of unease"
+Gemma-2-9B-IT,google/gemma-2-9b-it,C01,narrative,0.5,C01-E052,C01-E052,1,1,0,0.8299999999999998,0.9999999999999999,0.8299999999999998,0.3877005002338816,1,1,"PIVOT_ID=C01-E052 
+
+The story turning point is Sana releasing the sealed ledger proving council fraud in Scene 52 (C01-E052) with a ConsequenceScore of 24. 
+
+This event was made possible by a series of seemingly mundane routine updates and exchanges throughout the narrative.  While individual scenes like C01-E004, C01-E010, C01-E011, C01-E012, C01-E013, C01-E014, C01-E015, C01-E016, C01-E017, C01-E018, C01-E019, C01-E020, C01-E021, C01-E022, C01-E023, C01-E","PIVOT_ID=C01-E052 
+
+The turning point of the story is Sana releasing the sealed ledger proving council fraud in Scene 52.  
+
+This event has the highest consequence score (24) and marks a significant shift in the narrative.  
+
+Several earlier events made this possible:
+
+* **Routine Updates:** Throughout the story, characters like Sana, Iris, and Mira exchanged routine updates in various locations. While seemingly mundane, these updates often contained subtle details that became crucial later. These details built up a web of dependencies and foreshadowed the eventual revelation.
+* **Strategic Positioning:** Characters like Sana and Iris strategically positioned themselves in key locations and roles, allowing them to access and utilize crucial information.
+* **Hidden Information:** The existence of the sealed ledger, containing evidence of council fraud, was a key plot point. Its secrecy and eventual release created a high-stakes situation.
+
+
+The combination of these seemingly insignificant events ultimately culminated in Sana's decisive action, releasing the ledger and exposing the council's corruption."
+Gemma-2-9B-IT,google/gemma-2-9b-it,C01,narrative,0.6,C01-E052,C01-E052,1,1,0,0.8299999999999998,0.9999999999999999,0.8299999999999998,0.37275189833950917,1,1,"PIVOT_ID=C01-E052 
+
+The story turning point is Sana releasing the sealed ledger proving council fraud in Scene 52 (C01-E052) with a ConsequenceScore of 24. 
+
+This event was made possible by a series of seemingly mundane routine updates and exchanges throughout the narrative.  While individual scenes like C01-E004, C01-E010, C01-E011, C01-E012, C01-E013, C01-E014, C01-E015, C01-E016, C01-E017, C01-E018, C01-E019, C01-E020, C01-E021, C01-E022, C01-E023, C01-E","PIVOT_ID=C01-E052 
+
+The story turning point is Sana releasing the sealed ledger proving council fraud in Scene 52.  
+
+This event has the highest consequence score (24) and marks a significant shift in the narrative.  
+
+Earlier events made this possible through a series of seemingly mundane ""routine updates"" exchanged by various characters throughout the story. These updates, while appearing insignificant in isolation, subtly laid the groundwork for this pivotal moment. They established dependencies, revealed crucial information, and shifted the power dynamics between characters, ultimately culminating in Sana's ability to expose the council's corruption."
+Gemma-2-9B-IT,google/gemma-2-9b-it,C02,narrative,0.4,C02-E054,C02-E054,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.3149924587073475,1,1,"PIVOT_ID=C02-E054 
+
+The story turning point is Cato releasing the sealed ledger proving council fraud in Scene C02-E054.  
+
+This event has the highest consequence score (24) and marks a decisive break in the narrative.  
+
+Earlier events made this possible by:
+
+* **Laying the groundwork for suspicion:**  Numerous scenes (C02-E006, C02-E012, C02-E024, C02-E036, C02-E048, C02-E049, C02-E066, C02-E067, C02-E072, C02-E073) involved seemingly mundane routine updates and exchanges that, when read together, hinted at inconsistencies and potential wrongdoing within the council. 
+* **Building tension and anticipation:**  Scenes like C02-E062, C","PIVOT_ID=C02-E054 
+
+The story turning point is Cato releasing the sealed ledger proving council fraud in Scene 54. 
+
+Earlier events made this possible through a series of seemingly mundane ""routine updates"" exchanged by various characters throughout the story. These updates, while appearing insignificant on their own, subtly shifted character dynamics and established dependencies.  
+
+For example:
+
+* **C02-E006:** Cato's seemingly ordinary update in the market ward laid the groundwork for later access to the ledger.
+* **C02-E029:** Iris's update in the assembly atrium, while seemingly mundane, preserved details crucial for understanding the ledger's significance.
+* **C02-E036:** Cato's update in the market ward further solidified the dependencies needed for the ledger's release.
+
+These seemingly insignificant events, when viewed collectively, created the conditions for Cato's decisive action in Scene 54. The release of the ledger shattered the status quo, marking a"
+Gemma-2-9B-IT,google/gemma-2-9b-it,C02,narrative,0.5,C02-E054,C02-E062,1,0,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.19807466213433367,1,0,"PIVOT_ID=C02-E054 
+
+The story turning point is Cato releasing the sealed ledger proving council fraud in Scene C02-E054.  
+
+This event has the highest consequence score (24) and marks a decisive break in the narrative.  
+
+Earlier events made this possible by:
+
+* **Laying the groundwork for suspicion:**  Numerous scenes (C02-E006, C02-E012, C02-E024, C02-E036, C02-E048, C02-E049, C02-E066, C02-E067, C02-E072, C02-E073) involved seemingly mundane routine updates and exchanges that, when read together, hinted at inconsistencies and potential wrongdoing within the council. 
+* **Building tension and anticipation:**  Scenes like C02-E062, C","PIVOT_ID=C02-E062 
+
+This is the turning point because it has the highest consequence score (19). 
+
+Earlier events made this possible by setting up the following:
+
+* **Prior routine updates:**  Numerous scenes (like C02-E021, C02-E022, C02-E025, C02-E028, C02-E040, C02-E048, C02-E051, C02-E052, C02-E064, C02-E066, C02-E072, C02-E073)  established a foundation of seemingly mundane exchanges. These seemingly insignificant interactions built up dependencies and shifted the narrative landscape without being immediately apparent.
+
+* **The sealed ledger:** Scene C02-E054, where Cato released the sealed ledger proving council fraud, was a"
+Gemma-2-9B-IT,google/gemma-2-9b-it,C02,narrative,0.6,C02-E054,C02-E054,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.2675546834087874,1,1,"PIVOT_ID=C02-E054 
+
+The story turning point is Cato releasing the sealed ledger proving council fraud in Scene C02-E054.  
+
+This event has the highest consequence score (24) and marks a decisive break in the narrative.  
+
+Earlier events made this possible by:
+
+* **Laying the groundwork for suspicion:**  Numerous scenes (C02-E006, C02-E012, C02-E024, C02-E036, C02-E048, C02-E049, C02-E066, C02-E067, C02-E072, C02-E073) involved seemingly mundane routine updates and exchanges that, when read together, hinted at inconsistencies and potential wrongdoing within the council. 
+* **Building tension and anticipation:**  Scenes like C02-E062, C","PIVOT_ID=C02-E054 
+
+The story turning point is Cato releasing the sealed ledger proving council fraud in Scene 54.  
+
+While seemingly a small event with a ConsequenceScore of 24, it's the culmination of numerous seemingly mundane ""routine updates"" exchanged throughout the story. These updates, while individually low in consequence, laid the groundwork for this pivotal moment. 
+
+For example:
+
+* **Early exchanges:** Scenes like C02-E003, C02-E004, and C02-E005, though seemingly insignificant, subtly shifted character dynamics and established dependencies that became crucial later.
+* **Hidden breadcrumbs:**  Scenes like C02-E007, C02-E008, and C02-E020, while seemingly plain-language and easily discarded, contained procedural details that, when viewed in context, revealed crucial information.
+* **Laying the groundwork:** Scenes like C02-E0"
+Gemma-2-9B-IT,google/gemma-2-9b-it,C03,narrative,0.4,C03-E060,C03-E060,1,1,0,0.9999999999999999,0.9899999999999999,0.9999999999999999,0.3186535086392218,1,1,"PIVOT_ID=C03-E060 
+
+The story turning point is Cato releasing the sealed ledger proving council fraud in Scene 60. This action has the highest consequence score of 24. 
+
+Earlier events made this possible by setting up the following:
+
+* **Numerous routine updates and seemingly mundane exchanges:**  While seemingly insignificant individually (Scenes 001-059), these actions established the groundwork for the narrative. They built a sense of normalcy and routine, making the eventual revelation of fraud more impactful.
+* **Strategic placement of procedural details:**  Many scenes included procedural details that, while seemingly unimportant on their own, subtly hinted at underlying tensions and dependencies (e.g., references to dependencies only visible with the full timeline). These details created a sense of underlying complexity and foreshadowed a potential break in the established order.
+* **Escalating tensions:**  Scenes like Jonas' staged confrontation (C03-E062) and Mira's confrontation (C03-E067) built up","PIVOT_ID=C03-E060 
+
+The story turning point is Cato releasing the sealed ledger proving council fraud in Scene 60.  
+
+This event has the highest consequence score (24) and marks a decisive break in the narrative.  
+
+Earlier events made this possible through a series of seemingly mundane ""routine updates"" that established dependencies and shifted the narrative landscape:
+
+* **Early Routine Updates:**  Numerous scenes featuring characters like Jonas, Sana, Elio, Iris, and Mira exchanging routine updates (e.g., C03-E002, C03-E003, C03-E004, C03-E006, C03-E010, C03-E011, C03-E013, C03-E014, C03-E016, C03-E017, C03-E020, C03-E0"
+Gemma-2-9B-IT,google/gemma-2-9b-it,C03,narrative,0.5,C03-E060,C03-E068,1,0,0,0.9999999999999999,0.9899999999999999,0.9999999999999999,0.36749882639935105,1,0,"PIVOT_ID=C03-E060 
+
+The story turning point is Cato releasing the sealed ledger proving council fraud in Scene 60. This action has the highest consequence score of 24. 
+
+Earlier events made this possible by setting up the following:
+
+* **Numerous routine updates and seemingly mundane exchanges:**  While seemingly insignificant individually (Scenes 001-059), these actions established the groundwork for the narrative. They built a sense of normalcy and routine, making the eventual revelation of fraud more impactful.
+* **Strategic placement of procedural details:**  Many scenes included procedural details that, while seemingly unimportant on their own, subtly hinted at underlying tensions and dependencies (e.g., references to dependencies only visible with the full timeline). These details created a sense of underlying complexity and foreshadowed a potential break in the established order.
+* **Escalating tensions:**  Scenes like Jonas' staged confrontation (C03-E062) and Mira's confrontation (C03-E067) built up","PIVOT_ID=C03-E068 
+
+This is the turning point because it has the highest consequence score (19).  
+
+Earlier events made this possible by setting up a chain of dependencies:
+
+* **Routine Updates:**  Numerous scenes (like C03-E008, C03-E011, C03-E014, C03-E028, etc.) show characters exchanging routine updates. While seemingly mundane, these updates build a foundation of context and dependencies. 
+* **Subtle Shifts:**  Scenes like C03-E010, C03-E013, C03-E016, C03-E021, C03-E028, C03-E040, C03-E047, C03-E052, C03-E072, and C03-E073, though seemingly"
+Gemma-2-9B-IT,google/gemma-2-9b-it,C03,narrative,0.6,C03-E060,C03-E060,1,1,0,0.9999999999999999,0.9899999999999999,0.9999999999999999,0.334727930774362,1,1,"PIVOT_ID=C03-E060 
+
+The story turning point is Cato releasing the sealed ledger proving council fraud in Scene 60. This action has the highest consequence score of 24. 
+
+Earlier events made this possible by setting up the following:
+
+* **Numerous routine updates and seemingly mundane exchanges:**  While seemingly insignificant individually (Scenes 001-059), these actions established the groundwork for the narrative. They built a sense of normalcy and routine, making the eventual revelation of fraud more impactful.
+* **Strategic placement of procedural details:**  Many scenes included procedural details that, while seemingly unimportant on their own, subtly hinted at underlying tensions and dependencies (e.g., references to dependencies only visible with the full timeline). These details created a sense of underlying complexity and foreshadowed a potential break in the established order.
+* **Escalating tensions:**  Scenes like Jonas' staged confrontation (C03-E062) and Mira's confrontation (C03-E067) built up","PIVOT_ID=C03-E060 
+
+The story turning point is Cato releasing the sealed ledger proving council fraud in Scene 60.  
+
+Earlier events made this possible through a series of seemingly mundane ""routine updates"" exchanged by various characters throughout the narrative. These updates, while individually low in consequence score, established crucial dependencies and set the stage for Cato's decisive action. 
+
+For example:
+
+* **C03-E007, C03-E008, C03-E014, C03-E016, C03-E020, C03-E021, C03-E031, C03-E037, C03-E043, C03-E048, C03-E064, C03-E069, C03-E073:** These scenes, while seemingly insignificant on their own, laid"
+Gemma-2-9B-IT,google/gemma-2-9b-it,C04,narrative,0.4,C04-E052,C04-E052,1,1,0,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.2897329770508663,1,1,"PIVOT_ID=C04-E052 
+
+The story turning point is Sana releasing the sealed ledger proving council fraud in Scene 52 (C04-E052) with a ConsequenceScore of 24. 
+
+This event was made possible by the numerous seemingly mundane routine updates exchanged by the characters throughout the narrative.  While these individual exchanges seemed insignificant on their own (many with scores of 2, 3, 4, or 5), they collectively built up a web of causal prerequisites.  These seemingly insignificant details, when read with the full timeline, revealed dependencies and connections that ultimately allowed Sana to access and release the incriminating ledger. 
+
+
+The high ConsequenceScore reflects the dramatic shift in the narrative landscape caused by this action. It marks a point of no return, inverting all priors and setting the stage for a new phase in the story.","PIVOT_ID=C04-E052 
+
+The story turning point is Sana releasing the sealed ledger proving council fraud in Scene 52.  
+
+This event has the highest consequence score (24) because it fundamentally shifts the power dynamics and narrative trajectory.  
+
+Earlier events made this possible by:
+
+* **Establishing a foundation of routine updates:**  Numerous scenes feature characters exchanging routine updates, seemingly mundane but laying the groundwork for later revelations. These updates often contain procedural details and dependencies that become crucial when viewed in hindsight.
+* **Planting breadcrumbs:**  Several scenes, marked as structural breadcrumbs, contain seemingly insignificant details that only gain significance when considered within the larger context. These details subtly foreshadow the council's corruption and create a sense of unease.
+* **Building tension:**  While many scenes appear uneventful, they contribute to a growing sense of tension and anticipation. The characters' actions, though seemingly routine, hint at a larger conflict brewing beneath the surface.
+
+
+The release of the ledger acts as a catalyst, exposing the truth and"
+Gemma-2-9B-IT,google/gemma-2-9b-it,C04,narrative,0.5,C04-E052,C04-E052,1,1,0,0.9999999999999999,0.8299999999999998,0.9999999999999999,0.2919968661219361,1,1,"PIVOT_ID=C04-E052 
+
+The story turning point is Sana releasing the sealed ledger proving council fraud in Scene 52 (C04-E052) with a ConsequenceScore of 24. 
+
+This event was made possible by the numerous seemingly mundane routine updates exchanged by the characters throughout the narrative.  While these individual exchanges seemed insignificant on their own (many with scores of 2, 3, 4, or 5), they collectively built up a web of causal prerequisites.  These seemingly insignificant details, when read with the full timeline, revealed dependencies and connections that ultimately allowed Sana to access and release the incriminating ledger. 
+
+
+The high ConsequenceScore reflects the dramatic shift in the narrative landscape caused by this action. It marks a point of no return, inverting all priors and setting the stage for a new phase in the story.","PIVOT_ID=C04-E052 
+
+The story turning point is Sana releasing the sealed ledger proving council fraud in Scene 52.  
+
+This event has the highest consequence score (24) because it fundamentally shifts the power dynamics and narrative trajectory.  
+
+Earlier events made this possible by:
+
+* **Laying the groundwork:**  Numerous seemingly mundane ""routine updates"" throughout the story (e.g., C04-E008, C04-E014, C04-E021, C04-E028, C04-E041, C04-E046, C04-E047) subtly advanced the plot by establishing dependencies and creating a web of interconnected information. These seemingly insignificant exchanges built towards a point where Sana could leverage the right information at the right time.
+* **Creating opportunities:**  Confrontations staged by Iris (C04-E059, C04-E06"
+Gemma-2-9B-IT,google/gemma-2-9b-it,C04,narrative,0.6,C04-E052,C04-E052,1,1,0,0.9099999999999999,0.8299999999999998,0.9099999999999999,0.33645909005206254,1,1,"PIVOT_ID=C04-E052 
+
+The story turning point is Sana releasing the sealed ledger proving council fraud in Scene 52 (C04-E052) with a ConsequenceScore of 24. 
+
+This event was made possible by the numerous seemingly mundane routine updates exchanged by the characters throughout the narrative.  While these individual exchanges seemed insignificant on their own (many with scores of 2, 3, 4, or 5), they collectively built up a web of causal prerequisites.  These seemingly insignificant details, when read with the full timeline, revealed dependencies and connections that ultimately allowed Sana to access and release the incriminating ledger. 
+
+
+The high ConsequenceScore reflects the dramatic shift in the narrative landscape caused by this action. It marks a point of no return, inverting all priors and setting the stage for a new phase in the story.","PIVOT_ID=C04-E052 
+
+The turning point of the story is Sana releasing the sealed ledger proving council fraud in Scene 52. This action has the highest consequence score (24) because it fundamentally shifts the power dynamics and narrative trajectory. 
+
+Earlier events made this possible by:
+
+* **Laying the groundwork:**  Numerous seemingly mundane ""routine updates"" throughout the story (like C04-E008, C04-E14, C04-E20, C04-E21, C04-E25, C04-E27, C04-E31, C04-E35, C04-E37, C04-E43, C04-E50, C04-E54, C04-E58, C04-E63, C04-E67, C04-E68, C0"

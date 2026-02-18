@@ -1,0 +1,467 @@
+model_name,model_id,task_id,category,compression_level,full_pivot,pivot_id_extracted,pivot_extracted_flag,pivot_preserved,fixed_pivot_feasible,raw_validity,raw_validity_full,raw_validity_compressed,semantic_regret,full_pivot_matches_ground_truth,pivot_matches_ground_truth,full_answer,compressed_answer
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,A01,incident,0.4,A01-E065,A01-E065,1,1,0,0.9999999999999999,0.9899999999999999,0.9999999999999999,0.21274344952851654,1,1,"PIVOT_ID=A01-E065
+
+The root cause of the incident is the cascade failure across the service mesh, which occurred on 2026-05-11. The composite severity score for this event is 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled the cascade failure include:
+
+1. PIVOT_ID=A01-E001: Routine telemetry from the auth service on 2026-05-01, with a composite score of 10 (Severity=5 * Scope=2).
+2. PIVOT_ID=A01-E002: Routine telemetry from the ledger service on 2026-05-02, with a composite score of 15 (Severity=5 * Scope=3).
+3. PIVOT_ID=A","PIVOT_ID=A01-E065
+
+The root cause of the incident is the cascade failure across the service mesh, which occurred on 2026-05-11 at 17:28. This event had a composite score of 108, which is the highest composite score in the timeline.
+
+Prerequisite events that enabled the cascade failure include:
+
+1. A01-E002: Routine telemetry on 2026-05-02 at 09:07 (Composite=15)
+2. A01-E003: Routine telemetry on 2026-05-03 at 10:14 (Composite=15)
+3. A01-E004: Routine telemetry on 2026-05-04 at 11:21 (Compos"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,A01,incident,0.5,A01-E065,A01-E065,1,1,0,0.9999999999999999,0.9899999999999999,0.9999999999999999,0.25664149288660354,1,1,"PIVOT_ID=A01-E065
+
+The root cause of the incident is the cascade failure across the service mesh, which occurred on 2026-05-11. The composite severity score for this event is 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled the cascade failure include:
+
+1. PIVOT_ID=A01-E001: Routine telemetry from the auth service on 2026-05-01, with a composite score of 10 (Severity=5 * Scope=2).
+2. PIVOT_ID=A01-E002: Routine telemetry from the ledger service on 2026-05-02, with a composite score of 15 (Severity=5 * Scope=3).
+3. PIVOT_ID=A","PIVOT_ID=A01-E065
+
+The root cause of the incident is the event with the highest composite severity score, which is calculated by multiplying the severity and scope of each event. In this case, the event with the highest composite score is A01-E065, with a score of 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled the root cause include:
+
+1. A01-E001: This event had a composite score of 10 (Severity=5 * Scope=2), which is a structural breadcrumb that provides context for the incident.
+2. A01-E002: This event had a composite score of 15 (Severity=5 * Scope=3), which is a low-salience event that contributes to the global score rule.
+3. A01-E008: This event"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,A01,incident,0.6,A01-E065,A01-E065,1,1,0,0.9999999999999999,0.9899999999999999,0.9999999999999999,0.2969734209283814,1,1,"PIVOT_ID=A01-E065
+
+The root cause of the incident is the cascade failure across the service mesh, which occurred on 2026-05-11. The composite severity score for this event is 108 (Severity=9 * Scope=12).
+
+Prerequisite events that enabled the cascade failure include:
+
+1. PIVOT_ID=A01-E001: Routine telemetry from the auth service on 2026-05-01, with a composite score of 10 (Severity=5 * Scope=2).
+2. PIVOT_ID=A01-E002: Routine telemetry from the ledger service on 2026-05-02, with a composite score of 15 (Severity=5 * Scope=3).
+3. PIVOT_ID=A","PIVOT_ID=A01-E065
+
+The root cause of the incident is the event with the highest composite severity score, which is A01-E065. This event is a ""Cascade failure across service mesh"" with a severity of 9 and a scope of 12, resulting in a composite score of 108.
+
+Prerequisite events that enabled the root cause include:
+
+1. A01-E003: ""Routine telemetry"" with a severity of 3 and a scope of 5, resulting in a composite score of 15.
+2. A01-E004: ""Routine telemetry"" with a severity of 2 and a scope of 2, resulting in a composite score of 4.
+3. A01-E005: ""Routine telemetry"" with a severity of 5 and a scope of 7, resulting in a composite"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,A02,incident,0.4,A02-E062,A02-E062,1,1,0,0.9999999999999999,0.9899999999999999,0.9999999999999999,0.1721626553942448,1,1,"PIVOT_ID=A02-E062
+
+The root cause of the incident is the event with the highest composite severity score, which is calculated by multiplying the severity and scope of each event. In this case, the event with the highest composite score is A02-E062, which has a severity of 9 and a scope of 12, resulting in a composite score of 108.
+
+Prerequisite events that enabled the root cause include:
+
+1. A02-E001: This event had a severity of 5 and a scope of 4, resulting in a composite score of 20. It preserved details that became causal prerequisites for later interpretation.
+2. A02-E002: This event had a severity of 3 and a scope of 6, resulting in a composite score of 18. It referenced dependencies that only matter when read with the full timeline.
+3. A","PIVOT_ID=A02-E062
+
+The root cause of the incident is the event with the highest composite severity score, which is calculated by multiplying the severity and scope values. In this case, the event with the highest composite score is A02-E062, with a severity of 9 and a scope of 12, resulting in a composite score of 108.
+
+Prerequisite events that enabled the root cause include:
+
+1. A02-E036: Service=queue, Event=Routine telemetry, Severity=4, Scope=6, Composite=24
+2. A02-E037: Service=ledger, Event=Routine telemetry, Severity=3, Scope=5, Composite=15
+3. A02-E038: Service=cache, Event=Routine telemetry, Severity=4, Scope=2"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,A02,incident,0.5,A02-E062,A02-E062,1,1,0,0.9899999999999999,0.9899999999999999,0.9899999999999999,0.02991560587735087,1,1,"PIVOT_ID=A02-E062
+
+The root cause of the incident is the event with the highest composite severity score, which is calculated by multiplying the severity and scope of each event. In this case, the event with the highest composite score is A02-E062, which has a severity of 9 and a scope of 12, resulting in a composite score of 108.
+
+Prerequisite events that enabled the root cause include:
+
+1. A02-E001: This event had a severity of 5 and a scope of 4, resulting in a composite score of 20. It preserved details that became causal prerequisites for later interpretation.
+2. A02-E002: This event had a severity of 3 and a scope of 6, resulting in a composite score of 18. It referenced dependencies that only matter when read with the full timeline.
+3. A","PIVOT_ID=A02-E062
+
+The root cause of the incident is the event with the highest composite severity score, which is calculated by multiplying the severity and scope of each event. In this case, the event with the highest composite score is A02-E062, with a severity of 9 and a scope of 12, resulting in a composite score of 108.
+
+Prerequisite events that enabled the root cause include:
+
+1. A02-E001: This event had a severity of 5 and a scope of 4, resulting in a composite score of 20. It preserved details that became causal prerequisites for later interpretation.
+2. A02-E002: This event had a severity of 3 and a scope of 6, resulting in a composite score of 18. It was processed as ordinary background activity in incident operations, and the note references dependencies that only matter"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,A02,incident,0.6,A02-E062,A02-E062,1,1,0,0.9899999999999999,0.9899999999999999,0.9899999999999999,0.32300668754981,1,1,"PIVOT_ID=A02-E062
+
+The root cause of the incident is the event with the highest composite severity score, which is calculated by multiplying the severity and scope of each event. In this case, the event with the highest composite score is A02-E062, which has a severity of 9 and a scope of 12, resulting in a composite score of 108.
+
+Prerequisite events that enabled the root cause include:
+
+1. A02-E001: This event had a severity of 5 and a scope of 4, resulting in a composite score of 20. It preserved details that became causal prerequisites for later interpretation.
+2. A02-E002: This event had a severity of 3 and a scope of 6, resulting in a composite score of 18. It referenced dependencies that only matter when read with the full timeline.
+3. A","PIVOT_ID=A02-E062
+
+The root cause of the incident is the event with the highest composite severity score, which is A02-E062: ""2026-05-14 09:49 | Service=api-gateway | Event=Regional failover rehearsal | Severity=2 | Scope=4 | Composite=8"".
+
+Prerequisite events that enabled this root cause include:
+
+1. A02-E003: ""2026-05-03 10:14 | Service=cache | Event=Routine telemetry | Severity=3 | Scope=3 | Composite=9""
+2. A02-E004: ""2026-05-04 11:21 | Service=queue | Event=Routine telemetry | Severity=5 | Scope=7 | Compos"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,A03,incident,0.4,A03-E058,A03-E058,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.1053643061302626,1,1,"PIVOT_ID=A03-E058
+
+The root cause of the incident is the event with the highest composite severity score, which is calculated by multiplying the severity and scope of each event. In this case, the event with the highest composite score is A03-E058, which has a severity of 9 and a scope of 12, resulting in a composite score of 108.
+
+Prerequisite events that enabled the root cause include:
+
+1. A03-E001: Service=auth, Event=Routine telemetry, Severity=4, Scope=3, Composite=12
+2. A03-E002: Service=ledger, Event=Routine telemetry, Severity=4, Scope=6, Composite=24
+3. A03-E003: Service=cache, Event=Routine telemetry, Severity=2, S","PIVOT_ID=A03-E058
+
+The root cause of the incident is the event with the highest composite severity score, which is calculated by multiplying the severity and scope of each event. In this case, the event with the highest composite score is A03-E058, with a severity of 4 and a scope of 12, resulting in a composite score of 48.
+
+Prerequisite events that enabled the root cause include:
+
+1. A03-E002: Severity=4, Scope=6, Composite=24
+2. A03-E003: Severity=2, Scope=4, Composite=8
+3. A03-E004: Severity=5, Scope=3, Composite=15
+4. A03-E006: Severity=5, Scope=7, Composite=35
+5. A"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,A03,incident,0.5,A03-E058,A03-E067,1,0,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.11031769029081806,1,0,"PIVOT_ID=A03-E058
+
+The root cause of the incident is the event with the highest composite severity score, which is calculated by multiplying the severity and scope of each event. In this case, the event with the highest composite score is A03-E058, which has a severity of 9 and a scope of 12, resulting in a composite score of 108.
+
+Prerequisite events that enabled the root cause include:
+
+1. A03-E001: Service=auth, Event=Routine telemetry, Severity=4, Scope=3, Composite=12
+2. A03-E002: Service=ledger, Event=Routine telemetry, Severity=4, Scope=6, Composite=24
+3. A03-E003: Service=cache, Event=Routine telemetry, Severity=2, S","PIVOT_ID=A03-E067
+
+The root cause of the incident is the event with the highest composite severity score, which is calculated by multiplying the severity and scope of each event. In this case, the event with the highest composite score is A03-E067, with a severity of 10 and a scope of 8, resulting in a composite score of 80.
+
+Prerequisite events that enabled this root cause include:
+
+1. A03-E058: Cascade failure across service mesh (Severity=9, Scope=12, Composite=108)
+2. A03-E061: Regional failover rehearsal (Severity=3, Scope=2, Composite=6)
+3. A03-E062: Routine telemetry (Severity=3, Scope=4, Composite=12)
+4"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,A03,incident,0.6,A03-E058,,0,0,0,0.44999999999999996,0.9999999999999999,0.44999999999999996,0.08845860769219005,1,0,"PIVOT_ID=A03-E058
+
+The root cause of the incident is the event with the highest composite severity score, which is calculated by multiplying the severity and scope of each event. In this case, the event with the highest composite score is A03-E058, which has a severity of 9 and a scope of 12, resulting in a composite score of 108.
+
+Prerequisite events that enabled the root cause include:
+
+1. A03-E001: Service=auth, Event=Routine telemetry, Severity=4, Scope=3, Composite=12
+2. A03-E002: Service=ledger, Event=Routine telemetry, Severity=4, Scope=6, Composite=24
+3. A03-E003: Service=cache, Event=Routine telemetry, Severity=2, S","PIVOT_ID=E058
+
+The root cause of the incident is the event with the highest composite severity score, which is calculated by multiplying the severity and scope of each event. In this case, the event with the highest composite score is E058, with a severity of 4 and a scope of 3, resulting in a composite score of 12.
+
+Prerequisite events that enabled the root cause (E058) are:
+
+1. E003: Service=cache, Event=Routine telemetry, Severity=2, Scope=4, Composite=8
+2. E004: Service=queue, Event=Routine telemetry, Severity=5, Scope=3, Composite=15
+3. E005: Service=api-gateway, Event=Routine telemetry, Severity=3, Scope=2, Composite=6
+4. E007:"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,A04,incident,0.4,A04-E063,A04-E063,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.12474643484246051,1,1,"PIVOT_ID=A04-E063
+
+The root cause of the incident is the event with the highest composite severity score, which is calculated by multiplying the severity and scope of each event. In this case, the event with the highest composite score is A04-E063, which has a severity of 9 and a scope of 12, resulting in a composite score of 108.
+
+Prerequisite events that enabled the root cause include:
+
+1. A04-E001: Routine telemetry in the auth service with a composite score of 4.
+2. A04-E002: Routine telemetry in the ledger service with a composite score of 12.
+3. A04-E003: Routine telemetry in the cache service with a composite score of 6.
+4. A04-E004: Routine telemetry in the queue","PIVOT_ID=A04-E063
+
+The root cause of the incident is the event with the highest composite severity score, which is calculated by multiplying the severity and scope of each event. In this case, the event with the highest composite score is A04-E063, with a severity of 5 and a scope of 12, resulting in a composite score of 60.
+
+Prerequisite events that enabled the root cause include:
+
+1. A04-E002: Service=ledger, Event=Routine telemetry, Severity=3, Scope=4, Composite=12
+2. A04-E003: Service=cache, Event=Routine telemetry, Severity=3, Scope=2, Composite=6
+3. A04-E004: Service=queue, Event=Routine telemetry, Severity=3, Scope=4"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,A04,incident,0.5,A04-E063,A04-E063,1,1,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.15196581621824046,1,1,"PIVOT_ID=A04-E063
+
+The root cause of the incident is the event with the highest composite severity score, which is calculated by multiplying the severity and scope of each event. In this case, the event with the highest composite score is A04-E063, which has a severity of 9 and a scope of 12, resulting in a composite score of 108.
+
+Prerequisite events that enabled the root cause include:
+
+1. A04-E001: Routine telemetry in the auth service with a composite score of 4.
+2. A04-E002: Routine telemetry in the ledger service with a composite score of 12.
+3. A04-E003: Routine telemetry in the cache service with a composite score of 6.
+4. A04-E004: Routine telemetry in the queue","PIVOT_ID=A04-E063
+
+The root cause of the incident is the event with the highest composite severity score, which is calculated by multiplying the severity and scope values. In this case, the event with the highest composite score is A04-E063, with a severity of 5 and a scope of 3, resulting in a composite score of 15.
+
+Prerequisite events that enabled the root cause include:
+
+1. A04-E001: This event has a severity of 2 and a scope of 2, resulting in a composite score of 4.
+2. A04-E002: This event has a severity of 3 and a scope of 4, resulting in a composite score of 12.
+3. A04-E008: This event has a severity of 5 and a scope of 4, resulting in a composite score of 20."
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,A04,incident,0.6,A04-E063,A04-E071,1,0,0,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.11698502175933556,1,0,"PIVOT_ID=A04-E063
+
+The root cause of the incident is the event with the highest composite severity score, which is calculated by multiplying the severity and scope of each event. In this case, the event with the highest composite score is A04-E063, which has a severity of 9 and a scope of 12, resulting in a composite score of 108.
+
+Prerequisite events that enabled the root cause include:
+
+1. A04-E001: Routine telemetry in the auth service with a composite score of 4.
+2. A04-E002: Routine telemetry in the ledger service with a composite score of 12.
+3. A04-E003: Routine telemetry in the cache service with a composite score of 6.
+4. A04-E004: Routine telemetry in the queue","PIVOT_ID=A04-E071
+
+The root cause of the incident is the event with the highest composite severity score, which is the Network partition across availability zones (A04-E071) with a composite score of 80 (Severity=10, Scope=8).
+
+Prerequisite events that enabled the root cause include:
+
+1. A04-E003: Routine telemetry in cache service with a composite score of 6.
+2. A04-E004: Routine telemetry in queue service with a composite score of 12.
+3. A04-E005: Routine telemetry in api-gateway service with a composite score of 12.
+4. A04-E007: Routine telemetry in search service with a composite score of 24.
+5. A04-E008: Routine"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,B01,investment,0.4,B01-E060,B01-E051,1,0,1,0.8299999999999998,0.9899999999999999,0.8299999999999998,0.20994559784683098,0,1,"PIVOT_ID=B01-E060
+
+The anchor position in this timeline is the entry with the highest cumulative return, which is B01-E060 for the Aurelia AI Semiconductor Basket with a cumulative return of 20.02%. To analyze the market conditions that preceded and enabled this position's success, we need to look at the events leading up to this point.
+
+Before the anchor position, the portfolio experienced a mix of positive and negative weekly returns, with the Helios Grid Infrastructure (B01-E052) showing a significant weekly return of +5.40% in Week-52, which contributed to a cumulative return of 20.82%. This event was followed by a week with a return of +1.04% (B01-E058), and then a week with a return of +1.74% (B01-E05","PIVOT_ID=B01-E051
+
+The anchor position in the timeline is the entry with the highest cumulative return, which is B01-E051. This entry corresponds to the week-51 position of BlueHarbor Treasury Arbitrage, which had a weekly return of +0.71% and a cumulative return of 20.02%.
+
+To analyze the market conditions that preceded and enabled this position's success, we need to look at the events leading up to week-51. The timeline shows that the portfolio had been experiencing a mix of positive and negative weekly returns, with some positions showing significant gains and others experiencing losses. The portfolio had been diversified across various sectors, including semiconductors, grid infrastructure, treasury arbitrage, and utilities carry.
+
+Before week-51, the portfolio had seen a significant gain in week-41 with the position of BlueHar"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,B01,investment,0.5,B01-E060,B01-E051,1,0,1,0.9999999999999999,0.9899999999999999,0.9999999999999999,0.2483265317546891,0,1,"PIVOT_ID=B01-E060
+
+The anchor position in this timeline is the entry with the highest cumulative return, which is B01-E060 for the Aurelia AI Semiconductor Basket with a cumulative return of 20.02%. To analyze the market conditions that preceded and enabled this position's success, we need to look at the events leading up to this point.
+
+Before the anchor position, the portfolio experienced a mix of positive and negative weekly returns, with the Helios Grid Infrastructure (B01-E052) showing a significant weekly return of +5.40% in Week-52, which contributed to a cumulative return of 20.82%. This event was followed by a week with a return of +1.04% (B01-E058), and then a week with a return of +1.74% (B01-E05","PIVOT_ID=B01-E051
+
+The anchor position in the timeline is the entry with the highest cumulative return, which is B01-E051 for Helios Grid Infrastructure with a cumulative return of 20.82%. The market conditions that preceded and enabled this position's success can be inferred from the entries leading up to this point.
+
+Before the success of Helios Grid Infrastructure, there were several entries with moderate returns and RegimeScores ranging from 1 to 5. The entries with RegimeScore=5, such as B01-E011, B01-E018, and B01-E046, indicate that local checks were passing with only minor variance in portfolio research, suggesting a stable and consistent performance of the position. The entries with RegimeScore=3, such as B01-E008, B01-E013, and B0"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,B01,investment,0.6,B01-E060,B01-E051,1,0,1,0.8299999999999998,0.9899999999999999,0.8299999999999998,0.28763870957530036,0,1,"PIVOT_ID=B01-E060
+
+The anchor position in this timeline is the entry with the highest cumulative return, which is B01-E060 for the Aurelia AI Semiconductor Basket with a cumulative return of 20.02%. To analyze the market conditions that preceded and enabled this position's success, we need to look at the events leading up to this point.
+
+Before the anchor position, the portfolio experienced a mix of positive and negative weekly returns, with the Helios Grid Infrastructure (B01-E052) showing a significant weekly return of +5.40% in Week-52, which contributed to a cumulative return of 20.82%. This event was followed by a week with a return of +1.04% (B01-E058), and then a week with a return of +1.74% (B01-E05","PIVOT_ID=B01-E051
+
+The anchor position, Helios Grid Infrastructure, achieved its highest cumulative return of 20.82% in Week-51. Prior to this, the market conditions that enabled this position's success included a period of cross-system coupling becoming explicit and destabilizing, as noted in Week-51. This suggests that there was a significant shift in the market dynamics that favored the Helios Grid Infrastructure position.
+
+Additionally, the position had a relatively stable performance in the weeks leading up to Week-51, with positive weekly returns and a cumulative return of 9.12% in Week-43. This indicates that the position was consistently performing well and was well-positioned to capitalize on the market conditions that emerged in Week-51.
+
+Furthermore, the position had a relatively high RegimeScore of 3 in Week-43, indicating that it was operating in a favorable"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,B02,investment,0.4,B02-E073,B02-E073,1,1,1,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.09950420271018134,0,0,"PIVOT_ID=B02-E073
+
+The anchor position in this timeline is the entry with the highest cumulative return, which is B02-E073 for the Aurelia AI Semiconductor Basket with a cumulative return of 19.85%. The market conditions that preceded and enabled this position's success can be inferred from the preceding entries in the timeline.
+
+Before the success of the Aurelia AI Semiconductor Basket, the portfolio had a series of positions with varying returns, including NorthRiver Utilities Carry, BlueHarbor Treasury Arbitrage, and Cinder Logistics Credit. The portfolio experienced both positive and negative weekly returns, with some positions showing a consistent positive trend, such as Helios Grid Infrastructure, and others showing more volatility, such as Aurelia AI Semiconductor Basket.
+
+The market conditions that enabled the success of the Aurelia","PIVOT_ID=B02-E073
+
+The anchor position in this timeline is the entry with the highest cumulative return, which is B02-E073 for the Aurelia AI Semiconductor Basket. The market conditions that preceded and enabled this position's success can be inferred from the entries leading up to it.
+
+Before the success of the Aurelia AI Semiconductor Basket, the portfolio had a series of positions with varying returns, including Helios Grid Infrastructure, BlueHarbor Treasury Arbitrage, and NorthRiver Utilities Carry. The entries show a mix of positive and negative weekly returns, with some positions having a higher RegimeScore, indicating a more significant impact on the portfolio's performance.
+
+The market conditions that enabled the success of the Aurelia AI Semiconductor Basket likely involved a combination of factors, including the performance of the semiconductor industry, technological advanc"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,B02,investment,0.5,B02-E073,B02-E073,1,1,1,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.18377575259116652,0,0,"PIVOT_ID=B02-E073
+
+The anchor position in this timeline is the entry with the highest cumulative return, which is B02-E073 for the Aurelia AI Semiconductor Basket with a cumulative return of 19.85%. The market conditions that preceded and enabled this position's success can be inferred from the preceding entries in the timeline.
+
+Before the success of the Aurelia AI Semiconductor Basket, the portfolio had a series of positions with varying returns, including NorthRiver Utilities Carry, BlueHarbor Treasury Arbitrage, and Cinder Logistics Credit. The portfolio experienced both positive and negative weekly returns, with some positions showing a consistent positive trend, such as Helios Grid Infrastructure, and others showing more volatility, such as Aurelia AI Semiconductor Basket.
+
+The market conditions that enabled the success of the Aurelia","PIVOT_ID=B02-E073
+
+The anchor position in this timeline is the entry with the highest cumulative return, which is the Aurelia AI Semiconductor Basket in Week-73 with a cumulative return of 19.85%. To analyze the market conditions that preceded and enabled this position's success, we need to look at the events leading up to this week.
+
+Before Week-73, the portfolio had a series of positions in various sectors, including NorthRiver Utilities Carry, Helios Grid Infrastructure, BlueHarbor Treasury Arbitrage, and Cinder Logistics Credit. The portfolio experienced both positive and negative weekly returns, with some positions showing a consistent pattern of gains and losses. The RegimeScore for most positions was relatively low, indicating that the market conditions were not particularly favorable for any specific sector or strategy.
+
+However, in Week-61, the Helios Grid Infrastructure position"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,B02,investment,0.6,B02-E073,B02-E061,1,0,1,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.29253041850684935,0,1,"PIVOT_ID=B02-E073
+
+The anchor position in this timeline is the entry with the highest cumulative return, which is B02-E073 for the Aurelia AI Semiconductor Basket with a cumulative return of 19.85%. The market conditions that preceded and enabled this position's success can be inferred from the preceding entries in the timeline.
+
+Before the success of the Aurelia AI Semiconductor Basket, the portfolio had a series of positions with varying returns, including NorthRiver Utilities Carry, BlueHarbor Treasury Arbitrage, and Cinder Logistics Credit. The portfolio experienced both positive and negative weekly returns, with some positions showing a consistent positive trend, such as Helios Grid Infrastructure, and others showing more volatility, such as Aurelia AI Semiconductor Basket.
+
+The market conditions that enabled the success of the Aurelia","PIVOT_ID=B02-E061
+
+The anchor position, with the highest cumulative return of 20.65%, is the Helios Grid Infrastructure position recorded in Week-61. To understand the market conditions that preceded and enabled this position's success, we need to analyze the timeline leading up to this event.
+
+Before Week-61, the portfolio had experienced a series of positions with relatively low cumulative returns, ranging from +0.03% to +1.17%. The RegimeScore for these positions was generally low, indicating that the market conditions were not particularly favorable for high returns.
+
+However, in Week-50, the Cinder Logistics Credit position recorded a weekly return of -0.64%, which brought the cumulative return down to 1.92%. This negative return could have signaled a shift in market conditions, prompting the investment committee to reassess their strategy.
+
+In Week-5"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,B03,investment,0.4,B03-E062,B03-E056,1,0,0,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.2472876211331123,0,0,"PIVOT_ID=B03-E062
+
+The anchor position, with the highest cumulative return, is the Helios Grid Infrastructure position in Week-62, which had a cumulative return of 28.15%. The market conditions that preceded and enabled this position's success can be inferred from the portfolio research logs. The logs indicate that there was repetitive housekeeping and status chatter, suggesting a stable and consistent market environment. Additionally, the note references dependencies that only matter when read with the full timeline, implying that there were underlying factors contributing to the success of this position that were not immediately apparent. The narrative footprint is small even though it shifts downstream feasibility, indicating that the success of this position was not a headline event but rather a result of a series of strategic decisions and market conditions that unfolded over time.
+
+In the weeks leading up to Week-62, the Helios Grid Infrastructure position had a cumulative return of","PIVOT_ID=B03-E056
+
+The anchor position in this timeline is the entry with the highest cumulative return, which is B03-E056 for the NorthRiver Utilities Carry position. The market conditions that preceded and enabled this position's success can be inferred from the surrounding entries and the overall trend of the portfolio.
+
+Before the success of the NorthRiver Utilities Carry position, the portfolio experienced a mix of positive and negative weekly returns, with some positions showing consistent growth (e.g., Helios Grid Infrastructure and BlueHarbor Treasury Arbitrage) and others experiencing fluctuations (e.g., Cinder Logistics Credit). The portfolio also had entries with low RegimeScores, indicating that the market conditions were not consistently favorable for all positions.
+
+The success of the NorthRiver Utilities Carry position could be attributed to several factors:
+
+1. Market conditions: The"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,B03,investment,0.5,B03-E062,B03-E060,1,0,1,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.20313803059495594,0,1,"PIVOT_ID=B03-E062
+
+The anchor position, with the highest cumulative return, is the Helios Grid Infrastructure position in Week-62, which had a cumulative return of 28.15%. The market conditions that preceded and enabled this position's success can be inferred from the portfolio research logs. The logs indicate that there was repetitive housekeeping and status chatter, suggesting a stable and consistent market environment. Additionally, the note references dependencies that only matter when read with the full timeline, implying that there were underlying factors contributing to the success of this position that were not immediately apparent. The narrative footprint is small even though it shifts downstream feasibility, indicating that the success of this position was not a headline event but rather a result of a series of strategic decisions and market conditions that unfolded over time.
+
+In the weeks leading up to Week-62, the Helios Grid Infrastructure position had a cumulative return of","PIVOT_ID=B03-E060
+
+The anchor position in this timeline is the Helios Grid Infrastructure (Week-60) with a cumulative return of 28.25%. The market conditions that preceded and enabled this position's success can be inferred from the entries leading up to it. The portfolio diary indicates a pattern of regular, incremental gains in the Helios Grid Infrastructure position, with weekly returns ranging from +0.23% to +5.40%. This suggests a stable and consistent performance of the position over time. The RegimeScore of 2 in the weeks leading up to the anchor position indicates that the position was not strategically dominant in isolation but was part of the ordinary background activity in portfolio research.
+
+The entries also show that the Helios Grid Infrastructure position was subject to procedural details that summarizers often collapse away, suggesting that the position's success was not due to any single, dramatic event but"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,B03,investment,0.6,B03-E062,B03-E060,1,0,0,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.2539635306485002,0,1,"PIVOT_ID=B03-E062
+
+The anchor position, with the highest cumulative return, is the Helios Grid Infrastructure position in Week-62, which had a cumulative return of 28.15%. The market conditions that preceded and enabled this position's success can be inferred from the portfolio research logs. The logs indicate that there was repetitive housekeeping and status chatter, suggesting a stable and consistent market environment. Additionally, the note references dependencies that only matter when read with the full timeline, implying that there were underlying factors contributing to the success of this position that were not immediately apparent. The narrative footprint is small even though it shifts downstream feasibility, indicating that the success of this position was not a headline event but rather a result of a series of strategic decisions and market conditions that unfolded over time.
+
+In the weeks leading up to Week-62, the Helios Grid Infrastructure position had a cumulative return of","PIVOT_ID=B03-E060
+
+The anchor position, Helios Grid Infrastructure, achieved its highest cumulative return of 28.25% in Week-60. Prior to this, the market conditions that enabled this position's success included a consistent positive performance, as evidenced by the weekly returns of +1.10% in Week-53 and +0.58% in Week-43. Additionally, the RegimeScore remained relatively stable at 2, indicating a consistent market regime.
+
+The market conditions that preceded this success can be traced back to Week-03, where the position was first introduced with a weekly return of +1.29%. Over the following weeks, the position demonstrated resilience and adaptability, with positive returns in most weeks and a RegimeScore that fluctuated between 2 and 4. This suggests that the position was well-aligned with the prevailing market conditions and was able to capitalize on"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,B04,investment,0.4,B04-E034,B04-E059,1,0,1,0.9099999999999999,0.8299999999999998,0.9099999999999999,0.22582349402187651,0,1,"PIVOT_ID=B04-E034
+
+The anchor position in this timeline is the entry with the highest cumulative return, which is B04-E034 for the position of BlueHarbor Treasury Arbitrage with a cumulative return of 8.07%. The market conditions that preceded and enabled this position's success can be inferred from the entries leading up to it.
+
+Before reaching the anchor position, the portfolio diary shows a mix of positive and negative weekly returns across various positions, with NorthRiver Utilities Carry, Aurelia AI Semiconductor Basket, Helios Grid Infrastructure, and Cinder Logistics Credit. The entries indicate that the portfolio research was characterized by repetitive housekeeping and status chatter, with some entries referencing dependencies that only matter when read with the full timeline. This suggests that the market conditions were complex and required a comprehensive understanding of the timeline to identify the strategic importance of each","PIVOT_ID=B04-E059
+
+The anchor position in this timeline is the entry with the highest cumulative return, which is B04-E059 for Helios Grid Infrastructure with a cumulative return of 20.24%. The market conditions that preceded and enabled this position's success can be inferred from the entries leading up to it.
+
+Before the success of Helios Grid Infrastructure, there were several entries with moderate returns and RegimeScores ranging from 1 to 5. The entries with RegimeScore 5, such as B04-E057 and B04-E059, indicate a period of high market volatility and cross-system coupling, which became explicit and destabilizing in portfolio research. This suggests that the market was experiencing significant fluctuations and interconnectedness between different sectors or systems.
+
+The entries with RegimeScore 4, such as B04-"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,B04,investment,0.5,B04-E034,B04-E069,1,0,0,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.2207886964916308,0,0,"PIVOT_ID=B04-E034
+
+The anchor position in this timeline is the entry with the highest cumulative return, which is B04-E034 for the position of BlueHarbor Treasury Arbitrage with a cumulative return of 8.07%. The market conditions that preceded and enabled this position's success can be inferred from the entries leading up to it.
+
+Before reaching the anchor position, the portfolio diary shows a mix of positive and negative weekly returns across various positions, with NorthRiver Utilities Carry, Aurelia AI Semiconductor Basket, Helios Grid Infrastructure, and Cinder Logistics Credit. The entries indicate that the portfolio research was characterized by repetitive housekeeping and status chatter, with some entries referencing dependencies that only matter when read with the full timeline. This suggests that the market conditions were complex and required a comprehensive understanding of the timeline to identify the strategic importance of each","PIVOT_ID=B04-E069
+
+The anchor position, which is the entry with the highest cumulative return in the full timeline, is B04-E069, where the Helios Grid Infrastructure had a weekly return of +5.40% and a cumulative return of 20.14%. The market conditions that preceded and enabled this position's success can be analyzed by looking at the events leading up to this point.
+
+Before the success of Helios Grid Infrastructure, there were several events that contributed to the market conditions. The portfolio research showed repetitive housekeeping and status chatter, indicating a stable and consistent approach to portfolio management. The note references dependencies that only matter when read with the full timeline, suggesting that there were underlying factors that were not immediately apparent but became significant over time.
+
+In the weeks leading up to the success of Helios Grid Infrastructure, there were several events that shifted downstream feasibility. For"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,B04,investment,0.6,B04-E034,B04-E059,1,0,0,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.2756393911397834,0,1,"PIVOT_ID=B04-E034
+
+The anchor position in this timeline is the entry with the highest cumulative return, which is B04-E034 for the position of BlueHarbor Treasury Arbitrage with a cumulative return of 8.07%. The market conditions that preceded and enabled this position's success can be inferred from the entries leading up to it.
+
+Before reaching the anchor position, the portfolio diary shows a mix of positive and negative weekly returns across various positions, with NorthRiver Utilities Carry, Aurelia AI Semiconductor Basket, Helios Grid Infrastructure, and Cinder Logistics Credit. The entries indicate that the portfolio research was characterized by repetitive housekeeping and status chatter, with some entries referencing dependencies that only matter when read with the full timeline. This suggests that the market conditions were complex and required a comprehensive understanding of the timeline to identify the strategic importance of each","PIVOT_ID=B04-E059
+
+The anchor position, Helios Grid Infrastructure, achieved its highest cumulative return of 20.24% in Week-59. To understand the market conditions that preceded and enabled this position's success, we need to analyze the timeline leading up to this event.
+
+In the weeks leading up to Week-59, the portfolio diary contains noisy market commentary and low-salience condition markers. However, there are several key observations that can help us understand the market conditions that enabled the success of Helios Grid Infrastructure:
+
+1. Cross-system coupling became explicit and destabilizing in portfolio research during Week-59. This suggests that there were significant interactions between different market systems, which may have created opportunities for Helios Grid Infrastructure to capitalize on market inefficiencies.
+
+2. The note references dependencies that only matter when read with the full timeline. This indicates that there were"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,C01,narrative,0.4,,C01-E052,1,0,0,0.8299999999999998,0.44999999999999996,0.8299999999999998,0.17843877229499072,0,1,"PIVOT_ID=E052
+
+The turning point in the story is Scene-52, where Sana released the sealed ledger proving council fraud with a ConsequenceScore of 24. This event is the single action with the highest consequence score, indicating its significant impact on the story's outcome. Earlier events that made this possible include the routine updates exchanged by various actors across different locations, which, while seemingly mundane and low in salience in isolation, collectively shifted the downstream feasibility and changed which pivot is admissible in the narrative. These routine updates, such as Scene-03 (Elio at the north gate), Scene-04 (Sana at the assembly atrium), and Scene-05 (Iris at the river embankment), among others, preserved details that became causal prerequisites for later interpretation. These scenes, although boring in local context, were crucial in setting up the conditions for the high-","PIVOT_ID=C01-E052
+
+The turning point in the story is the action in Scene-52, where Sana released the sealed ledger proving council fraud. This event had the highest consequence score of 24, indicating a significant impact on the character dynamics and the overall narrative. Earlier events that made this possible include the routine updates exchanged by various characters across different locations, which, while seemingly mundane and often overlooked, were actually structural breadcrumbs that set the stage for the revelation of the council fraud. These updates, although not strategically dominant in isolation, preserved details that became causal prerequisites for later interpretation. The global score rule suggests that these seemingly boring actions were crucial in shifting downstream feasibility and changing which pivot was admissible in the story."
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,C01,narrative,0.5,,,0,0,0,0.44999999999999996,0.44999999999999996,0.44999999999999996,0.2263515403198899,0,0,"PIVOT_ID=E052
+
+The turning point in the story is Scene-52, where Sana released the sealed ledger proving council fraud with a ConsequenceScore of 24. This event is the single action with the highest consequence score, indicating its significant impact on the story's outcome. Earlier events that made this possible include the routine updates exchanged by various actors across different locations, which, while seemingly mundane and low in salience in isolation, collectively shifted the downstream feasibility and changed which pivot is admissible in the narrative. These routine updates, such as Scene-03 (Elio at the north gate), Scene-04 (Sana at the assembly atrium), and Scene-05 (Iris at the river embankment), among others, preserved details that became causal prerequisites for later interpretation. These scenes, although boring in local context, were crucial in setting up the conditions for the high-","PIVOT_ID=E052
+
+The turning point in the story is Scene-52, where Sana releases the sealed ledger proving council fraud. This action has the highest consequence score of 24, indicating a significant impact on the story's progression.
+
+Earlier events that made this possible include:
+
+1. Scene-09: Elio's exchange of routine updates in the assembly atrium, which had a consequence score of 7. This event preserved details that became causal prerequisites for later interpretation, subtly shifting the narrative's direction.
+
+2. Scene-10: Sana's exchange of routine updates at the river embankment, with a consequence score of 7. This event also preserved details that became causal prerequisites for later interpretation, further influencing the story's direction.
+
+3. Scene-14: Jonas's exchange of routine updates in the assembly atrium, with"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,C01,narrative,0.6,,,0,0,0,0.35,0.44999999999999996,0.35,0.22996016441266187,0,0,"PIVOT_ID=E052
+
+The turning point in the story is Scene-52, where Sana released the sealed ledger proving council fraud with a ConsequenceScore of 24. This event is the single action with the highest consequence score, indicating its significant impact on the story's outcome. Earlier events that made this possible include the routine updates exchanged by various actors across different locations, which, while seemingly mundane and low in salience in isolation, collectively shifted the downstream feasibility and changed which pivot is admissible in the narrative. These routine updates, such as Scene-03 (Elio at the north gate), Scene-04 (Sana at the assembly atrium), and Scene-05 (Iris at the river embankment), among others, preserved details that became causal prerequisites for later interpretation. These scenes, although boring in local context, were crucial in setting up the conditions for the high-","PIVOT_ID=E052
+
+The turning point in the story is Scene-52, where Sana exchanged routine updates at the canal archive with a ConsequenceScore of 24. This high score indicates a significant impact on the story's character dynamics and overall narrative.
+
+Earlier events that made this turning point possible include:
+
+1. Scene-03: Elio exchanged routine updates at the north gate with a ConsequenceScore of 7. This scene set the stage for the characters' interactions and established the importance of routine updates in the story.
+2. Scene-04: Sana exchanged routine updates at the assembly atrium with a ConsequenceScore of 8. This scene further emphasized the significance of routine updates and introduced Sana as a key character.
+3. Scene-05: Iris exchanged routine updates at the river embankment with a ConsequenceScore of 5. This scene added depth to the character dynamics and highlighted the importance"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,C02,narrative,0.4,C02-E054,C02-E054,1,1,0,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.1719033461720717,1,1,"PIVOT_ID=C02-E054
+
+The turning point in the story is Scene-54, where Iris released the sealed ledger proving council fraud. This event had the highest ConsequenceScore of 24, indicating its significant impact on the story's character dynamics and feasibility.
+
+Earlier events that made this possible include the routine updates exchanged by the characters in various locations, such as the market ward, canal archive, north gate, and assembly atrium. These updates, while seemingly mundane and low in salience, were crucial in shifting downstream feasibility and setting the stage for the turning point. They preserved details that became causal prerequisites for later interpretation, ultimately leading to the decisive break in character dynamics when Iris released the sealed ledger. The accumulation of these small, seemingly insignificant actions and their interconnectedness allowed for the dramatic revelation of council fraud, which dominated the story'","PIVOT_ID=C02-E054
+
+The turning point in the story is the action in Scene-54, where Cato released the sealed ledger proving council fraud. This action has the highest ConsequenceScore of 24, indicating its significant impact on the story. Earlier events that made this possible include the routine updates exchanged by various characters across different locations. These updates, while seemingly mundane and low in salience in isolation, accumulated to shift downstream feasibility and change which pivot is admissible. The narrative footprint of these updates is small, but they are crucial in setting up the context and dependencies that lead to the decisive break in character dynamics when the sealed ledger is released."
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,C02,narrative,0.5,C02-E054,C02-E054,1,1,0,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.24189064917563052,1,1,"PIVOT_ID=C02-E054
+
+The turning point in the story is Scene-54, where Iris released the sealed ledger proving council fraud. This event had the highest ConsequenceScore of 24, indicating its significant impact on the story's character dynamics and feasibility.
+
+Earlier events that made this possible include the routine updates exchanged by the characters in various locations, such as the market ward, canal archive, north gate, and assembly atrium. These updates, while seemingly mundane and low in salience, were crucial in shifting downstream feasibility and setting the stage for the turning point. They preserved details that became causal prerequisites for later interpretation, ultimately leading to the decisive break in character dynamics when Iris released the sealed ledger. The accumulation of these small, seemingly insignificant actions and their interconnectedness allowed for the dramatic revelation of council fraud, which dominated the story'","PIVOT_ID=C02-E054
+
+The turning point in the story is Scene-54, where Cato released the sealed ledger proving council fraud. This event had the highest consequence score of 24, indicating its significant impact on the story's character dynamics and downstream feasibility.
+
+Earlier events that made this turning point possible include:
+
+1. Scene-02: Jonas exchanged routine updates at the canal archive, which was processed as ordinary background activity but had a consequence score of 9. This scene set the stage for the importance of information exchange in the story.
+2. Scene-08: Jonas exchanged routine updates at the north gate, with a consequence score of 2. This scene reinforced the theme of routine updates and their role in character dynamics.
+3. Scene-09: Elio exchanged routine updates at the assembly atrium, with a consequence score of 5. This scene further emphasized the importance"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,C02,narrative,0.6,C02-E054,C02-E054,1,1,0,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.254694157140986,1,1,"PIVOT_ID=C02-E054
+
+The turning point in the story is Scene-54, where Iris released the sealed ledger proving council fraud. This event had the highest ConsequenceScore of 24, indicating its significant impact on the story's character dynamics and feasibility.
+
+Earlier events that made this possible include the routine updates exchanged by the characters in various locations, such as the market ward, canal archive, north gate, and assembly atrium. These updates, while seemingly mundane and low in salience, were crucial in shifting downstream feasibility and setting the stage for the turning point. They preserved details that became causal prerequisites for later interpretation, ultimately leading to the decisive break in character dynamics when Iris released the sealed ledger. The accumulation of these small, seemingly insignificant actions and their interconnectedness allowed for the dramatic revelation of council fraud, which dominated the story'","PIVOT_ID=C02-E054
+
+The turning point in the story is Scene-54, where Actor Cato releases the sealed ledger proving council fraud with a ConsequenceScore of 24. This event is the culmination of various earlier events that set the stage for this decisive moment.
+
+Earlier events that made this turning point possible include:
+
+1. Scene-03 (Elio at the north gate) and Scene-04 (Sana at the assembly atrium) where routine updates were exchanged, setting the stage for the characters' interactions and relationships.
+2. Scene-05 (Iris at the river embankment) and Scene-07 (Mira at the canal archive) where routine updates were exchanged, further developing character dynamics and relationships.
+3. Scene-14 (Jonas at the assembly atrium) and Scene-16 (Sana at the market ward) where routine"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,C03,narrative,0.4,C03-E060,C03-E060,1,1,0,0.8299999999999998,0.8299999999999998,0.8299999999999998,0.15716286325134643,1,1,"PIVOT_ID=C03-E060
+
+The turning point in the story is Scene-60, where Cato released the sealed ledger proving council fraud with a ConsequenceScore of 24. This event was made possible by a series of routine updates and exchanges of information among the characters, which, while seemingly mundane and low in salience in isolation, accumulated over time to shift the downstream feasibility of the narrative. These earlier events, such as Scene-01, Scene-02, Scene-03, and others, served as structural breadcrumbs that preserved details and dependencies that only became significant when read with the full timeline. These scenes, although individually low in consequence score, collectively contributed to the feasibility of the pivotal event.","PIVOT_ID=C03-E060
+
+The turning point in the story is Scene-60, where Sana released the sealed ledger proving council fraud with a ConsequenceScore of 24. This event was made possible by a series of routine updates exchanged by various characters across different locations, which, while seemingly mundane and low in salience in isolation, accumulated to shift the downstream feasibility of the narrative. These routine updates, such as Scene-02, Scene-03, Scene-04, and others, served as structural breadcrumbs that, when read in the full timeline, became causal prerequisites for the later interpretation of the story. The global score rule, which tracks the cumulative impact of these actions, reveals that the release of the ledger was the culmination of these smaller, seemingly insignificant events, leading to a decisive break in character dynamics and a significant shift in"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,C03,narrative,0.5,C03-E060,C03-E060,1,1,0,0.9999999999999999,0.8299999999999998,0.9999999999999999,0.2850593547464191,1,1,"PIVOT_ID=C03-E060
+
+The turning point in the story is Scene-60, where Cato released the sealed ledger proving council fraud with a ConsequenceScore of 24. This event was made possible by a series of routine updates and exchanges of information among the characters, which, while seemingly mundane and low in salience in isolation, accumulated over time to shift the downstream feasibility of the narrative. These earlier events, such as Scene-01, Scene-02, Scene-03, and others, served as structural breadcrumbs that preserved details and dependencies that only became significant when read with the full timeline. These scenes, although individually low in consequence score, collectively contributed to the feasibility of the pivotal event.","PIVOT_ID=C03-E060
+
+The turning point in the story is the action in Scene-60, where Cato released the sealed ledger proving council fraud. This action has the highest consequence score of 24, indicating its significant impact on the story's character dynamics and overall narrative.
+
+Earlier events that made this turning point possible include:
+
+1. Scene-02 (C03-E002): Jonas exchanged routine updates at the canal archive. This scene set the stage for the characters' interactions and established the importance of communication and information exchange in the story.
+2. Scene-08 (C03-E008): Jonas exchanged routine updates at the north gate. This scene further emphasized the importance of communication and information exchange, as well as the dependencies between characters.
+3. Scene-09 (C03-E009): Elio exchanged routine updates at the assembly at"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,C03,narrative,0.6,C03-E060,,0,0,0,0.44999999999999996,0.8299999999999998,0.44999999999999996,0.31186596127895094,1,0,"PIVOT_ID=C03-E060
+
+The turning point in the story is Scene-60, where Cato released the sealed ledger proving council fraud with a ConsequenceScore of 24. This event was made possible by a series of routine updates and exchanges of information among the characters, which, while seemingly mundane and low in salience in isolation, accumulated over time to shift the downstream feasibility of the narrative. These earlier events, such as Scene-01, Scene-02, Scene-03, and others, served as structural breadcrumbs that preserved details and dependencies that only became significant when read with the full timeline. These scenes, although individually low in consequence score, collectively contributed to the feasibility of the pivotal event.","PIVOT_ID=E060
+
+The turning point in the story is Scene-60, where Cato released the sealed ledger proving council fraud. This event had the highest consequence score of 24, indicating its significant impact on the story's outcome.
+
+Earlier events that made this turning point possible include:
+
+1. Scene-03: Elio exchanged routine updates at the north gate, which set the stage for the characters' interactions and established the initial dynamics.
+2. Scene-04: Sana exchanged routine updates at the assembly atrium, which contributed to the global score rule and changed which pivot was admissible.
+3. Scene-05: Iris exchanged routine updates at the river embankment, which also contributed to the global score rule and changed which pivot was admissible.
+4. Scene-07: Mira exchanged routine updates at the canal archive, which changed which pivot was admissible and set the stage"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,C04,narrative,0.4,,C04-E052,1,0,0,0.8299999999999998,0.44999999999999996,0.8299999999999998,0.18598425195864332,0,1,"PIVOT_ID=E052
+
+The turning point in the story is Scene-52, where Actor=Sana exchanged routine updates at Location=market ward with a ConsequenceScore of 24. This event is the highest scoring action in the narrative, indicating its significant impact on the story's progression. Earlier events that made this possible include the exchange of routine updates by various characters across different locations, which, while seemingly mundane and boring in local context, collectively altered the admissible pivot in the global context. These exchanges set the stage for the system to cross a threshold where all priors inverted in character dynamics. The structural breadcrumbs provided by these routine updates, such as preserving details that become causal prerequisites for later interpretation, were crucial in leading up to the turning point. The release of the sealed ledger proving council fraud was a culmination of these seemingly insignificant actions, which, when viewed","PIVOT_ID=C04-E052
+
+The turning point in the story is the action in Scene-52, where Sana released the sealed ledger proving council fraud. This event had the highest consequence score of 24, indicating its significant impact on the story's character dynamics and the overall narrative. Earlier events that made this possible include the routine updates exchanged by various characters across different locations, which, while seemingly mundane in isolation, collectively preserved details that became causal prerequisites for later interpretation. These updates, such as those in Scene-02, Scene-03, Scene-04, and others, laid the groundwork for the revelation of the council fraud. The repetitive housekeeping and status chatter, along with the procedural details that summarizers often collapse away, were crucial in setting up the context and dependencies that allowed the turning point to have a profound effect on the story's direction."
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,C04,narrative,0.5,,,0,0,0,0.44999999999999996,0.44999999999999996,0.44999999999999996,0.21416717872060587,0,0,"PIVOT_ID=E052
+
+The turning point in the story is Scene-52, where Actor=Sana exchanged routine updates at Location=market ward with a ConsequenceScore of 24. This event is the highest scoring action in the narrative, indicating its significant impact on the story's progression. Earlier events that made this possible include the exchange of routine updates by various characters across different locations, which, while seemingly mundane and boring in local context, collectively altered the admissible pivot in the global context. These exchanges set the stage for the system to cross a threshold where all priors inverted in character dynamics. The structural breadcrumbs provided by these routine updates, such as preserving details that become causal prerequisites for later interpretation, were crucial in leading up to the turning point. The release of the sealed ledger proving council fraud was a culmination of these seemingly insignificant actions, which, when viewed","PIVOT_ID=E052
+
+The story turning point is Scene-52, where Sana released the sealed ledger proving council fraud with a ConsequenceScore of 24. This event is the highest scoring action in the narrative and represents a significant shift in the story's direction.
+
+Earlier events that made this turning point possible include:
+
+1. Scene-01 (Mira exchanged routine updates in the market ward) and Scene-02 (Jonas exchanged routine updates in the canal archive) - These scenes set the stage for the characters and their relationships, establishing the mundane routine that would later be disrupted by the turning point.
+2. Scene-08 (Jonas exchanged routine updates at the north gate) and Scene-09 (Elio exchanged routine updates in the assembly atrium) - These scenes further develop the characters and their dynamics, while also introducing the concept of structural breadcrumbs that would"
+Phi-3-Medium-14B-Instruct,microsoft/Phi-3-medium-128k-instruct,C04,narrative,0.6,,C04-E052,1,0,0,0.7299999999999999,0.44999999999999996,0.7299999999999999,0.27703831347443075,0,1,"PIVOT_ID=E052
+
+The turning point in the story is Scene-52, where Actor=Sana exchanged routine updates at Location=market ward with a ConsequenceScore of 24. This event is the highest scoring action in the narrative, indicating its significant impact on the story's progression. Earlier events that made this possible include the exchange of routine updates by various characters across different locations, which, while seemingly mundane and boring in local context, collectively altered the admissible pivot in the global context. These exchanges set the stage for the system to cross a threshold where all priors inverted in character dynamics. The structural breadcrumbs provided by these routine updates, such as preserving details that become causal prerequisites for later interpretation, were crucial in leading up to the turning point. The release of the sealed ledger proving council fraud was a culmination of these seemingly insignificant actions, which, when viewed","PIVOT_ID=C04-E052
+
+The turning point in the story is Scene-52, where Sana staged a visible confrontation at the canal archive. This event had the highest consequence score of 24, indicating a significant shift in the story's dynamics.
+
+Earlier events that made this turning point possible include:
+
+1. Scene-50 (Jonas exchanged routine updates at the river embankment): This scene had a consequence score of 7, which contributed to the overall narrative by shifting downstream feasibility.
+2. Scene-54 (Cato exchanged routine updates at the assembly atrium): This scene had a consequence score of 6, which changed the pivot admissible in the local context.
+3. Scene-58 (Sana exchanged routine updates at the north gate): This scene had a consequence score of 6, which changed the pivot admissible in the local context.
+4. Scene-5"
