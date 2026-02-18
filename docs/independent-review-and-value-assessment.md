@@ -1,6 +1,7 @@
 # Independent Review and Value Assessment
 
 Primary papers in this repository:
+- `papers/paper_00_continuous_control_structural_regularization.pdf`
 - `papers/paper_01_absorbing_states_in_greedy_search.pdf`
 - `papers/paper_02_streaming_oscillation_traps.pdf`
 - `papers/paper_03_validity_mirage_compression.pdf`

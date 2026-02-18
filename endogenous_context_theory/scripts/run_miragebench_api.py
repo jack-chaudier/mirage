@@ -305,7 +305,7 @@ def _resolve_api_key(provider: str, explicit_key: str) -> str:
 
 
 def load_runtime_and_tasks(root: Path) -> Tuple[Dict[str, Any], List[Any]]:
-    notebook_path = root / "notebooks" / "miragebench_experiments_colab.ipynb"
+    notebook_path = root / "notebooks" / "legacy" / "miragebench_experiments_colab.ipynb"
     runtime = _load_notebook_runtime(notebook_path)
     _patch_runtime_with_methodology_fixes(runtime)
     tasks = runtime["build_miragebench_v01"]()

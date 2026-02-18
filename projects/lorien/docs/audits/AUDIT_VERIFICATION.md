@@ -98,7 +98,7 @@
 ```
 ============================= test session starts ==============================
 platform darwin -- Python 3.14.2, pytest-9.0.2, pluggy-1.6.0
-rootdir: /Users/jackg/lorien/src/engine
+rootdir: /path/to/lorien/src/engine
 configfile: pyproject.toml
 testpaths: narrativefield/tests
 plugins: anyio-4.12.1
@@ -133,7 +133,7 @@ narrativefield/tests/test_tick_loop_updates.py .                         [100%]
 > vitest run
 
 
- RUN  v2.1.9 /Users/jackg/lorien/src/visualization
+ RUN  v2.1.9 /path/to/lorien/src/visualization
 
  ✓ src/canvas/layers/TopologyEventLayer.test.ts (5 tests) 2ms
  ✓ src/canvas/layers/TensionTerrainLayer.test.ts (8 tests) 2ms
@@ -435,7 +435,7 @@ NarrativeField Extraction Pipeline Audit
   PASS: Request model has 'genre_preset'
   PASS: selection_type supports 'search' mode
   FINDING [LOW]: CORS allows all origins (allow_origins=['*']). Consider restricting in production. File: narrativefield/extraction/api_server.py:106-111
-  INFO: Default payload path: /Users/jackg/lorien/data/fake-dinner-party.nf-viz.json
+  INFO: Default payload path: /path/to/lorien/data/fake-dinner-party.nf-viz.json
   PASS: Default payload file exists
   PASS: Auto-prefilter threshold (>50 events) present
   PASS: _pick_protagonist helper exists

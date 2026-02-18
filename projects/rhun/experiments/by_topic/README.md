@@ -6,4 +6,4 @@ This directory provides non-destructive, topic-based views over experiment runne
 - `theorem/` -> boundary, invariance, and theorem-focused runs
 - `diagnostics/` -> failure taxonomy and algorithm diagnostic runs
 
-All files are symlinks to runners in `../`.
+All files are materialized copies of runners in `../`, organized by topic.

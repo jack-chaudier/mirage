@@ -1,8 +1,8 @@
 {
-    "adapter_path": "/Users/jackg/mirage/endogenous_context_theory/adapters/mirage_aware_v1",
+    "adapter_path": "adapters/mirage_aware_v1",
     "batch_size": 1,
     "config": null,
-    "data": "/Users/jackg/mirage/endogenous_context_theory/training_data",
+    "data": "training_data",
     "fine_tune_type": "lora",
     "grad_accumulation_steps": 1,
     "grad_checkpoint": false,

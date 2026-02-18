@@ -10,21 +10,11 @@ import pandas as pd
 from src.generators import bursty_generator, multi_burst_generator
 from src.reporting import ensure_result_dirs, pass_fail, print_header, print_table, save_csv, save_figure, set_plot_style
 from src.tropical_semiring import build_tropical_context, brute_force_tropical_context
+from tests.helpers import _same_context
 
 
 TEST_NAME = "Test 01: Tropical Exactness"
 CLAIM = "Claim: Left-fold tropical composition exactly matches brute-force W across all cells."
-
-
-def _same_context(a, b) -> bool:
-    if a.d_total != b.d_total:
-        return False
-    a_inf = np.isneginf(a.W)
-    b_inf = np.isneginf(b.W)
-    if not np.array_equal(a_inf, b_inf):
-        return False
-    mask = ~a_inf
-    return bool(np.allclose(a.W[mask], b.W[mask], atol=1e-12, rtol=0.0))
 
 
 def run(results_dir: Path | None = None) -> Dict[str, float]:

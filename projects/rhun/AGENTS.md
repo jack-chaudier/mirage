@@ -10,7 +10,6 @@ This file captures the working loop used in this repository so far.
 ## Standard Execution Loop
 1. Read context first:
    - `RHUN_CONTEXT.md`
-   - `RHUN_CONTEXT_v2.md` (if present)
 2. Pre-check before coding:
    - Inspect relevant extraction/generator/theory modules.
    - Confirm current interfaces, constraints, and scoring semantics from code (not assumptions).
@@ -47,4 +46,3 @@ This file captures the working loop used in this repository so far.
 - The theorem is a sufficient-condition result with zero-FP behavior in tested regimes.
 - Secondary failure modes are now taxonomy-driven; new methods should report which layer they address.
 - Heuristic baselines (including `oracle_extract`) are not assumed globally optimal unless proven.
-

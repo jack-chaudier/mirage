@@ -40,6 +40,15 @@ endogenous_context_theory/data/processed/train.jsonl
 
 # Temporary logs
 *.log
+endogenous_context_theory/training_log.txt
+
+# Derived submission artifacts
+derived/arxiv_submissions/
+derived/paper_previews/
+
+# Generated training data dirs
+endogenous_context_theory/training_data/
+endogenous_context_theory/training_data_smoke/
 
 # LaTeX build artifacts
 *.aux

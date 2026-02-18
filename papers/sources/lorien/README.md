@@ -2,9 +2,7 @@
 
 ## Canonical files
 - `goal_evolution_chain_degradation.tex` -> `goal_evolution_paper.tex`
-- `goal_evolution_chain_degradation.pdf` -> `goal_evolution_paper.pdf`
 - `continuous_control_structural_regularization.tex` -> `paper2.tex`
-- `continuous_control_structural_regularization.pdf` -> `paper2.pdf`
 
 The root publish workflow (`./scripts/publish_papers_from_sources.sh`) builds
 `continuous_control_structural_regularization.tex` and exports it as:
@@ -14,3 +12,4 @@ The root publish workflow (`./scripts/publish_papers_from_sources.sh`) builds
 ## Notes
 Original filenames are preserved for backward compatibility.
 Canonical aliases are provided for easier discovery and citation management.
+Compiled publication PDFs are tracked in `papers/` at repo root.

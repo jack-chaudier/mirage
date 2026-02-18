@@ -52,7 +52,7 @@ def _json_safe(obj: Any) -> Any:
 
 
 def export_miragebench_tasks(root: Path, out_dir: Path) -> None:
-    nb_path = root / "notebooks" / "miragebench_experiments_colab.ipynb"
+    nb_path = root / "notebooks" / "legacy" / "miragebench_experiments_colab.ipynb"
     runtime = _load_notebook_runtime(nb_path)
     _patch_runtime_with_methodology_fixes(runtime)
     tasks = runtime["build_miragebench_v01"]()

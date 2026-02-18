@@ -9,6 +9,11 @@ This repository is the canonical workspace for Mirage + Rhun + Lorien research a
 - `projects/lorien/`: imported Lorien project context (docs/specs/code, examples, papers).
 
 ## Paper Source Locations
+- Primary paper PDFs:
+  - `papers/paper_00_continuous_control_structural_regularization.pdf`
+  - `papers/paper_01_absorbing_states_in_greedy_search.pdf`
+  - `papers/paper_02_streaming_oscillation_traps.pdf`
+  - `papers/paper_03_validity_mirage_compression.pdf`
 - P1/P2/P3 source lineage: `papers/sources/rhun/`
 - Lorien paper set: `papers/sources/lorien/`
 - Native imported workspaces:
@@ -17,8 +22,8 @@ This repository is the canonical workspace for Mirage + Rhun + Lorien research a
 
 ## Import Provenance
 Imported from local source repos on 2026-02-17/18:
-- `/Users/jackg/rhun`
-- `/Users/jackg/lorien`
+- `$REPO_ROOT/../rhun`
+- `$REPO_ROOT/../lorien`
 
 The imported trees are mirrors with hygiene filters.
 File-level provenance hashes: `docs/imported-projects-sha256.txt`.

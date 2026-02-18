@@ -16,8 +16,8 @@ scripts/sync_external_projects.sh
 ```
 
 Default source paths:
-- `/Users/jackg/rhun`
-- `/Users/jackg/lorien`
+- `../rhun`
+- `../lorien`
 
 Override with env vars if needed:
 

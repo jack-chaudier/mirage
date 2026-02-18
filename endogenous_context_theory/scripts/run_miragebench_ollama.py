@@ -2,7 +2,7 @@
 """Run MirageBench black-box evaluation against local Ollama models.
 
 This script reuses the MirageBench task generation and metric logic from
-`notebooks/miragebench_experiments_colab.ipynb`, but swaps in Ollama's local generation API.
+`notebooks/legacy/miragebench_experiments_colab.ipynb`, but swaps in Ollama's local generation API.
 """
 
 from __future__ import annotations
@@ -568,7 +568,7 @@ def _validate_investment_ground_truth(tasks: Sequence[Any]) -> None:
 def main() -> None:
     args = parse_args()
 
-    notebook_path = ROOT / "notebooks" / "miragebench_experiments_colab.ipynb"
+    notebook_path = ROOT / "notebooks" / "legacy" / "miragebench_experiments_colab.ipynb"
     output_dir = (ROOT / args.output_dir).resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
 

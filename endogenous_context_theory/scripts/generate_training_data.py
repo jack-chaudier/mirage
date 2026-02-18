@@ -529,7 +529,7 @@ def main() -> None:
         compressed_variant_plan.append((level, seed, ratio))
     target_ratio_counts = Counter(ratio for _, _, ratio in compressed_variant_plan)
 
-    notebook_path = ROOT / "notebooks" / "miragebench_experiments_colab.ipynb"
+    notebook_path = ROOT / "notebooks" / "legacy" / "miragebench_experiments_colab.ipynb"
     runtime = mirage_runtime._load_notebook_runtime(notebook_path)
     mirage_runtime._patch_runtime_with_methodology_fixes(runtime)
 

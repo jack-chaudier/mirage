@@ -1,7 +1,7 @@
 {
-  "input_json": "/Users/jackg/Downloads/ntsb_event_graphs.json",
-  "manifest_csv": "/Users/jackg/mirage/endogenous_context_theory/data/ntsb/ntsb_k_phase_cleanup_manifest.csv",
-  "output_json": "/Users/jackg/mirage/endogenous_context_theory/data/ntsb/ntsb_event_graphs.cleaned.json",
+  "input_json": "ntsb_event_graphs.json",
+  "manifest_csv": "endogenous_context_theory/data/ntsb/ntsb_k_phase_cleanup_manifest.csv",
+  "output_json": "endogenous_context_theory/data/ntsb/ntsb_event_graphs.cleaned.json",
   "applied_changes_count": 6,
   "applied_changes": [
     {

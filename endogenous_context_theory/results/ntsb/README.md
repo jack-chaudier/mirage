@@ -1,7 +1,7 @@
 # NTSB Real-World Mirage Benchmark
 
 This folder contains the real-incident compression benchmark artifacts built from:
-`/Users/jackg/Downloads/ntsb_event_graphs.json`
+`ntsb_event_graphs.json` (local input file; not tracked in this repo)
 
 ## 1) Cleanup Gate
 
@@ -99,18 +99,19 @@ Generated directly from CSV outputs:
 Validate + clean:
 
 ```bash
-/Users/jackg/mirage/.venv/bin/python endogenous_context_theory/scripts/validate_ntsb_graphs.py \
-  --input-json /Users/jackg/Downloads/ntsb_event_graphs.json \
+cd /path/to/mirage
+python endogenous_context_theory/scripts/validate_ntsb_graphs.py \
+  --input-json /path/to/ntsb_event_graphs.json \
   --report-json endogenous_context_theory/results/ntsb/ntsb_validation_report.before.json \
   --audit-csv endogenous_context_theory/results/ntsb/ntsb_incident_audit.before.csv
 
-/Users/jackg/mirage/.venv/bin/python endogenous_context_theory/scripts/apply_ntsb_manifest.py \
-  --input-json /Users/jackg/Downloads/ntsb_event_graphs.json \
+python endogenous_context_theory/scripts/apply_ntsb_manifest.py \
+  --input-json /path/to/ntsb_event_graphs.json \
   --manifest-csv endogenous_context_theory/data/ntsb/ntsb_k_phase_cleanup_manifest.csv \
   --output-json endogenous_context_theory/data/ntsb/ntsb_event_graphs.cleaned.json \
   --changes-json endogenous_context_theory/results/ntsb/ntsb_manifest_apply_changes.json
 
-/Users/jackg/mirage/.venv/bin/python endogenous_context_theory/scripts/validate_ntsb_graphs.py \
+python endogenous_context_theory/scripts/validate_ntsb_graphs.py \
   --input-json endogenous_context_theory/data/ntsb/ntsb_event_graphs.cleaned.json \
   --report-json endogenous_context_theory/results/ntsb/ntsb_validation_report.after.json \
   --audit-csv endogenous_context_theory/results/ntsb/ntsb_incident_audit.after.csv \
@@ -120,13 +121,14 @@ Validate + clean:
 Run xAI non-reasoning benchmark:
 
 ```bash
+cd /path/to/mirage
 set -a
-source /Users/jackg/mirage/.env
+source .env
 set +a
 export OPENAI_API_KEY="$XAI_API_KEY"
 export OPENAI_BASE_URL="https://api.x.ai/v1"
 
-/Users/jackg/mirage/.venv/bin/python endogenous_context_theory/scripts/run_ntsb_mirage_benchmark.py \
+python endogenous_context_theory/scripts/run_ntsb_mirage_benchmark.py \
   --input-json endogenous_context_theory/data/ntsb/ntsb_event_graphs.cleaned.json \
   --output-dir endogenous_context_theory/results/ntsb/xai_grok_4_1_fast_non_reasoning \
   --backend openai \
@@ -138,5 +140,5 @@ export OPENAI_BASE_URL="https://api.x.ai/v1"
   --temperature 0.0 \
   --timeout-s 120
 
-/Users/jackg/mirage/.venv/bin/python endogenous_context_theory/scripts/build_ntsb_paper_table.py
+python endogenous_context_theory/scripts/build_ntsb_paper_table.py
 ```

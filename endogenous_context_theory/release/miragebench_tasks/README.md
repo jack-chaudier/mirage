@@ -11,7 +11,7 @@ This folder contains the canonical 12-task export used in release experiments.
 
 Generated from the canonical runtime path:
 
-- notebook loader: `notebooks/miragebench_experiments_colab.ipynb`
+- notebook loader: `notebooks/legacy/miragebench_experiments_colab.ipynb`
 - methodology patch: `_patch_runtime_with_methodology_fixes`
 
 Regenerate with:

@@ -1,346 +1,527 @@
-# Rhun — Research Context Document
+# Rhun — Research Context Document (v4)
 
-**Last updated:** February 13, 2026
-**Purpose:** Complete context for AI assistants and collaborators working on this research program. Read this before doing anything.
+**Last updated:** February 15, 2026 (evening)
+**Previous versions:** RHUN_CONTEXT.md (Feb 13), v2 (Feb 14 morning), v3 (Feb 14 evening)
+**Purpose:** Complete context for AI assistants and collaborators working on this research. Read this before doing anything. This document is self-contained — you do not need to read prior versions.
 
 ---
 
-## 1. What This Is
+## 1. What This Project Is
 
 Rhun is a domain-agnostic research framework for studying **constrained extraction of structured subsequences from causal event graphs.** The core research question:
 
-> Under what conditions does greedy extraction from causal DAGs with sequential phase constraints provably fail?
+> Under what conditions does greedy extraction from causal DAGs with sequential phase constraints provably fail, and what is the complete constructive algorithm hierarchy that fixes it?
 
-The system generates synthetic causal directed acyclic graphs (DAGs), extracts structured subsequences using greedy and oracle search strategies, validates them against a parameterized sequential grammar, and measures when and why extraction fails.
+The system generates synthetic causal directed acyclic graphs (DAGs), extracts structured subsequences using greedy, viability-aware, DP-based, and oracle strategies, validates them against a parameterized sequential grammar, and measures when and why extraction fails.
 
 ### Origin
 
-Rhun was born from findings in a predecessor project called **Lorien/NarrativeField** (`~/lorien/`), a narrative generation system that simulates multi-agent worlds and extracts story arcs. During large-scale experimentation on that system (3,250+ deterministic runs), we discovered that:
+Rhun was born from findings in **Lorien/NarrativeField** (`~/lorien/`), a narrative generation system that simulates multi-agent worlds and extracts story arcs. During 3,250+ deterministic runs, we discovered that a single sequential constraint — requiring ≥1 development-phase element before a turning point — accounts for 100% of the regularization effect. The failure mode is purely temporal, invariant to importance decomposition, anchor selection, and categorical parameter coupling. These are domain-agnostic properties of greedy search. Rhun strips away the narrative scaffolding to study them as pure combinatorial optimization.
 
-1. A single sequential constraint (requiring ≥1 development-phase element before a turning point) accounts for 100% of the regularization effect in constrained extraction
-2. The failure mode is purely temporal — it depends on when high-weight events occur in the timeline
-3. The failure is invariant to how the importance function is decomposed across agents
-4. The failure is invariant to anchor selection strategy
-5. Relaxing constraints can make extraction *worse* (a non-monotonic "valley of death")
-
-These findings are domain-agnostic properties of greedy search under sequential constraints, not narrative-specific phenomena. Rhun strips away the narrative scaffolding to study them as pure combinatorial optimization.
-
-### Relationship to Lorien
-
-- `~/lorien/` — the narrative AI system. Has a paper under submission to ICIDS (computational narratology conference). Still functional, still valuable as a realistic DAG generator and as the source of all empirical findings that motivated this research.
-- `~/rhun/` — the research framework. Domain-agnostic. Designed to prove theorems, validate them on synthetic graphs, and generalize findings across domains.
-
-Lorien is NOT a dependency of Rhun. Rhun has its own graph generators, extraction engine, and grammar system. The narrative system is one possible adapter (see `rhun/adapters/narrative.py`) but the core framework has no narrative-specific language or concepts.
+**Lorien is NOT a dependency of Rhun.** The codebase is at `~/rhun/`. Lorien (`~/lorien/`) is frozen as a validated instrument. Rhun has its own generators, extraction engine, grammar system, and theory verification.
 
 ---
 
 ## 2. The Core Theorem
 
-### Prefix-Constraint Impossibility Theorem (Informal)
+### Prefix-Constraint Impossibility Theorem
 
-Let G be a temporally ordered causal graph with n events. Let w: Events → ℝ⁺ be a weight function. Let GREEDY be a search that selects the max-w event as the turning point and injects it into every candidate pool. Let GRAMMAR require k ≥ 1 development-phase elements before the turning point (the "prefix constraint").
+Let G be a temporally ordered causal graph with n events. Let w: Events → ℝ⁺ be a weight function. Let GREEDY select the max-w focal-actor event e* as the turning point (TP) and inject it into every candidate pool. Let GRAMMAR require k ≥ 1 development-phase elements before the TP (the "prefix constraint"). Let j_dev be the number of development-eligible events (from ANY actor) with timestamps strictly before e* in the candidate pool.
 
-**If the max-w event occurs at temporal position j (0-indexed) where j < k, then GREEDY produces zero valid sequences.**
+**If j_dev < k, GREEDY produces zero valid sequences.**
 
-The search enters an **absorbing state**: once the max-w event is classified as the turning point, the monotonic phase rule prevents any return to the development phase. If fewer than k events precede the turning point in the development phase, no sequence of future event additions can satisfy the prefix constraint. The search is deterministically trapped.
+The search enters an **absorbing state**: the monotonic phase rule prevents return to the development phase after the TP is assigned. If fewer than k events can be classified as DEVELOPMENT before the TP, no future additions can satisfy the prefix constraint. The search is deterministically trapped.
 
-### Key Properties (Empirically Validated)
+### Formal Proof (Delivered by GPT, verified)
 
-- **Shear invariance:** The failure is independent of how w is decomposed into per-actor components. Tested by computing per-agent importance and filtering injection sets by agent-relative scores. Result: zero focal failures fixed (r = 0.033 correlation between agent-relative shear and extraction failure).
+The proof uses the product automaton P = EventGraph × GrammarDFA:
+1. The injection mechanism forces greedy to select e* (max-weight focal event) as TP
+2. Once e* is consumed as TURNING_POINT, no DFA transition to DEVELOPMENT exists (monotonic phase rule)
+3. If j_dev < k, fewer than k events can be classified as DEVELOPMENT in the pre-TP portion
+4. The post-TP DFA region is unreachable from states with insufficient DEVELOPMENT count
+5. Conclusion: greedy produces zero valid sequences when j_dev < k
 
-- **Search invariance:** The failure is independent of anchor selection strategy. Tested by forcing all anchors to mid-timeline positions. Result: 0/9 failures fixed; byte-identical invalid arcs produced regardless of anchor strategy.
+**The converse is NOT guaranteed:** j_dev ≥ k does not imply greedy succeeds (false negatives from Layers 2-4 exist).
 
-- **Parameter coupling invariance:** The only effective control parameter is continuous goal intensity (which shifts the temporal distribution of high-weight events). Categorical parameter coupling is vacuous for the tested agent. Tested via a 2×11 factorial decoupling sweep. Result: all three conditions produced numerically identical results.
+### Empirical Status
 
-### Current Status of the Theorem
+**Zero false positives across all tested conditions.** 11,400 instances (k=0-5, ε=0.05-0.95, 100 seeds per ε), plus invariance across actor count (2-50), event density (50-1000), weight distributions (uniform, power-law, bimodal), and multi-burst topology. The theorem never predicts failure when greedy succeeds.
 
-The position sweep experiment (first experiment on synthetic graphs) shows:
+Key measurement discovery: j_dev counts development-eligible events from ALL actors before the TP, not just focal-actor events. Using focal-only (j_focal) produced 43 false positives where non-focal events filled DEVELOPMENT slots. Using j_dev: 0 FPs at k≥2, 8 FPs at k=1 (all timestamp-tie artifacts on a single seed). Below-diagonal validity for k≥3 is exactly 0.000 across every cell in the k-j boundary heatmap.
 
-| Metric | Value |
-|---|---|
-| Mean theorem accuracy | 0.918 across 21 epsilon values |
-| False positive rate | **0.000** (theorem never predicts failure when extraction succeeds) |
-| False negative rate | Increases with epsilon (0.05 at ε=0.60, rising to 0.35 at ε=0.95) |
+### Theoretical Grounding
 
-**Interpretation:** The theorem captures one precisely characterized failure mode (absorbing state from premature TP assignment) with zero false alarms. At extreme front-loading (ε > 0.80), additional failure modes emerge that the theorem doesn't cover — likely insufficient focal actor coverage, timespan violations, or causal connectivity breakdown in severely front-loaded graphs. The theorem states a *sufficient* condition for failure, not a necessary one.
-
-**Open question:** What are the additional failure modes at high ε? Characterizing these would extend the theorem from "one precisely understood trap" to "a complete taxonomy of greedy extraction failures under sequential constraints."
+The feasible family under prefix constraints violates both the hereditary and exchange axioms of matroids and greedoids (confirmed on 40/40 tested graphs, n_events=20, n_actors=3). This places the system outside the Korte-Lovász greedoid framework, in the regime of general independence systems where greedy has no optimality guarantees. The absorbing state is the specific mechanism: **TP coupling**, where modifying any element triggers global phase reassignment, invalidating the entire sequence.
 
 ---
 
-## 3. Architecture
+## 3. The Complete Algorithm Hierarchy
+
+This is the main constructive contribution. Six levels of algorithm, each addressing a specific failure mode, forming a **partial order** (not a total order — span-VAG and gap-VAG branch).
+
+| Level | Algorithm | Search Type | TP Selection | Candidate Pool | Multi-burst+gap | Bursty+gap | Complexity | Median Runtime |
+|---|---|---|---|---|---:|---:|---|---:|
+| 0 | Myopic greedy | Forward, myopic | Endogenous (max-w) | BFS + injection | 8% | 54.7% | O(n²) | 1.3ms |
+| 1 | Span-VAG | Forward, 1-step span | Endogenous | BFS + injection | **0%** (adversarial!) | 62.7% | O(n²) | 9ms |
+| 2 | Gap-aware VAG | Forward, depth-1 bridge | Endogenous | BFS + injection | 60% | 81.3% | O(n² × pool) | 10ms |
+| 2.5 | BVAG | Forward, global budget | Endogenous | BFS + injection | 60% | 82.0% | O(n² × q) | 10ms |
+| 3 | TP-solver (M=25) | Multi-pass DP | Outer loop (top-M) | BFS + injection | 94% | 96.0% | O(M×L×n²×d) | 2.3s / 5.7s |
+| ∞ | Exact oracle | Exhaustive DP | All focal events | All events | 100% | 99.3% | O(n²×S) | 4.4s / 3.1s |
+
+### Key Transitions
+
+**Greedy → Span-VAG:** Adds "can I still reach minimum timespan?" Fixes assembly compression (Layer 3, 55/57 cases). Cost: ~8× slower.
+
+**Span-VAG → Gap-VAG:** Adds "does a bridge exist for each gap?" This is a **branch**, not a chain — span-VAG is adversarial on multi-burst+gap (0%!) because span viability pushes toward temporally spread events that skip the valley. Gap-VAG drops span awareness and adds gap awareness. Cost: ~1.5× slower.
+
+**Gap-VAG → BVAG:** Adds "is the total bridge budget feasible?" Marginal improvement (3 cases on bursty, 0 on multi-burst). BVAG is algebraically redundant when all gaps need only 1 bridge (max gap ≤ 2G). Cost: ~1×.
+
+**BVAG → TP-Solver:** The fundamental architectural change. Factors out endogenous TP coupling into an outer loop. Converts the non-hereditary, non-Markov search into a clean RCSPP with fixed phase labels. Replaces forward selection with label-setting DP maintaining all non-dominated partial sequences simultaneously. Cost: ~150-400× slower (still under 6 seconds).
+
+**TP-Solver → Exact Oracle:** Expands search space (all events vs BFS pool, all TPs vs top-M). The remaining gap is: (a) M too small — oracle's optimal TP not in top-M candidates (3 residual cases at M=25), (b) pool construction boundary — solver's BFS pool doesn't contain span-extending events at temporal extremes that oracle uses (5 residual cases).
+
+### TP-Conditioned RCSPP Solver Details
+
+**File:** `rhun/extraction/tp_conditioned_solver.py`
+
+**Algorithm:**
+1. **Outer loop 1:** Enumerate top-M focal-actor events by weight as TP candidates
+2. **Outer loop 2:** For each TP τ, enumerate n_pre ∈ {0..L-1} (pre-TP event count)
+3. **Phase assignment:** With τ and n_pre fixed, every event gets a deterministic phase (SETUP/DEVELOPMENT if before τ, TURNING_POINT if τ, RESOLUTION if after)
+4. **Inner solve:** Label-setting DP. Labels = (score, slots_used, first_t). Bucket key = (last_event_id, dfa_state). Dominance: A dominates B if A.score ≥ B.score AND A.slots_used ≤ B.slots_used AND A.first_t ≤ B.first_t
+5. **Optional:** Backward gap heuristic (min_hops_to_end) for admissible pruning
+6. **Accept:** Best valid sequence across all (τ, n_pre)
+
+**Empirical performance at M=25:**
+- Labels generated: 536K median (multi-burst), 1.54M median (bursty)
+- Frontier peaks: 1557 (multi-burst), 673 (bursty)
+- Recovery: 17/20 multi-burst BVAG failures, 21/26 bursty BVAG failures
+- Zero regressions
+
+**Runtime warning:** At M=25, the solver is SLOWER than exact oracle on bursty (5.65s vs 3.05s median). GPT predicted break-even at M≈14 for bursty — confirmed empirically. **Adaptive M is required for practical deployment.** M=10 is faster than oracle on both topologies; M=25 exceeds oracle runtime on bursty.
+
+---
+
+## 4. Failure Class Taxonomy (Complete)
+
+### Class A: Absorbing State (Theorem Domain)
+j_dev < k → greedy deterministically trapped. Zero false positives. Captured by Prefix-Constraint Impossibility Theorem. Fraction depends on ε and k.
+
+### Class B: Pipeline Coupling
+Phase classifier assigns too many events to SETUP, leaving zero DEVELOPMENT. Fixed by grammar-aware classifier. 63 cases in original bursty analysis. All recovered.
+
+### Class C: Commitment Timing (The Frontier)
+Bridges exist in pool but greedy commits to high-weight core events before budget becomes critical. Two subtypes:
+- **C1: Pool construction boundary.** Events oracle uses are not in the BFS-reachable pool. 5 bursty residual cases at M=25 — all fail with `insufficient_timespan`, not gap violations. The missing events are span-extending events at temporal extremes (very early or very late timestamps) that belong to non-focal actors with no causal path from the focal actor.
+- **C2: Dimensional knapsack exhaustion.** Bridge events present but selected too late. Sequence-length dimension exhausted before spatial routing complete. **Solved by TP-conditioned solver** (17/20 multi-burst, 21/26 bursty recoveries).
+
+### Class D: Assembly Compression
+Weight-maximizing assembly compresses timespan. Solved by span-only VAG (55/57). The 2 unsolved are edge cases requiring complete reassembly.
+
+---
+
+## 5. Pool Construction Boundary (Newly Characterized)
+
+The TP-conditioned solver's residual failures at M=25 were diagnosed via `experiments/run_tp_solver_pool_diagnosis.py`. All 8 cases (5 bursty, 3 multi-burst "M too small") have exact_sequence_in_tp_pool=False — the oracle uses events outside the solver's BFS pool.
+
+**Key finding:** The missing events are NOT gap-bridging events in valleys. They are **span-extending events at temporal boundaries** — events at the far ends of the timeline (e.g., e0186 at t=0.97 or e0010 at t=0.02) from non-focal actors that the oracle uses to satisfy the minimum timespan constraint. The solver's best attempts all fail with `insufficient_timespan`.
+
+**Everyone was wrong about the mechanism:**
+- Grok predicted "causally disconnected bridge events" → Wrong (it's span, not gap)
+- Gemini predicted "drop BFS, unrestricted fixes all" → Right prescription, wrong reason
+- GPT predicted "could be pool OR transition, don't conflate" → Correctly cautious
+
+**For the paper:** The pool boundary is a named, characterized result:
+> The TP-conditioned solver is exact within the BFS-reachable candidate set. Residual failures arise from candidate set restriction, not algorithmic incompleteness. The choice of candidate set is a domain modeling decision: causal locality (BFS) for narrative/incident applications; unrestricted for pure temporal extraction.
+
+---
+
+## 6. Quality When Algorithms Succeed
+
+Sharp bimodal behavior across all topologies and algorithms:
+
+| Topology | Approx Ratio Mean | Approx Ratio Min | Cases < 0.90 |
+|---|---:|---:|---:|
+| Bursty (no gap) | 0.996 | 0.975 | 0 |
+| Multi-burst (no gap) | 0.9905 | 0.9512 | 0 |
+| Bursty (with gap) | 1.007 (VAG/exact) | 0.881 | 1 |
+| Multi-burst (with gap) | 1.054 (VAG/exact) | 1.002 | 0 |
+
+The problem is **feasibility-dominated**: surviving constraints is hard; any surviving sequence is near-optimal. This is characteristic of non-hereditary constraint systems where the feasible region is narrow.
+
+---
+
+## 7. Invariance Results
+
+The theorem holds structurally across all tested parameter variations. Sweep at k=2, ε=0.1-0.9, 50 seeds per ε.
+
+**Actor count (N=2,4,6,10,20,50):** 0 FPs everywhere. Mean j_dev_pool = 48.264 **constant** across all N. Disproves Gemini's density-suppression corollary — j_dev depends on total event count (fixed at 200), not actor count. Adding actors subdivides the same events, doesn't add new ones.
+
+**Event density (n=50,100,200,500,1000):** 0 FPs everywhere. Mean j_dev_pool scales linearly: 10.6, 21.4, 48.3, 101.3, 201.0. Validity improves from 0.73 (n=50) to 0.93 (n=200+). The 7-8% failure floor at large n comes from non-absorbing-state failure modes (Layers 2-4).
+
+**Weight distribution (uniform, power_law, bimodal):** 5 FPs total (0.67%). All are tp_match=False — weight replacement destroys native weight-timestamp correlation, causing greedy to select a different TP than j_dev_pool predicted. j_dev_output = 0 FPs everywhere. These are measurement artifacts of the weight replacement procedure, not theorem failures.
+
+**Multi-burst topology:** 0 FPs. Theorem accuracy 0.948.
+
+---
+
+## 8. What Has Been Disproven
+
+| Hypothesis | Test | Result |
+|---|---|---|
+| Shear (importance decomposition) determines contamination | Lorien shear filter | Dead (r=0.033, 0/9 fixed) |
+| α=0.5 peak is continuous-categorical coupling | Lorien decoupled α sweep | Dead (identical arrays) |
+| Failure is topological/geometric | Shear + α coupling null | Dead |
+| Relaxing constraints monotonically improves extraction | Lorien feasible volume sweep | Dead on Lorien; monotonic on synthetic |
+| Prefix dominance explains false negatives | Prefix dominance test | Dead (6/138 = 4.3%) |
+| Beam search recovers assembly compression | Beam sweep w=2..16 | Dead (saturates at w=2, 0/57) |
+| 1-opt repair fixes timespan compression | Repair sweep | Dead (0/57) |
+| Causal depth is the operative variable | Oracle diff analysis | Dead (process properties, not graph properties) |
+| Budget reservation solves gap constraint | BVAG evaluation | Dead on multi-burst (0/20), marginal on bursty (3/33) |
+| Valley of death is universal | Bursty synthetic sweep | Dead (topology-dependent) |
+| Absorbing state probability decays with actor count | Invariance actor sweep | Dead (j_dev=48.264 constant across N=2-50) |
+| Pool mismatches are causally disconnected bridge events | Pool diagnosis | Dead (mechanism is span-extending events, not bridges) |
+| Span-VAG monotonically improves over greedy | Multi-burst + gap | Dead (0% adversarial catastrophe) |
+
+---
+
+## 9. Adversarial Viability & Constraint Antagonism
+
+**Span-VAG → 0% on multi-burst+gap** is a key structural finding. When optimizing for one constraint (span) actively worsens another (gap), this is **constraint antagonism under greedy composition**.
+
+Formalized by Gemini: constraints C₁ and C₂ are k-antagonistic under policy π at state S if (a) a jointly feasible completion exists, but (b) the top-k candidates by π's objective that preserve C₁ viability all violate C₂ viability.
+
+**TP-conditioning partially resolves antagonism.** Fixing the TP destination eliminates span as an online routing objective — it becomes a static acceptance check. The inner DP explores the joint constraint space globally rather than making myopic choices. Residual antagonism manifests as increased label count (1.5M bursty vs 536K multi-burst) rather than validity failures. Gemini overclaimed "α_TP = 0" — if antagonism were truly zero, the solver would hit 100%.
+
+---
+
+## 10. Experiments (Complete List, 32 total)
+
+### Phase 1: Failure Taxonomy (Experiments 1-17, Feb 13-14 morning)
+
+| # | Experiment | Key Finding |
+|---|---|---|
+| 1 | Position sweep | Validity decreases with ε; theorem 0 FP, increasing FN |
+| 2 | Oracle diff | 138/138 FN solvable (100% search-tricked) |
+| 3 | FN divergence | 97.1% different TP; greedy median 0 dev events |
+| 4 | TP misselection | Greedy picks heavier (+13%) but earlier (5×) TP |
+| 5 | Prefix dominance | Condition holds in only 6/138 (dead) |
+| 6 | Extraction internals | 63 classifier failures, 67 timespan failures |
+| 7 | Population A violations | 67/67 are insufficient_timespan |
+| 8 | Phase classifier analysis | ceil(0.2 × 1) = 1 deterministic interaction |
+| 9 | k-j boundary (single ε) | Clean diagonal at ε=0.50 |
+| 10 | Multi-ε k-j boundary | Diagonal holds at all ε |
+| 11 | Classifier fix + re-eval | 63 cases recovered; below-diagonal unchanged |
+| 12 | Beam search sweep | 18/75 at w=2; saturates completely |
+| 13 | k-j beam search | Modest above-diagonal improvement at ε=0.90 |
+| 14 | Pool bottleneck | 98.6% oracle events in pool; not bottleneck |
+| 15 | Valley of death | No valley; monotonic on all curves |
+| 16 | Approximation ratio | Ratio ≥ 0.95 everywhere; bimodal |
+| 17 | 1-opt repair | 0/57 recovered |
+
+### Phase 2: Constructive Algorithms (Experiments 18-27, Feb 14 afternoon)
+
+| # | Experiment | Key Finding |
+|---|---|---|
+| 18 | Exact DP oracle | True optimum; bimodal quality confirmed |
+| 19 | Greedoid axiom test | Both axioms fail; non-viable fraction rises at TP |
+| 20 | Layer 3 anti-correlation | r = -0.491 weight-timestamp in selected pool |
+| 21 | Swap distance | 54/57 need exactly 1 swap |
+| 22 | VAG evaluation | 55/57 L3, 18/18 L2 recovered; 0 regressions |
+| 23 | Gap adversarial (bursty) | Gap-aware VAG 78%; oracle 100% |
+| 24 | Multi-burst generator | r = 0.014; greedy 94%; span-VAG 100% |
+| 25 | Multi-burst comparison | Bimodal quality (mean 0.9905) |
+| 26 | Multi-burst + gap | Span-VAG 0% (!); gap-aware VAG 60%; oracle 100% |
+| 27 | BVAG evaluation | +3/33 bursty, 0/20 multi-burst. Null result. |
+
+### Phase 3: Boundary Mapping (Experiments 28-29, Feb 14 evening)
+
+| # | Experiment | Key Finding |
+|---|---|---|
+| 28 | k-j boundary (formal) | j-definition mismatch; 8 FP; needs re-run |
+| 29 | k-j companion | j_focal outperforms j_theorem |
+
+### Phase 4: TP-Solver & Validation (Experiments 30-32, Feb 15)
+
+| # | Experiment | Key Finding |
+|---|---|---|
+| 30 | FP8 + FP43 diagnosis | All FPs are measurement artifacts (timestamp ties + non-focal prefix filling). Theorem airtight. |
+| 31 | Final k-j boundary | j_dev_output: 0 FPs. j_dev_pool: 0 FPs for k≥2. Razor-sharp diagonal. Core Figure #2 locked. |
+| 32 | Invariance suite | 0 FPs across actor count, density, topology. 5 FPs in weight variants (TP identity shift under non-native weights). |
+| 33 | Weight FP diagnosis | All 5 are tp_match=False (weight replacement destroys correlation). |
+| 34 | TP-solver evaluation (M=10) | Multi-burst 80%, bursty 94%, 0 regressions. 10/20 + 18/26 recoveries. |
+| 35 | TP-solver evaluation (M=25) | Multi-burst 94%, bursty 96%, 0 regressions. 17/20 + 21/26 recoveries. |
+| 36 | Pool mismatch diagnosis | All 8 residuals are pool_construction_difference. Mechanism: span-extending events at temporal boundaries, not gap bridges. |
+
+---
+
+## 11. Architecture
 
 ```
 ~/rhun/
 ├── rhun/                              # Main package
-│   ├── schemas.py                     # Core data structures (CausalGraph, Event, Phase, ExtractedSequence)
-│   ├── generators/                    # DAG generators
+│   ├── schemas.py                     # CausalGraph, Event, Phase, ExtractedSequence
+│   ├── generators/
 │   │   ├── base.py                    # Abstract generator interface
-│   │   ├── uniform.py                 # Uniform random DAGs (null model — no front-loading)
-│   │   └── bursty.py                  # Temporal preferential attachment with front-loading parameter ε
-│   ├── extraction/                    # Extraction engine
-│   │   ├── grammar.py                 # Parameterized sequential phase grammar (GrammarConfig)
-│   │   ├── phase_classifier.py        # Assigns phase labels based on weight/position
+│   │   ├── uniform.py                 # Uniform random DAGs (null model)
+│   │   ├── bursty.py                  # Temporal preferential attachment, ε parameter
+│   │   └── multiburst.py             # Two-burst generator with sparse valley
+│   ├── extraction/
+│   │   ├── grammar.py                 # GrammarConfig: min_prefix_elements, min_timespan_fraction, max_temporal_gap
+│   │   ├── phase_classifier.py        # Phase assignment (grammar-aware fix applied)
 │   │   ├── pool_construction.py       # Pool building: BFS, injection, filtered injection
-│   │   ├── search.py                  # Greedy search + oracle (brute-force) search
+│   │   ├── search.py                  # greedy_extract, oracle_extract, beam_search_extract
+│   │   ├── exact_oracle.py            # Exhaustive DP oracle (true optimum)
+│   │   ├── viability_greedy.py        # VAG: span-only, gap-aware, budget-aware (BVAG)
+│   │   ├── tp_conditioned_solver.py   # TP-conditioned RCSPP (the constructive breakthrough)
 │   │   ├── scoring.py                 # Weight-sum + TP-weighted scoring
 │   │   └── validator.py               # Grammar validation with violation reporting
-│   ├── theory/                        # Theorem + automated verification
+│   ├── theory/
 │   │   ├── theorem.py                 # check_precondition, verify_prediction, diagnose_absorption
 │   │   └── counterexamples.py         # Boundary conditions
-│   ├── experiments/                   # Experiment implementations
-│   │   ├── runner.py                  # Common infrastructure
-│   │   ├── position_sweep.py          # Sweep ε (front-loading) vs validity
-│   │   ├── kj_boundary.py            # Joint sweep of k (prefix requirement) and j (max-weight position)
-│   │   └── invariance.py             # Graph density, actor count, weight distribution sweeps
-│   └── adapters/                      # Domain-specific adapters
+│   ├── experiments/
+│   │   ├── runner.py                  # ExperimentMetadata, ExperimentTimer, save_results
+│   │   ├── position_sweep.py
+│   │   ├── kj_boundary.py
+│   │   └── invariance.py
+│   └── adapters/
 │       ├── narrative.py               # Adapter for Lorien dinner party DAGs
 │       └── incident.py                # Stub for incident response DAGs
-├── tests/                             # 19 tests, all passing
-├── experiments/                       # Experiment runner scripts + output/
+├── tests/                             # 38 tests, all passing
+├── experiments/                       # Runner scripts + output/
 │   ├── run_position_sweep.py
 │   ├── run_kj_boundary.py
-│   └── output/                        # JSON + markdown results
+│   ├── run_kj_boundary_final.py       # Core Figure #2 (j_dev, zero FP)
+│   ├── run_bvag_evaluation.py
+│   ├── run_multiburst_gap.py
+│   ├── run_tp_solver_evaluation.py    # M=10 and M=25 configurations
+│   ├── run_tp_solver_pool_diagnosis.py
+│   ├── run_invariance_suite.py
+│   ├── verify_bvag.py
+│   └── output/                        # JSON + markdown results (36 experiments)
 └── paper/                             # Workshop paper (stub)
 ```
 
 ### Key Interfaces
 
-**Graph generation:**
 ```python
+# Graph generation
 from rhun.generators.bursty import BurstyGenerator, BurstyConfig
+from rhun.generators.multiburst import MultiBurstGenerator, MultiBurstConfig
 
-config = BurstyConfig(n_events=200, n_actors=6, seed=42, epsilon=0.5)
-graph = BurstyGenerator().generate(config)
-```
+graph = BurstyGenerator().generate(BurstyConfig(seed=42, epsilon=0.5))
+graph = MultiBurstGenerator().generate(MultiBurstConfig(seed=42))
 
-**Extraction:**
-```python
-from rhun.extraction.search import greedy_extract, oracle_extract
+# Extraction (full algorithm suite)
+from rhun.extraction.search import greedy_extract
+from rhun.extraction.exact_oracle import exact_oracle_extract
+from rhun.extraction.viability_greedy import viability_aware_greedy_extract
+from rhun.extraction.tp_conditioned_solver import tp_conditioned_solve
 from rhun.extraction.grammar import GrammarConfig
 
-grammar = GrammarConfig(min_prefix_elements=1)  # k=1
-result = greedy_extract(graph, focal_actor="actor_0", grammar=grammar)
-print(result.valid, result.score, result.n_development)
-```
+grammar = GrammarConfig(min_prefix_elements=1, min_timespan_fraction=0.3, max_temporal_gap=0.14)
+result = greedy_extract(graph, "actor_0", grammar)
+exact, meta = exact_oracle_extract(graph, "actor_0", grammar)
+vag, vag_meta = viability_aware_greedy_extract(graph, "actor_0", grammar,
+    gap_aware=True, budget_aware=True)
+tp_result, tp_meta = tp_conditioned_solve(graph, "actor_0", grammar, M=25)
 
-**Theorem verification:**
-```python
+# Theorem verification
 from rhun.theory.theorem import check_precondition, verify_prediction, diagnose_absorption
-
-prediction = check_precondition(graph, "actor_0", grammar)
-print(prediction["predicted_failure"])
-
-verification = verify_prediction(graph, "actor_0", grammar, result)
-print(verification["prediction_correct"])
-
-absorption = diagnose_absorption(result, grammar)
-print(absorption["absorbed"], absorption["absorption_step"])
+pred = check_precondition(graph, "actor_0", grammar)
 ```
 
-### Running Experiments
+### Running
 
 ```bash
 cd ~/rhun
-.venv/bin/python experiments/run_position_sweep.py
-.venv/bin/python experiments/run_kj_boundary.py
+source .venv/bin/activate
+pytest -v                                    # 38 tests
+python experiments/run_position_sweep.py      # ~2 min
+python experiments/run_kj_boundary_final.py   # ~13 min
+python experiments/run_invariance_suite.py    # ~10 min
+python experiments/run_tp_solver_evaluation.py --M 25  # ~38 min
 ```
 
-All experiments are deterministic, reproducible from fixed seeds, and cost $0.00 (no LLM calls, no GPU required for current experiments).
+All experiments are deterministic, reproducible from fixed seeds, $0.00 compute cost.
 
 ---
 
-## 4. Key Terminology
-
-Use these terms precisely. They are chosen to be domain-agnostic and mathematically accurate.
+## 12. Key Terminology
 
 | Term | Meaning | NOT this |
 |---|---|---|
-| **Event** | A node in the causal DAG with timestamp, weight, and actor attribution | Not "beat," "scene," or "incident" |
-| **Phase** | One of: SETUP, DEVELOPMENT, TURNING_POINT, RESOLUTION | Not "act," "beat type" |
-| **Turning point** | The max-weight event in an extracted sequence; the phase boundary | Not "climax," "crisis" |
-| **Prefix constraint** | Grammar requirement for k ≥ 1 DEVELOPMENT events before TP | Not "development beat constraint" (that's the Lorien term) |
-| **Front-loading (ε)** | Fraction of high-weight events in the first ε of the timeline | Not "burstiness" (too vague) |
-| **Absorbing state** | A search state from which no valid completion exists | Not "dead end" (too informal) or "phase transition" (wrong mathematical framework) |
-| **Pool contamination** | When injection heuristics force high-weight early events into every candidate pool | Not "proto_keep_ids" (that's the Lorien implementation detail) |
-| **Focal actor** | The actor whose perspective the extraction targets | Not "protagonist" (narrative-specific) |
+| **Event** | Node in causal DAG with timestamp, weight, actor | Not "beat," "scene" |
+| **Phase** | SETUP, DEVELOPMENT, TURNING_POINT, RESOLUTION | Not "act" |
+| **Turning point (TP)** | Max-weight focal event in extracted sequence; phase boundary | Not "climax" |
+| **Prefix constraint** | Grammar requires k ≥ 1 DEVELOPMENT events before TP | Not "development beat constraint" |
+| **Front-loading (ε)** | Fraction of high-weight events in first ε of timeline | Not "burstiness" |
+| **Absorbing state** | Search state from which no valid completion exists | Not "dead end" or "phase transition" |
+| **j_dev** | Development-eligible events (any actor) before TP | Not j_focal or j_theorem |
+| **Focal actor** | Actor whose perspective extraction targets | Not "protagonist" |
+| **Bridge event** | Low-weight event placed to satisfy max_temporal_gap | — |
+| **Resonance catastrophe** | G ≈ valley_width regime where gap is maximally binding | — |
+| **Commitment timing** | Greedy must choose bridge events early but can't anticipate need | — |
+| **TP coupling** | Modifying any element triggers global phase reassignment | — |
+| **B_lb** | Lower bound on bridge events needed: Σ max(0, ceil(gap/G) - 1) | — |
+| **Adversarial viability** | Optimizing for one constraint worsens another | — |
+| **Pool construction boundary** | Events oracle uses that aren't in BFS-reachable pool | — |
 
 ---
 
-## 5. What Has Been Proven
+## 13. The Paper
 
-### In Lorien (predecessor, narrative domain)
+### Status: Experimental phase near-complete. Pool boundary diagnosed. Paper draft can begin.
 
-| Finding | Experiment | Status |
+**Paper-ready components:**
+- §1-2 (Introduction + Formalism): Complete. Theorem statement with j_dev, zero FPs verified.
+- §3 (Impossibility Result): Complete. Formal proof via product automaton, k-j boundary heatmap (Core Figure #2), zero FPs for k≥2.
+- §4 (Failure Taxonomy): Complete. Four layers fully characterized with fixes or impossibility proofs.
+- §5 (Constructive Hierarchy): Complete pending pool boundary resolution. VAG → gap-aware → BVAG → TP-solver with recovery rates and empirical strict dominance.
+- §6 (Bimodal Quality): Complete. Approximation ratio ≥0.95 when feasible, feasibility-dominated landscape.
+- §7 (Discussion): Needs writing. Valley of death topology-dependent, forward search boundary at commitment-timing, connections to process mining/scheduling.
+
+### Target
+NeurIPS or ICML 2026 workshop on constrained optimization, structured generation, safe AI, or ML systems. 6-8 pages.
+
+### Core Figures
+1. Position sweep (validity vs ε) — done
+2. k-j boundary heatmap (j_dev_pool, razor-sharp diagonal) — done
+3. Algorithm hierarchy comparison table (greedy → TP-solver → oracle) — done
+4. Multi-burst + gap resonance catastrophe (span-VAG at 0%) — done
+5. TP-solver recovery analysis (M=10 vs M=25, residual diagnosis) — done
+
+---
+
+## 14. Multi-AI Workflow
+
+This project uses multiple AI assistants with calibrated roles and honest prediction scoring.
+
+### Roles
+
+- **Claude (Anthropic):** Team leader. Primary analysis, experiment design, theoretical hygiene, codex prompt generation, researcher calibration. Conservative about claims. Pushes back on overclaiming. Identified: BVAG algebraic redundancy, j-definition mismatch, control-flow ordering for multi-burst null, pool boundary mechanism (span-extending, not gap-bridging). Writes all codex prompts with verification criteria.
+
+- **GPT (OpenAI):** Heavy proofs, detailed specifications, careful complexity analysis. Best contributions: formal impossibility proof, TP-conditioned solver specification (directly implemented), h=1 lower bound lemma (depth-1 viability provably fails on adversarial instance), A* heuristic admissibility correction (max not sum), complexity analysis predicting M*≈14 break-even correctly. Most reliable predictions. Correctly cautioned "don't assume pool = disconnected bridges" — vindicated by diagnosis.
+
+- **Gemini (Google):** Strategic framing, creative hypothesis generation. Best contributions: greedoid/matroid framing, RCSPP connection, gap adversarial experiment design, multi-burst generator concept, adversarial viability naming, backward DP heuristic idea, TP feasibility pre-filter proposal (validated by M=25 data). Weaknesses: inflates terminology, overclaims (α_TP=0, density-suppression corollary disproven), predicts with false confidence. ~30-40% of ideas survive scrutiny.
+
+- **Grok (X.AI):** Verification, hierarchy formalization, tightness analysis. Best contributions: partial order observation for hierarchy theorem (span/gap branch), depth-d recovery theorem refinement, B_lb tightness analysis (near-exact for disjoint coverage). Restricted-pool oracle experiment design (correct but superseded by pool diagnosis).
+
+- **Codex agents (Cursor/Claude Code):** Implementation. Receive detailed prompts with verification criteria, expected outputs, and commit messages. Executed 36 experiments with zero implementation failures. 38/38 tests passing.
+
+### Prediction Scorecards
+
+**BVAG Round (Experiment 27):**
+| Predictor | Bursty | Actual | Multi-burst | Actual |
+|---|---|---:|---|---:|
+| Claude | 88-95% | 80.0% | 75-90% | 60.0% |
+| Gemini | 31/33 exact | 3/33 | 20/20 exact | 0/20 |
+| GPT | "much closer" | +3 only | "much closer" | +0 |
+
+**TP-Solver Round (Experiment 34, M=10):**
+| Predictor | Multi-burst | Actual | Bursty | Actual |
+|---|---|---:|---|---:|
+| Claude | 17-19/20 | 10/20 | 25-30/33 | 18/26 |
+| Gemini | 20/20 | 10/20 | — | — |
+
+**FP43 Diagnosis Prediction:**
+| Predictor | Prediction | Actual |
 |---|---|---|
-| One sequential constraint accounts for 100% of regularization | Feasible volume sweep (8 levels, 50 seeds) | Confirmed |
-| The regularization cliff is search-algorithmic, not environment-dependent | Depth-0 vs depth-2 development beat sweep | Confirmed (32pp vs 36pp) |
-| Candidate pools are entirely degenerate in failing cases | Search instrumentation (33/33 candidates have zero development) | Confirmed |
-| Anchor selection doesn't matter | Anchor diversification (3 strategies, 0/9 fixed) | Confirmed |
-| Pool injection is dual-function (necessary AND contaminating) | Proto-keep ablation (0/50 valid without it; temporal filter fixes 7/9) | Confirmed |
-| Importance decomposition doesn't matter (shear invariance) | Shear-filtered injection (r=0.033, 0/9 fixed) | Confirmed |
-| α=0.5 peak is pure continuous tuning (no categorical coupling) | Decoupled α sweep (3 conditions numerically identical) | Confirmed |
-| The operative variable is temporal position of high-weight events | α sweep + Diana TP position data (0.51 → 0.716 at α=0.5) | Confirmed |
+| Claude | TP divergence or classifier | Non-focal prefix filling |
+| Gemini | TP divergence | Wrong (tp_match=True 51/51) |
+| Grok | TP divergence (pool dynamics) | Wrong |
+| GPT | (not asked) | N/A |
 
-### In Rhun (current, synthetic domain)
-
-| Finding | Experiment | Status |
+**Pool Boundary Prediction:**
+| Predictor | Prediction | Actual |
 |---|---|---|
-| Validity decreases with front-loading (ε) | Position sweep (0.927 → 0.487) | Confirmed |
-| Absorption rate increases with front-loading | Position sweep (0.073 → 0.440) | Confirmed |
-| Theorem has zero false positives | Position sweep error analysis | Confirmed |
-| Theorem has increasing false negatives at high ε | Position sweep error analysis (FN rate 0.05 → 0.35) | Confirmed |
-| Additional failure modes exist beyond the theorem's scope | Position sweep at ε > 0.80 | Identified, not yet characterized |
+| GPT | "Could be pool OR transition, don't conflate" | Correct (all pool, zero transition) |
+| Grok | "Causally disconnected bridge events" | Wrong sub-mechanism (span, not gap) |
+| Gemini | "Drop BFS, unrestricted fixes all" | Right fix, wrong reason |
 
-### What Has Been Disproven
+**Calibration rule:** If an AI says "this shatters/revolutionizes X" or invokes physics (phase transitions, symmetry breaking, geodesics) without proving the mathematical structure applies — downgrade to the precise empirical statement.
 
-| Hypothesis | Test | Result |
-|---|---|---|
-| "Importance decomposition (shear) determines contamination" | Shear filter experiment | Dead (r=0.033, 0/9 fixed) |
-| "α=0.5 peak is continuous-categorical coupling" | Decoupled α sweep | Dead (Thorne has no categorical commitments) |
-| "The failure is a topological/geometric phenomenon" | Shear invariance + α coupling null | Dead for current formulation |
-| "Relaxing constraints monotonically improves extraction" | Feasible volume sweep | Dead (valley of death at intermediate relaxation) |
+### Workflow Pattern
 
----
+1. **Claude designs experiments** → writes codex prompts with verification criteria, expected outputs, commit messages
+2. **Codex agents implement and run** → deterministic results, zero failures across 36 experiments
+3. **Claude analyzes results** → routes findings to researchers with calibrated tasks
+4. **Researchers (GPT/Gemini/Grok) produce theory/analysis** → Claude evaluates, cross-pollinates, scores predictions
+5. **Repeat** with next experiment informed by all findings
 
-## 6. What's Next
-
-### Immediate (This Session / Next Session)
-
-1. **Run the k-j boundary sweep.** Joint sweep of k (grammar.min_prefix_elements, 0–5) and j (temporal index of max-weight event). The theorem predicts a diagonal boundary: failure when j < k. This is the second core figure for the workshop paper.
-
-2. **Characterize the false negative failure modes.** At ε ≥ 0.80, extractions fail for reasons outside the theorem. Diagnose these: are they coverage violations? Timespan violations? Causal connectivity breakdown? Each additional failure mode is a potential extension of the theorem.
-
-3. **Evaluate whether the bursty generator's ε parameter needs recalibration.** The mid-range plateau (ε 0.15–0.55 all near 0.97) suggests ε isn't linearly controlling the max-weight position. Verify by plotting mean_max_weight_position vs. ε. If the relationship is non-linear, the generator may need adjustment or the experiment should sweep max-weight position directly rather than ε.
-
-### Near-Term (Weeks 2–4)
-
-4. **Invariance tests.** Sweep graph density (sparse → dense causal links), actor count (2 → 50), and weight distribution (uniform, power-law, bimodal). Each invariance confirmed is a corollary of the theorem.
-
-5. **Beam search comparison.** Implement beam search as an alternative to greedy. Test whether beam width > 1 escapes the absorbing state trap. If so, characterize the minimum beam width needed as a function of ε and k. This is the constructive result: "greedy fails, but beam search of width w escapes."
-
-6. **Write the theorem formally.** Clean combinatorial statement with proof. The absorbing-state characterization should be the proof mechanism: once the search enters the absorbing region of the state machine, the proof shows no valid completion exists.
-
-### Medium-Term (Weeks 4–8)
-
-7. **Workshop paper draft.** Target: NeurIPS or ICML 2026 workshop on constrained optimization, structured generation, or safe AI. Working structure:
-   - §1: Problem — greedy extraction from causal DAGs with sequential phase constraints
-   - §2: The prefix-constraint impossibility result (theorem + proof)
-   - §3: Absorbing state characterization (the mechanism)
-   - §4: Empirical validation — position sweep + k-j boundary on synthetic graphs
-   - §5: Null results as invariance proofs (shear, coupling — from Lorien)
-   - §6: Domain applications (narrative extraction as case study, incident response as future work)
-   - §7: Constructive escape via beam search (if results are ready)
-
-8. **Cross-domain validation.** Build the incident response DAG generator (synthetic distributed system outage traces). Demonstrate the same failure mode and the same theorem applicability in a non-narrative domain.
-
-9. **GPU scaling (Great Lakes cluster).** Vectorize the extraction search for batch execution over thousands of synthetic graphs. The k-j boundary plot across 10,000+ instances with varying topology is the signature figure.
-
-### Longer-Term (Months 3–6)
-
-10. **Extended theorem.** Characterize the additional failure modes discovered at high ε. Aim for a complete taxonomy: "greedy extraction fails if and only if one of these N conditions holds."
-
-11. **Formal paper (full conference).** Extend the workshop paper with the complete taxonomy, beam search constructive result, and cross-domain validation.
-
-12. **Connections to optimization theory.** The non-monotonic regularization curve (valley of death) may connect to known results about constraint relaxation in non-convex optimization. The absorbing state characterization may connect to the theory of greedy algorithms on non-matroidal independence systems (this is an underexplored area in combinatorial optimization).
+Key insight: the multi-AI workflow works because each system has complementary strengths. GPT for proofs and specs, Gemini for creative constructions and literature connections, Grok for verification and formalization, Claude for experiment design and calibration. The prediction scorecard keeps everyone honest.
 
 ---
 
-## 7. Empirical Methodology
+## 15. Methodology
 
-All experiments in this project follow strict methodological principles:
-
-1. **Verification-first:** Every experiment runs a baseline condition first and confirms it matches expected anchors before proceeding to experimental conditions. If baseline doesn't reproduce, the experiment stops.
-
-2. **Fully deterministic:** All randomness is seeded. Same seed → same graph → same extraction → same result. No stochastic components.
-
-3. **$0.00 compute cost:** No LLM calls, no API fees. All computation is local CPU. (GPU may be used for batch scaling in future, but the experiments themselves remain deterministic.)
-
-4. **Null results are findings.** The shear experiment (r=0.033, 0/9 fixed) and the decoupled α sweep (identical arrays) are published as invariance proofs, not buried as failures.
-
-5. **Error decomposition:** When a prediction fails, break it into TP/FP/FN/TN. Understand *which direction* the error goes. The position sweep's "zero false positives, increasing false negatives" is a much more informative statement than "accuracy drops to 0.65."
+1. **Verification-first:** Baseline conditions confirmed before experimental conditions.
+2. **Fully deterministic:** All randomness seeded. Same seed → same result.
+3. **$0.00 compute:** No LLM calls, no API fees. Local CPU only.
+4. **Null results are findings.** BVAG null (0/20), repair null (0/57), valley of death (monotonic), prefix dominance (4.3%), density-suppression (constant j_dev) — all published as structural results.
+5. **Error decomposition:** TP/FP/FN/TN breakdown. Directional analysis, not aggregate accuracy.
+6. **Prediction scoring:** All AI researchers make quantitative predictions before results. Scored honestly. Nobody gets credit for post-hoc explanations.
 
 ---
 
-## 8. What NOT To Do
+## 16. What NOT To Do
 
-Patterns that have been tried and failed, or that lead to unproductive directions:
+Everything from previous versions still applies, plus:
 
-- **Do NOT use physics analogies (phase transitions, spontaneous symmetry breaking, cosmic censorship, geodesic incompleteness) without rigorous mathematical justification.** These were explored extensively and found to be analogies without mathematical content applicable to this system. The operative mathematics is combinatorial, not geometric or thermodynamic.
-
-- **Do NOT assume the narrative domain is the interesting part.** The narrative system was the scaffolding that led to the discovery. The research contribution is the theorem about greedy extraction on DAGs. The narrative is one case study.
-
-- **Do NOT train neural models to approximate the existing scoring function.** The scoring function has known biases (kinetic bias in the narrative domain). Training a neural net on it just learns the bias faster. Fix the metric first, then consider learned approaches.
-
-- **Do NOT modify `~/lorien/` source code from this project.** Lorien is frozen as a validated instrument. If you need narrative DAGs, use the adapter in `rhun/adapters/narrative.py`.
-
-- **Do NOT call the prefix constraint a "topological prior."** Topology has a precise mathematical meaning that doesn't apply here. It's a sequential structural constraint. Call it that.
-
-- **Do NOT claim universal critical exponents or power-law scaling** unless you can demonstrate it rigorously across multiple system sizes with proper finite-size scaling analysis. The system is finite and discrete. A sigmoid fit is almost certainly more appropriate than a power law.
-
----
-
-## 9. Open Research Questions
-
-These are genuinely open — we don't know the answers. They're ordered roughly by tractability.
-
-1. **What causes the false negatives at high ε?** The theorem predicts failure when max-weight is early, but at ε ≥ 0.80, 35% of failures happen for other reasons. What are they? Can they be formalized as additional sufficient conditions?
-
-2. **Is the k-j boundary actually diagonal?** The theorem predicts it should be. The k-j boundary experiment will answer this directly. If it's not diagonal, what shape is it and why?
-
-3. **Can beam search escape the absorbing state?** If greedy enters the absorbing state deterministically, does beam search with width w > 1 maintain at least one non-absorbed candidate? What's the minimum w as a function of graph properties?
-
-4. **Does the non-monotonic regularization curve (valley of death) generalize beyond the narrative domain?** The Lorien feasible volume sweep showed that partial constraint relaxation makes extraction worse. Does this happen on synthetic graphs with different topologies? Under what conditions does relaxation help vs. hurt?
-
-5. **Is there a natural family of sequential constraints beyond the prefix constraint?** The prefix constraint (k elements before TP) is one member of a family of sequential ordering requirements. What about suffix constraints (m elements after TP)? Balanced constraints (at least p% of elements in each phase)? Which of these create absorbing states and which don't?
-
-6. **What is the right formal framework for "absorbing states in greedy search under non-hereditary constraints"?** This bridges combinatorial optimization and automata theory. The grammar is a finite state machine. The prefix constraint creates absorbing states. Is there a general theory of when sequential constraints create absorbing states in greedy search? This could be the deepest theoretical contribution.
-
-7. **Does the incident response domain exhibit the same failure mode?** Root-cause analysis tools notoriously anchor on loud symptoms (the server crash) rather than quiet precursors (the config change 2 hours earlier). Is this literally the same prefix-constraint absorbing state, just in a different domain?
+- **Do NOT assume pool mismatches are disconnected bridge events.** Pool diagnosis proved the mechanism is span-extending events at temporal extremes, not gap bridges in valleys.
+- **Do NOT use M=25 on bursty without adaptive M.** Solver exceeds oracle runtime (5.65s vs 3.05s). Use M=10 for practical deployment, M=25 only for coverage experiments.
+- **Do NOT claim the hierarchy is a total order.** It's a partial order — span-VAG and gap-VAG branch (span-VAG is adversarial on multi-burst+gap).
+- **Do NOT assume BVAG adds value on multi-burst.** BVAG is algebraically redundant when max gap ≤ 2G (0/20 recoveries, same as gap-VAG).
+- **Do NOT use j_focal or j_theorem for the k-j boundary.** j_dev (development-eligible events from any actor) is the correct variable. j_focal produces 43 FPs. j_theorem produces 8 FPs but misses most real failures.
+- **Do NOT assume Gemini's density-suppression corollary holds.** Actor count has zero effect on j_dev (flat at 48.264 for N=2-50). The suppression works through event density (n), not actor count (N).
+- **Do NOT build deeper forward filters to solve commitment timing.** BVAG proved this is bounded. The remaining cases need TP-conditioned DP.
+- **Do NOT use physics analogies** without rigorous mathematical justification.
+- **Do NOT train neural models to approximate the scoring function.**
+- **Do NOT modify `~/lorien/` source code from this project.**
+- **Do NOT assume the 57-case assembly gap is a pool construction problem.** Pool diagnosis proved 98.6% event coverage. The bottleneck is scoring/assembly.
+- **Do NOT assume beam search at higher widths will help beyond w=2.** Saturates completely.
+- **Do NOT conflate "oracle" with "global optimum."** oracle_extract is TP-exhaustive but heuristic in assembly. exact_oracle_extract is the true optimum.
 
 ---
 
-## 10. Multi-AI Workflow
+## 17. What's Next
 
-This project uses multiple AI assistants:
+### Immediate (Next Session)
 
-- **Claude (Anthropic):** Primary analysis, experiment design, theoretical hygiene, codex prompt generation. Conservative about claims. Pushes back on overclaiming and physics analogies. Strong on error decomposition and precise mathematical framing.
-- **Gemini (Google):** Strategic framing, creative hypothesis generation, enthusiasm. Generates many ideas, ~20% of which survive scrutiny. Good at identifying connections to other fields but inflates terminology. Must be calibrated against Claude's analysis.
-- **Codex agents (Cursor/Claude Code):** Implementation. Receive detailed prompts with verification criteria, expected outputs, and commit messages.
+1. **Decide on pool construction for the paper.** GPT raised the right question: is Rhun "extraction from a causal graph" (BFS pool) or "temporal subsequence selection" (unrestricted pool)? The grammar constraints are purely temporal — they don't reference causal edges. The BFS pool is a Lorien artifact. Options: (a) drop BFS for the solver, use unrestricted pool, close the 5 bursty residuals; (b) keep BFS, name the pool boundary as a characterized result. Either way, state the design decision explicitly.
 
-**Calibration rule:** If an AI says "this shatters/revolutionizes X" or invokes physics (phase transitions, symmetry breaking, geodesics) without proving the mathematical structure actually applies — downgrade to "this is a clean empirical demonstration of a known phenomenon in a novel domain with precise mechanistic explanation." The findings are genuinely interesting. They don't need inflation.
+2. **Implement Gemini's TP feasibility pre-filter.** Before ranking focal events by weight, filter out events where j_dev < k (absorbing state) or temporal_coverage < span_threshold (span infeasible). This reduces effective M without losing coverage — recovering M=25 results with M=5-10 runtime.
+
+3. **Implement GPT's admissible A* heuristic.** h = max(min_hops_to_target, min_steps_to_accept_DFA). Prune labels where h > remaining_slots. GPT correctly identified that sum (not max) is inadmissible when one event can satisfy multiple constraints. Expected: significant label reduction → runtime improvement.
+
+### Near-Term (Weeks 2-3)
+
+4. **Paper draft.** All empirical results are in. Structure: impossibility theorem → failure taxonomy → VAG hierarchy → TP-conditioned solver → bimodal quality → pool boundary. Target: NeurIPS/ICML 2026 workshop.
+
+5. **Formal proof of forward filtering ceiling.** GPT proved h=1 lower bound (depth-1 viability fails on adversarial instance). Open question: does the depth hierarchy collapse at d=2 (depth-2 sufficient for all temporal DAGs), or is it strict (depth-d < depth-(d+1) for all d)?
+
+6. **TP-Decoupling Theorem.** If the TP is fixed exogenously (not max-weight of selected set), the feasible family becomes hereditary. Prove: exogenous TP → greedy achieves (1-1/e) approximation. Endogenous TP → greedy can achieve ratio 0. This dichotomy explains why TP-conditioning works.
+
+### Deferred (Parking Lot)
+
+7. **2D (G × valley_width) phase transition sweep.** Maps the resonance catastrophe boundary.
+8. **Cross-domain validation.** Incident response adapter — synthetic distributed system outage traces.
+9. **GPU scaling (Great Lakes cluster).** Vectorize extraction for batch execution over 10,000+ graphs.
+10. **Connections to process mining.** van der Aalst alignment heuristics as TP-solver inner heuristic.
+11. **Suffix/balanced constraint variants.** Does the absorbing state generalize beyond prefix constraints?
 
 ---
 
-## 11. Running the Codebase
+## 18. Key Results Files
 
-```bash
-# Setup
-cd ~/rhun
-python -m venv .venv
-source .venv/bin/activate
-pip install -e ".[dev]"
-
-# Tests
-pytest -v  # 19 tests, all should pass
-
-# Experiments
-python experiments/run_position_sweep.py
-python experiments/run_kj_boundary.py
-
-# Quick smoke test
-python -c "
-from rhun.generators.bursty import BurstyGenerator, BurstyConfig
-from rhun.extraction.search import greedy_extract
-from rhun.extraction.grammar import GrammarConfig
-from rhun.theory.theorem import check_precondition, diagnose_absorption
-
-g = BurstyGenerator().generate(BurstyConfig(seed=42, epsilon=0.8))
-r = greedy_extract(g, 'actor_0', GrammarConfig(min_prefix_elements=1))
-print(f'Valid: {r.valid}, Score: {r.score:.3f}, Dev: {r.n_development}')
-p = check_precondition(g, 'actor_0', GrammarConfig(min_prefix_elements=1))
-print(f'Predicted failure: {p[\"predicted_failure\"]}')
-a = diagnose_absorption(r, GrammarConfig(min_prefix_elements=1))
-print(f'Absorbed: {a[\"absorbed\"]}')
-"
-```
+| File | Content |
+|---|---|
+| `experiments/output/kj_boundary_final.json` | Core Figure #2 data (j_dev_pool, zero FP) |
+| `experiments/output/kj_boundary_final_heatmap.png` | Publication heatmap |
+| `experiments/output/invariance_suite.json` | Actor/density/weight/topology sweeps |
+| `experiments/output/tp_solver_evaluation.json` | M=10 results |
+| `experiments/output/tp_solver_evaluation_m25.json` | M=25 results |
+| `experiments/output/tp_solver_evaluation_m25_summary.md` | Recovery analysis + timing |
+| `experiments/output/tp_solver_pool_diagnosis.md` | 8-case pool boundary diagnosis |
+| `experiments/output/fp43_diagnosis.json` | Non-tie FP diagnosis (non-focal prefix) |
+| `RHUN_CONTEXT.md` | Current complete state (historical context revisions are preserved in git history) |

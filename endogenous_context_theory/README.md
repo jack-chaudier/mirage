@@ -17,7 +17,7 @@ endogenous_context_theory/
 │   ├── eval_mirage_aware.py
 │   └── train_mirage_aware.sh
 ├── notebooks/
-│   └── miragebench_experiments_colab.ipynb
+│   └── legacy/
 ├── data/
 │   ├── processed/
 │   └── smoke/
@@ -59,16 +59,8 @@ endogenous_context_theory/
 │   ├── results/
 │   ├── adapters/
 │   └── figures/
-├── run_all.py                # legacy wrapper -> scripts/run_all.py
-├── run_miragebench_ollama.py # legacy wrapper -> scripts/run_miragebench_ollama.py
-├── run_miragebench_api.py    # legacy wrapper -> scripts/run_miragebench_api.py
-├── generate_training_data.py # legacy wrapper -> scripts/generate_training_data.py
-├── make_balanced_train.py    # legacy wrapper -> scripts/make_balanced_train.py
-├── eval_mirage_aware.py      # legacy wrapper -> scripts/eval_mirage_aware.py
-├── train_mirage_aware.sh     # legacy wrapper -> scripts/train_mirage_aware.sh
-├── training_data -> data/processed     # compatibility symlink
-└── training_data_smoke -> data/smoke   # compatibility symlink
-└── requirements.txt
+├── requirements.txt
+└── requirements-full.txt
 ```
 
 ## Curated Public-Release Bundle
@@ -92,6 +84,8 @@ cd endogenous_context_theory
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+# Optional full stack install:
+# pip install -r requirements-full.txt
 ```
 
 ## Run Everything
@@ -105,13 +99,8 @@ This will:
 2. Print a table and PASS/FAIL verdict for each test.
 3. Save raw CSV outputs under `results/raw/`.
 4. Save publication-style figures under `results/figures/`.
-5. Write `results/summary_report.md` with run summary (historical baseline if using the pre-correction path).
-
-## Legacy Compatibility
-
-Top-level script names are preserved as wrappers. Existing commands like
-`python run_all.py` and `python generate_training_data.py` still work and
-delegate to `scripts/` entrypoints.
+5. Write `results/summary_report.md` as a run-specific summary artifact.
+6. For canonical post-correction status, use `results/current_status.md`.
 
 ## Notes
 

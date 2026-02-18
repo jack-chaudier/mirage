@@ -33,8 +33,9 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--input-json",
-        default="/Users/jackg/Downloads/ntsb_event_graphs.json",
-        help="Input incident graph JSON.",
+        required=True,
+        default=None,
+        help="Input incident graph JSON (required).",
     )
     parser.add_argument(
         "--report-json",

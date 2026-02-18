@@ -117,33 +117,35 @@ Paper publishing workflow:
 
 ## Citation
 
+<!-- Replace "Forthcoming" with arXiv IDs after submission -->
+
 ```bibtex
 @article{gaffney2026narrativefield,
   title   = {Continuous Control and Structural Regularization in Multi-Agent Narrative Extraction},
   author  = {Jack Chaudier Gaffney},
   year    = {2026},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX}
+  journal = {Forthcoming}
 }
 
 @article{gaffney2026absorbing,
   title   = {Absorbing States in Greedy Search: When Endogenous Constraints Break Sequential Extraction},
   author  = {Jack Chaudier Gaffney},
   year    = {2026},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX}
+  journal = {Forthcoming}
 }
 
 @article{gaffney2026streaming,
   title   = {Streaming Oscillation Traps in Endogenous-Pivot Sequential Extraction},
   author  = {Jack Chaudier Gaffney},
   year    = {2026},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX}
+  journal = {Forthcoming}
 }
 
 @article{gaffney2026mirage,
   title   = {The Validity Mirage: Context Algebra for Endogenous Semantics under Memory Compression},
   author  = {Jack Chaudier Gaffney},
   year    = {2026},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX}
+  journal = {Forthcoming}
 }
 ```
 

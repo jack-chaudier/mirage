@@ -9,22 +9,12 @@ import pandas as pd
 
 from src.generators import adversarial_oscillation_generator, bursty_generator, multi_burst_generator, streaming_generator
 from src.reporting import ensure_result_dirs, pass_fail, print_header, print_table, save_csv, save_figure, set_plot_style
-from src.tropical_semiring import TropicalContext, build_tropical_context, compose_tropical
+from src.tropical_semiring import build_tropical_context, compose_tropical
+from tests.helpers import _same_context
 
 
 TEST_NAME = "Test 02: Associativity"
 CLAIM = "Claim: (A⊗B)⊗C == A⊗(B⊗C) across all tested split points and generators."
-
-
-def _same_context(a: TropicalContext, b: TropicalContext) -> bool:
-    if a.d_total != b.d_total:
-        return False
-    a_inf = np.isneginf(a.W)
-    b_inf = np.isneginf(b.W)
-    if not np.array_equal(a_inf, b_inf):
-        return False
-    mask = ~a_inf
-    return bool(np.allclose(a.W[mask], b.W[mask], atol=1e-12, rtol=0.0))
 
 
 def _split_points(n: int, seed: int, n_splits: int = 5) -> List[Tuple[int, int]]:

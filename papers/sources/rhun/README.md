@@ -2,6 +2,7 @@
 
 This directory is the source of truth for RHUN papers in this repository.
 Edit `.tex` and `.bib` files here first.
+Compiled publication PDFs are tracked in `papers/` at repo root.
 
 After edits, publish with:
 
@@ -14,11 +15,8 @@ the top-level publication PDFs in `papers/`.
 
 ## Canonical files
 - `finite_absorbing_states.tex` -> `main.tex`
-- `finite_absorbing_states.pdf` -> `main.pdf`
 - `streaming_oscillation_traps_draft.tex` -> `streaming_draft.tex`
-- `streaming_oscillation_traps_draft.pdf` -> `streaming_draft.pdf`
 - `context_algebra_endogenous_semantics_draft.tex` -> `context_algebra_draft.tex`
-- `context_algebra_endogenous_semantics_draft.pdf` -> `context_algebra_draft.pdf`
 
 ## Figure scripts
 - `generate_figures.py` (finite-paper figures)

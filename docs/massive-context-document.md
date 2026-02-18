@@ -10,6 +10,7 @@ repository, runnable code lives under `endogenous_context_theory/`.
 
 ## 0. Paper Set (Primary Reading Order)
 
+0. `papers/paper_00_continuous_control_structural_regularization.pdf`
 1. `papers/paper_01_absorbing_states_in_greedy_search.pdf`
 2. `papers/paper_02_streaming_oscillation_traps.pdf`
 3. `papers/paper_03_validity_mirage_compression.pdf`
@@ -40,7 +41,7 @@ From `projects/lorien/README.md`, `projects/lorien/docs/METHODOLOGY.md`, and che
 
 ## 3.2 Rhun (Formal Layer)
 
-From `projects/rhun/RHUN_CONTEXT_v4.md` and paper artifacts:
+From `projects/rhun/RHUN_CONTEXT.md` and paper artifacts:
 
 - Prefix-Constraint Impossibility theorem framing.
 - Failure-class decomposition.
@@ -63,11 +64,12 @@ From `endogenous_context_theory/`:
 Primary paths:
 - `endogenous_context_theory/src/`
 - `endogenous_context_theory/tests/`
-- `endogenous_context_theory/run_all.py`
+- `endogenous_context_theory/scripts/run_all.py`
 
 Key reports:
-- `endogenous_context_theory/results/summary_report.md`
+- `endogenous_context_theory/results/current_status.md`
 - `endogenous_context_theory/results/artifact_correction_report.md`
+- `endogenous_context_theory/results/summary_report.md` (historical, pre-correction)
 - `endogenous_context_theory/results/raw/run_all_summary.csv`
 - `endogenous_context_theory/results/raw/artifact_correction_summary.csv`
 
@@ -78,8 +80,8 @@ Important interpretation note:
 ## 4.2 Training Data Pipeline
 
 Generation scripts and outputs:
-- `endogenous_context_theory/generate_training_data.py`
-- `endogenous_context_theory/make_balanced_train.py`
+- `endogenous_context_theory/scripts/generate_training_data.py`
+- `endogenous_context_theory/scripts/make_balanced_train.py`
 - `endogenous_context_theory/data/processed/data_stats.json`
 - `endogenous_context_theory/data/processed/train.jsonl`
 - `endogenous_context_theory/data/processed/train_balanced.jsonl`
@@ -92,10 +94,10 @@ Observed structure:
 
 ## 4.3 Colab/Run Notebooks
 
-- `qwen_mirage_aware_training_eval_colab.ipynb`
-- `qwen_mirage_aware_balanced_ablation_colab.ipynb`
-- `qwen_mirage_aware_base_eval_colab.ipynb`
-- `gemma2b_mirage_aware_training_eval_colab.ipynb`
+- `endogenous_context_theory/notebooks/legacy/qwen_mirage_aware_training_eval_colab.ipynb`
+- `endogenous_context_theory/notebooks/legacy/qwen_mirage_aware_balanced_ablation_colab.ipynb`
+- `endogenous_context_theory/notebooks/legacy/qwen_mirage_aware_base_eval_colab.ipynb`
+- `endogenous_context_theory/notebooks/legacy/gemma2b_mirage_aware_training_eval_colab.ipynb`
 
 ## 5. Qwen Ablation Results (Balanced vs Imbalanced)
 
@@ -225,8 +227,9 @@ Core synthesis:
 
 Mirage core:
 - `endogenous_context_theory/README.md`
-- `endogenous_context_theory/results/summary_report.md`
+- `endogenous_context_theory/results/current_status.md`
 - `endogenous_context_theory/results/artifact_correction_report.md`
+- `endogenous_context_theory/results/summary_report.md` (historical, pre-correction)
 
 Qwen run artifacts:
 - `mirage_aware_package.tar.gz`
@@ -235,7 +238,7 @@ Qwen run artifacts:
 
 Rhun:
 - `projects/rhun/README.md`
-- `projects/rhun/RHUN_CONTEXT_v4.md`
+- `projects/rhun/RHUN_CONTEXT.md`
 - `projects/rhun/paper/main.pdf`
 
 Lorien:

@@ -533,7 +533,7 @@ rg -n "except:|except Exception" src/engine/narrativefield/extraction src/engine
 ```bash
 git log --oneline -30
 rg "TODO|FIXME|HACK|XXX" src/ docs/ scripts/
-rg "/Users/jackg|/home/jack" src/ docs/ scripts/
+rg "/path/to/|/home/" src/ docs/ scripts/
 rg "sk-|api[_-]key|password|secret" src/
 rg "console\.log|print\(" src/visualization/src --glob "!*.test.*"
 cd src/engine && pytest -q

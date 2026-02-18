@@ -235,6 +235,7 @@ def main() -> None:
 
     write_summary_report(run_df, RESULTS)
     print(f"\nWrote summary report: {RESULTS / 'summary_report.md'}")
+    print(f"Canonical post-correction status file: {RESULTS / 'current_status.md'}")
 
 
 if __name__ == "__main__":

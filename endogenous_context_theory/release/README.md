@@ -20,7 +20,7 @@ Included here:
 | Multi-model blackbox validation (new) | Mirage pattern replicates across 5 architectures | `results/blackbox_bf16_5model/miragebench_bf16_5model_merged.csv`, `results/blackbox_bf16_5model/miragebench_bf16_5model_summary_by_model_release.csv`, `results/blackbox_bf16_5model/miragebench_bf16_5model_summary_by_category_release.csv` |
 | KV-cache eviction validation (new) | Representation-level eviction induces mirage even with full input present | `results/kv_cache_eviction_llama31_8b/kv_cache_eviction_mirage_results.csv`, `results/kv_cache_eviction_llama31_8b/kv_cache_eviction_mirage_summary_by_retention.csv` |
 | Real-incident external validation (NTSB) | Contract prevents attribution shift under real causal structures | `../results/ntsb/`, `../results/ntsb/xai_grok_4_1_fast_non_reasoning/` |
-| Mirage-aware mitigation | Fine-tuned adapter learns explicit degradation signaling | `adapters/mirage_aware_v1/`, `../data/processed/`, `../../qwen_mirage_aware_training_eval_colab.ipynb` |
+| Mirage-aware mitigation | Fine-tuned adapter learns explicit degradation signaling | `adapters/mirage_aware_v1/`, `../data/processed/`, `../notebooks/legacy/qwen_mirage_aware_training_eval_colab.ipynb` |
 
 ## Directory Layout
 

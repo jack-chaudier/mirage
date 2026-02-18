@@ -12,6 +12,9 @@ Canonical LaTeX source trees (full `.tex`/`.bib`/`.sty`/figures):
 - `sources/rhun/` (P1, P2, P3 draft lineage; edit here first)
 - `sources/lorien/` (Lorien paper set and variants)
 
+Compiled publication PDFs are canonical in this folder (`papers/` at repo root).
+Source directories contain TeX sources and figures; compiled PDFs are not tracked there.
+
 Mirror tree:
 
 - `../projects/rhun/paper/` (synced mirror; do not edit directly)

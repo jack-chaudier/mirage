@@ -14,8 +14,9 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--input-json",
-        default="/Users/jackg/Downloads/ntsb_event_graphs.json",
-        help="Source JSON file.",
+        required=True,
+        default=None,
+        help="Source JSON file (required).",
     )
     parser.add_argument(
         "--manifest-csv",

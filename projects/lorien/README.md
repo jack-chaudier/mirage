@@ -41,9 +41,9 @@ A controlled perturbation experiment shows that structurally central beliefs pro
 
 All experiments run deterministically at **$0.00 LLM cost** with full reproducibility from fixed random seeds.
 
-See [`paper/goal_evolution_paper.pdf`](paper/goal_evolution_paper.pdf) for the full paper.
+See [`paper/goal_evolution_paper.tex`](paper/goal_evolution_paper.tex) for the full manuscript source.
 
-A second paper ([`paper/paper2.pdf`](paper/paper2.pdf)) on continuous control, structural regularization, and extraction failure mechanisms extends the analysis to 50 seeds and 3,250 runs, identifying a quality-validity tradeoff and characterizing the beat grammar as a structural regularizer against metric exploitation.
+A second paper ([`../../papers/paper_00_continuous_control_structural_regularization.pdf`](../../papers/paper_00_continuous_control_structural_regularization.pdf)) on continuous control, structural regularization, and extraction failure mechanisms extends the analysis to 50 seeds and 3,250 runs, identifying a quality-validity tradeoff and characterizing the beat grammar as a structural regularizer against metric exploitation.
 
 ## The Canon Test
 

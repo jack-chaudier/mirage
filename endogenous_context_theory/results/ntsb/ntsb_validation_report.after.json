@@ -1,7 +1,7 @@
 {
-  "input_json": "/Users/jackg/mirage/endogenous_context_theory/data/ntsb/ntsb_event_graphs.cleaned.json",
+  "input_json": "endogenous_context_theory/data/ntsb/ntsb_event_graphs.cleaned.json",
   "incidents_count": 12,
-  "audit_csv": "/Users/jackg/mirage/endogenous_context_theory/results/ntsb/ntsb_incident_audit.after.csv",
+  "audit_csv": "endogenous_context_theory/results/ntsb/ntsb_incident_audit.after.csv",
   "errors_count": 0,
   "k_violation_count": 0,
   "k_violation_incidents": [],

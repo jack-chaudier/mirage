@@ -3,28 +3,17 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Dict, List
 
-import numpy as np
 import pandas as pd
 
 from src.generators import bursty_generator
 from src.holographic_tree import HolographicContextTree
 from src.reporting import ensure_result_dirs, pass_fail, print_header, print_table, save_csv
 from src.tropical_semiring import build_tropical_context
+from tests.helpers import _same_context
 
 
 TEST_NAME = "Test 05: Holographic Exactness"
 CLAIM = "Claim: Tree root summary matches exact sequential tropical fold for all tested n and k."
-
-
-def _same_context(a, b) -> bool:
-    if a.d_total != b.d_total:
-        return False
-    a_inf = np.isneginf(a.W)
-    b_inf = np.isneginf(b.W)
-    if not np.array_equal(a_inf, b_inf):
-        return False
-    mask = ~a_inf
-    return bool(np.allclose(a.W[mask], b.W[mask], atol=1e-12, rtol=0.0))
 
 
 def run(results_dir: Path | None = None) -> Dict[str, float]:
