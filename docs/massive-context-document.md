@@ -24,7 +24,7 @@ You have a coherent 3-stage research program:
 
 1. **Lorien (`projects/lorien/`)**: deterministic simulation-first narrative system; origin of structural extraction failure observations.
 2. **Rhun (`projects/rhun/`)**: domain-agnostic theorem + algorithm hierarchy for constrained extraction in temporal DAGs.
-3. **Mirage (`projects/mirage/`)**: context algebra + MirageBench + model comparisons + mirage-aware fine-tuning.
+3. **Mirage (`endogenous_context_theory/`)**: context algebra + MirageBench + model comparisons + mirage-aware fine-tuning.
 
 This is a rare full arc: discovery -> formalization -> benchmark -> mitigation.
 
@@ -49,7 +49,7 @@ From `projects/rhun/RHUN_CONTEXT_v4.md` and paper artifacts:
 
 ## 3.3 Mirage (LLM Layer)
 
-From `projects/mirage/endogenous_context_theory/`:
+From `endogenous_context_theory/`:
 
 - Tropical/endogenous context algebra experiments.
 - MirageBench taxonomy (`true_mirage`, `rescue`, `instability`, `stable_*`).
@@ -61,15 +61,15 @@ From `projects/mirage/endogenous_context_theory/`:
 ## 4.1 Theory/Test Harness
 
 Primary paths:
-- `projects/mirage/endogenous_context_theory/src/`
-- `projects/mirage/endogenous_context_theory/tests/`
-- `projects/mirage/endogenous_context_theory/run_all.py`
+- `endogenous_context_theory/src/`
+- `endogenous_context_theory/tests/`
+- `endogenous_context_theory/run_all.py`
 
 Key reports:
-- `projects/mirage/endogenous_context_theory/results/summary_report.md`
-- `projects/mirage/endogenous_context_theory/results/artifact_correction_report.md`
-- `projects/mirage/endogenous_context_theory/results/raw/run_all_summary.csv`
-- `projects/mirage/endogenous_context_theory/results/raw/artifact_correction_summary.csv`
+- `endogenous_context_theory/results/summary_report.md`
+- `endogenous_context_theory/results/artifact_correction_report.md`
+- `endogenous_context_theory/results/raw/run_all_summary.csv`
+- `endogenous_context_theory/results/raw/artifact_correction_summary.csv`
 
 Important interpretation note:
 - `run_all_summary.csv` includes pre-artifact-correction failures in some mirage/margin tests.
@@ -78,12 +78,12 @@ Important interpretation note:
 ## 4.2 Training Data Pipeline
 
 Generation scripts and outputs:
-- `projects/mirage/endogenous_context_theory/generate_training_data.py`
-- `projects/mirage/endogenous_context_theory/make_balanced_train.py`
-- `projects/mirage/endogenous_context_theory/training_data/data_stats.json`
-- `projects/mirage/endogenous_context_theory/training_data/train.jsonl`
-- `projects/mirage/endogenous_context_theory/training_data/train_balanced.jsonl`
-- `projects/mirage/endogenous_context_theory/training_data/valid.jsonl`
+- `endogenous_context_theory/generate_training_data.py`
+- `endogenous_context_theory/make_balanced_train.py`
+- `endogenous_context_theory/data/processed/data_stats.json`
+- `endogenous_context_theory/data/processed/train.jsonl`
+- `endogenous_context_theory/data/processed/train_balanced.jsonl`
+- `endogenous_context_theory/data/processed/valid.jsonl`
 
 Observed structure:
 - Original train split: 10,000 examples (90% degraded).
@@ -92,10 +92,10 @@ Observed structure:
 
 ## 4.3 Colab/Run Notebooks
 
-- `projects/mirage/qwen_mirage_aware_training_eval_colab.ipynb`
-- `projects/mirage/qwen_mirage_aware_balanced_ablation_colab.ipynb`
-- `projects/mirage/qwen_mirage_aware_base_eval_colab.ipynb`
-- `projects/mirage/gemma2b_mirage_aware_training_eval_colab.ipynb`
+- `qwen_mirage_aware_training_eval_colab.ipynb`
+- `qwen_mirage_aware_balanced_ablation_colab.ipynb`
+- `qwen_mirage_aware_base_eval_colab.ipynb`
+- `gemma2b_mirage_aware_training_eval_colab.ipynb`
 
 ## 5. Qwen Ablation Results (Balanced vs Imbalanced)
 
@@ -104,8 +104,8 @@ Both runs are on the same 400-example eval slice composition (371 degraded, 29 s
 ## 5.1 Balanced Qwen Run (Verified)
 
 Artifacts:
-- `external/downloads/mirage_aware_balanced_package.tar.gz`
-- `external/downloads/mirage_aware_eval_results.csv`
+- `mirage_aware_package.tar.gz`
+- `derived/qwen_balanced_metrics_verified.csv`
 
 Independent recompute:
 - `derived/qwen_balanced_metrics_verified.csv`
@@ -124,9 +124,9 @@ Headline metrics:
 ## 5.2 Imbalanced Qwen Run (Latest, Verified)
 
 Artifacts:
-- `external/downloads/mirage_aware_imbalanced_package_2026-02-17.tar.gz`
-- `external/downloads/mirage_aware_imbalanced_eval_results_2026-02-17.csv`
 - `derived/qwen_imbalanced_summary_from_package_2026_02_17.json`
+- `derived/qwen_imbalanced_metrics_verified_2026_02_17.csv`
+- `derived/qwen_imbalanced_stratified_verified_2026_02_17.csv`
 
 Independent recompute:
 - `derived/qwen_imbalanced_metrics_verified_2026_02_17.csv`
@@ -159,7 +159,7 @@ Observed deltas:
 
 ## 6. Cross-model MirageBench Evidence Already in Repo
 
-From `projects/mirage/endogenous_context_theory/results/`:
+From `endogenous_context_theory/results/`:
 - `haiku_summary.csv`
 - `sonnet_summary.csv`
 - `grok_summary.csv`
@@ -193,9 +193,9 @@ Note: the prior `eval_mirage_aware.py` pivot regex footgun was fixed to support 
 
 ## 8.1 Integrity
 
-- `provenance/manifest.csv`
-- `provenance/SHA256SUMS.txt`
-- `provenance/archive_summary.json`
+- `endogenous_context_theory/release/SHA256SUMS.txt`
+- `docs/imported-projects-sha256.txt`
+- `docs/artifact-index.md`
 
 ## 8.2 Re-run priorities for a new researcher
 
@@ -219,19 +219,19 @@ The program is strong enough for paper-ready framing and for research engineerin
 ## 10. Most Important Files to Read First
 
 Core synthesis:
-- `README_START_HERE.md`
+- `README.md`
 - `docs/independent-review-and-value-assessment.md`
 - `docs/artifact-index.md`
 
 Mirage core:
-- `projects/mirage/endogenous_context_theory/README.md`
-- `projects/mirage/endogenous_context_theory/results/summary_report.md`
-- `projects/mirage/endogenous_context_theory/results/artifact_correction_report.md`
+- `endogenous_context_theory/README.md`
+- `endogenous_context_theory/results/summary_report.md`
+- `endogenous_context_theory/results/artifact_correction_report.md`
 
 Qwen run artifacts:
-- `external/downloads/mirage_aware_balanced_package.tar.gz`
-- `external/downloads/mirage_aware_imbalanced_package_2026-02-17.tar.gz`
+- `mirage_aware_package.tar.gz`
 - `derived/qwen_balanced_vs_imbalanced_comparison_2026_02_17.csv`
+- `endogenous_context_theory/release/results/blackbox_bf16_5model/miragebench_bf16_5model_merged.csv`
 
 Rhun:
 - `projects/rhun/README.md`
@@ -251,4 +251,4 @@ Lorien:
 
 ## Appendix B: Archive Scale
 
-Current authoritative totals are in `provenance/archive_summary.json`.
+Current release checksums are in `endogenous_context_theory/release/SHA256SUMS.txt`.

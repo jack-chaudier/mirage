@@ -7,17 +7,16 @@ Primary papers in this repository:
 
 ## Scope
 
-Note: some paths below use the original archival naming (`external/...`, `projects/...`).
-In this repository, canonical runnable code is under `endogenous_context_theory/`.
+Canonical runnable code is under `endogenous_context_theory/` and release-ready
+artifacts are under `endogenous_context_theory/release/`.
 
 This review is based on artifacts inside this dossier, especially:
 
-- Balanced run: `external/downloads/mirage_aware_balanced_package.tar.gz`
-- Imbalanced run: `external/downloads/mirage_aware_imbalanced_package_2026-02-17.tar.gz`
-- Balanced CSV: `external/downloads/mirage_aware_eval_results.csv`
-- Imbalanced CSV: `external/downloads/mirage_aware_imbalanced_eval_results_2026-02-17.csv`
+- Balanced/imbalanced verification tables in `derived/`
+- Blackbox sweep CSVs in `endogenous_context_theory/release/results/blackbox_bf16_5model/`
+- KV-cache sweep CSVs in `endogenous_context_theory/release/results/kv_cache_eviction_llama31_8b/`
 - Comparison tables in `derived/`
-- Core repos under `projects/mirage/`, `projects/rhun/`, `projects/lorien/`
+- Core code under `endogenous_context_theory/` and imported context under `projects/rhun/`, `projects/lorien/`
 
 ## Bottom Line
 

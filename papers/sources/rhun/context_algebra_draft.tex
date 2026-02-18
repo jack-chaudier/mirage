@@ -18,7 +18,7 @@
 \usepackage{tikz}
 
 \title{The Validity Mirage: Context Algebra for Endogenous Semantics under Memory Compression}
-\author{Anonymous (Draft)}
+\author{Jack Chaudier Gaffney}
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{proposition}{Proposition}
@@ -77,7 +77,7 @@ where $w^\star$ is the local pivot key, $d_{\mathrm{total}}$ is total developmen
 \end{definition}
 
 \subsection{Endogenous composition}
-For adjacent blocks $A$ then $B$, define $C_{A\Vert B}=C_A\otimes C_B$:
+For adjacent blocks $A$ then $B$, define $C_{A\Vert B}=C_A\otimes_{\mathrm{endo}} C_B$:
 \[
 \begin{aligned}
 w^\star &= \max(w^\star_A,w^\star_B),\\
@@ -91,9 +91,25 @@ d_{\mathrm{pre}} &=
 \]
 The piecewise update is the critical term: if pivot shifts right, the entire left block becomes pre-pivot and contributes its full $d_{\mathrm{total}}$.
 
+\paragraph{Committed vs endogenous operators.}
+To make solver semantics explicit in the algebra (not only in prose), we separate two operators:
+\begin{itemize}[leftmargin=1.3em]
+  \item $\otimes_{\mathrm{endo}}$: pivot can be replaced by a higher suffix key (the definition above).
+  \item $\otimes_{\mathrm{commit}}$: left committed pivot cannot be replaced.
+\end{itemize}
+For committed composition, use an extended element $\bar C=(w^\star,d_{\mathrm{total}},d_{\mathrm{pre}},\kappa)$ with commitment flag $\kappa\in\{0,1\}$:
+\[
+\bar C_A\otimes_{\mathrm{commit}}\bar C_B=
+\begin{cases}
+(w^\star_A,\ d_{\mathrm{total},A}+d_{\mathrm{total},B},\ d_{\mathrm{pre},A},\ 1), & \kappa_A=1,\\
+\big((C_A\otimes_{\mathrm{endo}}C_B),\ \kappa_B\big), & \kappa_A=0.
+\end{cases}
+\]
+Proposition~2 is stated over $\otimes_{\mathrm{commit}}$.
+
 \subsection{Associativity}
 \begin{proposition}[Associativity]
-$\otimes$ is associative.
+$\otimes_{\mathrm{endo}}$ is associative.
 \end{proposition}
 \begin{proof}
 Let $A,B,C$ be three consecutive blocks, with strict total order on pivot keys from deterministic tie-breaking.
@@ -108,28 +124,39 @@ d_{\mathrm{pre}}=d_{\mathrm{total},A}+d_{\mathrm{total},B}+d_{\mathrm{pre},C},
 \]
 with identical $d_{\mathrm{total}}$.
 
-All cases agree; therefore $\otimes$ is associative.
+All cases agree; therefore $\otimes_{\mathrm{endo}}$ is associative.
+\end{proof}
+
+\begin{proposition}[Identity element]
+Under the pivot-key order, $e=(-\infty,0,0)$ satisfies
+\[
+C\otimes_{\mathrm{endo}}e=e\otimes_{\mathrm{endo}}C=C.
+\]
+Hence $(\mathcal{C},\otimes_{\mathrm{endo}},e)$ is a monoid.
+\end{proposition}
+\begin{proof}
+For $C=(w^\star,d_{\mathrm{total}},d_{\mathrm{pre}})$, composition with $e$ keeps pivot key $w^\star$, adds zero development mass, and leaves pre-pivot mass unchanged in both directions by the same case split as Definition 3.2.
 \end{proof}
 
 \paragraph{Systems implication.}
 Because $\otimes$ is strictly associative, context reduction supports parallel tree reductions and therefore $O(\log n)$ reduction depth in recursive context trees.
 
 \section{Absorbing Ideal and No-Absorption Contract}
-Fix grammar parameter $k$ and define absorbing predicate $\bot$ by $d_{\mathrm{pre}}<k$.
+Fix grammar parameter $k$ and define absorbing predicate $\bot$ by $d_{\mathrm{pre}}<k$ (applied to the $d_{\mathrm{pre}}$ component of either $C$ or $\bar C$).
 
 \begin{proposition}[Absorbing left ideal under committed semantics]
-If context $A$ has committed pivot and $A\in\bot$, then for any suffix $D$, $A\otimes D\in\bot$.
+If committed context $\bar A$ has $\kappa_A=1$ and $\bar A\in\bot$, then for any suffix context $\bar D$, $\bar A\otimes_{\mathrm{commit}}\bar D\in\bot$.
 \end{proposition}
 \begin{proof}
 Under committed semantics, suffix events cannot replace the committed pivot. Hence
 \[
-d_{\mathrm{pre},A\otimes D}=d_{\mathrm{pre},A}<k,
+d_{\mathrm{pre},\bar A\otimes_{\mathrm{commit}}\bar D}=d_{\mathrm{pre},\bar A}<k,
 \]
-so $A\otimes D\in\bot$ for all $D$.
+so $\bar A\otimes_{\mathrm{commit}}\bar D\in\bot$ for all $\bar D$.
 \end{proof}
 
 \begin{remark}[Semantics qualifier]
-Without commitment, suffix pivot substitution can escape absorption: if $w^\star_D>w^\star_A$, then $d_{\mathrm{pre}}=d_{\mathrm{total},A}+d_{\mathrm{pre},D}$ may exceed $k$. Exp58 is an explicit witness of this distinction.
+Without commitment ($\otimes_{\mathrm{endo}}$), suffix pivot substitution can escape absorption: if $w^\star_D>w^\star_A$, then $d_{\mathrm{pre}}=d_{\mathrm{total},A}+d_{\mathrm{pre},D}$ may exceed $k$. Exp58 is an explicit witness of this distinction.
 \end{remark}
 
 \begin{definition}[No-absorption contract]
@@ -191,6 +218,7 @@ Exp56 absorbing-ideal closure & 96 & 0 & 0.000 \\
 \caption{Core algebraic checks: exactness and closure hold on tested cells.}
 \label{tab:core_algebra}
 \end{table}
+With 0 observed violations in $n$ tested cells, the 95\% rule-of-three upper bound is approximately $3/n$ (e.g., $3/240\approx1.25\%$, $3/96\approx3.13\%$), so these results strongly constrain but do not prove impossibility outside the tested regime.
 
 \subsection{Claim 2: Compression is the unique tested closure-breaking operation}
 \begin{table}[t]
@@ -325,6 +353,71 @@ The same pattern appears in near-match comparison (naive 0.5 retention 0.478 vs 
 Contract therefore outperforms naive even at lower achieved retention (0.451 $<$ 0.478).
 Mean prerequisite support ratio is substantially higher for contract (0.967--0.987 across budgets) than naive (0.319--0.668), matching the contract's design objective.
 
+\section{Additional External Validation}
+\subsection{Multi-model blackbox validation}
+We evaluated five architectures (Llama 3.1 8B, Mistral 7B v0.3, Gemma 2 9B, Phi-3 Medium 14B, Qwen 2.5 14B), all in bf16 on H100 with greedy decoding ($\texttt{do\_sample=False}$), on the same 12-task MirageBench set and compression levels $\{0.4,0.5,0.6\}$ used in prior Qwen blackbox runs. Metric definitions and pivot extraction are identical to the main benchmark stack.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lccccc}
+\toprule
+Model & Raw validity & Pivot preserve & Fixed-pivot feasible & Semantic regret & Valid but switched \\
+\midrule
+Llama 3.1 8B & 0.962 & 0.417 & 0.222 & 0.260 & 0.583 \\
+Mistral 7B v0.3 & 0.926 & 0.611 & 0.222 & 0.238 & 0.389 \\
+Gemma 2 9B & 0.885 & 0.667 & 0.083 & 0.306 & 0.333 \\
+Phi-3 Medium 14B & 0.835 & 0.444 & 0.222 & 0.208 & 0.417 \\
+Qwen 2.5 14B & 0.954 & 0.722 & 0.167 & 0.307 & 0.278 \\
+\bottomrule
+\end{tabular}
+\caption{Per-model blackbox results on MirageBench (180 rows total). ``Valid but switched'' is $\mathbf{1}[\text{raw\_validity}>0.5\ \wedge\ \text{pivot\_preserved}=0]$.}
+\label{tab:blackbox_multimodel}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lccccc}
+\toprule
+Category & Raw validity & Pivot preserve & Fixed-pivot feasible & Semantic regret & Valid but switched \\
+\midrule
+Incident & 0.931 & 0.800 & 0.033 & 0.230 & 0.183 \\
+Investment & 0.896 & 0.200 & 0.517 & 0.296 & 0.800 \\
+Narrative & 0.910 & 0.717 & 0.000 & 0.265 & 0.217 \\
+\bottomrule
+\end{tabular}
+\caption{Category-pooled blackbox metrics across all five models.}
+\label{tab:blackbox_category}
+\end{table}
+
+The validity mirage pattern is consistent across all five models from four vendors: responses remain high-validity while pivot preservation drops. Investment is the fragile basin (20\% pivot preservation versus 80\% for incident), matching the qualitative regime split predicted by Exp57/Exp58.
+
+\subsection{KV-cache eviction (representation-level mirage)}
+To test representation-level degradation, we ran Llama 3.1 8B (bf16) with full prompt prefill, then applied middle-out KV eviction: keep a fixed anchor prefix (first 256 positions) plus a suffix window, evict the middle, at retention $\{1.0,0.7,0.5,0.3,0.1\}$. This approximates production cache management with attention-sink preservation \citep{xiao2023streamingllm} and includes retention 1.0 as control.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lccccc}
+\toprule
+Retention & Header compliance & Pivot preserve (all) & Pivot preserve ($\mid$ header) & Raw validity & Semantic regret \\
+\midrule
+1.0 & 0.917 & 1.000 & 1.000 & 0.962 & 0.000 \\
+0.7 & 0.500 & 0.583 & 0.833 & 0.703 & 0.320 \\
+0.5 & 0.833 & 0.500 & 0.600 & 0.508 & 0.375 \\
+0.3 & 0.417 & 0.167 & 0.200 & 0.629 & 0.375 \\
+0.1 & 0.667 & 0.083 & 0.000 & 0.680 & 0.330 \\
+\bottomrule
+\end{tabular}
+\caption{KV-eviction validation (60 rows total). Header compliance is $\mathbf{1}[\texttt{PIVOT\_ID=} \text{ emitted}]$.}
+\label{tab:kv_eviction}
+\end{table}
+
+In this experiment, fixed-pivot feasibility is 1.0 at every retention level because all prerequisite information remains in the input text. Yet pivot preservation degrades sharply with retention, and on protocol-compliant outputs falls from 1.000 (retention 1.0) to 0.000 (retention 0.1). This is representation-level validity mirage: evidence is present in input but inaccessible after cache eviction.
+
+The KV setting also separates two degradation modes: (a) protocol collapse (model stops emitting the required \texttt{PIVOT\_ID=} structure and recites raw events), and (b) silent pivot substitution (header-compliant but wrong pivot). We treat (b) as the mirage proper and (a) as an orthogonal protocol-level degradation.
+
 \section{Related Work}
 Our framing is algebraic: context summaries are composed under an endogenous operator with explicit invariants, analogous in spirit to how relational algebra formalizes data operations \citep{codd1970relational}. On the combinatorial side, endogenous pivot selection with prefix constraints falls outside hereditary/exchange structures that support classical greedy guarantees \citep{korte1981mathematical,bjorner1992greedoids}.
 
@@ -341,7 +434,7 @@ The key lesson is not ``contract always improves validity.'' The key lesson is t
 An LLM can produce coherent outputs after aggressive compression while internally switching to an alternate hypothesis. This suggests one plausible mechanism for semantic drift and some forms of hallucination: not arbitrary fabrication ex nihilo, but coherent continuation of a degraded hypothesis after critical latent constraints were removed.
 
 \paragraph{Limitations.}
-Exp58 is a deterministic witness, not a distributional guarantee. Real-incident validation is still small-scale (12 incidents, single-model backend), while most sweeps remain synthetic. A full symbolic characterization of compression-safe contracts beyond the threshold form above remains open.
+Exp58 is a deterministic witness, not a distributional guarantee. Real-incident validation is still small-scale (12 incidents, single-model backend), while most sweeps remain synthetic. The multi-model blackbox sweep remains a 12-task benchmark, and KV eviction is currently single-model with one eviction strategy (middle-out anchor + suffix). At aggressive retention (0.3/0.1), protocol collapse is common, so the cleanest mirage signal is at moderate retention (0.5--0.7). A full symbolic characterization of compression-safe contracts beyond the threshold form above remains open.
 
 \section{Conclusion}
 Context algebra separates structural composition from policy effects in endogenous-pivot sequential systems. The monoid and absorbing ideal are stable under composition; compression marks the main boundary where invariants fail. Semantic instrumentation reveals a validity mirage in strong solvers, and Exp58 isolates the pivot-substitution mechanism. More broadly, extending the committed-pivot monoid to a multi-candidate algebra that composes over time while selecting across pivot hypotheses suggests a set-valued lift; we conjecture this forms a context semiring under persistent pivot uncertainty, and a natural direction for hierarchical context management in systems with endogenous semantics.

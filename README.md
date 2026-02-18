@@ -1,98 +1,97 @@
-# Mirage: Endogenous Context, MirageBench, and Mirage-Aware Training
+# The Validity Mirage
 
-This repository contains the core code and curated research artifacts for the Mirage program:
-- Endogenous context theory and tropical semiring validation
-- MirageBench experiments across compression and difficulty frontiers
-- Mirage-aware fine-tuning/evaluation workflows for explicit evidence degradation reporting
+LLM outputs under context compression can score high on fluency, coherence, and
+format compliance while silently substituting the specific facts that determine
+whether the answer is actually correct. We call this failure mode the
+**validity mirage**: the answer looks valid but its semantic pivot has shifted.
 
-## Paper 03 Public Release Bundle
+This repository contains MirageBench (a diagnostic benchmark that detects pivot
+substitution), multi-model and KV-cache experiments reproducing the effect, and a
+mirage-aware LoRA adapter that learns to flag its own evidence degradation.
 
-For artifact-first review (same layout intended for public release), start here:
+## The core result
 
-- `endogenous_context_theory/release/README.md`
+Across five instruction-tuned models, raw validity scores remain above 0.83
+while pivot preservation drops as low as 0.42. The gap is the mirage.
 
-It includes:
-- section-to-artifact mapping for Paper 03
-- curated notebooks, tasks, results CSVs, and adapter weights
-- release figures and rebuild instructions
+![Validity-preservation gap across 5 frontier models. Raw validity stays high while pivot preservation collapses.](endogenous_context_theory/release/figures/blackbox_validity_vs_pivot_preservation.png)
 
-## Paper Set
-- `papers/paper_01_absorbing_states_in_greedy_search.pdf`
-- `papers/paper_02_streaming_oscillation_traps.pdf`
-- `papers/paper_03_validity_mirage_compression.pdf`
-- Full LaTeX sources (all paper drafts + bib + figures):
-  - `papers/sources/rhun/`
-  - `papers/sources/lorien/`
+Models tested: Gemma-2 9B, Llama-3.1 8B, Mistral 7B v0.3, Phi-3-Medium 14B,
+Qwen-2.5 14B. All bf16, greedy decoding, MirageBench 12-task set at compression
+levels 0.4/0.5/0.6.
 
-## What Is Included
-- `endogenous_context_theory/`: core code, generators, tests, and runners
-- `papers/`: primary manuscript set and supporting roadmap document
-- `projects/rhun/`: imported Rhun code, experiments, context docs, and paper workspace
-- `projects/lorien/`: imported Lorien code, docs, specs, examples, and paper workspace
-- `docs/`: consolidated research context, independent review, artifact index, reproducibility checklist
-  - unified mirror map: `docs/unified-repo-map.md`
-- `derived/`: independently verified summary tables (balanced vs imbalanced Qwen comparisons)
-- Colab notebooks for training/evaluation:
-  - `qwen_mirage_aware_training_eval_colab.ipynb`
-  - `qwen_mirage_aware_balanced_ablation_colab.ipynb`
-  - `qwen_mirage_aware_base_eval_colab.ipynb`
-  - `gemma2b_mirage_aware_training_eval_colab.ipynb`
+### KV-cache eviction
 
-## Latest Verified Qwen Results (400-example eval slice)
-Balanced run:
-- FT pivot accuracy (all): 99.2%
-- FT degradation flag rate (degraded): 95.4%
-- FT silent mirage rate: 0.3%
-- FT false alarm (strong): 0.0%
+The mirage also appears at the representation level. When KV-cache entries are
+evicted (retaining 70% down to 10% of keys), pivot preservation drops to 0% at
+10% retention — even though all prerequisite information remains present in the
+input text. This isolates the failure to internal attention, not input truncation.
 
-Imbalanced run:
-- FT pivot accuracy (all): 100.0%
-- FT degradation flag rate (degraded): 100.0%
-- FT silent mirage rate: 0.0%
-- FT false alarm (strong): 0.0%
+![KV eviction sweep on Llama-3.1 8B. Pivot preservation drops to 0% at 10% retention despite full input context.](endogenous_context_theory/release/figures/kv_retention_protocol_vs_pivot.png)
 
-See `derived/qwen_balanced_vs_imbalanced_comparison_2026_02_17.csv` for side-by-side metrics and `docs/massive-context-document.md` for full context.
+## What's in this repo
 
-## Real-World NTSB Benchmark (Cleaned Dataset)
-Cleanup/validation gate:
-- `k` violations before manifest: `6/12`
-- `k` violations after manifest: `0/12`
-- structural validation errors: `0` before and after
+| Directory | Contents |
+|---|---|
+| `endogenous_context_theory/release/miragebench_tasks/` | 12-task MirageBench set (JSON + index CSV) |
+| `endogenous_context_theory/release/notebooks/` | Blackbox 5-model sweep notebook, KV-cache eviction notebook, generator methods notebook |
+| `endogenous_context_theory/release/results/` | Raw CSVs for blackbox and KV-cache experiments |
+| `endogenous_context_theory/release/adapters/mirage_aware_v1/` | Mirage-aware LoRA weights (Qwen-2.5 14B base) |
+| `endogenous_context_theory/release/figures/` | Release figures |
+| `endogenous_context_theory/src/` | Tropical semiring algebra, compression, pivot-margin code |
+| `endogenous_context_theory/tests/` | 17 synthetic validation experiments |
+| `endogenous_context_theory/results/ntsb/` | Real-incident NTSB benchmark (external validation) |
+| `papers/` | Paper PDFs and full LaTeX sources |
 
-xAI non-reasoning run:
-- model: `grok-4-1-fast-non-reasoning`
-- results: `endogenous_context_theory/results/ntsb/xai_grok_4_1_fast_non_reasoning/`
+## Quick start
 
-Key findings:
-- Primary comparison uses an exact retention match at budget `0.7`:
-  - mean retention (naive vs contract): `0.686859` vs `0.686859`
-  - naive silent mirage (degraded): `12/51` (`23.5%`)
-  - all-trial Wilson CI at matched retention: naive `12/60` `[11.83%, 31.78%]`, contract `0/60` `[0.00%, 6.02%]`
-- Secondary near-match (cross-budget): naive `0.5` vs contract `0.3`
-  - mean retention: `0.478276` vs `0.450570`
-- Naive compression causes large attribution shift on real incident graphs:
-  - `info_shift_rate`: `40.0%` (`0.7` budget), `55.0%` (`0.5`), `76.7%` (`0.3`)
-- Contract compression removes attribution shift:
-  - `info_shift_rate`: `0.0%` at all budgets
-- Silent mirage appears under naive LLM behavior:
-  - degraded silent-mirage: `12/51` (`23.5%`) at `0.7`, `11/56` (`19.6%`) at `0.5`, `13/57` (`22.8%`) at `0.3`
-  - overall naive degraded silent-mirage: `36/164` (`21.95%`, Wilson 95% CI `[16.3%, 28.9%]`)
+```bash
+# Setup
+cd endogenous_context_theory
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
 
-Detailed write-up:
-- `endogenous_context_theory/results/ntsb/README.md`
-- `endogenous_context_theory/results/ntsb/xai_grok_4_1_fast_non_reasoning/paper_figure_table_retention_matched.md`
+# Run all 17 synthetic validation experiments
+python scripts/run_all.py
+
+# Rebuild release figures and summary tables
+python scripts/build_release_assets.py
+```
+
+The blackbox and KV-cache experiments require GPU access. Open the notebooks in
+`release/notebooks/` on Colab or a local GPU machine:
+
+- `miragebench_blackbox_bf16_5models_colab.ipynb` — reproduces the 5-model sweep
+- `kv_cache_eviction_mirage_colab.ipynb` — reproduces the KV retention curve
+
+To load the mirage-aware adapter:
+
+```python
+from peft import PeftModel
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+base = AutoModelForCausalLM.from_pretrained("Qwen/Qwen2.5-14B-Instruct")
+model = PeftModel.from_pretrained(base, "endogenous_context_theory/release/adapters/mirage_aware_v1")
+tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2.5-14B-Instruct")
+```
 
 ## Reproducibility
-1. Start with `endogenous_context_theory/README.md`.
-2. Use canonical scripts in `endogenous_context_theory/scripts/` and notebooks in `endogenous_context_theory/notebooks/`.
-3. Follow `docs/reproducibility-checklist.md`.
-4. For public/arXiv publication handoff, follow `docs/public_release_checklist.md`.
 
-## Unified Workspace Notes
-- This repo is the canonical home for ongoing work across Mirage + Rhun + Lorien.
-- External repos are mirrored under `projects/` with caches, secrets, and heavy runtime outputs excluded.
-- Paper 3 PDF here is synced to the latest `projects/rhun/paper/context_algebra_draft.pdf`.
-- Re-sync helper: `scripts/sync_external_projects.sh`.
+See `endogenous_context_theory/release/README.md` for the full artifact map
+(paper section to file), integrity checksums, and inference protocol details.
+See `docs/reproducibility-checklist.md` for the step-by-step checklist.
 
-## Notes on Excluded Artifacts
-Large tar/zip model artifacts and local environment files are intentionally excluded from git history via `.gitignore`.
+## Citation
+
+```bibtex
+@article{validity_mirage_2026,
+  title   = {The Validity Mirage: How Context Compression Preserves Fluency While Destroying Semantic Pivots},
+  author  = {Jack Chaudier Gaffney},
+  year    = {2026},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX}
+}
+```
+
+## License
+
+See individual directories for licensing details.
