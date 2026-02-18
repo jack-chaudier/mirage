@@ -40,7 +40,7 @@ Compression is often treated as structurally neutral: the past is assumed to be 
 
 In endogenous settings, the interpretation of early context depends on a later turning point that is itself chosen from the selected sequence. Compression decisions that look locally safe can become globally unsafe once the eventual pivot is revealed. This is the mechanism behind many failures that appear as ``hallucination'' or ``drift'' but are structurally consistent under a changed internal hypothesis.
 
-Our companion finite paper established a sharp sufficient-condition impossibility boundary (zero false positives in a validated 11{,}400-instance regime). Our companion streaming paper established irreversible commitment traps (54.9\% organic trap rate over 4{,}200 runs). This paper fills the compositional gap between those results: we define the algebra of context summaries under endogenous pivots and study when compression preserves or breaks that algebra.
+Our companion finite paper established a sharp sufficient-condition impossibility boundary (zero false positives in a validated 11{,}400-instance regime) \citep{gaffney2026absorbing}. Our companion streaming paper established irreversible commitment traps (54.9\% organic trap rate over 4{,}200 runs) \citep{gaffney2026streaming}. This paper fills the compositional gap between those results: we define the algebra of context summaries under endogenous pivots and study when compression preserves or breaks that algebra.
 
 \paragraph{Contributions.}
 \begin{enumerate}[leftmargin=1.5em]
@@ -49,6 +49,8 @@ Our companion finite paper established a sharp sufficient-condition impossibilit
   \item We define semantic diagnostics (pivot preservation, fixed-pivot feasibility, semantic regret) and show why raw feasibility alone creates a validity mirage.
   \item We provide a deterministic witness (Exp58) that isolates semantic drift via pivot substitution and quantifies the resulting score loss.
 \end{enumerate}
+
+Experiment numbering continues the shared index from companion papers: this manuscript reports Exps 50--58 for traceability across the trilogy.
 
 \section{Preliminaries and Semantics}
 We consider extraction from temporally ordered event graphs with focal-actor turning points and prefix requirement $k$. For selected sequence $S$, endogenous turning point is
