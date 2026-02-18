@@ -1,4 +1,16 @@
-# RHUN Paper Directory
+# RHUN Paper Sources (Canonical)
+
+This directory is the source of truth for RHUN papers in this repository.
+Edit `.tex` and `.bib` files here first.
+
+After edits, publish with:
+
+```bash
+./scripts/publish_papers_from_sources.sh
+```
+
+That command rebuilds PDFs, syncs the mirror at `projects/rhun/paper/`, and refreshes
+the top-level publication PDFs in `papers/`.
 
 ## Canonical files
 - `finite_absorbing_states.tex` -> `main.tex`

@@ -41,7 +41,7 @@ input text. This isolates the failure to internal attention, not input truncatio
 | `endogenous_context_theory/src/` | Tropical semiring algebra, compression, pivot-margin code |
 | `endogenous_context_theory/tests/` | 17 synthetic validation experiments |
 | `endogenous_context_theory/results/ntsb/` | Real-incident NTSB benchmark (external validation) |
-| `papers/` | Paper PDFs and full LaTeX sources |
+| `papers/` | Canonical paper sources (`papers/sources/*`) and release PDFs (`papers/paper_0*.pdf`) |
 
 ## Quick start
 
@@ -80,6 +80,12 @@ tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2.5-14B-Instruct")
 See `endogenous_context_theory/release/README.md` for the full artifact map
 (paper section to file), integrity checksums, and inference protocol details.
 See `docs/reproducibility-checklist.md` for the step-by-step checklist.
+
+Paper publishing workflow:
+
+```bash
+./scripts/publish_papers_from_sources.sh
+```
 
 ## Citation
 
