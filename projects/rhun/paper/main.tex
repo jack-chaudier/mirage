@@ -140,6 +140,13 @@ The converse is false: $j_{dev}\ge k$ does not imply success.
 Using focal-only counters yields false positives. Counting development-eligible prefix events across \emph{all} actors is required for zero-FP diagnosis.
 \end{remark}
 
+\paragraph{Bridge to context-algebra notation ($j_{dev}\leftrightarrow d_{\mathrm{pre}}$).}
+This paper uses count-based development capacity, where each development-eligible pre-TP event contributes one unit. In that unit-mass regime, the finite counter equals pre-pivot capacity: $j_{dev}=d_{\mathrm{pre}}$. More generally, if events carry non-unit development mass $m(v)$, then
+\[
+d_{\mathrm{pre}}=\sum_{v:\,t(v)<t(e^*),\ \mathrm{DEV\text{-}eligible}} m(v),
+\]
+and the impossibility boundary becomes $d_{\mathrm{pre}}<k$. This is the same absorbing condition used in Paper~03's context algebra.
+
 \paragraph{Empirical validation.}
 From the final boundary sweep (11{,}400 instances, $k\in\{0,\dots,5\}$, $\epsilon\in\{0.05,\dots,0.95\}$, 100 seeds per $\epsilon$):
 (1) zero false positives for the output-based development counter;

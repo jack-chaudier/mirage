@@ -192,11 +192,14 @@ Actual no trap & 124 (FP) & 490 (TN) \\
 \subsection{Scale behavior in the tested range (Exp 45)}
 Across $n \in \{100,200,500,1000\}$, trap rates stay in the same broad band (roughly 52--78\% by cell), and mean minimum gap remains near 1.0.
 
-\begin{proposition}[Scale Invariance of Minimum Record Gap]
-Under i.i.d.\ continuous weights, minimum gap between consecutive records is $O(1)$ as sequence length grows. In particular, the first inter-record gap has $\Pr(\text{gap}=1)=1/2$.
+\begin{proposition}[Record-gap scaling in an i.i.d.\ reference model]
+Under i.i.d.\ continuous weights, the minimum gap between consecutive records is $O(1)$ as sequence length grows. In particular, the first inter-record gap has $\Pr(\text{gap}=1)=1/2$.
 \end{proposition}
 \paragraph{Proof sketch.}
 For continuous i.i.d.\ draws, the event that the next sample is a new record has probability $1/2$ at the first opportunity, so one-step record gaps are common. Over length-$n$ streams, the number of record opportunities grows on the order of $\log n$ (Rényi; Nevzorov). As more record opportunities accumulate, the probability that at least one inter-record gap equals 1 increases, so the minimum observed gap remains bounded near a constant rather than growing with $n$. Thus the minimum gap is $O(1)$.
+
+\paragraph{Clarification for our synthetic regime.}
+Our Exp45 generators are bursty/front-loaded and therefore not literally i.i.d. The proposition above is a reference-model result that explains why constant-scale minimum gaps are plausible. In this paper's generator family, the scale claim is empirical: trap rates stay in the same broad band across tested $n$, and mean minimum gap remains near 1.0.
 
 \begin{figure}[t]
   \centering
