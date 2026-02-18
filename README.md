@@ -1,23 +1,36 @@
 # The Validity Mirage
 
-LLM outputs under context compression can score high on fluency, coherence, and
-format compliance while silently substituting the specific facts that determine
-whether the answer is actually correct. We call this failure mode the
-**validity mirage**: the answer looks valid but its semantic pivot has shifted.
+This started as a narrative simulation engine.
+[NarrativeField](projects/lorien/) runs a deterministic multi-agent world — six
+characters with secrets and conflicting goals collide over a dinner party — then
+extracts story arcs from event traces using weighted signals and grammar-constrained
+search (3,250+ runs across 50 seeds, 98% extraction validity). The greedy extraction
+step kept failing in ways that looked random but weren't. Investigating why led to a
+formal theory of when and how sequential systems break under **endogenous constraints**
+— constraints whose structure depends on the solution itself — and the discovery that
+LLMs exhibit the same failure mode under context compression.
 
-This repository contains MirageBench (a diagnostic benchmark that detects pivot
-substitution), multi-model and KV-cache experiments reproducing the effect, and a
-mirage-aware LoRA adapter that learns to flag its own evidence degradation.
+We call this failure mode the **validity mirage**: the output scores high on fluency,
+coherence, and format compliance while silently substituting the specific facts that
+determine whether the answer is actually correct. The answer looks valid but its
+semantic pivot has shifted.
 
-## Research Arc (Started Here -> Got Here)
+## How we got here
 
-This work started as a narrative-AI systems project: generate a persistent world
-with characters, then extract coherent stories from event traces using weighted
-signals and structured constraints.
+The four papers in this repo trace a single thread from engineering observation to
+formal theory to empirical validation:
 
-- **Lorien (origin):** multi-agent narrative field, vector/weight-driven story extraction, and structural regularization (`papers/paper_00_continuous_control_structural_regularization.pdf`).
-- **Rhun (theory turn):** extraction failures were formalized as **absorbing states** under endogenous turning points (`papers/paper_01_absorbing_states_in_greedy_search.pdf`) and then extended to **streaming oscillation traps** (`papers/paper_02_streaming_oscillation_traps.pdf`).
-- **Mirage (current):** compression-safe semantics and benchmarked failure modes under context/memory compression, culminating in the **validity mirage** framework (`papers/paper_03_validity_mirage_compression.pdf`).
+| # | Paper | What it does |
+|---|-------|--------------|
+| 0 | [Continuous Control & Structural Regularization](papers/paper_00_continuous_control_structural_regularization.pdf) | Documents NarrativeField — the simulation engine, the extraction pipeline, and the quality-validity tradeoff that first revealed systematic extraction failures across 50 seeds. |
+| 1 | [Absorbing States in Greedy Search](papers/paper_01_absorbing_states_in_greedy_search.pdf) | Formalizes the extraction failures. When a turning point is defined by the data itself (endogenous), greedy search can lock into absorbing states where no local improvement can reach a valid solution. Standard greedoid theory assumes exogenous constraints and misses this. |
+| 2 | [Streaming Oscillation Traps](papers/paper_02_streaming_oscillation_traps.pdf) | Extends the theory to streaming settings. Under incremental arrival, endogenous pivots create oscillation traps — the system cycles between candidate solutions without converging. |
+| 3 | [The Validity Mirage](papers/paper_03_validity_mirage_compression.pdf) | Connects the theory to LLMs. Context compression is a form of lossy sequential processing with endogenous structure: the model's attention pattern determines which tokens matter, but which tokens matter depends on what the model attends to. The mirage is the empirical consequence. |
+
+The key insight across all four: when the constraint that defines correctness is
+**endogenous** (determined by the solution, not given in advance), standard greedy and
+compression methods can fail silently — producing outputs that satisfy every surface
+check while missing the one fact that actually matters.
 
 ## The core result
 
@@ -39,19 +52,26 @@ input text. This isolates the failure to internal attention, not input truncatio
 
 ![KV eviction sweep on Llama-3.1 8B. Pivot preservation drops to 0% at 10% retention despite full input context.](endogenous_context_theory/release/figures/kv_retention_protocol_vs_pivot.png)
 
+### Real-incident validation (NTSB)
+
+To test whether the mirage appears on real causal structures (not just synthetic
+benchmarks), we built a compression benchmark from NTSB aviation incident reports.
+Under naive compression, root-cause attribution shifts in 57% of cases and 22% of
+degraded outputs are silent mirages — the model confidently names the wrong cause.
+A contract-guarded compression method (which preserves the endogenous pivot
+structure) eliminates attribution shift entirely across all compression budgets.
+
 ## What's in this repo
 
 | Directory | Contents |
 |---|---|
-| `endogenous_context_theory/release/miragebench_tasks/` | 12-task MirageBench set (JSON + index CSV) |
-| `endogenous_context_theory/release/notebooks/` | Blackbox 5-model sweep notebook, KV-cache eviction notebook, generator methods notebook |
-| `endogenous_context_theory/release/results/` | Raw CSVs for blackbox and KV-cache experiments |
-| `endogenous_context_theory/release/adapters/mirage_aware_v1/` | Mirage-aware LoRA weights (Qwen-2.5 14B base) |
-| `endogenous_context_theory/release/figures/` | Release figures |
+| `papers/` | Four papers (PDFs) and canonical LaTeX sources (`papers/sources/`) |
+| `projects/lorien/` | NarrativeField — the narrative simulation engine where this started |
+| `projects/rhun/` | Rhun — the domain-agnostic greedy extraction failure framework |
 | `endogenous_context_theory/src/` | Tropical semiring algebra, compression, pivot-margin code |
 | `endogenous_context_theory/tests/` | 17 synthetic validation experiments |
+| `endogenous_context_theory/release/` | MirageBench tasks, notebooks, result CSVs, figures, LoRA adapter |
 | `endogenous_context_theory/results/ntsb/` | Real-incident NTSB benchmark (external validation) |
-| `papers/` | Canonical paper sources (`papers/sources/*`) and release PDFs (`papers/paper_00*.pdf` to `papers/paper_03*.pdf`) |
 
 ## Quick start
 
