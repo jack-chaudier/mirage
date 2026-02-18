@@ -10,10 +10,10 @@ This repository contains the core code and curated research artifacts for the Mi
 - `docs/`: consolidated research context, independent review, artifact index, reproducibility checklist
 - `derived/`: independently verified summary tables (balanced vs imbalanced Qwen comparisons)
 - Colab notebooks for training/evaluation:
-  - `mirage_aware_colab_fixed.ipynb`
-  - `mirage_aware_qwen_balanced_ablation.ipynb`
-  - `mirage_aware_base_eval.ipynb`
-  - `mirage_aware_gemma2b_colab.ipynb`
+  - `qwen_mirage_aware_training_eval_colab.ipynb`
+  - `qwen_mirage_aware_balanced_ablation_colab.ipynb`
+  - `qwen_mirage_aware_base_eval_colab.ipynb`
+  - `gemma2b_mirage_aware_training_eval_colab.ipynb`
 
 ## Latest Verified Qwen Results (400-example eval slice)
 Balanced run:
@@ -28,12 +28,12 @@ Imbalanced run:
 - FT silent mirage rate: 0.0%
 - FT false alarm (strong): 0.0%
 
-See `derived/qwen_balanced_vs_imbalanced_comparison_2026-02-17.csv` for side-by-side metrics and `docs/MASSIVE_CONTEXT_DOCUMENT.md` for full context.
+See `derived/qwen_balanced_vs_imbalanced_comparison_2026_02_17.csv` for side-by-side metrics and `docs/massive-context-document.md` for full context.
 
 ## Reproducibility
 1. Start with `endogenous_context_theory/README.md`.
 2. Use the notebook(s) and scripts in `endogenous_context_theory/` for data generation, training, and eval.
-3. Follow `docs/REPRODUCIBILITY_CHECKLIST.md`.
+3. Follow `docs/reproducibility-checklist.md`.
 
 ## Notes on Excluded Artifacts
 Large tar/zip model artifacts and local environment files are intentionally excluded from git history via `.gitignore`.

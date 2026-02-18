@@ -13,31 +13,31 @@
 
 ## Notebooks
 
-- `projects/mirage/mirage_aware_colab_fixed.ipynb`
-- `projects/mirage/mirage_aware_base_eval.ipynb`
-- `projects/mirage/mirage_aware_qwen_balanced_ablation.ipynb`
-- `projects/mirage/mirage_aware_gemma2b_colab.ipynb`
+- `projects/mirage/qwen_mirage_aware_training_eval_colab.ipynb`
+- `projects/mirage/qwen_mirage_aware_base_eval_colab.ipynb`
+- `projects/mirage/qwen_mirage_aware_balanced_ablation_colab.ipynb`
+- `projects/mirage/gemma2b_mirage_aware_training_eval_colab.ipynb`
 
 ## Qwen Run Artifacts
 
 Balanced run:
 - `external/downloads/mirage_aware_balanced_package.tar.gz`
 - `external/downloads/mirage_aware_eval_results.csv`
-- `derived/balanced_qwen_metrics_verified.csv`
-- `derived/balanced_qwen_stratified_verified.csv`
+- `derived/qwen_balanced_metrics_verified.csv`
+- `derived/qwen_balanced_stratified_verified.csv`
 
 Imbalanced run (latest):
 - `external/downloads/mirage_aware_imbalanced_package_2026-02-17.tar.gz`
 - `external/downloads/mirage_aware_imbalanced_eval_results_2026-02-17.csv`
 - `external/downloads/mirage_aware_imbalanced_adapter_2026-02-17.tar.gz`
 - `external/downloads/mirage_aware_colab_fixed_imbalanced_2026-02-17.ipynb`
-- `derived/imbalanced_qwen_summary_from_package_2026-02-17.json`
-- `derived/imbalanced_qwen_metrics_verified_2026-02-17.csv`
-- `derived/imbalanced_qwen_stratified_verified_2026-02-17.csv`
+- `derived/qwen_imbalanced_summary_from_package_2026_02_17.json`
+- `derived/qwen_imbalanced_metrics_verified_2026_02_17.csv`
+- `derived/qwen_imbalanced_stratified_verified_2026_02_17.csv`
 
 Comparison:
-- `derived/qwen_balanced_vs_imbalanced_comparison_2026-02-17.csv`
-- `derived/qwen_balanced_vs_imbalanced_example_deltas_2026-02-17.csv`
+- `derived/qwen_balanced_vs_imbalanced_comparison_2026_02_17.csv`
+- `derived/qwen_balanced_vs_imbalanced_example_deltas_2026_02_17.csv`
 
 ## MirageBench/Cross-model Summaries
 

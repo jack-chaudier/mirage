@@ -2,7 +2,7 @@
 
 **Project family:** Mirage + Rhun + Lorien  
 **Updated:** February 17, 2026 (after both balanced + imbalanced Qwen runs)  
-**Archive root:** `/Users/jackg/mirage_research_dossier_2026-02-17_v2`
+**Archive root:** `repository root`
 
 ## 1. One-line Thesis
 
@@ -82,10 +82,10 @@ Observed structure:
 
 ## 4.3 Colab/Run Notebooks
 
-- `projects/mirage/mirage_aware_colab_fixed.ipynb`
-- `projects/mirage/mirage_aware_qwen_balanced_ablation.ipynb`
-- `projects/mirage/mirage_aware_base_eval.ipynb`
-- `projects/mirage/mirage_aware_gemma2b_colab.ipynb`
+- `projects/mirage/qwen_mirage_aware_training_eval_colab.ipynb`
+- `projects/mirage/qwen_mirage_aware_balanced_ablation_colab.ipynb`
+- `projects/mirage/qwen_mirage_aware_base_eval_colab.ipynb`
+- `projects/mirage/gemma2b_mirage_aware_training_eval_colab.ipynb`
 
 ## 5. Qwen Ablation Results (Balanced vs Imbalanced)
 
@@ -98,8 +98,8 @@ Artifacts:
 - `external/downloads/mirage_aware_eval_results.csv`
 
 Independent recompute:
-- `derived/balanced_qwen_metrics_verified.csv`
-- `derived/balanced_qwen_stratified_verified.csv`
+- `derived/qwen_balanced_metrics_verified.csv`
+- `derived/qwen_balanced_stratified_verified.csv`
 
 Headline metrics:
 - Base acc (all): 40.5%
@@ -116,11 +116,11 @@ Headline metrics:
 Artifacts:
 - `external/downloads/mirage_aware_imbalanced_package_2026-02-17.tar.gz`
 - `external/downloads/mirage_aware_imbalanced_eval_results_2026-02-17.csv`
-- `derived/imbalanced_qwen_summary_from_package_2026-02-17.json`
+- `derived/qwen_imbalanced_summary_from_package_2026_02_17.json`
 
 Independent recompute:
-- `derived/imbalanced_qwen_metrics_verified_2026-02-17.csv`
-- `derived/imbalanced_qwen_stratified_verified_2026-02-17.csv`
+- `derived/qwen_imbalanced_metrics_verified_2026_02_17.csv`
+- `derived/qwen_imbalanced_stratified_verified_2026_02_17.csv`
 
 Headline metrics:
 - Base acc (all): 40.5%
@@ -135,8 +135,8 @@ Headline metrics:
 ## 5.3 Direct Balanced vs Imbalanced Delta
 
 Comparison files:
-- `derived/qwen_balanced_vs_imbalanced_comparison_2026-02-17.csv`
-- `derived/qwen_balanced_vs_imbalanced_example_deltas_2026-02-17.csv`
+- `derived/qwen_balanced_vs_imbalanced_comparison_2026_02_17.csv`
+- `derived/qwen_balanced_vs_imbalanced_example_deltas_2026_02_17.csv`
 
 Observed deltas:
 - FT pivot errors: 3 -> 0
@@ -210,8 +210,8 @@ The program is strong enough for paper-ready framing and for research engineerin
 
 Core synthesis:
 - `README_START_HERE.md`
-- `docs/INDEPENDENT_REVIEW_AND_VALUE_ASSESSMENT.md`
-- `docs/ARTIFACT_INDEX.md`
+- `docs/independent-review-and-value-assessment.md`
+- `docs/artifact-index.md`
 
 Mirage core:
 - `projects/mirage/endogenous_context_theory/README.md`
@@ -221,7 +221,7 @@ Mirage core:
 Qwen run artifacts:
 - `external/downloads/mirage_aware_balanced_package.tar.gz`
 - `external/downloads/mirage_aware_imbalanced_package_2026-02-17.tar.gz`
-- `derived/qwen_balanced_vs_imbalanced_comparison_2026-02-17.csv`
+- `derived/qwen_balanced_vs_imbalanced_comparison_2026_02_17.csv`
 
 Rhun:
 - `projects/rhun/README.md`

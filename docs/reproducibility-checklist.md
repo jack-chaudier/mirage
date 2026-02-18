@@ -16,15 +16,15 @@ Inputs:
 
 Compare against:
 
-- `derived/balanced_qwen_metrics_verified.csv`
-- `derived/imbalanced_qwen_metrics_verified_2026-02-17.csv`
-- `derived/qwen_balanced_vs_imbalanced_comparison_2026-02-17.csv`
+- `derived/qwen_balanced_metrics_verified.csv`
+- `derived/qwen_imbalanced_metrics_verified_2026_02_17.csv`
+- `derived/qwen_balanced_vs_imbalanced_comparison_2026_02_17.csv`
 
 ## C. Validate Balanced vs Imbalanced Delta Claims
 
 Use:
 
-- `derived/qwen_balanced_vs_imbalanced_example_deltas_2026-02-17.csv`
+- `derived/qwen_balanced_vs_imbalanced_example_deltas_2026_02_17.csv`
 
 Expected:
 
@@ -73,7 +73,7 @@ Compare to:
 
 Balanced notebook:
 
-- `projects/mirage/mirage_aware_qwen_balanced_ablation.ipynb`
+- `projects/mirage/qwen_mirage_aware_balanced_ablation_colab.ipynb`
 
 Imbalanced notebook artifact (captured from latest run):
 
