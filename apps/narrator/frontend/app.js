@@ -29,21 +29,57 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 /* ── Theme ───────────────────────────────────────────────── */
 
-function initTheme() {
-  const stored = localStorage.getItem("narrator-theme");
-  const theme = stored || "dark";
+const THEME_STORAGE_KEY = "narrator-theme";
+
+function detectSystemTheme() {
+  return window.matchMedia?.("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
+function readStoredTheme() {
+  try {
+    const value = localStorage.getItem(THEME_STORAGE_KEY);
+    if (value === "dark" || value === "light") {
+      return value;
+    }
+  } catch {
+    // Ignore storage errors and use fallback.
+  }
+  return null;
+}
+
+function persistTheme(theme) {
+  try {
+    localStorage.setItem(THEME_STORAGE_KEY, theme);
+  } catch {
+    // Ignore storage errors in private contexts.
+  }
+}
+
+function applyTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
+  if (ui.themeToggle) {
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    ui.themeToggle.setAttribute("aria-label", `Switch to ${nextTheme} theme`);
+    ui.themeToggle.setAttribute("title", `Switch to ${nextTheme} theme`);
+  }
+}
+
+function initTheme() {
+  const theme = readStoredTheme() || detectSystemTheme();
+  applyTheme(theme);
 }
 
 function toggleTheme() {
   const current = document.documentElement.getAttribute("data-theme");
   const next = current === "dark" ? "light" : "dark";
-  document.documentElement.setAttribute("data-theme", next);
-  localStorage.setItem("narrator-theme", next);
+  applyTheme(next);
+  persistTheme(next);
 }
 
 initTheme();
-ui.themeToggle.addEventListener("click", toggleTheme);
+if (ui.themeToggle) {
+  ui.themeToggle.addEventListener("click", toggleTheme);
+}
 
 /* ── API ─────────────────────────────────────────────────── */
 
