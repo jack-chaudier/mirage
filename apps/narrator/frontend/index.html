@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Narrator — Mirage-Guarded Interactive Fiction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-bar">
+        <div class="title-wrap">
+          <h1>THE DINNER PARTY</h1>
+          <p class="subtitle">Mirage-Guarded Narrative Session</p>
+        </div>
+        <div class="top-stats">
+          <span id="turnBadge">turn 0</span>
+          <span id="violationBadge">◆ 0 violations</span>
+        </div>
+      </header>
+
+      <main class="main-grid">
+        <section class="prose-panel">
+          <div class="prose-header">
+            <h2 id="sceneLabel">Scene</h2>
+            <button id="skipBtn" class="skip-btn" type="button">Skip</button>
+          </div>
+          <div id="proseContainer" class="prose-container" aria-live="polite"></div>
+        </section>
+
+        <aside class="sidebar">
+          <section class="sidebar-block">
+            <h3>CHARACTERS</h3>
+            <ul id="characterList" class="meta-list"></ul>
+          </section>
+
+          <section class="sidebar-block">
+            <h3>LOCATION</h3>
+            <p id="locationName" class="location-name">-</p>
+            <p id="locationDesc" class="location-desc">-</p>
+          </section>
+
+          <section class="sidebar-block guard-block" id="guardBlock">
+            <h3>GUARD</h3>
+            <ul class="guard-list">
+              <li><span>Validated</span><strong id="guardValidated">0</strong></li>
+              <li><span>Violations</span><strong id="guardViolations">0</strong></li>
+              <li><span>Repairs</span><strong id="guardRepairs">0</strong></li>
+            </ul>
+          </section>
+        </aside>
+      </main>
+
+      <section class="choices-panel">
+        <div id="choicesContainer" class="choices-container"></div>
+      </section>
+    </div>
+
+    <template id="choiceTemplate">
+      <button class="choice-btn" type="button">
+        <span class="choice-label"></span>
+        <span class="choice-desc"></span>
+      </button>
+    </template>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
