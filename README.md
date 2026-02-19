@@ -59,6 +59,22 @@ model confidently names the wrong cause with no indication of uncertainty.
 A contract-guarded compression method (which preserves the endogenous pivot
 structure) eliminates attribution shift entirely across all budgets.
 
+### Mirage-aware fine-tuning
+
+A LoRA adapter (3.2M parameters, ~0.12% of the base model), trained on synthetic mirage examples, eliminates the failure mode.
+
+| | Base (Qwen 2.5 14B) | + Mirage-aware LoRA |
+|---|---|---|
+| Pivot accuracy (degraded inputs) | 41.0% | 99.2% |
+| Silent mirage rate | 59.0% | 0.27% |
+| Degradation flagging rate | 0% | 95.4% |
+| False alarm rate (clean inputs) | 0% | 0% |
+
+![Mirage-aware fine-tuning results on balanced run. LoRA improves degraded-input pivot accuracy and degradation flagging while collapsing silent mirages to near zero.](endogenous_context_theory/release/figures/mirage_aware_finetuning_results.png)
+
+The adapter learns to both identify the correct pivot under compression and explicitly flag when context degradation may have affected its answer.
+Weights and eval notebook are in `release/adapters/mirage_aware_v1/`.
+
 ## What's in this repo
 
 | Directory | Contents |
