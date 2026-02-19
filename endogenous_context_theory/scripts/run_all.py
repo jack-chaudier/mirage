@@ -32,6 +32,7 @@ TEST_MODULES = [
     "tests.test_15_adaptive_compression",
     "tests.test_16_organic_traps",
     "tests.test_17_tropical_streaming",
+    "tests.test_18_transition_attractor",
 ]
 
 
@@ -53,6 +54,8 @@ def write_summary_report(run_df: pd.DataFrame, results_dir: Path) -> None:
     t13 = _safe_read_csv(raw / "test_13_contract_compression_summary.csv")
     t14 = _safe_read_csv(raw / "test_14_margin_quartiles.csv")
     t17 = _safe_read_csv(raw / "test_17_tropical_streaming_overall.csv")
+    t18 = _safe_read_csv(raw / "test_18_transition_vector_summary.csv")
+    t18corr = _safe_read_csv(raw / "test_18_margin_p11_correlation.csv")
 
     lines: List[str] = []
     lines.append("# Tropical Endogenous Context Semiring: Experimental Summary")
@@ -165,7 +168,40 @@ def write_summary_report(run_df: pd.DataFrame, results_dir: Path) -> None:
         lines.append(f"- Quartile preservation rates: {quartile_str}.")
 
     lines.append("")
-    lines.append("## 7. Overall Assessment")
+    lines.append("## 7. Transition-Depth Validation")
+
+    if t18 is not None and len(t18) > 0:
+        selected = float(t18["selected_compression_seeds"].mean()) if "selected_compression_seeds" in t18 else float("nan")
+        if pd.notna(selected):
+            lines.append(f"- Compression-seed convergence selected: **{int(round(selected))}** seeds per sequence.")
+
+        low = t18[t18["retention"] <= 0.5]
+        if len(low) > 0:
+            d1 = float(low["empirical_chain_survival_d1"].mean())
+            d8 = float(low["empirical_chain_survival_d8"].mean())
+            drop = d1 - d8
+            lines.append(
+                f"- Mean empirical chained survival drop at retention <= 0.5: **{drop:.3f}** "
+                f"(d=1: {d1:.3f} -> d=8: {d8:.3f})."
+            )
+            if "abs_err_p11_d8" in low and "abs_err_retention_d8" in low:
+                err_p11 = float(low["abs_err_p11_d8"].mean())
+                err_ret = float(low["abs_err_retention_d8"].mean())
+                lines.append(
+                    f"- Depth-8 prediction error: **p11^d={err_p11:.3f}** vs **retention^d={err_ret:.3f}**."
+                )
+
+    if t18corr is not None and len(t18corr) > 0:
+        overall = t18corr[t18corr["group"] == "overall"]
+        if len(overall) > 0:
+            row = overall.iloc[0]
+            lines.append(
+                f"- Margin-to-p11 correlation (overall): "
+                f"Pearson **{float(row['pearson_corr']):.3f}**, Spearman **{float(row['spearman_corr']):.3f}**."
+            )
+
+    lines.append("")
+    lines.append("## 8. Overall Assessment")
 
     critical_ok = (critical["verdict"] == "PASS").all() if len(critical) > 0 else False
     streaming_ok = False
