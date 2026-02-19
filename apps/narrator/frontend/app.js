@@ -12,6 +12,7 @@ const ui = {
   guardRepairs: document.getElementById("guardRepairs"),
   guardBlock: document.getElementById("guardBlock"),
   skipBtn: document.getElementById("skipBtn"),
+  themeToggle: document.getElementById("themeToggle"),
   choiceTemplate: document.getElementById("choiceTemplate"),
 };
 
@@ -25,6 +26,26 @@ const appState = {
 };
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+/* ── Theme ───────────────────────────────────────────────── */
+
+function initTheme() {
+  const stored = localStorage.getItem("narrator-theme");
+  const theme = stored || "dark";
+  document.documentElement.setAttribute("data-theme", theme);
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute("data-theme");
+  const next = current === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", next);
+  localStorage.setItem("narrator-theme", next);
+}
+
+initTheme();
+ui.themeToggle.addEventListener("click", toggleTheme);
+
+/* ── API ─────────────────────────────────────────────────── */
 
 async function apiNewGame() {
   const response = await fetch("/api/game/new", {
@@ -59,6 +80,8 @@ async function apiState(sessionId) {
   return response.json();
 }
 
+/* ── Renderers ───────────────────────────────────────────── */
+
 function resolveLocationInfo(scene, gameState) {
   if (!scene || !gameState) return null;
   return gameState.locations.find((loc) => loc.id === scene.location) || null;
@@ -67,19 +90,24 @@ function resolveLocationInfo(scene, gameState) {
 function renderTopBar(scene, gameState) {
   ui.turnBadge.textContent = `turn ${gameState?.turn ?? 0}`;
   const violations = gameState?.guard_stats?.violations_caught ?? 0;
-  ui.violationBadge.textContent = `◆ ${violations} violations`;
-  ui.sceneLabel.textContent = scene?.scene_id?.replace("_", " ")?.toUpperCase() || "SCENE";
+  ui.violationBadge.textContent = `${violations} violation${violations !== 1 ? "s" : ""}`;
+  ui.sceneLabel.textContent = scene?.scene_id?.replaceAll("_", " ")?.toUpperCase() || "SCENE";
 }
 
 function renderCharacters(gameState) {
   ui.characterList.innerHTML = "";
   const chars = gameState?.characters ?? [];
+  const locationMap = {};
+  for (const loc of gameState?.locations ?? []) {
+    locationMap[loc.id] = loc.name;
+  }
   for (const character of chars) {
     const item = document.createElement("li");
     const left = document.createElement("span");
     const right = document.createElement("span");
+    right.className = "character-location";
     left.textContent = character.name;
-    right.textContent = character.location;
+    right.textContent = locationMap[character.location] || character.location;
     item.append(left, right);
     ui.characterList.appendChild(item);
   }
@@ -116,7 +144,7 @@ function renderGuard(gameState) {
     ui.guardBlock.classList.remove("pulse");
     void ui.guardBlock.offsetWidth;
     ui.guardBlock.classList.add("pulse");
-    setTimeout(() => ui.guardBlock.classList.remove("pulse"), 700);
+    setTimeout(() => ui.guardBlock.classList.remove("pulse"), 800);
   }
 
   appState.lastViolationCount = violations;
@@ -160,8 +188,8 @@ function renderChoices(scene) {
 
   if (!choices.length) {
     const done = document.createElement("p");
-    done.className = "error-text";
-    done.textContent = "The night has reached its end. Start a new game to explore again.";
+    done.className = "end-text";
+    done.innerHTML = "The night has reached its end. <em>Refresh to begin again.</em>";
     ui.choicesContainer.appendChild(done);
     return;
   }
@@ -174,7 +202,7 @@ function renderChoices(scene) {
 
     button.classList.add("choice-enter");
     button.style.animationDelay = `${idx * 80}ms`;
-    label.textContent = `▸ ${choice.label}`;
+    label.textContent = choice.label;
     desc.textContent = choice.description;
 
     button.addEventListener("click", async () => {
@@ -193,6 +221,8 @@ async function renderScene(scene, gameState) {
   renderChoices(scene);
   await typewriterReveal(scene?.prose ?? "");
 }
+
+/* ── Actions ─────────────────────────────────────────────── */
 
 async function onChoiceSelected(choiceId) {
   if (appState.isLoading || !appState.sessionId) {
@@ -229,12 +259,15 @@ ui.skipBtn.addEventListener("click", () => {
   }
 });
 
+/* ── Bootstrap ───────────────────────────────────────────── */
+
 async function bootstrap() {
   try {
     const payload = await apiNewGame();
     appState.sessionId = payload.session_id;
     appState.gameState = payload.state;
     appState.currentScene = payload.scene;
+    console.info(`[narrator] session: ${payload.session_id}`);
     await renderScene(payload.scene, payload.state);
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);

@@ -135,7 +135,7 @@ class MirageGuard:
                 continue
 
             event = repaired.events[idx]
-            if violation.type in {"dead_character_action", "secret_regression", "pivot_shift"}:
+            if violation.type in {"dead_character_action", "secret_regression", "pivot_shift", "location_conflict"}:
                 drop_indices.add(idx)
             elif violation.type == "impossible_knowledge":
                 event.required_knowledge_ids = []

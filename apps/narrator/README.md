@@ -24,7 +24,29 @@ The runtime loop is: generate -> validate -> repair -> commit.
 3. Invalid proposals are repaired (or regenerated) before commit.
 4. Only committed prose reaches the player.
 
+## What it demonstrates
+
+In a 14-turn session, the LLM maintained coherent dramatic escalation — from
+polite dinner to full confrontation — while the guard caught 6 structural
+violations: characters referencing unknown secrets, impossible locations,
+causal inconsistencies. All were repaired transparently. The player
+experienced a complete story arc without a single narrative contradiction.
+
+See `examples/sample_session.json` for a full playthrough log with every
+proposal, rejection, and repair.
+
+## Exporting a session
+
+```bash
+# While the server is running:
+./examples/export_session.sh <session-id> > examples/sample_session.json
+```
+
+The session ID is returned by `POST /api/game/new` and printed in the
+browser console.
+
 ## Status
 
-MVP scaffold. Currently running with mock scenes (no LLM required).
-Set `LLM_MODE=live` and configure `.env` for LLM-backed generation.
+Live mode with LLM-backed generation. Set `LLM_MODE=live` and configure
+`.env` with API keys. Mock mode (no LLM required) is still available as
+the default.

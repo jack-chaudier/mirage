@@ -162,12 +162,12 @@ class NarrativeEngine:
         resolved_location = event.location_id or actor.location
         lower_action = event.action.lower()
 
-        if (
-            event.event_type.lower() in {"move", "physical"}
-            or "move" in lower_action
-            or "go to" in lower_action
-            or "follows" in lower_action
-        ):
+        is_move = event.event_type.lower() in {"move", "physical"}
+        if not is_move and resolved_location != actor.location:
+            move_verbs = ("move", "go to", "goes to", "walk", "step", "head to",
+                          "heads to", "exit", "leave", "enter", "retreat", "follow")
+            is_move = any(verb in lower_action for verb in move_verbs)
+        if is_move:
             actor.location = resolved_location
 
         for secret_id in event.reveals_secret_ids:
@@ -187,15 +187,18 @@ class NarrativeEngine:
 
     def commit_scene(self, proposal: SceneProposal, turn: int, guard_stats: GuardStats) -> SceneResponse:
         self.advance_simulation(ticks=2)
-        for event in proposal.events:
-            self._apply_event(event)
 
+        # Set characters_present to the scene's focal location FIRST,
+        # then apply events — physical/move events override the default.
         if proposal.location:
             self.state.current_location = proposal.location
             for char_id in proposal.characters_present:
                 character = self.get_character(char_id)
                 if character and character.alive:
                     character.location = proposal.location
+
+        for event in proposal.events:
+            self._apply_event(event)
 
         self.state.current_scene_id = proposal.scene_id
         self.state.turn = turn
