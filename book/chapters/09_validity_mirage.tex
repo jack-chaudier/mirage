@@ -18,7 +18,7 @@ instances for which the system produces \emph{any} grammatically correct
 output---remains at or near $1.0$ across all compression levels tested,
 from 90\% retention down to 10\%.  But pivot preservation---the fraction
 of valid outputs that retain the \emph{same} turning point as the
-uncompressed solve---collapses from near $1.0$ to $0.354$ over the same
+uncompressed solve---collapses from near $1.0$ to $0.328$ over the same
 range.  The system appears to be working perfectly.  It is not.  We call
 this gap the \emph{validity mirage}.
 
@@ -279,6 +279,25 @@ retention.  Below 25\%, the survivorship pool shifts: the instances
 most severely harmed by compression enter infeasibility entirely and
 exit the regret average, causing some fluctuation.  At 10\% retention,
 average regret remains high at 68.0\%.
+
+\begin{remark}[Non-monotonicity of semantic regret is a conditioning artifact]
+\label{rem:regret-nonmonotone}
+The dip in semantic regret between 25\% and 20\% retention
+($0.706 \to 0.643$) is not noise: it is a consequence of how regret is
+conditioned.  Regret is computed only over instances where the
+fixed-pivot solve succeeds (\cref{rem:regret-streaming-caveat}).  As
+retention falls, the most severely compressed instances---those where
+pivot infeasibility is total---exit the conditioning set entirely.
+The remaining instances are an increasingly selected sample: those
+where the enumerative solver still finds \emph{some} feasible
+alternative, and for which the quality loss, though large, is finite.
+This survivorship bias makes measured regret appear to plateau or dip
+at extreme compression even as the true harm (including the now-excluded
+infeasible cases) continues to worsen.  The fixed-pivot feasibility
+column (\cref{tab:retention-sweep}) is the correct lens for assessing
+total harm: it does not condition on solver success and falls
+monotonically from $0.980$ to $0.725$.
+\end{remark}
 
 \begin{figure}[H]
 \centering
