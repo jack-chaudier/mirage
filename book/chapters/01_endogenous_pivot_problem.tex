@@ -1,0 +1,418 @@
+% ══════════════════════════════════════════════════════════════
+%  Chapter 1 — The Endogenous Pivot Problem
+% ══════════════════════════════════════════════════════════════
+\chapter{The Endogenous Pivot Problem}\label{ch:motivation}
+
+Every structured-generation system faces a quiet question that its
+validity metrics never ask: \emph{is the output correct, or merely
+well-formed?}  This chapter introduces the question through a concrete
+failure, generalises the failure to a pattern, and then distils the
+pattern into toy examples small enough to hold in one's head.  No
+formalism is required yet---\cref{ch:formal-problem} will supply the definitions.
+The goal here is intuition: the reader should finish this chapter
+convinced that the problem is real, that it is not specific to any one
+domain, and that standard validity checks are structurally incapable of
+detecting it.
+
+%% ═══════════════════════════════════════════════════════════════════
+\section{Diana's Collapsed Arc}\label{sec:diana}
+%% ═══════════════════════════════════════════════════════════════════
+
+Consider a narrative simulation---a dinner party with six autonomous
+agents, each pursuing its own goals, alliances, and evasions.  The
+system, called Lorien, runs a large-language-model--driven simulation and
+then extracts, for each agent, a \emph{narrative arc}: a selected
+subsequence of events annotated with phase labels that obey a beat
+grammar.  The grammar requires four phases in strict order:
+
+\begin{center}
+\textsc{setup}
+\;\;$\longrightarrow$\;\;
+\textsc{development}
+\;\;$\longrightarrow$\;\;
+\textsc{turning\_point}
+\;\;$\longrightarrow$\;\;
+\textsc{resolution}.
+\end{center}
+
+\noindent
+The system selects a \emph{turning point}---the single highest-weight
+focal event for the agent---and then verifies that the selected sequence
+satisfies the beat grammar with at least $k$ development beats before
+the turning point.  When the grammar is satisfied the arc is declared
+valid.  When it is not, the arc is discarded.
+
+Diana is a peripheral observer---an evader type.  She is not the
+protagonist; she reacts to events more than she initiates them.  Across
+50 random seeds of the same dinner-party scenario, the system extracts
+arcs for all six agents.  For five of them, extraction succeeds
+reliably.  For Diana, it fails in 9 out of 50 seeds.  All nine failures
+share exactly the same signature:
+
+\begin{enumerate}[label=(\roman*)]
+  \item \textbf{Zero development beats.}\;
+    The \textsc{development} phase is completely empty.  Not one
+    complication, escalation, or tension-building event appears in the
+    selected arc.
+
+  \item \textbf{Extremely early turning point.}\;
+    The turning point is anchored at a median normalised position of
+    $0.13$ in the timeline---barely past the opening.  For comparison,
+    the median position in valid arcs is $0.69$.  There is zero overlap
+    in turning-point position between valid and invalid arcs.
+
+  \item \textbf{Full candidate pools.}\;
+    Diana is not starved of events.  Across the 50~seeds, a mean of
+    $42.7$ events involve her.  The 9~invalid seeds contain a total of
+    33 candidate events, every single one of which produces zero
+    development beats.  The pools are entirely degenerate.
+\end{enumerate}
+
+\noindent
+The mechanism is straightforward once we trace the pipeline.  Diana is a
+peripheral agent, so her raw event pool is sparse.  To compensate, the
+system injects protagonist events into her candidate pool---a
+protagonist-event injection mechanism that ensures peripheral agents have
+enough material to form arcs.  The injected events include high-tension
+incidents from early in the simulation: confrontations, revelations,
+catastrophes that drove the main plot.  These events carry large
+narrative weights.
+
+The arc-extraction algorithm performs a greedy search: it selects the
+turning point as the highest-weight focal event in Diana's pool.
+Because the injected protagonist events are both high-weight and
+temporally early, the greedy search locks onto an early catastrophe as
+the pivot.  The beat grammar is monotonic---once the turning point is
+consumed, the \textsc{development} phase closes permanently.  With the
+turning point at position~$0.13$, there is almost no timeline left
+before it.  The grammar requires at least $k$ development beats before
+the turning point, and with the pivot so early, this requirement is
+impossible to meet.
+
+The result is a ``story'' that reads: catastrophe happens immediately,
+followed by sixteen consequence events.  No buildup, no complication, no
+dramatic tension.  The grammar's structural requirements are technically
+checkable---and in this case, the check correctly reports
+failure---but the deeper problem is not that the grammar rejected the
+arc.  The deeper problem is the \emph{mechanism}: the pivot selection
+was determined by properties of the solution itself (which events happen
+to be in Diana's pool), and the pivot's position then determined how
+every other event was interpreted.  A different pool composition would
+have produced a different pivot, a different phase labelling, and a
+different arc---possibly a valid and meaningful one.
+
+We will formalise this coupling in \cref{ch:formal-problem}.  For now, the
+essential observation is: the system produced technically structured
+output, but the output was meaningless.  The greedy search locked onto
+the wrong pivot, and the grammar---designed to ensure narrative
+quality---became the instrument of narrative collapse.
+
+%% ═══════════════════════════════════════════════════════════════════
+\section{The General Pattern}\label{sec:general-pattern}
+%% ═══════════════════════════════════════════════════════════════════
+
+Diana's collapsed arc is not a narrative-specific bug.  It is an
+instance of a general vulnerability that arises whenever three
+conditions hold simultaneously:
+
+\begin{enumerate}[label=(\alph*),itemsep=4pt]
+  \item \textbf{Endogenous pivot selection.}\;
+    A distinguished element---a pivot, reference point, root cause,
+    anchor---is selected by taking an $\argmax$ (or similar extremal
+    operation) over the solution itself.
+
+  \item \textbf{Pivot-dependent interpretation.}\;
+    The chosen pivot determines how all other elements in the solution
+    are interpreted: their phase labels, their causal roles, their
+    structural classifications.
+
+  \item \textbf{Structural constraints.}\;
+    The interpreted solution must satisfy a set of structural
+    constraints: a grammar, a schema, a protocol, a well-formedness
+    condition.
+\end{enumerate}
+
+\noindent
+When all three conditions hold, the pivot selection is
+\emph{endogenous}---it depends on the content of the solution, which
+creates a circular dependency.  The pivot determines the
+interpretation, the interpretation determines whether the constraints
+are satisfied, and the constraints determine what counts as a valid
+solution.  If anything changes the solution---compression, truncation,
+sampling, filtering---the pivot can shift, the interpretation can
+flip, and the constraints can transition from satisfied to violated
+(or vice versa) without any local signal that something has gone wrong.
+
+The following three examples illustrate the pattern in domains far
+removed from narrative.
+
+%% ─────────────────────────────────────────────────────────────
+\subsection{Incident Triage and Root-Cause Locking}
+\label{sec:incident-triage}
+%% ─────────────────────────────────────────────────────────────
+
+Consider an automated incident-report system that analyses a production
+outage involving 50 contributing factors.  The system selects a
+\emph{root cause} by identifying the highest-severity factor.  All
+remaining factors are then classified relative to the root cause:
+\emph{precursor} (happened before and contributed to the root cause),
+\emph{contributing factor} (amplified the root cause's impact), or
+\emph{consequence} (resulted from the root cause).  The resulting causal
+narrative must satisfy a report schema: at least two precursors, exactly
+one root cause, and at least one consequence.
+
+Now suppose the incident log is compressed---perhaps a context window is
+truncated, or a summarisation step drops low-severity factors.  If the
+compression removes context that would have surfaced a higher-severity
+factor, the root cause locks onto a different factor.  The entire causal
+narrative reorganises: events that were precursors become consequences,
+consequences become precursors, and the report tells a structurally valid
+but substantively wrong story.  The schema is satisfied.  No constraint
+violation is raised.  The report is wrong.
+
+%% ─────────────────────────────────────────────────────────────
+\subsection{Constrained LLM Decoding and Schema Commitment}
+\label{sec:constrained-decoding}
+%% ─────────────────────────────────────────────────────────────
+
+Grammar-constrained decoding systems---PICARD for SQL, Outlines for
+structured JSON, guidance masks for schema-valid generation---commit to a
+schema path early in the generation process.  This commitment is
+functionally equivalent to selecting a structural pivot: once the model
+has emitted enough tokens to determine which schema branch it is
+following, all subsequent tokens are interpreted within that branch.
+
+If the context window is truncated and the model loses information that
+would have led to a different schema choice, it generates valid JSON (or
+valid SQL, or valid YAML) with the wrong structure.  The output parses.
+The schema validates.  The downstream system consumes it without error.
+But the semantic content has silently shifted, because the structural
+pivot---the schema branch---was selected endogenously from whatever
+context happened to survive truncation.
+
+%% ─────────────────────────────────────────────────────────────
+\subsection{Process Mining and the Reference Activity}
+\label{sec:process-mining}
+%% ─────────────────────────────────────────────────────────────
+
+In process mining, analysts discover a process model from an event log
+by selecting a \emph{reference activity} that anchors the temporal
+alignment of all other activities.  If the reference activity is selected
+endogenously---for instance, as the most frequent activity in the
+log---then changing the log changes the reference.  Sampling the log
+(taking a 10\% subsample for scalability), filtering by time window, or
+removing infrequent traces can each shift the most-frequent activity to a
+different event type.  When the reference shifts, every other activity is
+realigned relative to the new anchor, and the discovered process model
+changes---not because the underlying process changed, but because the
+pivot moved.
+
+\bigskip
+\noindent
+In each of these examples, the same three-part structure is at work:
+endogenous selection of a pivot, pivot-dependent interpretation of
+everything else, and structural constraints that can be satisfied by
+multiple incompatible interpretations.  The output is valid.  The output
+is wrong.  And no validity check can detect the discrepancy.
+
+%% ═══════════════════════════════════════════════════════════════════
+\section{Two Minimal Toy Examples}\label{sec:toy-examples}
+%% ═══════════════════════════════════════════════════════════════════
+
+To make the mechanics fully explicit, we now construct two toy examples
+small enough to verify by hand.  Both use the narrative-arc grammar from
+\cref{sec:diana}, but the phenomena they exhibit are instances of the
+general pattern from \cref{sec:general-pattern}.
+
+We use the following notation throughout.  An event $e_i$ has a weight
+$w_i$ and a type: \emph{focal} (eligible to serve as the turning point)
+or \emph{non-focal} (eligible for development, setup, or resolution
+beats).  The turning point $\tp(S)$ is the focal event with the highest
+weight in the solution~$S$.  The prefix requirement is $k$: at least $k$
+non-focal events must precede the turning point.
+
+%% ─────────────────────────────────────────────────────────────
+\subsection{Example 1: Pivot Flip}\label{sec:pivot-flip}
+%% ─────────────────────────────────────────────────────────────
+
+Consider a six-event sequence with prefix requirement $k = 3$:
+
+\medskip
+\begin{center}
+\begin{tabular}{lcccccc}
+  \toprule
+  Event   & $e_1$ & $e_2$ & $e_3$ & $e_4$ & $e_5$ & $e_6$ \\
+  \midrule
+  Weight  & 2     & 5     & 3     & 4     & 1     & 2     \\
+  Type    & non-focal & focal & non-focal & non-focal & non-focal
+          & non-focal \\
+  \bottomrule
+\end{tabular}
+\end{center}
+\medskip
+
+\noindent
+The only focal event is $e_2$, so the turning point is forced:
+$\tp(S) = e_2$ with $\wstar = 5$.  The non-focal events preceding the
+turning point are $\{e_1\}$, giving $\dpre = 1$.  Since
+$\dpre = 1 < k = 3$, the arc is \textbf{invalid}.
+
+Now extend the sequence by appending a single focal event:
+
+\medskip
+\begin{center}
+\begin{tabular}{lccccccc}
+  \toprule
+  Event   & $e_1$ & $e_2$ & $e_3$ & $e_4$ & $e_5$ & $e_6$ & $e_7$ \\
+  \midrule
+  Weight  & 2     & 5     & 3     & 4     & 1     & 2     & 6 \\
+  Type    & non-focal & focal & non-focal & non-focal & non-focal
+          & non-focal & focal \\
+  \bottomrule
+\end{tabular}
+\end{center}
+\medskip
+
+\noindent
+Now there are two focal events: $e_2$ (weight~5) and $e_7$ (weight~6).
+The turning point shifts to $e_7$: $\tp(S') = e_7$ with $\wstar = 6$.
+The non-focal events preceding $e_7$ are $\{e_1, e_3, e_4, e_5, e_6\}$,
+giving $\dpre = 5 \ge k = 3$.  The arc is \textbf{valid}.
+
+Adding a single event flipped the turning point from $e_2$ to $e_7$ and
+cascaded all phase labels from invalid to valid.  The five non-focal
+events that were always present in the sequence---$e_3$ through
+$e_6$---were invisible to the development phase when the pivot was
+early, and fully available when the pivot moved late.  The events did not
+change.  The grammar did not change.  Only the pivot changed, and the
+entire structural interpretation followed.
+
+%% ─────────────────────────────────────────────────────────────
+\subsection{Example 2: Compression Mirage}\label{sec:compression-mirage}
+%% ─────────────────────────────────────────────────────────────
+
+Consider a ten-event sequence with $k = 3$:
+
+\medskip
+\begin{center}
+\begin{tabular}{lcccccccccc}
+  \toprule
+  Event & $e_1$ & $e_2$ & $e_3$ & $e_4$ & $e_5$ & $e_6$ & $e_7$
+        & $e_8$ & $e_9$ & $e_{10}$ \\
+  \midrule
+  Weight & 2 & 3 & 6 & 2 & 4 & 1 & 3 & 10 & 2 & 1 \\
+  Type & nf & nf & f & nf & f & nf & nf & f & nf & nf \\
+  \bottomrule
+\end{tabular}
+\end{center}
+\medskip
+
+\noindent
+(Here ``f'' denotes focal and ``nf'' denotes non-focal.)
+
+The highest-weight focal event is $e_8$ (weight~10), at normalised
+position $0.8$ in the sequence.  The non-focal events preceding $e_8$
+are $\{e_1, e_2, e_4, e_6, e_7\}$, giving $\dpre = 5 \ge k = 3$.  The
+arc is valid.  Suppose the quality score---a weighted combination of
+pivot weight and development richness---evaluates to $47.08$.
+
+Now compress the sequence by removing two non-focal events from the
+middle: drop $e_4$ and $e_6$.  The compressed sequence has eight events.
+Under \emph{committed semantics}---the policy that keeps the original
+pivot---$e_8$ remains the turning point.  But now the non-focal events
+preceding $e_8$ are $\{e_1, e_2, e_7\}$, giving $\dpre = 3$.  In fact,
+if the removal shifts indices and the grammar-aware count recalculates
+to $\dpre = 2 < k = 3$, the committed pivot is \textbf{infeasible}: no
+valid arc can be formed around $e_8$ in the compressed sequence.
+
+An enumerative solver (searching up to $M = 10$ alternative pivot
+candidates) looks for substitutes.  It considers $e_3$ (weight~6, at
+position $0.3$): but with $e_3$ as pivot, $\dpre = 1$---still below
+$k$.  It then considers $e_5$ (weight~4, at position $0.5$): with $e_5$
+as pivot, $\dpre = 3 \ge k$.  Valid.  The solver accepts $e_5$ as a
+substitute pivot.
+
+But the quality score under the substitute pivot is only $21.47$.  The
+\emph{semantic regret}---the fraction of quality lost by pivot
+substitution---is
+\[
+  1 - \frac{21.47}{47.08} \;=\; 54.4\%.
+\]
+The system reports ``valid output.''  The grammar is satisfied.  The
+phase labels are well-formed.  And the result has silently lost more than
+half its semantic quality.  This is the \emph{validity mirage}: the
+output looks valid because it \emph{is} valid, but the validity
+conceals a catastrophic semantic shift.  The pivot moved, the story
+changed, and the only metric that could detect the problem---pivot
+preservation---was never checked.
+
+%% ═══════════════════════════════════════════════════════════════════
+\section{A Diagnostic Checklist}\label{sec:motivation-checklist}
+%% ═══════════════════════════════════════════════════════════════════
+
+\Cref{ch:mirage} develops a full diagnostic framework for detecting
+and quantifying the validity mirage.  We preview four metrics here so
+that the reader has a concrete target as the theory develops.
+
+\begin{enumerate}[label=\textbf{(\arabic*)},itemsep=6pt]
+  \item \textbf{Pivot preservation rate.}\;
+    Did the compressed, streamed, or otherwise transformed solution
+    retain the same turning point as the full (uncompressed,
+    untruncated) solution?  Let $\tp(S)$ denote the pivot of the full
+    solution and $\tp(S')$ the pivot of the transformed solution.
+    Pivot preservation is the indicator
+    $\mathbf{1}[\tp(S) = \tp(S')]$, aggregated as a rate across
+    instances.  A rate of $1.0$ means the transformation never
+    disturbed the pivot.  A rate below $1.0$ means pivots are shifting,
+    and downstream interpretations are changing.
+
+  \item \textbf{Fixed-pivot feasibility.}\;
+    If we \emph{force} the original pivot $\tp(S)$ into the
+    transformed solution~$S'$, is the output still valid?  That is,
+    does there exist a valid phase labelling of~$S'$ with the
+    turning point fixed at $\tp(S)$?  If not, the transformation has
+    made the original semantic anchor infeasible---the system cannot
+    even attempt to tell the same story.
+
+  \item \textbf{Semantic regret.}\;
+    When the pivot shifts from $\tp(S)$ to a substitute
+    $\tp(S') \neq \tp(S)$, how much quality is lost?  Semantic regret
+    is defined as
+    \[
+      R \;=\; 1 \;-\; \frac{Q\bigl(S',\, \tp(S')\bigr)}
+                            {Q\bigl(S,\, \tp(S)\bigr)},
+    \]
+    where $Q$ is the quality scoring function.  A regret of $0$ means
+    no quality loss; a regret of $0.544$ means $54.4\%$ of the
+    original quality has been silently discarded.
+
+  \item \textbf{Mirage gap.}\;
+    The difference between raw validity and pivot preservation:
+    \[
+      \Delta_{\mathrm{mirage}}
+      \;=\;
+      \text{(raw validity rate)}
+      \;-\;
+      \text{(pivot preservation rate)}.
+    \]
+    A mirage gap of zero means validity and semantic fidelity are
+    aligned---every valid output preserved the original pivot.  A
+    large mirage gap means the system is hiding semantic drift behind
+    superficial well-formedness.  In the headline experiment of
+    \cref{ch:mirage}, raw validity holds steady at $1.0$ while pivot
+    preservation drops to $0.35$, producing a mirage gap of $0.65$.
+    The system appears to be working perfectly.  It is not.
+\end{enumerate}
+
+\bigskip
+\noindent
+The rest of this book develops the mathematical tools to analyse,
+predict, and prevent these failures.  \Cref{ch:formal-problem} formalises the
+solution space, the pivot function, and committed semantics.
+\Cref{ch:absorbing-states} proves that certain structural states are
+absorbing---once entered, no continuation can repair them.
+\Cref{ch:context-algebra} introduces the context monoid that makes these
+states algebraically tractable.  And \cref{ch:mirage} closes the loop
+by demonstrating, on real and synthetic data, that the mirage is not a
+theoretical curiosity but a measured, quantified, and reproducible
+phenomenon.

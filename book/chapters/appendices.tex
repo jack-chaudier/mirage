@@ -1,0 +1,494 @@
+% ══════════════════════════════════════════════════════════════
+%  Appendices
+% ══════════════════════════════════════════════════════════════
+
+% ──────────────────────────────────────────────────────────────
+\chapter{Notation}\label{app:notation}
+% ──────────────────────────────────────────────────────────────
+
+\Cref{tab:notation} collects every symbol used in this book, together
+with a brief gloss and the chapter in which it is introduced.
+
+\noindent
+\begin{tabular}{@{} l p{8.2cm} l @{}}
+\toprule
+\textbf{Symbol} & \textbf{Meaning} & \textbf{Introduced} \\
+\midrule
+
+$G = (V, E, t, w, a)$
+  & Event graph: vertices $V$, edges $E$, timestamp function $t$,
+    weight function $w$, actor function $a$
+  & \cref{ch:formal-problem} \\
+
+$a^{\star}$
+  & Focal actor: the agent whose narrative arc is being extracted
+  & \cref{ch:formal-problem} \\
+
+$P$
+  & Candidate pool: the set of events involving the focal actor
+  & \cref{ch:formal-problem} \\
+
+$\tp(S)$
+  & Endogenous turning point of event set $S$: the focal event with
+    maximum weight in the selected subsequence
+  & \cref{ch:formal-problem} \\
+
+$A = (Q, \Sigma, \delta, q_0, F)$
+  & Phase grammar DFA: states $Q$, alphabet $\Sigma$ (phase labels),
+    transition function $\delta$, initial state $q_0$, accepting
+    states~$F$
+  & \cref{ch:formal-problem} \\
+
+$k$
+  & Prefix requirement: the minimum number of \textsc{development}
+    beats before the turning point
+  & \cref{ch:formal-problem} \\
+
+$M$
+  & Solver budget: the number of pivot candidates explored by the
+    enumerative or TP-conditioned solver
+  & \cref{ch:formal-problem} \\
+
+$\jdev$
+  & Development-eligible event count: the number of non-focal events
+    whose timestamp precedes the argmax-selected pivot
+  & \cref{ch:absorbing-states} \\
+
+$C = (\wstar, \dtotal, \dpre)$
+  & Context element: a triple summarising the structural state of a
+    contiguous block of events
+  & \cref{ch:context-algebra} \\
+
+$\opendo$
+  & Endogenous composition: the associative binary operation on
+    context elements
+  & \cref{ch:context-algebra} \\
+
+$e = (-\infty, 0, 0)$
+  & Identity element of the context monoid
+  & \cref{ch:context-algebra} \\
+
+$T = (W, \dtotal)$
+  & Tropical context: a weight vector $W$ paired with a total
+    development count
+  & \cref{ch:tropical-lift} \\
+
+$W[j]$
+  & Best pivot weight achievable with exactly $j$ pre-pivot
+    development events
+  & \cref{ch:tropical-lift} \\
+
+$\bar{C} = (\wstar, \dtotal, \dpre, \kappa)$
+  & Extended context element: a context element augmented with a
+    commitment flag
+  & \cref{ch:absorbing-ideal} \\
+
+$\opcommit$
+  & Committed composition: the composition operation on extended
+    context elements that respects commitment
+  & \cref{ch:absorbing-ideal} \\
+
+$\kappa$
+  & Commitment flag: $\kappa = 0$ (uncommitted, pivot is provisional)
+    or $\kappa = 1$ (committed, pivot is locked)
+  & \cref{ch:absorbing-ideal} \\
+
+$\absorb$
+  & Absorbing predicate: $\dpre < k$, indicating that the context is
+    in the absorbing ideal
+  & \cref{ch:absorbing-ideal} \\
+
+$\mu$
+  & Compression map: a lossy reduction of the context that may shift
+    the pivot
+  & \cref{ch:absorbing-ideal} \\
+
+$\tp_t$
+  & Running-max pivot at step $t$: the highest-weight focal event
+    seen in the first $t$ events of the stream
+  & \cref{ch:streaming} \\
+
+$\peff$
+  & Effective pre-pivot capacity: the number of development-eligible
+    events before the running-max pivot in a streaming setting
+  & \cref{ch:streaming} \\
+
+$f$
+  & Patience parameter: the fraction of the sequence that the deferred
+    commitment policy waits before locking the pivot
+  & \cref{ch:streaming} \\
+
+$\mingap$
+  & Minimum inter-record gap: the smallest number of events between
+    consecutive running-max pivot updates
+  & \cref{ch:streaming} \\
+
+PPR
+  & Pivot preservation rate: the fraction of sequences in which the
+    post-compression pivot matches the pre-compression pivot
+  & \cref{ch:mirage} \\
+
+FPF
+  & Fixed-pivot feasibility: the fraction of sequences that remain
+    grammar-valid when evaluated against the original (pre-compression)
+    pivot
+  & \cref{ch:mirage} \\
+
+SR
+  & Semantic regret: the quality loss attributable to pivot shift,
+    measured as $Q_{\text{original}} - Q_{\text{shifted}}$
+  & \cref{ch:mirage} \\
+
+$Q$
+  & Composite quality score: a weighted aggregate of tension variance,
+    peak tension, trajectory shape, irony, significance, thematic
+    coherence, and protagonist coverage
+  & \cref{ch:narrative} \\
+
+VA
+  & Validity-adjusted score: a metric that interpolates between raw
+    validity and pivot-preserving validity
+  & \cref{ch:narrative} \\
+
+$\alpha$
+  & Interpolation parameter: controls the weight of pivot preservation
+    in the validity-adjusted score
+  & \cref{ch:narrative} \\
+\bottomrule
+\end{tabular}
+\label{tab:notation}
+
+% ──────────────────────────────────────────────────────────────
+\chapter{Glossary}\label{app:glossary}
+% ──────────────────────────────────────────────────────────────
+
+\begin{description}[style=nextline, leftmargin=2.5cm, labelwidth=2.3cm, itemsep=6pt]
+
+\item[Absorbing state]
+A state of the product automaton from which no accepting state is
+reachable.  Once entered, no continuation can produce a grammar-valid
+sequence.
+
+\item[Blast radius]
+The number of downstream labels or decisions invalidated by a single
+pivot shift.
+
+\item[Candidate pool]
+The set of events involving the focal actor that are available for
+inclusion in the narrative arc.
+
+\item[Commit-now policy]
+A streaming policy that irrevocably assigns phase labels to each event
+as it arrives, based on the current running-max pivot.
+
+\item[Committed semantics]
+The interpretation regime under which the pivot identity is locked and
+cannot be revised by future events.
+
+\item[Compression contract]
+A pre/post condition pair that a compression map must satisfy to
+guarantee that the pivot is preserved and the context does not enter the
+absorbing ideal.
+
+\item[Context element]
+A triple $(\wstar, \dtotal, \dpre)$ that summarises the structural
+state of a contiguous block of events: the best pivot weight, the total
+development capacity, and the pre-pivot development capacity.
+
+\item[Deferred commitment]
+A streaming policy that withholds label assignment for the first
+fraction~$f$ of the sequence, committing only after the pivot has
+stabilised.
+
+\item[Development-eligible]
+An event is development-eligible if it is a non-focal event whose
+timestamp precedes the current pivot.  Such events can serve as
+\textsc{development} beats in the phase grammar.
+
+\item[Endogenous pivot]
+A distinguished element of the output that is selected by argmax over
+the output itself, creating a circular dependency between selection and
+interpretation.
+
+\item[Enumerative solver]
+A solver that iterates over the top-$M$ pivot candidates by weight,
+attempting grammar-valid extraction for each, and returns the first
+success.
+
+\item[Event graph]
+The directed graph $G = (V, E, t, w, a)$ encoding all events in the
+simulation, with timestamps, weights, and actor assignments.
+
+\item[Feasibility]
+A sequence is feasible if it satisfies the phase grammar with at least
+$k$ development beats before the turning point selected by the
+endogenous pivot function.
+
+\item[Fixed-pivot feasibility (FPF)]
+The fraction of compressed sequences that remain grammar-valid when
+evaluated against the pre-compression pivot.
+
+\item[Focal actor]
+The agent $a^{\star}$ whose narrative arc is being extracted from the
+event graph.
+
+\item[Grammar-aware classifier]
+A classifier that uses the phase grammar's state to prune or reweight
+events during arc extraction, treating the grammar as a regulariser
+rather than a post-hoc validator.
+
+\item[Mirage gap]
+The quantitative difference between raw validity (which may be $1.0$)
+and pivot-preserving metrics such as FPF or PPR.  A large mirage gap
+indicates that standard metrics are hiding semantic failures.
+
+\item[Monotonic DFA]
+A DFA whose state transitions are monotonically ordered: once a phase
+is exited, it cannot be re-entered.
+
+\item[Oscillation trap]
+A streaming state in which the running-max pivot has overtaken the
+committed pivot, leaving the policy in an absorbing state from which
+no grammar-valid continuation exists.
+
+\item[Patience parameter]
+The fraction $f \in [0, 1]$ of the sequence that the deferred
+commitment policy processes before locking the pivot.
+
+\item[Phase grammar]
+A deterministic finite automaton that specifies the legal ordering of
+narrative phases: \textsc{setup}, \textsc{development},
+\textsc{turning\_point}, \textsc{resolution}.
+
+\item[Pivot preservation (PPR)]
+The fraction of sequences in which the post-operation pivot (after
+compression, streaming, or other transformation) matches the
+pre-operation pivot.
+
+\item[Prefix requirement]
+The parameter $k$ specifying the minimum number of \textsc{development}
+beats that must precede the turning point for a sequence to be
+grammar-valid.
+
+\item[Record process]
+The stochastic process formed by the running maximum of pivot weights
+in a stream.  Each new record corresponds to a pivot update.
+
+\item[Semantic regret]
+The quality loss caused by a pivot shift: the difference in composite
+$Q$-score between the arc built around the original pivot and the arc
+built around the shifted pivot.
+
+\item[Tropical context]
+A pair $(W, \dtotal)$ where $W$ is a weight vector indexed by pre-pivot
+development count.  The tropical composition rule is a shift-and-max
+operation derived from the tropical semiring.
+
+\item[Turning point]
+The event selected by the endogenous pivot function---the single
+highest-weight focal event in the chosen subsequence.
+
+\item[Validity mirage]
+The phenomenon in which standard validity metrics (grammar satisfaction,
+constraint checks) report perfect scores while the semantic content of
+the output has been silently corrupted by a pivot shift.
+
+\item[Weight vector]
+The vector $W[0..k]$ in a tropical context, where $W[j]$ is the best
+pivot weight achievable with exactly $j$ pre-pivot development events.
+
+\end{description}
+
+% ──────────────────────────────────────────────────────────────
+\chapter{Determinism Contract}\label{app:determinism}
+% ──────────────────────────────────────────────────────────────
+
+Every experimental result in this book is deterministically
+reproducible.  This appendix documents the mechanisms that guarantee
+reproducibility.
+
+\section{Fixed Random Seeds}\label{sec:det-seeds}
+
+Every random generator in the codebase takes an explicit seed parameter.
+No experiment relies on a global random state or on the default seed.
+Each test function creates its own \texttt{numpy.random.Generator}
+instance initialised with a fixed seed, ensuring that the random state
+of one test cannot contaminate another.
+
+\begin{verbatim}
+rng = numpy.random.default_rng(seed=42)
+\end{verbatim}
+
+\noindent
+The seed value is recorded in the test file and in the output CSV.
+Re-running the test with the same seed on the same platform produces
+bit-identical results.
+
+\section{Deterministic Tie-Breaking}\label{sec:det-tiebreak}
+
+When two events have equal weight, the system breaks ties using a
+three-key tuple:
+\[
+  (\,w,\;\; {-t},\;\; \texttt{event\_id}\,),
+\]
+where $w$ is the event weight, $t$ is the timestamp (negated so that
+earlier events win ties), and \texttt{event\_id} is a unique integer
+identifier assigned at event creation.  This ensures a strict total
+order on events, eliminating any dependence on hash randomisation or
+memory layout.
+
+\section{Stable Sorting}\label{sec:det-sorting}
+
+All sorting operations use a stable sort with an explicit key function.
+No code path relies on the default comparison of complex objects or on
+the stability guarantees of a particular sorting algorithm beyond the
+Python specification that \texttt{list.sort()} and \texttt{sorted()} are
+stable.  Where numpy sorting is used, \texttt{kind='stable'} is
+specified explicitly.
+
+\section{Isolated Random State}\label{sec:det-isolation}
+
+Each test creates its own \texttt{numpy.random.Generator} with a fixed
+seed.  Tests do not share random state, and the order in which tests
+are executed does not affect their outputs.  This isolation is
+enforced by convention: no test reads from or writes to a global
+random state.
+
+\section{Platform Independence}\label{sec:det-platform}
+
+All results reported in this book were produced and verified on the
+following platform:
+\begin{itemize}[itemsep=2pt]
+  \item Python~3.14
+  \item NumPy (current stable release)
+  \item macOS (Darwin)
+\end{itemize}
+No platform-specific numerical libraries (e.g., MKL, CUDA) are used
+in the core experimental pipeline.  Floating-point operations follow
+IEEE~754 double-precision semantics.  No experiment depends on
+nondeterministic GPU operations.
+
+% ──────────────────────────────────────────────────────────────
+\chapter{Experiment-to-Artifact Map}\label{app:artifact-map}
+% ──────────────────────────────────────────────────────────────
+
+\Cref{tab:artifact-map} links every major experimental claim in this
+book to the test file that produces it, the CSV artifact that records
+the raw data, and the figure (if any) that visualises the result.  All
+paths are relative to the repository root.
+
+\noindent
+\begin{small}
+\begin{tabular}{@{} p{3.0cm} p{1.6cm} p{4.6cm} p{3.4cm} @{}}
+\toprule
+\textbf{Claim} & \textbf{Test} & \textbf{Artifact CSV} & \textbf{Figure} \\
+\midrule
+
+Tropical exactness (0~violations)
+  & \texttt{test\_01}
+  & \texttt{results/raw/test\_01\_exactness.csv}
+  & \texttt{test\_01\_exactness\_heatmap.png} \\
+
+Associativity (0~violations)
+  & \texttt{test\_02}
+  & \texttt{results/raw/test\_02\_associativity.csv}
+  & \texttt{test\_02\_associativity\_heatmap.png} \\
+
+Monoid subsumption
+  & \texttt{test\_03}
+  & \texttt{results/raw/test\_03\_monoid\_subsumption.csv}
+  & \texttt{test\_03\_monoid\_richness.png} \\
+
+Absorbing ideal (0~violations)
+  & \texttt{test\_04}
+  & \texttt{results/raw/test\_04\_absorbing\_ideal.csv}
+  & \texttt{test\_04\_absorption\_escape\_rates.png} \\
+
+Holographic exactness
+  & \texttt{test\_05}
+  & \texttt{results/raw/test\_05\_holographic\_exactness.csv}
+  & --- \\
+
+Incremental consistency
+  & \texttt{test\_06}
+  & \texttt{results/raw/test\_06\_incremental\_consistency.csv}
+  & --- \\
+
+Scaling $O(n \log n)$
+  & \texttt{test\_07}
+  & \texttt{results/raw/test\_07\_scaling.csv}
+  & \texttt{test\_07\_scaling\_loglog.png} \\
+
+Divergence (super-linear)
+  & \texttt{test\_08}
+  & \texttt{results/raw/test\_08\_divergence\_raw.csv}
+  & \texttt{test\_08\_divergence\_loglog.png} \\
+
+Record process
+  & \texttt{test\_09}
+  & \texttt{results/raw/test\_09\_record\_process\_raw.csv}
+  & \texttt{test\_09\_records\_and\_min\_gap.png} \\
+
+Tropical shield
+  & \texttt{test\_10}
+  & \texttt{results/raw/test\_10\_tropical\_shield\_raw.csv}
+  & \texttt{test\_10\_tropical\_shield\_policy\_compare.png} \\
+
+Compression mirage
+  & \texttt{test\_11}
+  & \texttt{results/raw/test\_11\_mirage\_raw.csv}
+  & \texttt{test\_11\_validity\_mirage.png} \\
+
+Deterministic witness
+  & \texttt{test\_12}
+  & \texttt{results/raw/test\_12\_deterministic\_witness.csv}
+  & \texttt{test\_12\_deterministic\_witness.png} \\
+
+Contract compression
+  & \texttt{test\_13}
+  & \texttt{results/raw/test\_13\_contract\_compression\_raw.csv}
+  & \texttt{test\_13\_contract\_vs\_naive.png} \\
+
+Margin correlation
+  & \texttt{test\_14}
+  & \texttt{results/raw/test\_14\_margin\_correlation\_raw.csv}
+  & \texttt{test\_14\_margin\_quartiles.png} \\
+
+Adaptive compression
+  & \texttt{test\_15}
+  & \texttt{results/raw/test\_15\_adaptive\_compression\_raw.csv}
+  & \texttt{test\_15\_adaptive\_vs\_uniform.png} \\
+
+Organic traps (54.9\%)
+  & \texttt{test\_16}
+  & \texttt{results/raw/test\_16\_organic\_traps.csv}
+  & \texttt{test\_16\_trap\_rate\_heatmaps.png} \\
+
+Tropical streaming
+  & \texttt{test\_17}
+  & \texttt{results/raw/test\_17\_tropical\_streaming.csv}
+  & \texttt{test\_17\_policy\_validity\_bar.png} \\
+
+Transition depth
+  & \texttt{test\_18}
+  & \texttt{results/raw/test\_18\_transition\_vector\_raw.csv}
+  & \texttt{test\_18\_transition\_vector\_depth.png} \\
+
+5-model blackbox
+  & ---
+  & \texttt{release/results/blackbox\_bf16\_5model/*.csv}
+  & --- \\
+
+KV-cache eviction
+  & ---
+  & \texttt{release/results/kv\_cache\_eviction\_llama31\_8b/*.csv}
+  & --- \\
+
+NTSB incidents
+  & ---
+  & \texttt{results/ntsb/*.csv}
+  & --- \\
+\bottomrule
+\end{tabular}
+\end{small}
+\label{tab:artifact-map}

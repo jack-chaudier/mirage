@@ -1,0 +1,454 @@
+% ══════════════════════════════════════════════════════════════
+%  Chapter 12 — Discussion and Future Work
+% ══════════════════════════════════════════════════════════════
+\chapter{Discussion and Future Work}\label{ch:discussion}
+
+This book began with a single collapsed arc---Diana's---and traced the
+failure through four layers of analysis: empirical observation, algebraic
+formalisation, streaming extension, and unified theory.  This chapter
+steps back to survey the landscape.  We first assemble the unified
+picture (\cref{sec:unified-picture}), showing how the four constituent
+papers tell a single coherent story.  We then catalogue research
+directions (\cref{sec:research-directions}), grading each by its current
+evidence level.  \Cref{sec:broader-connections} draws connections to
+systems beyond narrative generation.  \Cref{sec:closing-remarks} offers
+brief closing reflections.
+
+% ══════════════════════════════════════════════════════════════
+\section{The Unified Picture}\label{sec:unified-picture}
+% ══════════════════════════════════════════════════════════════
+
+The four papers that make up this book's empirical and theoretical spine
+are not four independent contributions; they are four acts of a single
+argument.  Each act addresses a different facet of the same structural
+phenomenon---the validity mirage---and each builds on the conclusions of
+its predecessors.
+
+\paragraph{Paper~00: Narrative / Lorien (Chapters~1--2).}
+The endogenous pivot problem was discovered empirically through Diana's
+phase collapse.  Across 50~seeds of a dinner-party simulation, Diana's
+arc failed in 9~seeds with a uniform signature: zero development beats,
+an extremely early turning point (median normalised position $0.13$),
+and full candidate pools.  The failure was not caused by data scarcity
+but by a structural interaction between protagonist-event injection and
+endogenous pivot selection.  Grammar relaxation experiments confirmed
+that the standard grammar could not be satisfied when the pool's
+highest-weight events arrived too early.  This empirical observation
+motivated every formal development that followed.
+
+\paragraph{Paper~01: Absorbing States (Chapters~3--4).}
+The absorbing-state analysis formalised the impossibility.  When $\jdev
+< k$---that is, when the number of development-eligible events before
+the argmax-selected pivot falls below the prefix requirement---greedy
+search produces zero valid sequences.  The failure is not probabilistic;
+it is structural.  \Cref{ch:taxonomy} classified failures into four
+types (pool starvation, temporal clustering, weight--position
+antagonism, and grammar--constraint conflict) and constructed a
+hierarchy of solvers: greedy, enumerative, and TP-conditioned.  Each
+level in the hierarchy trades computational cost for strictly greater
+coverage of the failure space.
+
+\paragraph{Paper~02: Streaming (Chapters~6, 8).}
+The streaming analysis extended the theory to online settings, where
+events arrive sequentially and labels must be emitted before the full
+sequence is known.  The central result is that commit-now policies fall
+into oscillation traps---sequences in which the running-max pivot
+overtakes the committed pivot, leaving the policy in an absorbing state
+from which no continuation is grammar-valid.  Empirically, such traps
+affect 54.9\% of organically generated sequences.  Two solutions
+emerged: deferred commitment (with patience parameter $f$) and tropical
+streaming, which maintains a weight vector over all possible pre-pivot
+development counts and defers role assignment until the vector stabilises.
+
+\paragraph{Paper~03: Context Algebra (Chapters~5, 7, 9).}
+The context algebra unified everything into a single algebraic
+framework.  The context monoid $(\mathcal{C}, \opendo)$ compresses any
+contiguous block of events into a triple $(\wstar, \dtotal, \dpre)$
+that composes associatively.  The extended monoid $(\bar{\mathcal{C}},
+\opcommit)$ adds a commitment flag $\kappa$ and reveals that
+prefix-deficient elements form a left ideal---the absorbing ideal.
+Compression is the unique closure-breaking operation: it is the only
+elementary edit that can force a valid context into the absorbing ideal.
+The \emph{validity mirage} is the quantitative gap between raw validity
+(which remains at $1.0$ under compression) and pivot preservation (which
+drops to $0.35$), confirming that standard metrics are structurally
+blind to the failure.
+
+\medskip
+\noindent
+\textbf{The unified thesis.}\;
+Endogenous constraints---where a distinguished element is selected by
+argmax over the solution---create structural failure modes that standard
+validity metrics miss.  The context algebra provides the formal
+framework to analyse, predict, and prevent these failures.  The absorbing
+ideal explains \emph{why} failures are irrecoverable; the tropical lift
+explains \emph{when} they become detectable; the streaming analysis
+explains \emph{how often} they occur in practice; and the compression
+contract explains \emph{what operations} must be guarded to avoid them.
+
+% ══════════════════════════════════════════════════════════════
+\section{Research Directions}\label{sec:research-directions}
+% ══════════════════════════════════════════════════════════════
+
+The following directions are ordered roughly by distance from the
+current results.  Each is labelled with its evidence status.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Set-Valued Algebra / Context Semiring}
+\label{sec:future-semiring}
+\textsc{Status: Conjectured.}
+
+\medskip
+\noindent
+The context monoid tracks a single best weight per slot.  When pivot
+identity is uncertain---for example, when two focal events have nearly
+equal weight---a single-pivot summary discards information that may be
+decision-relevant.  A natural extension is to replace the scalar
+$\wstar$ with a \emph{set} of candidate pivots, each annotated with its
+own feasibility profile.  The resulting structure would be a context
+\emph{semiring} rather than a monoid: addition corresponds to
+maintaining the non-dominated frontier of pivot candidates, and
+multiplication corresponds to block composition.
+
+The tropical context (\cref{ch:tropical-lift}) already moves in this
+direction.  The weight vector $W[0..k]$ records the best pivot weight
+achievable with exactly $j$ pre-pivot development events, for each $j$.
+A full set-valued semiring would generalise this to maintain the
+non-dominated Pareto frontier over an arbitrary set of quality
+dimensions, not just the development count.
+
+The conjecture is that such a semiring admits an efficient parallel
+reduction analogous to the $O(\log n)$ holographic tree, with the
+set-valued composition reducing to a tropical matrix product.  No proof
+or implementation exists at present.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Agent-Relative Tension Metrics}
+\label{sec:future-tension}
+\textsc{Status: Proposed.}
+
+\medskip
+\noindent
+Diana's failures occurred partly because the composite quality metric
+$Q$ valued kinetic events---catastrophes, confrontations,
+revelations---over epistemic events---observations, realisations,
+belief updates.  The $Q$-metric measures global tension: how much the
+event changes the state of the world.  An agent-relative metric would
+instead measure how much the event changes the \emph{focal agent's
+beliefs}, regardless of the event's global salience.
+
+Concretely, define the \emph{agent-relative tension} of event $e$ for
+focal actor $a^{\star}$ as the KL divergence between $a^{\star}$'s
+belief state before and after $e$.  Turning points would then be
+selected by argmax over agent-relative tension rather than over global
+kinetic weight.  This would naturally favour events that are
+informationally significant to the focal agent, even if they are globally
+unremarkable.
+
+No implementation or evaluation exists.  The proposal is motivated by
+the observation that Diana's highest-weight events (by the global
+$Q$-metric) were protagonist-driven catastrophes that Diana merely
+witnessed, while the events most relevant to Diana's own arc were
+quieter observations that scored low on global tension.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Quality-Diversity Search via MAP-Elites}
+\label{sec:future-map-elites}
+\textsc{Status: Proposed.}
+
+\medskip
+\noindent
+The current solver hierarchy explores the space of narrative arcs by
+varying the turning-point candidate (enumerative solver) or by
+conditioning on turning-point position (TP-conditioned solver).
+Neither method systematically explores the full frontier of
+turning-point position versus quality.
+
+MAP-Elites (multi-dimensional archive of phenotypic elites) offers a
+principled alternative.  The behaviour space is discretised into bins
+indexed by normalised turning-point position.  Each bin stores the
+highest-$Q$ arc whose turning point falls in that bin.  The archive is
+populated by mutation and crossover over event-selection vectors.
+
+The expected benefit is diagnostic: the MAP-Elites archive would reveal
+whether metric misalignment (the tendency of $Q$ to favour early turning
+points) is a \emph{local} phenomenon---affecting only a narrow band of
+turning-point positions---or a \emph{global} one that distorts the
+entire quality landscape.  If the archive shows high-$Q$ arcs at late
+turning-point positions, the problem is local and can be addressed by
+reweighting.  If the archive is empty at late positions, the problem is
+structural and requires a metric redesign.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Adaptive Temporal Injection Thresholds}
+\label{sec:future-adaptive-injection}
+\textsc{Status: Partially Validated.}
+
+\medskip
+\noindent
+The temporal injection filter---which excludes protagonist events
+arriving before a normalised position threshold of $0.20$---recovered
+7~out of 9 of Diana's failed arcs in the original experiments.  The
+threshold $0.20$ was hand-tuned.
+
+A more principled approach would derive the threshold from the pivot
+arrival CDF developed in \cref{ch:streaming}.  Specifically, let
+$F_{\tp}(t)$ denote the cumulative distribution of the running-max
+pivot's arrival position.  The adaptive threshold is then
+\[
+  t^{\star} \;=\; \inf\bigl\{\,t : F_{\tp}(t) \ge 1 - \epsilon\,\bigr\},
+\]
+where $\epsilon$ is a tolerance parameter controlling how much early
+pivot mass is acceptable.  This ties the injection filter directly to
+the record-process analysis: the threshold adapts to the pool's
+statistical properties rather than being fixed across all agents.
+
+Partial validation comes from the observation that 7/9 recoveries at
+$0.20$ is consistent with the record-process prediction that early
+pivots concentrate in the first quintile.  A full validation would
+require sweeping $\epsilon$ over a range of agent archetypes and
+measuring the recovery rate as a function of the adaptive threshold.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Human Evaluation Gap}
+\label{sec:future-human-eval}
+\textsc{Status: Acknowledged Limitation.}
+
+\medskip
+\noindent
+All quality metrics in this work are automated.  The composite
+$Q$-score aggregates tension variance, peak tension, trajectory shape,
+irony, significance, thematic coherence, and protagonist coverage.
+Each component is computed from the event graph without human input.
+No human evaluation studies have been conducted.
+
+The correlation between automated $Q$-score and human narrative quality
+judgement is unknown.  It is entirely possible that arcs judged
+high-quality by the $Q$-metric are perceived as contrived or
+incoherent by human readers, or conversely that arcs with low
+$Q$-scores are compelling.  This is the single largest open question
+for practical deployment of the theory.
+
+A human evaluation study would require: (i)~a corpus of generated arcs
+spanning the full range of $Q$-scores and turning-point positions;
+(ii)~human raters scoring each arc on narrative coherence, emotional
+engagement, and structural satisfaction; and (iii)~a correlation
+analysis between human scores and automated metrics, broken down by
+pivot preservation status.  The last point is critical: if human raters
+reliably distinguish pivot-preserved arcs from mirage arcs, the
+validity mirage has perceptual consequences.  If they do not, the
+mirage is a formal property with no practical impact.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Extension to LLM Context Management}
+\label{sec:future-llm-context}
+\textsc{Status: Conjectured.}
+
+\medskip
+\noindent
+The context algebra's results on compression and commitment timing may
+apply directly to several problems in large language model (LLM)
+infrastructure.
+
+\paragraph{KV-cache eviction.}
+When a transformer's key--value cache exceeds its budget, the system
+must evict entries.  The retention sweep experiments in
+\cref{ch:mirage} showed that naive eviction (removing low-attention
+entries) can silently shift the semantic pivot of the context window.
+The compression contract (\cref{ch:absorbing-ideal}) predicts that any
+eviction policy lacking a pivot-preservation guard will eventually
+produce mirage states.  The connection to attention sink methods (e.g.,
+StreamingLLM's initial-token retention) is suggestive: the ``sink''
+tokens may function as pivot anchors, and their retention may be a
+special case of the no-absorption contract.
+
+\paragraph{RAG chunk selection.}
+Retrieval-augmented generation selects chunks from a document store to
+form the context for a query.  The selected chunks collectively
+determine the answer's semantic pivot---the dominant theme or fact
+around which the answer is organised.  Chunk selection is thus an
+endogenous pivot problem: the ``best'' chunk depends on the answer,
+which depends on which chunks are selected.  The context algebra
+predicts that greedy chunk selection (top-$k$ by embedding similarity)
+will produce mirage states when the highest-similarity chunk anchors
+the answer to a subtopic that lacks sufficient supporting detail.
+
+\paragraph{Multi-document summarisation.}
+Summarising multiple documents under a token budget requires compressing
+context.  The dominant theme of the summary---its pivot---is determined
+by the compressed representation.  The algebra predicts that naive
+compression (uniform truncation) will shift the pivot toward whichever
+document's key sentences survive truncation, regardless of whether that
+document is globally dominant.  Contract-guarded compression would
+check, after each truncation step, whether the pivot has survived.
+
+These connections are plausible but unproved beyond the KV-cache
+experiments reported in \cref{ch:mirage}.
+
+% ══════════════════════════════════════════════════════════════
+\section{Connections to Broader Systems}\label{sec:broader-connections}
+% ══════════════════════════════════════════════════════════════
+
+The endogenous pivot problem is not specific to narrative generation.
+Any system that selects a distinguished element by optimising over its
+own output faces the same structural coupling.  This section sketches
+five domains where the theory applies and states what the algebra
+predicts.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{LLM Context Management}
+\label{sec:conn-llm}
+
+Modern large language models operate under strict context-window
+budgets.  When the budget is exceeded, the system must compress:
+KV-cache entries are evicted, attention windows are chunked, or
+prefixes are summarised.  Each of these operations is a lossy
+context reduction.
+
+\paragraph{Endogenous pivot analogue.}
+The semantic pivot of the context window is the token (or span of
+tokens) that most strongly determines the model's next-token
+distribution---the ``attention sink'' in the terminology of
+StreamingLLM.  This pivot is endogenous: it depends on the full
+context, yet compression modifies the context.
+
+\paragraph{Theory predicts.}
+The compression contract (\cref{ch:absorbing-ideal}) predicts that any
+eviction policy that does not explicitly check pivot preservation will
+produce mirage states: the model's output will remain fluent and
+locally coherent (high raw validity) while the semantic anchor of the
+generation has silently shifted (low pivot preservation).  Attention
+sink methods that retain initial tokens may be understood as an
+implicit pivot-preservation heuristic---retaining the tokens most
+likely to serve as the global attention anchor.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Incident Triage and Root Cause Analysis}
+\label{sec:conn-incident}
+
+Incident investigation---whether in aviation (NTSB reports), software
+(post-incident reviews), or industrial safety---requires identifying a
+\emph{root cause} from a sequence of events.  The root cause is the
+event that, if removed, would have prevented the incident.
+
+\paragraph{Endogenous pivot analogue.}
+The root cause is selected by argmax over causal contribution, which
+depends on which events are included in the analysis.  When the event
+log is truncated (e.g., limited to the final 60~minutes before the
+incident), the root cause may shift to a proximate trigger that
+happened to fall within the window, even though the true root cause
+occurred hours earlier.
+
+\paragraph{Theory predicts.}
+The absorbing-state theorem predicts that truncation-induced pivot
+shifts are irrecoverable: once the true root cause is outside the
+analysis window, no amount of reasoning over the truncated log can
+recover it.  The tropical context predicts that maintaining a ranked
+list of candidate root causes (not just the top one) provides a natural
+defence: if the second-best candidate is qualitatively different from
+the best, the analysis is fragile and the window should be extended.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Process Mining}
+\label{sec:conn-process-mining}
+
+Process mining discovers workflow models from event logs.  A central
+task is \emph{reference activity selection}: choosing the activity that
+anchors the alignment of all traces.
+
+\paragraph{Endogenous pivot analogue.}
+The reference activity is the process-mining analogue of the turning
+point.  It is typically selected as the most frequent or most
+informative activity---an argmax over the discovered model.  But the
+model depends on how traces are aligned, which depends on the reference
+activity.
+
+\paragraph{Theory predicts.}
+When event logs are sampled or filtered (e.g., retaining only the most
+recent $n$ cases), the reference activity may shift to a different
+activity that happens to dominate the filtered sample.  The context
+algebra predicts that this shift is absorbing under committed
+semantics: once downstream analyses are conditioned on the wrong
+reference activity, no subsequent correction can recover the original
+alignment without re-processing the full log.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Grammar-Constrained Decoding}
+\label{sec:conn-grammar-decoding}
+
+Grammar-constrained decoding systems---such as PICARD (for SQL),
+Outlines (for structured JSON), and constrained beam search---guide
+language model generation to satisfy a formal grammar.
+
+\paragraph{Endogenous pivot analogue.}
+In many structured outputs, a single token or clause serves as the
+semantic pivot: the \texttt{WHERE} clause in SQL, the root key in JSON,
+the topic sentence in a paragraph.  This pivot is endogenous: it
+emerges from the generation process and determines the meaning of
+surrounding tokens.
+
+\paragraph{Theory predicts.}
+Grammar constraints ensure syntactic validity but cannot enforce
+semantic coherence with respect to the pivot.  A grammar-valid SQL
+query may satisfy all syntactic rules while selecting the wrong
+\texttt{WHERE} predicate---a pivot shift that changes the query's
+meaning without triggering a grammar violation.  The theory predicts
+that grammar constraints are necessary but not sufficient: they must be
+augmented with pivot-aware semantic checks.  This is precisely the
+``grammar as regulariser, not validator'' principle from
+\cref{ch:manifesto}.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Constrained Beam Search}
+\label{sec:conn-beam-search}
+
+Beam search with constraints maintains a set of $B$ partial hypotheses,
+pruning at each step to the top-$B$ candidates.  When the output must
+satisfy a structural constraint (e.g., balanced parentheses, valid XML),
+the beam is further filtered by constraint satisfaction.
+
+\paragraph{Endogenous pivot analogue.}
+The semantic pivot of a partial hypothesis is the token or span that
+most strongly determines the hypothesis's eventual meaning.  As the
+beam evolves, the pivot of the top hypothesis may oscillate---exactly
+the streaming oscillation trap of \cref{ch:streaming}.  When the beam
+commits to a hypothesis (by pruning all alternatives), the pivot is
+locked.
+
+\paragraph{Theory predicts.}
+The streaming analysis predicts that beam width $B$ controls the
+effective patience parameter $f$: wider beams defer commitment longer
+and therefore have lower trap rates.  The tropical context provides a
+natural beam-scoring function: instead of scoring hypotheses by
+log-likelihood alone, score them by their tropical feasibility
+vector, preferring hypotheses that maintain feasibility at multiple
+development thresholds.  This is a concrete instantiation of deferred
+commitment in the beam-search setting.
+
+% ══════════════════════════════════════════════════════════════
+\section{Closing Remarks}\label{sec:closing-remarks}
+% ══════════════════════════════════════════════════════════════
+
+The validity mirage is not a bug in a specific system.  It is a
+structural property of any system where interpretation depends on
+endogenous selection---where the meaning of the output is determined by
+an element that is itself selected from the output.  Such systems are
+ubiquitous: narrative generators select turning points, incident
+analysers select root causes, process miners select reference
+activities, retrieval systems select anchor documents, and language
+models select attention sinks.  In every case, standard validity
+metrics ask ``does the output satisfy the constraints?''\ and miss the
+deeper question: ``does the output mean what it was supposed to mean?''
+
+The algebra developed in this book provides tools to see the mirage
+(the pivot-preservation metric), measure it (the mirage gap between raw
+validity and fixed-pivot feasibility), and prevent it (the compression
+contract, the deferred commitment policy, the tropical streaming
+algorithm).  The manifesto of \cref{ch:manifesto} distils these tools
+into a practitioner's checklist.  The research directions catalogued in
+\cref{sec:research-directions} give researchers a roadmap.
+
+The central message is simple.  Validity is necessary but not
+sufficient.  Compression is dangerous but manageable.  Commitment is
+irreversible but deferrable.  And the algebra is there to tell you
+which is which.

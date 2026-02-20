@@ -1,0 +1,670 @@
+% ══════════════════════════════════════════════════════════════
+%  Chapter 7 — The Absorbing Ideal and Compression Contracts
+% ══════════════════════════════════════════════════════════════
+\chapter{The Absorbing Ideal and Compression Contracts}
+\label{ch:absorbing-ideal}
+
+The preceding chapters have established two independent lines of
+reasoning.  On the algebraic side, \cref{ch:context-algebra} gave us the
+endogenous context monoid $(\mathcal{C},\opendo)$ with strict
+associativity and a logarithmic parallel reduction.  On the structural
+side, \cref{ch:absorbing-states} showed that prefix-deficient states are
+absorbing under greedy semantics---once a sequence has committed to a
+deficient prefix, no continuation can rescue it.
+
+This chapter unifies the two lines.  We extend the context element with
+a \emph{commitment flag}, define a richer composition operation
+$\opcommit$ that respects commitment, and prove that the set of
+absorbing elements forms a \emph{left ideal} in the resulting monoid.
+We then turn to the practical question: which operations can push an
+element across the absorbing boundary?  The answer, confirmed both by
+theory and by experiment, is that \emph{compression is the unique
+closure-breaking operation}.  We conclude by formulating a
+\emph{no-absorption contract} that every compression map must satisfy to
+preserve algebraic closure.
+
+% ══════════════════════════════════════════════════════════════
+\section{Extended Context Elements}
+\label{sec:extended-ctx}
+% ══════════════════════════════════════════════════════════════
+
+In \cref{ch:context-algebra} a context element was a triple
+$(\wstar,\dtotal,\dpre)$.  To model systems that have irrevocably
+selected a pivot, we adjoin a single bit.
+
+\begin{definition}[Extended context element]
+\label{def:extended-ctx}
+An \emph{extended context element} is a quadruple
+\[
+  \bar C \;=\; (\wstar,\;\dtotal,\;\dpre,\;\kappa)
+\]
+where $\wstar \in \R$ is the weight of the focal event (running-max
+pivot weight), $\dtotal \in \N$ is the total development count (number
+of non-focal events in the block), $\dpre \in \N$ is the pre-pivot
+development count (non-focal events that precede the current pivot), and
+$\kappa \in \{0,1\}$ is the \emph{commitment flag}:
+\begin{itemize}[itemsep=3pt]
+  \item $\kappa = 0$: \textbf{uncommitted}.  The pivot identity is
+        provisional; a future suffix may contain an event of higher weight
+        that replaces the current pivot.
+  \item $\kappa = 1$: \textbf{committed}.  The pivot identity is locked.
+        No event in any future suffix can replace it, regardless of weight.
+\end{itemize}
+We write $\bar{\mathcal{C}}$ for the set of all extended context
+elements.
+\end{definition}
+
+\begin{remark}[Operational interpretation of commitment]
+\label{rem:commitment-operational}
+The commitment flag models any mechanism by which a system makes an
+irrevocable decision about pivot identity.  Three common sources of
+commitment arise in practice:
+\begin{enumerate}[label=(\roman*),itemsep=2pt]
+  \item \emph{Streaming assignment.}  A streaming processor that emits
+        labels on the fly has, at each step, assigned roles (pre-pivot
+        development, pivot, post-pivot material) based on the current
+        running-max pivot.  Once a label has been emitted, the assignment
+        is irrevocable: setting $\kappa = 1$ records this fact.
+  \item \emph{Compressed context.}  A solver that compresses its context
+        window typically discards events that were ``redundant'' relative
+        to a particular pivot.  The compressed representation is
+        thereafter committed to that pivot, because the discarded events
+        are no longer available to support a different one.
+  \item \emph{Checkpoint publication.}  Any system that publishes an
+        intermediate result---a partial narrative, a tentative
+        ranking---has committed to the pivot underlying that result.
+        Rolling back the pivot would invalidate the published output.
+\end{enumerate}
+In each case, the system has passed a point of no return.  The
+commitment flag is the algebraic encoding of that irreversibility.
+\end{remark}
+
+% ══════════════════════════════════════════════════════════════
+\section{Committed Composition}
+\label{sec:committed-composition}
+% ══════════════════════════════════════════════════════════════
+
+With extended context elements in hand, we define the composition
+operation that respects commitment.
+
+\begin{definition}[Committed composition $\opcommit$]
+\label{def:committed-composition}
+Given extended context elements
+\[
+  \bar C_A = (\wstar_A,\; d_A,\; \dpre{,A},\; \kappa_A),
+  \qquad
+  \bar C_B = (\wstar_B,\; d_B,\; \dpre{,B},\; \kappa_B),
+\]
+their \emph{committed composition}
+$\bar C_A \opcommit \bar C_B = (\wstar,\;\dtotal,\;\dpre,\;\kappa)$ is
+defined by three cases.
+
+\medskip
+\noindent\textbf{Case 1.}  $\kappa_A = 1$ \emph{(left block committed).}
+\[
+  \wstar = \wstar_A, \qquad
+  \dtotal = d_A + d_B, \qquad
+  \dpre = \dpre{,A}, \qquad
+  \kappa = 1.
+\]
+The committed pivot in $A$ is preserved unconditionally.  Block~$B$
+contributes to the total development count but cannot override the
+pivot, regardless of $\wstar_B$.
+
+\medskip
+\noindent\textbf{Case 2.}  $\kappa_A = 0$ and $\wstar_A \ge \wstar_B$
+\emph{(left uncommitted, left pivot dominates).}
+\[
+  \wstar = \wstar_A, \qquad
+  \dtotal = d_A + d_B, \qquad
+  \dpre = \dpre{,A}, \qquad
+  \kappa = \kappa_A = 0.
+\]
+This coincides with the endogenous composition $\opendo$: the
+higher-weight pivot stays in $A$.
+
+\medskip
+\noindent\textbf{Case 3.}  $\kappa_A = 0$ and $\wstar_B > \wstar_A$
+\emph{(left uncommitted, right pivot dominates).}
+\[
+  \wstar = \wstar_B, \qquad
+  \dtotal = d_A + d_B, \qquad
+  \dpre = d_A + \dpre{,B}, \qquad
+  \kappa = \kappa_B.
+\]
+The pivot shifts to $B$.  All of $A$'s events become pre-pivot
+development material and are added to $\dpre{,B}$.  The commitment
+status of the result inherits from $B$.
+\end{definition}
+
+\begin{remark}[Comparison with $\opendo$]
+\label{rem:commit-vs-endo}
+The critical difference between $\opcommit$ and $\opendo$ lies
+exclusively in Case~1.  Under $\opendo$, there is no Case~1: if
+$\wstar_B > \wstar_A$, the pivot always shifts to $B$.  Under
+$\opcommit$, the commitment flag blocks this shift.  The pivot in $A$ is
+preserved even when $B$ contains a strictly higher-weight event.
+
+Cases~2 and~3 of $\opcommit$ are identical to the two cases of
+$\opendo$.  Committed composition therefore extends endogenous
+composition: when $\kappa_A = 0$, the two operations agree.
+\end{remark}
+
+\begin{example}[Committed composition locks a suboptimal pivot]
+\label{ex:committed-suboptimal}
+Let $\bar C_A = (3,\, 5,\, 1,\, 1)$ and $\bar C_B = (10,\, 4,\, 2,\, 0)$.
+
+\medskip
+\noindent\emph{Under $\opendo$:}  Since $\wstar_B = 10 > 3 = \wstar_A$,
+the pivot shifts to $B$.  The result is
+\[
+  \bar C_A \opendo \bar C_B
+    = (10,\; 5+4,\; 5+2,\; 0)
+    = (10,\; 9,\; 7,\; 0).
+\]
+The stronger pivot in $B$ has been selected, and all five of $A$'s
+events now contribute to the pre-pivot development count.
+
+\medskip
+\noindent\emph{Under $\opcommit$:}  Since $\kappa_A = 1$, Case~1
+applies regardless of weights.  The result is
+\[
+  \bar C_A \opcommit \bar C_B
+    = (3,\; 5+4,\; 1,\; 1)
+    = (3,\; 9,\; 1,\; 1).
+\]
+The system remains locked to the weight-3 pivot in $A$, ignoring the
+weight-10 event in $B$.  The pre-pivot count stays at $\dpre = 1$.  If
+$k = 3$ (the grammar's prefix requirement), then $\dpre = 1 < 3$ and
+the committed result is absorbing---a situation that $\opendo$ would
+have avoided by shifting to the stronger pivot.
+\end{example}
+
+% ══════════════════════════════════════════════════════════════
+\section{The Absorbing Predicate}
+\label{sec:absorbing-predicate}
+% ══════════════════════════════════════════════════════════════
+
+We now give the algebraic characterisation of states from which the
+grammar's prefix requirement can never be satisfied.
+
+\begin{definition}[Absorbing predicate]
+\label{def:absorbing-predicate}
+Fix a grammar prefix requirement $k \in \N$.  The \emph{absorbing
+predicate} $\absorb$ is the subset of $\bar{\mathcal{C}}$ defined by
+\[
+  \bar C \in \absorb
+  \quad\Longleftrightarrow\quad
+  \dpre(\bar C) < k.
+\]
+An element $\bar C$ satisfying $\bar C \in \absorb$ is said to be
+\emph{absorbing}: its pre-pivot development count is insufficient to
+meet the prefix requirement.
+\end{definition}
+
+\begin{remark}[Connection to the impossibility theorem]
+\label{rem:absorb-connection}
+The absorbing predicate is the algebraic generalisation of the condition
+that caused greedy failure in \cref{ch:absorbing-states}.  In that chapter, the
+relevant quantity was $\jdev < k$: the development index of the current
+pivot was too small for the grammar to be satisfiable.  Here, $\dpre < k$
+plays exactly the same role, lifted from the sequential setting into the
+algebraic framework.
+
+The key insight is that $\jdev$ was defined relative to a specific
+sequence position, whereas $\dpre$ is a property of an abstract context
+element.  This abstraction is what allows the absorbing condition to
+compose: we can reason about the absorption status of a composite block
+without unfolding it into its constituent events.
+\end{remark}
+
+% ══════════════════════════════════════════════════════════════
+\section{Absorbing Left Ideal}
+\label{sec:absorbing-left-ideal}
+% ══════════════════════════════════════════════════════════════
+
+The main algebraic result of this chapter is that the absorbing
+predicate defines a left ideal in the committed monoid.  Informally:
+once a system has committed to an absorbing state, no suffix can rescue
+it.
+
+\begin{proposition}[Absorbing left ideal]
+\label{prop:absorbing-left-ideal}
+Let $k \in \N$ be the grammar prefix requirement.  If\/ $\bar C_A \in
+\bar{\mathcal{C}}$ satisfies $\kappa_A = 1$ and $\bar C_A \in \absorb$
+(i.e., $\dpre{,A} < k$), then for every $\bar C_D \in
+\bar{\mathcal{C}}$,
+\[
+  \bar C_A \opcommit \bar C_D \;\in\; \absorb.
+\]
+That is, the set $\{\,\bar C \in \bar{\mathcal{C}} : \kappa = 1 \text{
+and } \dpre < k\,\}$ is a left ideal of\/
+$(\bar{\mathcal{C}},\opcommit)$.
+\end{proposition}
+
+\begin{proof}
+Since $\kappa_A = 1$, Case~1 of \cref{def:committed-composition}
+applies unconditionally, regardless of the values $\wstar_D$, $d_D$,
+$\dpre{,D}$, and $\kappa_D$ carried by the suffix.  The committed
+composition rule yields:
+\[
+  \bar C_A \opcommit \bar C_D
+    \;=\;
+    \bigl(\wstar_A,\;\; d_A + d_D,\;\; \dpre{,A},\;\; 1\bigr).
+\]
+We verify each component of the result against the absorbing predicate
+and the left ideal requirement.
+
+\medskip
+\noindent\emph{Pre-pivot count is preserved.}\quad
+The pre-pivot development count of the result is $\dpre{,A}$.  The
+suffix $\bar C_D$ does not contribute to $\dpre$: because the pivot is
+locked in $A$, no event in $D$ can become the new pivot, and therefore
+no event in $D$ can change the set of events that precede the pivot.
+The pre-pivot count is determined entirely by the committed left block.
+
+\medskip
+\noindent\emph{The absorbing predicate is satisfied.}\quad
+By hypothesis, $\dpre{,A} < k$.  Since the pre-pivot count of the
+result equals $\dpre{,A}$, the result also has $\dpre < k$.  Therefore
+$\bar C_A \opcommit \bar C_D \in \absorb$.
+
+\medskip
+\noindent\emph{The commitment flag is preserved.}\quad
+The result has $\kappa = 1$.  Combined with $\dpre < k$, this shows
+that the result lies in the set
+$\{\,\bar C : \kappa = 1 \text{ and } \dpre < k\,\}$, confirming that
+the set is closed under right-multiplication by arbitrary elements
+of $\bar{\mathcal{C}}$.
+
+\medskip
+Since $\bar C_D$ was arbitrary, the set of committed absorbing elements
+is a left ideal of $(\bar{\mathcal{C}},\opcommit)$.
+\end{proof}
+
+\begin{remark}[Interpretation]
+\label{rem:left-ideal-interpretation}
+\Cref{prop:absorbing-left-ideal} is the algebraic formalisation of an
+operationally devastating fact: \emph{once committed to a bad state, you
+cannot recover}.  No matter how rich, how well-structured, or how long
+the suffix is, it cannot repair the pre-pivot deficiency because the
+commitment flag prevents the pivot from moving.  The absorbing elements
+form a ``black hole'' in the monoid: any element that falls in---and is
+committed---can never escape.
+
+This should be contrasted with the sequential impossibility theorem of
+\cref{ch:absorbing-states}, which established the same conclusion for a
+specific greedy algorithm.  \Cref{prop:absorbing-left-ideal} is
+stronger: it applies to \emph{any} process that respects committed
+composition, regardless of the algorithm used to generate the suffix.
+\end{remark}
+
+% ══════════════════════════════════════════════════════════════
+\section{Escape Under Endogenous Semantics}
+\label{sec:escape-endo}
+% ══════════════════════════════════════════════════════════════
+
+The absorbing left ideal depends crucially on commitment.  Without it,
+escape is possible---and understanding when escape occurs is essential
+for the validity mirage analysis of \cref{ch:mirage}.
+
+\begin{remark}[Escape from absorption without commitment]
+\label{rem:escape-endo}
+Suppose $\bar C_A$ has $\dpre{,A} < k$ (so $\bar C_A \in \absorb$) but
+$\kappa_A = 0$ (uncommitted).  Under $\opendo$, there is no Case~1: the
+pivot can shift if a higher-weight event appears on the right.  If the
+suffix $\bar C_D$ has $\wstar_D > \wstar_A$ and
+$\dpre{,D} \ge k - d_A$, then Case~3 of the composition applies:
+\[
+  \bar C_A \opendo \bar C_D
+    = (\wstar_D,\;\; d_A + d_D,\;\; d_A + \dpre{,D},\;\; \kappa_D).
+\]
+The new pre-pivot count is $d_A + \dpre{,D}$.  If
+$d_A + \dpre{,D} \ge k$, then $\bar C_A \opendo \bar C_D \notin
+\absorb$: the composite has escaped absorption.
+\end{remark}
+
+\begin{example}[Absorption escape under $\opendo$]
+\label{ex:absorption-escape}
+Let $k = 3$ and consider
+\[
+  \bar C_A = (3,\, 2,\, 0,\, 0).
+\]
+Since $\dpre{,A} = 0 < 3 = k$, we have $\bar C_A \in \absorb$.  Now
+let
+\[
+  \bar C_D = (10,\, 5,\, 4,\, 0).
+\]
+Under endogenous composition, $\wstar_D = 10 > 3 = \wstar_A$, so the
+pivot shifts to $D$:
+\[
+  \bar C_A \opendo \bar C_D
+    = (10,\; 2+5,\; 2+4,\; 0)
+    = (10,\; 7,\; 6,\; 0).
+\]
+The pre-pivot count is $6 \ge 3 = k$: the composite has escaped
+absorption.
+
+\medskip
+\noindent Under committed composition with $\kappa_A = 1$, the same
+inputs yield
+\[
+  \bar C_A \opcommit \bar C_D
+    = (3,\; 7,\; 0,\; 1).
+\]
+The pre-pivot count remains $0 < 3$: still absorbed.  Commitment
+prevents escape.
+\end{example}
+
+\begin{remark}[Algebraic foundation of the validity mirage]
+\label{rem:mirage-foundation}
+The contrast between committed and uncommitted semantics is the
+algebraic foundation of the \emph{validity mirage} developed in
+\cref{ch:mirage}.
+
+An enumerative solver with beam width $M > 1$ explores multiple pivot
+candidates simultaneously.  Each candidate corresponds to a different
+factorisation of the sequence into pre-pivot, pivot, and post-pivot
+material.  The solver's search process effectively operates under
+$\opendo$ semantics: it can ``escape'' absorption by substituting a
+different pivot---one that was not the running-max focal event of the
+original prefix, but that appeared in a different branch of the beam.
+
+The resulting output may well be valid: every grammar constraint is
+satisfied, and every structural requirement is met.  But the pivot
+identity has changed.  The solution that the solver returns is not the
+solution that the original prefix was building toward.  Semantics have
+drifted silently, and no constraint violation has been raised.  This is
+the mirage: the output \emph{looks} correct because validity is
+preserved, yet the underlying semantic intent has been abandoned.
+\end{remark}
+
+% ══════════════════════════════════════════════════════════════
+\section{The No-Absorption Compression Contract}
+\label{sec:compression-contract}
+% ══════════════════════════════════════════════════════════════
+
+The left ideal theorem (\cref{prop:absorbing-left-ideal}) tells us that
+committed absorption is permanent.  The natural follow-up question is:
+which operations can \emph{create} absorption where none existed before?
+The empirical answer, detailed in \cref{sec:empirical-validation}, is
+that compression is the unique culprit.  This section formulates the
+contract that prevents it.
+
+\begin{definition}[No-absorption contract]
+\label{def:no-absorption-contract}
+Fix a grammar prefix requirement $k \in \N$.  A \emph{compression map}
+$\mu \colon \mathcal{E} \to \mathcal{E}$ (where $\mathcal{E}$ denotes
+the space of event blocks) satisfies the \emph{no-absorption contract}
+if for every event block $B$,
+\[
+  \dtotal\bigl(\mu(B)\bigr)
+  \;\ge\;
+  \min\bigl(\dtotal(B),\; k\bigr).
+\]
+\end{definition}
+
+\begin{remark}[Operational interpretation]
+\label{rem:contract-interpretation}
+The contract permits compression to remove redundant development
+capacity---events beyond what is needed for the prefix requirement---but
+forbids it from reducing the development count below the survival
+threshold $k$.  Concretely:
+\begin{itemize}[itemsep=3pt]
+  \item If the original block has $\dtotal(B) \ge k$, then the
+        compressed block must also have $\dtotal(\mu(B)) \ge k$.
+        Compression may discard the excess, but it must retain at least
+        $k$ development events.
+  \item If the original block has $\dtotal(B) < k$, then the contract
+        requires only $\dtotal(\mu(B)) \ge \dtotal(B)$: the compression
+        must not make the situation worse, but it is not required to
+        conjure development events that were never there.
+\end{itemize}
+\end{remark}
+
+\begin{remark}[Why $\dtotal$ and not $\dpre$]
+\label{rem:why-dtotal}
+The contract is stated in terms of $\dtotal$ rather than $\dpre$ for a
+fundamental reason: the compression map does not know which event will
+ultimately serve as the pivot.
+
+At compression time, the pivot identity may still be provisional
+($\kappa = 0$), and a future suffix may shift the pivot to a different
+event.  The pre-pivot count $\dpre$ is defined relative to a specific
+pivot; if the pivot changes, $\dpre$ changes with it.  By contrast,
+$\dtotal$ counts \emph{all} non-focal events in the block, regardless
+of their position relative to any particular pivot.
+
+Preserving $\dtotal \ge k$ ensures that no matter where the pivot
+ultimately lands, there is sufficient development material available for
+the prefix requirement to be satisfied.  A contract based on $\dpre$
+would protect only the current pivot assignment and would become
+vacuous---or actively harmful---if the pivot subsequently shifted.
+\end{remark}
+
+\begin{algorithm}[t]
+\caption{Contract-guarded compression}
+\label{alg:contract-compress}
+\begin{algorithmic}[1]
+\Require Event block $\mathit{events}$, prefix requirement $k$,
+         retention fraction $\mathit{retention} \in (0,1]$,
+         random seed $\mathit{seed}$
+\Ensure Compressed event block satisfying the no-absorption contract
+\State $\mathit{target} \gets
+       \lceil \mathit{retention} \times |\mathit{events}| \rceil$
+\State $\mathit{removable} \gets$ non-focal events in
+       $\mathit{events}$, shuffled by $\mathit{seed}$
+\State $\mathit{removed} \gets 0$
+\For{each candidate event $e$ in $\mathit{removable}$}
+  \If{$|\mathit{events}| - \mathit{removed} \le \mathit{target}$}
+    \State \textbf{break} \Comment{Reached retention target}
+  \EndIf
+  \State $\mathit{ctx\_without} \gets
+         \Call{BuildTropicalContext}{\mathit{events} \setminus \{e\},\; k}$
+  \If{$\mathit{ctx\_without}.\mathbf{W}[k]
+      \ge \mathit{original}.\mathbf{W}[k]$}
+    \Comment{Feasibility preserved}
+    \State Remove $e$ from $\mathit{events}$;\quad
+           $\mathit{removed} \gets \mathit{removed} + 1$
+  \Else
+    \State Block $e$ \Comment{Removal would violate contract}
+  \EndIf
+\EndFor
+\State \Return remaining events
+\end{algorithmic}
+\end{algorithm}
+
+\Cref{alg:contract-compress} presents the contract-guarded compression
+procedure.  The algorithm iterates over non-focal events in a
+seed-determined random order, greedily attempting to remove each one.
+Before removing an event, it rebuilds the tropical context
+(\cref{ch:tropical-lift}) for the reduced block and checks whether the
+tropical weight at rank $k$ is preserved.  If removal would reduce
+$\mathbf{W}[k]$ below its original value, the event is blocked: it is
+essential for maintaining the prefix requirement.
+
+The greedy removal order (controlled by the random seed) means that the
+algorithm is not guaranteed to achieve the \emph{maximum} compression
+ratio consistent with the contract.  However, it is guaranteed to
+\emph{satisfy} the contract: every removal is individually checked, and
+no removal that would violate feasibility is permitted.  The retention
+parameter provides a hard floor on the number of events retained,
+offering an additional safety margin beyond the algebraic contract.
+
+% ══════════════════════════════════════════════════════════════
+\section{Empirical Validation}
+\label{sec:empirical-validation}
+% ══════════════════════════════════════════════════════════════
+
+The algebraic theory of the preceding sections makes precise
+predictions.  We now report the experimental results that validate those
+predictions and, crucially, identify the one operation that breaks them.
+
+% ── Algebraic core ────────────────────────────────────────────
+\subsection{Algebraic Core (Experiment~51)}
+\label{subsec:exp51}
+
+\Cref{ch:context-algebra} established that $\opendo$ is strictly associative.
+The same property extends to $\opcommit$: committed composition
+inherits associativity from the case analysis, because Case~1 is
+idempotent (committed blocks remain committed) and the remaining cases
+reduce to $\opendo$.
+
+\emph{Pairwise exactness.}\quad
+Across 240 randomly generated pairs of extended context elements, the
+pairwise composition $\bar C_A \opcommit \bar C_B$ was computed and
+compared against a reference implementation that evaluates the full
+event-level sequence.  Result: \textbf{0 violations out of 240 cases.}
+
+\emph{Associativity.}\quad
+Across 80 randomly generated triples $(\bar C_A, \bar C_B, \bar C_C)$,
+the two bracketings $(\bar C_A \opcommit \bar C_B) \opcommit \bar C_C$
+and $\bar C_A \opcommit (\bar C_B \opcommit \bar C_C)$ were compared
+component-wise.  Result: \textbf{0 violations out of 80 cases.}
+
+These results validate the monoid structure computationally.
+
+% ── Absorbing-ideal closure ───────────────────────────────────
+\subsection{Absorbing-Ideal Closure (Experiment~56)}
+\label{subsec:exp56}
+
+To test \cref{prop:absorbing-left-ideal} empirically, we generated 96
+test cases, each consisting of a committed absorbing element $\bar C_A$
+(with $\kappa_A = 1$ and $\dpre{,A} < k$) composed on the right with a
+randomly generated suffix $\bar C_D$.  In every case, we checked whether
+the result $\bar C_A \opcommit \bar C_D$ satisfied $\dpre < k$.
+
+\medskip
+\noindent
+Result: \textbf{0 violations out of 96 cases.}  The left ideal property
+holds exactly across the full test suite.
+
+% ── Closure diagnostics ──────────────────────────────────────
+\subsection{Closure Diagnostics (Experiment~57)}
+\label{subsec:exp57}
+
+Which elementary operations preserve the monoid's algebraic structure,
+and which break it?  Experiment~57 tested each operation independently
+for closure violations.  The results are summarised in
+\cref{tab:closure-diagnostics}.
+
+\begin{table}[ht]
+\centering
+\caption{Closure violation rates by operation (Experiment~57).
+         Each operation was tested on a suite of randomly generated
+         extended context elements.  A violation occurs when the
+         operation produces an output that crosses the absorbing
+         boundary: a non-absorbing input yields an absorbing output, or
+         vice versa.}
+\label{tab:closure-diagnostics}
+\begin{tabular}{@{}lc@{}}
+\toprule
+\textbf{Operation} & \textbf{Violation rate} \\
+\midrule
+Composition ($\opcommit$)           & 0.000 \\
+Compression                         & 0.133 \\
+Pivot update                        & 0.000 \\
+Split-at-point                      & 0.000 \\
+Absorbing escape under compression  & 0.033 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The results are striking.  Every operation except compression has a
+violation rate of exactly zero: composition, pivot update, and
+split-at-point all preserve the algebraic structure perfectly.
+Compression alone violates closure, at a rate of 13.3\%.  Furthermore,
+3.3\% of compressions cause an \emph{absorbing escape}: a committed
+absorbing element is compressed into a non-absorbing one, or---more
+dangerously---a non-absorbing element is compressed into an absorbing
+one.
+
+\textbf{Conclusion:} Compression is the \emph{unique closure-breaking
+operation} in the context algebra.  This is the key empirical result of
+the chapter.  Every other elementary operation preserves the monoid
+structure, but naive compression can push elements across the absorbing
+boundary.  This finding motivates the no-absorption contract of
+\cref{def:no-absorption-contract}: it is precisely the guard needed to
+tame the one operation that breaks closure.
+
+% ── Absorption escape rates ──────────────────────────────────
+\subsection{Absorption Escape Rates}
+\label{subsec:escape-rates}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.85\textwidth]{%
+  figures/test_04_absorption_escape_rates.png}
+\caption{Absorption escape rates under committed versus uncommitted
+         semantics across generator configurations.  Under committed
+         semantics ($\opcommit$), the escape rate is zero: the left
+         ideal property holds.  Under uncommitted semantics ($\opendo$),
+         escape is possible and occurs at measurable rates that depend
+         on the weight distribution and block length.}
+\label{fig:absorption-escape-rates}
+\end{figure}
+
+\Cref{fig:absorption-escape-rates} displays the absorption escape rates
+for committed and uncommitted semantics across a range of generator
+configurations.  The committed escape rate is uniformly zero, confirming
+\cref{prop:absorbing-left-ideal}.  The uncommitted escape rate varies
+with the generator configuration but is consistently positive,
+illustrating the escape mechanism described in \cref{sec:escape-endo}.
+The gap between the two curves is the algebraic signature of
+commitment-induced irreversibility.
+
+% ══════════════════════════════════════════════════════════════
+\section{Exercises}
+\label{sec:ch7-exercises}
+% ══════════════════════════════════════════════════════════════
+
+\begin{exercise}[The absorbing ideal is not two-sided]
+\label{exer:not-two-sided}
+Show that the absorbing ideal of \cref{prop:absorbing-left-ideal} is
+\emph{not} a two-sided ideal.  That is, construct extended context
+elements $\bar C_A$ and $\bar C_D$ such that $\bar C_A \in \absorb$
+with $\kappa_A = 1$, yet $\bar C_D \opcommit \bar C_A \notin \absorb$.
+
+\emph{Hint:}  Choose $\bar C_D$ with $\kappa_D = 0$ and a pivot of
+sufficiently high weight so that if $\bar C_D$ is on the left and
+uncommitted, the pivot stays in $D$.  If $\dpre{,D} \ge k$, the
+composite inherits the non-absorbing pre-pivot count from $D$.
+\end{exercise}
+
+\begin{exercise}[Closure of absorbing elements under committed composition]
+\label{exer:absorbing-closure}
+Prove that under committed semantics, the set of committed absorbing
+elements is closed under $\opcommit$ from the left.  Specifically, show
+that if $\bar C_A \in \absorb$ with $\kappa_A = 1$ and $\bar C_B \in
+\absorb$ with $\kappa_B = 1$, then
+$\bar C_A \opcommit \bar C_B \in \absorb$ with commitment flag
+$\kappa = 1$.
+\end{exercise}
+
+\begin{exercise}[Maximum compression under the no-absorption contract]
+\label{exer:max-compression}
+Design a compression policy that satisfies the no-absorption contract
+(\cref{def:no-absorption-contract}) while achieving the maximum
+compression ratio.  Specifically, for an event block $B$ with
+$\dtotal(B) = 20$ non-focal events and grammar prefix requirement
+$k = 3$:
+\begin{enumerate}[label=(\alph*)]
+  \item What is the theoretical minimum number of non-focal events that
+        must be retained?
+  \item What is the maximum number of events that can be removed?
+  \item Does the answer change if the block also contains focal events?
+        Explain.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[Why $\dtotal$ and not $\dpre$ in the contract]
+\label{exer:why-dtotal}
+Explain why the no-absorption contract
+(\cref{def:no-absorption-contract}) is stated in terms of $\dtotal$
+rather than $\dpre$.  Construct a concrete scenario in which a
+compression map $\mu$ preserves $\dpre(\mu(B)) \ge k$ for the current
+pivot but produces a compressed block with $\dtotal(\mu(B)) < k$.  Show
+that a subsequent pivot shift (under $\opendo$ semantics) can then push
+the compressed block into the absorbing set, yielding $\dpre < k$ for
+the new pivot.
+\end{exercise}

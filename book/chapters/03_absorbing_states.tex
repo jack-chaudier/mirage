@@ -1,0 +1,637 @@
+% ══════════════════════════════════════════════════════════════
+%  Chapter 3 — Absorbing States in Greedy Search
+% ══════════════════════════════════════════════════════════════
+\chapter{Absorbing States in Greedy Search}\label{ch:absorbing-states}
+
+The greedy policy introduced in \cref{ch:formal-problem} selects a turning point by
+taking the $\argmax$ over focal-actor weights and then fills the remaining
+narrative phases around it.  This chapter shows that a simple counting
+argument---comparing the number of development-eligible events against the
+grammar's prefix requirement---yields an exact impossibility boundary.
+Below this boundary, the greedy policy produces \emph{zero} valid
+sequences; the product of the event graph with the phase grammar enters an
+absorbing state from which no continuation can reach acceptance.
+
+We proceed in stages.  \Cref{sec:dev-eligible} formalises the
+development-eligible set and its count~$\jdev$.
+\Cref{sec:phase-grammar-dfa} specifies the phase grammar as a
+deterministic finite automaton and proves its monotonicity lemma.
+\Cref{sec:product-automaton} constructs the product automaton that couples
+the greedy walk with the grammar.
+\Cref{sec:prefix-impossibility} states and proves the central result,
+\cref{thm:prefix-impossibility}, in five self-contained steps.
+\Cref{sec:absorbing-remarks} collects important remarks on the theorem's
+scope.  \Cref{sec:empirical-absorbing} presents the empirical evidence,
+and \cref{sec:exercises-absorbing} offers exercises.
+
+% ──────────────────────────────────────────────────────────────
+\section{Development-Eligible Events}\label{sec:dev-eligible}
+% ──────────────────────────────────────────────────────────────
+
+Throughout, let $G = (V, E, a, t, w)$ be an event graph on vertex set~$V$,
+where $a(v)$ is the actor of event~$v$, $t(v)$ its timestamp, and $w(v)$
+its narrative weight.  Fix a focal actor~$a^{*}$ and write
+\[
+  e^{*}
+  \;=\;
+  \argmax_{v \,:\, a(v) = a^{*}} w(v)
+\]
+for the \emph{forced turning point}---the event selected by the greedy
+policy as the structural pivot.  Let $k \ge 1$ denote the grammar's
+\emph{prefix requirement}: the minimum number of \textsc{development}
+symbols that must be consumed before \textsc{turning\_point}.
+
+\begin{definition}[Development-eligible set]\label{def:dev-eligible}
+  Given the event graph~$G$, turning point~$e^{*}$, and prefix
+  requirement~$k$, the \emph{candidate pool} is
+  $P = V \setminus \{e^{*}\}$.  The \emph{development-eligible set} is
+  \[
+    D
+    \;=\;
+    \bigl\{\,
+      v \in P
+      \;\bigm|\;
+      t(v) < t(e^{*})
+      \;\text{and $v$ can receive the \textsc{development} label
+              under the phase grammar}
+    \,\bigr\}.
+  \]
+  The \emph{development-eligible count} is $\jdev = |D|$.
+\end{definition}
+
+The three conditions in the definition deserve emphasis.
+Condition~(i), $v \neq e^{*}$, excludes the turning point itself.
+Condition~(ii), $t(v) < t(e^{*})$, restricts attention to events that
+precede the turning point in the timeline; events after the turning point
+cannot contribute \textsc{development} symbols under the monotonic grammar
+(\cref{lem:dfa-monotonicity}).  Condition~(iii) encodes the
+classifier--policy interaction: whether a given event \emph{can} receive
+the \textsc{development} label depends on the classifier in use.
+
+\begin{remark}[Classifier dependence of~$\jdev$]\label{rem:classifier-dep}
+  The count~$\jdev$ depends on the classifier--policy interaction.
+  Under a \emph{position-based classifier}, any event before the turning
+  point in the timeline is eligible for \textsc{development}, so
+  $\jdev = |\{v \in P : t(v) < t(e^{*})\}|$.  Under a
+  \emph{grammar-aware classifier}, only events that the DFA can label as
+  \textsc{development}---for instance, events belonging to non-focal
+  actors---are eligible, and $\jdev$ may be strictly smaller.  This
+  distinction is the source of Class~B failures analysed in
+  \cref{ch:taxonomy}.
+\end{remark}
+
+\begin{example}[Position-based vs.\ grammar-aware counting]%
+\label{ex:jdev-comparison}
+  Consider a sequence of $n = 10$ events in which the turning
+  point~$e^{*}$ occupies position~7 (in temporal order).  Among the six
+  events preceding~$e^{*}$, two belong to the focal actor~$a^{*}$ and
+  four belong to other actors.
+
+  \begin{enumerate}[label=(\roman*)]
+    \item \textbf{Position-based classifier.}
+      Every event before the turning point is eligible:
+      $\jdev = 6$.
+
+    \item \textbf{Grammar-aware classifier}
+      (requiring \textsc{development} events to be non-focal).
+      Only the four non-focal events qualify:
+      $\jdev = 4$.
+  \end{enumerate}
+
+  \noindent
+  If the prefix requirement is $k = 5$, the position-based classifier
+  gives $\jdev = 6 \ge k$ (no impossibility predicted), while the
+  grammar-aware classifier gives $\jdev = 4 < k$
+  (\cref{thm:prefix-impossibility} applies: greedy validity is exactly
+  zero).
+\end{example}
+
+% ──────────────────────────────────────────────────────────────
+\section{The Phase Grammar DFA}\label{sec:phase-grammar-dfa}
+% ──────────────────────────────────────────────────────────────
+
+We model the narrative phase grammar as a deterministic finite automaton
+$\mathcal{A} = (Q,\, \Sigma,\, \delta,\, q_0,\, F)$ defined as follows.
+
+\begin{definition}[Phase grammar DFA]\label{def:phase-dfa}
+  \leavevmode
+  \begin{itemize}[itemsep=4pt]
+    \item \textbf{States.}\quad
+      $Q = \{S_{\textsc{setup}},\;
+             S_{\textsc{dev}},\;
+             S_{\textsc{tp}},\;
+             S_{\textsc{res}},\;
+             S_{\textsc{reject}}\}$.
+
+    \item \textbf{Alphabet.}\quad
+      $\Sigma = \{\textsc{setup},\;
+                   \textsc{development},\;
+                   \textsc{turning\_point},\;
+                   \textsc{resolution}\}$.
+
+    \item \textbf{Initial state.}\quad $q_0 = S_{\textsc{setup}}$.
+
+    \item \textbf{Accepting states.}\quad $F = \{S_{\textsc{res}}\}$.
+
+    \item \textbf{Transition function~$\delta$.}\quad
+      The transitions are \emph{monotonic}: phase labels must appear in
+      non-decreasing order
+      $\textsc{setup} \prec \textsc{development} \prec
+       \textsc{turning\_point} \prec \textsc{resolution}$.
+      Formally, the non-reject transitions are:
+
+      \medskip
+      \begin{center}
+      \begin{tabular}{lll}
+        \toprule
+        \textbf{Current state} & \textbf{Symbol} & \textbf{Next state} \\
+        \midrule
+        $S_{\textsc{setup}}$  & \textsc{setup}          & $S_{\textsc{setup}}$ \\
+        $S_{\textsc{setup}}$  & \textsc{development}    & $S_{\textsc{dev}}$   \\
+        $S_{\textsc{setup}}$  & \textsc{turning\_point} & $S_{\textsc{tp}}$    \\
+        $S_{\textsc{dev}}$    & \textsc{development}    & $S_{\textsc{dev}}$   \\
+        $S_{\textsc{dev}}$    & \textsc{turning\_point} & $S_{\textsc{tp}}$    \\
+        $S_{\textsc{tp}}$     & \textsc{resolution}     & $S_{\textsc{res}}$   \\
+        $S_{\textsc{res}}$    & \textsc{resolution}     & $S_{\textsc{res}}$   \\
+        \bottomrule
+      \end{tabular}
+      \end{center}
+      \medskip
+
+      \noindent
+      Every $(q, \sigma)$ pair not listed above transitions to
+      $S_{\textsc{reject}}$.  The state~$S_{\textsc{reject}}$ is
+      \emph{absorbing}: $\delta(S_{\textsc{reject}}, \sigma)
+      = S_{\textsc{reject}}$ for every $\sigma \in \Sigma$.
+
+    \item \textbf{Prefix requirement.}\quad
+      The automaton must consume at least $k$ copies of the symbol
+      \textsc{development} before consuming \textsc{turning\_point} for
+      the run to be valid.  Equivalently, one may augment the state space
+      with a counter $c \in \{0, 1, \ldots, k\}$ and allow the transition
+      $S_{\textsc{dev}} \xrightarrow{\textsc{turning\_point}} S_{\textsc{tp}}$
+      only when $c \ge k$.  For readability, we keep the counter implicit
+      and treat the prefix requirement as a side condition on acceptance.
+  \end{itemize}
+\end{definition}
+
+The key structural property of this DFA is that phases advance
+monotonically and can never retreat.  The following lemma isolates the
+consequence that matters most for the impossibility theorem.
+
+\begin{lemma}[DFA Monotonicity]\label{lem:dfa-monotonicity}
+  Any state reached after consuming \textsc{turning\_point} is absorbing
+  with respect to \textsc{development} transitions.  Formally, if
+  \[
+    \delta^{*}(q_0,\; \sigma_1 \cdots \sigma_m)
+    \;\in\;
+    \{S_{\textsc{tp}},\; S_{\textsc{res}}\},
+  \]
+  then for every continuation $\sigma_{m+1} \cdots \sigma_n$ with
+  $\sigma_j = \textsc{development}$ for some $j \in \{m{+}1, \ldots, n\}$,
+  we have
+  \[
+    \delta^{*}(q_0,\; \sigma_1 \cdots \sigma_n)
+    \;=\;
+    S_{\textsc{reject}}.
+  \]
+\end{lemma}
+
+\begin{proof}
+  We argue by inspection of the transition table in
+  \cref{def:phase-dfa}.
+
+  \emph{Case 1: the DFA is in $S_{\textsc{tp}}$.}\;
+  The only symbol that leads to a non-reject state is \textsc{resolution},
+  which transitions to~$S_{\textsc{res}}$.  Consuming \textsc{development}
+  in $S_{\textsc{tp}}$ yields $S_{\textsc{reject}}$.
+
+  \emph{Case 2: the DFA is in $S_{\textsc{res}}$.}\;
+  The only symbol that keeps the DFA in a non-reject state is
+  \textsc{resolution} (self-loop on $S_{\textsc{res}}$).
+  Consuming \textsc{development} in $S_{\textsc{res}}$ yields
+  $S_{\textsc{reject}}$.
+
+  \emph{Case 3: the DFA is in $S_{\textsc{reject}}$.}\;
+  By definition, $S_{\textsc{reject}}$ is absorbing:
+  $\delta(S_{\textsc{reject}}, \sigma) = S_{\textsc{reject}}$ for all
+  $\sigma \in \Sigma$.
+
+  \medskip\noindent
+  In every case, once \textsc{turning\_point} has been consumed, the DFA
+  is in $S_{\textsc{tp}}$, $S_{\textsc{res}}$, or $S_{\textsc{reject}}$.
+  From any of these states, consuming \textsc{development} leads
+  (immediately or eventually) to~$S_{\textsc{reject}}$, from which
+  acceptance is impossible.  Therefore the DFA never returns
+  to~$S_{\textsc{dev}}$ after processing \textsc{turning\_point}.
+\end{proof}
+
+% ──────────────────────────────────────────────────────────────
+\section{The Product Automaton}\label{sec:product-automaton}
+% ──────────────────────────────────────────────────────────────
+
+The impossibility proof couples the greedy policy's event-selection order
+with the grammar DFA.  The vehicle for this coupling is a \emph{product
+automaton}~$\mathcal{P}$.
+
+\begin{definition}[Product automaton]\label{def:product-automaton}
+  Let $G = (V, E, a, t, w)$ be an event graph with $|V| = n$, and let
+  $\mathcal{A} = (Q, \Sigma, \delta, q_0, F)$ be the phase grammar DFA
+  (\cref{def:phase-dfa}).  Linearise the event graph by the greedy
+  policy's selection order: events are processed in decreasing weight
+  order, $w(v_1) \ge w(v_2) \ge \cdots \ge w(v_n)$, with ties broken by
+  a fixed deterministic rule (e.g., earliest timestamp first).
+
+  The \emph{product automaton} is
+  $\mathcal{P} = G \times \mathcal{A}$, with:
+  \begin{itemize}[itemsep=3pt]
+    \item \textbf{State space.}\;
+      Pairs $(i,\, q)$ where $i \in \{0, 1, \ldots, n\}$ indexes the
+      current position in the greedy selection order and
+      $q \in Q$ is the DFA state.
+
+    \item \textbf{Initial state.}\;
+      $(0,\, q_0) = (0,\, S_{\textsc{setup}})$.
+
+    \item \textbf{Transitions.}\;
+      At position~$i$, the greedy policy selects event~$v_{i+1}$ and
+      assigns it the ``best'' phase label~$\sigma_{i+1} \in \Sigma$ that
+      keeps the DFA on a path toward acceptance.  The product automaton
+      transitions from $(i, q)$ to
+      $(i{+}1,\; \delta(q, \sigma_{i+1}))$.
+
+    \item \textbf{Acceptance.}\;
+      The product automaton accepts if and only if it reaches a state
+      $(n, q_f)$ with $q_f \in F = \{S_{\textsc{res}}\}$ and the prefix
+      requirement (at least $k$ \textsc{development} symbols before
+      \textsc{turning\_point}) is satisfied.
+  \end{itemize}
+\end{definition}
+
+The greedy policy imposes one hard constraint on the walk
+through~$\mathcal{P}$:
+
+\begin{quote}
+  \textbf{Turning-point pre-selection.}\;
+  The event $e^{*} = \argmax_{v : a(v)=a^{*}} w(v)$ is pre-selected as
+  the turning point.  When the walk reaches the position~$i^{*}$ at
+  which $e^{*}$ appears in the weight-sorted order, the label must be
+  $\sigma_{i^{*}} = \textsc{turning\_point}$.
+\end{quote}
+
+Between positions~$0$ and~$i^{*} - 1$, the greedy policy assigns each
+event the best available label---typically \textsc{setup} or
+\textsc{development}---that advances the DFA toward the prefix
+requirement.  At position~$i^{*}$, the DFA consumes
+\textsc{turning\_point} and transitions to~$S_{\textsc{tp}}$.  From
+position~$i^{*} + 1$ onward, the only productive label is
+\textsc{resolution}, by \cref{lem:dfa-monotonicity}.
+
+The product automaton makes the proof's state-space argument explicit:
+every run of the greedy policy corresponds to a unique path
+through~$\mathcal{P}$, and the question of whether the greedy policy can
+produce a valid sequence reduces to whether there exists an accepting path
+in~$\mathcal{P}$.
+
+% ──────────────────────────────────────────────────────────────
+\section{The Prefix-Constraint Impossibility Theorem}%
+\label{sec:prefix-impossibility}
+% ──────────────────────────────────────────────────────────────
+
+We are now in a position to state and prove the chapter's main result.
+
+\begin{theorem}[Prefix-Constraint Impossibility]%
+\label{thm:prefix-impossibility}
+  Let $G$ be an event graph, $e^{*}$ the forced turning point, $k$ the
+  prefix requirement, and $\jdev$ the development-eligible count
+  (\cref{def:dev-eligible}).  If
+  \[
+    \jdev \;<\; k,
+  \]
+  then the greedy policy produces zero valid sequences.
+\end{theorem}
+
+\begin{proof}
+  The proof proceeds in five steps.
+
+  \medskip
+  \noindent\textbf{Step 1 (Product automaton).}\;
+  Construct the product automaton $\mathcal{P} = G \times \mathcal{A}$ as
+  in \cref{def:product-automaton}.  Every run of the greedy policy traces
+  a unique path through the state space
+  $\{0, \ldots, n\} \times Q$.  The greedy policy produces a valid
+  sequence if and only if this path ends in an accepting state~$(n, q_f)$
+  with $q_f \in F$ and the prefix requirement satisfied.
+
+  \medskip
+  \noindent\textbf{Step 2 (Turning-point pre-selection).}\;
+  The greedy policy pre-selects
+  $e^{*} = \argmax_{v : a(v)=a^{*}} w(v)$
+  as the turning point.  Let $i^{*}$ be the position of~$e^{*}$ in the
+  weight-sorted selection order.  At step~$i^{*}$, the policy assigns the
+  label $\sigma_{i^{*}} = \textsc{turning\_point}$, and the DFA
+  transitions to~$S_{\textsc{tp}}$:
+  \[
+    \delta(q_{i^{*}-1},\; \textsc{turning\_point})
+    \;=\;
+    S_{\textsc{tp}},
+  \]
+  where $q_{i^{*}-1}$ is the DFA state upon entering step~$i^{*}$
+  (necessarily $S_{\textsc{setup}}$ or $S_{\textsc{dev}}$ if the run has
+  not already reached $S_{\textsc{reject}}$).
+
+  \medskip
+  \noindent\textbf{Step 3 (Post-TP absorption).}\;
+  By the DFA Monotonicity Lemma (\cref{lem:dfa-monotonicity}), once the
+  DFA enters $S_{\textsc{tp}}$, it can never return to~$S_{\textsc{dev}}$.
+  Any subsequent \textsc{development} symbol sends the DFA
+  to~$S_{\textsc{reject}}$, from which acceptance is impossible.
+  Therefore, \emph{all} \textsc{development} symbols must be consumed
+  \emph{before} step~$i^{*}$.
+
+  \medskip
+  \noindent\textbf{Step 4 (Counting development slots).}\;
+  The events available to receive \textsc{development} labels before
+  step~$i^{*}$ are exactly the members of the development-eligible
+  set~$D$ from \cref{def:dev-eligible}.  Each such event can contribute at
+  most one \textsc{development} symbol to the run.  Therefore, the maximum
+  number of \textsc{development} symbols consumed before
+  \textsc{turning\_point} is
+  \[
+    \#\{\textsc{development}\text{ before } \textsc{turning\_point}\}
+    \;\le\;
+    |D|
+    \;=\;
+    \jdev.
+  \]
+
+  \medskip
+  \noindent\textbf{Step 5 (Prefix violation).}\;
+  The grammar requires at least $k$ \textsc{development} symbols before
+  \textsc{turning\_point} for the run to satisfy the prefix requirement.
+  By Step~4, at most $\jdev$ such symbols can appear.  If $\jdev < k$,
+  then
+  \[
+    \#\{\textsc{development}\text{ before } \textsc{turning\_point}\}
+    \;\le\;
+    \jdev
+    \;<\;
+    k.
+  \]
+  The prefix requirement is therefore violated on \emph{every} path
+  through~$\mathcal{P}$.  No path can reach an accepting state with a
+  satisfied prefix requirement.  Equivalently, the product automaton
+  enters an absorbing region---no matter how the remaining events are
+  labelled, acceptance is unreachable.
+
+  \medskip\noindent
+  Since every run of the greedy policy corresponds to a path
+  through~$\mathcal{P}$, and no such path is accepting when $\jdev < k$,
+  the greedy policy produces zero valid sequences.
+\end{proof}
+
+% ──────────────────────────────────────────────────────────────
+\section{Important Remarks}\label{sec:absorbing-remarks}
+% ──────────────────────────────────────────────────────────────
+
+\begin{remark}[Converse is false]\label{rem:converse-false}
+  The condition $\jdev \ge k$ does \emph{not} guarantee that the greedy
+  policy succeeds.  Having enough development-eligible events is
+  \emph{necessary} for validity but far from \emph{sufficient}.  The
+  greedy policy may still fail for independent reasons: it may mis-order
+  events so that the DFA enters $S_{\textsc{reject}}$ through a label
+  conflict (Class~C failure), or it may select a turning point that is
+  semantically incoherent even though the grammar is satisfied (Class~D
+  failure).  Both of these failure modes are analysed in
+  \cref{ch:taxonomy}.
+
+  \Cref{thm:prefix-impossibility} therefore provides a
+  \emph{sufficient condition for failure}, not a necessary one.  The
+  failure boundary $\jdev = k$ is sharp in one direction only: below it,
+  validity is exactly zero; above it, validity is possible but not
+  guaranteed.
+\end{remark}
+
+\begin{remark}[Focal-only counting produces false positives]%
+\label{rem:focal-only}
+  A common error is to count only focal-actor events (those with
+  $a(v) = a^{*}$) as development-eligible, ignoring events from other
+  actors.  This under-counts the development-eligible set: if an event
+  $v$ with $a(v) \neq a^{*}$ can receive the \textsc{development} label,
+  it belongs in~$D$.
+
+  Focal-only counting yields $\jdev^{\text{focal}} \le \jdev$, which may
+  trigger a false positive prediction of impossibility: the focal-only
+  count may satisfy $\jdev^{\text{focal}} < k$ even when $\jdev \ge k$.
+  The correct count uses \emph{all} events eligible for
+  \textsc{development}, regardless of actor.  This point is validated by
+  the test assertions in the repository's test suite, which confirm that
+  multi-actor events contribute to the development-eligible pool.
+\end{remark}
+
+\begin{remark}[Bridge to $\dpre$]\label{rem:bridge-dpre}
+  In the \emph{unit-mass regime}---where each event contributes exactly
+  one unit of development content---the development-eligible count
+  coincides with the pre-pivot development mass:
+  $\jdev = \dpre$.  The absorbing-state condition $\jdev < k$ then
+  becomes $\dpre < k$, which is precisely the \emph{absorbing predicate}
+  $\absorb$ from the context algebra developed in \cref{ch:absorbing-ideal}.
+
+  This bridge connects the combinatorial argument of the present chapter
+  with the algebraic framework: the absorbing ideal of
+  \cref{ch:absorbing-ideal} is the algebraic closure of the impossibility region
+  identified here.  When event masses are non-uniform, $\jdev$ and
+  $\dpre$ may diverge, and the algebraic formulation
+  (via~$\dpre$) provides the more refined characterisation.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\section{Empirical Validation}\label{sec:empirical-absorbing}
+% ──────────────────────────────────────────────────────────────
+
+The theoretical boundary $\jdev = k$ admits clean empirical verification.
+We summarise the main findings; full experimental details appear in the
+repository.
+
+\paragraph{The boundary heatmap.}
+\Cref{fig:kj-heatmap} displays the greedy policy's validity rate as a
+function of the prefix requirement~$k$ (horizontal axis) and the
+development-eligible count~$\jdev$ (vertical axis), aggregated over
+$11{,}400$ event-graph instances.  The $k$--$\jdev$ plane divides into
+three clearly delineated regions:
+
+\begin{enumerate}[label=(\roman*)]
+  \item \textbf{Impossibility zone} ($\jdev < k$, below the diagonal).\;
+    Greedy validity is exactly $0.000$ across all $11{,}400$ instances in
+    this region, confirming \cref{thm:prefix-impossibility} without
+    exception.
+
+  \item \textbf{Stochastic zone}
+    ($k \le \jdev \lesssim 5.31k + 12.23$).\;
+    Validity rises stochastically from~$0$ toward~$1.0$.  In this band,
+    having enough development-eligible events is necessary but not
+    sufficient; other failure modes (Classes~C and~D) depress the success
+    rate.
+
+  \item \textbf{High-validity zone}
+    ($\jdev \gtrsim 5.31k + 12.23$).\;
+    The 95\% success envelope lies approximately along the line
+    $\jdev \approx 5.31k + 12.23$.  Above this envelope, the greedy
+    policy almost always succeeds.
+\end{enumerate}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.75\textwidth]{figures/kj_heatmap.pdf}
+  \caption{%
+    Greedy validity rate in the $k$--$\jdev$ plane
+    ($11{,}400$~instances).  The diagonal $\jdev = k$ (dashed white line)
+    is the impossibility boundary of
+    \cref{thm:prefix-impossibility}: every cell below the diagonal has
+    validity exactly~$0.000$.  The solid white curve marks the 95\%
+    success envelope, approximately $\jdev \approx 5.31k + 12.23$.
+    Three regions emerge: the \emph{impossibility zone} (below
+    diagonal), the \emph{stochastic zone} (between diagonal and
+    envelope), and the \emph{high-validity zone} (above envelope).%
+  }\label{fig:kj-heatmap}
+\end{figure}
+
+\paragraph{Exogenous turning-point control experiment.}
+A natural question is whether the impossibility barrier is an artifact of
+the grammar alone or whether it depends on the greedy policy's specific
+method of turning-point selection.  To test this, we repeat the experiment
+with an \emph{exogenous} turning point: instead of selecting
+$e^{*} = \argmax_{v : a(v)=a^{*}} w(v)$, we assign the turning point
+uniformly at random.
+
+Under exogenous assignment, the diagonal barrier persists
+\emph{structurally}---the proof of \cref{thm:prefix-impossibility} does
+not depend on \emph{how} $e^{*}$ is chosen, only on the relationship
+between $\jdev$ and~$k$ once $e^{*}$ is fixed.  However, the
+\emph{probability} that a randomly generated instance falls below the
+diagonal changes dramatically:
+$P(\jdev < k)$ drops from $13.6\%$ under the greedy (argmax) policy to
+$0.0\%$ under exogenous assignment.
+
+The absorbing state is therefore activated by the \emph{interaction} of
+weight-based turning-point selection with temporal front-loading of high-weight
+events---not by the grammar alone.  When the turning point is the
+highest-weight focal event, it tends to sit early in the weight-sorted
+order, leaving few events before it in the timeline.  The grammar's prefix
+requirement then becomes unsatisfiable.  Exogenous assignment breaks this
+coupling, eliminating the pathway into the impossibility zone.
+
+% ──────────────────────────────────────────────────────────────
+\section{Exercises}\label{sec:exercises-absorbing}
+% ──────────────────────────────────────────────────────────────
+
+\begin{exercise}\label{exer:minimal-graph}
+  Construct a minimal event graph with $n = 8$ events where
+  \cref{thm:prefix-impossibility} predicts failure (i.e., $\jdev < k$
+  for $k = 3$) and verify by exhaustive enumeration that no valid
+  sequence exists under the greedy policy.
+
+  \emph{Hint.}\;  Choose weights so that $e^{*}$ (the maximum-weight
+  focal event) is at position~2 in the timeline, leaving at most two
+  events before it.  Then $\jdev \le 2 < 3 = k$.  To verify, enumerate
+  all possible label assignments to the eight events and confirm that
+  every assignment either violates the phase grammar's monotonicity, fails
+  the prefix requirement, or both.
+\end{exercise}
+
+\begin{exercise}\label{exer:relax-k}
+  Show that relaxing the prefix requirement from $k = 3$ to $k = 1$
+  changes the location of the impossibility boundary but not the structure
+  of the proof.
+  \begin{enumerate}[label=(\alph*)]
+    \item State the new impossibility condition.
+    \item Identify which step of the proof changes and which steps remain
+          identical.
+    \item Give an example of an event graph that is impossible under
+          $k = 3$ but valid under $k = 1$.
+  \end{enumerate}
+
+  \emph{Solution sketch.}\;
+  The new impossibility condition is $\jdev < 1$, i.e., $\jdev = 0$:
+  there are no development-eligible events before the turning point.
+  Steps~1--4 of the proof are identical; only Step~5 changes, replacing
+  the bound $\jdev < 3$ with $\jdev < 1$.  Any event graph with
+  $1 \le \jdev < 3$ is impossible under $k = 3$ but potentially valid
+  under $k = 1$.
+\end{exercise}
+
+\begin{exercise}\label{exer:product-size}
+  Prove that the product automaton~$\mathcal{P}$ from
+  \cref{def:product-automaton} has at most $|V| \times |Q|$ states,
+  giving an $O(n)$ bound on the state-space size (since $|Q| = 5$ is
+  constant).
+
+  \emph{Solution.}\;
+  The state space of~$\mathcal{P}$ is
+  $\{0, 1, \ldots, n\} \times Q$, which has $(n+1) \times |Q|$
+  elements.  Since $|Q| = 5$ is a fixed constant independent of the
+  event graph,
+  \[
+    |\text{States of } \mathcal{P}|
+    \;=\;
+    (n+1) \cdot 5
+    \;=\;
+    5n + 5
+    \;\in\;
+    O(n).
+  \]
+  Each step of the walk through~$\mathcal{P}$ processes one event and
+  performs a constant-time DFA transition, so the entire walk takes
+  $O(n)$ time.  The proof of \cref{thm:prefix-impossibility} thus
+  operates on a linear-size state space, and the counting argument in
+  Steps~4--5 requires no search---only a comparison between $\jdev$ and
+  $k$, both computable in $O(n)$ time by a single pass over the event
+  graph. \qed
+\end{exercise}
+
+\begin{exercise}\label{exer:non-monotonic}
+  Consider a \emph{modified} phase grammar in which \textsc{development}
+  events may appear after \textsc{turning\_point}.  Specifically, add the
+  transitions
+  $\delta(S_{\textsc{tp}}, \textsc{development}) = S_{\textsc{tp}}$
+  and
+  $\delta(S_{\textsc{res}}, \textsc{development}) = S_{\textsc{res}}$
+  to the DFA of \cref{def:phase-dfa}.
+  \begin{enumerate}[label=(\alph*)]
+    \item Does \cref{thm:prefix-impossibility} still hold under this
+          modified grammar?
+    \item Identify the exact step in the proof that breaks and explain
+          why.
+    \item Give a concrete event graph where $\jdev < k$ under the
+          original grammar's definition of~$D$, but the modified grammar
+          admits a valid sequence.
+  \end{enumerate}
+
+  \emph{Solution sketch.}\;
+  \begin{enumerate}[label=(\alph*)]
+    \item No. \Cref{thm:prefix-impossibility} does \emph{not} hold under
+          the modified grammar.
+
+    \item Step~3 of the proof relies on the DFA Monotonicity Lemma
+          (\cref{lem:dfa-monotonicity}), which states that no
+          \textsc{development} symbol can be consumed after
+          \textsc{turning\_point}.  The modified grammar explicitly
+          violates this property: \textsc{development} is accepted in
+          both $S_{\textsc{tp}}$ and $S_{\textsc{res}}$.  With
+          monotonicity broken, \textsc{development} symbols can be
+          consumed \emph{after} the turning point, so the count of
+          development slots is no longer bounded by the pre-TP
+          count~$\jdev$.  Step~4's upper bound becomes invalid, and
+          Step~5's conclusion no longer follows.
+
+    \item Consider an event graph with $n = 6$, $k = 3$,
+          $e^{*}$ at position~2 in the timeline (so $\jdev = 1 < 3$).
+          Under the original grammar, the greedy policy cannot produce a
+          valid sequence.  Under the modified grammar, one can place one
+          \textsc{development} event before $e^{*}$ and two
+          \textsc{development} events after it, satisfying the prefix
+          requirement of $k = 3$ total \textsc{development} symbols
+          (now allowed both before and after the turning point).
+          \qed
+  \end{enumerate}
+\end{exercise}

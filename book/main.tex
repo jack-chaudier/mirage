@@ -1,0 +1,123 @@
+\documentclass[11pt,openany]{book}
+
+% ── Typography ──────────────────────────────────────────────
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}          % Palatino for text and math
+\usepackage{microtype}
+\usepackage[margin=1in]{geometry}
+
+% ── Mathematics ─────────────────────────────────────────────
+\usepackage{amsmath,amsthm,amssymb,mathtools}
+
+% ── Figures & Tables ────────────────────────────────────────
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{float}
+
+% ── Lists ───────────────────────────────────────────────────
+\usepackage{enumitem}
+
+% ── TikZ (for diagrams) ────────────────────────────────────
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,decorations.pathreplacing}
+
+% ── Cross-referencing ───────────────────────────────────────
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!60!black,
+  citecolor=green!40!black,
+  urlcolor=blue!60!black,
+}
+\usepackage[capitalise,noabbrev]{cleveref}
+
+% ── Bibliography ────────────────────────────────────────────
+\usepackage[numbers,sort&compress]{natbib}
+
+% ── Algorithm ───────────────────────────────────────────────
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+% ══════════════════════════════════════════════════════════════
+%  Theorem environments
+% ══════════════════════════════════════════════════════════════
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}{Exercise}[chapter]
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% ══════════════════════════════════════════════════════════════
+%  Custom commands
+% ══════════════════════════════════════════════════════════════
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+% \oplus is a standard LaTeX command; do not redefine it.
+\newcommand{\opendo}{\otimes_{\mathrm{endo}}}
+\newcommand{\opcommit}{\otimes_{\mathrm{commit}}}
+\newcommand{\absorb}{\bot}
+\newcommand{\wstar}{{w^{\star}}}
+\newcommand{\dtotal}{{d_{\mathrm{total}}}}
+\newcommand{\dpre}{{d_{\mathrm{pre}}}}
+\newcommand{\jdev}{{j_{\mathrm{dev}}}}
+\newcommand{\peff}{{p_{\mathrm{eff}}}}
+\newcommand{\mingap}{\mathrm{min\_gap}}
+\newcommand{\tp}{\tau}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+% ── Figure path ─────────────────────────────────────────────
+\graphicspath{{figures/}{../endogenous_context_theory/results/figures/}}
+
+% ══════════════════════════════════════════════════════════════
+%  Document
+% ══════════════════════════════════════════════════════════════
+\title{%
+  \textbf{Context Algebra and the Validity Mirage}\\[6pt]
+  \large Endogenous Semantics, Structural Failures,\\
+  and What Validity Metrics Miss
+}
+\author{Jack Gaffney}
+\date{2026}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+\include{preface}
+
+\mainmatter
+\include{chapters/01_endogenous_pivot_problem}
+\include{chapters/02_formal_problem}
+\include{chapters/03_absorbing_states}
+\include{chapters/04_failure_taxonomy_and_hierarchy}
+\include{chapters/05_context_algebra}
+\include{chapters/06_tropical_lift}
+\include{chapters/07_absorbing_ideal_and_contracts}
+\include{chapters/08_streaming_traps}
+\include{chapters/09_validity_mirage}
+\include{chapters/10_narrative_origin_story}
+\include{chapters/11_manifesto}
+\include{chapters/12_discussion_future_work}
+
+\appendix
+\include{chapters/appendices}
+
+\backmatter
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}

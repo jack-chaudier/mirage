@@ -1,0 +1,179 @@
+% ══════════════════════════════════════════════════════════════
+%  Preface
+% ══════════════════════════════════════════════════════════════
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+\markboth{Preface}{Preface}
+
+% ──────────────────────────────────────────────────────────────
+\section*{Why This Book Exists}
+% ──────────────────────────────────────────────────────────────
+
+\paragraph{The problem.}
+Many sequence-generation systems must select a distinguished element---a
+pivot, turning point, or structural anchor---by taking an argmax over the
+very solution they are constructing.  This creates an \emph{endogenous
+coupling}: the output depends on which pivot is chosen, yet the choice of
+pivot depends on the output.  Standard validity metrics ask only ``does the
+result satisfy the stated constraints?''\ and therefore miss a deeper
+question: does the result \emph{mean what it was supposed to mean}?
+Compression, truncation, and premature commitment can each produce outputs
+that are technically valid---every constraint is satisfied, every grammar
+rule obeyed---while the semantic content is quietly wrong.  The pivot has
+shifted, the narrative has changed, and no constraint violation has been
+raised.  We call this silent divergence the \emph{validity mirage}.
+
+\paragraph{What we prove.}
+This book develops a formal algebra of context that makes the mirage
+visible and, in many cases, preventable.  The main results are:
+\begin{enumerate}[label=(\alph*),itemsep=2pt]
+  \item Under committed semantics, prefix-deficient states are
+        \emph{absorbing}---no suffix can repair them
+        (\cref{ch:absorbing-states,ch:absorbing-ideal}).
+  \item The endogenous context monoid $(\mathcal{C},\opendo)$ is strictly
+        associative, which enables $O(\log n)$ parallel reduction of
+        context chains (\cref{ch:context-algebra}).
+  \item Compression is the unique closure-breaking operation in the
+        algebra: it is the only elementary edit that can force a valid
+        context out of the feasibility set (\cref{ch:absorbing-ideal}).
+  \item Under a commit-now policy, streaming oscillation traps affect
+        54.9\% of organic sequences (\cref{ch:streaming}).
+  \item Raw validity can remain at $1.0$ while pivot-preservation accuracy
+        drops to $0.35$---the quantitative signature of the mirage
+        (\cref{ch:mirage}).
+\end{enumerate}
+
+\paragraph{What practitioners should do differently.}
+The algebra leads to concrete prescriptions.  First, measure
+\emph{pivot preservation} and \emph{fixed-pivot feasibility} alongside raw
+validity; without these metrics the mirage is invisible.  Second, use
+\emph{contract-guarded compression}: wrap every lossy reduction in a
+pre/post contract that checks whether the pivot has survived.  Third,
+prefer \emph{deferred commitment} with a commitment fraction around
+$f \approx 0.25$ over a commit-now policy when processing streams; the
+streaming-trap analysis in \cref{ch:streaming} shows why early commitment
+is so destructive.  Fourth, treat grammar constraints as
+\emph{regularizers}---they shape the search space---rather than as
+validators applied after the fact.  A constraint that fires only at the
+end cannot prevent the absorbing states that form in the middle.
+
+% ──────────────────────────────────────────────────────────────
+\newpage
+\section*{Map of the Ideas}
+% ──────────────────────────────────────────────────────────────
+
+The diagram below traces the logical dependencies among the book's central
+concepts.  Each node names an idea and the chapter in which it is
+developed; each arrow indicates that the source idea is a prerequisite for
+the target.
+
+\bigskip
+\begin{center}
+\begin{tikzpicture}[
+    node distance=1.6cm and 2.4cm,
+    every node/.style={
+      draw,
+      rounded corners=4pt,
+      text width=3.6cm,
+      minimum height=1.1cm,
+      align=center,
+      font=\small
+    },
+    arr/.style={
+      -{Stealth[length=6pt]},
+      thick,
+      blue!60!black
+    }
+  ]
+
+  % --- Row 1 ---
+  \node (pivot)
+    {Endogenous Pivots\\[2pt]\scriptsize Ch.\,1--2};
+
+  % --- Row 2 ---
+  \node (absorb) [below left=of pivot]
+    {Absorbing States\\[2pt]\scriptsize Ch.\,3};
+  \node (monoid) [below right=of pivot]
+    {Context Monoid\\$(\mathcal{C},\opendo)$\\[2pt]\scriptsize Ch.\,5};
+
+  % --- Row 3 ---
+  \node (stream) [below=of absorb]
+    {Streaming\\Commitment Traps\\[2pt]\scriptsize Ch.\,8};
+  \node (ideal)  [below=of monoid]
+    {Absorbing Ideal \&\\Compression Breaks\\Closure\\[2pt]\scriptsize Ch.\,7};
+
+  % --- Row 4 ---
+  \node (mirage) [below right=of stream, xshift=0.2cm]
+    {Validity Mirage\\[2pt]\scriptsize Ch.\,9};
+
+  % --- Arrows ---
+  \draw[arr] (pivot)   -- (absorb);
+  \draw[arr] (pivot)   -- (monoid);
+  \draw[arr] (absorb)  -- (stream);
+  \draw[arr] (absorb)  -- (ideal);
+  \draw[arr] (monoid)  -- (ideal);
+  \draw[arr] (stream)  -- (mirage);
+  \draw[arr] (ideal)   -- (mirage);
+
+\end{tikzpicture}
+\end{center}
+\bigskip
+
+\noindent
+Read top-to-bottom: endogenous pivots create the possibility of absorbing
+states and motivate the context monoid.  Absorbing states feed into both
+the streaming commitment analysis and the algebraic ideal theory.  The
+context monoid likewise feeds the ideal theory.  Both the streaming traps
+and the closure-breaking role of compression converge on the validity
+mirage---the empirical demonstration that standard metrics hide real
+failures.
+
+% ──────────────────────────────────────────────────────────────
+\section*{Reading Guide}
+% ──────────────────────────────────────────────────────────────
+
+The chapters divide naturally into three tracks.  Readers may follow a
+single track or weave among them; the dependency diagram above shows which
+material is prerequisite for which.
+
+\paragraph{Mathematical core.}
+\cref{ch:formal-problem} lays out the formal problem---solution spaces, pivot
+functions, committed semantics.  \cref{ch:absorbing-states} proves the absorbing-state
+theorem: once a prefix is deficient, no continuation can rescue it.
+\cref{ch:context-algebra} introduces the context monoid $(\mathcal{C},\opendo)$,
+establishes strict associativity, and derives the logarithmic parallel
+reduction.  \cref{ch:tropical-lift} lifts the algebra into the tropical
+semiring, connecting our discrete structures to optimization over
+real-valued costs.  \cref{ch:absorbing-ideal} completes the algebraic picture by
+characterizing the absorbing ideal and proving that compression is the
+unique operation that breaks closure.
+
+\paragraph{Empirical and experimental.}
+\cref{ch:taxonomy} catalogues the failure modes that the theory predicts
+and organizes them into a hierarchy, grounded in experiments on structured
+generation tasks.  \cref{ch:streaming} measures oscillation traps in
+streaming settings and quantifies the damage caused by premature
+commitment.  \cref{ch:mirage} brings the threads together with the
+headline experiment: raw validity held at $1.0$ while pivot preservation
+collapsed, confirming the mirage across multiple domains.
+
+\paragraph{Applied and motivational.}
+\cref{ch:motivation} opens the book with concrete examples of silent
+semantic failure---cases where a system ``passed all tests'' yet produced
+the wrong answer.  \cref{ch:narrative} tells the narrative origin story of
+the research programme, for readers who prefer to see where a theory came
+from before studying its proofs.  \cref{ch:manifesto} distills the
+practical upshot into a set of design principles.
+\cref{ch:discussion} surveys open problems and directions for future work.
+
+\bigskip
+\noindent
+We hope this book convinces you that validity is necessary but not
+sufficient, and that the algebra developed here provides both the
+language to articulate what is missing and the tools to fix it.
+
+\vspace{1.5cm}
+\begin{flushright}
+  \textit{Jack Gaffney}\\
+  \textit{February 2026}
+\end{flushright}
