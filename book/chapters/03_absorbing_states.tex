@@ -149,7 +149,6 @@ $\mathcal{A} = (Q,\, \Sigma,\, \delta,\, q_0,\, F)$ defined as follows.
         \midrule
         $S_{\textsc{setup}}$  & \textsc{setup}          & $S_{\textsc{setup}}$ \\
         $S_{\textsc{setup}}$  & \textsc{development}    & $S_{\textsc{dev}}$   \\
-        $S_{\textsc{setup}}$  & \textsc{turning\_point} & $S_{\textsc{tp}}$    \\
         $S_{\textsc{dev}}$    & \textsc{development}    & $S_{\textsc{dev}}$   \\
         $S_{\textsc{dev}}$    & \textsc{turning\_point} & $S_{\textsc{tp}}$    \\
         $S_{\textsc{tp}}$     & \textsc{resolution}     & $S_{\textsc{res}}$   \\
@@ -175,6 +174,17 @@ $\mathcal{A} = (Q,\, \Sigma,\, \delta,\, q_0,\, F)$ defined as follows.
       and treat the prefix requirement as a side condition on acceptance.
   \end{itemize}
 \end{definition}
+
+\begin{remark}[Consistency with \cref{def:phase-grammar}]\label{rem:dfa-ch2-consistency}
+This table is identical to the one in \cref{def:phase-grammar} of
+\cref{ch:formal-problem}.  In particular, the transition
+$S_{\textsc{setup}} \xrightarrow{\textsc{turning\_point}} S_{\textsc{tp}}$ is
+\emph{not} listed: a sequence that reaches the turning point without any
+preceding development symbol immediately violates the prefix requirement~$k$
+and is rejected via the counter mechanism.  The k-counter enforces the
+minimum-development condition; the unlisted transition is the structural
+enforcement.
+\end{remark}
 
 The key structural property of this DFA is that phases advance
 monotonically and can never retreat.  The following lemma isolates the

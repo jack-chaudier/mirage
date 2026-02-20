@@ -218,9 +218,11 @@ in \cref{tab:retention-sweep}.
 \caption{The validity mirage across retention levels ($n = 200$,
          $k = 3$, $M = 10$).  Raw validity stays at or near $1.0$
          across all retention levels, while pivot preservation collapses
-         from near $1.0$ to $0.354$.  The mirage gap---the difference
-         between raw validity and pivot preservation---widens to
-         ${\approx}\,0.64$ at 10\% retention.}
+         from $0.790$ at 50\% retention to $0.354$ at 10\% retention.
+         The mirage gap---the difference between raw validity and pivot
+         preservation---widens to ${\approx}\,0.64$ at 10\% retention.
+         Retention levels 0.90 and 0.70 were not swept in the original
+         paper; see the footnote on those rows.}
 \label{tab:retention-sweep}
 \begin{tabular}{@{}ccccc@{}}
 \toprule
@@ -278,7 +280,7 @@ has become less harmful, but because the most severely affected
 instances have been pushed into infeasibility entirely, leaving a
 survivorship-biased sample.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.85\textwidth]{%
   figures/test_11_validity_mirage.png}
@@ -385,7 +387,7 @@ The three solves correspond to three rows in the mechanism diagram
 (\cref{fig:witness-mechanism}).  Each row represents the same underlying
 event sequence under a different solver configuration.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}[
     event/.style={circle, draw, minimum size=6mm, inner sep=0pt,
@@ -433,9 +435,9 @@ event sequence under a different solver configuration.
     3/nf/nonfocal, 4/f/focal, 5/nf/nonfocal, 6/nf/nonfocal}{
     \node[\sty] (r3e\x) at (\x*1.1, -3.6) {\s};
   }
-  \node[subpivot] at (3*1.1, -3.6) {$e_{8}$};
+  \node[subpivot] at (6*1.1, -3.6) {$e_{8}$};
   \draw[brace] (0, -3.05) -- node[above=3pt, label]
-    {$\dpre \ge k$} (2.2*1.1, -3.05);
+    {$\dpre \ge k$} (5*1.1, -3.05);
   \node[anchor=west, font=\footnotesize, orange!70!black]
     at (7*1.1 + 0.2, -3.6) {\textbf{VALID (mirage)}};
 \end{tikzpicture}

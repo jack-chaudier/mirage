@@ -21,8 +21,8 @@ from matplotlib.colors import TwoSlopeNorm
 
 plt.style.use("seaborn-v0_8-whitegrid")
 plt.rcParams.update({
-    "pdf.fonttype": 42,
-    "ps.fonttype": 42,
+    "pdf.fonttype": 3,
+    "ps.fonttype": 3,
     "font.size": 10,
     "axes.titlesize": 11,
     "axes.labelsize": 10,

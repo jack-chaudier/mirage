@@ -91,9 +91,9 @@ operation that respects commitment.
 \label{def:committed-composition}
 Given extended context elements
 \[
-  \bar C_A = (\wstar_A,\; d_A,\; \dpre{,A},\; \kappa_A),
+  \bar C_A = (\wstar_A,\; d_A,\; \dpre[{,A}],\; \kappa_A),
   \qquad
-  \bar C_B = (\wstar_B,\; d_B,\; \dpre{,B},\; \kappa_B),
+  \bar C_B = (\wstar_B,\; d_B,\; \dpre[{,B}],\; \kappa_B),
 \]
 their \emph{committed composition}
 $\bar C_A \opcommit \bar C_B = (\wstar,\;\dtotal,\;\dpre,\;\kappa)$ is
@@ -104,7 +104,7 @@ defined by three cases.
 \[
   \wstar = \wstar_A, \qquad
   \dtotal = d_A + d_B, \qquad
-  \dpre = \dpre{,A}, \qquad
+  \dpre = \dpre[{,A}], \qquad
   \kappa = 1.
 \]
 The committed pivot in $A$ is preserved unconditionally.  Block~$B$
@@ -117,7 +117,7 @@ pivot, regardless of $\wstar_B$.
 \[
   \wstar = \wstar_A, \qquad
   \dtotal = d_A + d_B, \qquad
-  \dpre = \dpre{,A}, \qquad
+  \dpre = \dpre[{,A}], \qquad
   \kappa = \kappa_A = 0.
 \]
 This coincides with the endogenous composition $\opendo$: the
@@ -129,11 +129,11 @@ higher-weight pivot stays in $A$.
 \[
   \wstar = \wstar_B, \qquad
   \dtotal = d_A + d_B, \qquad
-  \dpre = d_A + \dpre{,B}, \qquad
+  \dpre = d_A + \dpre[{,B}], \qquad
   \kappa = \kappa_B.
 \]
 The pivot shifts to $B$.  All of $A$'s events become pre-pivot
-development material and are added to $\dpre{,B}$.  The commitment
+development material and are added to $\dpre[{,B}]$.  The commitment
 status of the result inherits from $B$.
 \end{definition}
 
@@ -232,7 +232,7 @@ it.
 \label{prop:absorbing-left-ideal}
 Let $k \in \N$ be the grammar prefix requirement.  If\/ $\bar C_A \in
 \bar{\mathcal{C}}$ satisfies $\kappa_A = 1$ and $\bar C_A \in \absorb$
-(i.e., $\dpre{,A} < k$), then for every $\bar C_D \in
+(i.e., $\dpre[{,A}] < k$), then for every $\bar C_D \in
 \bar{\mathcal{C}}$,
 \[
   \bar C_A \opcommit \bar C_D \;\in\; \absorb.
@@ -245,19 +245,19 @@ $(\bar{\mathcal{C}},\opcommit)$.
 \begin{proof}
 Since $\kappa_A = 1$, Case~1 of \cref{def:committed-composition}
 applies unconditionally, regardless of the values $\wstar_D$, $d_D$,
-$\dpre{,D}$, and $\kappa_D$ carried by the suffix.  The committed
+$\dpre[{,D}]$, and $\kappa_D$ carried by the suffix.  The committed
 composition rule yields:
 \[
   \bar C_A \opcommit \bar C_D
     \;=\;
-    \bigl(\wstar_A,\;\; d_A + d_D,\;\; \dpre{,A},\;\; 1\bigr).
+    \bigl(\wstar_A,\;\; d_A + d_D,\;\; \dpre[{,A}],\;\; 1\bigr).
 \]
 We verify each component of the result against the absorbing predicate
 and the left ideal requirement.
 
 \medskip
 \noindent\emph{Pre-pivot count is preserved.}\quad
-The pre-pivot development count of the result is $\dpre{,A}$.  The
+The pre-pivot development count of the result is $\dpre[{,A}]$.  The
 suffix $\bar C_D$ does not contribute to $\dpre$: because the pivot is
 locked in $A$, no event in $D$ can become the new pivot, and therefore
 no event in $D$ can change the set of events that precede the pivot.
@@ -265,8 +265,8 @@ The pre-pivot count is determined entirely by the committed left block.
 
 \medskip
 \noindent\emph{The absorbing predicate is satisfied.}\quad
-By hypothesis, $\dpre{,A} < k$.  Since the pre-pivot count of the
-result equals $\dpre{,A}$, the result also has $\dpre < k$.  Therefore
+By hypothesis, $\dpre[{,A}] < k$.  Since the pre-pivot count of the
+result equals $\dpre[{,A}]$, the result also has $\dpre < k$.  Therefore
 $\bar C_A \opcommit \bar C_D \in \absorb$.
 
 \medskip
@@ -310,17 +310,17 @@ for the validity mirage analysis of \cref{ch:mirage}.
 
 \begin{remark}[Escape from absorption without commitment]
 \label{rem:escape-endo}
-Suppose $\bar C_A$ has $\dpre{,A} < k$ (so $\bar C_A \in \absorb$) but
+Suppose $\bar C_A$ has $\dpre[{,A}] < k$ (so $\bar C_A \in \absorb$) but
 $\kappa_A = 0$ (uncommitted).  Under $\opendo$, there is no Case~1: the
 pivot can shift if a higher-weight event appears on the right.  If the
 suffix $\bar C_D$ has $\wstar_D > \wstar_A$ and
-$\dpre{,D} \ge k - d_A$, then Case~3 of the composition applies:
+$\dpre[{,D}] \ge k - d_A$, then Case~3 of the composition applies:
 \[
   \bar C_A \opendo \bar C_D
-    = (\wstar_D,\;\; d_A + d_D,\;\; d_A + \dpre{,D},\;\; \kappa_D).
+    = (\wstar_D,\;\; d_A + d_D,\;\; d_A + \dpre[{,D}],\;\; \kappa_D).
 \]
-The new pre-pivot count is $d_A + \dpre{,D}$.  If
-$d_A + \dpre{,D} \ge k$, then $\bar C_A \opendo \bar C_D \notin
+The new pre-pivot count is $d_A + \dpre[{,D}]$.  If
+$d_A + \dpre[{,D}] \ge k$, then $\bar C_A \opendo \bar C_D \notin
 \absorb$: the composite has escaped absorption.
 \end{remark}
 
@@ -330,7 +330,7 @@ Let $k = 3$ and consider
 \[
   \bar C_A = (3,\, 2,\, 0,\, 0).
 \]
-Since $\dpre{,A} = 0 < 3 = k$, we have $\bar C_A \in \absorb$.  Now
+Since $\dpre[{,A}] = 0 < 3 = k$, we have $\bar C_A \in \absorb$.  Now
 let
 \[
   \bar C_D = (10,\, 5,\, 4,\, 0).
@@ -562,7 +562,7 @@ These results validate the monoid structure computationally.
 
 To test \cref{prop:absorbing-left-ideal} empirically, we generated 96
 test cases, each consisting of a committed absorbing element $\bar C_A$
-(with $\kappa_A = 1$ and $\dpre{,A} < k$) composed on the right with a
+(with $\kappa_A = 1$ and $\dpre[{,A}] < k$) composed on the right with a
 randomly generated suffix $\bar C_D$.  In every case, we checked whether
 the result $\bar C_A \opcommit \bar C_D$ satisfied $\dpre < k$.
 
@@ -623,7 +623,7 @@ tame the one operation that breaks closure.
 \subsection{Absorption Escape Rates}
 \label{subsec:escape-rates}
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.85\textwidth]{%
   figures/test_04_absorption_escape_rates.png}
@@ -659,7 +659,7 @@ with $\kappa_A = 1$, yet $\bar C_D \opcommit \bar C_A \notin \absorb$.
 
 \emph{Hint:}  Choose $\bar C_D$ with $\kappa_D = 0$ and a pivot of
 sufficiently high weight so that if $\bar C_D$ is on the left and
-uncommitted, the pivot stays in $D$.  If $\dpre{,D} \ge k$, the
+uncommitted, the pivot stays in $D$.  If $\dpre[{,D}] \ge k$, the
 composite inherits the non-absorbing pre-pivot count from $D$.
 \end{exercise}
 

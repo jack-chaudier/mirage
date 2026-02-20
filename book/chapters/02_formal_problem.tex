@@ -665,6 +665,17 @@ point, leaving too few development events before the turning point to
 satisfy the prefix requirement~$k$.
 \end{remark}
 
+\begin{definition}[Bounded-prefix phase grammar]\label{def:bounded-phase-grammar}
+The \textbf{bounded-prefix phase grammar} is the phase grammar of
+\cref{def:phase-grammar} augmented with an upper bound $k_{\max} \ge k_{\min}$
+on the \textsc{Development} phase: a run is accepted only if the number of
+\textsc{Development} symbols consumed before \textsc{Turning\_Point} lies
+in the closed interval $[k_{\min}, k_{\max}]$.  The lower bound $k_{\min}$
+is the standard prefix requirement~$k$ of \cref{def:phase-grammar}; the
+upper bound $k_{\max}$ prevents excessively long setup portions of the
+narrative arc.
+\end{definition}
+
 %% ═══════════════════════════════════════════════════════════════════
 \section{Non-Matroid Structure}\label{sec:non-matroid}
 %% ═══════════════════════════════════════════════════════════════════
@@ -785,12 +796,9 @@ $S'' \notin \mathcal{F}$.  The hereditary axiom is violated.
 \noindent\textbf{Part~2: Violation of the exchange axiom.}
 
 \smallskip
-We use a grammar with both a minimum and maximum prefix requirement:
-at least $k_{\min} = 3$ and at most $k_{\max} = 4$ development events
-must appear before the turning point.  This bounded-prefix grammar is a
-natural specialisation of the phase grammar (it adds an upper bound on
-the development phase) and is used in practice to prevent excessively
-long setup portions of a narrative arc.
+We use the bounded-prefix phase grammar (\cref{def:bounded-phase-grammar})
+with $k_{\min} = 3$ and $k_{\max} = 4$: at least~3 and at most~4
+\textsc{Development} symbols must appear before the turning point.
 
 Define the following events:
 \begin{center}

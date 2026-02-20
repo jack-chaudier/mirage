@@ -105,8 +105,8 @@ sequence.
 
 \begin{definition}[Endogenous composition $\opendo$]
 \label{def:endogenous-composition}
-Let $C_A = (\wstar_A,\; \dtotal_A,\; \dpre_A)$ and
-$C_B = (\wstar_B,\; \dtotal_B,\; \dpre_B)$ be context elements.
+Let $C_A = (\wstar_A,\; \dtotal_A,\; \dpre[{,A}])$ and
+$C_B = (\wstar_B,\; \dtotal_B,\; \dpre[{,B}])$ be context elements.
 Their \textbf{endogenous composition} is
 \[
   C_A \opendo C_B
@@ -121,8 +121,8 @@ where
   \label{eq:comp-dtotal}\\[4pt]
   \dpre    &=
   \begin{cases}
-    \dpre_A                   & \text{if } \wstar_A \ge \wstar_B, \\[3pt]
-    \dtotal_A + \dpre_B       & \text{if } \wstar_B > \wstar_A.
+    \dpre[{,A}]                   & \text{if } \wstar_A \ge \wstar_B, \\[3pt]
+    \dtotal_A + \dpre[{,B}]       & \text{if } \wstar_B > \wstar_A.
   \end{cases}
   \label{eq:comp-dpre}
 \end{align}
@@ -143,7 +143,7 @@ structural insight.  There are two regimes:
     $A$.  The non-focal events before the global pivot are exactly those
     that were before $A$'s local pivot.  Nothing in block $B$ can
     contribute to the pre-pivot count because the entire right block
-    sits \emph{after} the pivot.  Hence $\dpre = \dpre_A$.
+    sits \emph{after} the pivot.  Hence $\dpre = \dpre[{,A}]$.
 
   \item \textbf{Pivot shifts to the right block}
     ($\wstar_B > \wstar_A$).\;
@@ -151,9 +151,9 @@ structural insight.  There are two regimes:
     $A$---focal or non-focal---has a timestamp that precedes the global
     pivot.  In particular, \emph{all} $\dtotal_A$ non-focal events in
     block $A$ are now in the pre-pivot region.  Within block $B$ itself,
-    the events before $B$'s local pivot are counted by $\dpre_B$.
+    the events before $B$'s local pivot are counted by $\dpre[{,B}]$.
     Therefore the total pre-pivot development count is
-    $\dtotal_A + \dpre_B$.
+    $\dtotal_A + \dpre[{,B}]$.
 \end{enumerate}
 This asymmetry---the left block's \emph{entire} development capacity
 gets promoted upon a rightward pivot shift, but the right block
@@ -168,7 +168,7 @@ Let $A = (3, 5, 2)$ and $B = (7, 4, 1)$.  Since $\wstar_B = 7 >
 \begin{align*}
   \wstar   &= \max(3, 7) = 7, \\
   \dtotal  &= 5 + 4 = 9, \\
-  \dpre    &= \dtotal_A + \dpre_B = 5 + 1 = 6.
+  \dpre    &= \dtotal_A + \dpre[{,B}] = 5 + 1 = 6.
 \end{align*}
 Therefore $A \opendo B = (7, 9, 6)$.
 
@@ -185,7 +185,7 @@ Now let $A = (7, 4, 1)$ and $B = (3, 5, 2)$.  Since $\wstar_A = 7 \ge
 \begin{align*}
   \wstar   &= \max(7, 3) = 7, \\
   \dtotal  &= 4 + 5 = 9, \\
-  \dpre    &= \dpre_A = 1.
+  \dpre    &= \dpre[{,A}] = 1.
 \end{align*}
 Therefore $A \opendo B = (7, 9, 1)$.
 
@@ -226,7 +226,7 @@ associativity of addition.  It remains to verify the $\dpre$ component.
 We proceed by exhaustive case analysis on which block contains the
 global pivot.
 
-\medskip
+\bigskip
 \noindent\textbf{Case~1: Global pivot in $A$}
 ($\wstar_A \ge \wstar_B$ and $\wstar_A \ge \wstar_C$).
 
@@ -254,7 +254,7 @@ Let $BC = B \opendo C$.  Two subcases arise:
 In both subcases the $\dpre$ component is $p_A$, matching the
 left-associated result.
 
-\medskip
+\bigskip
 \noindent\textbf{Case~2: Global pivot in $B$}
 ($\wstar_B > \wstar_A$ and $\wstar_B \ge \wstar_C$).
 
@@ -272,17 +272,21 @@ $BC = (\wstar_B,\; d_B + d_C,\; p_B)$.
 Then $A \opendo BC$: since $\wstar_B > \wstar_A$, the result is
 $(\wstar_B,\; d_A + d_B + d_C,\; d_A + p_B)$. \checkmark
 
-\smallskip
-This is the \emph{subtle case}.  The quantity $d_A$ appears in $\dpre$
-on both sides because it gets ``promoted'' into the pre-pivot region
-exactly once---when the global pivot moves from the left sub-expression
-into block $B$.  In the left-associated computation, this promotion
-happens during the $A \opendo B$ step.  In the right-associated
-computation, it happens during the $A \opendo BC$ step.  Either way,
-$d_A$ is promoted exactly once and combined with $p_B$, yielding the
-same final $\dpre = d_A + p_B$.
-
 \medskip
+\noindent\textbf{Key insight (why Case~2 is subtle).}\;
+The quantity $d_A$ appears in $\dpre$ on both sides because it gets
+``promoted'' into the pre-pivot region exactly once---when the global
+pivot moves from the left sub-expression into block $B$.  In the
+left-associated computation, this promotion happens during the
+$A \opendo B$ step.  In the right-associated computation, it happens
+during the $A \opendo BC$ step.  Either way, $d_A$ is promoted exactly
+once and combined with $p_B$, yielding the same final
+$\dpre = d_A + p_B$.  The single-promotion invariant is what makes
+associativity non-obvious here, and it is the reason the operator is
+\emph{not} commutative (see \cref{sec:non-commutativity}): the
+direction of the pivot shift determines whether promotion occurs.
+
+\bigskip
 \noindent\textbf{Case~3: Global pivot in $C$}
 ($\wstar_C > \wstar_A$ and $\wstar_C > \wstar_B$).
 
@@ -387,12 +391,12 @@ and $C_B = C$:
 \end{align*}
 For $\dpre'$, we consider two subcases.  If $\wstar = -\infty$, then
 $\wstar_A = \wstar_B = -\infty$, so $\wstar_A \ge \wstar_B$ and
-$\dpre' = \dpre_A = 0 = p$ (since $p = 0$ when $\wstar = -\infty$
+$\dpre' = \dpre[{,A}] = 0 = p$ (since $p = 0$ when $\wstar = -\infty$
 by \cref{def:context-element}).  If $\wstar > -\infty$, then
 $\wstar_B = \wstar > -\infty = \wstar_A$, so the second case of
 \cref{eq:comp-dpre} applies:
 \[
-  \dpre' = \dtotal_A + \dpre_B = 0 + p = p.
+  \dpre' = \dtotal_A + \dpre[{,B}] = 0 + p = p.
 \]
 In either subcase, $\dpre' = p$.  Therefore $e \opendo C = (\wstar, d, p) = C$. \checkmark
 \end{proof}
@@ -429,7 +433,7 @@ right of $A$, \emph{all} of $A$'s development capacity ($\dtotal_A = 5$)
 gets promoted into the pre-pivot region, yielding $\dpre = 5 + 1 = 6$.
 But when $B$ is to the \emph{left} of $A$ (i.e., we compute
 $B \opendo A$), the pivot is already in the left block, so only $B$'s
-own pre-pivot count matters: $\dpre = \dpre_B = 1$.
+own pre-pivot count matters: $\dpre = \dpre[{,B}] = 1$.
 
 In other words, temporal ordering matters.  The left block's entire
 development capacity is promoted when the pivot shifts rightward, but no
