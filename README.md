@@ -42,11 +42,11 @@ levels 0.4/0.5/0.6.
 ### KV-cache eviction
 
 The mirage also appears at the representation level. When KV-cache entries are
-evicted (retaining 70% down to 10% of keys), pivot preservation drops to 0% at
-10% retention — even though all prerequisite information remains present in the
+evicted (retaining 70% down to 10% of keys), pivot preservation drops to 8.3%
+at 10% retention — even though all prerequisite information remains present in the
 input text. This isolates the failure to internal attention, not input truncation.
 
-![KV eviction sweep on Llama-3.1 8B. Pivot preservation drops to 0% at 10% retention despite full input context.](endogenous_context_theory/release/figures/kv_retention_protocol_vs_pivot.png)
+![KV eviction sweep on Llama-3.1 8B. Pivot preservation drops to 8.3% at 10% retention despite full input context.](endogenous_context_theory/release/figures/kv_retention_protocol_vs_pivot.png)
 
 ### Real-incident validation (NTSB)
 
@@ -63,7 +63,13 @@ structure) eliminates attribution shift entirely across all budgets.
 
 A LoRA adapter (3.2M parameters, ~0.12% of the base model), trained on synthetic mirage examples, eliminates the failure mode.
 
-| | Base (Qwen 2.5 14B) | + Mirage-aware LoRA |
+Provenance note:
+- Canonical package for the table below is `mirage_aware_package.tar.gz` at repo root (`mirage_aware_adapter_balanced/adapter_config.json`: base `Qwen/Qwen2.5-7B-Instruct`, `r=8`).
+- Canonical balanced package training config is `num_train_epochs=1`, `per_device_train_batch_size=2`, `gradient_accumulation_steps=4`, `global_step=250` (about 2,000 train examples), not a 3-epoch run.
+- This package's eval slice is 400 examples (371 degraded, 29 strong); FT silent mirage is `1/371 = 0.27%` on degraded rows.
+- The MLX/Gemma adapter in `endogenous_context_theory/release/adapters/mirage_aware_v1/` is a separate run lineage.
+
+| | Base (Qwen 2.5 7B, balanced eval slice n=400) | + Mirage-aware LoRA |
 |---|---|---|
 | Pivot accuracy (degraded inputs) | 41.0% | 99.2% |
 | Silent mirage rate | 59.0% | 0.27% |
@@ -73,7 +79,9 @@ A LoRA adapter (3.2M parameters, ~0.12% of the base model), trained on synthetic
 ![Mirage-aware fine-tuning results on balanced run. LoRA improves degraded-input pivot accuracy and degradation flagging while collapsing silent mirages to near zero.](endogenous_context_theory/release/figures/mirage_aware_finetuning_results.png)
 
 The adapter learns to both identify the correct pivot under compression and explicitly flag when context degradation may have affected its answer.
-Weights and eval notebook are in `release/adapters/mirage_aware_v1/`.
+Canonical Qwen package artifact: `mirage_aware_package.tar.gz` (extracts `mirage_aware_adapter_balanced/`).
+Separate MLX adapter artifact: `endogenous_context_theory/release/adapters/mirage_aware_v1/`.
+For full provenance mapping, see `docs/mirage-source-of-truth.md`.
 
 ## What's in this repo
 
@@ -110,13 +118,10 @@ The blackbox and KV-cache experiments require GPU access. Open the notebooks in
 
 To load the mirage-aware adapter:
 
-```python
-from peft import PeftModel
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
-base = AutoModelForCausalLM.from_pretrained("Qwen/Qwen2.5-14B-Instruct")
-model = PeftModel.from_pretrained(base, "endogenous_context_theory/release/adapters/mirage_aware_v1")
-tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2.5-14B-Instruct")
+```bash
+tar -xzf mirage_aware_package.tar.gz
+# Adapter path after extract: mirage_aware_adapter_balanced/
+# Base model: Qwen/Qwen2.5-7B-Instruct
 ```
 
 ## Reproducibility

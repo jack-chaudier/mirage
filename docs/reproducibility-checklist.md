@@ -1,5 +1,7 @@
 # Reproducibility Checklist
 
+Model/run provenance mapping is documented in `docs/mirage-source-of-truth.md`.
+
 ## A. Environment
 ```bash
 cd endogenous_context_theory
@@ -53,6 +55,10 @@ python scripts/make_balanced_train.py \
 cd endogenous_context_theory
 bash scripts/train_mirage_aware.sh
 ```
+
+Note:
+- `scripts/train_mirage_aware.sh` reproduces the MLX/Gemma lineage (`release/adapters/mirage_aware_v1`).
+- Canonical Qwen package metrics in README are sourced from `mirage_aware_package.tar.gz` at repo root.
 
 Generated outputs (not tracked in git):
 - `endogenous_context_theory/results/mirage_aware_eval_results.csv`

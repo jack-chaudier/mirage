@@ -206,7 +206,7 @@ controlling for commitment policy.
 
 We now apply the three diagnostics to a controlled compression
 experiment.  The setup is the turning-point--conditioned retention sweep
-from Paper~03~\citep{gaffney2026mirage}: $n = 200$ random event sequences, prefix requirement
+from Paper~03~\citep{gaffney2026mirage}: $n = 200$ instances (200 events each), prefix requirement
 $k = 3$, enumerative solver with beam width $M = 10$.  At each
 retention level, the event sequence is compressed by randomly removing
 non-focal events until the target retention fraction is reached, and the
@@ -215,14 +215,12 @@ in \cref{tab:retention-sweep}.
 
 \begin{table}[ht]
 \centering
-\caption{The validity mirage across retention levels ($n = 200$,
-         $k = 3$, $M = 10$).  Raw validity stays at or near $1.0$
+\caption{The validity mirage across retention levels ($n = 200$
+         instances, $k = 3$, $M = 10$).  Raw validity stays at or near $1.0$
          across all retention levels, while pivot preservation collapses
-         from $0.790$ at 50\% retention to $0.354$ at 10\% retention.
+         from $0.785$ at 50\% retention to $0.328$ at 10\% retention.
          The mirage gap---the difference between raw validity and pivot
-         preservation---widens to ${\approx}\,0.64$ at 10\% retention.
-         Retention levels 0.90 and 0.70 were not swept in the original
-         paper; see the footnote on those rows.}
+         preservation---widens to ${\approx}\,0.647$ at 10\% retention.}
 \label{tab:retention-sweep}
 \begin{tabular}{@{}ccccc@{}}
 \toprule
@@ -232,53 +230,55 @@ in \cref{tab:retention-sweep}.
 \textbf{Fixed-Pivot Feas.} &
 \textbf{Semantic Regret} \\
 \midrule
-0.90 & ---\footnotemark & ---            & ---            & ---      \\
-0.70 & ---              & ---            & ---            & ---      \\
-0.50 & 1.000 & 0.790        & 0.980        & 0.218    \\
-0.30 & 1.000 & 0.590        & 0.920        & 0.663    \\
-0.20 & 1.000 & 0.480        & 0.860        & 0.677    \\
-0.10 & 0.990 & 0.354        & 0.750        & 0.358    \\
+0.50 & 1.000 & 0.785        & 0.980        & 0.281    \\
+0.45 & 1.000 & 0.745        & 0.970        & 0.299    \\
+0.40 & 1.000 & 0.705        & 0.970        & 0.365    \\
+0.35 & 1.000 & 0.640        & 0.960        & 0.559    \\
+0.30 & 1.000 & 0.595        & 0.930        & 0.650    \\
+0.25 & 1.000 & 0.545        & 0.905        & 0.706    \\
+0.20 & 1.000 & 0.510        & 0.875        & 0.643    \\
+0.15 & 0.995 & 0.392        & 0.825        & 0.530    \\
+0.10 & 0.975 & 0.328        & 0.725        & 0.680    \\
 \bottomrule
 \end{tabular}
-\footnotetext{Retention levels 0.90 and 0.70 were not included in the paper's sweep (which covered 0.50--0.10); values are omitted to avoid interpolation artifacts.}
 \end{table}
 
 The pattern in \cref{tab:retention-sweep} is the empirical signature
 of the validity mirage.  Consider the trajectory of each column.
 
 \paragraph{Raw validity.}
-The first column is monotonically near-perfect.  At 90\% retention, all
-200 instances produce valid output.  At 50\%, still all 200.  At 30\%,
-still all 200.  Even at 10\% retention---where 90\% of the non-focal
-events have been removed---validity drops only to $0.990$.  A
+The first column is monotonically near-perfect.  At 50\% retention, all
+200 instances produce valid output.  At 30\%, still all 200.  At 15\%,
+$99.5\%$ remain valid.  Even at 10\% retention---where 90\% of the
+non-focal events have been removed---validity drops only to $0.975$.  A
 practitioner monitoring this column alone would conclude that
 compression is essentially lossless.
 
 \paragraph{Pivot preservation.}
-The second column tells a different story.  At 90\% retention, nearly
-every valid output preserves the original pivot.  By 50\% retention,
-only 79\% of valid outputs keep the same pivot---one in five has
-silently substituted.  By 30\%, only 59\% preserve the original; by
-10\%, only 35.4\%.  At 10\% retention, the system substitutes the
+The second column tells a different story.  By 50\% retention,
+only 78.5\% of valid outputs keep the same pivot---one in five has
+silently substituted.  By 30\%, only 59.5\% preserve the original; by
+10\%, only 32.8\%.  At 10\% retention, the system substitutes the
 pivot in nearly two out of every three valid outputs.
 
 \paragraph{Fixed-pivot feasibility.}
 The third column reveals why the pivots are being substituted.
 At 50\% retention, 98\% of instances are still feasible under the
-original pivot---so the 21\% of outputs that substituted pivots
+original pivot---so the 21.5\% of outputs that substituted pivots
 \emph{could have} kept the original, but the enumerative solver found
-an alternative path.  By 10\% retention, only 75\% of instances remain
-feasible under the original pivot.  The remaining 25\% \emph{cannot}
-be solved with the original pivot at all: compression has pushed them
-into the absorbing ideal.
+an alternative path.  By 10\% retention, only 72.5\% of instances
+remain feasible under the original pivot.  The remaining 27.5\%
+\emph{cannot} be solved with the original pivot at all: compression
+has pushed them into the absorbing ideal.
 
 \paragraph{Semantic regret.}
 The fourth column quantifies the cost.  At 50\% retention, the average
-quality loss among substituted instances is 21.8\%.  At 30\%, it peaks
-at 66.3\%.  At 10\%, it settles at 35.8\%---not because substitution
-has become less harmful, but because the most severely affected
-instances have been pushed into infeasibility entirely, leaving a
-survivorship-biased sample.
+quality loss among substituted instances is 28.1\%.  Regret climbs
+steeply through the 40--25\% range, peaking at 70.6\% at 25\%
+retention.  Below 25\%, the survivorship pool shifts: the instances
+most severely harmed by compression enter infeasibility entirely and
+exit the regret average, causing some fluctuation.  At 10\% retention,
+average regret remains high at 68.0\%.
 
 \begin{figure}[H]
 \centering
@@ -297,7 +297,7 @@ survivorship-biased sample.
 falls away.  The vertical distance between the two curves at any
 retention level is the \emph{mirage gap}: the fraction of outputs that
 are valid but semantically unfaithful.  At 10\% retention, the mirage
-gap is $0.990 - 0.354 = 0.636$---nearly two-thirds of all outputs are
+gap is $0.975 - 0.328 = 0.647$---nearly two-thirds of all outputs are
 mirages.
 
 % ══════════════════════════════════════════════════════════════

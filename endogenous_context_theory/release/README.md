@@ -3,13 +3,15 @@
 This directory is the curated public-release bundle for **Paper 03 (Validity Mirage)**.
 It contains the exact artifacts needed to inspect, reproduce, and extend the core claims.
 
+Provenance mapping for model/run metadata is documented in `../../docs/mirage-source-of-truth.md`.
+
 ## Scope
 
 Included here:
 - MirageBench generator workflow and exported 12-task set
 - Multi-model blackbox sweep notebook and CSV outputs
 - KV-cache eviction notebook and CSV outputs (with retention `1.0` control)
-- Mirage-aware adapter weights (LoRA)
+- Mirage-aware adapter weights (LoRA; MLX lineage in `release/adapters/` and canonical Qwen package at repo root)
 - Release figures and section-ready summary tables
 
 ## Artifact Map (Paper Sections)
@@ -20,7 +22,7 @@ Included here:
 | Multi-model blackbox validation (new) | Mirage pattern replicates across 5 architectures | `results/blackbox_bf16_5model/miragebench_bf16_5model_merged.csv`, `results/blackbox_bf16_5model/miragebench_bf16_5model_summary_by_model_release.csv`, `results/blackbox_bf16_5model/miragebench_bf16_5model_summary_by_category_release.csv` |
 | KV-cache eviction validation (new) | Representation-level eviction induces mirage even with full input present | `results/kv_cache_eviction_llama31_8b/kv_cache_eviction_mirage_results.csv`, `results/kv_cache_eviction_llama31_8b/kv_cache_eviction_mirage_summary_by_retention.csv` |
 | Real-incident external validation (NTSB) | Contract prevents attribution shift under real causal structures | `../results/ntsb/`, `../results/ntsb/xai_grok_4_1_fast_non_reasoning/` |
-| Mirage-aware mitigation | Fine-tuned adapter learns explicit degradation signaling | `adapters/mirage_aware_v1/`, `../data/processed/`, `../notebooks/legacy/qwen_mirage_aware_training_eval_colab.ipynb` |
+| Mirage-aware mitigation | Fine-tuned adapter learns explicit degradation signaling | `../../mirage_aware_package.tar.gz` (canonical Qwen package), `adapters/mirage_aware_v1/adapter_config.json` (separate MLX lineage), `../scripts/train_mirage_aware.sh`, `../notebooks/legacy/qwen_mirage_aware_training_eval_colab.ipynb` |
 
 ## Directory Layout
 

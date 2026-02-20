@@ -102,12 +102,15 @@ Observed structure:
 ## 5. Qwen Ablation Results (Balanced vs Imbalanced)
 
 Both runs are on the same 400-example eval slice composition (371 degraded, 29 strong).
+This 400-example slice is a focused evaluation subset, not the full `data/processed/valid.jsonl` split.
 
 ## 5.1 Balanced Qwen Run (Verified)
 
 Artifacts:
 - `mirage_aware_package.tar.gz`
 - `derived/qwen_balanced_metrics_verified.csv`
+
+Note: `mirage_aware_package.tar.gz` currently extracts `mirage_aware_adapter_balanced/` (Qwen 2.5 7B PEFT, 400-example eval summary).
 
 Independent recompute:
 - `derived/qwen_balanced_metrics_verified.csv`

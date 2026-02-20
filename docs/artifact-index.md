@@ -5,6 +5,7 @@
 - `endogenous_context_theory/release/README.md`
 - `papers/README.md`
 - `docs/massive-context-document.md`
+- `docs/mirage-source-of-truth.md`
 - `docs/independent-review-and-value-assessment.md`
 - `docs/reproducibility-checklist.md`
 - `docs/unified-repo-map.md`
