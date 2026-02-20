@@ -187,13 +187,26 @@ In our experimental framework this does not occur: the full-sequence
 solve is deterministic and globally optimal.
 \end{remark}
 
+\begin{remark}[Streaming caveat for semantic regret]
+\label{rem:regret-streaming-caveat}
+Semantic regret in the streaming setting (\cref{ch:streaming}) is
+computed under a commit-now policy: labels are assigned irrevocably as
+each event arrives.  Deferred-commitment policies---which withhold
+label assignment until a fraction~$f$ of the sequence has been
+observed---would show different regret profiles, typically lower regret
+at the cost of higher latency.  The regret values reported in this
+chapter's retention sweep apply to the batch (offline) setting and
+should not be compared directly with streaming regret without
+controlling for commitment policy.
+\end{remark}
+
 % ══════════════════════════════════════════════════════════════
 \section{The Retention Sweep}\label{sec:retention-sweep}
 % ══════════════════════════════════════════════════════════════
 
 We now apply the three diagnostics to a controlled compression
 experiment.  The setup is the turning-point--conditioned retention sweep
-from Paper~03: $n = 200$ random event sequences, prefix requirement
+from Paper~03~\citep{gaffney2026mirage}: $n = 200$ random event sequences, prefix requirement
 $k = 3$, enumerative solver with beam width $M = 10$.  At each
 retention level, the event sequence is compressed by randomly removing
 non-focal events until the target retention fraction is reached, and the
@@ -206,8 +219,8 @@ in \cref{tab:retention-sweep}.
          $k = 3$, $M = 10$).  Raw validity stays at or near $1.0$
          across all retention levels, while pivot preservation collapses
          from near $1.0$ to $0.354$.  The mirage gap---the difference
-         between raw validity and pivot preservation---widens to $0.636$
-         at 10\% retention.}
+         between raw validity and pivot preservation---widens to
+         ${\approx}\,0.64$ at 10\% retention.}
 \label{tab:retention-sweep}
 \begin{tabular}{@{}ccccc@{}}
 \toprule
@@ -217,14 +230,15 @@ in \cref{tab:retention-sweep}.
 \textbf{Fixed-Pivot Feas.} &
 \textbf{Semantic Regret} \\
 \midrule
-0.90 & 1.000 & ${\sim}1.0$  & ${\sim}1.0$  & low      \\
-0.70 & 1.000 & ${\sim}0.85$ & ${\sim}0.98$ & moderate \\
+0.90 & ---\footnotemark & ---            & ---            & ---      \\
+0.70 & ---              & ---            & ---            & ---      \\
 0.50 & 1.000 & 0.790        & 0.980        & 0.218    \\
 0.30 & 1.000 & 0.590        & 0.920        & 0.663    \\
 0.20 & 1.000 & 0.480        & 0.860        & 0.677    \\
 0.10 & 0.990 & 0.354        & 0.750        & 0.358    \\
 \bottomrule
 \end{tabular}
+\footnotetext{Retention levels 0.90 and 0.70 were not included in the paper's sweep (which covered 0.50--0.10); values are omitted to avoid interpolation artifacts.}
 \end{table}
 
 The pattern in \cref{tab:retention-sweep} is the empirical signature
@@ -268,11 +282,11 @@ survivorship-biased sample.
 \centering
 \includegraphics[width=0.85\textwidth]{%
   figures/test_11_validity_mirage.png}
-\caption{The validity mirage: raw validity (blue) stays near $1.0$
-         while pivot preservation (red) collapses under increasing
-         compression.  The widening gap between the two curves is the
-         mirage: the region where the system reports success but has
-         silently substituted the semantic anchor.}
+\caption[The validity mirage]{The validity mirage: raw validity
+  (blue) stays near~$1.0$ while pivot preservation (red) collapses
+  under increasing compression.  The widening gap is the
+  mirage---where the system reports success but has silently
+  substituted the semantic anchor.}
 \label{fig:validity-mirage}
 \end{figure}
 
@@ -281,7 +295,7 @@ survivorship-biased sample.
 falls away.  The vertical distance between the two curves at any
 retention level is the \emph{mirage gap}: the fraction of outputs that
 are valid but semantically unfaithful.  At 10\% retention, the mirage
-gap is $1.000 - 0.354 = 0.646$---nearly two-thirds of all outputs are
+gap is $0.990 - 0.354 = 0.636$---nearly two-thirds of all outputs are
 mirages.
 
 % ══════════════════════════════════════════════════════════════
@@ -298,9 +312,9 @@ transparent by isolating it in a sequence small enough to trace by hand.
 \subsection{Witness Construction}\label{subsec:witness-construction}
 
 The witness is produced by the function
-\texttt{deterministic\_mirage\_witness(k=3)} in
-\texttt{src/compression.py}.  It constructs a specific event sequence
-designed to satisfy two properties:
+\texttt{deterministic\_mirage\_witness(k=3)} in \url{src/compression.py}.
+It constructs a specific event sequence designed to satisfy two
+properties:
 \begin{enumerate}[label=(\roman*),itemsep=3pt]
   \item The full sequence has a unique dominant pivot with high weight
         and sufficient pre-pivot development.
@@ -317,18 +331,21 @@ which we now examine in detail.
 
 \paragraph{Solve 1: Full sequence (uncompressed).}
 The full event sequence is processed by the solver with no compression.
-The dominant pivot is event $e_{41}$ (or a similarly indexed late-sequence
-focal event), with weight $\wstar \approx 47.08$.  Because $e_{41}$
-appears late in the sequence, there are many non-focal events preceding
-it: $\dpre \ge k = 3$.  The solve is \textbf{feasible}, the quality
-score is $47.08$, and this is the reference solution against which all
-compressed solves are compared.
+The dominant pivot is event~4 (the fifth event in the 10-event sequence),
+with weight $\wstar = 20.0$.  Because event~4
+appears with sufficient non-focal events preceding
+it, $\dpre \ge k = 3$.  The solve is \textbf{feasible}, the quality
+score is $20.0$, and this is the reference solution against which all
+compressed solves are compared.%
+\footnote{The book's deterministic witness uses a 10-event sequence;
+the paper (Table~8) used a larger 50-event synthetic instance with
+correspondingly higher indices.}
 
 \paragraph{Solve 2: Naive compressed, committed ($M = 1$).}
 The same sequence is compressed by removing non-focal events (naive
 random compression, no contract guard).  The committed solver with
-$M = 1$ is required to use the original pivot $e_{41}$.  After
-compression, the non-focal events that preceded $e_{41}$ have been
+$M = 1$ is required to use the original pivot (event~4).  After
+compression, the non-focal events that preceded event~4 have been
 thinned: $\dpre$ drops below $k$.  Since $M = 1$, the solver has no
 alternative candidates to consider.  The result is \textbf{infeasible}.
 
@@ -338,27 +355,27 @@ $\kappa = 1$ and $\dpre < k$, placing it in the left ideal of
 
 \paragraph{Solve 3: Naive compressed, enumerative ($M = 10$).}
 The same compressed sequence, but now with the enumerative solver
-($M = 10$ pivot candidates).  The solver discovers that $e_{41}$ is
-infeasible and begins searching alternatives.  It finds event $e_{45}$
-(or a similarly indexed event): a focal event with lower weight
-$\wstar \approx 21.47$, appearing at an earlier position in the
+($M = 10$ pivot candidates).  The solver discovers that event~4 is
+infeasible and begins searching alternatives.  It finds event~8
+(the substitute pivot): a focal event with lower weight
+$\wstar = 13.0$, appearing at a later position in the
 sequence, with a different set of preceding non-focal events such that
 $\dpre \ge k = 3$ under the compressed sequence.  The solve is
 \textbf{feasible}.
 
-But the quality score under the substitute pivot is only $21.47$.  The
+But the quality score under the substitute pivot is only $13.0$.  The
 semantic regret is
 \[
   \mathrm{SR}
   \;=\;
-  1 - \frac{21.467}{47.084}
+  1 - \frac{13.0}{20.0}
   \;=\;
-  0.544.
+  0.35.
 \]
 The system reports a valid output.  The grammar is satisfied.  The
-phase labels are well-formed.  And 54.4\% of the semantic quality has
+phase labels are well-formed.  And 35\% of the semantic quality has
 been silently discarded.  The output tells a different story---one
-anchored at a weaker, earlier event with less dramatic weight---and no
+anchored at a weaker event with less dramatic weight---and no
 signal in the system's output reveals this fact.
 
 % ── Mechanism walkthrough ─────────────────────────────────────
@@ -390,7 +407,7 @@ event sequence under a different solver configuration.
     3/nf/nonfocal, 4/f/focal, 5/nf/nonfocal, 6/nf/nonfocal}{
     \node[\sty] (r1e\x) at (\x*1.1, 0) {\s};
   }
-  \node[pivot] at (4*1.1, 0) {$e_{41}$};
+  \node[pivot] at (4*1.1, 0) {$e_{4}$};
   \draw[brace] (0, 0.55) -- node[above=3pt, label] {$\dpre \ge k$}
                (3*1.1, 0.55);
   \node[anchor=west, font=\footnotesize, green!50!black]
@@ -403,7 +420,7 @@ event sequence under a different solver configuration.
     3/nf/nonfocal, 4/f/focal, 5/nf/nonfocal, 6/nf/nonfocal}{
     \node[\sty] (r2e\x) at (\x*1.1, -1.8) {\s};
   }
-  \node[pivot] at (4*1.1, -1.8) {$e_{41}$};
+  \node[pivot] at (4*1.1, -1.8) {$e_{4}$};
   \draw[brace] (0, -1.25) -- node[above=3pt, label]
     {$\dpre < k$} (3*1.1, -1.25);
   \node[anchor=west, font=\footnotesize, red!70!black]
@@ -416,7 +433,7 @@ event sequence under a different solver configuration.
     3/nf/nonfocal, 4/f/focal, 5/nf/nonfocal, 6/nf/nonfocal}{
     \node[\sty] (r3e\x) at (\x*1.1, -3.6) {\s};
   }
-  \node[subpivot] at (3*1.1, -3.6) {$e_{45}$};
+  \node[subpivot] at (3*1.1, -3.6) {$e_{8}$};
   \draw[brace] (0, -3.05) -- node[above=3pt, label]
     {$\dpre \ge k$} (2.2*1.1, -3.05);
   \node[anchor=west, font=\footnotesize, orange!70!black]
@@ -424,17 +441,17 @@ event sequence under a different solver configuration.
 \end{tikzpicture}
 \caption{Mechanism diagram for the deterministic witness.
          \textbf{Row~1:} The full sequence places the dominant pivot
-         $e_{41}$ (orange, double border) late, with sufficient
+         $e_{4}$ (orange, double border) with sufficient
          pre-pivot development ($\dpre \ge k$).  Valid, high quality.
          \textbf{Row~2:} Compression removes non-focal events from the
          middle (dashed red).  The committed solver ($M = 1$) retains
-         $e_{41}$ as pivot, but $\dpre$ drops below $k$.  Infeasible:
+         $e_{4}$ as pivot, but $\dpre$ drops below $k$.  Infeasible:
          the absorbing ideal has captured this state.
          \textbf{Row~3:} The enumerative solver ($M = 10$) searches
-         alternatives and finds $e_{45}$ (yellow), an earlier, weaker
+         alternatives and finds $e_{8}$ (yellow), a weaker
          pivot with a different set of preceding events satisfying
          $\dpre \ge k$.  Feasible---but with a different pivot and
-         54.4\% semantic regret.}
+         35\% semantic regret.}
 \label{fig:witness-mechanism}
 \end{figure}
 
@@ -447,7 +464,7 @@ escapes absorption by shifting to a weaker pivot, exactly as predicted
 by \cref{rem:escape-endo}: under $\opendo$ semantics, a suffix with a
 higher $\dpre$ count can escape the absorbing set by adopting a
 different pivot.  The escape is real---the output is valid---but the
-semantic cost is $54.4\%$.
+semantic cost is $35\%$.
 
 % ── Witness results table ─────────────────────────────────────
 \subsection{Witness Results}\label{subsec:witness-results}
@@ -471,9 +488,9 @@ $M = 10$ (enumerative).
 \textbf{Fixed Valid} & \textbf{Preserved} \\
 \midrule
 Naive    & 1  & False & ---     & False & False \\
-Contract & 1  & True  & $e_{41}$& True  & True  \\
-Naive    & 10 & True  & $e_{45}$& False & False \\
-Contract & 10 & True  & $e_{41}$& True  & True  \\
+Contract & 1  & True  & $e_{4}$& True  & True  \\
+Naive    & 10 & True  & $e_{8}$& False & False \\
+Contract & 10 & True  & $e_{4}$& True  & True  \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -482,25 +499,25 @@ The table should be read row by row.
 
 \begin{itemize}[itemsep=4pt]
   \item \textbf{Naive, $M = 1$:}  The committed solver finds the
-        original pivot $e_{41}$ infeasible and has no alternatives.
+        original pivot $e_{4}$ infeasible and has no alternatives.
         Both free and fixed-pivot solves fail.  This is an outright
         failure, not a mirage---the system correctly reports
         infeasibility.
 
   \item \textbf{Contract, $M = 1$:}  The contract-guarded compression
-        preserves enough development events around $e_{41}$ to maintain
+        preserves enough development events around $e_{4}$ to maintain
         $\dpre \ge k$.  The committed solver succeeds with the original
         pivot.  No substitution, no quality loss.
 
   \item \textbf{Naive, $M = 10$:}  The enumerative solver discovers
-        that $e_{41}$ is infeasible and substitutes $e_{45}$.  The free
+        that $e_{4}$ is infeasible and substitutes $e_{8}$.  The free
         solve succeeds (valid output), but the fixed-pivot solve fails
-        (cannot use $e_{41}$), and pivot preservation is
+        (cannot use $e_{4}$), and pivot preservation is
         \texttt{False}.  This is the mirage: valid output, wrong pivot.
 
   \item \textbf{Contract, $M = 10$:}  Contract-guarded compression
         again preserves the original pivot.  The enumerative solver does
-        not need to search alternatives because $e_{41}$ remains
+        not need to search alternatives because $e_{4}$ remains
         feasible.  Preservation is \texttt{True}.
 \end{itemize}
 
@@ -568,7 +585,7 @@ required elements---the collapse may pass unnoticed.
 A \textbf{representation-level mirage} occurs in neural systems when
 the evidence for the correct pivot is present in the input tokens but
 becomes inaccessible after internal compression---typically KV-cache
-eviction in transformer models.  The model ``knows'' the information
+eviction~\citep{zhang2023h2o,xiao2023streamingllm} in transformer models.  The model ``knows'' the information
 was there but can no longer attend to it.
 \end{definition}
 
@@ -604,6 +621,7 @@ retention levels.
 \midrule
 1.0 & 0.917 & 1.000 & 0.962 & 0.000 \\
 0.7 & 0.500 & 0.583 & 0.703 & 0.320 \\
+0.5 & 0.833 & 0.500 & 0.508 & 0.375 \\
 0.3 & 0.417 & 0.167 & 0.629 & 0.375 \\
 0.1 & 0.667 & 0.083 & 0.680 & 0.330 \\
 \bottomrule
@@ -625,11 +643,11 @@ mirage gap at 10\% retention is $0.680 - 0.083 = 0.597$: nearly 60\%
 of outputs are valid mirages.
 
 \paragraph{Header compliance is non-monotone.}
-Header compliance drops from $0.917$ to $0.417$ at 30\% retention
-but then recovers to $0.667$ at 10\%.  This non-monotonicity
-suggests that at extreme compression levels, the model defaults to a
-formulaic output pattern that happens to include headers---a form of
-protocol compliance without semantic content.
+Header compliance drops from $0.917$ to $0.417$ at 30\% retention but
+then recovers to $0.667$ at~10\%.  This non-monotonicity suggests that
+at extreme compression levels, the model defaults to a formulaic output
+pattern that happens to include headers---a form of protocol compliance
+without semantic content.
 
 % ══════════════════════════════════════════════════════════════
 \section{External Validation}\label{sec:external-validation}
@@ -668,7 +686,7 @@ safety-critical domains.
 
 To verify that the mirage is not specific to any one model architecture,
 five language models were tested in a blackbox configuration: Llama~3.1
-8B, Mistral~7B, Gemma~2 9B, Phi-3 Medium 14B, and Qwen~2.5 14B.  Each
+8B~\citep{grattafiori2024llama}, Mistral~7B~\citep{jiang2023mistral}, Gemma~2 9B~\citep{team2024gemma}, Phi-3 Medium 14B~\citep{abdin2024phi}, and Qwen~2.5 14B~\citep{yang2024qwen}.  Each
 model was given compressed event sequences and asked to produce
 structured output (narrative arcs with phase labels).  The diagnostic
 metrics were computed by comparing each model's output against the

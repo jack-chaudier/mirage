@@ -57,7 +57,7 @@ Events are totally ordered by the lexicographic comparison on the tuple
   \bigl(\, w(v),\; -t(v),\; \mathrm{id}(v) \,\bigr).
 \]
 That is, higher weight wins; among events of equal weight, the
-\emph{later} event wins (since we negate the timestamp); and if both
+\emph{earlier} event wins (since we negate the timestamp); and if both
 weight and timestamp coincide, the event identifier breaks the tie.
 \end{definition}
 
@@ -65,7 +65,7 @@ This ordering ensures that every invocation of $\argmax$ over any
 non-empty subset of $V$ returns a single, well-defined event.
 
 \begin{example}[A dinner-party event graph]\label{ex:dinner-party}
-Consider a dinner-party simulation with $|A| = 6$ agents (Alice, Bob,
+Consider a dinner-party simulation~\citep{park2023generative} with $|A| = 6$ agents (Alice, Bob,
 Carol, Dave, Eve, Frank) producing $|V| = 200$ events over the course
 of an evening.  The event types include:
 \begin{center}
@@ -704,7 +704,7 @@ We recall the two axioms that define a matroid on ground set $P$.
 \begin{proposition}[Non-matroid structure]\label{prop:non-matroid}
 The feasible family $\mathcal{F}$ violates both the hereditary axiom
 and the exchange axiom.  Consequently, $\mathcal{F}$ is not a matroid,
-not a greedoid, and not a polymatroid.
+not a greedoid~\citep{korte1981mathematical,bjorner1992greedoids}, and not a polymatroid.
 \end{proposition}
 
 \begin{proof}
@@ -843,14 +843,15 @@ existence of some $v \in \{c_2, q\}$ with
 $S_1 \cup \{v\} \in \mathcal{F}$.  We show that neither works.
 
 \begin{enumerate}[label=(\roman*)]
-  \item \textbf{Adding $q$} (focal, weight~9, timestamp~$3.5$) to
-    $S_1$.  The augmented set is
-    $S_1 \cup \{q\} = \{c_1, c_3, q, c_4, c_5, p, r\}$.
-    Now $\tp(S_1 \cup \{q\}) = q$ because $w(q) = 9 > 7 = w(p)$---the
-    pivot shifts from $p$ to $q$.  Events before $q$ (timestamp~$3.5$):
-    $c_1(1)$ and $c_3(3)$ ---only 2~non-focal events.  Even labelling
+  \item \textbf{Adding $q$} (focal, weight~9, timestamp~$3.5$) to~$S_1$.
+    The augmented set is
+    $S_1 \cup \{q\} = \{c_1, c_3, q, c_4,$ $c_5, p, r\}$.
+    Now $\tp(S_1 \cup \{q\}) = q$ because
+    $w(q) = 9 > 7 = w(p)$---the pivot shifts from~$p$ to~$q$.
+    Events before $q$ (timestamp~$3.5$):
+    $c_1(1)$ and $c_3(3)$---only 2~non-focal events.  Even labelling
     both as \textsc{Development}, we have $2 < k_{\min} = 3$.  The
-    prefix requirement is \textbf{not met}.  The DFA rejects.
+    prefix requirement is \textbf{not met}.  The DFA rejects:
     $S_1 \cup \{q\} \notin \mathcal{F}$.
 
   \item \textbf{Adding $c_2$} (non-focal, timestamp~2) to $S_1$.
@@ -865,6 +866,14 @@ $S_1 \cup \{v\} \in \mathcal{F}$.  We show that neither works.
 Neither element of $S_2 \setminus S_1$ can be added to $S_1$ to yield
 a feasible set.  The exchange axiom is violated.
 \end{proof}
+
+\begin{remark}[Bounded-prefix scope]\label{rem:exchange-scope}
+The exchange-axiom failure above is specific to the bounded-prefix
+grammar $\dpre \ge k$.  Different grammars (e.g., a flat ``select
+any $m$ events'' objective) may or may not exhibit a matroid
+structure; the non-matroid conclusion does not extend beyond the
+class of grammars with positional requirements relative to the pivot.
+\end{remark}
 
 \begin{remark}[Consequences of non-matroid structure]
 \label{rem:non-matroid-consequences}

@@ -360,7 +360,7 @@ prevents escape.
 \label{rem:mirage-foundation}
 The contrast between committed and uncommitted semantics is the
 algebraic foundation of the \emph{validity mirage} developed in
-\cref{ch:mirage}.
+\cref{ch:mirage}~\citep{gaffney2026mirage}.
 
 An enumerative solver with beam width $M > 1$ explores multiple pivot
 candidates simultaneously.  Each candidate corresponds to a different
@@ -442,6 +442,18 @@ would protect only the current pivot assignment and would become
 vacuous---or actively harmful---if the pivot subsequently shifted.
 \end{remark}
 
+\paragraph{From definition to algorithm.}
+\Cref{def:no-absorption-contract} specifies the \emph{minimal} contract: a
+guard on $\dtotal$ that ensures enough development capacity survives
+compression to meet the prefix requirement~$k$.
+\Cref{alg:contract-compress} below implements a \emph{stronger} guard
+that additionally verifies suffix-feasibility---i.e., that the tropical
+weight at rank~$k$ is preserved after each candidate removal.  The
+stronger guard is not required by the theory (the absorbing-ideal results
+hold with the minimal contract) but is advisable in practice, since it
+catches near-absorbing states that the minimal $\dtotal \ge k$ contract
+would pass.
+
 \begin{algorithm}[t]
 \caption{Contract-guarded compression}
 \label{alg:contract-compress}
@@ -490,6 +502,11 @@ ratio consistent with the contract.  However, it is guaranteed to
 no removal that would violate feasibility is permitted.  The retention
 parameter provides a hard floor on the number of events retained,
 offering an additional safety margin beyond the algebraic contract.
+The overhead of the contract guard is bounded: each candidate removal
+requires one call to \textsc{BuildTropicalContext} at cost $O(n \cdot k)$,
+and at most $O(n)$ candidates are tested, giving $O(n^2 k)$ worst-case
+cost---acceptable for the moderate block sizes typical of streaming
+applications.
 
 % ══════════════════════════════════════════════════════════════
 \section{Empirical Validation}

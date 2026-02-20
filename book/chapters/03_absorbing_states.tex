@@ -450,7 +450,7 @@ We are now in a position to state and prove the chapter's main result.
 % ──────────────────────────────────────────────────────────────
 
 The theoretical boundary $\jdev = k$ admits clean empirical verification.
-We summarise the main findings; full experimental details appear in the
+We summarise the main findings~\citep{gaffney2026absorbing}; full experimental details appear in the
 repository.
 
 \paragraph{The boundary heatmap.}
@@ -501,8 +501,7 @@ A natural question is whether the impossibility barrier is an artifact of
 the grammar alone or whether it depends on the greedy policy's specific
 method of turning-point selection.  To test this, we repeat the experiment
 with an \emph{exogenous} turning point: instead of selecting
-$e^{*} = \argmax_{v : a(v)=a^{*}} w(v)$, we assign the turning point
-uniformly at random.
+$e^{*} = \argmax_{v : a(v)=a^{*}} w(v)$, we fix the turning point at the median-timestamp focal event (rather than the max-weight focal event).
 
 Under exogenous assignment, the diagonal barrier persists
 \emph{structurally}---the proof of \cref{thm:prefix-impossibility} does
@@ -593,9 +592,11 @@ coupling, eliminating the pathway into the impossibility zone.
   Consider a \emph{modified} phase grammar in which \textsc{development}
   events may appear after \textsc{turning\_point}.  Specifically, add the
   transitions
-  $\delta(S_{\textsc{tp}}, \textsc{development}) = S_{\textsc{tp}}$
-  and
-  $\delta(S_{\textsc{res}}, \textsc{development}) = S_{\textsc{res}}$
+  \[
+    \delta(S_{\textsc{tp}}, \textsc{development}) = S_{\textsc{tp}}
+    \quad\text{and}\quad
+    \delta(S_{\textsc{res}}, \textsc{development}) = S_{\textsc{res}}
+  \]
   to the DFA of \cref{def:phase-dfa}.
   \begin{enumerate}[label=(\alph*)]
     \item Does \cref{thm:prefix-impossibility} still hold under this

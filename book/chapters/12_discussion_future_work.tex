@@ -24,7 +24,7 @@ argument.  Each act addresses a different facet of the same structural
 phenomenon---the validity mirage---and each builds on the conclusions of
 its predecessors.
 
-\paragraph{Paper~00: Narrative / Lorien (Chapters~1--2).}
+\paragraph{Paper~00: Narrative / Lorien~\citep{gaffney2026narrative} (Chapters~1--2).}
 The endogenous pivot problem was discovered empirically through Diana's
 phase collapse.  Across 50~seeds of a dinner-party simulation, Diana's
 arc failed in 9~seeds with a uniform signature: zero development beats,
@@ -36,19 +36,19 @@ that the standard grammar could not be satisfied when the pool's
 highest-weight events arrived too early.  This empirical observation
 motivated every formal development that followed.
 
-\paragraph{Paper~01: Absorbing States (Chapters~3--4).}
+\paragraph{Paper~01: Absorbing States~\citep{gaffney2026absorbing} (Chapters~3--4).}
 The absorbing-state analysis formalised the impossibility.  When $\jdev
 < k$---that is, when the number of development-eligible events before
 the argmax-selected pivot falls below the prefix requirement---greedy
 search produces zero valid sequences.  The failure is not probabilistic;
 it is structural.  \Cref{ch:taxonomy} classified failures into four
-types (pool starvation, temporal clustering, weight--position
-antagonism, and grammar--constraint conflict) and constructed a
+classes: Class~A (pivot loss), Class~B (pivot displacement),
+Class~C (phase collapse), and Class~D (semantic regret) and constructed a
 hierarchy of solvers: greedy, enumerative, and TP-conditioned.  Each
 level in the hierarchy trades computational cost for strictly greater
 coverage of the failure space.
 
-\paragraph{Paper~02: Streaming (Chapters~6, 8).}
+\paragraph{Paper~02: Streaming~\citep{gaffney2026streaming} (Chapter~8).}
 The streaming analysis extended the theory to online settings, where
 events arrive sequentially and labels must be emitted before the full
 sequence is known.  The central result is that commit-now policies fall
@@ -60,7 +60,7 @@ emerged: deferred commitment (with patience parameter $f$) and tropical
 streaming, which maintains a weight vector over all possible pre-pivot
 development counts and defers role assignment until the vector stabilises.
 
-\paragraph{Paper~03: Context Algebra (Chapters~5, 7, 9).}
+\paragraph{Paper~03: Context Algebra~\citep{gaffney2026mirage} (Chapters~5, 7, 9).}
 The context algebra unified everything into a single algebraic
 framework.  The context monoid $(\mathcal{C}, \opendo)$ compresses any
 contiguous block of events into a triple $(\wstar, \dtotal, \dpre)$
@@ -164,8 +164,10 @@ conditioning on turning-point position (TP-conditioned solver).
 Neither method systematically explores the full frontier of
 turning-point position versus quality.
 
-MAP-Elites (multi-dimensional archive of phenotypic elites) offers a
-principled alternative.  The behaviour space is discretised into bins
+MAP-Elites~\citep{mouret2015illuminating} (multi-dimensional archive of phenotypic elites) offers a
+principled alternative, drawing on the insight from novelty
+search~\citep{lehman2011abandoning} that exploring diverse solutions
+can outperform purely objective-driven optimisation.  The behaviour space is discretised into bins
 indexed by normalised turning-point position.  Each bin stores the
 highest-$Q$ arc whose turning point falls in that bin.  The archive is
 populated by mutation and crossover over event-selection vectors.
@@ -258,12 +260,12 @@ entries) can silently shift the semantic pivot of the context window.
 The compression contract (\cref{ch:absorbing-ideal}) predicts that any
 eviction policy lacking a pivot-preservation guard will eventually
 produce mirage states.  The connection to attention sink methods (e.g.,
-StreamingLLM's initial-token retention) is suggestive: the ``sink''
+StreamingLLM's~\citep{xiao2023streamingllm} initial-token retention) is suggestive: the ``sink''
 tokens may function as pivot anchors, and their retention may be a
 special case of the no-absorption contract.
 
 \paragraph{RAG chunk selection.}
-Retrieval-augmented generation selects chunks from a document store to
+Retrieval-augmented generation~\citep{lewis2020rag} selects chunks from a document store to
 form the context for a query.  The selected chunks collectively
 determine the answer's semantic pivot---the dominant theme or fact
 around which the answer is organised.  Chunk selection is thus an
@@ -291,7 +293,9 @@ experiments reported in \cref{ch:mirage}.
 
 The endogenous pivot problem is not specific to narrative generation.
 Any system that selects a distinguished element by optimising over its
-own output faces the same structural coupling.  This section sketches
+own output---including generative agent
+architectures~\citep{park2023generative}---faces the same structural
+coupling.  This section sketches
 five domains where the theory applies and states what the algebra
 predicts.
 
@@ -352,7 +356,7 @@ the best, the analysis is fragile and the window should be extended.
 \subsection{Process Mining}
 \label{sec:conn-process-mining}
 
-Process mining discovers workflow models from event logs.  A central
+Process mining~\citep{vanderaalst2016process} discovers workflow models from event logs.  A central
 task is \emph{reference activity selection}: choosing the activity that
 anchors the alignment of all traces.
 
@@ -376,8 +380,8 @@ alignment without re-processing the full log.
 \subsection{Grammar-Constrained Decoding}
 \label{sec:conn-grammar-decoding}
 
-Grammar-constrained decoding systems---such as PICARD (for SQL),
-Outlines (for structured JSON), and constrained beam search---guide
+Grammar-constrained decoding systems---such as PICARD~\citep{scholak2021picard} (for SQL),
+Outlines~\citep{willard2023outlines} (for structured JSON), and constrained beam search~\citep{gange2020argmax}---guide
 language model generation to satisfy a formal grammar.
 
 \paragraph{Endogenous pivot analogue.}

@@ -44,6 +44,8 @@ algorithmic intervention that repairs it.
          against the class-specific fix applied in isolation.}
 \label{tab:failure-taxonomy}
 \renewcommand{\arraystretch}{1.35}
+\small
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{@{}clp{4.8cm}rlr@{}}
 \toprule
 \textbf{Class} & \textbf{Name} & \textbf{Mechanism} &
@@ -72,7 +74,8 @@ D & Assembly Compression &
   \textsc{resolution}, starving \textsc{development}. &
   41.3\% & Span-VAG with span filtering & 96.5\% \\
 \bottomrule
-\end{tabular}
+\end{tabular}%
+}
 \end{table}
 
 \Cref{tab:failure-taxonomy} summarises the four classes.  We now examine
@@ -196,6 +199,114 @@ the \textsc{development} phase of material.
 Class~D is the second most prevalent class at $57$ of $138$ failures
 ($41.3\%$), but it is also the most tractable: the span-VAG fix recovers
 nearly all instances.
+
+\subsection{Viability-Aware Greedy (VAG) Algorithms}\label{subsec:vag}
+
+The VAG family of algorithms shares a common skeleton: greedily select
+events in weight-descending order, but reject any candidate whose
+addition would render a future valid completion impossible.  The variants
+differ only in which viability checks are applied.
+\Cref{alg:vag} presents the common framework;
+\cref{alg:viable} details the viability predicate with the three
+filtering levels.
+
+\begin{algorithm}[t]
+\caption{Viability-Aware Greedy Extraction (VAG)}
+\label{alg:vag}
+\begin{algorithmic}[1]
+\Require Pool $P$, anchor $e_0$, grammar $\mathcal{A}$ with prefix
+         requirement~$k$, max length $n_{\max}$, viability mode
+         $\textsc{mode} \in \{\textsc{span}, \textsc{gap}, \textsc{budget}\}$
+\Ensure Selected event sequence $S$ (sorted by timestamp)
+\Statex
+\Function{VAG\_Extract}{$P,\, e_0,\, \mathcal{A},\, n_{\max},\, \textsc{mode}$}
+  \State $S \gets \{e_0\}$
+         \Comment{Seed with anchor event}
+  \State $R \gets \Call{SortByWeight}{P \setminus \{e_0\}}$
+         \Comment{Remaining candidates, weight-descending}
+  \While{$|S| < n_{\max}$ \textbf{and} $R \neq \varnothing$}
+    \State $\mathit{accepted} \gets \textsc{false}$
+    \For{each $c \in R$ in weight order}
+      \If{$\Call{IsViable}{S,\, c,\, R \setminus \{c\},\, \mathcal{A},\, n_{\max},\, \textsc{mode}}$}
+        \State $S \gets S \cup \{c\}$;\quad
+               $R \gets R \setminus \{c\}$
+        \State $\mathit{accepted} \gets \textsc{true}$;\quad
+               \textbf{break}
+      \EndIf
+    \EndFor
+    \If{$\lnot\,\mathit{accepted}$}
+      \State \textbf{break}
+           \Comment{No viable candidate remains}
+    \EndIf
+  \EndWhile
+  \State \Return $\Call{SortByTimestamp}{S}$
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[t]
+\caption{Viability Predicate (\textsc{IsViable})}
+\label{alg:viable}
+\begin{algorithmic}[1]
+\Require Current selection $S$, candidate $c$, remaining pool $R$,
+         grammar $\mathcal{A}$, max length $n_{\max}$,
+         mode $\in \{\textsc{span}, \textsc{gap}, \textsc{budget}\}$
+\Ensure \textsc{true} if adding $c$ preserves feasibility
+\Statex
+\Function{IsViable}{$S,\, c,\, R,\, \mathcal{A},\, n_{\max},\, \textsc{mode}$}
+  \State $S' \gets S \cup \{c\}$;\quad
+         $r \gets n_{\max} - |S'|$
+         \Comment{Remaining slots}
+  \Statex \Comment{\textbf{--- Common checks (all modes) ---}}
+  \If{$|S'| > n_{\max}$}
+    \Return \textsc{false}
+    \Comment{Length exceeded}
+  \EndIf
+  \If{$|S'| + \min(r, |R|) < n_{\min}$}
+    \Return \textsc{false}
+    \Comment{Cannot reach min length}
+  \EndIf
+  \If{$\Call{MaxCoverage}{S', R} < \rho$}
+    \Return \textsc{false}
+    \Comment{Focal-actor coverage unreachable}
+  \EndIf
+  \If{$\Call{MaxSpan}{S', R, r} < \gamma \cdot T$}
+    \Return \textsc{false}
+    \Comment{Span unreachable}
+  \EndIf
+  \If{$\Call{TPLocked}{S', R, \mathcal{A}}$}
+    \Return \textsc{false}
+    \Comment{TP locked with $< k$ dev events}
+  \EndIf
+  \Statex \Comment{\textbf{--- Gap-aware check (modes: gap, budget) ---}}
+  \If{$\textsc{mode} \in \{\textsc{gap}, \textsc{budget}\}$}
+    \For{each oversized gap $(t_l, t_r)$ in $S'$ with $t_r - t_l > G_{\max}$}
+      \If{no bridge event exists in $R$ with $t_l < t(v) < t_r$}
+        \Return \textsc{false}
+        \Comment{Gap unbridgeable}
+      \EndIf
+    \EndFor
+  \EndIf
+  \Statex \Comment{\textbf{--- Budget-aware check (mode: budget) ---}}
+  \If{$\textsc{mode} = \textsc{budget}$}
+    \State $B_{\mathrm{lb}} \gets \sum_{(t_i, t_{i+1}) \in S'}
+           \max\!\bigl(0,\, \lceil (t_{i+1} - t_i) / G_{\max} \rceil - 1\bigr)$
+    \If{$B_{\mathrm{lb}} > r$}
+      \Return \textsc{false}
+      \Comment{Bridge budget exceeded}
+    \EndIf
+  \EndIf
+  \State \Return \textsc{true}
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+The three modes correspond to the hierarchy levels:
+\textbf{Span-VAG} (Level~1) uses only the common checks,
+\textbf{Gap-VAG} (Level~2) adds the gap-bridgeability check, and
+\textbf{BVAG} (Level~2.5) further adds the bridge-budget reservation
+that ensures the remaining slot count can accommodate the minimum number
+of bridge events implied by oversized gaps.
 
 \begin{remark}[Failure classes are not mutually exclusive]%
 \label{rem:overlap}
@@ -398,7 +509,7 @@ assembly compression; the budget constraint catches the residual cases.
 \paragraph{Level 3: TP-Solver ($M = 25$).}
 The first algorithm in the hierarchy to use an \emph{outer loop} over
 turning-point candidates.  Instead of accepting the endogenous
-$\argmax$ pivot, the TP-Solver considers the top-$M$ focal events by
+$\argmax$ pivot~\citep{gange2020argmax}, the TP-Solver considers the top-$M$ focal events by
 weight and, for each candidate, solves the inner problem (find the best
 valid event selection given a fixed TP) via label-setting dynamic
 programming.  This outer loop directly attacks Class~A failures: if the
@@ -409,7 +520,7 @@ The TP-Solver also mitigates Class~C failures because fixing the TP
 \emph{Markovises} the inner problem: once the pivot is known, every
 event's phase label is determined by its temporal relationship to the
 fixed TP.  The inner problem reduces to a resource-constrained shortest
-path problem (RCSPP), which the label-setting DP solves efficiently with
+path problem~\citep{irnich2005shortest} (RCSPP), which the label-setting DP solves efficiently with
 dominance pruning.  Details appear in \cref{sec:tp-solver}.
 
 \paragraph{Level $\infty$: Oracle.}

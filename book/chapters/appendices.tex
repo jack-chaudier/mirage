@@ -10,7 +10,8 @@
 with a brief gloss and the chapter in which it is introduced.
 
 \noindent
-\begin{tabular}{@{} l p{8.2cm} l @{}}
+\small
+\begin{tabularx}{\textwidth}{@{} l X l @{}}
 \toprule
 \textbf{Symbol} & \textbf{Meaning} & \textbf{Introduced} \\
 \midrule
@@ -155,7 +156,7 @@ $\alpha$
     in the validity-adjusted score
   & \cref{ch:narrative} \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \label{tab:notation}
 
 % ──────────────────────────────────────────────────────────────
@@ -379,114 +380,135 @@ paths are relative to the repository root.
 
 \noindent
 \begin{small}
-\begin{tabular}{@{} p{3.0cm} p{1.6cm} p{4.6cm} p{3.4cm} @{}}
+\begin{tabular}{@{} p{2.6cm} p{1.4cm} p{1.4cm} p{3.8cm} p{3.0cm} @{}}
 \toprule
-\textbf{Claim} & \textbf{Test} & \textbf{Artifact CSV} & \textbf{Figure} \\
+\textbf{Claim} & \textbf{Test} & \textbf{Paper Exp} & \textbf{Artifact CSV} & \textbf{Figure} \\
 \midrule
 
 Tropical exactness (0~violations)
   & \texttt{test\_01}
-  & \texttt{results/raw/test\_01\_exactness.csv}
-  & \texttt{test\_01\_exactness\_heatmap.png} \\
+  & P01 Exp~1
+  & \url{results/raw/test_01_exactness.csv}
+  & \url{test_01_exactness_heatmap.png} \\
 
 Associativity (0~violations)
   & \texttt{test\_02}
-  & \texttt{results/raw/test\_02\_associativity.csv}
-  & \texttt{test\_02\_associativity\_heatmap.png} \\
+  & P01 Exp~2
+  & \url{results/raw/test_02_associativity.csv}
+  & \url{test_02_associativity_heatmap.png} \\
 
 Monoid subsumption
   & \texttt{test\_03}
-  & \texttt{results/raw/test\_03\_monoid\_subsumption.csv}
-  & \texttt{test\_03\_monoid\_richness.png} \\
+  & P01 Exp~3
+  & \url{results/raw/test_03_monoid_subsumption.csv}
+  & \url{test_03_monoid_richness.png} \\
 
 Absorbing ideal (0~violations)
   & \texttt{test\_04}
-  & \texttt{results/raw/test\_04\_absorbing\_ideal.csv}
-  & \texttt{test\_04\_absorption\_escape\_rates.png} \\
+  & P01 Exp~4
+  & \url{results/raw/test_04_absorbing_ideal.csv}
+  & \url{test_04_absorption_escape_rates.png} \\
 
 Holographic exactness
   & \texttt{test\_05}
-  & \texttt{results/raw/test\_05\_holographic\_exactness.csv}
+  & P01 Exp~5
+  & \url{results/raw/test_05_holographic_exactness.csv}
   & --- \\
 
 Incremental consistency
   & \texttt{test\_06}
-  & \texttt{results/raw/test\_06\_incremental\_consistency.csv}
+  & P01 Exp~6
+  & \url{results/raw/test_06_incremental_consistency.csv}
   & --- \\
 
 Scaling $O(n \log n)$
   & \texttt{test\_07}
-  & \texttt{results/raw/test\_07\_scaling.csv}
-  & \texttt{test\_07\_scaling\_loglog.png} \\
+  & P01 Exp~7
+  & \url{results/raw/test_07_scaling.csv}
+  & \url{test_07_scaling_loglog.png} \\
 
 Divergence (super-linear)
   & \texttt{test\_08}
-  & \texttt{results/raw/test\_08\_divergence\_raw.csv}
-  & \texttt{test\_08\_divergence\_loglog.png} \\
+  & P01 Exp~8
+  & \url{results/raw/test_08_divergence_raw.csv}
+  & \url{test_08_divergence_loglog.png} \\
 
 Record process
   & \texttt{test\_09}
-  & \texttt{results/raw/test\_09\_record\_process\_raw.csv}
-  & \texttt{test\_09\_records\_and\_min\_gap.png} \\
+  & P02 Exp~1
+  & \url{results/raw/test_09_record_process_raw.csv}
+  & \url{test_09_records_and_min_gap.png} \\
 
 Tropical shield
   & \texttt{test\_10}
-  & \texttt{results/raw/test\_10\_tropical\_shield\_raw.csv}
-  & \texttt{test\_10\_tropical\_shield\_policy\_compare.png} \\
+  & P02 Exp~2
+  & \url{results/raw/test_10_tropical_shield_raw.csv}
+  & \url{test_10_tropical_shield_policy_compare.png} \\
 
 Compression mirage
   & \texttt{test\_11}
-  & \texttt{results/raw/test\_11\_mirage\_raw.csv}
-  & \texttt{test\_11\_validity\_mirage.png} \\
+  & P03 Exp~1
+  & \url{results/raw/test_11_mirage_raw.csv}
+  & \url{test_11_validity_mirage.png} \\
 
 Deterministic witness
   & \texttt{test\_12}
-  & \texttt{results/raw/test\_12\_deterministic\_witness.csv}
-  & \texttt{test\_12\_deterministic\_witness.png} \\
+  & P03 Exp~2
+  & \url{results/raw/test_12_deterministic_witness.csv}
+  & \url{test_12_deterministic_witness.png} \\
 
 Contract compression
   & \texttt{test\_13}
-  & \texttt{results/raw/test\_13\_contract\_compression\_raw.csv}
-  & \texttt{test\_13\_contract\_vs\_naive.png} \\
+  & P03 Exp~3
+  & \url{results/raw/test_13_contract_compression_raw.csv}
+  & \url{test_13_contract_vs_naive.png} \\
 
 Margin correlation
   & \texttt{test\_14}
-  & \texttt{results/raw/test\_14\_margin\_correlation\_raw.csv}
-  & \texttt{test\_14\_margin\_quartiles.png} \\
+  & P03 Exp~4
+  & \url{results/raw/test_14_margin_correlation_raw.csv}
+  & \url{test_14_margin_quartiles.png} \\
 
 Adaptive compression
   & \texttt{test\_15}
-  & \texttt{results/raw/test\_15\_adaptive\_compression\_raw.csv}
-  & \texttt{test\_15\_adaptive\_vs\_uniform.png} \\
+  & P03 Exp~5
+  & \url{results/raw/test_15_adaptive_compression_raw.csv}
+  & \url{test_15_adaptive_vs_uniform.png} \\
 
 Organic traps (54.9\%)
   & \texttt{test\_16}
-  & \texttt{results/raw/test\_16\_organic\_traps.csv}
-  & \texttt{test\_16\_trap\_rate\_heatmaps.png} \\
+  & P02 Exp~3
+  & \url{results/raw/test_16_organic_traps.csv}
+  & \url{test_16_trap_rate_heatmaps.png} \\
 
 Tropical streaming
   & \texttt{test\_17}
-  & \texttt{results/raw/test\_17\_tropical\_streaming.csv}
-  & \texttt{test\_17\_policy\_validity\_bar.png} \\
+  & P02 Exp~4
+  & \url{results/raw/test_17_tropical_streaming.csv}
+  & \url{test_17_policy_validity_bar.png} \\
 
 Transition depth
   & \texttt{test\_18}
-  & \texttt{results/raw/test\_18\_transition\_vector\_raw.csv}
-  & \texttt{test\_18\_transition\_vector\_depth.png} \\
+  & P03 Exp~6
+  & \url{results/raw/test_18_transition_vector_raw.csv}
+  & \url{test_18_transition_vector_depth.png} \\
 
 5-model blackbox
   & ---
-  & \texttt{release/results/blackbox\_bf16\_5model/*.csv}
+  & P03 Ext
+  & \url{release/results/blackbox_bf16_5model/*.csv}
   & --- \\
 
 KV-cache eviction
   & ---
-  & \texttt{release/results/kv\_cache\_eviction\_llama31\_8b/*.csv}
+  & P03 Ext
+  & \url{release/results/kv_cache_eviction_llama31_8b/*.csv}
   & --- \\
 
 NTSB incidents
   & ---
-  & \texttt{results/ntsb/*.csv}
+  & P03 Ext
+  & \url{results/ntsb/*.csv}
   & --- \\
 \bottomrule
 \end{tabular}

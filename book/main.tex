@@ -14,6 +14,7 @@
 \usepackage{xcolor}
 \usepackage{booktabs}
 \usepackage{longtable}
+\usepackage{tabularx}
 \usepackage{float}
 
 % ── Lists ───────────────────────────────────────────────────
@@ -40,6 +41,9 @@
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 
+% ── URLs ──────────────────────────────────────────────────────
+\usepackage{url}
+
 % ══════════════════════════════════════════════════════════════
 %  Theorem environments
 % ══════════════════════════════════════════════════════════════
@@ -56,6 +60,20 @@
 
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
+
+% ── Cleveref type names ───────────────────────────────────
+\crefname{definition}{Definition}{Definitions}
+\Crefname{definition}{Definition}{Definitions}
+\crefname{lemma}{Lemma}{Lemmas}
+\Crefname{lemma}{Lemma}{Lemmas}
+\crefname{proposition}{Proposition}{Propositions}
+\Crefname{proposition}{Proposition}{Propositions}
+\crefname{example}{Example}{Examples}
+\Crefname{example}{Example}{Examples}
+\crefname{remark}{Remark}{Remarks}
+\Crefname{remark}{Remark}{Remarks}
+\crefname{corollary}{Corollary}{Corollaries}
+\Crefname{corollary}{Corollary}{Corollaries}
 
 % ══════════════════════════════════════════════════════════════
 %  Custom commands

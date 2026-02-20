@@ -17,7 +17,9 @@ exactly the same $\wstar$ and $\dpre$, while simultaneously answering
 feasibility queries at every threshold from $0$ to $k$ in a single
 pass.  The composition rule for weight vectors turns out to be a
 simple shift-and-max operation---the tropical semiring structure from
-which the chapter takes its name.
+which the chapter takes its name.\footnote{For background on tropical
+semirings, see e.g.\ Maclagan and Sturmfels, \emph{Introduction to
+Tropical Geometry}, AMS, 2015.}
 
 %% ═══════════════════════════════════════════════════════════════════
 \section{From Monoid to Weight Vectors}\label{sec:monoid-to-vectors}
@@ -282,7 +284,11 @@ for an entire event sequence is a left fold.
 \end{algorithm}
 
 \Cref{alg:build-tropical} is the direct implementation of the left
-fold.  We now trace through a complete example to build intuition.
+fold.  The code path is
+\texttt{src/tropical\_semiring.py:\allowbreak build\_tropical\_context()},
+which iterates over events and composes each singleton into the
+accumulator via \texttt{compose\_tropical()}.
+We now trace through a complete example to build intuition.
 
 \begin{example}[Full step-by-step construction]
 \label{ex:full-construction}

@@ -175,7 +175,7 @@ violation is raised.  The report is wrong.
 \label{sec:constrained-decoding}
 %% ─────────────────────────────────────────────────────────────
 
-Grammar-constrained decoding systems---PICARD for SQL, Outlines for
+Grammar-constrained decoding systems---PICARD~\citep{scholak2021picard} for SQL, Outlines~\citep{willard2023outlines} for
 structured JSON, guidance masks for schema-valid generation---commit to a
 schema path early in the generation process.  This commitment is
 functionally equivalent to selecting a structural pivot: once the model
@@ -195,7 +195,7 @@ context happened to survive truncation.
 \label{sec:process-mining}
 %% ─────────────────────────────────────────────────────────────
 
-In process mining, analysts discover a process model from an event log
+In process mining~\citep{vanderaalst2016process}, analysts discover a process model from an event log
 by selecting a \emph{reference activity} that anchors the temporal
 alignment of all other activities.  If the reference activity is selected
 endogenously---for instance, as the most frequent activity in the
@@ -400,7 +400,7 @@ that the reader has a concrete target as the theory develops.
     large mirage gap means the system is hiding semantic drift behind
     superficial well-formedness.  In the headline experiment of
     \cref{ch:mirage}, raw validity holds steady at $1.0$ while pivot
-    preservation drops to $0.35$, producing a mirage gap of $0.65$.
+    preservation drops to ${\sim}0.35$, producing a mirage gap of approximately $0.64$.
     The system appears to be working perfectly.  It is not.
 \end{enumerate}
 

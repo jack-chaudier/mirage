@@ -1,8 +1,9 @@
 from __future__ import annotations
 
+import concurrent.futures
 import os
 from pathlib import Path
-from typing import Dict, List, Sequence
+from typing import Any, Dict, List, Sequence
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -139,6 +140,81 @@ def _convergence_precheck(
     return selected, pre
 
 
+def _compute_sequence_row(task: Dict[str, Any]) -> Dict[str, float]:
+    """Compute one (method, epsilon, retention, sequence_seed) row."""
+
+    method = str(task["method"])
+    epsilon = float(task["epsilon"])
+    retention = float(task["retention"])
+    seq_seed = int(task["sequence_seed"])
+    n = int(task["n"])
+    n_focal = int(task["n_focal"])
+    k = int(task["k"])
+    M = int(task["M"])
+    selected_comp_seeds = int(task["selected_compression_seeds"])
+    chain_trials = int(task["chain_trials"])
+    depths = [int(d) for d in task["depths"]]
+    seed_start = int(task["seed_start"])
+
+    events = bursty_generator(n=n, n_focal=n_focal, epsilon=epsilon, seed=seq_seed)
+    locked = extract_locked_candidates(events, M=M)
+    compression_seeds = range(seed_start, seed_start + selected_comp_seeds)
+    est = estimate_single_step_transition(
+        events,
+        k=k,
+        retention=retention,
+        locked_candidates=locked,
+        compression_seeds=compression_seeds,
+        method=method,
+    )
+    margin = margin_features(events, k=k)
+    chain_curve = run_chained_compression_survival_curve(
+        events,
+        k=k,
+        retention=retention,
+        locked_candidates=locked,
+        depths=depths,
+        chain_trials=chain_trials,
+        base_seed=seed_start + 777_777,
+        method=method,
+        baseline_pivot_eid=(int(est["baseline_pivot_eid"]) if est["baseline_pivot_eid"] is not None else None),
+    )
+    preds = depth_predictions(
+        p11=float(est["p11"]),
+        retention=retention,
+        depths=depths,
+    )
+
+    row: Dict[str, float] = {
+        "method": method,
+        "epsilon": float(epsilon),
+        "retention": float(retention),
+        "compression_rate": float(1.0 - retention),
+        "sequence_seed": float(seq_seed),
+        "k": float(k),
+        "M": float(M),
+        "selected_compression_seeds": float(selected_comp_seeds),
+        "chain_trials": float(chain_trials),
+        "locked_candidate_count": float(est["locked_candidate_count"]),
+        "baseline_valid": float(est["baseline_valid"]),
+        "baseline_pivot_eid": (float(est["baseline_pivot_eid"]) if est["baseline_pivot_eid"] is not None else np.nan),
+        "baseline_weight": float(est["baseline_weight"]),
+        "baseline_prefix": (float(est["baseline_prefix"]) if est["baseline_prefix"] is not None else np.nan),
+        "p11": float(est["p11"]),
+        "p_other": float(est["p_other"]),
+        "p_loss": float(est["p_loss"]),
+        "mean_achieved_retention": float(est["mean_achieved_retention"]),
+        "margin": float(margin["margin"]),
+        "margin_finite": float(margin["margin_finite"]) if np.isfinite(margin["margin_finite"]) else np.nan,
+    }
+
+    for d in depths:
+        row[f"pred_p11_pow_d{d}"] = float(preds[d]["pred_p11_pow_d"])
+        row[f"pred_retention_pow_d{d}"] = float(preds[d]["pred_retention_pow_d"])
+        row[f"empirical_chain_survival_d{d}"] = float(chain_curve[d])
+    return row
+
+
 def run(results_dir: Path | None = None) -> Dict[str, float]:
     root = Path(__file__).resolve().parents[1]
     if results_dir is None:
@@ -179,85 +255,48 @@ def run(results_dir: Path | None = None) -> Dict[str, float]:
     print(f"Selected compression seeds per sequence: {selected_comp_seeds}")
 
     rows: List[Dict[str, float]] = []
-    for method_idx, method in enumerate(methods):
-        for eps_idx, epsilon in enumerate(epsilons):
-            for ret_idx, retention in enumerate(retentions):
-                for seq_seed in range(sequence_seed_count):
-                    events = bursty_generator(n=n, n_focal=n_focal, epsilon=float(epsilon), seed=seq_seed)
-                    locked = extract_locked_candidates(events, M=M)
+    reserved_cores = max(1, _env_int("ECT_TEST18_RESERVED_CORES", 2))
+    max_workers = max(1, (os.cpu_count() or 2) - reserved_cores)
+    print(
+        f"Using ProcessPoolExecutor with max_workers={max_workers} "
+        f"(reserved_cores={reserved_cores})"
+    )
+    with concurrent.futures.ProcessPoolExecutor(max_workers=max_workers) as executor:
+        for method_idx, method in enumerate(methods):
+            for eps_idx, epsilon in enumerate(epsilons):
+                for ret_idx, retention in enumerate(retentions):
+                    tasks: List[Dict[str, Any]] = []
+                    for seq_seed in range(sequence_seed_count):
+                        seed_start = (
+                            1_000_000_000
+                            + method_idx * 100_000_000
+                            + eps_idx * 10_000_000
+                            + ret_idx * 1_000_000
+                            + seq_seed * 10_000
+                        )
+                        tasks.append(
+                            {
+                                "method": method,
+                                "epsilon": float(epsilon),
+                                "retention": float(retention),
+                                "sequence_seed": int(seq_seed),
+                                "n": int(n),
+                                "n_focal": int(n_focal),
+                                "k": int(k),
+                                "M": int(M),
+                                "selected_compression_seeds": int(selected_comp_seeds),
+                                "chain_trials": int(chain_trials),
+                                "depths": [int(d) for d in depths],
+                                "seed_start": int(seed_start),
+                            }
+                        )
 
-                    seed_start = (
-                        1_000_000_000
-                        + method_idx * 100_000_000
-                        + eps_idx * 10_000_000
-                        + ret_idx * 1_000_000
-                        + seq_seed * 10_000
+                    for row in executor.map(_compute_sequence_row, tasks):
+                        rows.append(row)
+                    print(
+                        f"Completed method={method} epsilon={float(epsilon):.1f} "
+                        f"retention={float(retention):.1f} ({len(tasks)} sequences)"
                     )
-                    compression_seeds = range(seed_start, seed_start + selected_comp_seeds)
-                    est = estimate_single_step_transition(
-                        events,
-                        k=k,
-                        retention=float(retention),
-                        locked_candidates=locked,
-                        compression_seeds=compression_seeds,
-                        method=method,
-                    )
-                    margin = margin_features(events, k=k)
-                    chain_curve = run_chained_compression_survival_curve(
-                        events,
-                        k=k,
-                        retention=float(retention),
-                        locked_candidates=locked,
-                        depths=depths,
-                        chain_trials=chain_trials,
-                        base_seed=seed_start + 777_777,
-                        method=method,
-                        baseline_pivot_eid=(
-                            int(est["baseline_pivot_eid"]) if est["baseline_pivot_eid"] is not None else None
-                        ),
-                    )
-                    preds = depth_predictions(
-                        p11=float(est["p11"]),
-                        retention=float(retention),
-                        depths=depths,
-                    )
-
-                    row: Dict[str, float] = {
-                        "method": method,
-                        "epsilon": float(epsilon),
-                        "retention": float(retention),
-                        "compression_rate": float(1.0 - retention),
-                        "sequence_seed": float(seq_seed),
-                        "k": float(k),
-                        "M": float(M),
-                        "selected_compression_seeds": float(selected_comp_seeds),
-                        "chain_trials": float(chain_trials),
-                        "locked_candidate_count": float(est["locked_candidate_count"]),
-                        "baseline_valid": float(est["baseline_valid"]),
-                        "baseline_pivot_eid": (
-                            float(est["baseline_pivot_eid"])
-                            if est["baseline_pivot_eid"] is not None
-                            else np.nan
-                        ),
-                        "baseline_weight": float(est["baseline_weight"]),
-                        "baseline_prefix": (
-                            float(est["baseline_prefix"]) if est["baseline_prefix"] is not None else np.nan
-                        ),
-                        "p11": float(est["p11"]),
-                        "p_other": float(est["p_other"]),
-                        "p_loss": float(est["p_loss"]),
-                        "mean_achieved_retention": float(est["mean_achieved_retention"]),
-                        "margin": float(margin["margin"]),
-                        "margin_finite": float(margin["margin_finite"])
-                        if np.isfinite(margin["margin_finite"])
-                        else np.nan,
-                    }
-
-                    for d in depths:
-                        row[f"pred_p11_pow_d{d}"] = float(preds[d]["pred_p11_pow_d"])
-                        row[f"pred_retention_pow_d{d}"] = float(preds[d]["pred_retention_pow_d"])
-                        row[f"empirical_chain_survival_d{d}"] = float(chain_curve[d])
-                    rows.append(row)
 
     raw_df = pd.DataFrame(rows)
 

@@ -26,7 +26,7 @@ meaning depends on an \emph{endogenous pivot} selected by $\argmax$
 over the output itself, a valid output with a substituted pivot is
 syntactically well-formed yet semantically different from the intended
 output.  In our experiments, raw validity stays at $1.0$ while pivot
-preservation drops to $0.35$---a $65\%$ silent substitution rate
+preservation drops to ${\sim}0.35$---a ${\approx}\,65\%$ silent substitution rate
 (\cref{ch:mirage}).  Any system that reports only raw validity is hiding
 potential semantic drift behind a perfect score.
 
@@ -61,7 +61,7 @@ Constraints}
 
 The feasible family under endogenous pivot selection violates both the
 hereditary axiom and the exchange axiom
-(\cref{ch:formal-problem}, Proposition).  This structural violation
+(\cref{prop:non-matroid}).  This structural violation
 means that greedy algorithms---the default workhorse for constrained
 selection in combinatorial optimisation---have \emph{zero} approximation
 guarantees for endogenous pivot problems.
@@ -119,7 +119,7 @@ Strict grammar constraints achieve $88\%$ validity; relaxed (strictly
 more permissive) constraints achieve $32\%$ (\cref{ch:narrative}).  The
 constraints act as regularisers that prevent the optimisation metric from
 exploiting degenerate solutions.  Removing constraints in the name of
-``flexibility'' or ``generality'' opens the door to Goodhart collapse:
+``flexibility'' or ``generality'' opens the door to Goodhart collapse~\citep{goodhart1984problems}:
 the metric is optimised, but the output is meaningless.
 
 The single necessary constraint---minimum development beats $\ge 1$---accounts for $100\%$ of observed failures in the narrative extraction

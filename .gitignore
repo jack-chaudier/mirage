@@ -1,6 +1,3 @@
-# Worktrees
-.worktrees/
-
 # Secrets / local config
 .env
 .env.*
