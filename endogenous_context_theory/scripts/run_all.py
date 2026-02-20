@@ -175,30 +175,73 @@ def write_summary_report(run_df: pd.DataFrame, results_dir: Path) -> None:
         if pd.notna(selected):
             lines.append(f"- Compression-seed convergence selected: **{int(round(selected))}** seeds per sequence.")
 
-        low = t18[t18["retention"] <= 0.5]
-        if len(low) > 0:
-            d1 = float(low["empirical_chain_survival_d1"].mean())
-            d8 = float(low["empirical_chain_survival_d8"].mean())
-            drop = d1 - d8
-            lines.append(
-                f"- Mean empirical chained survival drop at retention <= 0.5: **{drop:.3f}** "
-                f"(d=1: {d1:.3f} -> d=8: {d8:.3f})."
-            )
-            if "abs_err_p11_d8" in low and "abs_err_retention_d8" in low:
-                err_p11 = float(low["abs_err_p11_d8"].mean())
-                err_ret = float(low["abs_err_retention_d8"].mean())
+        has_method = "method" in t18.columns
+        methods = sorted(t18["method"].dropna().unique().tolist()) if has_method else []
+        if has_method and methods:
+            for method in methods:
+                low = t18[(t18["method"] == method) & (t18["retention"] <= 0.5)]
+                if len(low) == 0:
+                    continue
+                d1 = float(low["empirical_chain_survival_d1"].mean())
+                d8 = float(low["empirical_chain_survival_d8"].mean())
+                drop = d1 - d8
                 lines.append(
-                    f"- Depth-8 prediction error: **p11^d={err_p11:.3f}** vs **retention^d={err_ret:.3f}**."
+                    f"- {method.capitalize()} chained survival drop at retention <= 0.5: **{drop:.3f}** "
+                    f"(d=1: {d1:.3f} -> d=8: {d8:.3f})."
                 )
+                if "abs_err_p11_d8" in low and "abs_err_retention_d8" in low:
+                    err_p11 = float(low["abs_err_p11_d8"].mean())
+                    err_ret = float(low["abs_err_retention_d8"].mean())
+                    lines.append(
+                        f"- {method.capitalize()} depth-8 prediction error: **p11^d={err_p11:.3f}** vs **retention^d={err_ret:.3f}**."
+                    )
+
+            if {"naive", "contract"}.issubset(set(methods)):
+                nlow = t18[(t18["method"] == "naive") & (t18["retention"] <= 0.5)]
+                clow = t18[(t18["method"] == "contract") & (t18["retention"] <= 0.5)]
+                if len(nlow) > 0 and len(clow) > 0:
+                    n_gap = float(nlow[["abs_err_p11_d4", "abs_err_p11_d8"]].to_numpy().mean())
+                    c_gap = float(clow[["abs_err_p11_d4", "abs_err_p11_d8"]].to_numpy().mean())
+                    lines.append(
+                        f"- Contract-vs-naive low-retention deep-depth p11^d gap improvement: **{(n_gap - c_gap):.3f}** "
+                        f"(naive {n_gap:.3f} -> contract {c_gap:.3f})."
+                    )
+        else:
+            low = t18[t18["retention"] <= 0.5]
+            if len(low) > 0:
+                d1 = float(low["empirical_chain_survival_d1"].mean())
+                d8 = float(low["empirical_chain_survival_d8"].mean())
+                drop = d1 - d8
+                lines.append(
+                    f"- Mean empirical chained survival drop at retention <= 0.5: **{drop:.3f}** "
+                    f"(d=1: {d1:.3f} -> d=8: {d8:.3f})."
+                )
+                if "abs_err_p11_d8" in low and "abs_err_retention_d8" in low:
+                    err_p11 = float(low["abs_err_p11_d8"].mean())
+                    err_ret = float(low["abs_err_retention_d8"].mean())
+                    lines.append(
+                        f"- Depth-8 prediction error: **p11^d={err_p11:.3f}** vs **retention^d={err_ret:.3f}**."
+                    )
 
     if t18corr is not None and len(t18corr) > 0:
-        overall = t18corr[t18corr["group"] == "overall"]
-        if len(overall) > 0:
-            row = overall.iloc[0]
-            lines.append(
-                f"- Margin-to-p11 correlation (overall): "
-                f"Pearson **{float(row['pearson_corr']):.3f}**, Spearman **{float(row['spearman_corr']):.3f}**."
-            )
+        if "method" in t18corr.columns:
+            for method in sorted(t18corr["method"].dropna().unique().tolist()):
+                overall = t18corr[t18corr["group"] == f"overall_{method}"]
+                if len(overall) == 0:
+                    continue
+                row = overall.iloc[0]
+                lines.append(
+                    f"- Margin-to-p11 correlation ({method}): "
+                    f"Pearson **{float(row['pearson_corr']):.3f}**, Spearman **{float(row['spearman_corr']):.3f}**."
+                )
+        else:
+            overall = t18corr[t18corr["group"] == "overall"]
+            if len(overall) > 0:
+                row = overall.iloc[0]
+                lines.append(
+                    f"- Margin-to-p11 correlation (overall): "
+                    f"Pearson **{float(row['pearson_corr']):.3f}**, Spearman **{float(row['spearman_corr']):.3f}**."
+                )
 
     lines.append("")
     lines.append("## 8. Overall Assessment")
