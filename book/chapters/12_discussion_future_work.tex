@@ -42,8 +42,8 @@ The absorbing-state analysis formalised the impossibility.  When $\jdev
 the argmax-selected pivot falls below the prefix requirement---greedy
 search produces zero valid sequences.  The failure is not probabilistic;
 it is structural.  \Cref{ch:taxonomy} classified failures into four
-classes: Class~A (pivot loss), Class~B (pivot displacement),
-Class~C (phase collapse), and Class~D (semantic regret) and constructed a
+classes: Class~A (absorbing state), Class~B (pipeline coupling),
+Class~C (commitment timing), and Class~D (assembly compression) and constructed a
 hierarchy of solvers: greedy, enumerative, and TP-conditioned.  Each
 level in the hierarchy trades computational cost for strictly greater
 coverage of the failure space.
@@ -60,7 +60,7 @@ emerged: deferred commitment (with patience parameter $f$) and tropical
 streaming, which maintains a weight vector over all possible pre-pivot
 development counts and defers role assignment until the vector stabilises.
 
-\paragraph{Paper~03: Context Algebra~\citep{gaffney2026mirage} (Chapters~5, 7, 9).}
+\paragraph{Paper~03: Context Algebra~\citep{gaffney2026mirage} (Chapters~5, 6, 7, 9).}
 The context algebra unified everything into a single algebraic
 framework.  The context monoid $(\mathcal{C}, \opendo)$ compresses any
 contiguous block of events into a triple $(\wstar, \dtotal, \dpre)$

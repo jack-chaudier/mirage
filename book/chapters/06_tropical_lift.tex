@@ -146,27 +146,28 @@ with the same threshold $k$.  Their \textbf{tropical composition} is
   T_A \otimes T_B \;=\; (W_{\mathrm{result}},\; d_A + d_B),
 \]
 where $W_{\mathrm{result}}$ is computed by the following
-shift-and-max rule.  For each result slot $j = 0, 1, \ldots, k$:
-\begin{equation}\label{eq:shift-and-max}
-  W_{\mathrm{result}}[j]
-  \;=\;
-  \begin{cases}
-    W_A[j]
-      & \text{if } j < d_A, \\[4pt]
-    \max\!\bigl(W_A[j],\; W_B[j - d_A]\bigr)
-      & \text{if } j \ge d_A.
-  \end{cases}
-\end{equation}
+shift-and-max rule:
+\begin{enumerate}[label=(\roman*)]
+  \item Initialise $W_{\mathrm{result}} := W_A$ (copy all of $A$'s entries).
+  \item For each $j' = 0, 1, \ldots, k$, let $j = \min(j' + d_A,\; k)$
+    and set
+    \begin{equation}\label{eq:shift-and-max}
+      W_{\mathrm{result}}[j]
+      \;\leftarrow\;
+      \max\!\bigl(W_{\mathrm{result}}[j],\; W_B[j']\bigr).
+    \end{equation}
+\end{enumerate}
 \end{definition}
 
 The logic is as follows.  A pivot from block $A$ that already had $j$
-pre-pivot development events keeps its slot: those $j$ events are still
-before it in the concatenated sequence.  A pivot from block $B$ that
-had $j'$ pre-pivot development events within $B$ acquires all $d_A$ of
-$A$'s non-focal events as additional predecessors, so it shifts from
-slot $j'$ to slot $j' + d_A$.  If $j' + d_A > k$, the shifted slot is
-capped at $k$ (both slots $j' + d_A$ and $k$ indicate ``at least $k$
-pre-pivot events'').
+pre-pivot development events keeps its slot: step~(i) copies all of
+$A$'s entries into the result.  A pivot from block $B$ that had $j'$
+pre-pivot development events within $B$ acquires all $d_A$ of $A$'s
+non-focal events as additional predecessors, so step~(ii) writes it to
+result slot $\min(j' + d_A,\; k)$.  When $j' + d_A > k$, the shifted
+slot is capped at $k$ (both slots $j' + d_A$ and $k$ indicate ``at
+least $k$ pre-pivot events''), and the $\max$ accumulates multiple
+$B$-pivots that map to the same capped slot.
 
 This is precisely the operational meaning of the $\dpre$ promotion
 from \cref{eq:comp-dpre} in \cref{ch:context-algebra}: when a pivot
@@ -174,13 +175,11 @@ resides in block $B$, all of $A$'s development capacity becomes
 pre-pivot.
 
 \begin{remark}[Capping at $k$]\label{rem:capping}
-The formulation in \cref{eq:shift-and-max} handles capping implicitly:
-because the weight vector has only $k+1$ entries indexed $0$ through
-$k$, a pivot from $B$ at slot $j'$ with $j' + d_A > k$ maps to
-result slot $k$ via
-$W_{\mathrm{result}}[k] = \max(W_{\mathrm{result}}[k],\; W_B[j'])$.
-The implementation iterates over the entries of $W_B$ and writes to
-$\min(j' + d_A,\; k)$, which is equivalent.
+The iteration in \cref{eq:shift-and-max} handles capping explicitly:
+a pivot from $B$ at slot $j'$ with $j' + d_A > k$ is written to
+result slot $\min(j' + d_A,\; k) = k$, accumulating via $\max$ with
+any value already at slot~$k$.  This ensures that pivots with ``at
+least $k$'' pre-pivot events are correctly aggregated.
 \end{remark}
 
 \begin{example}[Tropical composition]\label{ex:tropical-composition}
@@ -189,29 +188,33 @@ Let $k = 3$, and consider the two tropical contexts
   T_A &= \bigl(\,[5.0,\; 3.0,\; -\infty,\; -\infty],\;\; d_A = 2\bigr),\\
   T_B &= \bigl(\,[7.0,\; -\infty,\; 4.0,\; -\infty],\;\; d_B = 3\bigr).
 \end{align*}
-We compute $T_A \otimes T_B$ slot by slot:
+We compute $T_A \otimes T_B$ using the iteration form.
+Initialise $W_{\mathrm{result}} = W_A = [5.0,\; 3.0,\; -\infty,\; -\infty]$.
 \begin{align*}
-  j = 0 &\colon\; j < d_A = 2, \quad
-    W_{\mathrm{result}}[0] = W_A[0] = 5.0. \\[3pt]
-  j = 1 &\colon\; j < d_A = 2, \quad
-    W_{\mathrm{result}}[1] = W_A[1] = 3.0. \\[3pt]
-  j = 2 &\colon\; j \ge d_A, \quad
-    W_{\mathrm{result}}[2] = \max\!\bigl(W_A[2],\; W_B[2 - 2]\bigr)
+  j' = 0 &\colon\; j = \min(0+2,\;3) = 2.\quad
+    W_{\mathrm{result}}[2] \leftarrow \max(-\infty,\; W_B[0])
     = \max(-\infty,\; 7.0) = 7.0. \\[3pt]
-  j = 3 &\colon\; j \ge d_A, \quad
-    W_{\mathrm{result}}[3] = \max\!\bigl(W_A[3],\; W_B[3 - 2]\bigr)
-    = \max(-\infty,\; -\infty) = -\infty.
+  j' = 1 &\colon\; j = \min(1+2,\;3) = 3.\quad
+    W_{\mathrm{result}}[3] \leftarrow \max(-\infty,\; W_B[1])
+    = \max(-\infty,\; -\infty) = -\infty. \\[3pt]
+  j' = 2 &\colon\; j = \min(2+2,\;3) = 3.\quad
+    W_{\mathrm{result}}[3] \leftarrow \max(-\infty,\; W_B[2])
+    = \max(-\infty,\; 4.0) = 4.0. \\[3pt]
+  j' = 3 &\colon\; j = \min(3+2,\;3) = 3.\quad
+    W_{\mathrm{result}}[3] \leftarrow \max(4.0,\; W_B[3])
+    = \max(4.0,\; -\infty) = 4.0.
 \end{align*}
 The result is
 \[
   T_A \otimes T_B
-  = \bigl(\,[5.0,\; 3.0,\; 7.0,\; -\infty],\;\; d = 5\bigr).
+  = \bigl(\,[5.0,\; 3.0,\; 7.0,\; 4.0],\;\; d = 5\bigr).
 \]
 \textbf{Interpretation.}\; The best pivot with zero pre-pivot
 development events has weight $5.0$ (from $A$, slot~0).  With exactly
 two pre-pivot events, the best weight is $7.0$ (from $B$, shifted by
-$d_A = 2$).  Slot~3 is $-\infty$, so no feasible pivot exists at
-threshold $k = 3$.
+$d_A = 2$).  Slot~3 has weight $4.0$: this comes from $W_B[2]$,
+which maps to slot $\min(2+2,\;3) = 3$ via capping.  The context is
+\textbf{feasible} at $k = 3$ with best feasible pivot weight $4.0$.
 \end{example}
 
 \begin{proposition}[Associativity of tropical composition]

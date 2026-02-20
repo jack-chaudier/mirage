@@ -59,14 +59,15 @@ symbols that must be consumed before \textsc{turning\_point}.
   The \emph{development-eligible count} is $\jdev = |D|$.
 \end{definition}
 
-The three conditions in the definition deserve emphasis.
-Condition~(i), $v \neq e^{*}$, excludes the turning point itself.
-Condition~(ii), $t(v) < t(e^{*})$, restricts attention to events that
+The two conditions in the definition deserve emphasis.
+Condition~(i), $t(v) < t(e^{*})$, restricts attention to events that
 precede the turning point in the timeline; events after the turning point
 cannot contribute \textsc{development} symbols under the monotonic grammar
-(\cref{lem:dfa-monotonicity}).  Condition~(iii) encodes the
+(\cref{lem:dfa-monotonicity}).  Condition~(ii) encodes the
 classifier--policy interaction: whether a given event \emph{can} receive
 the \textsc{development} label depends on the classifier in use.
+(The exclusion $v \neq e^{*}$ is already captured by the requirement
+$v \in P = V \setminus \{e^{*}\}$.)
 
 \begin{remark}[Classifier dependence of~$\jdev$]\label{rem:classifier-dep}
   The count~$\jdev$ depends on the classifier--policy interaction.
@@ -267,6 +268,13 @@ automaton}~$\mathcal{P}$.
       \textsc{turning\_point}) is satisfied.
   \end{itemize}
 \end{definition}
+
+Note that the greedy walk selects events in weight order, but phase
+labels are assigned relative to the turning point's timestamp, which is
+fixed at selection time.  An event classified as \textsc{development}
+during greedy selection always has timestamp earlier than the turning
+point's timestamp, by the event-ordering convention of
+\cref{def:event-ordering}.
 
 The greedy policy imposes one hard constraint on the walk
 through~$\mathcal{P}$:

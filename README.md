@@ -83,7 +83,7 @@ Weights and eval notebook are in `release/adapters/mirage_aware_v1/`.
 | `projects/lorien/` | NarrativeField — the narrative simulation engine where this started |
 | `projects/rhun/` | Rhun — the domain-agnostic greedy extraction failure framework |
 | `endogenous_context_theory/src/` | Tropical semiring algebra, compression, pivot-margin code |
-| `endogenous_context_theory/tests/` | 17 synthetic validation experiments |
+| `endogenous_context_theory/tests/` | 18 synthetic validation experiments |
 | `endogenous_context_theory/release/` | MirageBench tasks, notebooks, result CSVs, figures, LoRA adapter |
 | `endogenous_context_theory/results/ntsb/` | Real-incident NTSB benchmark (external validation) |
 
@@ -95,7 +95,7 @@ cd endogenous_context_theory
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
-# Run all 17 synthetic validation experiments
+# Run all 18 synthetic validation experiments
 python scripts/run_all.py
 
 # Rebuild release figures and summary tables

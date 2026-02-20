@@ -426,7 +426,8 @@ threshold $k$.  Concretely:
 \label{rem:why-dtotal}
 The contract is stated in terms of $\dtotal$ rather than $\dpre$ for a
 fundamental reason: the compression map does not know which event will
-ultimately serve as the pivot.
+ultimately serve as the pivot, nor which events will appear in the
+subsequent suffix.
 
 At compression time, the pivot identity may still be provisional
 ($\kappa = 0$), and a future suffix may shift the pivot to a different
@@ -453,6 +454,20 @@ stronger guard is not required by the theory (the absorbing-ideal results
 hold with the minimal contract) but is advisable in practice, since it
 catches near-absorbing states that the minimal $\dtotal \ge k$ contract
 would pass.
+
+\begin{remark}[Necessary vs.\ sufficient guards]\label{rem:necessary-sufficient}
+\Cref{def:no-absorption-contract} states a \emph{necessary} condition
+for no absorption: if $\dtotal(\mu(B)) < \min(\dtotal(B),\, k)$,
+absorption is guaranteed.  The algorithm's tropical $W[k]$ guard is a
+\emph{sufficient} condition: it checks whether the best feasible
+pivot---one with at least $k$ non-focal predecessors---survives compression.
+The $W[k]$ guard is strictly stronger than the $\dtotal$ contract:
+one can satisfy $\dtotal \ge k$ while placing all $k$ non-focal events
+\emph{after} every focal event, which destroys the pivot's pre-pivot
+prefix.  The $W[k]$ guard catches this case; the $\dtotal$ contract does not.
+In practice, use the $W[k]$ guard when tropical contexts are available
+and fall back to the $\dtotal$ contract when only event counts are known.
+\end{remark}
 
 \begin{algorithm}[t]
 \caption{Contract-guarded compression}

@@ -569,23 +569,9 @@ $X_1, \ldots, X_{j+1}$.  By exchangeability,
 
 \emph{Poisson approximation.}\; Let $N_n = \#\{i : G_i = 1\}$ count
 the number of unit gaps among the first $M - 1$ inter-record gaps.
-Define indicator variables $I_i = \mathbf{1}[G_i = 1]$.  The expected
-number of unit gaps is
-\[
-  \mathbb{E}[N_n]
-  \;=\; \sum_{i=1}^{M-1} \Pr(G_i = 1)
-  \;=\; \sum_{i=1}^{M-1} \frac{1}{R_i + 1}.
-\]
-Since $R_i \approx i$ for the early records and $M \approx \ln n$, this
-sum is well approximated by $\sum_{j=2}^{\ln n} 1/j \approx
-\ln(\ln n)$, which diverges slowly.  However, the crucial point is that
-$\mathbb{E}[N_n] \to \lambda$ for a finite effective parameter
-$\lambda$.  A careful analysis shows that the indicators $I_i$ are
-asymptotically rare and weakly dependent, so by the Poisson limit
-theorem, $N_n$ converges in distribution to a Poisson random variable
-with parameter $\lambda = 1$.  (The parameter $\lambda = 1$ arises
-because the sum $\sum_{i} 1/(R_i + 1)$ converges to $1$ when restricted
-to records that contribute materially to the minimum gap.)
+By a classical result on record spacings \citep[Chapter~5]{nevzorov2001},
+the number of unit gaps among the first $n$ observations converges in
+distribution to a Poisson random variable with parameter $\lambda = 1$.
 
 Therefore:
 \[

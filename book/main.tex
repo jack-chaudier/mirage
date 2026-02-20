@@ -44,24 +44,46 @@
 % ── URLs ──────────────────────────────────────────────────────
 \usepackage{url}
 
+% ── Alias counters (shared numbering, distinct cleveref types) ──
+\usepackage{aliascnt}
+
 % ══════════════════════════════════════════════════════════════
 %  Theorem environments
 % ══════════════════════════════════════════════════════════════
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollary}
+
+\newaliascnt{lemma}{theorem}
+\newtheorem{lemma}[lemma]{Lemma}
+\aliascntresetthe{lemma}
+
+\newaliascnt{proposition}{theorem}
+\newtheorem{proposition}[proposition]{Proposition}
+\aliascntresetthe{proposition}
+
+\newaliascnt{corollary}{theorem}
+\newtheorem{corollary}[corollary]{Corollary}
+\aliascntresetthe{corollary}
 
 \theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{example}[theorem]{Example}
+\newaliascnt{definition}{theorem}
+\newtheorem{definition}[definition]{Definition}
+\aliascntresetthe{definition}
+
+\newaliascnt{example}{theorem}
+\newtheorem{example}[example]{Example}
+\aliascntresetthe{example}
+
 \newtheorem{exercise}{Exercise}[chapter]
 
 \theoremstyle{remark}
-\newtheorem{remark}[theorem]{Remark}
+\newaliascnt{remark}{theorem}
+\newtheorem{remark}[remark]{Remark}
+\aliascntresetthe{remark}
 
 % ── Cleveref type names ───────────────────────────────────
+\crefname{theorem}{Theorem}{Theorems}
+\Crefname{theorem}{Theorem}{Theorems}
 \crefname{definition}{Definition}{Definitions}
 \Crefname{definition}{Definition}{Definitions}
 \crefname{lemma}{Lemma}{Lemmas}
