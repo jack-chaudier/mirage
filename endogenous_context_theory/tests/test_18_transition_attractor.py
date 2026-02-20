@@ -174,6 +174,9 @@ def run(results_dir: Path | None = None) -> Dict[str, float]:
         candidate_compression_counts=precheck_counts,
     )
     save_csv(precheck_df, raw_dir, "test_18_transition_convergence_check.csv")
+    print("\nConvergence precheck (compression seeds):")
+    print(precheck_df.to_string(index=False))
+    print(f"Selected compression seeds per sequence: {selected_comp_seeds}")
 
     rows: List[Dict[str, float]] = []
     for method_idx, method in enumerate(methods):
