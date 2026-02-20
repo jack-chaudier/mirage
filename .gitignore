@@ -68,3 +68,4 @@ dist/
 # External project heavy runtime outputs
 projects/rhun/experiments/output/
 projects/lorien/src/engine/scripts/output/
+book/
