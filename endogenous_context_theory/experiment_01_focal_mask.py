@@ -9,9 +9,10 @@ prefix requirement k, the asymptotic trap rate satisfies:
 where:
     Lambda_k(p) = -ln(1-p) + sum_{g=1}^{k-1} [1 - (1-p)^g] / g.
 
-This script loads trace data (JSON/CSV), computes empirical min_gap from
-record-setting focal events with strict running-max inequality, and compares
-observed trap rates to theorem predictions across epsilon slices.
+This script loads trace data (JSON/CSV), computes strict running-max record
+statistics, and compares theorem predictions against observed trap rates across
+epsilon slices using either a min-gap proxy or the Paper-02 streaming
+label-lock simulation.
 """
 
 from __future__ import annotations
@@ -575,6 +576,81 @@ def compute_record_stats(events: Sequence[CanonicalEvent]) -> tuple[int, float]:
     return len(record_positions), min_gap
 
 
+def _ordered_events(events: Sequence[CanonicalEvent]) -> list[tuple[int, CanonicalEvent]]:
+    return sorted(enumerate(events), key=lambda pair: (pair[1].position, pair[0]))
+
+
+def finite_validity_offline(events: Sequence[CanonicalEvent], k: int) -> bool:
+    """Paper-02-style finite validity: any focal pivot with >=k prior events."""
+
+    ordered = _ordered_events(events)
+    events_before = 0
+    idx = 0
+    n = len(ordered)
+    while idx < n:
+        pos = ordered[idx][1].position
+        group_end = idx
+        while group_end < n and ordered[group_end][1].position == pos:
+            group_end += 1
+        for _, event in ordered[idx:group_end]:
+            if event.focal and events_before >= k:
+                return True
+        events_before += (group_end - idx)
+        idx = group_end
+    return False
+
+
+def streaming_simulation_outcome(events: Sequence[CanonicalEvent], k: int) -> dict[str, bool | int]:
+    """Paper-02 commit-now label-lock simulation on canonical traces."""
+
+    ordered = _ordered_events(events)
+    current_pivot_idx: int | None = None
+    current_pivot_weight = float("-inf")
+    committed_labels: dict[int, str] = {}
+    tp_committed = False
+
+    for idx, event in ordered:
+        if event.focal and event.weight > current_pivot_weight:
+            current_pivot_idx = idx
+            current_pivot_weight = event.weight
+            committed_labels[idx] = "TURNING_POINT"
+            tp_committed = True
+            continue
+
+        if tp_committed and current_pivot_idx is not None:
+            pivot_pos = events[current_pivot_idx].position
+            if event.position < pivot_pos:
+                committed_labels[idx] = "DEVELOPMENT"
+            elif event.position > pivot_pos:
+                committed_labels[idx] = "RESOLUTION"
+            elif idx != current_pivot_idx:
+                committed_labels[idx] = "RESOLUTION"
+        else:
+            committed_labels[idx] = "DEVELOPMENT"
+
+    finite_valid = finite_validity_offline(events, k=k)
+
+    if not tp_committed or current_pivot_idx is None:
+        commit_now_valid = False
+        final_dev_count = 0
+    else:
+        pivot_pos = events[current_pivot_idx].position
+        final_dev_count = sum(
+            1
+            for idx, label in committed_labels.items()
+            if label == "DEVELOPMENT" and events[idx].position < pivot_pos
+        )
+        commit_now_valid = final_dev_count >= k
+
+    organic_trap = bool(finite_valid and (not commit_now_valid))
+    return {
+        "finite_valid": bool(finite_valid),
+        "commit_now_valid": bool(commit_now_valid),
+        "organic_trap": bool(organic_trap),
+        "final_dev_count": int(final_dev_count),
+    }
+
+
 def summarize_loaded_traces(
     traces: Sequence[Trace],
     trace_stats: pd.DataFrame,
@@ -636,6 +712,7 @@ def summarize_loaded_traces(
 def compute_metrics(
     trace_stats: pd.DataFrame,
     ks: Sequence[int],
+    trap_method: str,
 ) -> tuple[pd.DataFrame, dict[float, float]]:
     rows: list[dict[str, Any]] = []
     p_hat_per_epsilon: dict[float, float] = {}
@@ -650,19 +727,27 @@ def compute_metrics(
         p_trace_mean = float(np.mean(per_trace_p)) if per_trace_p.size > 0 else float("nan")
         p_trace_std = float(np.std(per_trace_p, ddof=0)) if per_trace_p.size > 0 else float("nan")
 
-        min_gaps = group["min_gap"].to_numpy(dtype=float)
-
         for k in ks:
             lam = lambda_k(p_hat, k)
             pred = predicted_trap_rate(p_hat, k)
-            observed = (
-                float(np.mean([gap < float(k) for gap in min_gaps]))
-                if min_gaps.size > 0
-                else float("nan")
-            )
+            if trap_method == "min_gap":
+                min_gaps = group["min_gap"].to_numpy(dtype=float)
+                trap_flags = np.array([gap < float(k) for gap in min_gaps], dtype=float)
+            elif trap_method == "streaming_simulation":
+                trap_col = f"trap_streaming_simulation_k{k}"
+                if trap_col not in group.columns:
+                    raise KeyError(
+                        f"Missing column {trap_col}; streaming simulation outcomes were not computed."
+                    )
+                trap_flags = group[trap_col].to_numpy(dtype=float)
+            else:
+                raise ValueError(f"Unsupported trap_method: {trap_method}")
+
+            observed = float(np.mean(trap_flags)) if trap_flags.size > 0 else float("nan")
             residual = observed - pred if (not np.isnan(observed)) else float("nan")
             rows.append(
                 {
+                    "trap_method": trap_method,
                     "epsilon": float(epsilon),
                     "k": k,
                     "p_hat": p_hat,
@@ -754,37 +839,58 @@ def _plot_heatmaps(df: pd.DataFrame, output_dir: Path, ks: Sequence[int]) -> Non
 
 
 def _interpretation_paragraph(
-    mae: float,
+    mae_k2_k3: float,
     burstiness_gap_per_k: dict[int, float],
     spearman_per_k: dict[int, float],
+    trap_method: str,
 ) -> str:
-    if mae < 0.05:
-        fit_text = "very close"
-    elif mae < 0.12:
-        fit_text = "reasonably close"
-    else:
-        fit_text = "materially different"
+    gap_k2 = burstiness_gap_per_k.get(2, float("nan"))
+    gap_k3 = burstiness_gap_per_k.get(3, float("nan"))
+    mean_gap_k2_k3 = float(np.nanmean([gap_k2, gap_k3]))
+    rho_k2 = spearman_per_k.get(2, float("nan"))
+    rho_k3 = spearman_per_k.get(3, float("nan"))
 
-    mean_gap = float(np.mean(list(burstiness_gap_per_k.values()))) if burstiness_gap_per_k else float("nan")
-    if np.isnan(mean_gap):
-        deformation_text = "insufficient"
-    elif mean_gap > 0:
-        deformation_text = "positive"
-    elif mean_gap < 0:
-        deformation_text = "negative"
-    else:
-        deformation_text = "near-zero"
-
-    rho_bits = ", ".join(
-        f"k={k}: {rho:.3f}" if np.isfinite(rho) else f"k={k}: nan"
-        for k, rho in sorted(spearman_per_k.items())
+    method_note = (
+        "using full streaming_simulation trap detection"
+        if trap_method == "streaming_simulation"
+        else "using min_gap proxy trap detection"
     )
+    if np.isfinite(mean_gap_k2_k3) and mean_gap_k2_k3 < 0:
+        bound_text = (
+            "the i.i.d. focal-mask theorem behaves as a conservative upper bound on trap rates"
+        )
+        deformation_text = (
+            "the burstiness deformation is protective (negative residuals imply front-loading "
+            "stabilizes running-max pivots and widens inter-record gaps)"
+        )
+    else:
+        bound_text = (
+            "the i.i.d. focal-mask theorem is not strictly an upper bound on this run"
+        )
+        deformation_text = (
+            "the burstiness deformation is non-protective or mixed on this run"
+        )
+
+    if (
+        np.isfinite(rho_k2)
+        and np.isfinite(rho_k3)
+        and abs(rho_k2 + 1.0) <= 1e-12
+        and abs(rho_k3 + 1.0) <= 1e-12
+    ):
+        rho_text = (
+            "Spearman rho is -1.0 for both k=2 and k=3, indicating perfectly monotone "
+            "undershoot as epsilon increases."
+        )
+    else:
+        rho_text = (
+            f"Spearman rho(residual, epsilon) is k=2:{rho_k2:.3f}, k=3:{rho_k3:.3f}."
+        )
+
     return (
-        f"The theorem baseline is {fit_text} to empirical trap rates (MAE={mae:.4f}); "
-        f"the mean burstiness gap is {mean_gap:.4f}, indicating a {deformation_text} deformation "
-        f"relative to the i.i.d. focal-mask prediction, and Spearman residual-vs-epsilon trends are "
-        f"[{rho_bits}], which helps quantify whether burst timing systematically perturbs trap risk as posed "
-        f"by the Nevzorov deformation open problem."
+        f"For k>=2 ({method_note}), {bound_text} (MAE_k2_k3={mae_k2_k3:.4f}; "
+        f"mean residual k2/k3={mean_gap_k2_k3:.4f}), and {deformation_text}. {rho_text} "
+        "k=1 is excluded from headline interpretation pending trap-definition alignment with "
+        "Paper 02 Definition 4."
     )
 
 
@@ -794,7 +900,14 @@ def _json_safe(value: float) -> float | None:
     return value
 
 
-def run(data_dir: Path, output_dir: Path, ks: Sequence[int], min_records: int) -> None:
+def run(
+    data_dir: Path,
+    output_dir: Path,
+    ks: Sequence[int],
+    min_records: int,
+    trap_method: str,
+    summary_note: str | None,
+) -> None:
     traces = load_traces(data_dir)
     if not traces:
         raise RuntimeError(
@@ -808,35 +921,53 @@ def run(data_dir: Path, output_dir: Path, ks: Sequence[int], min_records: int) -
         n_focal = sum(1 for event in trace.events if event.focal)
         p_trace = (n_focal / n_events) if n_events > 0 else float("nan")
         n_records, min_gap = compute_record_stats(trace.events)
-        trace_rows.append(
-            {
-                "trace_idx": idx,
-                "trace_id": trace.trace_id,
-                "epsilon": trace.epsilon,
-                "n_events": n_events,
-                "n_focal": n_focal,
-                "p_trace": p_trace,
-                "n_records": n_records,
-                "min_gap": min_gap,
-            }
-        )
+        row: dict[str, Any] = {
+            "trace_idx": idx,
+            "trace_id": trace.trace_id,
+            "epsilon": trace.epsilon,
+            "n_events": n_events,
+            "n_focal": n_focal,
+            "p_trace": p_trace,
+            "n_records": n_records,
+            "min_gap": min_gap,
+        }
+        for k in ks:
+            sim = streaming_simulation_outcome(trace.events, k=int(k))
+            row[f"finite_valid_k{k}"] = bool(sim["finite_valid"])
+            row[f"commit_now_valid_k{k}"] = bool(sim["commit_now_valid"])
+            row[f"trap_streaming_simulation_k{k}"] = bool(sim["organic_trap"])
+        trace_rows.append(row)
     trace_stats = pd.DataFrame(trace_rows)
 
     summarize_loaded_traces(traces, trace_stats=trace_stats, min_records=min_records)
 
-    eligible = trace_stats[trace_stats["n_records"] >= int(min_records)].copy()
-    excluded = trace_stats[trace_stats["n_records"] < int(min_records)].copy()
-    print(
-        f"\nEffective sample size after excluding traces with n_records < {min_records}: "
-        f"{len(eligible)}/{len(trace_stats)}"
-    )
+    low_record_mask = trace_stats["n_records"] < int(min_records)
+    low_record_traces = trace_stats[low_record_mask].copy()
+    if trap_method == "min_gap":
+        eligible = trace_stats[~low_record_mask].copy()
+        excluded = low_record_traces
+        print(
+            f"\nEffective sample size after excluding traces with n_records < {min_records}: "
+            f"{len(eligible)}/{len(trace_stats)}"
+        )
+    elif trap_method == "streaming_simulation":
+        eligible = trace_stats.copy()
+        excluded = trace_stats.iloc[0:0].copy()
+        print(
+            "\nUsing trap_method=streaming_simulation: low-record traces are flagged but retained "
+            "because trap detection comes from full label-lock simulation."
+        )
+        print(f"Effective sample size (no low-record exclusion): {len(eligible)}/{len(trace_stats)}")
+    else:
+        raise ValueError(f"Unsupported trap_method: {trap_method}")
+
     if len(eligible) == 0:
         raise RuntimeError(
             f"All traces were excluded by min_records={min_records}. "
             "Lower --min_records or provide richer traces."
         )
 
-    comparison, p_hat_per_epsilon = compute_metrics(eligible, ks=ks)
+    comparison, p_hat_per_epsilon = compute_metrics(eligible, ks=ks, trap_method=trap_method)
 
     output_dir.mkdir(parents=True, exist_ok=True)
     table_path = output_dir / "experiment_01_focal_mask_validation.csv"
@@ -847,6 +978,7 @@ def run(data_dir: Path, output_dir: Path, ks: Sequence[int], min_records: int) -
     print(
         comparison[
             [
+                "trap_method",
                 "epsilon",
                 "k",
                 "p_hat",
@@ -860,6 +992,12 @@ def run(data_dir: Path, output_dir: Path, ks: Sequence[int], min_records: int) -
     )
 
     mae = float(np.mean(np.abs(comparison["residual"])))
+    k2k3_mask = comparison["k"].isin([2, 3])
+    mae_k2_k3 = (
+        float(np.mean(np.abs(comparison.loc[k2k3_mask, "residual"])))
+        if bool(k2k3_mask.any())
+        else float("nan")
+    )
     spearman_rho_per_k: dict[int, float] = {}
     spearman_p_per_k: dict[int, float] = {}
     for k in ks:
@@ -891,6 +1029,10 @@ def run(data_dir: Path, output_dir: Path, ks: Sequence[int], min_records: int) -
         )
 
     print(f"\nMean absolute error across cells: {mae:.6f}")
+    if np.isfinite(mae_k2_k3):
+        print(f"Mean absolute error across k in {{2,3}}: {mae_k2_k3:.6f}")
+    else:
+        print("Mean absolute error across k in {2,3}: nan")
     print("Spearman rho(residual, epsilon) per k:")
     for k in ks:
         rho = spearman_rho_per_k[int(k)]
@@ -907,23 +1049,30 @@ def run(data_dir: Path, output_dir: Path, ks: Sequence[int], min_records: int) -
     _plot_heatmaps(comparison, output_dir=output_dir, ks=ks)
 
     summary_payload = {
+        "trap_method": trap_method,
+        "data_source": str(data_dir),
         "mean_absolute_error": mae,
+        "mean_absolute_error_k2_k3": _json_safe(mae_k2_k3),
         "spearman_rho_per_k": {str(k): _json_safe(v) for k, v in spearman_rho_per_k.items()},
         "spearman_pvalue_per_k": {str(k): _json_safe(v) for k, v in spearman_p_per_k.items()},
         "burstiness_gap_per_k": {str(k): _json_safe(v) for k, v in burstiness_gap_per_k.items()},
         "p_hat_per_epsilon": {f"{eps:.6f}": p for eps, p in sorted(p_hat_per_epsilon.items())},
         "n_traces_total": int(len(trace_stats)),
         "n_traces_included": int(len(eligible)),
+        "n_traces_flagged_low_records": int(len(low_record_traces)),
         "n_traces_excluded_low_records": int(len(excluded)),
         "min_records_threshold": int(min_records),
         "n_epsilon": int(n_eps),
     }
+    if summary_note:
+        summary_payload["note"] = summary_note
     summary_path.write_text(json.dumps(summary_payload, indent=2, allow_nan=False), encoding="utf-8")
 
     interpretation = _interpretation_paragraph(
-        mae=mae,
+        mae_k2_k3=mae_k2_k3,
         burstiness_gap_per_k=burstiness_gap_per_k,
         spearman_per_k=spearman_rho_per_k,
+        trap_method=trap_method,
     )
     print("\n=== INTERPRETATION ===")
     print(interpretation)
@@ -959,11 +1108,34 @@ def parse_args() -> argparse.Namespace:
         "--min_records",
         type=int,
         default=3,
-        help="Exclude traces with fewer than this many record-setting focal events (default: 3).",
+        help=(
+            "Low-record threshold used to flag traces; exclusion is applied when "
+            "--trap_method=min_gap (default: 3)."
+        ),
+    )
+    parser.add_argument(
+        "--trap_method",
+        type=str,
+        choices=["min_gap", "streaming_simulation"],
+        default="min_gap",
+        help="Observed trap definition: min_gap proxy or full streaming label-lock simulation.",
+    )
+    parser.add_argument(
+        "--summary_note",
+        type=str,
+        default=None,
+        help="Optional note string written into the summary JSON.",
     )
     return parser.parse_args()
 
 
 if __name__ == "__main__":
     args = parse_args()
-    run(data_dir=args.data_dir, output_dir=args.output_dir, ks=args.k_values, min_records=args.min_records)
+    run(
+        data_dir=args.data_dir,
+        output_dir=args.output_dir,
+        ks=args.k_values,
+        min_records=args.min_records,
+        trap_method=args.trap_method,
+        summary_note=args.summary_note,
+    )

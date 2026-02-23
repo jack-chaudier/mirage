@@ -1,29 +1,37 @@
 {
-  "mean_absolute_error": 0.19801634414411862,
+  "trap_method": "streaming_simulation",
+  "data_source": "projects/rhun/experiments/output/streaming/organic_oscillation_raw.json",
+  "mean_absolute_error": 0.0805449174425134,
+  "mean_absolute_error_k2_k3": 0.0891566618780558,
   "spearman_rho_per_k": {
-    "1": null,
-    "2": -1.0,
-    "3": -1.0
+    "1": 0.7500000000000002,
+    "2": 0.8571428571428573,
+    "3": 0.8214285714285715
   },
   "spearman_pvalue_per_k": {
-    "1": null,
-    "2": 0.0,
-    "3": 0.0
+    "1": 0.05218140045705777,
+    "2": 0.013697326615325611,
+    "3": 0.023448808345691494
   },
   "burstiness_gap_per_k": {
-    "1": -0.5,
-    "2": -0.05521496548520288,
-    "3": 0.0161220809385392
+    "1": 0.04932857142857144,
+    "2": 0.07129435935069214,
+    "3": 0.09489515597176008
   },
   "p_hat_per_epsilon": {
-    "0.100000": 0.5,
-    "0.300000": 0.5,
-    "0.500000": 0.5,
-    "0.700000": 0.5
+    "0.100000": 0.36745,
+    "0.200000": 0.36445,
+    "0.300000": 0.3669,
+    "0.400000": 0.36905,
+    "0.500000": 0.366525,
+    "0.600000": 0.3687,
+    "0.700000": 0.366625
   },
-  "n_traces_total": 3200,
-  "n_traces_included": 2657,
-  "n_traces_excluded_low_records": 543,
+  "n_traces_total": 1400,
+  "n_traces_included": 1400,
+  "n_traces_flagged_low_records": 153,
+  "n_traces_excluded_low_records": 0,
   "min_records_threshold": 3,
-  "n_epsilon": 4
+  "n_epsilon": 7,
+  "note": "Canonical result: streaming_simulation on Rhun organic_oscillation raw traces supersedes the earlier non-canonical min_gap run on endogenous_context_theory/results/raw/test_16_organic_traps.csv reconstruction."
 }
