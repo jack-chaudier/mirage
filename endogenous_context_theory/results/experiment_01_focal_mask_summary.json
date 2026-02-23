@@ -1,0 +1,29 @@
+{
+  "mean_absolute_error": 0.19801634414411862,
+  "spearman_rho_per_k": {
+    "1": null,
+    "2": -1.0,
+    "3": -1.0
+  },
+  "spearman_pvalue_per_k": {
+    "1": null,
+    "2": 0.0,
+    "3": 0.0
+  },
+  "burstiness_gap_per_k": {
+    "1": -0.5,
+    "2": -0.05521496548520288,
+    "3": 0.0161220809385392
+  },
+  "p_hat_per_epsilon": {
+    "0.100000": 0.5,
+    "0.300000": 0.5,
+    "0.500000": 0.5,
+    "0.700000": 0.5
+  },
+  "n_traces_total": 3200,
+  "n_traces_included": 2657,
+  "n_traces_excluded_low_records": 543,
+  "min_records_threshold": 3,
+  "n_epsilon": 4
+}
