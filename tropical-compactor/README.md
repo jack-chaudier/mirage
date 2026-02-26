@@ -24,6 +24,16 @@ Implementation details:
 - `protected_set(...)` returns the exact chunks that must survive for a feasible `k`-arc.
 - `compactor.py` enforces protected-first retention under token budgets and logs any contract breach.
 
+## Semantics Clarifications
+
+- The L1 scalar `d_pre` is not, in general, equal to the highest finite slot index in `W`.
+  That equality only holds in restricted cases (for example, when a single pivot dominates all
+  frontier slots). In the general case, different slots can be realized by different pivots.
+- `contract_satisfied` (alias: `protection_satisfied`) means only that protected IDs were not
+  dropped by the token budget. It does not by itself imply a valid `k`-arc exists.
+- Use `guard_effective` for the strong operational check: it is true only when both
+  `feasible == true` and `protection_satisfied == true`.
+
 ## Project Layout
 
 ```text

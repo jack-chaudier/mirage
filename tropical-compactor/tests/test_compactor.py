@@ -37,6 +37,7 @@ def test_l2_guarded_keeps_protected_before_filler() -> None:
     assert audit["policy"] == "l2_guarded"
     assert audit["breach_ids"] == []
     assert audit["contract_satisfied"] is True
+    assert audit["protection_satisfied"] is True
 
 
 def test_l2_guarded_reports_breach_when_budget_too_small() -> None:
@@ -51,5 +52,6 @@ def test_l2_guarded_reports_breach_when_budget_too_small() -> None:
 
     assert [c["id"] for c in kept] == ["1"]
     assert audit["contract_satisfied"] is False
+    assert audit["protection_satisfied"] is False
     assert "2" in audit["breach_ids"]
     assert "2" in audit["dropped_ids"]

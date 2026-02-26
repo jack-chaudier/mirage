@@ -107,5 +107,8 @@ def evict_l2_guarded(
         "breach_ids": breach,
         "dropped_ids": dropped,
         "tokens_kept": protected_tokens + filler_tokens,
+        # Means protected IDs were not dropped by budgeting.
         "contract_satisfied": len(breach) == 0,
+        # Alias kept for clarity in downstream audit consumers.
+        "protection_satisfied": len(breach) == 0,
     }

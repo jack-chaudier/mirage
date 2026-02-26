@@ -117,6 +117,11 @@ def compact(
     policies:
     - l2_guarded: protect pivot + k predecessors from L2 scan.
     - recency: keep newest chunks only.
+
+    Audit semantics:
+    - contract_satisfied/protection_satisfied: no protected chunks were dropped.
+    - feasible: L2 witness exists at slot k (W[k] finite).
+    - guard_effective: both feasible and protection_satisfied are true.
     """
 
     if token_budget < 0:
@@ -135,17 +140,30 @@ def compact(
         states = chunks_to_algebra_states(chunks, k)
         prot_ids, feasible = protected_set(states, k)
         kept, audit = evict_l2_guarded(chunks, token_budget, prot_ids, k)
+        protection_satisfied = bool(audit.get("protection_satisfied"))
+        guard_effective = bool(feasible and protection_satisfied)
+
         audit["feasible"] = feasible
+        audit["guard_effective"] = guard_effective
+        if not feasible:
+            audit["guard_reason"] = "infeasible_k_slot"
+        elif not protection_satisfied:
+            audit["guard_reason"] = "protected_breach_due_to_budget"
+        else:
+            audit["guard_reason"] = "active"
         audit["tokens_before"] = tokens_before
         audit["tokens_after"] = int(audit.get("tokens_kept", 0))
     elif policy == "recency":
         kept, audit = evict_recency(chunks, token_budget)
         audit["feasible"] = None
+        audit["guard_effective"] = None
+        audit["guard_reason"] = "not_applicable"
         audit["tokens_before"] = tokens_before
         audit["tokens_after"] = int(audit.get("tokens_kept", 0))
         audit["protected_ids"] = []
         audit["breach_ids"] = []
         audit["contract_satisfied"] = None
+        audit["protection_satisfied"] = None
     else:
         return _invalid(f"Unknown policy '{policy}'. Use 'l2_guarded' or 'recency'.")
 
