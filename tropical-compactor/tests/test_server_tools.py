@@ -63,3 +63,23 @@ def test_compact_recency_policy_and_invalid_policy_handling() -> None:
 
     bad = compact(MESSAGES, token_budget=budget, policy="bad-policy", k=1)
     assert "error" in bad
+
+
+def test_role_hint_override_is_respected_through_server_path() -> None:
+    messages = [
+        {
+            "id": "a",
+            "text": "Please implement the deployment pipeline right now.",
+            "role_hint": "predecessor",
+        },
+        {
+            "id": "b",
+            "text": "Objective: create endpoint hardening plan.",
+            "role_hint": "pivot",
+        },
+    ]
+
+    out = inspect(messages, k=1)
+    assert out["feasible"] is True
+    assert out["pivot_id"] == "b"
+    assert out["protected_ids"] == ["a", "b"]

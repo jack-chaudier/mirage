@@ -71,6 +71,13 @@ claude mcp add tropical-compactor --scope user -- \
   uv --directory /absolute/path/to/tropical-compactor run server.py
 ```
 
+Verify:
+
+```bash
+claude mcp list
+# expect: tropical-compactor ... ✓ Connected
+```
+
 ## Codex Registration
 
 `~/.codex/config.toml`
@@ -81,6 +88,31 @@ name = "tropical-compactor"
 command = "uv"
 args = ["--directory", "/absolute/path/to/tropical-compactor", "run", "server.py"]
 ```
+
+or CLI:
+
+```bash
+codex mcp add tropical-compactor -- \
+  uv --directory /absolute/path/to/tropical-compactor run server.py
+```
+
+## CyberOps Replay Harness
+
+Run a deterministic replay that pushes CyberOps-style logs through `compact()` and reports policy curves:
+
+```bash
+tropical-compactor-replay \
+  --fractions 1.0,0.8,0.65,0.5,0.4 \
+  --policies recency,l2_guarded \
+  --k 3 \
+  --output-dir artifacts/cyberops_mcp_replay
+```
+
+Outputs:
+
+- `artifacts/cyberops_mcp_replay/replay_rows.csv`
+- `artifacts/cyberops_mcp_replay/replay_summary.csv`
+- `artifacts/cyberops_mcp_replay/replay_summary.json`
 
 ## Operational Notes
 

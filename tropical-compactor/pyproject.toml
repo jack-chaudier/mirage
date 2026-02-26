@@ -16,6 +16,7 @@ dev = [
 
 [project.scripts]
 tropical-compactor = "server:main"
+tropical-compactor-replay = "benchmark_harness:main"
 
 [build-system]
 requires = ["hatchling"]
