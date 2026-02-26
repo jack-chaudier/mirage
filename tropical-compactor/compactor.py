@@ -54,6 +54,7 @@ def evict_l2_guarded(
     token_budget: int,
     protected_ids: set[str],
     k: int,
+    protected_priority: list[str] | None = None,
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     """
     Keep protected chunks first, then fill with recency-ranked non-protected chunks.
@@ -66,6 +67,20 @@ def evict_l2_guarded(
 
     protected = [c for c in chunks if str(c["id"]) in protected_ids]
     non_protected = [c for c in chunks if str(c["id"]) not in protected_ids]
+
+    if protected_priority:
+        by_id = {str(c["id"]): c for c in protected}
+        ordered: list[dict[str, Any]] = []
+        seen: set[str] = set()
+        for cid in protected_priority:
+            if cid in by_id and cid not in seen:
+                ordered.append(by_id[cid])
+                seen.add(cid)
+        for chunk in protected:
+            cid = str(chunk["id"])
+            if cid not in seen:
+                ordered.append(chunk)
+        protected = ordered
 
     protected_tokens = sum(_chunk_tokens(c) for c in protected)
     breach: list[str] = []

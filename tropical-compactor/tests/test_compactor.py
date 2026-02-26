@@ -55,3 +55,27 @@ def test_l2_guarded_reports_breach_when_budget_too_small() -> None:
     assert audit["protection_satisfied"] is False
     assert "2" in audit["breach_ids"]
     assert "2" in audit["dropped_ids"]
+
+
+def test_l2_guarded_breach_uses_protected_priority_order() -> None:
+    chunks = [
+        _chunk("pred_old", "old predecessor"),
+        _chunk("pred_new", "new predecessor"),
+        _chunk("pivot", "pivot-summary chunk with important objective"),
+        _chunk("tail", "latest filler"),
+    ]
+
+    pivot_tokens = chunks[2]["token_count"]
+    budget = pivot_tokens + chunks[3]["token_count"]
+    kept, audit = evict_l2_guarded(
+        chunks,
+        budget,
+        protected_ids={"pred_old", "pred_new", "pivot"},
+        k=2,
+        protected_priority=["pivot", "pred_new", "pred_old"],
+    )
+
+    kept_ids = [c["id"] for c in kept]
+    assert "pivot" in kept_ids
+    assert "pred_old" in audit["breach_ids"]
+    assert audit["contract_satisfied"] is False

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import math
 
-from tagger import tag_chunk
+from tagger import tag_chunk, tag_chunk_detailed
 
 
 def test_role_hint_overrides_heuristics() -> None:
@@ -29,3 +29,15 @@ def test_noise_when_no_signal_present() -> None:
     role, weight = tag_chunk("small neutral note")
     assert role == "noise"
     assert math.isinf(weight) and weight < 0
+
+
+def test_structural_signals_add_confidence() -> None:
+    tagged = tag_chunk_detailed(
+        text="Please build the API and implement auth.",
+        speaker="user",
+        index=0,
+        total=8,
+    )
+    assert tagged.role == "pivot"
+    assert tagged.confidence > 0.6
+    assert any("signal" in reason or "position" in reason for reason in tagged.reasons)
