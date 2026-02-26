@@ -98,9 +98,68 @@ def messages_to_chunks(messages: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return chunks
 
 
-def chunks_to_algebra_states(chunks: list[dict[str, Any]], k: int) -> list[ChunkState]:
-    """Map normalized chunks into L2 `ChunkState` values."""
+def _semantic_reorder(chunks: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Reorder chunks so predecessors precede the pivot for L2 scan.
 
+    The L2 algebra requires predecessors *before* the pivot in scan order
+    (W[j] lifts when an incoming pivot consumes j left-predecessors).  In real
+    conversations the user often states the task first and adds constraints
+    later, so predecessors appear *after* the pivot chronologically.
+
+    Strategy: find the highest-weight pivot.  Any predecessors that appear
+    *after* it in the original sequence are relocated to just before it.
+    Predecessors already before the pivot stay in place.  This handles the
+    conversation pattern (pivot first, constraints later) without breaking
+    the specification pattern (constraints listed, then pivot) or multi-arc
+    benchmarks where each arc has its own predecessor→pivot ordering.
+    """
+
+    # Find highest-weight pivot index.
+    best_pivot_idx: int | None = None
+    best_weight = -float("inf")
+    for i, c in enumerate(chunks):
+        if c["role"] == "pivot" and c["weight"] > best_weight:
+            best_weight = c["weight"]
+            best_pivot_idx = i
+
+    if best_pivot_idx is None:
+        return chunks  # No pivot found; nothing to reorder.
+
+    # Find the last pivot position in the original sequence.
+    last_pivot_idx = max(i for i, c in enumerate(chunks) if c["role"] == "pivot")
+
+    # Only move predecessors that appear AFTER the best pivot AND have no
+    # pivot after them in the original sequence.  A predecessor with a pivot
+    # to its right is already "serving" that later pivot and should stay put.
+    post_preds: list[dict[str, Any]] = []
+    remaining: list[dict[str, Any]] = []
+    for i, c in enumerate(chunks):
+        if (
+            i > best_pivot_idx
+            and c["role"] == "predecessor"
+            and i > last_pivot_idx
+        ):
+            post_preds.append(c)
+        else:
+            remaining.append(c)
+
+    if not post_preds:
+        return chunks  # All predecessors already before a pivot; no change needed.
+
+    # Insert the orphaned predecessors just before the best pivot.
+    pivot_pos = next(i for i, c in enumerate(remaining) if c is chunks[best_pivot_idx])
+    result = remaining[:pivot_pos] + post_preds + remaining[pivot_pos:]
+    return result
+
+
+def chunks_to_algebra_states(chunks: list[dict[str, Any]], k: int) -> list[ChunkState]:
+    """Map normalized chunks into L2 `ChunkState` values.
+
+    Applies semantic reordering so that predecessors precede the pivot in the
+    scan, regardless of their chronological position in the conversation.
+    """
+
+    ordered = _semantic_reorder(chunks)
     return [
         ChunkState(
             chunk_id=str(chunk["id"]),
@@ -108,7 +167,7 @@ def chunks_to_algebra_states(chunks: list[dict[str, Any]], k: int) -> list[Chunk
             d_total=1 if chunk["role"] == "predecessor" else 0,
             text=str(chunk["text"]),
         )
-        for chunk in chunks
+        for chunk in ordered
     ]
 
 
