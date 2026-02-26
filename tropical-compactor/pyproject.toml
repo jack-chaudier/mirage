@@ -17,6 +17,7 @@ dev = [
 [project.scripts]
 tropical-compactor = "server:main"
 tropical-compactor-replay = "benchmark_harness:main"
+tropical-compactor-full-validate = "scripts.run_full_validation:main"
 
 [build-system]
 requires = ["hatchling"]
@@ -32,6 +33,8 @@ include = [
   "*.py",
   "README.md",
   "pyproject.toml",
+  "scripts/*.py",
+  "scripts/*.sh",
   "tests/*.py",
 ]
 

@@ -10,6 +10,12 @@ This server provides three MCP tools:
 - `compact(messages, token_budget, policy, k)`: compacts context with either plain recency or `l2_guarded` protection.
 - `tag(messages)`: shows heuristic role classification (`pivot`, `predecessor`, `noise`).
 
+Additional automation helpers:
+
+- `inspect_horizon(messages, k_max)`: shows which `k` slots are feasible from `0..k_max`.
+- `compact_auto(messages, token_budget, k_target, mode)`: picks a feasible `k` automatically (`adaptive`) or fails closed (`strict`).
+- `retention_floor(messages, k, horizon, failure_prob)`: estimates an operational retention floor from predecessor density.
+
 ## Math Contract
 
 The core composition follows the L2 shift-and-max rule:
@@ -23,6 +29,7 @@ Implementation details:
 - `algebra.py` executes the L2 scan and tracks full provenance (pivot + predecessor IDs).
 - `protected_set(...)` returns the exact chunks that must survive for a feasible `k`-arc.
 - `compactor.py` enforces protected-first retention under token budgets and logs any contract breach.
+- `l2_iterative_guarded` policy uses iterative removal to preserve `W[k]` (and optionally pivot identity) before allowing breaches.
 
 ## Semantics Clarifications
 
@@ -60,6 +67,18 @@ uv pip install -e .[dev]
 
 ```bash
 pytest
+```
+
+Comprehensive product validation:
+
+```bash
+./scripts/full_validation.sh
+```
+
+or run the functional checks only:
+
+```bash
+uv run python scripts/run_full_validation.py
 ```
 
 ## Run
@@ -128,4 +147,8 @@ Outputs:
 
 - `stdout` must stay clean for JSON-RPC transport. Logging goes to `stderr` only.
 - Tagging is heuristic; algebra is exact once tags are correct.
-- Preferred workflow: `tag()` -> optional `role_hint` overrides -> `inspect()` -> `compact()`.
+- Preferred workflow: `tag()` -> optional `role_hint` overrides -> `inspect_horizon()` -> `compact_auto()` (or `compact()` for manual control).
+- Policy guide:
+  - `l2_guarded`: deterministic protected-set preservation (pivot + k predecessors).
+  - `l2_iterative_guarded`: attempts additional safe removals while preserving `W[k]`, then falls back to breach-aware guarded eviction if needed.
+  - `recency`: baseline newest-first policy.
