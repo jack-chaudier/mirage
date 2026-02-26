@@ -1,0 +1,266 @@
+{
+  "witness_source": "synthetic_fallback",
+  "blocks": {
+    "A": {
+      "w_star": 10.0,
+      "d_total": 5,
+      "d_pre": 2
+    },
+    "B": {
+      "w_star": 15.0,
+      "d_total": 8,
+      "d_pre": 3
+    },
+    "C": {
+      "w_star": 7.0,
+      "d_total": 6,
+      "d_pre": 4
+    }
+  },
+  "identity": {
+    "pass": true,
+    "checks": 6,
+    "details": [
+      {
+        "label": "A",
+        "left_identity_ok": true,
+        "right_identity_ok": true
+      },
+      {
+        "label": "B",
+        "left_identity_ok": true,
+        "right_identity_ok": true
+      },
+      {
+        "label": "C",
+        "left_identity_ok": true,
+        "right_identity_ok": true
+      }
+    ]
+  },
+  "associativity_witness": {
+    "pass": true,
+    "left": {
+      "w_star": 15.0,
+      "d_total": 19,
+      "d_pre": 8
+    },
+    "right": {
+      "w_star": 15.0,
+      "d_total": 19,
+      "d_pre": 8
+    }
+  },
+  "associativity_permutations": {
+    "pass": true,
+    "pass_count": 6,
+    "total": 6,
+    "details": [
+      {
+        "permutation": [
+          "A",
+          "B",
+          "C"
+        ],
+        "case": 2,
+        "pass": true,
+        "left": {
+          "w_star": 15.0,
+          "d_total": 19,
+          "d_pre": 8
+        },
+        "right": {
+          "w_star": 15.0,
+          "d_total": 19,
+          "d_pre": 8
+        }
+      },
+      {
+        "permutation": [
+          "A",
+          "C",
+          "B"
+        ],
+        "case": 3,
+        "pass": true,
+        "left": {
+          "w_star": 15.0,
+          "d_total": 19,
+          "d_pre": 14
+        },
+        "right": {
+          "w_star": 15.0,
+          "d_total": 19,
+          "d_pre": 14
+        }
+      },
+      {
+        "permutation": [
+          "B",
+          "A",
+          "C"
+        ],
+        "case": 1,
+        "pass": true,
+        "left": {
+          "w_star": 15.0,
+          "d_total": 19,
+          "d_pre": 3
+        },
+        "right": {
+          "w_star": 15.0,
+          "d_total": 19,
+          "d_pre": 3
+        }
+      },
+      {
+        "permutation": [
+          "B",
+          "C",
+          "A"
+        ],
+        "case": 1,
+        "pass": true,
+        "left": {
+          "w_star": 15.0,
+          "d_total": 19,
+          "d_pre": 3
+        },
+        "right": {
+          "w_star": 15.0,
+          "d_total": 19,
+          "d_pre": 3
+        }
+      },
+      {
+        "permutation": [
+          "C",
+          "A",
+          "B"
+        ],
+        "case": 3,
+        "pass": true,
+        "left": {
+          "w_star": 15.0,
+          "d_total": 19,
+          "d_pre": 14
+        },
+        "right": {
+          "w_star": 15.0,
+          "d_total": 19,
+          "d_pre": 14
+        }
+      },
+      {
+        "permutation": [
+          "C",
+          "B",
+          "A"
+        ],
+        "case": 2,
+        "pass": true,
+        "left": {
+          "w_star": 15.0,
+          "d_total": 19,
+          "d_pre": 9
+        },
+        "right": {
+          "w_star": 15.0,
+          "d_total": 19,
+          "d_pre": 9
+        }
+      }
+    ]
+  },
+  "non_commutativity": {
+    "pass": true,
+    "non_commutative_pairs": 3,
+    "total_pairs": 3,
+    "details": [
+      {
+        "pair": [
+          "A",
+          "B"
+        ],
+        "non_commutative": true,
+        "left_right": {
+          "w_star": 15.0,
+          "d_total": 13,
+          "d_pre": 8
+        },
+        "right_left": {
+          "w_star": 15.0,
+          "d_total": 13,
+          "d_pre": 3
+        }
+      },
+      {
+        "pair": [
+          "A",
+          "C"
+        ],
+        "non_commutative": true,
+        "left_right": {
+          "w_star": 10.0,
+          "d_total": 11,
+          "d_pre": 2
+        },
+        "right_left": {
+          "w_star": 10.0,
+          "d_total": 11,
+          "d_pre": 8
+        }
+      },
+      {
+        "pair": [
+          "B",
+          "C"
+        ],
+        "non_commutative": true,
+        "left_right": {
+          "w_star": 15.0,
+          "d_total": 14,
+          "d_pre": 3
+        },
+        "right_left": {
+          "w_star": 15.0,
+          "d_total": 14,
+          "d_pre": 9
+        }
+      }
+    ]
+  },
+  "absorbing_state": {
+    "k": 3,
+    "committed_prefix": {
+      "w_star": 5.0,
+      "d_total": 2,
+      "d_pre": 2
+    },
+    "suffix": {
+      "w_star": 12.0,
+      "d_total": 6,
+      "d_pre": 4
+    },
+    "committed_result": {
+      "w_star": 5.0,
+      "d_total": 8,
+      "d_pre": 2
+    },
+    "endogenous_result": {
+      "w_star": 12.0,
+      "d_total": 8,
+      "d_pre": 6
+    },
+    "committed_pass": true,
+    "endogenous_escape_pass": true
+  },
+  "random_stress": {
+    "seed": 58,
+    "n_blocks": 20,
+    "checks": 18,
+    "violations": 0,
+    "pass": true
+  },
+  "overall_pass": true
+}
