@@ -57,7 +57,7 @@ tropical-compactor/
 ## Install
 
 ```bash
-cd /absolute/path/to/tropical-compactor
+cd /path/to/tropical-compactor
 uv venv
 source .venv/bin/activate
 uv pip install -e .[dev]
@@ -96,8 +96,9 @@ uv run server.py
 ## Claude Code Registration
 
 ```bash
+PROJECT_ROOT=/path/to/tropical-compactor
 claude mcp add tropical-compactor --scope user -- \
-  uv --directory /absolute/path/to/tropical-compactor run server.py
+  uv --directory "$PROJECT_ROOT" run server.py
 ```
 
 Verify:
@@ -115,14 +116,15 @@ claude mcp list
 [[mcp_servers]]
 name = "tropical-compactor"
 command = "uv"
-args = ["--directory", "/absolute/path/to/tropical-compactor", "run", "server.py"]
+args = ["--directory", "/path/to/tropical-compactor", "run", "server.py"]
 ```
 
 or CLI:
 
 ```bash
+PROJECT_ROOT=/path/to/tropical-compactor
 codex mcp add tropical-compactor -- \
-  uv --directory /absolute/path/to/tropical-compactor run server.py
+  uv --directory "$PROJECT_ROOT" run server.py
 ```
 
 ## CyberOps Replay Harness
